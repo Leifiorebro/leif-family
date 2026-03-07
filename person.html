@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Person</title>
+
+<style>
+body { margin:0; font-family: Georgia, serif; background:#f2f2f2; color:#111; }
+main { max-width:900px; margin:auto; background:white; padding:40px; }
+h1 { margin-bottom:6px; font-size:32px; }
+.subtitle { color:#555; margin-bottom:20px; }
+.photo { max-width:280px; margin-bottom:24px; }
+.photo img { width:100%; border-radius:6px; }
+.section { margin-top:36px; }
+.section h2 { border-bottom:2px solid #ddd; padding-bottom:4px; font-size:22px; }
+.timeline { margin-top:16px; padding-left:16px; border-left:3px solid #ccc; }
+.timeline div { margin-bottom:10px; }
+blockquote { font-style:italic; background:#fafafa; border-left:4px solid #999; padding:16px; white-space:pre-wrap; }
+</style>
+</head>
+
+<body>
+<main>
+
+<h1 id="name"></h1>
+<div class="subtitle" id="lifespan"></div>
+
+<div class="photo" id="photo"></div>
+
+<div class="section">
+  <h2>Livshändelser</h2>
+  <div class="timeline">
+    <div><b>Födelsedatum:</b> <span id="born"></span></div>
+    <div><b>Födelseförs:</b> <span id="bornParish"></span></div>
+    <div><b>Dödsdatum:</b> <span id="died"></span></div>
+    <div><b>Dödsförs:</b> <span id="diedParish"></span></div>
+    <div><b>Yrke:</b> <span id="job"></span></div>
+  </div>
+</div>
+
+
+<div class="section">
+  <h2>Levnadshistoria</h2>
+  <blockquote id="history"></blockquote>
+</div>
+
+<script>
+const DB_NAME = 'FotosidaDB';
+
+let idb;
+let dbReady;
+
+
+
+const objectUrlCache = Object.create(null);
+
+
+
+
+
+// ===== Open DB =====
+function openDB(){
+  return new Promise((resolve,reject)=>{
+    const req = indexedDB.open(DB_NAME);
+
+    req.onupgradeneeded = e => {
+      const db = e.target.result;
+      if(!db.objectStoreNames.contains('persons'))
+        db.createObjectStore('persons',{keyPath:'id'});
+      if(!db.objectStoreNames.contains('images'))
+        db.createObjectStore('images', { keyPath: 'id' });
+    };
+
+    req.onsuccess = e => {
+      idb = e.target.result;
+      resolve(idb);
+    };
+
+    req.onerror = () => reject(req.error);
+  });
+}
+
+function formatLifespan(p){
+  if (!p.born && !p.died) return '';
+  const born = p.born || '?';
+  const died = p.died || '';
+  const age = calcAge(p.born, p.died);
+  return died
+    ? `${born} – ${died} (${age})`
+    : `Född ${born} (${age})`;
+}
+
+
+// ===== Get Person ID =====
+function getPersonId(){
+  const params = new URLSearchParams(location.search);
+  if(params.has('id')) return params.get('id');
+  if(location.hash.length>1) return location.hash.substring(1);
+  return null;
+}
+
+// ===== Calc Age =====
+function calcAge(born,died){
+  if(!born) return '';
+  const from = new Date(born);
+  const to = died?new Date(died):new Date();
+  let age = to.getFullYear()-from.getFullYear();
+  if(to.getMonth()<from.getMonth()||(to.getMonth()===from.getMonth()&&to.getDate()<from.getDate())) age--;
+  return died?`Blev ${age} år`:`Är ${age} år`;
+}
+
+// ===== Load Person =====
+
+async function loadPerson(pid){
+  if (!idb) return;
+
+  const p = await new Promise((res, rej) => {
+    const tx = idb.transaction('persons', 'readonly');
+    const req = tx.objectStore('persons').get(pid);
+    req.onsuccess = () => res(req.result);
+    req.onerror = () => rej(req.error);
+  });
+
+  console.log("Personobjekt:", p);
+
+  if (!p) {
+    document.body.textContent = 'Person saknas';
+    return;
+  }
+
+  document.getElementById('name').textContent = p.name || '';
+  //document.getElementById('age').textContent = calcAge(p.born, p.died);
+  document.getElementById('born').textContent = p.born || '';
+  document.getElementById('bornParish').textContent = p.bornParish || '';
+  document.getElementById('died').textContent = p.died || '';
+  document.getElementById('diedParish').textContent = p.diedParish || '';
+  document.getElementById('job').textContent = p.job || '';
+  document.getElementById('history').textContent = p.history || '';
+ 
+  document.getElementById('lifespan').textContent = formatLifespan(p);
+
+
+  const photoBox = document.getElementById('photo');
+  photoBox.innerHTML = '';
+
+  if (p.photoId) {
+    const txImg = idb.transaction('images', 'readonly');
+    const imgReq = txImg.objectStore('images').get(p.photoId);
+
+    imgReq.onsuccess = () => {
+      const rec = imgReq.result;
+      if (!rec || !(rec.blob instanceof Blob)) return;
+
+      const img = document.createElement('img');
+      img.src = URL.createObjectURL(rec.blob);
+      photoBox.appendChild(img);
+    };
+  }
+}
+
+
+(async()=>{
+  await openDB();
+
+  const pid = getPersonId();
+  if(!pid){
+    document.body.textContent = 'Ingen person vald';
+    return;
+  }
+
+  await loadPerson(pid);
+})();
+
+</script>
+</body>
+</html>
