@@ -368,7 +368,7 @@ body{
 
 #tree{
   width:100%;
-  height:800px;
+  height:900px;
   background:#fafafa;
 }
 
@@ -639,64 +639,124 @@ function buildHierarchy(rootId){
 
 function drawGenerationTree(rootId){
 
-  const data = buildHierarchy(rootId);
-
   const svg = d3.select("#tree");
   svg.selectAll("*").remove();
 
   const g = svg.append("g");
 
-  /* zoom */
   svg.call(
     d3.zoom().on("zoom",(event)=>{
       g.attr("transform",event.transform);
     })
   );
 
-  const tree = d3.tree().nodeSize([180,120]);
+  const nodes = [];
+  const links = [];
 
-  const root = d3.hierarchy(data);
+  const root = store.people[rootId];
+  if(!root) return;
 
-  tree(root);
+  const centerX = 0;
+  const centerY = 0;
 
-  /* länkar */
-  g.selectAll(".link")
-    .data(root.links())
+  nodes.push({id:rootId,x:centerX,y:centerY});
+
+  /* ========= FÖRÄLDRAR ========= */
+
+  const parents = store.parentsOf[rootId] || [];
+
+  if(parents[0]){
+    nodes.push({id:parents[0],x:centerX-160,y:centerY-140});
+    links.push({source:parents[0],target:rootId});
+  }
+
+  if(parents[1]){
+    nodes.push({id:parents[1],x:centerX+160,y:centerY-140});
+    links.push({source:parents[1],target:rootId});
+  }
+
+  /* ========= MAKA / MAKE ========= */
+
+  const spouses = store.spousesOf[rootId] || [];
+
+  spouses.forEach((sid,i)=>{
+    nodes.push({
+      id:sid,
+      x:centerX + (i+1)*180,
+      y:centerY
+    });
+
+    links.push({source:rootId,target:sid,type:"spouse"});
+  });
+
+  /* ========= BARN ========= */
+
+  const children = [];
+
+  Object.keys(store.parentsOf).forEach(cid=>{
+    if((store.parentsOf[cid]||[]).includes(rootId)){
+      children.push(cid);
+    }
+  });
+
+  children.forEach((cid,i)=>{
+    nodes.push({
+      id:cid,
+      x:centerX + (i-children.length/2)*160,
+      y:centerY+160
+    });
+
+    links.push({source:rootId,target:cid});
+  });
+
+  /* ========= LÄNKAR ========= */
+
+  g.selectAll("line")
+    .data(links)
     .enter()
-    .append("path")
-    .attr("class","link")
-    .attr("d",d3.linkVertical()
-      .x(d=>d.x)
-      .y(d=>d.y)
-    );
+    .append("line")
+    .attr("x1",d=>nodes.find(n=>n.id===d.source).x)
+    .attr("y1",d=>nodes.find(n=>n.id===d.source).y)
+    .attr("x2",d=>nodes.find(n=>n.id===d.target).x)
+    .attr("y2",d=>nodes.find(n=>n.id===d.target).y)
+    .attr("stroke","#999")
+    .attr("stroke-width",2);
 
-  /* noder */
+  /* ========= NODER ========= */
+
   const node = g.selectAll(".node")
-    .data(root.descendants())
+    .data(nodes)
     .enter()
     .append("g")
     .attr("class","node")
-    .attr("transform",d=>`translate(${d.x},${d.y})`);
+    .attr("transform",d=>`translate(${d.x},${d.y})`)
+    .style("cursor","pointer");
 
   node.append("rect")
     .attr("x",-70)
-    .attr("y",-25)
+    .attr("y",-30)
     .attr("width",140)
-    .attr("height",50);
+    .attr("height",60)
+    .attr("rx",8)
+    .attr("fill","white")
+    .attr("stroke","#555");
 
   node.append("text")
-    .attr("dy","-0.2em")
-    .text(d=>d.data.name);
+    .attr("dy","0.3em")
+    .attr("text-anchor","middle")
+    .text(d=>store.people[d.id]?.name || "");
 
   node.append("text")
-    .attr("dy","1.1em")
-    .style("font-size","10px")
-    .text(d=>d.data.born || "");
+    .attr("dy","1.5em")
+    .attr("font-size","10px")
+    .attr("text-anchor","middle")
+    .text(d=>store.people[d.id]?.born || "");
 
-  /* klickbar navigation */
+  /* ========= KLICK ========= */
+
   node.on("click",(event,d)=>{
-    store.currentId = d.data.id;
-    drawGenerationTree(store.currentId);
+    store.currentId = d.id;
+    drawGenerationTree(d.id);
   });
 
 }
