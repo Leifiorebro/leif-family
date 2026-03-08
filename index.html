@@ -1750,6 +1750,10 @@ async function loadServerJSON(){
   if(idb){
     await loadPersonsFromDB();
   }
+  
+  if(!store.currentId){
+  store.currentId = Object.keys(store.people)[0];
+}
 
   render();
 
