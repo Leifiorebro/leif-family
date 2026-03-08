@@ -315,6 +315,37 @@ input[type=text], input[type=url], input[type=date], select {
   :root{ --card-w:44vw }
 }
 
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+}
+
+#app{
+  display:flex;
+  height:100vh;
+}
+
+#leftPanel{
+  width:260px;
+  border-right:1px solid #ccc;
+  padding:10px;
+  overflow-y:auto;
+}
+
+#centerArea{
+  flex:1;
+  padding:20px;
+  min-height:200px;
+}
+
+#detailPanel{
+  width:300px;
+  border-left:1px solid #ccc;
+  padding:10px;
+  overflow-y:auto;
+  background:#fafafa;
+}
+
 
 
 
