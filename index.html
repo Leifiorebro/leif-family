@@ -372,6 +372,12 @@ body{
   background:#fafafa;
 }
 
+.node circle{
+  fill:#fff;
+  stroke:#666;
+  stroke-width:2px;
+}
+
 .node rect{
   fill:white;
   stroke:#888;
@@ -500,6 +506,108 @@ let db = null;
 
 const STORAGE = "fam_v10_fixed_age";
 let store = { people:{}, parentsOf:{}, childrenOf:{}, spousesOf:{}, currentId:null };
+
+function buildGraph(){
+
+  const nodes = [];
+  const links = [];
+
+  Object.keys(store.people).forEach(id=>{
+    const p = store.people[id];
+
+    nodes.push({
+      id:id,
+      name:p.name
+    });
+  });
+
+  Object.keys(store.parentsOf).forEach(child=>{
+    const parents = store.parentsOf[child] || [];
+
+    parents.forEach(parent=>{
+      links.push({
+        source:parent,
+        target:child
+      });
+    });
+  });
+
+  return {nodes,links};
+}
+
+function drawWholeFamily(){
+
+  const graph = buildGraph();
+
+  const svg = d3.select("#familyTree");
+  svg.selectAll("*").remove();
+
+  const g = svg.append("g");
+
+  const zoom = d3.zoom().on("zoom",(event)=>{
+    g.attr("transform",event.transform);
+  });
+
+  svg.call(zoom);
+
+  const simulation = d3.forceSimulation(graph.nodes)
+    .force("link", d3.forceLink(graph.links).id(d=>d.id).distance(120))
+    .force("charge", d3.forceManyBody().strength(-300))
+    .force("center", d3.forceCenter(window.innerWidth/2, window.innerHeight/2));
+
+  const link = g.selectAll(".link")
+    .data(graph.links)
+    .enter()
+    .append("line")
+    .attr("class","link");
+
+  const node = g.selectAll(".node")
+    .data(graph.nodes)
+    .enter()
+    .append("g")
+    .attr("class","node");
+
+  node.append("circle")
+    .attr("r",22);
+
+  node.append("text")
+    .attr("dy",4)
+    .attr("text-anchor","middle")
+    .text(d=>d.name);
+
+  simulation.on("tick",()=>{
+
+    link
+      .attr("x1",d=>d.source.x)
+      .attr("y1",d=>d.source.y)
+      .attr("x2",d=>d.target.x)
+      .attr("y2",d=>d.target.y);
+
+    node.attr("transform",d=>`translate(${d.x},${d.y})`);
+
+  });
+
+  node.call(
+    d3.drag()
+      .on("start",(event,d)=>{
+        if(!event.active) simulation.alphaTarget(0.3).restart();
+        d.fx=d.x;
+        d.fy=d.y;
+      })
+      .on("drag",(event,d)=>{
+        d.fx=event.x;
+        d.fy=event.y;
+      })
+      .on("end",(event,d)=>{
+        if(!event.active) simulation.alphaTarget(0);
+        d.fx=null;
+        d.fy=null;
+      })
+  );
+
+}
+
+
 
 function buildHierarchy(rootId){
 
@@ -1892,7 +2000,9 @@ async function loadServerJSON(){
 }
 
   //render();
-  drawGenerationTree(store.currentId);
+  //drawGenerationTree(store.currentId);
+  
+  drawWholeFamily();
 
   console.log(
     "INIT klar:",
