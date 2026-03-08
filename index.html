@@ -368,7 +368,7 @@ body{
 
 #tree{
   width:100%;
-  height:100vh;
+  height:800px;
   background:#fafafa;
 }
 
@@ -491,7 +491,7 @@ body{
 </div>
 
 
-
+<script src="https://d3js.org/d3.v7.min.js"></script>
 
 <script>
 const DISABLE_INDEXEDDB =
@@ -539,7 +539,7 @@ function drawWholeFamily(){
 
   const graph = buildGraph();
 
-  const svg = d3.select("#familyTree");
+  const svg = d3.select("#tree");
   svg.selectAll("*").remove();
 
   const g = svg.append("g");
@@ -1960,9 +1960,6 @@ async function loadServerJSON(){
 }
 
 
-
-
-
 /* ========= GOLDEN INIT =========
    - localStorage är primär källa
    - IndexedDB är sekundär (bilder)
@@ -2012,12 +2009,6 @@ async function loadServerJSON(){
 
 })();
 
-
-
-
-
-
-
 document.getElementById('addFar').onclick = () => addPersonWithRelation('FAR');
 document.getElementById('addMor').onclick = () => addPersonWithRelation('MOR');
 document.getElementById('addBarn').onclick = () => addPersonWithRelation('BARN');
@@ -2025,6 +2016,6 @@ document.getElementById('addMaka').onclick = () => addPersonWithRelation('MAKA')
 
 </script>
 
-<script src="https://d3js.org/d3.v7.min.js"></script>
+
 </body>
 </html>
