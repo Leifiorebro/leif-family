@@ -1997,11 +1997,46 @@ async function loadServerJSON(){
     }
 
     store.people = data.people;
-    store.parentsOf = data.parentsOf || {};
+    /*store.parentsOf = data.parentsOf || {};
     store.childrenOf = data.childrenOf || {};
     store.spousesOf = data.spousesOf || {};
 
-    saveStore();
+    saveStore();*/
+	rebuildRelations();
+	function rebuildRelations(){
+
+  store.parentsOf = {};
+  store.childrenOf = {};
+  store.spousesOf = {};
+
+  Object.values(store.people).forEach(p=>{
+
+    const id = p.id;
+
+    if(p.parents){
+
+      store.parentsOf[id] = [...p.parents];
+
+      p.parents.forEach(parentId=>{
+
+        if(!store.childrenOf[parentId])
+          store.childrenOf[parentId] = [];
+
+        store.childrenOf[parentId].push(id);
+
+      });
+
+    }
+
+    if(p.spouses){
+
+      store.spousesOf[id] = [...p.spouses];
+
+    }
+
+  });
+
+}
 
     console.log(
       "SERVER LOAD klar:",
