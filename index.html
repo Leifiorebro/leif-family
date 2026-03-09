@@ -368,7 +368,7 @@ body{
 
 #tree{
   width:100%;
-  height:900px;
+  height:1200px;
   background:#f8f8f8;
 }
 
@@ -637,34 +637,31 @@ function buildHierarchy(rootId){
   return build(rootId);
 }
 
-function drawGenerationTree(rootId){
+	function drawGenerationTree(rootId){
 
   const svg = d3.select("#tree");
   svg.selectAll("*").remove();
 
-  const width = 1200;
-  const height = 900;
+  const width = 1600;
+  const height = 1200;
 
   const g = svg.append("g");
 
   svg.call(
-    d3.zoom().scaleExtent([0.2,4]).on("zoom",(e)=>{
-      g.attr("transform",e.transform);
-    })
+    d3.zoom().scaleExtent([0.2,4])
+      .on("zoom",(e)=>g.attr("transform",e.transform))
   );
 
-  const nodes = [];
+  const nodes = {};
   const links = [];
 
-  const root = store.people[rootId];
-  if(!root) return;
-
-  const centerX = width/2;
-  const centerY = height/2;
+  const levelHeight = 140;
+  const spouseGap = 120;
+  const siblingGap = 140;
 
   function addNode(id,x,y){
-    if(!nodes.find(n=>n.id===id)){
-      nodes.push({id,x,y});
+    if(!nodes[id]){
+      nodes[id] = {id,x,y};
     }
   }
 
@@ -672,97 +669,80 @@ function drawGenerationTree(rootId){
     links.push({source:a,target:b,type});
   }
 
-  /* PERSON */
+  /* bygg generationer */
 
-  addNode(rootId,centerX,centerY);
+  function buildUp(id,level,x){
 
-  /* PARTNERS */
+    const parents = store.parentsOf[id] || [];
+    const y = height/2 - levelHeight*level;
 
-  const spouses = store.spousesOf[rootId] || [];
+    parents.forEach((pid,i)=>{
 
-  spouses.forEach((sid,i)=>{
-    const x = centerX + (i+1)*180;
-    const y = centerY;
+      const px = x + (i===0 ? -siblingGap : siblingGap);
 
-    addNode(sid,x,y);
-    addLink(rootId,sid,"spouse");
-  });
+      addNode(pid,px,y);
+      addLink(pid,id);
 
-  /* FÖRÄLDRAR */
-
-  const parents = store.parentsOf[rootId] || [];
-
-  parents.forEach((pid,i)=>{
-
-    const x = centerX + (i?120:-120);
-    const y = centerY-160;
-
-    addNode(pid,x,y);
-    addLink(pid,rootId);
-
-    const partner = (store.spousesOf[pid]||[])[0];
-
-    if(partner && parents.includes(partner)){
-      addNode(partner,x+240,y);
-      addLink(pid,partner,"spouse");
-    }
-
-  });
-
-  /* SYSKON */
-
-  const siblings = [];
-
-  parents.forEach(pid=>{
-    const kids = store.childrenOf[pid] || [];
-    kids.forEach(cid=>{
-      if(cid!==rootId && !siblings.includes(cid)){
-        siblings.push(cid);
+      const spouse = (store.spousesOf[pid]||[])[0];
+      if(spouse){
+        addNode(spouse,px+spouseGap,y);
+        addLink(pid,spouse,"spouse");
       }
+
+      buildUp(pid,level+1,px);
+
     });
-  });
 
-  siblings.forEach((sid,i)=>{
+  }
 
-    const x = centerX + (i-siblings.length/2)*150;
-    const y = centerY+120;
+  function buildDown(id,level,x){
 
-    addNode(sid,x,y);
-    addLink(rootId,sid,"sibling");
+    const kids = store.childrenOf[id] || [];
+    const y = height/2 + levelHeight*level;
 
-  });
+    kids.forEach((cid,i)=>{
 
-  /* BARN */
+      const cx = x + (i - kids.length/2)*siblingGap;
 
-  const children = store.childrenOf[rootId] || [];
+      addNode(cid,cx,y);
+      addLink(id,cid);
 
-  children.forEach((cid,i)=>{
+      const spouse = (store.spousesOf[cid]||[])[0];
+      if(spouse){
+        addNode(spouse,cx+spouseGap,y);
+        addLink(cid,spouse,"spouse");
+      }
 
-    const x = centerX + (i-children.length/2)*170;
-    const y = centerY+200;
+      buildDown(cid,level+1,cx);
 
-    addNode(cid,x,y);
-    addLink(rootId,cid);
+    });
 
-  });
+  }
 
-  /* LÄNKAR */
+  addNode(rootId,width/2,height/2);
+
+  buildUp(rootId,1,width/2);
+  buildDown(rootId,1,width/2);
+
+  const nodeList = Object.values(nodes);
+
+  /* rita länkar */
 
   g.selectAll("line")
     .data(links)
     .enter()
     .append("line")
-    .attr("x1",d=>nodes.find(n=>n.id===d.source).x)
-    .attr("y1",d=>nodes.find(n=>n.id===d.source).y)
-    .attr("x2",d=>nodes.find(n=>n.id===d.target).x)
-    .attr("y2",d=>nodes.find(n=>n.id===d.target).y)
-    .attr("stroke",d=>d.type==="spouse" ? "#d33":"#999")
+    .attr("x1",d=>nodes[d.source].x)
+    .attr("y1",d=>nodes[d.source].y)
+    .attr("x2",d=>nodes[d.target].x)
+    .attr("y2",d=>nodes[d.target].y)
+    .attr("stroke",d=>d.type==="spouse"?"#d33":"#999")
     .attr("stroke-width",2);
 
-  /* NODER */
+  /* noder */
 
   const node = g.selectAll(".node")
-    .data(nodes)
+    .data(nodeList)
     .enter()
     .append("g")
     .attr("transform",d=>`translate(${d.x},${d.y})`)
@@ -773,13 +753,13 @@ function drawGenerationTree(rootId){
     .attr("y",-30)
     .attr("width",140)
     .attr("height",60)
-    .attr("rx",10)
+    .attr("rx",8)
     .attr("fill","#fff")
     .attr("stroke","#333");
 
   node.append("text")
     .attr("text-anchor","middle")
-    .attr("dy","-2")
+    .attr("dy","-4")
     .attr("font-weight","bold")
     .text(d=>store.people[d.id]?.name || "");
 
@@ -789,16 +769,9 @@ function drawGenerationTree(rootId){
     .attr("font-size","11px")
     .text(d=>store.people[d.id]?.born || "");
 
-  /* KLICK */
-
   node.on("click",(e,d)=>{
-
     store.currentId = d.id;
-
     drawGenerationTree(d.id);
-
-    render();
-
   });
 
 }
