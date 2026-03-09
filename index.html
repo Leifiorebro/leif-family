@@ -2058,11 +2058,20 @@ async function loadServerJSON(){
 
   Object.entries(store.people).forEach(([id,p])=>{
 
-    if(p.parents){
+    /* ===== FÖRÄLDRAR ===== */
 
-      store.parentsOf[id] = [...p.parents];
+    const parents = [];
 
-      p.parents.forEach(parentId=>{
+    if(p.parents) parents.push(...p.parents);
+
+    if(p.father) parents.push(p.father);
+    if(p.mother) parents.push(p.mother);
+
+    if(parents.length){
+
+      store.parentsOf[id] = parents;
+
+      parents.forEach(parentId=>{
 
         if(!store.childrenOf[parentId])
           store.childrenOf[parentId] = [];
@@ -2073,15 +2082,43 @@ async function loadServerJSON(){
 
     }
 
-    if(p.spouses){
+    /* ===== PARTNER ===== */
 
-      store.spousesOf[id] = [...p.spouses];
+    const spouses = [];
+
+    if(p.spouses) spouses.push(...p.spouses);
+
+    if(p.spouse) spouses.push(p.spouse);
+    if(p.partner) spouses.push(p.partner);
+
+    if(spouses.length){
+
+      store.spousesOf[id] = spouses;
+
+      spouses.forEach(sid=>{
+
+        if(!store.spousesOf[sid])
+          store.spousesOf[sid] = [];
+
+        if(!store.spousesOf[sid].includes(id))
+          store.spousesOf[sid].push(id);
+
+      });
 
     }
 
   });
 
+  console.log(
+    "Relationer:",
+    Object.keys(store.parentsOf).length,"parents",
+    Object.keys(store.childrenOf).length,"children",
+    Object.keys(store.spousesOf).length,"spouses"
+  );
+
 }
+	
+	
 
 if(!store.currentId || !store.people[store.currentId]){
   store.currentId = Object.keys(store.people)[0];
