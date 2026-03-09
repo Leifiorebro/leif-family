@@ -2044,15 +2044,14 @@ async function loadServerJSON(){
 
     saveStore();*/
 	rebuildRelations();
+	
 	function rebuildRelations(){
 
   store.parentsOf = {};
   store.childrenOf = {};
   store.spousesOf = {};
 
-  Object.values(store.people).forEach(p=>{
-
-    const id = p.id;
+  Object.entries(store.people).forEach(([id,p])=>{
 
     if(p.parents){
 
@@ -2078,6 +2077,16 @@ async function loadServerJSON(){
   });
 
 }
+	
+	console.log(
+  "Relationer:",
+  Object.keys(store.parentsOf).length,
+  "parents",
+  Object.keys(store.childrenOf).length,
+  "children"
+	);
+	
+	
 
     console.log(
       "SERVER LOAD klar:",
