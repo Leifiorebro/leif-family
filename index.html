@@ -1981,6 +1981,68 @@ async function autoLoadFromServerIfEmpty() {
   }
 }
 
+function autoBuildRelations(){
+
+  const people = store.people;
+
+  const parentsOf = {};
+  const childrenOf = {};
+  const spousesOf = {};
+
+  const mothers = [];
+  const fathers = [];
+  const children = [];
+
+  Object.entries(people).forEach(([id,p])=>{
+
+    if(!p.role) return;
+
+    const r = p.role.toLowerCase();
+
+    if(r.includes("mor")) mothers.push(id);
+    if(r.includes("far")) fathers.push(id);
+    if(r.includes("barn")) children.push(id);
+
+  });
+
+  mothers.forEach((mid,i)=>{
+
+    const fid = fathers[i];
+    if(!fid) return;
+
+    spousesOf[mid] = [fid];
+    spousesOf[fid] = [mid];
+
+  });
+
+  children.forEach((cid,i)=>{
+
+    const mid = mothers[Math.floor(i/3)] || mothers[0];
+    const fid = fathers[Math.floor(i/3)] || fathers[0];
+
+    if(!mid || !fid) return;
+
+    parentsOf[cid] = [fid,mid];
+
+    if(!childrenOf[mid]) childrenOf[mid]=[];
+    if(!childrenOf[fid]) childrenOf[fid]=[];
+
+    childrenOf[mid].push(cid);
+    childrenOf[fid].push(cid);
+
+  });
+
+  store.parentsOf = parentsOf;
+  store.childrenOf = childrenOf;
+  store.spousesOf = spousesOf;
+
+  console.log(
+    "Relationer skapade:",
+    Object.keys(parentsOf).length,"parents"
+  );
+
+}
+
 
 /* ==========================================
    STABIL GITHUB PAGES JSON LOADER
@@ -2155,6 +2217,8 @@ if(!store.currentId || !store.people[store.currentId]){
   if(idb){
     await loadPersonsFromDB();
   }
+  
+  autoBuildRelations();
   
   if(!store.currentId){
   store.currentId = Object.keys(store.people)[0];
