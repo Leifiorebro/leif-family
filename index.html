@@ -2077,6 +2077,10 @@ async function loadServerJSON(){
   });
 
 }
+
+if(!store.currentId || !store.people[store.currentId]){
+  store.currentId = Object.keys(store.people)[0];
+}
 	
 	console.log(
   "Relationer:",
