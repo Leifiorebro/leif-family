@@ -2207,6 +2207,8 @@ if(!store.currentId || !store.people[store.currentId]){
 
   /* försök ladda serverfil */
   const loaded = await loadServerJSON();
+  
+  autoBuildRelations();
 
   /* fallback */
   if(!loaded && Object.keys(store.people).length === 0){
@@ -2218,16 +2220,16 @@ if(!store.currentId || !store.people[store.currentId]){
     await loadPersonsFromDB();
   }
   
-  autoBuildRelations();
+  
   
   if(!store.currentId){
   store.currentId = Object.keys(store.people)[0];
 }
 
-  //render();
+  
   drawGenerationTree(store.currentId);
   
-  //drawWholeFamily();
+  
 
   console.log(
     "INIT klar:",
