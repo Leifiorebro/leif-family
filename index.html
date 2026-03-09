@@ -780,6 +780,14 @@ function buildHierarchy(rootId){
 
 }
 
+function drawFullFamilyTree() {
+    const roots = Object.keys(store.people).filter(id => !store.parentsOf[id] || store.parentsOf[id].length === 0);
+
+    roots.forEach(rootId => {
+        drawGenerationTree(rootId); // Använd samma funktion som tidigare
+    });
+}
+
 
 /* ======== UTILITY ======== */
 function id(){ return "p_"+Math.random().toString(36).substr(2,9); }
@@ -2228,7 +2236,9 @@ if(!store.currentId || !store.people[store.currentId]){
     store.currentId = Object.keys(store.people)[0];
   }
 
-  drawGenerationTree(store.currentId);
+  //drawGenerationTree(store.currentId);
+  
+  drawFullFamilyTree();
 
   console.log(
     "INIT klar:",
