@@ -2045,6 +2045,11 @@ async function loadServerJSON(){
     saveStore();*/
 	rebuildRelations();
 	
+	if(!store.currentId || !store.people[store.currentId]){
+  store.currentId = Object.keys(store.people)[0];
+  console.log("Startperson:", store.currentId);
+}
+	
 	function rebuildRelations(){
 
   store.parentsOf = {};
