@@ -2158,6 +2158,8 @@ if(!store.currentId || !store.people[store.currentId]){
 
 })();
 
+drawGenerationTree(store.currentId);
+
 document.getElementById('addFar').onclick = () => addPersonWithRelation('FAR');
 document.getElementById('addMor').onclick = () => addPersonWithRelation('MOR');
 document.getElementById('addBarn').onclick = () => addPersonWithRelation('BARN');
