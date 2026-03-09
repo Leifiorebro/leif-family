@@ -369,7 +369,7 @@ body{
 #tree{
   width:100%;
   height:900px;
-  background:#fafafa;
+  background:#f8f8f8;
 }
 
 .node circle{
@@ -642,11 +642,14 @@ function drawGenerationTree(rootId){
   const svg = d3.select("#tree");
   svg.selectAll("*").remove();
 
+  const width = 1200;
+  const height = 900;
+
   const g = svg.append("g");
 
   svg.call(
-    d3.zoom().on("zoom",(event)=>{
-      g.attr("transform",event.transform);
+    d3.zoom().scaleExtent([0.2,4]).on("zoom",(e)=>{
+      g.attr("transform",e.transform);
     })
   );
 
@@ -656,60 +659,94 @@ function drawGenerationTree(rootId){
   const root = store.people[rootId];
   if(!root) return;
 
-  const centerX = 0;
-  const centerY = 0;
+  const centerX = width/2;
+  const centerY = height/2;
 
-  nodes.push({id:rootId,x:centerX,y:centerY});
-
-  /* ========= FÖRÄLDRAR ========= */
-
-  const parents = store.parentsOf[rootId] || [];
-
-  if(parents[0]){
-    nodes.push({id:parents[0],x:centerX-160,y:centerY-140});
-    links.push({source:parents[0],target:rootId});
+  function addNode(id,x,y){
+    if(!nodes.find(n=>n.id===id)){
+      nodes.push({id,x,y});
+    }
   }
 
-  if(parents[1]){
-    nodes.push({id:parents[1],x:centerX+160,y:centerY-140});
-    links.push({source:parents[1],target:rootId});
+  function addLink(a,b,type="child"){
+    links.push({source:a,target:b,type});
   }
 
-  /* ========= MAKA / MAKE ========= */
+  /* PERSON */
+
+  addNode(rootId,centerX,centerY);
+
+  /* PARTNERS */
 
   const spouses = store.spousesOf[rootId] || [];
 
   spouses.forEach((sid,i)=>{
-    nodes.push({
-      id:sid,
-      x:centerX + (i+1)*180,
-      y:centerY
-    });
+    const x = centerX + (i+1)*180;
+    const y = centerY;
 
-    links.push({source:rootId,target:sid,type:"spouse"});
+    addNode(sid,x,y);
+    addLink(rootId,sid,"spouse");
   });
 
-  /* ========= BARN ========= */
+  /* FÖRÄLDRAR */
 
-  const children = [];
+  const parents = store.parentsOf[rootId] || [];
 
-  Object.keys(store.parentsOf).forEach(cid=>{
-    if((store.parentsOf[cid]||[]).includes(rootId)){
-      children.push(cid);
+  parents.forEach((pid,i)=>{
+
+    const x = centerX + (i?120:-120);
+    const y = centerY-160;
+
+    addNode(pid,x,y);
+    addLink(pid,rootId);
+
+    const partner = (store.spousesOf[pid]||[])[0];
+
+    if(partner && parents.includes(partner)){
+      addNode(partner,x+240,y);
+      addLink(pid,partner,"spouse");
     }
+
   });
+
+  /* SYSKON */
+
+  const siblings = [];
+
+  parents.forEach(pid=>{
+    const kids = store.childrenOf[pid] || [];
+    kids.forEach(cid=>{
+      if(cid!==rootId && !siblings.includes(cid)){
+        siblings.push(cid);
+      }
+    });
+  });
+
+  siblings.forEach((sid,i)=>{
+
+    const x = centerX + (i-siblings.length/2)*150;
+    const y = centerY+120;
+
+    addNode(sid,x,y);
+    addLink(rootId,sid,"sibling");
+
+  });
+
+  /* BARN */
+
+  const children = store.childrenOf[rootId] || [];
 
   children.forEach((cid,i)=>{
-    nodes.push({
-      id:cid,
-      x:centerX + (i-children.length/2)*160,
-      y:centerY+160
-    });
 
-    links.push({source:rootId,target:cid});
+    const x = centerX + (i-children.length/2)*170;
+    const y = centerY+200;
+
+    addNode(cid,x,y);
+    addLink(rootId,cid);
+
   });
 
-  /* ========= LÄNKAR ========= */
+  /* LÄNKAR */
 
   g.selectAll("line")
     .data(links)
@@ -719,16 +756,15 @@ function drawGenerationTree(rootId){
     .attr("y1",d=>nodes.find(n=>n.id===d.source).y)
     .attr("x2",d=>nodes.find(n=>n.id===d.target).x)
     .attr("y2",d=>nodes.find(n=>n.id===d.target).y)
-    .attr("stroke","#999")
+    .attr("stroke",d=>d.type==="spouse" ? "#d33":"#999")
     .attr("stroke-width",2);
 
-  /* ========= NODER ========= */
+  /* NODER */
 
   const node = g.selectAll(".node")
     .data(nodes)
     .enter()
     .append("g")
-    .attr("class","node")
     .attr("transform",d=>`translate(${d.x},${d.y})`)
     .style("cursor","pointer");
 
@@ -737,30 +773,35 @@ function drawGenerationTree(rootId){
     .attr("y",-30)
     .attr("width",140)
     .attr("height",60)
-    .attr("rx",8)
-    .attr("fill","white")
-    .attr("stroke","#555");
+    .attr("rx",10)
+    .attr("fill","#fff")
+    .attr("stroke","#333");
 
   node.append("text")
-    .attr("dy","0.3em")
     .attr("text-anchor","middle")
+    .attr("dy","-2")
+    .attr("font-weight","bold")
     .text(d=>store.people[d.id]?.name || "");
 
   node.append("text")
-    .attr("dy","1.5em")
-    .attr("font-size","10px")
     .attr("text-anchor","middle")
+    .attr("dy","14")
+    .attr("font-size","11px")
     .text(d=>store.people[d.id]?.born || "");
 
-  /* ========= KLICK ========= */
+  /* KLICK */
 
-  node.on("click",(event,d)=>{
+  node.on("click",(e,d)=>{
+
     store.currentId = d.id;
+
     drawGenerationTree(d.id);
+
+    render();
+
   });
 
 }
-
 
 
 /* ======== UTILITY ======== */
