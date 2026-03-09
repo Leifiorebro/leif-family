@@ -642,78 +642,86 @@ function buildHierarchy(rootId){
   const svg = d3.select("#tree");
   svg.selectAll("*").remove();
 
-  const width = 1600;
-  const height = 1200;
+  const width = 2000;
+  const height = 1400;
 
   const g = svg.append("g");
 
   svg.call(
-    d3.zoom().scaleExtent([0.2,4])
-      .on("zoom",(e)=>g.attr("transform",e.transform))
+    d3.zoom().scaleExtent([0.2,5])
+      .on("zoom",e=>g.attr("transform",e.transform))
   );
 
   const nodes = {};
   const links = [];
 
-  const levelHeight = 140;
+  const genGap = 160;
+  const sibGap = 150;
   const spouseGap = 120;
-  const siblingGap = 140;
 
   function addNode(id,x,y){
-    if(!nodes[id]){
-      nodes[id] = {id,x,y};
-    }
+    if(!nodes[id]) nodes[id] = {id,x,y};
   }
 
   function addLink(a,b,type="child"){
     links.push({source:a,target:b,type});
   }
 
-  /* bygg generationer */
+  function layoutDesc(id,depth,x){
 
-  function buildUp(id,level,x){
+    const kids = store.childrenOf[id] || [];
 
-    const parents = store.parentsOf[id] || [];
-    const y = height/2 - levelHeight*level;
+    const y = height/2 + depth*genGap;
 
-    parents.forEach((pid,i)=>{
+    kids.forEach((cid,i)=>{
 
-      const px = x + (i===0 ? -siblingGap : siblingGap);
+      const cx = x + (i - (kids.length-1)/2)*sibGap;
 
-      addNode(pid,px,y);
-      addLink(pid,id);
+      addNode(cid,cx,y);
+      addLink(id,cid);
 
-      const spouse = (store.spousesOf[pid]||[])[0];
-      if(spouse){
-        addNode(spouse,px+spouseGap,y);
-        addLink(pid,spouse,"spouse");
-      }
+      const spouses = store.spousesOf[cid] || [];
 
-      buildUp(pid,level+1,px);
+      spouses.forEach((sid,j)=>{
+
+        const sx = cx + spouseGap*(j+1);
+
+        addNode(sid,sx,y);
+        addLink(cid,sid,"spouse");
+
+      });
+
+      layoutDesc(cid,depth+1,cx);
 
     });
 
   }
 
-  function buildDown(id,level,x){
+  function layoutAnc(id,depth,x){
 
-    const kids = store.childrenOf[id] || [];
-    const y = height/2 + levelHeight*level;
+    const parents = store.parentsOf[id] || [];
 
-    kids.forEach((cid,i)=>{
+    const y = height/2 - depth*genGap;
 
-      const cx = x + (i - kids.length/2)*siblingGap;
+    parents.forEach((pid,i)=>{
 
-      addNode(cid,cx,y);
-      addLink(id,cid);
+      const px = x + (i ? sibGap : -sibGap);
 
-      const spouse = (store.spousesOf[cid]||[])[0];
-      if(spouse){
-        addNode(spouse,cx+spouseGap,y);
-        addLink(cid,spouse,"spouse");
-      }
+      addNode(pid,px,y);
+      addLink(pid,id);
 
-      buildDown(cid,level+1,cx);
+      const spouses = store.spousesOf[pid] || [];
+
+      spouses.forEach((sid,j)=>{
+
+        const sx = px + spouseGap*(j+1);
+
+        addNode(sid,sx,y);
+        addLink(pid,sid,"spouse");
+
+      });
+
+      layoutAnc(pid,depth+1,px);
 
     });
 
@@ -721,12 +729,10 @@ function buildHierarchy(rootId){
 
   addNode(rootId,width/2,height/2);
 
-  buildUp(rootId,1,width/2);
-  buildDown(rootId,1,width/2);
+  layoutAnc(rootId,1,width/2);
+  layoutDesc(rootId,1,width/2);
 
   const nodeList = Object.values(nodes);
-
-  /* rita länkar */
 
   g.selectAll("line")
     .data(links)
@@ -736,10 +742,8 @@ function buildHierarchy(rootId){
     .attr("y1",d=>nodes[d.source].y)
     .attr("x2",d=>nodes[d.target].x)
     .attr("y2",d=>nodes[d.target].y)
-    .attr("stroke",d=>d.type==="spouse"?"#d33":"#999")
+    .attr("stroke",d=>d.type==="spouse"?"#c33":"#888")
     .attr("stroke-width",2);
-
-  /* noder */
 
   const node = g.selectAll(".node")
     .data(nodeList)
@@ -753,7 +757,7 @@ function buildHierarchy(rootId){
     .attr("y",-30)
     .attr("width",140)
     .attr("height",60)
-    .attr("rx",8)
+    .attr("rx",10)
     .attr("fill","#fff")
     .attr("stroke","#333");
 
@@ -2192,7 +2196,7 @@ if(!store.currentId || !store.people[store.currentId]){
    - Aldrig blank sida vid start
    =============================== */
 
-(async function initApp(){
+	(async function initApp(){
 
   console.log("INIT start");
 
@@ -2205,12 +2209,8 @@ if(!store.currentId || !store.people[store.currentId]){
   store.childrenOf ||= {};
   store.spousesOf ||= {};
 
-  /* försök ladda serverfil */
   const loaded = await loadServerJSON();
-  
-  autoBuildRelations();
 
-  /* fallback */
   if(!loaded && Object.keys(store.people).length === 0){
     console.log("Fallback seed()");
     seed();
@@ -2219,17 +2219,16 @@ if(!store.currentId || !store.people[store.currentId]){
   if(idb){
     await loadPersonsFromDB();
   }
-  
-  
-  
-  if(!store.currentId){
-  store.currentId = Object.keys(store.people)[0];
-}
 
-  
+  /* NU finns alla personer */
+
+  autoBuildRelations();   // ← flytta hit
+
+  if(!store.currentId){
+    store.currentId = Object.keys(store.people)[0];
+  }
+
   drawGenerationTree(store.currentId);
-  
-  
 
   console.log(
     "INIT klar:",
@@ -2239,7 +2238,6 @@ if(!store.currentId || !store.people[store.currentId]){
 
 })();
 
-drawGenerationTree(store.currentId);
 
 document.getElementById('addFar').onclick = () => addPersonWithRelation('FAR');
 document.getElementById('addMor').onclick = () => addPersonWithRelation('MOR');
