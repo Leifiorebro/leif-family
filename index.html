@@ -2167,8 +2167,8 @@ if(!store.currentId || !store.people[store.currentId]){
    - IndexedDB är sekundär (bilder)
    - Aldrig blank sida vid start
    =============================== */
-
-	(async function initApp(){
+   
+   (async function initApp(){
 
   console.log("INIT start");
 
@@ -2194,21 +2194,13 @@ if(!store.currentId || !store.people[store.currentId]){
 
   /* NU finns alla personer */
 
-  autoBuildRelations();   // ← flytta hit
+  autoBuildRelations();
 
-  if(!store.currentId){
-  store.currentId = Object.keys(store.childrenOf)[0] 
-                 || Object.keys(store.people)[0];
-	}
-	
-	rebuildChildren();
+  rebuildChildren();
 
-	store.currentId = findRoot();
-	
+  store.currentId = findRoot();
 
-	drawGenealogy(rootId);
-  
-  //drawFullFamilyTree();
+  drawGenealogy(store.currentId);
 
   console.log(
     "INIT klar:",
@@ -2217,6 +2209,10 @@ if(!store.currentId || !store.people[store.currentId]){
   );
 
 })();
+   
+   
+
+	
 
 
 document.getElementById('addFar').onclick = () => addPersonWithRelation('FAR');
