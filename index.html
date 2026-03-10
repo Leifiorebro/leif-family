@@ -655,13 +655,20 @@ function buildHierarchy(rootId){
         if(child) kids.push(child);
       }
     });
+	
+	return {
+	  id:id,
+	  name:store.people[id].name,
+	  born:store.people[id].born,
+	  children:children
+	};
 
-    return {
+    /*return {
       id:id,
       name:p.name,
       born:p.born,
       children:kids
-    };
+    };*/
 
   }
 
@@ -711,11 +718,25 @@ function drawGenealogy(rootId){
     .attr("y2",d=>d.target.y)
     .attr("stroke","#888");
 
-  const node = g.selectAll(".node")
+  /*const node = g.selectAll(".node")
     .data(root.descendants())
     .enter()
     .append("g")
-    .attr("transform",d=>`translate(${d.x},${d.y})`);
+    .attr("transform",d=>`translate(${d.x},${d.y})`);*/
+	
+	const node = g.selectAll(".node")
+  .data(root.descendants())
+  .enter()
+  .append("g")
+  .attr("transform", d => `translate(${d.x},${d.y})`)
+  .style("cursor","pointer")
+  .on("click", function(event,d){
+
+      store.currentId = d.data.id;
+
+      drawGenealogy(store.currentId);
+
+  });
 
   node.append("rect")
     .attr("x",-60)
@@ -2199,6 +2220,9 @@ if(!store.currentId || !store.people[store.currentId]){
   rebuildChildren();
 
   store.currentId = findRoot();
+  
+	console.log("ROT:", store.people[store.currentId]);
+	console.log("BARN:", store.childrenOf[store.currentId]);
 
   drawGenealogy(store.currentId);
 
