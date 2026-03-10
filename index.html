@@ -535,6 +535,37 @@ function buildGraph(){
   return {nodes,links};
 }
 
+function rebuildChildren(){
+
+  store.childrenOf = {};
+
+  Object.entries(store.parentsOf).forEach(([child,parents])=>{
+
+    parents.forEach(parent=>{
+
+      if(!store.childrenOf[parent])
+        store.childrenOf[parent] = [];
+
+      store.childrenOf[parent].push(child);
+
+    });
+
+  });
+
+}
+
+function findRoot(){
+
+  return Object.keys(store.people).find(id =>
+    (!store.parentsOf[id] || store.parentsOf[id].length === 0) &&
+    store.childrenOf[id]
+  );
+
+}
+
+
+
+
 function drawWholeFamily(){
 
   const graph = buildGraph();
@@ -637,46 +668,38 @@ function buildHierarchy(rootId){
   return build(rootId);
 }
 
-	function drawGenerationTree(rootId){
+
+function drawGenealogy(rootId){
 
   const svg = d3.select("#tree");
   svg.selectAll("*").remove();
-
-  const width = 1600;
-  const height = 900;
 
   const g = svg.append("g");
 
   svg.call(
     d3.zoom()
-      .scaleExtent([0.2,5])
+      .scaleExtent([0.2,4])
       .on("zoom",e=>g.attr("transform",e.transform))
   );
 
-  /* ===== bygg hierarki ===== */
+  function build(id){
 
-  function buildNode(id){
-
-    const children = (store.childrenOf[id] || []).map(cid => buildNode(cid));
+    const children = (store.childrenOf[id] || []).map(build);
 
     return {
       id:id,
-      name:store.people[id]?.name || "",
-      born:store.people[id]?.born || "",
+      name:store.people[id].name,
+      born:store.people[id].born,
       children:children
     };
   }
 
-  const rootData = buildNode(rootId);
-
-  const root = d3.hierarchy(rootData);
+  const root = d3.hierarchy(build(rootId));
 
   const tree = d3.tree()
-      .nodeSize([120,140]);
+    .nodeSize([140,120]);
 
   tree(root);
-
-  /* ===== rita länkar ===== */
 
   g.selectAll("line")
     .data(root.links())
@@ -688,42 +711,36 @@ function buildHierarchy(rootId){
     .attr("y2",d=>d.target.y)
     .attr("stroke","#888");
 
-  /* ===== rita noder ===== */
-
   const node = g.selectAll(".node")
-      .data(root.descendants())
-      .enter()
-      .append("g")
-      .attr("transform",d=>`translate(${d.x},${d.y})`)
-      .style("cursor","pointer");
+    .data(root.descendants())
+    .enter()
+    .append("g")
+    .attr("transform",d=>`translate(${d.x},${d.y})`);
 
   node.append("rect")
-      .attr("x",-60)
-      .attr("y",-28)
-      .attr("width",120)
-      .attr("height",56)
-      .attr("rx",8)
-      .attr("fill","#fff")
-      .attr("stroke","#333");
+    .attr("x",-60)
+    .attr("y",-25)
+    .attr("width",120)
+    .attr("height",50)
+    .attr("rx",6)
+    .attr("fill","#fff")
+    .attr("stroke","#333");
 
   node.append("text")
-      .attr("text-anchor","middle")
-      .attr("dy","-4")
-      .attr("font-weight","bold")
-      .text(d=>d.data.name);
+    .attr("text-anchor","middle")
+    .attr("dy","-3")
+    .attr("font-weight","bold")
+    .text(d=>d.data.name);
 
   node.append("text")
-      .attr("text-anchor","middle")
-      .attr("dy","14")
-      .attr("font-size","11px")
-      .text(d=>d.data.born);
-
-  node.on("click",(e,d)=>{
-      store.currentId = d.data.id;
-      drawGenerationTree(d.data.id);
-  });
+    .attr("text-anchor","middle")
+    .attr("dy","14")
+    .attr("font-size","11px")
+    .text(d=>d.data.born || "");
 
 }
+
+
 
 
 
@@ -2183,8 +2200,12 @@ if(!store.currentId || !store.people[store.currentId]){
   store.currentId = Object.keys(store.childrenOf)[0] 
                  || Object.keys(store.people)[0];
 	}
+	
+	rebuildChildren();
 
-  drawGenerationTree(store.currentId);
+	store.currentId = findRoot();
+
+	drawGenealogy(rootId);
   
   //drawFullFamilyTree();
 
