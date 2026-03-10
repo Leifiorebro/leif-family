@@ -535,6 +535,39 @@ function buildGraph(){
   return {nodes,links};
 }
 
+function buildFamilyTree(id, visited = new Set()) {
+
+  if(visited.has(id)) return null;
+  visited.add(id);
+
+  const person = store.people[id];
+  if(!person) return null;
+
+  const node = {
+    id: id,
+    name: person.name,
+    born: person.born,
+    parents: [],
+    children: []
+  };
+
+  const parents = store.parentsOf[id] || [];
+  parents.forEach(p => {
+    const parentNode = buildFamilyTree(p, visited);
+    if(parentNode) node.parents.push(parentNode);
+  });
+
+  const children = store.childrenOf[id] || [];
+  children.forEach(c => {
+    const childNode = buildFamilyTree(c, visited);
+    if(childNode) node.children.push(childNode);
+  });
+
+  return node;
+}
+
+
+
 function rebuildChildren(){
 
   store.childrenOf = {};
@@ -689,75 +722,89 @@ function drawGenealogy(rootId){
       .on("zoom",e=>g.attr("transform",e.transform))
   );
 
-  function build(id){
+  const data = buildFamilyTree(rootId);
 
-    const children = (store.childrenOf[id] || []).map(build);
+  const nodes = [];
+  const links = [];
 
-    return {
-      id:id,
-      name:store.people[id].name,
-      born:store.people[id].born,
-      children:children
-    };
+  function traverse(node, x=0, y=0, level=0){
+
+    nodes.push({
+      id:node.id,
+      name:node.name,
+      born:node.born,
+      x:x,
+      y:y
+    });
+
+    node.parents.forEach((p,i)=>{
+      const px = x + (i-0.5)*200;
+      const py = y - 150;
+
+      links.push({source:p.id,target:node.id});
+
+      traverse(p,px,py,level-1);
+    });
+
+    node.children.forEach((c,i)=>{
+      const cx = x + (i-0.5)*200;
+      const cy = y + 150;
+
+      links.push({source:node.id,target:c.id});
+
+      traverse(c,cx,cy,level+1);
+    });
+
   }
 
-  const root = d3.hierarchy(build(rootId));
+  traverse(data,0,0);
 
-  const tree = d3.tree()
-    .nodeSize([140,120]);
-
-  tree(root);
+  const nodeMap = {};
+  nodes.forEach(n=>nodeMap[n.id]=n);
 
   g.selectAll("line")
-    .data(root.links())
+    .data(links)
     .enter()
     .append("line")
-    .attr("x1",d=>d.source.x)
-    .attr("y1",d=>d.source.y)
-    .attr("x2",d=>d.target.x)
-    .attr("y2",d=>d.target.y)
+    .attr("x1",d=>nodeMap[d.source].x)
+    .attr("y1",d=>nodeMap[d.source].y)
+    .attr("x2",d=>nodeMap[d.target].x)
+    .attr("y2",d=>nodeMap[d.target].y)
     .attr("stroke","#888");
 
-  /*const node = g.selectAll(".node")
-    .data(root.descendants())
+  const node = g.selectAll(".node")
+    .data(nodes)
     .enter()
     .append("g")
-    .attr("transform",d=>`translate(${d.x},${d.y})`);*/
-	
-	const node = g.selectAll(".node")
-  .data(root.descendants())
-  .enter()
-  .append("g")
-  .attr("transform", d => `translate(${d.x},${d.y})`)
-  .style("cursor","pointer")
-  .on("click", function(event,d){
+    .attr("transform",d=>`translate(${d.x},${d.y})`)
+    .style("cursor","pointer")
+    .on("click",(event,d)=>{
 
-      store.currentId = d.data.id;
+      store.currentId = d.id;
+      drawGenealogy(d.id);
 
-      drawGenealogy(store.currentId);
-
-  });
+    });
 
   node.append("rect")
-    .attr("x",-60)
-    .attr("y",-25)
-    .attr("width",120)
-    .attr("height",50)
+    .attr("x",-70)
+    .attr("y",-30)
+    .attr("width",140)
+    .attr("height",60)
     .attr("rx",6)
     .attr("fill","#fff")
     .attr("stroke","#333");
 
   node.append("text")
     .attr("text-anchor","middle")
-    .attr("dy","-3")
+    .attr("dy","-5")
     .attr("font-weight","bold")
-    .text(d=>d.data.name);
+    .text(d=>d.name);
 
   node.append("text")
     .attr("text-anchor","middle")
-    .attr("dy","14")
+    .attr("dy","15")
     .attr("font-size","11px")
-    .text(d=>d.data.born || "");
+    .text(d=>d.born || "");
 
 }
 
@@ -2224,7 +2271,7 @@ if(!store.currentId || !store.people[store.currentId]){
 	console.log("ROT:", store.people[store.currentId]);
 	console.log("BARN:", store.childrenOf[store.currentId]);
 
-  drawGenealogy(store.currentId);
+  drawGenealogy("p_6c6wnb9");
 
   console.log(
     "INIT klar:",
