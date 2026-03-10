@@ -642,143 +642,90 @@ function buildHierarchy(rootId){
   const svg = d3.select("#tree");
   svg.selectAll("*").remove();
 
-  const width = 2000;
-  const height = 1400;
+  const width = 1600;
+  const height = 900;
 
   const g = svg.append("g");
 
   svg.call(
-    d3.zoom().scaleExtent([0.2,5])
+    d3.zoom()
+      .scaleExtent([0.2,5])
       .on("zoom",e=>g.attr("transform",e.transform))
   );
 
-  const nodes = {};
-  const links = [];
+  /* ===== bygg hierarki ===== */
 
-  const genGap = 160;
-  const sibGap = 150;
-  const spouseGap = 120;
+  function buildNode(id){
 
-  function addNode(id,x,y){
-    if(!nodes[id]) nodes[id] = {id,x,y};
+    const children = (store.childrenOf[id] || []).map(cid => buildNode(cid));
+
+    return {
+      id:id,
+      name:store.people[id]?.name || "",
+      born:store.people[id]?.born || "",
+      children:children
+    };
   }
 
-  function addLink(a,b,type="child"){
-    links.push({source:a,target:b,type});
-  }
+  const rootData = buildNode(rootId);
 
-  function layoutDesc(id,depth,x){
+  const root = d3.hierarchy(rootData);
 
-    const kids = store.childrenOf[id] || [];
+  const tree = d3.tree()
+      .nodeSize([120,140]);
 
-    const y = height/2 + depth*genGap;
+  tree(root);
 
-    kids.forEach((cid,i)=>{
-
-      const cx = x + (i - (kids.length-1)/2)*sibGap;
-
-      addNode(cid,cx,y);
-      addLink(id,cid);
-
-      const spouses = store.spousesOf[cid] || [];
-
-      spouses.forEach((sid,j)=>{
-
-        const sx = cx + spouseGap*(j+1);
-
-        addNode(sid,sx,y);
-        addLink(cid,sid,"spouse");
-
-      });
-
-      layoutDesc(cid,depth+1,cx);
-
-    });
-
-  }
-
-  function layoutAnc(id,depth,x){
-
-    const parents = store.parentsOf[id] || [];
-
-    const y = height/2 - depth*genGap;
-
-    parents.forEach((pid,i)=>{
-
-      const px = x + (i ? sibGap : -sibGap);
-
-      addNode(pid,px,y);
-      addLink(pid,id);
-
-      const spouses = store.spousesOf[pid] || [];
-
-      spouses.forEach((sid,j)=>{
-
-        const sx = px + spouseGap*(j+1);
-
-        addNode(sid,sx,y);
-        addLink(pid,sid,"spouse");
-
-      });
-
-      layoutAnc(pid,depth+1,px);
-
-    });
-
-  }
-
-  addNode(rootId,width/2,height/2);
-
-  layoutAnc(rootId,1,width/2);
-  layoutDesc(rootId,1,width/2);
-
-  const nodeList = Object.values(nodes);
+  /* ===== rita länkar ===== */
 
   g.selectAll("line")
-    .data(links)
+    .data(root.links())
     .enter()
     .append("line")
-    .attr("x1",d=>nodes[d.source].x)
-    .attr("y1",d=>nodes[d.source].y)
-    .attr("x2",d=>nodes[d.target].x)
-    .attr("y2",d=>nodes[d.target].y)
-    .attr("stroke",d=>d.type==="spouse"?"#c33":"#888")
-    .attr("stroke-width",2);
+    .attr("x1",d=>d.source.x)
+    .attr("y1",d=>d.source.y)
+    .attr("x2",d=>d.target.x)
+    .attr("y2",d=>d.target.y)
+    .attr("stroke","#888");
+
+  /* ===== rita noder ===== */
 
   const node = g.selectAll(".node")
-    .data(nodeList)
-    .enter()
-    .append("g")
-    .attr("transform",d=>`translate(${d.x},${d.y})`)
-    .style("cursor","pointer");
+      .data(root.descendants())
+      .enter()
+      .append("g")
+      .attr("transform",d=>`translate(${d.x},${d.y})`)
+      .style("cursor","pointer");
 
   node.append("rect")
-    .attr("x",-70)
-    .attr("y",-30)
-    .attr("width",140)
-    .attr("height",60)
-    .attr("rx",10)
-    .attr("fill","#fff")
-    .attr("stroke","#333");
+      .attr("x",-60)
+      .attr("y",-28)
+      .attr("width",120)
+      .attr("height",56)
+      .attr("rx",8)
+      .attr("fill","#fff")
+      .attr("stroke","#333");
 
   node.append("text")
-    .attr("text-anchor","middle")
-    .attr("dy","-4")
-    .attr("font-weight","bold")
-    .text(d=>store.people[d.id]?.name || "");
+      .attr("text-anchor","middle")
+      .attr("dy","-4")
+      .attr("font-weight","bold")
+      .text(d=>d.data.name);
 
   node.append("text")
-    .attr("text-anchor","middle")
-    .attr("dy","14")
-    .attr("font-size","11px")
-    .text(d=>store.people[d.id]?.born || "");
+      .attr("text-anchor","middle")
+      .attr("dy","14")
+      .attr("font-size","11px")
+      .text(d=>d.data.born);
 
   node.on("click",(e,d)=>{
-    store.currentId = d.id;
-    drawGenerationTree(d.id);
+      store.currentId = d.data.id;
+      drawGenerationTree(d.data.id);
   });
 
 }
+
+
 
 function drawFullFamilyTree() {
     const roots = Object.keys(store.people).filter(id => !store.parentsOf[id] || store.parentsOf[id].length === 0);
@@ -2233,12 +2180,13 @@ if(!store.currentId || !store.people[store.currentId]){
   autoBuildRelations();   // ← flytta hit
 
   if(!store.currentId){
-    store.currentId = Object.keys(store.people)[0];
-  }
+  store.currentId = Object.keys(store.childrenOf)[0] 
+                 || Object.keys(store.people)[0];
+	}
 
-  //drawGenerationTree(store.currentId);
+  drawGenerationTree(store.currentId);
   
-  drawFullFamilyTree();
+  //drawFullFamilyTree();
 
   console.log(
     "INIT klar:",
