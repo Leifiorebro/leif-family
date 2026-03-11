@@ -835,10 +835,40 @@ function drawGenealogy(rootId){
 
 function openEditor(id){
 
+	const motherSel = document.getElementById("parentMother");
+	const fatherSel = document.getElementById("parentFather");
+
+	motherSel.innerHTML = '<option value="">– ingen –</option>';
+	fatherSel.innerHTML = '<option value="">– ingen –</option>';
+
+O	bject.values(store.people).forEach(pp=>{
+	const opt1 = new Option(pp.name, pp.id);
+	const opt2 = new Option(pp.name, pp.id);
+	motherSel.add(opt1);
+	fatherSel.add(opt2);
+	});
+
+	const parents = store.parentsOf[id] || [];
+	motherSel.value = parents[0] || "";
+	fatherSel.value = parents[1] || "";
+
   const p = store.people[id];
+  if(!p) return;
+
+  const panel = document.getElementById("detailPanel");
+
+  panel.dataset.id = id;
+  panel.classList.add("open");
 
   document.getElementById("editName").textContent =
     p.name + " (" + id + ")";
+
+  document.getElementById("d_name").value = p.name || "";
+  document.getElementById("d_born").value = p.born || "";
+  document.getElementById("d_died").value = p.died || "";
+  document.getElementById("d_job").value = p.job || "";
+  document.getElementById("d_history").value = p.history || "";
+  document.getElementById("d_link").value = p.link || "";
 
 }
 
@@ -2246,12 +2276,12 @@ async function loadServerJSON(){
     }
 
     store.people = data.people;
-    /*store.parentsOf = data.parentsOf || {};
+    store.parentsOf = data.parentsOf || {};
     store.childrenOf = data.childrenOf || {};
     store.spousesOf = data.spousesOf || {};
 
-    saveStore();*/
-	rebuildRelations();
+    rebuildChildren();
+	
 	
 	if(!store.currentId || !store.people[store.currentId]){
   store.currentId = Object.keys(store.people)[0];
@@ -2391,7 +2421,7 @@ if(!store.currentId || !store.people[store.currentId]){
 
   /* NU finns alla personer */
 
-  autoBuildRelations();
+  //autoBuildRelations();
 
   rebuildChildren();
 
