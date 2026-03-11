@@ -805,7 +805,8 @@ function drawGenealogy(rootId){
     .on("click",(event,d)=>{
 
       store.currentId = d.id;
-      drawGenealogy(d.id);
+      //drawGenealogy(d.id);
+	  openEditor(d.id);
 
     });
 
@@ -832,6 +833,110 @@ function drawGenealogy(rootId){
 
 }
 
+function openEditor(id){
+
+  const p = store.people[id];
+
+  document.getElementById("editName").textContent =
+    p.name + " (" + id + ")";
+
+}
+
+function addParent(){
+
+  const child = store.currentId;
+
+  const name = prompt("Namn på förälder");
+
+  if(!name) return;
+
+  const id = "p_" + Math.random().toString(36).substr(2,9);
+
+  store.people[id] = {
+    id:id,
+    name:name
+  };
+
+  if(!store.parentsOf[child])
+    store.parentsOf[child] = [];
+
+  store.parentsOf[child].push(id);
+
+  rebuildChildren();
+
+  drawGenealogy(store.currentId);
+
+}
+
+function addChild(){
+
+  const parent = store.currentId;
+
+  const name = prompt("Barnets namn");
+
+  if(!name) return;
+
+  const id = "p_" + Math.random().toString(36).substr(2,9);
+
+  store.people[id] = {
+    id:id,
+    name:name
+  };
+
+  if(!store.parentsOf[id])
+    store.parentsOf[id] = [];
+
+  store.parentsOf[id].push(parent);
+
+  rebuildChildren();
+
+  drawGenealogy(store.currentId);
+
+}
+
+function addSpouse(){
+
+  const person = store.currentId;
+
+  const name = prompt("Partnerns namn");
+
+  if(!name) return;
+
+  const id = "p_" + Math.random().toString(36).substr(2,9);
+
+  store.people[id] = {
+    id:id,
+    name:name
+  };
+
+  if(!store.spousesOf[person])
+    store.spousesOf[person] = [];
+
+  store.spousesOf[person].push(id);
+
+  drawGenealogy(store.currentId);
+
+}
+
+function saveJSON(){
+
+  const data = {
+    people:store.people,
+    parentsOf:store.parentsOf,
+    spousesOf:store.spousesOf
+  };
+
+  const blob = new Blob(
+    [JSON.stringify(data,null,2)],
+    {type:"application/json"}
+  );
+
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "slaktdata.json";
+  a.click();
+
+}
 
 
 
