@@ -13,7 +13,7 @@
 body{
 margin:0;
 font-family:Arial;
-background:#f5f5f5;
+background:#f0f0f0;
 }
 
 header{
@@ -33,60 +33,106 @@ background:white;
 .node rect{
 fill:white;
 stroke:#333;
-stroke-width:2;
-rx:8;
-}
-
-.node text{
-font-size:13px;
 }
 
 .link{
-fill:none;
-stroke:#777;
+stroke:#999;
 stroke-width:2;
 }
 
-.partner{
-stroke:#999;
-stroke-width:3;
+#editor{
+position:fixed;
+right:0;
+top:0;
+width:300px;
+height:100%;
+background:white;
+border-left:1px solid #ccc;
+padding:15px;
+overflow:auto;
+}
+
+input,select{
+width:100%;
+margin-bottom:8px;
+}
+
+button{
+padding:6px 10px;
 }
 
 </style>
 </head>
-
 <body>
 
 <header>
 
 <button onclick="addPerson()">➕ Person</button>
-
-<button onclick="exportJSON()">💾 Export</button>
+<button onclick="exportJSON()">💾 Export JSON</button>
 
 <input type="file" id="importFile" hidden>
-
 <button onclick="document.getElementById('importFile').click()">📂 Import</button>
 
 </header>
 
 <svg id="tree"></svg>
 
+<div id="editor">
+
+<h3 id="editTitle">Ingen person vald</h3>
+
+<label>Namn</label>
+<input id="e_name">
+
+<label>Född</label>
+<input id="e_born">
+
+<label>Död</label>
+<input id="e_died">
+
+<h4>Föräldrar</h4>
+
+<select id="e_mother"></select>
+<button onclick="removeMother()">Ta bort mor</button>
+
+<select id="e_father"></select>
+<button onclick="removeFather()">Ta bort far</button>
+
+<h4>Partner</h4>
+
+<div id="spouseList"></div>
+
+<button onclick="addSpouse()">+ partner</button>
+
+<h4>Barn</h4>
+
+<div id="childList"></div>
+
+<button onclick="addChild()">+ barn</button>
+
+<hr>
+
+<button onclick="savePerson()">💾 Spara</button>
+<button onclick="deletePerson()">🗑 Ta bort person</button>
+
+</div>
+
 <script>
 
-/* =========================
-DATA STORE
-========================= */
+/* =============================
+STORE
+============================= */
 
 let store={
 people:{},
 parentsOf:{},
 spousesOf:{},
-root:null
+currentId:null
 }
 
-/* =========================
+/* =============================
 UTILS
-========================= */
+============================= */
 
 function uid(){
 return "p_"+Math.random().toString(36).substr(2,9)
@@ -104,9 +150,9 @@ return arr
 
 }
 
-/* =========================
+/* =============================
 PERSON
-========================= */
+============================= */
 
 function addPerson(){
 
@@ -117,44 +163,254 @@ id:id,
 name:"Ny person"
 }
 
-if(!store.root) store.root=id
+store.currentId=id
+
+render()
+openEditor(id)
+
+}
+
+function deletePerson(){
+
+const id=store.currentId
+if(!id) return
+
+delete store.people[id]
+
+delete store.parentsOf[id]
+delete store.spousesOf[id]
+
+Object.keys(store.parentsOf).forEach(c=>{
+store.parentsOf[c]=store.parentsOf[c].filter(p=>p!==id)
+})
+
+Object.keys(store.spousesOf).forEach(s=>{
+store.spousesOf[s]=store.spousesOf[s].filter(p=>p!==id)
+})
+
+store.currentId=null
 
 render()
 
 }
 
-/* =========================
-TREE DATA BUILD
-========================= */
+/* =============================
+RELATIONS
+============================= */
 
-function buildHierarchy(id){
+function addChild(){
+
+const pid=store.currentId
+if(!pid) return
+
+const id=uid()
+
+store.people[id]={id,name:"Barn"}
+
+store.parentsOf[id]=[pid]
+
+render()
+
+}
+
+function addSpouse(){
+
+const pid=store.currentId
+if(!pid) return
+
+const id=uid()
+
+store.people[id]={id,name:"Partner"}
+
+store.spousesOf[pid] ||= []
+store.spousesOf[pid].push(id)
+
+store.spousesOf[id] = [pid]
+
+render()
+
+}
+
+function removeMother(){
+
+const pid=store.currentId
+if(!store.parentsOf[pid]) return
+
+store.parentsOf[pid][0]=null
+
+render()
+
+}
+
+function removeFather(){
+
+const pid=store.currentId
+if(!store.parentsOf[pid]) return
+
+store.parentsOf[pid][1]=null
+
+render()
+
+}
+
+/* =============================
+EDITOR
+============================= */
+
+function openEditor(id){
+
+const p=store.people[id]
+if(!p) return
+
+store.currentId=id
+
+document.getElementById("editTitle").innerText=p.name
+
+document.getElementById("e_name").value=p.name||""
+document.getElementById("e_born").value=p.born||""
+document.getElementById("e_died").value=p.died||""
+
+buildParentSelect(id)
+buildChildren(id)
+buildSpouses(id)
+
+}
+
+function buildParentSelect(id){
+
+const m=document.getElementById("e_mother")
+const f=document.getElementById("e_father")
+
+m.innerHTML="<option value=''>Ingen</option>"
+f.innerHTML="<option value=''>Ingen</option>"
+
+Object.values(store.people).forEach(p=>{
+
+const o1=new Option(p.name,p.id)
+const o2=new Option(p.name,p.id)
+
+m.add(o1)
+f.add(o2)
+
+})
+
+const parents=store.parentsOf[id]||[]
+
+m.value=parents[0]||""
+f.value=parents[1]||""
+
+}
+
+function buildChildren(id){
+
+const box=document.getElementById("childList")
+box.innerHTML=""
+
+childrenOf(id).forEach(cid=>{
+
+const d=document.createElement("div")
+
+d.innerHTML=
+store.people[cid].name+
+" <button onclick='unlinkChild(\""+cid+"\")'>X</button>"
+
+box.appendChild(d)
+
+})
+
+}
+
+function buildSpouses(id){
+
+const box=document.getElementById("spouseList")
+box.innerHTML=""
+
+;(store.spousesOf[id]||[]).forEach(sid=>{
+
+const d=document.createElement("div")
+
+d.innerHTML=
+store.people[sid].name+
+" <button onclick='unlinkSpouse(\""+sid+"\")'>X</button>"
+
+box.appendChild(d)
+
+})
+
+}
+
+function unlinkChild(cid){
+
+delete store.parentsOf[cid]
+
+render()
+
+}
+
+function unlinkSpouse(sid){
+
+const id=store.currentId
+
+store.spousesOf[id]=store.spousesOf[id].filter(x=>x!==sid)
+store.spousesOf[sid]=store.spousesOf[sid].filter(x=>x!==id)
+
+render()
+
+}
+
+function savePerson(){
+
+const id=store.currentId
+if(!id) return
 
 const p=store.people[id]
 
-if(!p) return null
+p.name=document.getElementById("e_name").value
+p.born=document.getElementById("e_born").value
+p.died=document.getElementById("e_died").value
 
-return{
-id:id,
-name:p.name,
-children:childrenOf(id).map(c=>buildHierarchy(c))
+const mother=document.getElementById("e_mother").value
+const father=document.getElementById("e_father").value
+
+store.parentsOf[id]=[]
+
+if(mother) store.parentsOf[id][0]=mother
+if(father) store.parentsOf[id][1]=father
+
+render()
+
 }
 
-}
+/* =============================
+TREE
+============================= */
 
-/* =========================
-DRAW TREE
-========================= */
+function buildGraph(){
+
+const nodes=[]
+const links=[]
+
+Object.values(store.people).forEach(p=>{
+nodes.push({id:p.id,name:p.name})
+})
+
+Object.entries(store.parentsOf).forEach(([child,parents])=>{
+parents.forEach(parent=>{
+links.push({source:parent,target:child})
+})
+})
+
+return{nodes,links}
+
+}
 
 function render(){
+
+const graph=buildGraph()
 
 const svg=d3.select("#tree")
 
 svg.selectAll("*").remove()
-
-if(!store.root) return
-
-const width=window.innerWidth
-const height=window.innerHeight
 
 const g=svg.append("g")
 
@@ -164,75 +420,53 @@ g.attr("transform",e.transform)
 })
 )
 
-const root=d3.hierarchy(buildHierarchy(store.root))
+const sim=d3.forceSimulation(graph.nodes)
+.force("link",d3.forceLink(graph.links).id(d=>d.id).distance(140))
+.force("charge",d3.forceManyBody().strength(-300))
+.force("center",d3.forceCenter(window.innerWidth/2,window.innerHeight/2))
 
-const tree=d3.tree().nodeSize([140,160])
-
-tree(root)
-
-/* LINKS */
-
-g.selectAll(".link")
-.data(root.links())
+const link=g.selectAll(".link")
+.data(graph.links)
 .enter()
-.append("path")
+.append("line")
 .attr("class","link")
-.attr("d",d3.linkVertical()
-.x(d=>d.x)
-.y(d=>d.y)
-)
-
-/* NODES */
 
 const node=g.selectAll(".node")
-.data(root.descendants())
+.data(graph.nodes)
 .enter()
 .append("g")
 .attr("class","node")
-.attr("transform",d=>"translate("+d.x+","+d.y+")")
-.on("click",(e,d)=>openEditor(d.data.id))
+.on("click",(e,d)=>openEditor(d.id))
 
 node.append("rect")
-.attr("x",-70)
-.attr("y",-30)
-.attr("width",140)
-.attr("height",60)
+.attr("x",-60)
+.attr("y",-25)
+.attr("width",120)
+.attr("height",50)
 
 node.append("text")
 .attr("text-anchor","middle")
-.attr("dy","-5")
-.text(d=>d.data.name)
+.attr("dy","5")
+.text(d=>d.name)
 
-node.append("text")
-.attr("text-anchor","middle")
-.attr("dy","15")
-.text(d=>{
-const p=store.people[d.data.id]
-return (p.born||"")+"-"+(p.died||"")
+sim.on("tick",()=>{
+
+link
+.attr("x1",d=>d.source.x)
+.attr("y1",d=>d.source.y)
+.attr("x2",d=>d.target.x)
+.attr("y2",d=>d.target.y)
+
+node
+.attr("transform",d=>"translate("+d.x+","+d.y+")")
+
 })
 
 }
 
-/* =========================
-EDITOR (minimal)
-========================= */
-
-function openEditor(id){
-
-const p=store.people[id]
-
-const name=prompt("Namn:",p.name)
-
-if(name!==null){
-p.name=name
-render()
-}
-
-}
-
-/* =========================
+/* =============================
 JSON
-========================= */
+============================= */
 
 function exportJSON(){
 
@@ -261,9 +495,9 @@ render()
 
 })
 
-/* =========================
+/* =============================
 START
-========================= */
+============================= */
 
 render()
 
