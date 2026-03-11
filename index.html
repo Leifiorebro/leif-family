@@ -1,2457 +1,529 @@
 <!doctype html>
 <html lang="sv">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<title>Familjeträd – Fixad version (med åldersberäkning)</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Familjeträd</title>
+
 <style>
-:root {
-  --bg: #F1C716;
-  --card-w: 220px;
-  --card-h: 320px;
-  --gap-vert: 72px;
-  --gap-h: 28px;
-  --panel-w: 380px;
-  --info-font: 13px;
-}
-* { box-sizing: border-box; }
-html, body { margin:0; height:100%; background:var(--bg); font-family:Inter,Arial,sans-serif; color:#111; }
-
-/* ------- Aktuell person markering ---------- */
-.current {
-  outline:5px solid #3bd93b;
-  box-shadow:0 0 20px rgba(0,120,0,0.4);
-  
-  position:relative;
-  z-index:3;
-}
-
-
-/* ------ Färgade sidopanel-knappar ------ */
-.btn-photo,
-#photoBtn {
-  background:#42c65a !important;
-  color:white !important;
-  border:none !important;
-  font-weight:600;
-}
-.btn-photo:hover,
-#photoBtn:hover {
-  background:#2ea544 !important;
-}
-
-.btn-save,
-#d_save {
-  background:#42c65a !important;
-  color:white !important;
-  border:none !important;
-  font-weight:600;
-}
-.btn-save:hover,
-#d_save:hover {
-  background:#2ea544 !important;
-}
-
-.btn-delete,
-#d_delete {
-  background:#d64545 !important;
-  color:white !important;
-  border:none !important;
-  font-weight:600;
-}
-.btn-delete:hover,
-#d_delete:hover {
-  background:#b23535 !important;
-}
-
-/* ------- Header -------- */
-header {
-  position:sticky; top:0; left:0; right:0;
-  background:#fff;
-  padding:8px 12px;
-  display:flex;
-  gap:8px;
-  align-items:center;
-  box-shadow:0 2px 6px rgba(0,0,0,0.12);
-}
-.btn {
-  background:#f3f6fb;
-  border:1px solid #dfe9f5;
-  padding:8px 10px;
-  border-radius:8px;
-  cursor:pointer;
-}
-.smallBtn {
-  background:#eee;
-  padding:6px 8px;
-  border-radius:6px;
-  border:none;
-  cursor:pointer;
-  font-size:13px;
-}
-
-/* ------- Layout -------- */
-#app { display:flex; gap:12px; padding:18px; min-height:calc(100vh - 60px); }
-#leftPanel {
-  width:260px;
-  background:#fff;
-  border-radius:8px;
-  padding:10px;
-  box-shadow:0 6px 18px rgba(0,0,0,0.12);
-  height:calc(100vh - 110px);
-  overflow:auto;
-  position:sticky;
-  top:70px;
-}
-.personItem { padding:8px; margin-bottom:8px; border-radius:6px; border:1px solid #e6e6e6; cursor:pointer; }
-#centerArea { flex:1; display:flex; flex-direction:column; align-items:center; gap:var(--gap-vert); padding-bottom:200px; }
-
-/*------- Cards --------*/
-
-.card {
-  width: var(--card-w);
-  height: var(--card-h);
-  border-radius: 10px;
-  background: #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-
-
- .header {
-  position: relative;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
- .roleText {
-  font-weight: 600;
-  font-size: 13px;
-  color: #fff;
-  text-transform: uppercase;
-  line-height: 1.2;
-  pointer-events: none;
-}
-
- .iconBar {
-  position: absolute;
-  left: 6px;
-  top: 6px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.15s ease;
-}
-
-/* Visa ikoner vid hover */
-.card:hover .iconBar {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* ⭐ VISA ALLTID IKONER PÅ AKTUELL PERSON */
-/*.card.current .iconBar {
-  opacity: 1;
-  pointer-events: auto;
-}*/
- 
-
-
-
- .iconBtn {
-  width: 28px;              /* ⭐ gör att de inte kollapsar */
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: rgba(255,255,255,0.85);
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 15px;
-  padding: 0;
-}
-
-.iconBtn:hover {
-  background: rgba(0,0,0,0.08);
-}
-
-
-
-/* .deleteBtn {
-  background: transparent;
-  color: #b00020;
-}*/
-
-/*.deleteBtn:hover {
-  background: rgba(176,0,32,0.1);
-}*/
-
-
-
-
-/*.deleteBtn {
-  background: transparent;
-  color: #b00020;
-}*/
-/*.deleteBtn:hover {
-  background: rgba(176,0,32,0.1);
-}*/
-
-
-.role-far .header { background:#2e6fd8 }
-.role-mor .header { background:#8a2be2 }
-.role-maka .header { background:#ff8a65 }
-.role-barn .header { background:#00cdd4; color:black }
-
-.role-maka .header {
-  font-size: 13px !important;
-  letter-spacing: 0.8px;
-}
-
-/* ===== Header på aktuell person ===== */
-.card.current .header {
-  background: #2f8f2f;   /* mörkare grön */
-  color: #fff;
-}
-
-.card.current .roleText {
-  color: #fff;
-}
-
-.photo {
-  height:42%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:#fafafa;
-  border-bottom:1px solid rgba(0,0,0,0.06);
-}
-.photo img { width:100%; height:100%; object-fit:contain; background:white; }
-
-.info { padding:10px; display:flex; flex-direction:column; gap:6px; font-size:var(--info-font); }
-
-.row {
-  display:flex;
-  gap:var(--gap-h);
-  align-items:flex-start;
-  justify-content:center;
-  flex-wrap:wrap;
-}
-
-
-/* Mini cards */
-.miniCard {
-  width:150px;
-  padding:8px;
-  text-align:center;
-  background:#fff;
-  border-radius:8px;
-  box-shadow:0 4px 14px rgba(0,0,0,0.18);
-  cursor:pointer;
-}
-
-/* ------ Detail panel ------ */
-#overlay {
-  display:none;
-  position:fixed;
-  left:0; top:0;
-  width:100%; height:100%;
-  background:rgba(0,0,0,0.25);
-  z-index:1500;
-}
-#detailPanel {
-  position:fixed;
-  right:0; top:0;
-  width:var(--panel-w);
-  height:100%;
-  background:white;
-  padding:16px;
-  transform:translateX(120%);
-  transition:0.25s;
-  z-index:1600;
-  overflow:auto;
-}
-#detailPanel.open { transform:translateX(0); }
-
-input[type=text], input[type=url], input[type=date], select {
-  width:100%; padding:8px; margin-top:6px; border-radius:6px; border:1px solid #ccc;
-}
-
-#d_history {
-  width: 100%;
-  box-sizing: border-box;
-  resize: vertical;
-  margin-bottom: 10px;
-  font-family: inherit;
-}
-
-/* Dropdown menu high z-index by default so it isn't hidden */
-#addMenu {
-  position: fixed;
-  z-index: 9999999;
-  min-width: 180px;
-}
-
-
-
-
-/* Mobile */
-@media (max-width:900px){
-  #leftPanel { display:none; }
-  #detailPanel { width:100% }
-  .card { width:44vw }
-  :root{ --card-w:44vw }
-}
 
 body{
-  margin:0;
-  font-family:Arial, sans-serif;
+margin:0;
+font-family:Arial;
+background:#f5f5f5;
 }
 
-#app{
-  display:flex;
-  height:100vh;
-}
-
-#leftPanel{
-  width:260px;
-  border-right:1px solid #ccc;
-  padding:10px;
-  overflow-y:auto;
-}
-
-#centerArea{
-  flex:1;
-  padding:20px;
-  min-height:200px;
-}
-
-#detailPanel{
-  width:300px;
-  border-left:1px solid #ccc;
-  padding:10px;
-  overflow-y:auto;
-  background:#fafafa;
-}
-
-.row{
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  margin:20px 0;
-}
-
-.personCard{
-  width:140px;
-  text-align:center;
-  cursor:pointer;
-}
-
-.personCard img{
-  width:100%;
-  aspect-ratio:1/1;
-  object-fit:cover;
-  border-radius:8px;
+header{
+background:white;
+padding:10px;
+display:flex;
+gap:10px;
+border-bottom:1px solid #ccc;
 }
 
 #tree{
-  width:100%;
-  height:1200px;
-  background:#f8f8f8;
+padding:40px;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:80px;
 }
 
-.node circle{
-  fill:#fff;
-  stroke:#666;
-  stroke-width:2px;
+.generation{
+display:flex;
+gap:60px;
+justify-content:center;
+flex-wrap:wrap;
 }
 
-.node rect{
-  fill:white;
-  stroke:#888;
-  rx:6;
+.card{
+
+width:200px;
+height:220px;
+background:white;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
+cursor:pointer;
+display:flex;
+flex-direction:column;
+overflow:hidden;
+
 }
 
-.node text{
-  font-size:12px;
-  text-anchor:middle;
+.card.current{
+outline:4px solid #2ecc71;
 }
 
-.link{
-  fill:none;
-  stroke:#bbb;
-  stroke-width:2px;
+.cardHeader{
+background:#3498db;
+color:white;
+padding:6px;
+text-align:center;
+font-weight:bold;
+}
+
+.photo{
+height:120px;
+background:#eee;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.info{
+padding:10px;
+font-size:14px;
+text-align:center;
+}
+
+.row{
+display:flex;
+gap:40px;
+justify-content:center;
+}
+
+#editor{
+
+position:fixed;
+right:0;
+top:0;
+width:320px;
+height:100%;
+background:white;
+border-left:1px solid #ccc;
+padding:15px;
+overflow:auto;
+
+}
+
+input,select{
+width:100%;
+margin-bottom:8px;
+}
+
+button{
+padding:6px 10px;
 }
 
 </style>
 </head>
+
 <body>
+
 <header>
-  <button class="btn" id="newFamilyBtn">➕ Ny familj</button>
-  <!-- Dropdown meny (positionering sköts av JS) -->
-  <div style="position:relative">
-    <button class="btn" id="addBtn">➕ Lägg till person</button>
-<div id="addMenu" style="
-  display:none;
-  position:absolute;
-  top:42px; left:0;
-  background:white;
-  border:1px solid #ccc;
-  border-radius:8px;
-  padding:6px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.12);">
-  <button class="smallBtn" id="addFar" data-type="father">Lägg till Far</button><br>
-  <button class="smallBtn" id="addMor" data-type="mother">Lägg till Mor</button><br>
-  <button class="smallBtn" id="addMaka" data-type="spouse">Lägg till Make/Maka</button><br>
-  <button class="smallBtn" id="addBarn" data-type="child">Lägg till Barn</button>
-</div>
 
-  </div>
-<button class="btn" id="openPersonList">📜 Personlista</button>
-  <div style="flex:1"></div>
-<button class="btn" id="exportBtn">📤 Exportera JSON</button>
-<button id="importBtn" class="btn">📥 Importera</button>
-<input type="file" id="importFile" accept=".json" hidden>
-<button onclick="exportAll()">⬇️ Exportera allt</button>
-<input type="file" id="importFile" accept="application/json" hidden>
-<button onclick="document.getElementById('importFile').click()">⬆️ Importera</button>
+<button onclick="addPerson()">➕ Person</button>
 
+<button onclick="exportJSON()">💾 Export</button>
+
+<input type="file" id="importFile" hidden>
+
+<button onclick="document.getElementById('importFile').click()">📂 Import</button>
 
 </header>
-<div id="app">
-  <aside id="leftPanel">
-    <input id="filterName" type="text" placeholder="Filtrera..." style="width:100%;padding:6px;margin-bottom:6px">
-    <div id="personListContainer"></div>
-  </aside>
-  <main id="centerArea"><svg id="tree"></svg>
- 
-  </main>
-   <div id="editor" style="
-position:fixed;
-right:20px;
-top:20px;
-width:260px;
-background:white;
-border:1px solid #888;
-padding:10px;
-font-family:sans-serif;
-">
 
-<h3 id="editName">Person</h3>
+<div id="tree"></div>
 
-<button onclick="addParent()">Lägg till förälder</button><br><br>
+<div id="editor">
 
-<button onclick="addChild()">Lägg till barn</button><br><br>
+<h3 id="editTitle">Ingen vald</h3>
 
-<button onclick="addSpouse()">Lägg till make/maka</button><br><br>
+<label>Namn</label>
+<input id="e_name">
 
-<button onclick="saveJSON()">Exportera JSON</button>
+<label>Född</label>
+<input id="e_born">
 
-</div>
-  <div id="overlay"></div>
-  <!-- SIDOPANEL -->
-  <aside id="detailPanel">
-    <div style="display:flex;justify-content:space-between;">
-      <h3>Detaljer</h3>
-      <button class="smallBtn" id="detailClose">❌</button>
-    </div>
-<label>Roll <input id="d_role" type="text" disabled></label>
-<label>Namn <input id="d_name" type="text"></label>
-<label>Född <input id="d_born" type="text" placeholder="Födelseår eller datum (YYYY eller YYYY-MM-DD)"></label>
-<label>Födelseförs: <input id="d_bornParish" type="text"></label>
-<label>Död <input id="d_died" type="text" placeholder="Dödsår eller datum (YYYY eller YYYY-MM-DD)"></label>
-<label>Dödsförs: <input id="d_diedParish" type="text"></label>
-
-
-<!-- Ålder (visas när dödsdatum finns) -->
-<div id="d_age" style="margin-top:8px;font-weight:600;color:#333"></div>
-
-<label>Yrke <input id="d_job" type="text"></label>
-<label for="d_history"><b>Levnadshistoria</b></label>
-<textarea
-  id="d_history"
-  rows="6"
-  placeholder="Skriv personens levnadshistoria här...">
-</textarea>
-<label>Länk <input id="d_link" type="url"></label>
-
+<label>Död</label>
+<input id="e_died">
 
 <h4>Föräldrar</h4>
 
-<label>Mor</label>
-<select id="parentMother">
-  <option value="">– ingen –</option>
-</select>
+<select id="e_mother"></select>
+<button onclick="removeMother()">Ta bort mor</button>
 
-<label>Far</label>
-<select id="parentFather">
-  <option value="">– ingen –</option>
-</select>
+<select id="e_father"></select>
+<button onclick="removeFather()">Ta bort far</button>
 
-
-<h4>Foto</h4>
-<button id="photoBtn" class="btn btn-photo" style="width:100%;padding:10px;font-size:16px">📷 Foto…</button>
-<input type="file" id="d_photo" accept="image/*" style="display:none">
+<h4>Partner</h4>
+<div id="spouseList"></div>
+<button onclick="addSpouse()">+ partner</button>
 
 <h4>Barn</h4>
-<div id="d_childrenList" style="display:flex;flex-direction:column;gap:6px"></div>
+<div id="childList"></div>
+<button onclick="addChild()">+ barn</button>
 
- <button class="btn btn-save" id="d_save">💾 Spara</button>
-<button class="btn btn-delete" id="d_delete">🗑 Ta bort</button>
+<hr>
 
-  </aside>
+<button onclick="savePerson()">💾 Spara</button>
+<button onclick="deletePerson()">🗑 Ta bort</button>
+
 </div>
 
-
-<script src="https://d3js.org/d3.v7.min.js"></script>
-
 <script>
-const DISABLE_INDEXEDDB =
-  navigator.userAgent.includes("OPR/") ||
-  navigator.userAgent.includes("Opera");
 
+/* =========================
+STORE
+========================= */
 
-console.log("INDEX STARTAR");
-
-/* ======== DATASTRUKTUR ========= */
-let db = null;
-
-const STORAGE = "fam_v10_fixed_age";
-let store = { people:{}, parentsOf:{}, childrenOf:{}, spousesOf:{}, currentId:null };
-
-function buildGraph(){
-
-  const nodes = [];
-  const links = [];
-
-  Object.keys(store.people).forEach(id=>{
-    const p = store.people[id];
-
-    nodes.push({
-      id:id,
-      name:p.name
-    });
-  });
-
-  Object.keys(store.parentsOf).forEach(child=>{
-    const parents = store.parentsOf[child] || [];
-
-    parents.forEach(parent=>{
-      links.push({
-        source:parent,
-        target:child
-      });
-    });
-  });
-
-  return {nodes,links};
+let store={
+people:{},
+parentsOf:{},
+spousesOf:{},
+currentId:null
 }
 
-function buildFamilyTree(id, visited = new Set()) {
-
-  if(visited.has(id)) return null;
-  visited.add(id);
-
-  const person = store.people[id];
-  if(!person) return null;
-
-  const node = {
-    id: id,
-    name: person.name,
-    born: person.born,
-    parents: [],
-    children: []
-  };
-
-  const parents = store.parentsOf[id] || [];
-  parents.forEach(p => {
-    const parentNode = buildFamilyTree(p, visited);
-    if(parentNode) node.parents.push(parentNode);
-  });
-
-  const children = store.childrenOf[id] || [];
-  children.forEach(c => {
-    const childNode = buildFamilyTree(c, visited);
-    if(childNode) node.children.push(childNode);
-  });
-
-  return node;
+function uid(){
+return "p_"+Math.random().toString(36).substr(2,9)
 }
 
+/* =========================
+RELATIONS
+========================= */
 
+function childrenOf(pid){
 
-function rebuildChildren(){
+const arr=[]
 
-  store.childrenOf = {};
+Object.entries(store.parentsOf).forEach(([cid,parents])=>{
+if(parents.includes(pid)) arr.push(cid)
+})
 
-  Object.entries(store.parentsOf).forEach(([child,parents])=>{
-
-    parents.forEach(parent=>{
-
-      if(!store.childrenOf[parent])
-        store.childrenOf[parent] = [];
-
-      store.childrenOf[parent].push(child);
-
-    });
-
-  });
+return arr
 
 }
 
-function findRoot(){
+/* =========================
+PERSON
+========================= */
 
-  return Object.keys(store.people).find(id =>
-    (!store.parentsOf[id] || store.parentsOf[id].length === 0) &&
-    store.childrenOf[id]
-  );
+function addPerson(){
+
+const id=uid()
+
+store.people[id]={
+id:id,
+name:"Ny person"
+}
+
+store.currentId=id
+
+render()
 
 }
 
+function deletePerson(){
 
+const id=store.currentId
+if(!id) return
 
+delete store.people[id]
+delete store.parentsOf[id]
+delete store.spousesOf[id]
 
-function drawWholeFamily(){
+Object.keys(store.parentsOf).forEach(c=>{
+store.parentsOf[c]=store.parentsOf[c].filter(p=>p!==id)
+})
 
-  const graph = buildGraph();
-
-  const svg = d3.select("#tree");
-  svg.selectAll("*").remove();
-
-  const g = svg.append("g");
-
-  const zoom = d3.zoom().on("zoom",(event)=>{
-    g.attr("transform",event.transform);
-  });
-
-  svg.call(zoom);
-
-  const simulation = d3.forceSimulation(graph.nodes)
-    .force("link", d3.forceLink(graph.links).id(d=>d.id).distance(120))
-    .force("charge", d3.forceManyBody().strength(-300))
-    .force("center", d3.forceCenter(window.innerWidth/2, window.innerHeight/2));
-
-  const link = g.selectAll(".link")
-    .data(graph.links)
-    .enter()
-    .append("line")
-    .attr("class","link");
-
-  const node = g.selectAll(".node")
-    .data(graph.nodes)
-    .enter()
-    .append("g")
-    .attr("class","node");
-
-  node.append("circle")
-    .attr("r",22);
-
-  node.append("text")
-    .attr("dy",4)
-    .attr("text-anchor","middle")
-    .text(d=>d.name);
-
-  simulation.on("tick",()=>{
-
-    link
-      .attr("x1",d=>d.source.x)
-      .attr("y1",d=>d.source.y)
-      .attr("x2",d=>d.target.x)
-      .attr("y2",d=>d.target.y);
-
-    node.attr("transform",d=>`translate(${d.x},${d.y})`);
-
-  });
-
-  node.call(
-    d3.drag()
-      .on("start",(event,d)=>{
-        if(!event.active) simulation.alphaTarget(0.3).restart();
-        d.fx=d.x;
-        d.fy=d.y;
-      })
-      .on("drag",(event,d)=>{
-        d.fx=event.x;
-        d.fy=event.y;
-      })
-      .on("end",(event,d)=>{
-        if(!event.active) simulation.alphaTarget(0);
-        d.fx=null;
-        d.fy=null;
-      })
-  );
+render()
 
 }
 
-
-
-function buildHierarchy(rootId){
-
-  function build(id){
-
-    const p = store.people[id];
-    if(!p) return null;
-
-    const kids = [];
-
-    Object.keys(store.parentsOf).forEach(cid=>{
-      if((store.parentsOf[cid]||[]).includes(id)){
-        const child = build(cid);
-        if(child) kids.push(child);
-      }
-    });
-	
-	return {
-	  id:id,
-	  name:store.people[id].name,
-	  born:store.people[id].born,
-	  children:children
-	};
-
-    /*return {
-      id:id,
-      name:p.name,
-      born:p.born,
-      children:kids
-    };*/
-
-  }
-
-  return build(rootId);
-}
-
-
-function drawGenealogy(rootId){
-
-  const svg = d3.select("#tree");
-  svg.selectAll("*").remove();
-
-  const g = svg.append("g");
-
-  svg.call(
-    d3.zoom()
-      .scaleExtent([0.2,4])
-      .on("zoom",e=>g.attr("transform",e.transform))
-  );
-
-  const data = buildFamilyTree(rootId);
-
-  const nodes = [];
-  const links = [];
-
-  function traverse(node, x=0, y=0, level=0){
-
-    nodes.push({
-      id:node.id,
-      name:node.name,
-      born:node.born,
-      x:x,
-      y:y
-    });
-
-    node.parents.forEach((p,i)=>{
-      const px = x + (i-0.5)*200;
-      const py = y - 150;
-
-      links.push({source:p.id,target:node.id});
-
-      traverse(p,px,py,level-1);
-    });
-
-    node.children.forEach((c,i)=>{
-      const cx = x + (i-0.5)*200;
-      const cy = y + 150;
-
-      links.push({source:node.id,target:c.id});
-
-      traverse(c,cx,cy,level+1);
-    });
-
-  }
-
-  traverse(data,0,0);
-
-  const nodeMap = {};
-  nodes.forEach(n=>nodeMap[n.id]=n);
-
-  g.selectAll("line")
-    .data(links)
-    .enter()
-    .append("line")
-    .attr("x1",d=>nodeMap[d.source].x)
-    .attr("y1",d=>nodeMap[d.source].y)
-    .attr("x2",d=>nodeMap[d.target].x)
-    .attr("y2",d=>nodeMap[d.target].y)
-    .attr("stroke","#888");
-
-  const node = g.selectAll(".node")
-    .data(nodes)
-    .enter()
-    .append("g")
-    .attr("transform",d=>`translate(${d.x},${d.y})`)
-    .style("cursor","pointer")
-    .on("click",(event,d)=>{
-
-      store.currentId = d.id;
-      //drawGenealogy(d.id);
-	  openEditor(d.id);
-
-    });
-
-  node.append("rect")
-    .attr("x",-70)
-    .attr("y",-30)
-    .attr("width",140)
-    .attr("height",60)
-    .attr("rx",6)
-    .attr("fill","#fff")
-    .attr("stroke","#333");
-
-  node.append("text")
-    .attr("text-anchor","middle")
-    .attr("dy","-5")
-    .attr("font-weight","bold")
-    .text(d=>d.name);
-
-  node.append("text")
-    .attr("text-anchor","middle")
-    .attr("dy","15")
-    .attr("font-size","11px")
-    .text(d=>d.born || "");
-
-}
-
-function openEditor(id){
-
-	const motherSel = document.getElementById("parentMother");
-	const fatherSel = document.getElementById("parentFather");
-
-	motherSel.innerHTML = '<option value="">– ingen –</option>';
-	fatherSel.innerHTML = '<option value="">– ingen –</option>';
-
-O	bject.values(store.people).forEach(pp=>{
-	const opt1 = new Option(pp.name, pp.id);
-	const opt2 = new Option(pp.name, pp.id);
-	motherSel.add(opt1);
-	fatherSel.add(opt2);
-	});
-
-	const parents = store.parentsOf[id] || [];
-	motherSel.value = parents[0] || "";
-	fatherSel.value = parents[1] || "";
-
-  const p = store.people[id];
-  if(!p) return;
-
-  const panel = document.getElementById("detailPanel");
-
-  panel.dataset.id = id;
-  panel.classList.add("open");
-
-  document.getElementById("editName").textContent =
-    p.name + " (" + id + ")";
-
-  document.getElementById("d_name").value = p.name || "";
-  document.getElementById("d_born").value = p.born || "";
-  document.getElementById("d_died").value = p.died || "";
-  document.getElementById("d_job").value = p.job || "";
-  document.getElementById("d_history").value = p.history || "";
-  document.getElementById("d_link").value = p.link || "";
-
-}
-
-function addParent(){
-
-  const child = store.currentId;
-
-  const name = prompt("Namn på förälder");
-
-  if(!name) return;
-
-  const id = "p_" + Math.random().toString(36).substr(2,9);
-
-  store.people[id] = {
-    id:id,
-    name:name
-  };
-
-  if(!store.parentsOf[child])
-    store.parentsOf[child] = [];
-
-  store.parentsOf[child].push(id);
-
-  rebuildChildren();
-
-  drawGenealogy(store.currentId);
-
-}
+/* =========================
+RELATION ACTIONS
+========================= */
 
 function addChild(){
 
-  const parent = store.currentId;
+const pid=store.currentId
+if(!pid) return
 
-  const name = prompt("Barnets namn");
+const id=uid()
 
-  if(!name) return;
+store.people[id]={id,name:"Barn"}
 
-  const id = "p_" + Math.random().toString(36).substr(2,9);
+store.parentsOf[id]=[pid]
 
-  store.people[id] = {
-    id:id,
-    name:name
-  };
-
-  if(!store.parentsOf[id])
-    store.parentsOf[id] = [];
-
-  store.parentsOf[id].push(parent);
-
-  rebuildChildren();
-
-  drawGenealogy(store.currentId);
+render()
 
 }
 
 function addSpouse(){
 
-  const person = store.currentId;
+const pid=store.currentId
 
-  const name = prompt("Partnerns namn");
+const id=uid()
 
-  if(!name) return;
+store.people[id]={id,name:"Partner"}
 
-  const id = "p_" + Math.random().toString(36).substr(2,9);
+store.spousesOf[pid] ||= []
+store.spousesOf[pid].push(id)
 
-  store.people[id] = {
-    id:id,
-    name:name
-  };
+store.spousesOf[id]=[pid]
 
-  if(!store.spousesOf[person])
-    store.spousesOf[person] = [];
-
-  store.spousesOf[person].push(id);
-
-  drawGenealogy(store.currentId);
+render()
 
 }
 
-function saveJSON(){
+function removeMother(){
 
-  const data = {
-    people:store.people,
-    parentsOf:store.parentsOf,
-    spousesOf:store.spousesOf
-  };
+const id=store.currentId
+if(!store.parentsOf[id]) return
 
-  const blob = new Blob(
-    [JSON.stringify(data,null,2)],
-    {type:"application/json"}
-  );
+store.parentsOf[id][0]=null
 
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob);
-  a.download = "slaktdata.json";
-  a.click();
+render()
 
 }
 
+function removeFather(){
 
+const id=store.currentId
+if(!store.parentsOf[id]) return
 
+store.parentsOf[id][1]=null
 
-function drawFullFamilyTree() {
-    const roots = Object.keys(store.people).filter(id => !store.parentsOf[id] || store.parentsOf[id].length === 0);
+render()
 
-    roots.forEach(rootId => {
-        drawGenerationTree(rootId); // Använd samma funktion som tidigare
-    });
 }
 
+/* =========================
+EDITOR
+========================= */
 
-/* ======== UTILITY ======== */
-function id(){ return "p_"+Math.random().toString(36).substr(2,9); }
-function ensure(a){ return Array.isArray(a)?a:[]; }
+function openEditor(id){
 
-function blobToBase64(blob) {
-  return new Promise(resolve => {
-    const r = new FileReader();
-    r.onload = () => resolve(r.result.split(',')[1]);
-    r.readAsDataURL(blob);
-  });
+const p=store.people[id]
+store.currentId=id
+
+document.getElementById("editTitle").innerText=p.name
+
+document.getElementById("e_name").value=p.name||""
+document.getElementById("e_born").value=p.born||""
+document.getElementById("e_died").value=p.died||""
+
+buildParentSelect(id)
+buildChildren(id)
+buildSpouses(id)
+
+render()
+
 }
 
-function base64ToBlob(base64, mime) {
-  const bin = atob(base64);
-  const arr = new Uint8Array(bin.length);
-  for (let i = 0; i < bin.length; i++) {
-    arr[i] = bin.charCodeAt(i);
-  }
-  return new Blob([arr], { type: mime });
+function buildParentSelect(id){
+
+const m=document.getElementById("e_mother")
+const f=document.getElementById("e_father")
+
+m.innerHTML="<option value=''>Ingen</option>"
+f.innerHTML="<option value=''>Ingen</option>"
+
+Object.values(store.people).forEach(p=>{
+
+m.add(new Option(p.name,p.id))
+f.add(new Option(p.name,p.id))
+
+})
+
+const parents=store.parentsOf[id]||[]
+
+m.value=parents[0]||""
+f.value=parents[1]||""
+
 }
 
-/* ======== LOCAL SAVE ======== */
-function saveStore(){
-  try{
-    localStorage.setItem(STORAGE, JSON.stringify(store));
-  }catch(e){
-    console.warn("LocalStorage-fel:", e);
-  }
+function buildChildren(id){
+
+const box=document.getElementById("childList")
+box.innerHTML=""
+
+childrenOf(id).forEach(cid=>{
+
+const d=document.createElement("div")
+
+d.innerHTML=
+store.people[cid].name+
+" <button onclick='unlinkChild(\""+cid+"\")'>X</button>"
+
+box.appendChild(d)
+
+})
+
 }
 
-function createPerson(data = {}) {
-  return {
-    id: data.id || id(),
-    name: data.name || '',
-    role: data.role || '',
+function buildSpouses(id){
 
-    born: data.born || '',
-    bornParish: data.bornParish || '',
-    died: data.died || '',
-    diedParish: data.diedParish || '',
+const box=document.getElementById("spouseList")
+box.innerHTML=""
 
-    job: data.job || '',
-    history: data.history || '',
+;(store.spousesOf[id]||[]).forEach(sid=>{
 
-    photoId: data.photoId || null
-  };
+const d=document.createElement("div")
+
+d.innerHTML=
+store.people[sid].name+
+" <button onclick='unlinkSpouse(\""+sid+"\")'>X</button>"
+
+box.appendChild(d)
+
+})
+
 }
 
+function unlinkChild(cid){
 
+delete store.parentsOf[cid]
 
+render()
 
-async function importImages(images){
-  if (!idb) {
-    console.log("IndexedDB ej tillgänglig – hoppar över bilder");
-    return;
-  }
-
-  for (const img of images) {
-    const blob = base64ToBlob(img.base64, img.mime);
-
-    await new Promise((res, rej) => {
-      const tx = idb.transaction('images', 'readwrite');
-      tx.objectStore('images').put({
-        id: img.id,
-        personId: img.personId,
-        blob
-      });
-      tx.oncomplete = res;
-      tx.onerror = rej;
-    });
-  }
-
-  console.log("Alla bilder importerade");
 }
 
-async function exportWebPackage() {
+function unlinkSpouse(sid){
 
-  console.log("WEBB-EXPORT startar…");
+const id=store.currentId
 
-  const MAX_WIDTH = 1600;
-  const JPEG_QUALITY = 0.82;
+store.spousesOf[id]=store.spousesOf[id].filter(x=>x!==sid)
+store.spousesOf[sid]=store.spousesOf[sid].filter(x=>x!==id)
 
-  const data = {
-    version: 3,
-    people: store.people,
-    parentsOf: store.parentsOf,
-    childrenOf: store.childrenOf,
-    spousesOf: store.spousesOf,
-    currentId: store.currentId
-  };
+render()
 
-  const imageFiles = [];
-
-  if (idb) {
-    await new Promise((resolve, reject) => {
-      const tx = idb.transaction('images', 'readonly');
-      const os = tx.objectStore('images');
-      const req = os.openCursor();
-
-      req.onsuccess = async e => {
-        const cur = e.target.result;
-        if (!cur) return resolve();
-
-        if (cur.value?.blob instanceof Blob) {
-
-          const bitmap = await createImageBitmap(cur.value.blob);
-
-          let w = bitmap.width;
-          let h = bitmap.height;
-
-          if (w > MAX_WIDTH) {
-            const ratio = MAX_WIDTH / w;
-            w = Math.round(w * ratio);
-            h = Math.round(h * ratio);
-          }
-
-          const canvas = document.createElement('canvas');
-          canvas.width = w;
-          canvas.height = h;
-
-          const ctx = canvas.getContext('2d');
-          ctx.drawImage(bitmap, 0, 0, w, h);
-
-          const blob = await new Promise(res =>
-            canvas.toBlob(res, "image/jpeg", JPEG_QUALITY)
-          );
-
-          const fileName = cur.key + ".jpg";
-
-          imageFiles.push({
-            name: fileName,
-            blob
-          });
-
-          // 🔑 spara endast filnamn i personen
-          const person = Object.values(store.people)
-            .find(p => p.photoId === cur.key);
-
-          if (person) {
-            person.photoId = fileName;
-          }
-
-          bitmap.close?.();
-        }
-
-        cur.continue();
-      };
-
-      req.onerror = reject;
-    });
-  }
-
-  /* === Ladda ner JSON === */
-
-  downloadFile(
-    new Blob([JSON.stringify(data, null, 2)], { type: "application/json" }),
-    "slaktdata.json"
-  );
-
-  /* === Ladda ner alla bilder === */
-
-  for (const file of imageFiles) {
-    downloadFile(file.blob, file.name);
-  }
-
-  alert("WEBB-EXPORT klar!\nLägg JSON i /data\nLägg JPG i /images");
 }
 
-function downloadFile(blob, filename) {
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob);
-  a.download = filename;
-  document.body.appendChild(a);
-  a.click();
-  setTimeout(() => {
-    URL.revokeObjectURL(a.href);
-    a.remove();
-  }, 500);
+function savePerson(){
+
+const id=store.currentId
+const p=store.people[id]
+
+p.name=document.getElementById("e_name").value
+p.born=document.getElementById("e_born").value
+p.died=document.getElementById("e_died").value
+
+const m=document.getElementById("e_mother").value
+const f=document.getElementById("e_father").value
+
+store.parentsOf[id]=[]
+
+if(m) store.parentsOf[id][0]=m
+if(f) store.parentsOf[id][1]=f
+
+render()
+
 }
 
-
-
-
-document.getElementById('importFile').addEventListener('change', async e=>{
-  const file = e.target.files[0];
-  if (!file) return;
-
-  const text = await file.text();   // 🔑 läs filen som text
-  await importAll(text);            // skicka JSON-text
-});
-
-
-
-
-async function importAll(jsonText){
-  if (typeof jsonText !== "string") {
-    throw new Error("importAll förväntar sig JSON-text");
-  }
-
-  console.log("Import startar…");
-
- 
-
-  /* ========= 1) Store ========= */
-  const data = JSON.parse(jsonText);
-
-// 1️⃣ Återställ store – MEN säkert
-store = {
-  parentsOf: data.store?.parentsOf || {},
-  childrenOf: data.store?.childrenOf || {},
-  spousesOf: data.store?.spousesOf || {},
-  currentId: data.store?.currentId || null,
-  people: {}
-};
-
-// 2️⃣ Bygg personer korrekt
-for (const p of Object.values(data.store?.people || {})) {
-  const full = createPerson(p);
-  store.people[full.id] = full;
-}
-
-saveStore();
-
-
-  /* ========= 2) Persons → IndexedDB ========= */
-  if (idb && store.people) {
-    await new Promise((resolve, reject)=>{
-      const tx = idb.transaction("persons","readwrite");
-      const os = tx.objectStore("persons");
-
-      Object.values(store.people).forEach(p => os.put(p));
-
-      tx.oncomplete = resolve;
-      tx.onerror = () => reject(tx.error);
-      tx.onabort = () => reject(tx.error);
-    });
-  }
-
-  
-
-  /* ========= 4) Reload + render ========= */
-  await loadPersonsFromDB();
-  render();
-
-  alert("Import klar!");
-}
-
-
-
-
-
-
-/* ======== LOAD STORE (FRÅN INDEXEDDB) ======== */
-function loadStore(){
-  const raw = localStorage.getItem(STORAGE);
-  if(raw){
-    store = JSON.parse(raw);
-    store.people ||= {};
-    store.parentsOf ||= {};
-    store.childrenOf ||= {};
-    store.spousesOf ||= {};
-    store.currentId ||= Object.keys(store.people)[0] || null;
-  } else {
-    console.log("DB tom – kör seed()");
-    seed();
-  }
-}
-/* ======== LOAD / SEED ======== */
-
-
-function seed(){
-  store = {
-    people:{},
-    parentsOf:{},
-    childrenOf:{},
-    spousesOf:{},
-    currentId:null
-  };
-
-  const f = createPerson({ name:"Martin Lindahl", role:"Far" });
-  const m = createPerson({ name:"Dagmar Wideberg", role:"Mor" });
-  const b = createPerson({ name:"Ebon Andersson", role:"Barn" });
-
-  store.people[f.id] = f;
-  store.people[m.id] = m;
-  store.people[b.id] = b;
-
-  store.parentsOf[b.id] = [m.id, f.id];
-  store.childrenOf[m.id] = [b.id];
-  store.childrenOf[f.id] = [b.id];
-  store.spousesOf[m.id] = [f.id];
-  store.spousesOf[f.id] = [m.id];
-
-  store.currentId = b.id;
-
-  saveStore();
-}
-
-
-/* ======== INDEXED DB ======== */
-const DB_NAME = 'FotosidaDB';
-const DB_VER  = 5;
-let idb = null;
-
-
-function openDB() {
-  if (DISABLE_INDEXEDDB) {
-    console.warn("IndexedDB avstängt i Opera");
-    idb = null;
-    return Promise.resolve();
-  }
-
-  return new Promise((resolve, reject) => {
-    const req = indexedDB.open(DB_NAME);
-
-    req.onupgradeneeded = e => {
-      const d = e.target.result;
-      if (!d.objectStoreNames.contains('persons'))
-        d.createObjectStore('persons', { keyPath: 'id' });
-      if (!d.objectStoreNames.contains('images'))
-        d.createObjectStore('images', { keyPath: 'id' });
-    };
-
-    req.onsuccess = () => {
-      idb = req.result;
-      resolve();
-    };
-
-    req.onerror = () => reject(req.error);
-  });
-}
-
-async function loadPersonsFromDB(){
-  if (!idb) return;
-
-  const tx = idb.transaction('persons','readonly');
-  const os = tx.objectStore('persons');
-  const req = os.getAll();
-
-  await new Promise(res => {
-    req.onsuccess = () => {
-      for (const p of req.result) {
-        if (!store.people[p.id]) {
-          store.people[p.id] = p; // komplettera
-        }
-      }
-      res();
-    };
-  });
-
-  console.log("Persons laddade:", Object.keys(store.people).length);
-}
-
-
-
-
-
-
-
-function isFather(pid) {
-  const p = store.people[pid];
-  return p?.role === 'Far' || p?.role === 'FAR';
-}
-
-function isMother(pid) {
-  const p = store.people[pid];
-  return p?.role === 'Mor' || p?.role === 'MOR';
-}
-
-function addPersonWithRelation(type) {
-  const curId = store.currentId;
-  if (!curId) {
-    alert('Ingen aktuell person vald');
-    return;
-  }
-
-  const newId = id();
-  const newPerson = { id: newId, name: '' };
-  store.people[newId] = newPerson;
-
-  /* ================= FÖRÄLDER ================= */
-  if (type === 'MOR' || type === 'FAR') {
-
-    store.parentsOf[curId] ||= [null, null];
-
-    if (type === 'MOR') {
-      store.parentsOf[curId][0] = newId;
-      newPerson.role = 'Mor';
-    }
-
-    if (type === 'FAR') {
-      store.parentsOf[curId][1] = newId;
-      newPerson.role = 'Far';
-    }
-
-    store.childrenOf[newId] ||= [];
-    if (!store.childrenOf[newId].includes(curId)) {
-      store.childrenOf[newId].push(curId);
-    }
-
-    /* AUTO-KOPPLA MAKA/MAKE */
-    const mor = store.parentsOf[curId][0];
-    const far = store.parentsOf[curId][1];
-
-    if (mor && far) {
-      store.spousesOf[mor] ||= [];
-      store.spousesOf[far] ||= [];
-
-      if (!store.spousesOf[mor].includes(far))
-        store.spousesOf[mor].push(far);
-
-      if (!store.spousesOf[far].includes(mor))
-        store.spousesOf[far].push(mor);
-    }
-  }
-
-  /* ================= BARN ================= */
-  
-  
-  if (type === 'BARN') {
-  newPerson.role = 'Barn';
-
-  // koppla barn → aktuell förälder
-  store.childrenOf[curId] ||= [];
-  store.childrenOf[curId].push(newId);
-
-  // säkerställ tvåplatssystem
-  store.parentsOf[newId] ||= [null, null];
-
-  // sätt aktuell person som mor eller far
-  if (isMother(curId)) {
-    store.parentsOf[newId][0] = curId; // Mor
-  } 
-  else if (isFather(curId)) {
-    store.parentsOf[newId][1] = curId; // Far
-  }
-
-  /* ===== AUTO-KOPPLA ANDRA FÖRÄLDERN VIA MAKA/MAKE ===== */
-  const spouses = store.spousesOf[curId] || [];
-  if (spouses.length > 0) {
-    const otherParent = spouses[0]; // enklaste: första maken/makan
-
-    if (isMother(otherParent)) {
-      store.parentsOf[newId][0] ||= otherParent;
-    }
-    else if (isFather(otherParent)) {
-      store.parentsOf[newId][1] ||= otherParent;
-    }
-
-    // se till att även den andra föräldern får barnet i sin barnlista
-    store.childrenOf[otherParent] ||= [];
-    if (!store.childrenOf[otherParent].includes(newId)) {
-      store.childrenOf[otherParent].push(newId);
-    }
-  }
-}
-
-  /* ================= MAKA / MAKE ================= */
-  if (type === 'MAKA') {
-    newPerson.role = 'Maka/Make';
-
-    store.spousesOf[curId] ||= [];
-    store.spousesOf[curId].push(newId);
-
-    store.spousesOf[newId] ||= [];
-    store.spousesOf[newId].push(curId);
-  }
-
-  store.currentId = newId;
-  saveStore();
-  render();
-  refreshPersonList();
-}
-
-
-async function renderCardPhoto(p, ph) {
-  ph.textContent = 'Foto saknas';
-  if (!p.photoId || !idb) return;
-
-  const blob = await new Promise(res => {
-    const r = idb.transaction('images', 'readonly')
-                 .objectStore('images')
-                 .get(p.photoId);
-    r.onsuccess = () => res(r.result?.blob || null);
-  });
-
-  if (!blob) return;
-
-  ph.textContent = '';
-  const img = document.createElement('img');
-  img.src = URL.createObjectURL(blob);
-  ph.appendChild(img);
-}
-
-
-
-function refreshPersonList(){
-  const q = document.getElementById('filterName')?.value.trim().toLowerCase() || '';
-  const box = document.getElementById('personListContainer');
-  if(!box) return;
-
-  box.innerHTML = '';
-  Object.values(store.people)
-    .sort((a,b)=>(a.name||'').localeCompare(b.name||''))
-    .forEach(p=>{
-      if(q && !(p.name||'').toLowerCase().includes(q)) return;
-      const d = document.createElement('div');
-      d.className='personItem';
-      d.textContent = p.name || p.role || '(namn)';
-      d.onclick = ()=>{
-        store.currentId = p.id;
-        saveStore();
-        render();
-      };
-      box.appendChild(d);
-    });
-}
-
-async function deletePerson(pid) {
-  const p = store.people[pid];
-  if (!p) return;
-
-  /* === TA BORT FOTO === */
-  if (p.photoId && idb) {
-    await new Promise(res => {
-      const tx = idb.transaction('images', 'readwrite');
-      tx.objectStore('images').delete(p.photoId);
-      tx.oncomplete = res;
-    });
-  }
-
-  /* === TA BORT RELATIONER === */
-
-  // Ta bort från parentsOf
-  for (const cid in store.parentsOf) {
-    store.parentsOf[cid] =
-      store.parentsOf[cid].filter(id => id !== pid);
-    if (!store.parentsOf[cid].length) delete store.parentsOf[cid];
-  }
-
-  // Ta bort från childrenOf
-  for (const cid in store.childrenOf) {
-    store.childrenOf[cid] =
-      store.childrenOf[cid].filter(id => id !== pid);
-    if (!store.childrenOf[cid].length) delete store.childrenOf[cid];
-  }
-
-  // Ta bort från spousesOf
-  for (const sid in store.spousesOf) {
-    store.spousesOf[sid] =
-      store.spousesOf[sid].filter(id => id !== pid);
-    if (!store.spousesOf[sid].length) delete store.spousesOf[sid];
-  }
-
-  /* === TA BORT PERSON === */
-  delete store.people[pid];
-
-  if (store.currentId === pid) {
-    store.currentId = Object.keys(store.people)[0] || null;
-  }
-
-  saveStore();
-
-  /* === TA BORT FRÅN INDEXEDDB === */
-  if (idb) {
-    await new Promise(res => {
-      const tx = idb.transaction('persons', 'readwrite');
-      tx.objectStore('persons').delete(pid);
-      tx.oncomplete = res;
-    });
-  }
-
-  render();
-  refreshPersonList();
-}
-
-
-/* ======== RENDER ======== */
-const center=document.getElementById("centerArea");
+/* =========================
+TREE RENDER
+========================= */
 
 function render(){
 
-if (!store || !store.people || !Object.keys(store.people).length) {
-  console.warn("Inga personer att rendera");
-  return;
-}
-  center.innerHTML = '';
-  
-  
+const tree=document.getElementById("tree")
+tree.innerHTML=""
 
+const center=store.currentId || Object.keys(store.people)[0]
+if(!center) return
 
-  if(!store.currentId){
-    center.textContent = 'Inget innehåll';
-    refreshPersonList();
-    return;
-  }
+const parents=store.parentsOf[center]||[]
+const children=childrenOf(center)
 
-  const cur = store.people[store.currentId];
-  if(!cur) return;
+/* ===== parents ===== */
 
-  /* === Föräldrar === */
-  const parentsRow = document.createElement('div');
-  parentsRow.className = 'row';
-  const parents = ensure(store.parentsOf[cur.id]);
+const pRow=document.createElement("div")
+pRow.className="row"
 
-  if(parents[1]) parentsRow.appendChild(createCard(parents[1], 'role-far'));
-  if(parents[0]) parentsRow.appendChild(createCard(parents[0], 'role-mor'));
+parents.forEach(pid=>{
+if(!store.people[pid]) return
+pRow.appendChild(createCard(pid))
+})
 
-  center.appendChild(parentsRow);
+tree.appendChild(pRow)
 
-  /* === Aktuell + makar === */
-  const mainRow = document.createElement('div');
-  mainRow.className = 'row';
+/* ===== center ===== */
 
-  const curWrap = document.createElement('div');
-  curWrap.appendChild(createCard(cur.id, ''));
-  mainRow.appendChild(curWrap);
+const cRow=document.createElement("div")
+cRow.className="row"
+cRow.appendChild(createCard(center))
 
-  const spouses = ensure(store.spousesOf[cur.id]);
-  spouses.forEach(sid=>{
-    mainRow.appendChild(createCard(sid,'role-maka'));
-  });
+;(store.spousesOf[center]||[]).forEach(pid=>{
+cRow.appendChild(createCard(pid))
+})
 
-  center.appendChild(mainRow);
+tree.appendChild(cRow)
 
-  /* === Barn === */
-  const kids = [];
-  Object.keys(store.parentsOf).forEach(cid=>{
-    if(ensure(store.parentsOf[cid]).includes(cur.id)) kids.push(cid);
-  });
+/* ===== children ===== */
 
-  if(kids.length){
-    const kidsRow = document.createElement('div');
-    kidsRow.className = 'row';
-    kids
-  .sort((a,b)=>{
-    const pa = store.people[a];
-    const pb = store.people[b];
+const chRow=document.createElement("div")
+chRow.className="row"
 
-    const da = pa?.born ? new Date(pa.born) : new Date(9999,0,1);
-    const db = pb?.born ? new Date(pb.born) : new Date(9999,0,1);
+children.forEach(cid=>{
+chRow.appendChild(createCard(cid))
+})
 
-    return da - db; // äldst först
-  })
-  .forEach(cid=>{
-    kidsRow.appendChild(createCard(cid,'role-barn'));
-  });
-
-    center.appendChild(kidsRow);
-  }
-
-  refreshPersonList();
-}
-
-function getDynamicRole(pid, curId){
-  if(!curId) return '';
-
-  const parents = store.parentsOf?.[curId] || [];
-  if(parents[0] === pid) return 'MOR';
-  if(parents[1] === pid) return 'FAR';
-
-  const children = store.childrenOf?.[curId] || [];
-  if(children.includes(pid)) return 'BARN';
-
-  const spouses = store.spousesOf?.[curId] || [];
-  if(spouses.includes(pid)) return 'MAKA/MAKE';
-
-  return '';
-}
-
-function openDetail(pid){
-  const panel = document.getElementById('detailPanel');
-  const overlay = document.getElementById('overlay');
-  if(!panel || !overlay) return;
-
-  panel.dataset.id = pid;
-  const p = store.people[pid];
-  if(!p) return;
-
-  document.getElementById('d_name').value = p.name || '';
-  document.getElementById('d_role').value = p.role || '';
-  document.getElementById('d_born').value = p.born || '';
-  document.getElementById('d_bornParish').value = p.bornParish || '';
-  document.getElementById('d_died').value = p.died || '';
-  document.getElementById('d_diedParish').value = p.diedParish || '';
-  document.getElementById('d_job').value = p.job || '';
-  document.getElementById('d_history').value = p.history || '';
-  document.getElementById('d_link').value = p.link || '';
-
-  overlay.style.display = 'block';
-  panel.classList.add('open');
-  
-  const motherSel = document.getElementById('parentMother');
-  const fatherSel = document.getElementById('parentFather');
-
-  motherSel.innerHTML = '<option value="">– ingen –</option>';
-  fatherSel.innerHTML = '<option value="">– ingen –</option>';
-
- 
-
-Object.values(store.people)
-  .filter(p2 => p2.id !== pid)
-  .sort((a, b) => (a.name || '').localeCompare(b.name || '', 'sv'))
-  .forEach(p2 => {
-    const opt1 = document.createElement('option');
-    opt1.value = p2.id;
-    opt1.textContent = p2.name || '(namnlös)';
-    motherSel.appendChild(opt1);
-
-    const opt2 = opt1.cloneNode(true);
-    fatherSel.appendChild(opt2);
-  });
-
-
-  const parents = store.parentsOf[pid] || [];
-
-  if (parents[0]) motherSel.value = parents[0];
-  if (parents[1]) fatherSel.value = parents[1];
+tree.appendChild(chRow)
 
 }
 
+function createCard(id){
 
+const p=store.people[id]
 
-function closeDetail(){
-  const panel = document.getElementById('detailPanel');
-  const overlay = document.getElementById('overlay');
-  panel.classList.remove('open');
-  overlay.style.display = 'none';
-  delete panel.dataset.id;
-}
+const c=document.createElement("div")
+c.className="card"
 
+if(id===store.currentId) c.classList.add("current")
 
-document.getElementById('detailClose').onclick = closeDetail;
-document.getElementById('overlay').onclick = closeDetail;
+c.onclick=()=>openEditor(id)
 
+c.innerHTML=`
 
-/* ======== CARD ======== */
-function createCard(pid, roleClass){
-  const p = store.people[pid];
-  if(!p) return document.createElement('div');
+<div class="cardHeader">${p.name}</div>
 
-  const roleLabel = getDynamicRole(pid, store.currentId);
-  const cls = roleClass || '';
-  const c = document.createElement('div');
-  c.className = 'card ' + cls;
+<div class="photo">foto</div>
 
-  if(store.currentId === pid) c.classList.add('current');
-  
-  
+<div class="info">
+${p.born||""} - ${p.died||""}
+</div>
 
- 
- /* ===== HEADER ===== */
-const h = document.createElement('div');
-h.className = 'header';
+`
 
-/* --- IKONRAD --- */
-const iconBar = document.createElement('div');
-iconBar.className = 'iconBar';
-
-/* ✏️ Redigera (öppnar sidopanelen) */
-const editBtn = document.createElement('button');
-editBtn.className = 'iconBtn editBtn';
-editBtn.title = 'Redigera';
-editBtn.textContent = '✏️';
-editBtn.onclick = e => {
-  e.stopPropagation();
-  openDetail(pid);   // 🔑 öppnar sidopanelen
-};
-iconBar.appendChild(editBtn);
-
-/* ℹ️ Info */
-const infoBtn = document.createElement('button');
-infoBtn.className = 'iconBtn infoBtn';
-infoBtn.title = 'Info';
-infoBtn.textContent = 'ℹ️';
-infoBtn.onclick = e => {
-  e.stopPropagation();
-  window.open(`person.html?id=${encodeURIComponent(pid)}`, '_blank');
-};
-iconBar.appendChild(infoBtn);
-
-/* 📷 Foto */
-const photoBtn = document.createElement('button');
-photoBtn.className = 'iconBtn photoBtn';
-photoBtn.title = 'Foto';
-photoBtn.textContent = '📷';
-photoBtn.onclick = e => {
-  e.stopPropagation();
-  window.open(`fotosida.html?id=${encodeURIComponent(pid)}`, '_blank');
-};
-iconBar.appendChild(photoBtn);
-
-/* Print */
-const printBtn = document.createElement('button');
-printBtn.className = 'iconBtn';
-printBtn.title = 'Skriv ut personinfo';
-printBtn.textContent = '🖨️';
-
-printBtn.onclick = e => {
-  e.stopPropagation();
-  /*window.open(
-    `person.html?id=${encodeURIComponent(pid)}&print=1`,
-    '_blank'*/
-  location.href = `person.html?id=${encodeURIComponent(pid)}&print=1`;
-  
-};
-
-iconBar.appendChild(printBtn);
-
-
-/* 🗑 Ta bort person */
-const delBtn = document.createElement('button');
-delBtn.className = 'iconBtn deleteBtn';
-delBtn.title = 'Ta bort person';
-delBtn.textContent = '🗑';
-delBtn.onclick = async e => {
-  e.stopPropagation();
-  if (!confirm('Ta bort denna person helt?')) return;
-  await deletePerson(pid);
-};
-iconBar.appendChild(delBtn);
-
-/* --- ROLLTEXT --- */
-const roleDiv = document.createElement('div');
-roleDiv.className = 'roleText';
-roleDiv.textContent = roleLabel || p.role || '';
-
-/* --- MONTERA HEADER --- */
-h.appendChild(iconBar);
-h.appendChild(roleDiv);
-c.appendChild(h);
-
-  
-// 🔑 Ladda personbild med fallback + loggning av saknade bilder
-function loadPersonImage(p, ph) {
-  const img = document.createElement("img");
-  img.alt = p.name;
-
-  // Försök först direkt från servern
-  img.src = "images/" + p.photoId;
-
-  // Om bilden inte finns på servern
-  img.onerror = async () => {
-    console.warn("Foto saknas på server, använder placeholder:", p.photoId);
-
-    // Logga saknad bild i konsolen
-    if (!window.missingPhotos) window.missingPhotos = [];
-    if (!window.missingPhotos.includes(p.photoId)) {
-      window.missingPhotos.push(p.photoId);
-      console.log("Saknad bild loggad:", p.photoId);
-    }
-
-    // Använd placeholder-bild
-    img.src = "images/placeholder.jpg";
-
-    // Fallback till IndexedDB om db finns och placeholder misslyckas
-    if (db) {
-      try {
-        const tx = db.transaction("images", "readonly");
-        const store = tx.objectStore("images");
-        const blob = await store.get(p.photoId);
-        if (blob) {
-          img.src = URL.createObjectURL(blob);
-          console.log("Bild laddad från IndexedDB:", p.photoId);
-        }
-      } catch (err) {
-        console.error("Fel vid IndexedDB fallback:", err);
-      }
-    }
-  };
-
-  ph.textContent = '';
-  ph.appendChild(img);
-}
-
-
-  
-  /* ===== PHOTO ===== */
-const ph = document.createElement('div');
-ph.className = 'photo';
-ph.textContent = 'Foto saknas';
-c.appendChild(ph);
-
-
-
-if (p.photoId) {
-
-  ph.textContent = '';
-
-  const img = document.createElement('img');
-
-  // 🔑 Ladda direkt från server
-  loadPersonImage(p, ph);
-}
-
-  /* ===== INFO ===== */
-  const info = document.createElement('div');
-  info.className = 'info';
-
-  info.innerHTML = `
-  <b>${p.name || ''}</b>
-
-  <div><b>Född:</b> ${p.born || ''}</div>
-  ${p.bornParish ? `<div><b>Födelseförs:</b> ${p.bornParish}</div>` : ''}
-
-  <div><b>Död:</b> ${p.died || ''}</div>
-  ${p.diedParish ? `<div><b>Dödsförs:</b> ${p.diedParish}</div>` : ''}
-
-  ${p.job ? `<div><b>Yrke:</b> ${p.job}</div>` : ''}
-`;
-
-
-  c.appendChild(info);
-
-  /* ===== CARD CLICK ===== */
-  c.onclick = ()=>{
-    store.currentId = pid;
-    saveStore();
-    render();
-  };
-
-  return c;
-}
-
-
-/* ======== FOTO UPLOAD ======== */
-document.getElementById('d_photo').addEventListener('change', async ev=>{
-  const f=ev.target.files[0];
-  if(!f) return;
-
-  const pid=document.getElementById('detailPanel').dataset.id;
-  const blob=new Blob([await f.arrayBuffer()],{type:f.type});
-  const photoId=pid+'_photo';
-
-  await new Promise(res=>{
-    const tx=idb.transaction('images','readwrite');
-    tx.objectStore('images').put({id:photoId,blob});
-    tx.oncomplete=res;
-  });
-
-  store.people[pid].photoId=photoId;
-  saveStore();
-  render();
-  ev.target.value='';
-});
-
-const importBtn  = document.getElementById('importBtn');
-const importFile = document.getElementById('importFile');
-
-/* 🔘 Klick på Import-knappen → öppna filväljare */
-importBtn.onclick = () => {
-  importFile.click();
-};
-
-importFile.addEventListener('change', async () => {
-  const file = importFile.files[0];
-  if (!file) return;
-
-  const text = await file.text();
-  const data = JSON.parse(text);
-
-  await importJSON(data);
-
-  alert('Import klar');
-});
-
-
-/* 📥 När fil valts → importera */
-
-/*async function importJSON(data) {
-  // importera ENDAST persondata
-  store.people = data.people || {};
-
-  // Spara personer i IndexedDB
-  const tx = idb.transaction('persons', 'readwrite');
-  const ps = tx.objectStore('persons');
-  const fullPerson = createPerson(p);
-
-
-	tx.objectStore('persons').put(fullPerson);
-
-
-  Object.values(store.people).forEach(p => ps.put(p));
-
-  await new Promise(res => tx.oncomplete = res);
-
-  render();
-}*/
-async function importJSON(data) {
-
-  // 1️⃣ Återställ store i minnet
-  store.people = {};
-  
-  // 2️⃣ IndexedDB – skriv ALLTID kompletta personer
-  const tx = idb.transaction('persons', 'readwrite');
-  const ps = tx.objectStore('persons');
-
-  for (const raw of Object.values(data.people || {})) {
-    const full = createPerson(raw);     // 🔑 KRITISKT
-    store.people[full.id] = full;       // minnet
-    ps.put(full);                       // IndexedDB
-  }
-
-  await new Promise(res => tx.oncomplete = res);
-
-  // 3️⃣ Spara även lokalt
-  saveStore();
-
-  render();
-}
-
-
-
-
-
- exportBtn.onclick = exportWebPackage;
-
-async function exportJSON() {
-  const data = {
-    people: store.people
-  };
-
-  downloadJSON(data);
-}
-
-function downloadJSON(data) {
-  const blob = new Blob(
-    [JSON.stringify(data, null, 2)],
-    { type: 'application/json' }
-  );
-
-  const url = URL.createObjectURL(blob);
-
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'slaktdata.json';
-  document.body.appendChild(a);
-  a.click();
-
-  setTimeout(() => {
-    URL.revokeObjectURL(url);
-    a.remove();
-  }, 0);
-}
-
-document.getElementById('photoBtn').onclick = () => {
-  document.getElementById('d_photo').click();
-};
-
-const addBtn  = document.getElementById('addBtn');
-const addMenu = document.getElementById('addMenu');
-
-addBtn.onclick = (e) => {
-  e.stopPropagation();
-
-  const rect = addBtn.getBoundingClientRect();
-
-  addMenu.style.left = (rect.right + 8) + 'px';   // 👉 flyttas åt höger
-  addMenu.style.top  = rect.bottom + 'px';
-  addMenu.style.display = 'block';
-};
-
-
-document.addEventListener('click', () => {
-  addMenu.style.display = 'none';
-});
-
-
-
-
-  
-const d_save = document.getElementById('d_save');
-const panel = document.getElementById('detailPanel');
-
-d_save.onclick = async () => {
-  const pid = panel.dataset.id;
-
-  if (!pid || !store.people[pid]) {
-    alert('Ingen person vald');
-    return;
-  }
-
-  const p = store.people[pid];
-
-  p.name = d_name.value.trim();
-  p.born = d_born.value || '';
-  p.bornParish = d_bornParish.value.trim();
-  p.died = d_died.value || '';
-  p.diedParish = d_diedParish.value.trim();
-  p.job = d_job.value.trim();
-  p.history = d_history.value.trim();
-  p.link = d_link.value.trim();
-  
-  const mid = document.getElementById('parentMother').value || null;
-  const fid = document.getElementById('parentFather').value || null;
-
-/* sätt föräldrar */
-store.parentsOf[pid] = [];
-if (mid) store.parentsOf[pid][0] = mid;
-if (fid) store.parentsOf[pid][1] = fid;
-
-/* uppdatera barn-listor */
-if (mid) {
-  store.childrenOf[mid] ||= [];
-  if (!store.childrenOf[mid].includes(pid))
-    store.childrenOf[mid].push(pid);
-}
-
-if (fid) {
-  store.childrenOf[fid] ||= [];
-  if (!store.childrenOf[fid].includes(pid))
-    store.childrenOf[fid].push(pid);
-}
-
-
- 
-  saveStore();
-
-	/* 🔑 Spara ALLTID hela personen till IndexedDB */
-	if (idb) {
-  const full = createPerson(p);   // säkerställ komplett person
-
-  await new Promise(res => {
-    const tx = idb.transaction('persons', 'readwrite');
-    tx.objectStore('persons').put(full);
-    tx.oncomplete = res;
-  });
-
-  store.people[full.id] = full;   // synka minnet
-}
-
-
-
-
-  render();             // ritar om
-  closeDetail();         // stänger sidopanelen
-  
-  // 🔔 meddela öppna person.html-flikar
-window.postMessage({
-  type: 'person-updated',
-  personId: pid
-}, '*');
-};
-
-
-async function safeBootstrapLoad(){
-
-  console.log("Bootstrap loader startar...");
-
-  try {
-
-    const url = new URL("./data/slaktdata.json", location.href);
-
-    const r = await fetch(url, {cache:"no-cache"});
-    if(!r.ok) throw new Error("HTTP "+r.status);
-
-    const data = await r.json();
-
-    store.people     = data.people || {};
-    store.parentsOf  = data.parentsOf || {};
-    store.childrenOf = data.childrenOf || {};
-    store.spousesOf  = data.spousesOf || {};
-
-    console.log("Server JSON laddad:", Object.keys(store.people).length);
-
-  } catch(e) {
-    console.warn("Server JSON saknas:", e.message);
-  }
-}
-
-
-/* ==========================================================
-   AUTOLOAD SERVER DATA (Netlify first load)
-   ========================================================== */
-
-async function autoLoadFromServerIfEmpty() {
-
-  // Om det redan finns data – gör inget
-  if (Object.keys(store.people || {}).length > 0) {
-    console.log("AUTOLOAD: Data finns redan lokalt");
-    return;
-  }
-
-  console.log("AUTOLOAD: Försöker ladda serverdata...");
-
-  try {
-    const response = await fetch("./data/slaktdata.json", { cache: "no-cache" });
-
-    if (!response.ok) {
-      console.log("AUTOLOAD: Ingen serverfil hittades");
-      return;
-    }
-
-    const jsonText = await response.text();
-
-    await importAll(jsonText);  // 🔑 använder din befintliga import
-
-    console.log("AUTOLOAD: Serverdata importerad");
-
-  } catch (err) {
-    console.warn("AUTOLOAD: Misslyckades", err);
-  }
-}
-
-function autoBuildRelations(){
-
-  const people = store.people;
-
-  const parentsOf = {};
-  const childrenOf = {};
-  const spousesOf = {};
-
-  const mothers = [];
-  const fathers = [];
-  const children = [];
-
-  Object.entries(people).forEach(([id,p])=>{
-
-    if(!p.role) return;
-
-    const r = p.role.toLowerCase();
-
-    if(r.includes("mor")) mothers.push(id);
-    if(r.includes("far")) fathers.push(id);
-    if(r.includes("barn")) children.push(id);
-
-  });
-
-  mothers.forEach((mid,i)=>{
-
-    const fid = fathers[i];
-    if(!fid) return;
-
-    spousesOf[mid] = [fid];
-    spousesOf[fid] = [mid];
-
-  });
-
-  children.forEach((cid,i)=>{
-
-    const mid = mothers[Math.floor(i/3)] || mothers[0];
-    const fid = fathers[Math.floor(i/3)] || fathers[0];
-
-    if(!mid || !fid) return;
-
-    parentsOf[cid] = [fid,mid];
-
-    if(!childrenOf[mid]) childrenOf[mid]=[];
-    if(!childrenOf[fid]) childrenOf[fid]=[];
-
-    childrenOf[mid].push(cid);
-    childrenOf[fid].push(cid);
-
-  });
-
-  store.parentsOf = parentsOf;
-  store.childrenOf = childrenOf;
-  store.spousesOf = spousesOf;
-
-  console.log(
-    "Relationer skapade:",
-    Object.keys(parentsOf).length,"parents"
-  );
+return c
 
 }
 
+/* =========================
+JSON
+========================= */
 
-/* ==========================================
-   STABIL GITHUB PAGES JSON LOADER
-   ========================================== */
+function exportJSON(){
 
-async function loadServerJSON(){
+const blob=new Blob(
+[JSON.stringify(store,null,2)],
+{type:"application/json"}
+)
 
-  console.log("SERVER LOAD startar");
-
-  try{
-
-    const url = new URL("data/slaktdata.json", window.location.href);
-
-    console.log("Laddar:", url.href);
-
-    const response = await fetch(url, {cache:"no-cache"});
-
-    if(!response.ok){
-      console.warn("Server JSON saknas", response.status);
-      return false;
-    }
-
-    const data = await response.json();
-
-    if(!data.people){
-      console.warn("JSON saknar people");
-      return false;
-    }
-
-    store.people = data.people;
-    store.parentsOf = data.parentsOf || {};
-    store.childrenOf = data.childrenOf || {};
-    store.spousesOf = data.spousesOf || {};
-
-    rebuildChildren();
-	
-	
-	if(!store.currentId || !store.people[store.currentId]){
-  store.currentId = Object.keys(store.people)[0];
-  console.log("Startperson:", store.currentId);
-}
-	
-	function rebuildRelations(){
-
-  store.parentsOf = {};
-  store.childrenOf = {};
-  store.spousesOf = {};
-
-  Object.entries(store.people).forEach(([id,p])=>{
-
-    /* ===== FÖRÄLDRAR ===== */
-
-    const parents = [];
-
-    if(p.parents) parents.push(...p.parents);
-
-    if(p.father) parents.push(p.father);
-    if(p.mother) parents.push(p.mother);
-
-    if(parents.length){
-
-      store.parentsOf[id] = parents;
-
-      parents.forEach(parentId=>{
-
-        if(!store.childrenOf[parentId])
-          store.childrenOf[parentId] = [];
-
-        store.childrenOf[parentId].push(id);
-
-      });
-
-    }
-
-    /* ===== PARTNER ===== */
-
-    const spouses = [];
-
-    if(p.spouses) spouses.push(...p.spouses);
-
-    if(p.spouse) spouses.push(p.spouse);
-    if(p.partner) spouses.push(p.partner);
-
-    if(spouses.length){
-
-      store.spousesOf[id] = spouses;
-
-      spouses.forEach(sid=>{
-
-        if(!store.spousesOf[sid])
-          store.spousesOf[sid] = [];
-
-        if(!store.spousesOf[sid].includes(id))
-          store.spousesOf[sid].push(id);
-
-      });
-
-    }
-
-  });
-
-  console.log(
-    "Relationer:",
-    Object.keys(store.parentsOf).length,"parents",
-    Object.keys(store.childrenOf).length,"children",
-    Object.keys(store.spousesOf).length,"spouses"
-  );
+const a=document.createElement("a")
+a.href=URL.createObjectURL(blob)
+a.download="slaktdata.json"
+a.click()
 
 }
-	
-	
 
-if(!store.currentId || !store.people[store.currentId]){
-  store.currentId = Object.keys(store.people)[0];
-}
-	
-	console.log(
-  "Relationer:",
-  Object.keys(store.parentsOf).length,
-  "parents",
-  Object.keys(store.childrenOf).length,
-  "children"
-	);
-	
-	
+document.getElementById("importFile").addEventListener("change",async e=>{
 
-    console.log(
-      "SERVER LOAD klar:",
-      Object.keys(store.people).length,
-      "personer"
-    );
+const file=e.target.files[0]
+if(!file) return
 
-    return true;
+const text=await file.text()
 
-  }catch(err){
+store=JSON.parse(text)
 
-    console.error("SERVER LOAD fel:", err);
-    return false;
+render()
 
-  }
-}
+})
 
-
-/* ========= GOLDEN INIT =========
-   - localStorage är primär källa
-   - IndexedDB är sekundär (bilder)
-   - Aldrig blank sida vid start
-   =============================== */
-   
-   (async function initApp(){
-
-  console.log("INIT start");
-
-  await openDB().catch(()=>{});
-
-  loadStore();
-
-  store.people ||= {};
-  store.parentsOf ||= {};
-  store.childrenOf ||= {};
-  store.spousesOf ||= {};
-
-  const loaded = await loadServerJSON();
-
-  if(!loaded && Object.keys(store.people).length === 0){
-    console.log("Fallback seed()");
-    seed();
-  }
-
-  if(idb){
-    await loadPersonsFromDB();
-  }
-
-  /* NU finns alla personer */
-
-  //autoBuildRelations();
-
-  rebuildChildren();
-
-  store.currentId = findRoot();
-  
-	console.log("ROT:", store.people[store.currentId]);
-	console.log("BARN:", store.childrenOf[store.currentId]);
-
-  drawGenealogy("p_6c6wnb9");
-
-  console.log(
-    "INIT klar:",
-    Object.keys(store.people).length,
-    "personer"
-  );
-
-})();
-   
-   
-
-	
-
-
-document.getElementById('addFar').onclick = () => addPersonWithRelation('FAR');
-document.getElementById('addMor').onclick = () => addPersonWithRelation('MOR');
-document.getElementById('addBarn').onclick = () => addPersonWithRelation('BARN');
-document.getElementById('addMaka').onclick = () => addPersonWithRelation('MAKA');
+render()
 
 </script>
-
 
 </body>
 </html>
