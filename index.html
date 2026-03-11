@@ -6,14 +6,12 @@
 
 <title>Familjeträd</title>
 
-<script src="https://d3js.org/d3.v7.min.js"></script>
-
 <style>
 
 body{
 margin:0;
 font-family:Arial;
-background:#f0f0f0;
+background:#f5f5f5;
 }
 
 header{
@@ -25,31 +23,78 @@ border-bottom:1px solid #ccc;
 }
 
 #tree{
-width:100%;
-height:90vh;
+padding:40px;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:80px;
+}
+
+.generation{
+display:flex;
+gap:60px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.card{
+
+width:200px;
+height:220px;
 background:white;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
+cursor:pointer;
+display:flex;
+flex-direction:column;
+overflow:hidden;
+
 }
 
-.node rect{
-fill:white;
-stroke:#333;
+.card.current{
+outline:4px solid #2ecc71;
 }
 
-.link{
-stroke:#999;
-stroke-width:2;
+.cardHeader{
+background:#3498db;
+color:white;
+padding:6px;
+text-align:center;
+font-weight:bold;
+}
+
+.photo{
+height:120px;
+background:#eee;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.info{
+padding:10px;
+font-size:14px;
+text-align:center;
+}
+
+.row{
+display:flex;
+gap:40px;
+justify-content:center;
 }
 
 #editor{
+
 position:fixed;
 right:0;
 top:0;
-width:300px;
+width:320px;
 height:100%;
 background:white;
 border-left:1px solid #ccc;
 padding:15px;
 overflow:auto;
+
 }
 
 input,select{
@@ -63,23 +108,26 @@ padding:6px 10px;
 
 </style>
 </head>
+
 <body>
 
 <header>
 
 <button onclick="addPerson()">➕ Person</button>
-<button onclick="exportJSON()">💾 Export JSON</button>
+
+<button onclick="exportJSON()">💾 Export</button>
 
 <input type="file" id="importFile" hidden>
+
 <button onclick="document.getElementById('importFile').click()">📂 Import</button>
 
 </header>
 
-<svg id="tree"></svg>
+<div id="tree"></div>
 
 <div id="editor">
 
-<h3 id="editTitle">Ingen person vald</h3>
+<h3 id="editTitle">Ingen vald</h3>
 
 <label>Namn</label>
 <input id="e_name">
@@ -99,29 +147,25 @@ padding:6px 10px;
 <button onclick="removeFather()">Ta bort far</button>
 
 <h4>Partner</h4>
-
 <div id="spouseList"></div>
-
 <button onclick="addSpouse()">+ partner</button>
 
 <h4>Barn</h4>
-
 <div id="childList"></div>
-
 <button onclick="addChild()">+ barn</button>
 
 <hr>
 
 <button onclick="savePerson()">💾 Spara</button>
-<button onclick="deletePerson()">🗑 Ta bort person</button>
+<button onclick="deletePerson()">🗑 Ta bort</button>
 
 </div>
 
 <script>
 
-/* =============================
+/* =========================
 STORE
-============================= */
+========================= */
 
 let store={
 people:{},
@@ -130,13 +174,13 @@ spousesOf:{},
 currentId:null
 }
 
-/* =============================
-UTILS
-============================= */
-
 function uid(){
 return "p_"+Math.random().toString(36).substr(2,9)
 }
+
+/* =========================
+RELATIONS
+========================= */
 
 function childrenOf(pid){
 
@@ -150,9 +194,9 @@ return arr
 
 }
 
-/* =============================
+/* =========================
 PERSON
-============================= */
+========================= */
 
 function addPerson(){
 
@@ -166,7 +210,6 @@ name:"Ny person"
 store.currentId=id
 
 render()
-openEditor(id)
 
 }
 
@@ -176,7 +219,6 @@ const id=store.currentId
 if(!id) return
 
 delete store.people[id]
-
 delete store.parentsOf[id]
 delete store.spousesOf[id]
 
@@ -184,19 +226,13 @@ Object.keys(store.parentsOf).forEach(c=>{
 store.parentsOf[c]=store.parentsOf[c].filter(p=>p!==id)
 })
 
-Object.keys(store.spousesOf).forEach(s=>{
-store.spousesOf[s]=store.spousesOf[s].filter(p=>p!==id)
-})
-
-store.currentId=null
-
 render()
 
 }
 
-/* =============================
-RELATIONS
-============================= */
+/* =========================
+RELATION ACTIONS
+========================= */
 
 function addChild(){
 
@@ -216,7 +252,6 @@ render()
 function addSpouse(){
 
 const pid=store.currentId
-if(!pid) return
 
 const id=uid()
 
@@ -225,7 +260,7 @@ store.people[id]={id,name:"Partner"}
 store.spousesOf[pid] ||= []
 store.spousesOf[pid].push(id)
 
-store.spousesOf[id] = [pid]
+store.spousesOf[id]=[pid]
 
 render()
 
@@ -233,10 +268,10 @@ render()
 
 function removeMother(){
 
-const pid=store.currentId
-if(!store.parentsOf[pid]) return
+const id=store.currentId
+if(!store.parentsOf[id]) return
 
-store.parentsOf[pid][0]=null
+store.parentsOf[id][0]=null
 
 render()
 
@@ -244,24 +279,22 @@ render()
 
 function removeFather(){
 
-const pid=store.currentId
-if(!store.parentsOf[pid]) return
+const id=store.currentId
+if(!store.parentsOf[id]) return
 
-store.parentsOf[pid][1]=null
+store.parentsOf[id][1]=null
 
 render()
 
 }
 
-/* =============================
+/* =========================
 EDITOR
-============================= */
+========================= */
 
 function openEditor(id){
 
 const p=store.people[id]
-if(!p) return
-
 store.currentId=id
 
 document.getElementById("editTitle").innerText=p.name
@@ -273,6 +306,8 @@ document.getElementById("e_died").value=p.died||""
 buildParentSelect(id)
 buildChildren(id)
 buildSpouses(id)
+
+render()
 
 }
 
@@ -286,11 +321,8 @@ f.innerHTML="<option value=''>Ingen</option>"
 
 Object.values(store.people).forEach(p=>{
 
-const o1=new Option(p.name,p.id)
-const o2=new Option(p.name,p.id)
-
-m.add(o1)
-f.add(o2)
+m.add(new Option(p.name,p.id))
+f.add(new Option(p.name,p.id))
 
 })
 
@@ -361,112 +393,106 @@ render()
 function savePerson(){
 
 const id=store.currentId
-if(!id) return
-
 const p=store.people[id]
 
 p.name=document.getElementById("e_name").value
 p.born=document.getElementById("e_born").value
 p.died=document.getElementById("e_died").value
 
-const mother=document.getElementById("e_mother").value
-const father=document.getElementById("e_father").value
+const m=document.getElementById("e_mother").value
+const f=document.getElementById("e_father").value
 
 store.parentsOf[id]=[]
 
-if(mother) store.parentsOf[id][0]=mother
-if(father) store.parentsOf[id][1]=father
+if(m) store.parentsOf[id][0]=m
+if(f) store.parentsOf[id][1]=f
 
 render()
 
 }
 
-/* =============================
-TREE
-============================= */
-
-function buildGraph(){
-
-const nodes=[]
-const links=[]
-
-Object.values(store.people).forEach(p=>{
-nodes.push({id:p.id,name:p.name})
-})
-
-Object.entries(store.parentsOf).forEach(([child,parents])=>{
-parents.forEach(parent=>{
-links.push({source:parent,target:child})
-})
-})
-
-return{nodes,links}
-
-}
+/* =========================
+TREE RENDER
+========================= */
 
 function render(){
 
-const graph=buildGraph()
+const tree=document.getElementById("tree")
+tree.innerHTML=""
 
-const svg=d3.select("#tree")
+const center=store.currentId || Object.keys(store.people)[0]
+if(!center) return
 
-svg.selectAll("*").remove()
+const parents=store.parentsOf[center]||[]
+const children=childrenOf(center)
 
-const g=svg.append("g")
+/* ===== parents ===== */
 
-svg.call(
-d3.zoom().on("zoom",e=>{
-g.attr("transform",e.transform)
+const pRow=document.createElement("div")
+pRow.className="row"
+
+parents.forEach(pid=>{
+if(!store.people[pid]) return
+pRow.appendChild(createCard(pid))
 })
-)
 
-const sim=d3.forceSimulation(graph.nodes)
-.force("link",d3.forceLink(graph.links).id(d=>d.id).distance(140))
-.force("charge",d3.forceManyBody().strength(-300))
-.force("center",d3.forceCenter(window.innerWidth/2,window.innerHeight/2))
+tree.appendChild(pRow)
 
-const link=g.selectAll(".link")
-.data(graph.links)
-.enter()
-.append("line")
-.attr("class","link")
+/* ===== center ===== */
 
-const node=g.selectAll(".node")
-.data(graph.nodes)
-.enter()
-.append("g")
-.attr("class","node")
-.on("click",(e,d)=>openEditor(d.id))
+const cRow=document.createElement("div")
+cRow.className="row"
+cRow.appendChild(createCard(center))
 
-node.append("rect")
-.attr("x",-60)
-.attr("y",-25)
-.attr("width",120)
-.attr("height",50)
-
-node.append("text")
-.attr("text-anchor","middle")
-.attr("dy","5")
-.text(d=>d.name)
-
-sim.on("tick",()=>{
-
-link
-.attr("x1",d=>d.source.x)
-.attr("y1",d=>d.source.y)
-.attr("x2",d=>d.target.x)
-.attr("y2",d=>d.target.y)
-
-node
-.attr("transform",d=>"translate("+d.x+","+d.y+")")
-
+;(store.spousesOf[center]||[]).forEach(pid=>{
+cRow.appendChild(createCard(pid))
 })
+
+tree.appendChild(cRow)
+
+/* ===== children ===== */
+
+const chRow=document.createElement("div")
+chRow.className="row"
+
+children.forEach(cid=>{
+chRow.appendChild(createCard(cid))
+})
+
+tree.appendChild(chRow)
 
 }
 
-/* =============================
+function createCard(id){
+
+const p=store.people[id]
+
+const c=document.createElement("div")
+c.className="card"
+
+if(id===store.currentId) c.classList.add("current")
+
+c.onclick=()=>openEditor(id)
+
+c.innerHTML=`
+
+<div class="cardHeader">${p.name}</div>
+
+<div class="photo">foto</div>
+
+<div class="info">
+${p.born||""} - ${p.died||""}
+</div>
+
+`
+
+return c
+
+}
+
+/* =========================
 JSON
-============================= */
+========================= */
 
 function exportJSON(){
 
@@ -494,10 +520,6 @@ store=JSON.parse(text)
 render()
 
 })
-
-/* =============================
-START
-============================= */
 
 render()
 
