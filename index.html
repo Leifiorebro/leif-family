@@ -435,7 +435,30 @@ body{
     <input id="filterName" type="text" placeholder="Filtrera..." style="width:100%;padding:6px;margin-bottom:6px">
     <div id="personListContainer"></div>
   </aside>
-  <main id="centerArea"><svg id="tree"></svg></main>
+  <main id="centerArea"><svg id="tree"></svg>
+  <div id="editor" style="
+position:fixed;
+right:20px;
+top:20px;
+width:260px;
+background:white;
+border:1px solid #888;
+padding:10px;
+font-family:sans-serif;
+">
+
+<h3 id="editName">Person</h3>
+
+<button onclick="addParent()">Lägg till förälder</button><br><br>
+
+<button onclick="addChild()">Lägg till barn</button><br><br>
+
+<button onclick="addSpouse()">Lägg till make/maka</button><br><br>
+
+<button onclick="saveJSON()">Exportera JSON</button>
+
+</div>
+  </main>
   <div id="overlay"></div>
   <!-- SIDOPANEL -->
   <aside id="detailPanel">
