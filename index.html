@@ -30,17 +30,16 @@ align-items:center;
 gap:80px;
 }
 
-.generation{
+.row{
 display:flex;
-gap:60px;
+gap:40px;
 justify-content:center;
 flex-wrap:wrap;
 }
 
 .card{
-
 width:200px;
-height:220px;
+height:230px;
 background:white;
 border-radius:10px;
 box-shadow:0 4px 10px rgba(0,0,0,0.15);
@@ -48,7 +47,6 @@ cursor:pointer;
 display:flex;
 flex-direction:column;
 overflow:hidden;
-
 }
 
 .card.current{
@@ -66,9 +64,12 @@ font-weight:bold;
 .photo{
 height:120px;
 background:#eee;
-display:flex;
-align-items:center;
-justify-content:center;
+}
+
+.photo img{
+width:100%;
+height:100%;
+object-fit:cover;
 }
 
 .info{
@@ -77,14 +78,7 @@ font-size:14px;
 text-align:center;
 }
 
-.row{
-display:flex;
-gap:40px;
-justify-content:center;
-}
-
 #editor{
-
 position:fixed;
 right:0;
 top:0;
@@ -94,7 +88,6 @@ background:white;
 border-left:1px solid #ccc;
 padding:15px;
 overflow:auto;
-
 }
 
 input,select{
@@ -104,6 +97,12 @@ margin-bottom:8px;
 
 button{
 padding:6px 10px;
+}
+
+.listItem{
+display:flex;
+justify-content:space-between;
+margin-bottom:4px;
 }
 
 </style>
@@ -118,7 +117,6 @@ padding:6px 10px;
 <button onclick="exportJSON()">💾 Export</button>
 
 <input type="file" id="importFile" hidden>
-
 <button onclick="document.getElementById('importFile').click()">📂 Import</button>
 
 </header>
@@ -147,12 +145,22 @@ padding:6px 10px;
 <button onclick="removeFather()">Ta bort far</button>
 
 <h4>Partner</h4>
+
 <div id="spouseList"></div>
-<button onclick="addSpouse()">+ partner</button>
+
+<select id="existingSpouse"></select>
+<button onclick="linkExistingSpouse()">Lägg till befintlig</button>
+
+<button onclick="addSpouse()">+ ny partner</button>
 
 <h4>Barn</h4>
+
 <div id="childList"></div>
-<button onclick="addChild()">+ barn</button>
+
+<select id="existingChild"></select>
+<button onclick="linkExistingChild()">Lägg till befintligt barn</button>
+
+<button onclick="addChild()">+ nytt barn</button>
 
 <hr>
 
@@ -163,9 +171,9 @@ padding:6px 10px;
 
 <script>
 
-/* =========================
+/* ========================
 STORE
-========================= */
+======================== */
 
 let store={
 people:{},
@@ -174,13 +182,18 @@ spousesOf:{},
 currentId:null
 }
 
+/* ========================
+UTILS
+======================== */
+
 function uid(){
 return "p_"+Math.random().toString(36).substr(2,9)
 }
 
-/* =========================
-RELATIONS
-========================= */
+function sortedPeople(){
+return Object.values(store.people)
+.sort((a,b)=>(a.name||"").localeCompare(b.name||"","sv"))
+}
 
 function childrenOf(pid){
 
@@ -191,26 +204,22 @@ if(parents.includes(pid)) arr.push(cid)
 })
 
 return arr
-
 }
 
-/* =========================
+/* ========================
 PERSON
-========================= */
+======================== */
 
 function addPerson(){
 
 const id=uid()
 
-store.people[id]={
-id:id,
-name:"Ny person"
-}
+store.people[id]={id,name:"Ny person"}
 
 store.currentId=id
 
 render()
-
+openEditor(id)
 }
 
 function deletePerson(){
@@ -227,12 +236,11 @@ store.parentsOf[c]=store.parentsOf[c].filter(p=>p!==id)
 })
 
 render()
-
 }
 
-/* =========================
-RELATION ACTIONS
-========================= */
+/* ========================
+RELATIONS
+======================== */
 
 function addChild(){
 
@@ -246,7 +254,6 @@ store.people[id]={id,name:"Barn"}
 store.parentsOf[id]=[pid]
 
 render()
-
 }
 
 function addSpouse(){
@@ -258,12 +265,46 @@ const id=uid()
 store.people[id]={id,name:"Partner"}
 
 store.spousesOf[pid] ||= []
-store.spousesOf[pid].push(id)
+store.spousesOf[id] ||= []
 
-store.spousesOf[id]=[pid]
+store.spousesOf[pid].push(id)
+store.spousesOf[id].push(pid)
 
 render()
+}
 
+function linkExistingSpouse(){
+
+const pid=store.currentId
+const sid=document.getElementById("existingSpouse").value
+
+if(!sid) return
+
+store.spousesOf[pid] ||= []
+store.spousesOf[sid] ||= []
+
+if(!store.spousesOf[pid].includes(sid))
+store.spousesOf[pid].push(sid)
+
+if(!store.spousesOf[sid].includes(pid))
+store.spousesOf[sid].push(pid)
+
+render()
+}
+
+function linkExistingChild(){
+
+const pid=store.currentId
+const cid=document.getElementById("existingChild").value
+
+if(!cid) return
+
+store.parentsOf[cid] ||= []
+
+if(!store.parentsOf[cid].includes(pid))
+store.parentsOf[cid].push(pid)
+
+render()
 }
 
 function removeMother(){
@@ -274,7 +315,6 @@ if(!store.parentsOf[id]) return
 store.parentsOf[id][0]=null
 
 render()
-
 }
 
 function removeFather(){
@@ -285,12 +325,11 @@ if(!store.parentsOf[id]) return
 store.parentsOf[id][1]=null
 
 render()
-
 }
 
-/* =========================
+/* ========================
 EDITOR
-========================= */
+======================== */
 
 function openEditor(id){
 
@@ -306,9 +345,10 @@ document.getElementById("e_died").value=p.died||""
 buildParentSelect(id)
 buildChildren(id)
 buildSpouses(id)
+buildSpouseSelect()
+buildChildSelect()
 
 render()
-
 }
 
 function buildParentSelect(id){
@@ -319,7 +359,9 @@ const f=document.getElementById("e_father")
 m.innerHTML="<option value=''>Ingen</option>"
 f.innerHTML="<option value=''>Ingen</option>"
 
-Object.values(store.people).forEach(p=>{
+sortedPeople().forEach(p=>{
+
+if(p.id===id) return
 
 m.add(new Option(p.name,p.id))
 f.add(new Option(p.name,p.id))
@@ -330,7 +372,6 @@ const parents=store.parentsOf[id]||[]
 
 m.value=parents[0]||""
 f.value=parents[1]||""
-
 }
 
 function buildChildren(id){
@@ -341,6 +382,7 @@ box.innerHTML=""
 childrenOf(id).forEach(cid=>{
 
 const d=document.createElement("div")
+d.className="listItem"
 
 d.innerHTML=
 store.people[cid].name+
@@ -349,7 +391,6 @@ store.people[cid].name+
 box.appendChild(d)
 
 })
-
 }
 
 function buildSpouses(id){
@@ -360,6 +401,7 @@ box.innerHTML=""
 ;(store.spousesOf[id]||[]).forEach(sid=>{
 
 const d=document.createElement("div")
+d.className="listItem"
 
 d.innerHTML=
 store.people[sid].name+
@@ -368,15 +410,33 @@ store.people[sid].name+
 box.appendChild(d)
 
 })
+}
 
+function buildSpouseSelect(){
+
+const sel=document.getElementById("existingSpouse")
+sel.innerHTML="<option value=''>Välj person</option>"
+
+sortedPeople().forEach(p=>{
+if(p.id===store.currentId) return
+sel.add(new Option(p.name,p.id))
+})
+}
+
+function buildChildSelect(){
+
+const sel=document.getElementById("existingChild")
+sel.innerHTML="<option value=''>Välj barn</option>"
+
+sortedPeople().forEach(p=>{
+if(p.id===store.currentId) return
+sel.add(new Option(p.name,p.id))
+})
 }
 
 function unlinkChild(cid){
-
 delete store.parentsOf[cid]
-
 render()
-
 }
 
 function unlinkSpouse(sid){
@@ -387,7 +447,6 @@ store.spousesOf[id]=store.spousesOf[id].filter(x=>x!==sid)
 store.spousesOf[sid]=store.spousesOf[sid].filter(x=>x!==id)
 
 render()
-
 }
 
 function savePerson(){
@@ -408,12 +467,11 @@ if(m) store.parentsOf[id][0]=m
 if(f) store.parentsOf[id][1]=f
 
 render()
-
 }
 
-/* =========================
-TREE RENDER
-========================= */
+/* ========================
+TREE
+======================== */
 
 function render(){
 
@@ -426,22 +484,23 @@ if(!center) return
 const parents=store.parentsOf[center]||[]
 const children=childrenOf(center)
 
-/* ===== parents ===== */
+/* parents */
 
 const pRow=document.createElement("div")
 pRow.className="row"
 
 parents.forEach(pid=>{
-if(!store.people[pid]) return
+if(store.people[pid])
 pRow.appendChild(createCard(pid))
 })
 
 tree.appendChild(pRow)
 
-/* ===== center ===== */
+/* center */
 
 const cRow=document.createElement("div")
 cRow.className="row"
+
 cRow.appendChild(createCard(center))
 
 ;(store.spousesOf[center]||[]).forEach(pid=>{
@@ -450,7 +509,7 @@ cRow.appendChild(createCard(pid))
 
 tree.appendChild(cRow)
 
-/* ===== children ===== */
+/* children */
 
 const chRow=document.createElement("div")
 chRow.className="row"
@@ -460,7 +519,6 @@ chRow.appendChild(createCard(cid))
 })
 
 tree.appendChild(chRow)
-
 }
 
 function createCard(id){
@@ -474,11 +532,15 @@ if(id===store.currentId) c.classList.add("current")
 
 c.onclick=()=>openEditor(id)
 
+const img="images/"+id+".jpg"
+
 c.innerHTML=`
 
 <div class="cardHeader">${p.name}</div>
 
-<div class="photo">foto</div>
+<div class="photo">
+<img src="${img}" onerror="this.src='images/default.jpg'">
+</div>
 
 <div class="info">
 ${p.born||""} - ${p.died||""}
@@ -487,12 +549,11 @@ ${p.born||""} - ${p.died||""}
 `
 
 return c
-
 }
 
-/* =========================
+/* ========================
 JSON
-========================= */
+======================== */
 
 function exportJSON(){
 
@@ -505,7 +566,6 @@ const a=document.createElement("a")
 a.href=URL.createObjectURL(blob)
 a.download="slaktdata.json"
 a.click()
-
 }
 
 document.getElementById("importFile").addEventListener("change",async e=>{
