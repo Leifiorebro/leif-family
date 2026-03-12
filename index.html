@@ -196,7 +196,7 @@ return Object.values(store.people)
 .sort((a,b)=>(a.name||"").localeCompare(b.name||"","sv"))
 }
 
-function childrenOf(pid){
+/*function childrenOf(pid){
 
 const arr=[]
 
@@ -205,7 +205,36 @@ if(parents.includes(pid)) arr.push(cid)
 })
 
 return arr
+}*/
+
+function childrenOf(pid){
+
+const arr=[]
+
+Object.entries(store.parentsOf).forEach(([cid,parents])=>{
+if(parents.includes(pid)) arr.push(cid)
+})
+
+/* sortera barn efter födelseår */
+
+arr.sort((a,b)=>{
+
+const pa=store.people[a]
+const pb=store.people[b]
+
+/*const ba=parseInt(pa.born)||9999
+const bb=parseInt(pb.born)||9999*/
+
+const ba=parseInt((pa.born||"").substring(0,4))||9999
+const bb=parseInt((pb.born||"").substring(0,4))||9999
+
+return ba-bb
+
+})
+
+return arr
 }
+
 
 /* ========================
 PERSON
