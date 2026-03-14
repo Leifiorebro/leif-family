@@ -1,345 +1,512 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Leifs Släktprogram – Version 3</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>Leifs Släktprogram – Version 4</title>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+
 <style>
-  body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#f4f1ea;
-    color:#222;
-  }
-  header{
-    background:#5c4033;
-    color:white;
-    padding:12px 16px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    align-items:center;
-  }
-  header h1{
-    margin:0;
-    font-size:20px;
-    margin-right:16px;
-  }
-  button,input,select{
-    font-size:14px;
-    padding:6px 10px;
-  }
-  #tree{
-    padding:20px;
-    overflow:auto;
-    min-height:70vh;
-  }
-  .gen{
-    display:flex;
-    justify-content:center;
-    gap:18px;
-    margin:18px 0;
-    flex-wrap:wrap;
-  }
-  .personBox{
-    width:220px;
-    background:#fff;
-    border:2px solid #c9b79c;
-    border-radius:12px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.12);
-    cursor:pointer;
-    overflow:hidden;
-    transition:transform .15s ease, box-shadow .15s ease;
-    position:relative;
-  }
-  .personBox:hover{
-    transform:translateY(-2px);
-    box-shadow:0 6px 16px rgba(0,0,0,0.18);
-  }
-  .personBox.current{
-    border-color:#8b4513;
-    box-shadow:0 0 0 3px rgba(139,69,19,.18);
-  }
-  .cardHeader{
-    background:#8b6b4a;
-    color:#fff;
-    font-weight:bold;
-    padding:8px;
-    text-align:center;
-    font-size:15px;
-  }
-  .photo{
-    height:160px;
-    background:#eee;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
-  .photo img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-  }
-  .info{
-    padding:8px 10px;
-    font-size:13px;
-    line-height:1.4;
-  }
-  .subline{
-    font-size:12px;
-    color:#666;
-  }
-  .treeLabel{
-    text-align:center;
-    font-weight:bold;
-    color:#6a4a2b;
-    margin-top:8px;
-  }
-  .connector{
-    text-align:center;
-    font-size:22px;
-    color:#8b6b4a;
-    line-height:1;
+  :root{
+    --bg:#f5f7fb;
+    --panel:#ffffff;
+    --line:#c7d2e3;
+    --text:#1f2937;
+    --muted:#6b7280;
+    --accent:#2563eb;
+    --accent2:#1d4ed8;
+    --ok:#15803d;
+    --warn:#b45309;
+    --danger:#b91c1c;
+    --card:#ffffff;
+    --shadow:0 6px 18px rgba(0,0,0,.08);
+    --radius:14px;
   }
 
-  #editor{
-    position:fixed;
-    top:0;
-    right:0;
-    width:420px;
-    max-width:95vw;
-    height:100vh;
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+  }
+
+  header{
+    background:linear-gradient(90deg,#1e3a8a,#2563eb);
+    color:#fff;
+    padding:14px 18px;
+    box-shadow:var(--shadow);
+  }
+
+  header h1{
+    margin:0;
+    font-size:24px;
+  }
+
+  .topbar{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    align-items:center;
+    padding:12px 16px;
+    background:#eef3ff;
+    border-bottom:1px solid #dbe4ff;
+  }
+
+  .topbar input[type="text"],
+  .topbar select,
+  .topbar button{
+    font-size:14px;
+    padding:8px 10px;
+    border-radius:10px;
+    border:1px solid #cbd5e1;
+  }
+
+  .topbar button{
+    cursor:pointer;
     background:#fff;
-    box-shadow:-4px 0 18px rgba(0,0,0,0.2);
-    padding:16px;
+  }
+
+  .topbar button:hover{
+    background:#f8fafc;
+  }
+
+  .btn-primary{
+    background:var(--accent)!important;
+    color:#fff;
+    border-color:var(--accent)!important;
+  }
+
+  .btn-primary:hover{
+    background:var(--accent2)!important;
+  }
+
+  .btn-ok{
+    background:var(--ok)!important;
+    color:#fff;
+    border-color:var(--ok)!important;
+  }
+
+  .btn-warn{
+    background:var(--warn)!important;
+    color:#fff;
+    border-color:var(--warn)!important;
+  }
+
+  .btn-danger{
+    background:var(--danger)!important;
+    color:#fff;
+    border-color:var(--danger)!important;
+  }
+
+  .layout{
+    display:grid;
+    grid-template-columns: 1fr 360px;
+    gap:0;
+    height:calc(100vh - 122px);
+  }
+
+  #treeWrap{
+    position:relative;
+    overflow:hidden;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(37,99,235,.03), transparent 250px),
+      radial-gradient(circle at 80% 30%, rgba(16,185,129,.03), transparent 250px),
+      #f8fbff;
+    border-right:1px solid #d9e3f0;
+  }
+
+  #treeSvg{
+    width:100%;
+    height:100%;
+    display:block;
+    cursor:grab;
+  }
+
+  #treeSvg:active{
+    cursor:grabbing;
+  }
+
+  .side{
+    background:#f8fafc;
     overflow:auto;
-    display:none;
-    z-index:999;
+    padding:14px;
   }
-  #editor h2{
-    margin-top:0;
-    color:#5c4033;
+
+  .panel{
+    background:var(--panel);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:14px;
+    margin-bottom:14px;
   }
+
+  .panel h2{
+    margin:0 0 10px 0;
+    font-size:18px;
+  }
+
   .field{
     margin-bottom:10px;
   }
+
   .field label{
     display:block;
-    font-size:13px;
-    font-weight:bold;
-    margin-bottom:3px;
+    font-size:12px;
+    color:var(--muted);
+    margin-bottom:4px;
   }
-  .field input, .field textarea, .field select{
+
+  .field input,
+  .field textarea,
+  .field select{
     width:100%;
-    box-sizing:border-box;
+    padding:8px 10px;
+    border:1px solid #cbd5e1;
+    border-radius:10px;
+    font-size:14px;
+    background:#fff;
   }
-  .row{
-    display:flex;
+
+  .field textarea{
+    min-height:80px;
+    resize:vertical;
+  }
+
+  .row2{
+    display:grid;
+    grid-template-columns:1fr 1fr;
     gap:8px;
   }
-  .row > div{
-    flex:1;
+
+  .row3{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:8px;
   }
-  .relationList{
-    background:#f7f3ec;
-    border:1px solid #d9cbb7;
-    border-radius:8px;
-    padding:8px;
-    margin-bottom:10px;
+
+  .small{
+    font-size:12px;
+    color:var(--muted);
   }
+
+  .relList{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+  }
+
   .relItem{
     display:flex;
     justify-content:space-between;
     align-items:center;
     gap:8px;
-    margin:4px 0;
-    padding:4px 6px;
-    background:#fff;
-    border-radius:6px;
-    border:1px solid #e3d7c7;
+    background:#f8fafc;
+    border:1px solid #e2e8f0;
+    border-radius:10px;
+    padding:8px 10px;
   }
-  .smallBtn{
-    padding:3px 7px;
+
+  .relItem span{
+    flex:1;
+    font-size:14px;
+  }
+
+  .relItem button{
+    padding:5px 8px;
     font-size:12px;
-    cursor:pointer;
   }
-  .searchBlock{
-    background:#f7f3ec;
-    border:1px solid #d9cbb7;
-    border-radius:8px;
-    padding:8px;
-    margin-bottom:12px;
+
+  .personCard foreignObject > div{
+    overflow:hidden;
   }
-  .searchResults{
-    max-height:140px;
-    overflow:auto;
-    margin-top:6px;
-    border-top:1px solid #ddd;
-    padding-top:6px;
-  }
-  .searchItem{
+
+  .node-card{
+    width:220px;
+    height:120px;
+    background:var(--card);
+    border:2px solid #dbe4ff;
+    border-radius:16px;
+    box-shadow:0 8px 22px rgba(37,99,235,.08);
+    overflow:hidden;
     display:flex;
-    justify-content:space-between;
-    gap:8px;
-    padding:4px 0;
-    border-bottom:1px dashed #ddd;
+    cursor:pointer;
+    transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
   }
-  #overlay{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,0.25);
-    display:none;
-    z-index:998;
+
+  .node-card:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 26px rgba(37,99,235,.14);
+    border-color:#93c5fd;
   }
-  .hint{
+
+  .node-current{
+    border-color:#2563eb!important;
+    box-shadow:0 10px 28px rgba(37,99,235,.18)!important;
+  }
+
+  .node-photo{
+    width:74px;
+    min-width:74px;
+    height:120px;
+    background:#eef2ff;
+    border-right:1px solid #dbe4ff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+  }
+
+  .node-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  .node-info{
+    flex:1;
+    padding:8px 10px;
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+  }
+
+  .node-name{
+    font-weight:bold;
+    font-size:15px;
+    line-height:1.2;
+  }
+
+  .node-dates{
     font-size:12px;
-    color:#555;
+    color:var(--muted);
+  }
+
+  .node-job{
+    font-size:12px;
+    color:#334155;
+    line-height:1.2;
+    margin-top:auto;
+  }
+
+  .legend{
+    font-size:12px;
+    color:var(--muted);
+    margin-top:8px;
+  }
+
+  .status{
+    font-size:12px;
+    color:#334155;
+    background:#eff6ff;
+    border:1px solid #bfdbfe;
+    padding:8px 10px;
+    border-radius:10px;
+  }
+
+  .miniBtns{
+    display:flex;
+    gap:6px;
+    flex-wrap:wrap;
+    margin-top:8px;
+  }
+
+  .miniBtns button{
+    font-size:12px;
+    padding:6px 8px;
+  }
+
+  @media (max-width:1100px){
+    .layout{
+      grid-template-columns:1fr;
+      height:auto;
+    }
+    #treeWrap{
+      height:60vh;
+      border-right:none;
+      border-bottom:1px solid #d9e3f0;
+    }
   }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Leifs Släktprogram – Version 3</h1>
-  <button onclick="loadFromServer(true)">Ladda om från slaktdata.json</button>
-  <button onclick="document.getElementById('fileInput').click()">Importera JSON</button>
-  <button onclick="exportJSON()">Exportera JSON</button>
-  <button onclick="clearLocalEdits()">Rensa lokala ändringar</button>
-  <button onclick="drawGenealogy(store.currentId)">Rita om</button>
-  <span class="hint">Klicka på en person i trädet = ny rot + öppna redigering</span>
-  <input type="file" id="fileInput" accept=".json" style="display:none">
+  <h1>Leifs Släktprogram – Version 4</h1>
 </header>
 
-<div id="tree"></div>
+<div class="topbar">
+  <button id="btnReload" class="btn-primary">Ladda från data/slaktdata.json</button>
+  <button id="btnExport" class="btn-ok">Exportera slaktdata.json</button>
+  <button id="btnAddNew">Ny person</button>
 
-<div id="overlay" onclick="closeEditor()"></div>
+  <input id="searchInput" type="text" placeholder="Sök person..." />
+  <select id="searchSelect">
+    <option value="">-- välj person --</option>
+  </select>
+  <button id="btnGo">Visa person</button>
 
-<div id="editor">
-  <h2 id="editorTitle">Redigera person</h2>
+  <button id="btnZoomIn">Zoom +</button>
+  <button id="btnZoomOut">Zoom -</button>
+  <button id="btnResetView">Återställ vy</button>
+</div>
 
-  <div class="field">
-    <label>Namn</label>
-    <input id="e_name">
+<div class="layout">
+  <div id="treeWrap">
+    <svg id="treeSvg"></svg>
   </div>
 
-  <div class="field">
-    <label>Roll</label>
-    <input id="e_role">
-  </div>
-
-  <div class="row">
-    <div class="field">
-      <label>Född</label>
-      <input id="e_born" placeholder="YYYY-MM-DD">
-    </div>
-    <div class="field">
-      <label>Död</label>
-      <input id="e_died" placeholder="YYYY-MM-DD">
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="field">
-      <label>Födelseförsamling</label>
-      <input id="e_bornParish">
-    </div>
-    <div class="field">
-      <label>Dödsförsamling</label>
-      <input id="e_diedParish">
-    </div>
-  </div>
-
-  <div class="field">
-    <label>Yrke</label>
-    <input id="e_job">
-  </div>
-
-  <div class="field">
-    <label>Foto-fil (photoId, t.ex. martin.jpg)</label>
-    <input id="e_photoId">
-  </div>
-
-  <div class="field">
-    <label>Historik / anteckning</label>
-    <textarea id="e_history" rows="4"></textarea>
-  </div>
-
-  <button onclick="saveEditor()">Spara person</button>
-  <button onclick="makeCurrentRoot()">Gör till ny rot</button>
-  <button onclick="closeEditor()">Stäng</button>
-
-  <hr>
-
-  <h3>Relationer</h3>
-
-  <div class="relationList">
-    <strong>Föräldrar</strong>
-    <div id="parentsList"></div>
-  </div>
-
-  <div class="relationList">
-    <strong>Barn</strong>
-    <div id="childrenList"></div>
-  </div>
-
-  <div class="relationList">
-    <strong>Make / maka</strong>
-    <div id="spousesList"></div>
-  </div>
-
-  <hr>
-
-  <h3>Koppla befintliga personer</h3>
-
-  <div class="searchBlock">
-    <div class="field">
-      <label>Sök person</label>
-      <input id="linkSearch" oninput="searchExisting()" placeholder="Skriv namn...">
+  <div class="side">
+    <div class="panel">
+      <h2>Status</h2>
+      <div class="status" id="statusBox">Startar...</div>
+      <div class="legend">
+        Klicka på en person i trädet för att göra personen till ny rot och öppna redigering.
+      </div>
     </div>
 
-    <div class="field">
-      <label>Koppla som</label>
-      <select id="linkType">
-        <option value="parent">Förälder till vald person</option>
-        <option value="child">Barn till vald person</option>
-        <option value="spouse">Make/maka till vald person</option>
-      </select>
+    <div class="panel">
+      <h2>Personeditor</h2>
+
+      <div class="field">
+        <label>Person-ID</label>
+        <input id="f_id" readonly />
+      </div>
+
+      <div class="field">
+        <label>Namn</label>
+        <input id="f_name" />
+      </div>
+
+      <div class="field">
+        <label>Roll</label>
+        <input id="f_role" />
+      </div>
+
+      <div class="row2">
+        <div class="field">
+          <label>Född</label>
+          <input id="f_born" placeholder="YYYY-MM-DD" />
+        </div>
+        <div class="field">
+          <label>Död</label>
+          <input id="f_died" placeholder="YYYY-MM-DD" />
+        </div>
+      </div>
+
+      <div class="row2">
+        <div class="field">
+          <label>Födelseförsamling</label>
+          <input id="f_bornParish" />
+        </div>
+        <div class="field">
+          <label>Dödsförsamling</label>
+          <input id="f_diedParish" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Yrke</label>
+        <input id="f_job" />
+      </div>
+
+      <div class="field">
+        <label>Foto-ID (t.ex. martin.jpg)</label>
+        <input id="f_photoId" />
+      </div>
+
+      <div class="field">
+        <label>Länk</label>
+        <input id="f_link" />
+      </div>
+
+      <div class="field">
+        <label>Historik / Notering</label>
+        <textarea id="f_history"></textarea>
+      </div>
+
+      <div class="miniBtns">
+        <button id="btnSavePerson" class="btn-ok">Spara person</button>
+        <button id="btnDeletePerson" class="btn-danger">Ta bort person</button>
+        <button id="btnCenterOnPerson">Centrera i trädet</button>
+      </div>
     </div>
 
-    <div class="searchResults" id="searchResults"></div>
+    <div class="panel">
+      <h2>Relationer</h2>
+
+      <div class="field">
+        <label>Föräldrar</label>
+        <div id="parentsList" class="relList"></div>
+      </div>
+
+      <div class="field">
+        <label>Barn</label>
+        <div id="childrenList" class="relList"></div>
+      </div>
+
+      <div class="field">
+        <label>Make / maka</label>
+        <div id="spousesList" class="relList"></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Koppla befintliga personer</h2>
+
+      <div class="field">
+        <label>Lägg till förälder (befintlig person)</label>
+        <select id="selAddParent"></select>
+      </div>
+      <button id="btnAddParentLink">Koppla som förälder</button>
+
+      <hr style="margin:14px 0;border:none;border-top:1px solid #e2e8f0">
+
+      <div class="field">
+        <label>Lägg till barn (befintlig person)</label>
+        <select id="selAddChild"></select>
+      </div>
+      <button id="btnAddChildLink">Koppla som barn</button>
+
+      <hr style="margin:14px 0;border:none;border-top:1px solid #e2e8f0">
+
+      <div class="field">
+        <label>Lägg till make/maka (befintlig person)</label>
+        <select id="selAddSpouse"></select>
+      </div>
+      <button id="btnAddSpouseLink">Koppla som make/maka</button>
+    </div>
+
+    <div class="panel">
+      <h2>Skapa ny person och koppla direkt</h2>
+
+      <div class="field">
+        <label>Namn</label>
+        <input id="new_name" placeholder="Namn på ny person" />
+      </div>
+
+      <div class="field">
+        <label>Relation till vald person</label>
+        <select id="new_relationType">
+          <option value="none">Bara skapa person</option>
+          <option value="parent">Skapa som förälder</option>
+          <option value="child">Skapa som barn</option>
+          <option value="spouse">Skapa som make/maka</option>
+        </select>
+      </div>
+
+      <button id="btnCreateLinkedPerson" class="btn-primary">Skapa ny person</button>
+    </div>
   </div>
-
-  <hr>
-
-  <h3>Skapa ny person + koppla direkt</h3>
-
-  <div class="field">
-    <label>Namn</label>
-    <input id="new_name">
-  </div>
-  <div class="field">
-    <label>Koppla ny person som</label>
-    <select id="newRelType">
-      <option value="parent">Förälder</option>
-      <option value="child">Barn</option>
-      <option value="spouse">Make/maka</option>
-    </select>
-  </div>
-  <button onclick="createAndLink()">Skapa och koppla</button>
-
-  <hr>
-
-  <button onclick="deleteCurrentPerson()" style="background:#a33;color:#fff;">Ta bort person</button>
 </div>
 
 <script>
-console.log("INDEX STARTAR");
-
-const SERVER_JSON = "data/slaktdata.json";
-const LOCAL_KEY = "leif_family_store_v3";
-
-let store = {
+/* ============================================================
+   GLOBAL STORE
+   ============================================================ */
+const store = {
   people: {},
   parentsOf: {},
   childrenOf: {},
@@ -347,56 +514,28 @@ let store = {
   currentId: null
 };
 
-let editingId = null;
+let svg, gMain, gLinks, gNodes, zoomBehavior;
+let lastTreeData = null;
+let nodeMap = new Map();
 
-/* =========================================================
-   Hjälpfunktioner
-========================================================= */
-
-function saveStore(){
-  localStorage.setItem(LOCAL_KEY, JSON.stringify(store));
+/* ============================================================
+   HJÄLPFUNKTIONER
+   ============================================================ */
+function setStatus(msg){
+  const el = document.getElementById("statusBox");
+  if(el) el.textContent = msg;
+  console.log(msg);
 }
 
-function loadStore(){
-  const raw = localStorage.getItem(LOCAL_KEY);
-  if(!raw) return false;
-  try{
-    const obj = JSON.parse(raw);
-    if(obj && obj.people){
-      store = obj;
-      store.parentsOf ||= {};
-      store.childrenOf ||= {};
-      store.spousesOf ||= {};
-      return true;
-    }
-  }catch(e){
-    console.warn("Kunde inte läsa localStorage:", e);
-  }
-  return false;
-}
-
-function normalizeStore(){
+function ensureStoreShape(){
   store.people ||= {};
   store.parentsOf ||= {};
   store.childrenOf ||= {};
   store.spousesOf ||= {};
 }
 
-function generateId(){
-  return "p_" + Math.random().toString(36).slice(2,11);
-}
-
-function getPerson(id){
-  return store.people[id] || null;
-}
-
-function getName(id){
-  return store.people[id]?.name || id;
-}
-
-function ensureArrayMap(map, key){
-  if(!map[key]) map[key] = [];
-  return map[key];
+function safeArray(v){
+  return Array.isArray(v) ? v : [];
 }
 
 function uniquePush(arr, value){
@@ -405,518 +544,636 @@ function uniquePush(arr, value){
 
 function removeFromArray(arr, value){
   const i = arr.indexOf(value);
-  if(i >= 0) arr.splice(i,1);
+  if(i >= 0) arr.splice(i, 1);
 }
 
-function sortIdsByName(ids){
-  return [...ids].sort((a,b)=>getName(a).localeCompare(getName(b), "sv"));
+function newId(){
+  return "p_" + Math.random().toString(36).slice(2, 11);
 }
 
-function getImagePath(id){
-  const p = store.people[id];
-  if(!p) return "images/default.jpg";
-  if(p.photoId && p.photoId.trim()) return "images/" + p.photoId.trim();
-  return "images/" + id + ".jpg";
+function personName(id){
+  return store.people[id]?.name || id;
 }
 
-/* =========================================================
-   Laddning
-========================================================= */
+function byNameSort(a,b){
+  const na = (store.people[a]?.name || "").toLowerCase();
+  const nb = (store.people[b]?.name || "").toLowerCase();
+  return na.localeCompare(nb, "sv");
+}
 
-async function loadFromServer(force=false){
-  console.log("SERVER LOAD startar");
+/* ============================================================
+   LADDNING / EXPORT
+   ============================================================ */
+async function loadServerJSON(){
   try{
-    const res = await fetch(SERVER_JSON + "?v=" + Date.now());
+    setStatus("Laddar data/slaktdata.json ...");
+    const url = "data/slaktdata.json";
+    const res = await fetch(url + "?v=" + Date.now());
     if(!res.ok) throw new Error("HTTP " + res.status);
     const data = await res.json();
 
-    if(force || !localStorage.getItem(LOCAL_KEY)){
-      store = data;
-      normalizeStore();
-      rebuildChildren();
-      ensureSpousesSymmetry();
-      store.currentId ||= findBestRoot();
-      saveStore();
-      drawGenealogy(store.currentId);
+    if(data.people){
+      store.people = data.people || {};
+      store.parentsOf = data.parentsOf || {};
+    }else{
+      // fallback om gammal platt JSON råkar laddas
+      store.people = data || {};
+      store.parentsOf = {};
     }
 
-    console.log("SERVER LOAD klar:", Object.keys(store.people).length, "personer");
+    rebuildAllRelations();
+    setStatus("Laddat klart: " + Object.keys(store.people).length + " personer");
     return true;
   }catch(err){
-    console.error("SERVER LOAD fel:", err);
-    alert("Kunde inte ladda data/slaktdata.json");
+    console.error(err);
+    setStatus("Kunde inte läsa data/slaktdata.json");
     return false;
   }
 }
 
-function clearLocalEdits(){
-  if(!confirm("Rensa lokala ändringar och återgå till data/slaktdata.json?")) return;
-  localStorage.removeItem(LOCAL_KEY);
-  loadFromServer(true);
+function exportJSON(){
+  const out = {
+    people: store.people,
+    parentsOf: store.parentsOf
+  };
+
+  const blob = new Blob(
+    [JSON.stringify(out, null, 2)],
+    { type: "application/json" }
+  );
+
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "slaktdata.json";
+  a.click();
+  URL.revokeObjectURL(a.href);
+
+  setStatus("Exporterade slaktdata.json");
 }
 
-document.getElementById("fileInput").addEventListener("change", async (e)=>{
-  const file = e.target.files[0];
-  if(!file) return;
-  try{
-    const txt = await file.text();
-    const data = JSON.parse(txt);
-    store = data;
-    normalizeStore();
-    rebuildChildren();
-    ensureSpousesSymmetry();
-    store.currentId ||= findBestRoot();
-    saveStore();
-    drawGenealogy(store.currentId);
-    alert("JSON importerad.");
-  }catch(err){
-    console.error(err);
-    alert("Fel vid import av JSON.");
-  }
-  e.target.value = "";
-});
+/* ============================================================
+   RELATIONER
+   ============================================================ */
+function normalizeParentsOf(){
+  const fixed = {};
+  for(const childId of Object.keys(store.parentsOf || {})){
+    if(!store.people[childId]) continue;
 
-/* =========================================================
-   Relationer
-========================================================= */
+    let arr = safeArray(store.parentsOf[childId]).filter(pid => store.people[pid]);
+    arr = [...new Set(arr)];
+
+    if(arr.length > 0){
+      fixed[childId] = arr;
+    }
+  }
+  store.parentsOf = fixed;
+}
 
 function rebuildChildren(){
   store.childrenOf = {};
-  for(const childId of Object.keys(store.parentsOf || {})){
-    const parents = store.parentsOf[childId] || [];
-    for(const parentId of parents){
-      if(!store.people[parentId]) continue;
-      ensureArrayMap(store.childrenOf, parentId);
-      uniquePush(store.childrenOf[parentId], childId);
+  for(const childId of Object.keys(store.parentsOf)){
+    for(const pid of safeArray(store.parentsOf[childId])){
+      if(!store.childrenOf[pid]) store.childrenOf[pid] = [];
+      uniquePush(store.childrenOf[pid], childId);
     }
   }
 }
 
-function ensureSpousesSymmetry(){
-  for(const id of Object.keys(store.spousesOf || {})){
-    const list = store.spousesOf[id] || [];
-    for(const sid of list){
-      if(!store.people[sid]) continue;
-      ensureArrayMap(store.spousesOf, sid);
-      uniquePush(store.spousesOf[sid], id);
+function rebuildSpouses(){
+  store.spousesOf = {};
+
+  // Make/maka härleds automatiskt:
+  // Om två personer står som föräldrar till samma barn => de blir makar
+  for(const childId of Object.keys(store.parentsOf)){
+    const ps = safeArray(store.parentsOf[childId]);
+    if(ps.length >= 2){
+      for(let i=0;i<ps.length;i++){
+        for(let j=i+1;j<ps.length;j++){
+          const a = ps[i], b = ps[j];
+          if(!store.spousesOf[a]) store.spousesOf[a] = [];
+          if(!store.spousesOf[b]) store.spousesOf[b] = [];
+          uniquePush(store.spousesOf[a], b);
+          uniquePush(store.spousesOf[b], a);
+        }
+      }
     }
   }
 }
 
-function linkParent(childId, parentId){
-  if(childId === parentId) return;
-  if(!store.people[childId] || !store.people[parentId]) return;
-
-  ensureArrayMap(store.parentsOf, childId);
-  uniquePush(store.parentsOf[childId], parentId);
-
+function rebuildAllRelations(){
+  ensureStoreShape();
+  normalizeParentsOf();
   rebuildChildren();
-  saveStore();
+  rebuildSpouses();
 }
 
-function unlinkParent(childId, parentId){
+function addParent(childId, parentId){
+  if(!store.people[childId] || !store.people[parentId]) return;
+  if(!store.parentsOf[childId]) store.parentsOf[childId] = [];
+  uniquePush(store.parentsOf[childId], parentId);
+  rebuildAllRelations();
+}
+
+function removeParent(childId, parentId){
   if(!store.parentsOf[childId]) return;
   removeFromArray(store.parentsOf[childId], parentId);
   if(store.parentsOf[childId].length === 0) delete store.parentsOf[childId];
-
-  rebuildChildren();
-  saveStore();
+  rebuildAllRelations();
 }
 
-function linkChild(parentId, childId){
-  linkParent(childId, parentId);
+function addChild(parentId, childId){
+  addParent(childId, parentId);
 }
 
-function unlinkChild(parentId, childId){
-  unlinkParent(childId, parentId);
+function removeChild(parentId, childId){
+  removeParent(childId, parentId);
 }
 
-function linkSpouse(a, b){
-  if(a === b) return;
-  if(!store.people[a] || !store.people[b]) return;
+function addSpouse(a, b){
+  if(!store.people[a] || !store.people[b] || a === b) return;
 
-  ensureArrayMap(store.spousesOf, a);
-  ensureArrayMap(store.spousesOf, b);
+  // Vi sparar inte spousesOf i JSON.
+  // För att göra relationen beständig måste man normalt ha gemensamt barn,
+  // men här lagrar vi den endast i minnet tills vidare.
+  if(!store.spousesOf[a]) store.spousesOf[a] = [];
+  if(!store.spousesOf[b]) store.spousesOf[b] = [];
   uniquePush(store.spousesOf[a], b);
   uniquePush(store.spousesOf[b], a);
 
-  saveStore();
+  refreshEditor();
+  drawGenealogy(store.currentId);
 }
 
-function unlinkSpouse(a, b){
+function removeSpouse(a, b){
   if(store.spousesOf[a]) removeFromArray(store.spousesOf[a], b);
   if(store.spousesOf[b]) removeFromArray(store.spousesOf[b], a);
-
-  if(store.spousesOf[a] && store.spousesOf[a].length === 0) delete store.spousesOf[a];
-  if(store.spousesOf[b] && store.spousesOf[b].length === 0) delete store.spousesOf[b];
-
-  saveStore();
+  refreshEditor();
+  drawGenealogy(store.currentId);
 }
 
-/* =========================================================
-   Startperson / rot
-========================================================= */
-
+/* ============================================================
+   ROTVAL
+   ============================================================ */
 function findBestRoot(){
+  if(store.currentId && store.people[store.currentId]) return store.currentId;
+
+  // 1) person som har barn men inga föräldrar
   const ids = Object.keys(store.people);
-  if(ids.length === 0) return null;
+  for(const id of ids){
+    const hasParents = safeArray(store.parentsOf[id]).length > 0;
+    const hasChildren = safeArray(store.childrenOf[id]).length > 0;
+    if(!hasParents && hasChildren) return id;
+  }
 
-  // 1) någon utan föräldrar men med barn
-  const candidate = ids.find(id => (!store.parentsOf[id] || store.parentsOf[id].length===0) &&
-                                   (store.childrenOf[id] && store.childrenOf[id].length>0));
-  if(candidate) return candidate;
+  // 2) första person med barn
+  for(const id of ids){
+    if(safeArray(store.childrenOf[id]).length > 0) return id;
+  }
 
-  // 2) första med barn
-  const candidate2 = ids.find(id => store.childrenOf[id]?.length);
-  if(candidate2) return candidate2;
-
-  // 3) annars första person
-  return ids[0];
+  // 3) första person
+  return ids[0] || null;
 }
 
-/* =========================================================
-   Kort / layout
-========================================================= */
+/* ============================================================
+   GENEALOGISK DATASTRUKTUR FÖR D3
+   Visar:
+   - vald person
+   - föräldrar ovanför
+   - barn nedanför
+   ============================================================ */
+function buildGenealogyData(rootId){
+  if(!rootId || !store.people[rootId]) return null;
 
-function createCard(id){
-  const p = store.people[id];
-  if(!p) return document.createElement("div");
-
-  const c = document.createElement("div");
-  c.className = "personBox";
-  if(id === store.currentId) c.classList.add("current");
-
-  c.onclick = (ev)=>{
-    ev.stopPropagation();
-    store.currentId = id;
-    saveStore();
-    drawGenealogy(id);
-    openEditor(id);
+  const root = {
+    id: rootId,
+    direction: "self",
+    children: []
   };
 
-  const img = getImagePath(id);
+  // föräldrar uppåt (vänster del i vårt logiska träd)
+  const parents = safeArray(store.parentsOf[rootId]).map(pid => ({
+    id: pid,
+    direction: "parent",
+    children: safeArray(store.parentsOf[pid]).map(gpid => ({
+      id: gpid,
+      direction: "grandparent",
+      children: []
+    }))
+  }));
 
-  c.innerHTML = `
-    <div class="cardHeader">${p.name || ""}</div>
-    <div class="photo">
-      <img src="${img}" onerror="this.src='images/default.jpg'">
-    </div>
-    <div class="info">
-      <div>${p.born || ""} ${p.died ? "– " + p.died : ""}</div>
-      <div class="subline">${p.job || ""}</div>
-      <div class="subline">${p.bornParish || ""}${p.diedParish ? " • " + p.diedParish : ""}</div>
-    </div>
-  `;
-  return c;
+  // barn nedåt
+  const children = safeArray(store.childrenOf[rootId]).map(cid => ({
+    id: cid,
+    direction: "child",
+    children: safeArray(store.childrenOf[cid]).map(gcid => ({
+      id: gcid,
+      direction: "grandchild",
+      children: []
+    }))
+  }));
+
+  // Vi bygger en "konstgjord" toppnod så att vi kan få en snygg symmetri
+  return {
+    id: "__ROOT__",
+    hidden: true,
+    children: [
+      {
+        id: "__PARENTS__",
+        hidden: true,
+        children: parents
+      },
+      {
+        id: rootId,
+        direction: "self",
+        children: children
+      }
+    ]
+  };
 }
 
-function rowOfCards(ids){
-  const row = document.createElement("div");
-  row.className = "gen";
-  sortIdsByName(ids).forEach(id => row.appendChild(createCard(id)));
-  return row;
+/* ============================================================
+   SVG / ZOOM
+   ============================================================ */
+function initSvg(){
+  svg = d3.select("#treeSvg");
+  svg.selectAll("*").remove();
+
+  gMain = svg.append("g");
+  gLinks = gMain.append("g");
+  gNodes = gMain.append("g");
+
+  zoomBehavior = d3.zoom()
+    .scaleExtent([0.3, 2.2])
+    .on("zoom", (event) => {
+      gMain.attr("transform", event.transform);
+    });
+
+  svg.call(zoomBehavior);
+
+  const wrap = document.getElementById("treeWrap");
+  const w = wrap.clientWidth;
+  const h = wrap.clientHeight;
+
+  svg.call(
+    zoomBehavior.transform,
+    d3.zoomIdentity.translate(w/2 - 120, h/2 - 40).scale(0.8)
+  );
 }
 
-function label(text){
-  const d = document.createElement("div");
-  d.className = "treeLabel";
-  d.textContent = text;
-  return d;
+function zoomBy(factor){
+  svg.transition().duration(200).call(zoomBehavior.scaleBy, factor);
 }
 
-function connector(){
-  const d = document.createElement("div");
-  d.className = "connector";
-  d.textContent = "↓";
-  return d;
+function resetView(){
+  const wrap = document.getElementById("treeWrap");
+  const w = wrap.clientWidth;
+  const h = wrap.clientHeight;
+
+  svg.transition().duration(300).call(
+    zoomBehavior.transform,
+    d3.zoomIdentity.translate(w/2 - 120, h/2 - 40).scale(0.8)
+  );
 }
 
-/* =========================================================
-   Rita träd – snyggare genealogisk layout
-========================================================= */
-
+/* ============================================================
+   RITA TRÄD
+   ============================================================ */
 function drawGenealogy(rootId){
   if(!rootId || !store.people[rootId]) return;
 
   store.currentId = rootId;
-  saveStore();
+  refreshEditor();
 
-  const tree = document.getElementById("tree");
-  tree.innerHTML = "";
+  const data = buildGenealogyData(rootId);
+  lastTreeData = data;
+  nodeMap.clear();
 
-  const root = store.people[rootId];
-  const parents = sortIdsByName(store.parentsOf[rootId] || []);
-  const spouses = sortIdsByName(store.spousesOf[rootId] || []);
-  const children = sortIdsByName(store.childrenOf[rootId] || []);
+  gLinks.selectAll("*").remove();
+  gNodes.selectAll("*").remove();
 
-  // Far-/morföräldrar till rotens föräldrar
-  let grandParents = [];
-  for(const pid of parents){
-    const gp = store.parentsOf[pid] || [];
-    grandParents.push(...gp);
-  }
-  grandParents = [...new Set(grandParents)];
+  const root = d3.hierarchy(data);
+  const tree = d3.tree().nodeSize([180, 280]);
+  tree(root);
 
-  if(grandParents.length){
-    tree.appendChild(label("Far- och morföräldrar"));
-    tree.appendChild(rowOfCards(grandParents));
-    tree.appendChild(connector());
-  }
+  // specialjustering:
+  // lägg föräldragren ovanför och person+barn nedanför
+  const nodes = root.descendants();
 
-  if(parents.length){
-    tree.appendChild(label("Föräldrar"));
-    tree.appendChild(rowOfCards(parents));
-    tree.appendChild(connector());
-  }
-
-  tree.appendChild(label("Vald person"));
-  tree.appendChild(rowOfCards([rootId]));
-
-  if(spouses.length){
-    tree.appendChild(label("Make / maka"));
-    tree.appendChild(rowOfCards(spouses));
-  }
-
-  if(children.length){
-    tree.appendChild(connector());
-    tree.appendChild(label("Barn"));
-    tree.appendChild(rowOfCards(children));
-
-    // Barnbarn
-    let grandChildren = [];
-    for(const cid of children){
-      grandChildren.push(...(store.childrenOf[cid] || []));
+  nodes.forEach(d => {
+    if(d.data.id === "__PARENTS__"){
+      d.x -= 180;
+      d.y -= 280;
     }
-    grandChildren = [...new Set(grandChildren)];
+    if(d.data.direction === "parent") d.y -= 240;
+    if(d.data.direction === "grandparent") d.y -= 480;
 
-    if(grandChildren.length){
-      tree.appendChild(connector());
-      tree.appendChild(label("Barnbarn"));
-      tree.appendChild(rowOfCards(grandChildren));
-    }
-  }
+    if(d.data.direction === "self") d.y += 0;
+    if(d.data.direction === "child") d.y += 240;
+    if(d.data.direction === "grandchild") d.y += 480;
+  });
+
+  // länkar
+  const linkGen = d3.linkVertical()
+    .x(d => d.x)
+    .y(d => d.y);
+
+  gLinks.selectAll("path")
+    .data(root.links().filter(l => !l.source.data.hidden && !l.target.data.hidden))
+    .enter()
+    .append("path")
+    .attr("d", linkGen)
+    .attr("fill", "none")
+    .attr("stroke", "#94a3b8")
+    .attr("stroke-width", 2.2);
+
+  // noder
+  const visibleNodes = nodes.filter(d => !d.data.hidden);
+
+  const node = gNodes.selectAll("g.node")
+    .data(visibleNodes, d => d.data.id)
+    .enter()
+    .append("g")
+    .attr("class", "node")
+    .attr("transform", d => `translate(${d.x - 110}, ${d.y - 60})`);
+
+  node.each(function(d){
+    nodeMap.set(d.data.id, d);
+  });
+
+  node.append("foreignObject")
+    .attr("width", 220)
+    .attr("height", 120)
+    .html(d => renderNodeCardHTML(d.data.id))
+    .on("click", function(event, d){
+      event.stopPropagation();
+      openEditor(d.data.id);
+      drawGenealogy(d.data.id);
+    });
+
+  setStatus(
+    "Visar: " + personName(rootId) +
+    " | Personer: " + Object.keys(store.people).length
+  );
 }
 
-/* =========================================================
-   Editor
-========================================================= */
+function renderNodeCardHTML(id){
+  const p = store.people[id];
+  if(!p) return "<div>Okänd</div>";
 
+  const isCurrent = id === store.currentId;
+  const cls = "node-card" + (isCurrent ? " node-current" : "");
+
+  // DIN önskade bildlogik:
+  // Om photoId finns används den, annars fallback på images/<id>.jpg
+  let img = "images/default.jpg";
+  if(p.photoId && p.photoId.trim()){
+    img = "images/" + p.photoId.trim();
+  }else{
+    img = "images/" + id + ".jpg";
+  }
+
+  const born = p.born || "";
+  const died = p.died || "";
+  const job = p.job || "";
+
+  return `
+    <div xmlns="http://www.w3.org/1999/xhtml" class="${cls}">
+      <div class="node-photo">
+        <img src="${img}" onerror="this.src='images/default.jpg'">
+      </div>
+      <div class="node-info">
+        <div class="node-name">${escapeHtml(p.name || "")}</div>
+        <div class="node-dates">${escapeHtml(born)} - ${escapeHtml(died)}</div>
+        <div class="node-job">${escapeHtml(job)}</div>
+      </div>
+    </div>
+  `;
+}
+
+function escapeHtml(s){
+  return String(s || "")
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;");
+}
+
+/* ============================================================
+   EDITOR
+   ============================================================ */
 function openEditor(id){
-  editingId = id;
+  if(!store.people[id]) return;
+  store.currentId = id;
+  refreshEditor();
+}
+
+function refreshEditor(){
+  const id = store.currentId;
   const p = store.people[id];
   if(!p) return;
 
-  document.getElementById("editorTitle").textContent = "Redigera: " + (p.name || id);
+  document.getElementById("f_id").value = id;
+  document.getElementById("f_name").value = p.name || "";
+  document.getElementById("f_role").value = p.role || "";
+  document.getElementById("f_born").value = p.born || "";
+  document.getElementById("f_died").value = p.died || "";
+  document.getElementById("f_bornParish").value = p.bornParish || "";
+  document.getElementById("f_diedParish").value = p.diedParish || "";
+  document.getElementById("f_job").value = p.job || "";
+  document.getElementById("f_photoId").value = p.photoId || "";
+  document.getElementById("f_link").value = p.link || "";
+  document.getElementById("f_history").value = p.history || "";
 
-  document.getElementById("e_name").value = p.name || "";
-  document.getElementById("e_role").value = p.role || "";
-  document.getElementById("e_born").value = p.born || "";
-  document.getElementById("e_died").value = p.died || "";
-  document.getElementById("e_bornParish").value = p.bornParish || "";
-  document.getElementById("e_diedParish").value = p.diedParish || "";
-  document.getElementById("e_job").value = p.job || "";
-  document.getElementById("e_photoId").value = p.photoId || "";
-  document.getElementById("e_history").value = p.history || "";
-
-  renderRelationLists();
-  document.getElementById("searchResults").innerHTML = "";
-  document.getElementById("linkSearch").value = "";
-  document.getElementById("new_name").value = "";
-
-  document.getElementById("overlay").style.display = "block";
-  document.getElementById("editor").style.display = "block";
+  renderRelations();
+  fillAllPersonSelects();
 }
 
-function closeEditor(){
-  document.getElementById("overlay").style.display = "none";
-  document.getElementById("editor").style.display = "none";
-  editingId = null;
-}
-
-function saveEditor(){
-  if(!editingId) return;
-  const p = store.people[editingId];
+function saveCurrentPerson(){
+  const id = store.currentId;
+  const p = store.people[id];
   if(!p) return;
 
-  p.name = document.getElementById("e_name").value.trim();
-  p.role = document.getElementById("e_role").value.trim();
-  p.born = document.getElementById("e_born").value.trim();
-  p.died = document.getElementById("e_died").value.trim();
-  p.bornParish = document.getElementById("e_bornParish").value.trim();
-  p.diedParish = document.getElementById("e_diedParish").value.trim();
-  p.job = document.getElementById("e_job").value.trim();
-  p.photoId = document.getElementById("e_photoId").value.trim();
-  p.history = document.getElementById("e_history").value;
+  p.name = document.getElementById("f_name").value.trim();
+  p.role = document.getElementById("f_role").value.trim();
+  p.born = document.getElementById("f_born").value.trim();
+  p.died = document.getElementById("f_died").value.trim();
+  p.bornParish = document.getElementById("f_bornParish").value.trim();
+  p.diedParish = document.getElementById("f_diedParish").value.trim();
+  p.job = document.getElementById("f_job").value.trim();
+  p.photoId = document.getElementById("f_photoId").value.trim();
+  p.link = document.getElementById("f_link").value.trim();
+  p.history = document.getElementById("f_history").value;
 
-  saveStore();
+  refreshSearchList();
+  fillAllPersonSelects();
   drawGenealogy(store.currentId);
-  openEditor(editingId); // uppdatera listor/titel
+
+  setStatus("Sparade: " + personName(id));
 }
 
-function makeCurrentRoot(){
-  if(!editingId) return;
-  store.currentId = editingId;
-  saveStore();
-  drawGenealogy(editingId);
-}
+function deleteCurrentPerson(){
+  const id = store.currentId;
+  if(!id || !store.people[id]) return;
 
-/* =========================================================
-   Visa relationer + exakt borttagning
-========================================================= */
+  if(!confirm("Ta bort personen '" + personName(id) + "' ?")) return;
 
-function renderRelationLists(){
-  if(!editingId) return;
+  // ta bort från people
+  delete store.people[id];
 
-  const parents = sortIdsByName(store.parentsOf[editingId] || []);
-  const children = sortIdsByName(store.childrenOf[editingId] || []);
-  const spouses = sortIdsByName(store.spousesOf[editingId] || []);
+  // ta bort som barnnyckel
+  delete store.parentsOf[id];
 
-  const pDiv = document.getElementById("parentsList");
-  const cDiv = document.getElementById("childrenList");
-  const sDiv = document.getElementById("spousesList");
+  // ta bort som förälder från alla barn
+  for(const childId of Object.keys(store.parentsOf)){
+    removeFromArray(store.parentsOf[childId], id);
+    if(store.parentsOf[childId].length === 0){
+      delete store.parentsOf[childId];
+    }
+  }
 
-  pDiv.innerHTML = "";
-  cDiv.innerHTML = "";
-  sDiv.innerHTML = "";
+  rebuildAllRelations();
 
-  parents.forEach(pid=>{
-    const d = document.createElement("div");
-    d.className = "relItem";
-    d.innerHTML = `
-      <span>${getName(pid)}</span>
-      <span>
-        <button class="smallBtn" onclick="jumpToPerson('${pid}')">Gå till</button>
-        <button class="smallBtn" onclick="removeParentExact('${pid}')">Ta bort</button>
-      </span>
-    `;
-    pDiv.appendChild(d);
-  });
+  store.currentId = findBestRoot();
 
-  children.forEach(cid=>{
-    const d = document.createElement("div");
-    d.className = "relItem";
-    d.innerHTML = `
-      <span>${getName(cid)}</span>
-      <span>
-        <button class="smallBtn" onclick="jumpToPerson('${cid}')">Gå till</button>
-        <button class="smallBtn" onclick="removeChildExact('${cid}')">Ta bort</button>
-      </span>
-    `;
-    cDiv.appendChild(d);
-  });
+  refreshSearchList();
+  fillAllPersonSelects();
 
-  spouses.forEach(sid=>{
-    const d = document.createElement("div");
-    d.className = "relItem";
-    d.innerHTML = `
-      <span>${getName(sid)}</span>
-      <span>
-        <button class="smallBtn" onclick="jumpToPerson('${sid}')">Gå till</button>
-        <button class="smallBtn" onclick="removeSpouseExact('${sid}')">Ta bort</button>
-      </span>
-    `;
-    sDiv.appendChild(d);
-  });
-}
-
-function removeParentExact(parentId){
-  if(!editingId) return;
-  if(!confirm("Ta bort " + getName(parentId) + " som förälder till " + getName(editingId) + "?")) return;
-
-  unlinkParent(editingId, parentId);
-  drawGenealogy(store.currentId);
-  openEditor(editingId);
-}
-
-function removeChildExact(childId){
-  if(!editingId) return;
-  if(!confirm("Ta bort " + getName(childId) + " som barn till " + getName(editingId) + "?")) return;
-
-  unlinkChild(editingId, childId);
-  drawGenealogy(store.currentId);
-  openEditor(editingId);
-}
-
-function removeSpouseExact(spouseId){
-  if(!editingId) return;
-  if(!confirm("Ta bort " + getName(spouseId) + " som make/maka till " + getName(editingId) + "?")) return;
-
-  unlinkSpouse(editingId, spouseId);
-  drawGenealogy(store.currentId);
-  openEditor(editingId);
-}
-
-function jumpToPerson(id){
-  store.currentId = id;
-  saveStore();
-  drawGenealogy(id);
-  openEditor(id);
-}
-
-/* =========================================================
-   Sök och koppla befintlig person
-========================================================= */
-
-function searchExisting(){
-  if(!editingId) return;
-  const q = document.getElementById("linkSearch").value.trim().toLowerCase();
-  const type = document.getElementById("linkType").value;
-  const out = document.getElementById("searchResults");
-  out.innerHTML = "";
-
-  if(q.length < 1) return;
-
-  const ids = Object.keys(store.people)
-    .filter(id => id !== editingId)
-    .filter(id => (store.people[id].name || "").toLowerCase().includes(q))
-    .sort((a,b)=>getName(a).localeCompare(getName(b), "sv"))
-    .slice(0, 30);
-
-  ids.forEach(id=>{
-    const d = document.createElement("div");
-    d.className = "searchItem";
-    d.innerHTML = `
-      <span>${getName(id)} <span class="subline">(${store.people[id].born || ""})</span></span>
-      <button class="smallBtn" onclick="linkExisting('${id}','${type}')">Koppla</button>
-    `;
-    out.appendChild(d);
-  });
-
-  if(ids.length === 0){
-    out.innerHTML = "<div class='hint'>Ingen träff.</div>";
+  if(store.currentId){
+    openEditor(store.currentId);
+    drawGenealogy(store.currentId);
+  }else{
+    setStatus("Alla personer borttagna");
   }
 }
 
-function linkExisting(otherId, type){
-  if(!editingId) return;
+/* ============================================================
+   RELATIONSLISTOR I SIDOPANEL
+   ============================================================ */
+function renderRelations(){
+  const id = store.currentId;
+  if(!id) return;
 
-  if(type === "parent"){
-    linkParent(editingId, otherId);
-  }else if(type === "child"){
-    linkChild(editingId, otherId);
-  }else if(type === "spouse"){
-    linkSpouse(editingId, otherId);
+  const parentsEl = document.getElementById("parentsList");
+  const childrenEl = document.getElementById("childrenList");
+  const spousesEl = document.getElementById("spousesList");
+
+  parentsEl.innerHTML = "";
+  childrenEl.innerHTML = "";
+  spousesEl.innerHTML = "";
+
+  const parents = safeArray(store.parentsOf[id]).slice().sort(byNameSort);
+  const children = safeArray(store.childrenOf[id]).slice().sort(byNameSort);
+  const spouses = safeArray(store.spousesOf[id]).slice().sort(byNameSort);
+
+  if(parents.length === 0){
+    parentsEl.innerHTML = `<div class="small">Inga föräldrar registrerade</div>`;
+  }else{
+    parents.forEach(pid => parentsEl.appendChild(makeRelItem(pid, () => {
+      removeParent(id, pid);
+      refreshEditor();
+      drawGenealogy(store.currentId);
+    })));
   }
 
-  drawGenealogy(store.currentId);
-  openEditor(editingId);
+  if(children.length === 0){
+    childrenEl.innerHTML = `<div class="small">Inga barn registrerade</div>`;
+  }else{
+    children.forEach(cid => childrenEl.appendChild(makeRelItem(cid, () => {
+      removeChild(id, cid);
+      refreshEditor();
+      drawGenealogy(store.currentId);
+    })));
+  }
+
+  if(spouses.length === 0){
+    spousesEl.innerHTML = `<div class="small">Inga makar registrerade</div>`;
+  }else{
+    spouses.forEach(sid => spousesEl.appendChild(makeRelItem(sid, () => {
+      removeSpouse(id, sid);
+    }, "Ta bort")));
+  }
 }
 
-/* =========================================================
-   Skapa ny person + koppla
-========================================================= */
+function makeRelItem(otherId, onRemove, removeLabel="Ta bort"){
+  const div = document.createElement("div");
+  div.className = "relItem";
 
-function createAndLink(){
-  if(!editingId) return;
-  const name = document.getElementById("new_name").value.trim();
-  const type = document.getElementById("newRelType").value;
+  const span = document.createElement("span");
+  span.textContent = personName(otherId);
+  span.style.cursor = "pointer";
+  span.onclick = () => {
+    openEditor(otherId);
+    drawGenealogy(otherId);
+  };
 
-  if(!name){
-    alert("Skriv namn först.");
-    return;
+  const btn = document.createElement("button");
+  btn.textContent = removeLabel;
+  btn.className = "btn-danger";
+  btn.onclick = onRemove;
+
+  div.appendChild(span);
+  div.appendChild(btn);
+  return div;
+}
+
+/* ============================================================
+   SÖK / SELECTS
+   ============================================================ */
+function refreshSearchList(){
+  const sel = document.getElementById("searchSelect");
+  sel.innerHTML = `<option value="">-- välj person --</option>`;
+
+  const ids = Object.keys(store.people).sort(byNameSort);
+  for(const id of ids){
+    const opt = document.createElement("option");
+    opt.value = id;
+    opt.textContent = `${store.people[id].name || "(utan namn)"} [${id}]`;
+    sel.appendChild(opt);
   }
+}
 
-  const id = generateId();
+function fillAllPersonSelects(){
+  fillPersonSelect("selAddParent", store.currentId);
+  fillPersonSelect("selAddChild", store.currentId);
+  fillPersonSelect("selAddSpouse", store.currentId);
+}
+
+function fillPersonSelect(selectId, excludeId){
+  const sel = document.getElementById(selectId);
+  sel.innerHTML = `<option value="">-- välj person --</option>`;
+
+  const ids = Object.keys(store.people).filter(id => id !== excludeId).sort(byNameSort);
+  for(const id of ids){
+    const opt = document.createElement("option");
+    opt.value = id;
+    opt.textContent = `${store.people[id].name || "(utan namn)"} [${id}]`;
+    sel.appendChild(opt);
+  }
+}
+
+function searchByText(){
+  const q = document.getElementById("searchInput").value.trim().toLowerCase();
+  if(!q) return;
+
+  const hit = Object.keys(store.people).find(id => {
+    const p = store.people[id];
+    return (p.name || "").toLowerCase().includes(q);
+  });
+
+  if(hit){
+    openEditor(hit);
+    drawGenealogy(hit);
+    document.getElementById("searchSelect").value = hit;
+  }else{
+    alert("Ingen person hittades.");
+  }
+}
+
+/* ============================================================
+   SKAPA PERSONER
+   ============================================================ */
+function createEmptyPerson(name="Ny person"){
+  const id = newId();
   store.people[id] = {
     id,
     name,
@@ -930,98 +1187,194 @@ function createAndLink(){
     photoId: "",
     history: ""
   };
-
-  if(type === "parent"){
-    linkParent(editingId, id);
-  }else if(type === "child"){
-    linkChild(editingId, id);
-  }else if(type === "spouse"){
-    linkSpouse(editingId, id);
-  }
-
-  saveStore();
-  drawGenealogy(store.currentId);
-  openEditor(id); // öppna nya personen direkt
+  return id;
 }
 
-/* =========================================================
-   Ta bort person
-========================================================= */
-
-function deleteCurrentPerson(){
-  if(!editingId) return;
-  const name = getName(editingId);
-
-  if(!confirm("Ta bort personen " + name + " helt ur registret?")) return;
-
-  // Ta bort från parentsOf (som barn)
-  delete store.parentsOf[editingId];
-
-  // Ta bort som förälder hos alla barn
-  for(const childId of Object.keys(store.parentsOf)){
-    removeFromArray(store.parentsOf[childId], editingId);
-    if(store.parentsOf[childId].length === 0) delete store.parentsOf[childId];
-  }
-
-  // Ta bort make/maka-kopplingar
-  for(const id of Object.keys(store.spousesOf)){
-    removeFromArray(store.spousesOf[id], editingId);
-    if(store.spousesOf[id].length === 0) delete store.spousesOf[id];
-  }
-  delete store.spousesOf[editingId];
-
-  // Ta bort personen
-  delete store.people[editingId];
-
-  rebuildChildren();
-
-  if(store.currentId === editingId){
-    store.currentId = findBestRoot();
-  }
-
-  saveStore();
-  closeEditor();
-  drawGenealogy(store.currentId);
+function createNewStandalonePerson(){
+  const id = createEmptyPerson("Ny person");
+  rebuildAllRelations();
+  refreshSearchList();
+  fillAllPersonSelects();
+  openEditor(id);
+  drawGenealogy(id);
+  setStatus("Ny person skapad");
 }
 
-/* =========================================================
-   Export
-========================================================= */
+function createLinkedPerson(){
+  const currentId = store.currentId;
+  if(!currentId || !store.people[currentId]) return;
 
-function exportJSON(){
-  const blob = new Blob([JSON.stringify(store, null, 2)], {type:"application/json"});
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob);
-  a.download = "slaktdata_export.json";
-  a.click();
-  URL.revokeObjectURL(a.href);
-}
+  const name = document.getElementById("new_name").value.trim() || "Ny person";
+  const rel = document.getElementById("new_relationType").value;
 
-/* =========================================================
-   Init
-========================================================= */
+  const newPersonId = createEmptyPerson(name);
 
-(async function initApp(){
-  console.log("INIT start");
-
-  const hadLocal = loadStore();
-
-  if(hadLocal){
-    normalizeStore();
-    rebuildChildren();
-    ensureSpousesSymmetry();
-    store.currentId ||= findBestRoot();
-    saveStore();
-    drawGenealogy(store.currentId);
-    console.log("Laddat från localStorage:", Object.keys(store.people).length, "personer");
+  if(rel === "parent"){
+    addParent(currentId, newPersonId);
+  }else if(rel === "child"){
+    addChild(currentId, newPersonId);
+  }else if(rel === "spouse"){
+    addSpouse(currentId, newPersonId);
   }else{
-    const ok = await loadFromServer(true);
-    if(!ok){
-      alert("Ingen data kunde laddas. Kontrollera att data/slaktdata.json finns.");
-    }
+    rebuildAllRelations();
   }
 
-  console.log("INIT klar:", Object.keys(store.people).length, "personer");
+  refreshSearchList();
+  fillAllPersonSelects();
+  openEditor(newPersonId);
+  drawGenealogy(newPersonId);
+  document.getElementById("new_name").value = "";
+}
+
+/* ============================================================
+   KOPPLA BEFINTLIGA PERSONER
+   ============================================================ */
+function linkExistingParent(){
+  const childId = store.currentId;
+  const parentId = document.getElementById("selAddParent").value;
+  if(!childId || !parentId) return;
+  addParent(childId, parentId);
+  refreshEditor();
+  drawGenealogy(store.currentId);
+}
+
+function linkExistingChild(){
+  const parentId = store.currentId;
+  const childId = document.getElementById("selAddChild").value;
+  if(!parentId || !childId) return;
+  addChild(parentId, childId);
+  refreshEditor();
+  drawGenealogy(store.currentId);
+}
+
+function linkExistingSpouse(){
+  const a = store.currentId;
+  const b = document.getElementById("selAddSpouse").value;
+  if(!a || !b) return;
+  addSpouse(a, b);
+  refreshEditor();
+  drawGenealogy(store.currentId);
+}
+
+/* ============================================================
+   CENTRERA PÅ PERSON
+   ============================================================ */
+function centerOnPerson(id){
+  const d = nodeMap.get(id);
+  if(!d) return;
+
+  const wrap = document.getElementById("treeWrap");
+  const w = wrap.clientWidth;
+  const h = wrap.clientHeight;
+
+  const transform = d3.zoomTransform(svg.node());
+  const scale = transform.k || 0.8;
+
+  const targetX = w / 2 - d.x * scale;
+  const targetY = h / 2 - d.y * scale;
+
+  svg.transition().duration(400).call(
+    zoomBehavior.transform,
+    d3.zoomIdentity.translate(targetX, targetY).scale(scale)
+  );
+}
+
+/* ============================================================
+   EVENTS
+   ============================================================ */
+function wireEvents(){
+  document.getElementById("btnReload").onclick = async () => {
+    const ok = await loadServerJSON();
+    if(!ok) return;
+
+    refreshSearchList();
+    fillAllPersonSelects();
+
+    store.currentId = findBestRoot();
+    if(store.currentId){
+      openEditor(store.currentId);
+      drawGenealogy(store.currentId);
+      resetView();
+    }
+  };
+
+  document.getElementById("btnExport").onclick = exportJSON;
+  document.getElementById("btnAddNew").onclick = createNewStandalonePerson;
+
+  document.getElementById("btnSavePerson").onclick = saveCurrentPerson;
+  document.getElementById("btnDeletePerson").onclick = deleteCurrentPerson;
+  document.getElementById("btnCenterOnPerson").onclick = () => centerOnPerson(store.currentId);
+
+  document.getElementById("btnGo").onclick = () => {
+    const id = document.getElementById("searchSelect").value;
+    if(id && store.people[id]){
+      openEditor(id);
+      drawGenealogy(id);
+    }else{
+      searchByText();
+    }
+  };
+
+  document.getElementById("searchInput").addEventListener("keydown", (e) => {
+    if(e.key === "Enter") searchByText();
+  });
+
+  document.getElementById("btnAddParentLink").onclick = linkExistingParent;
+  document.getElementById("btnAddChildLink").onclick = linkExistingChild;
+  document.getElementById("btnAddSpouseLink").onclick = linkExistingSpouse;
+
+  document.getElementById("btnCreateLinkedPerson").onclick = createLinkedPerson;
+
+  document.getElementById("btnZoomIn").onclick = () => zoomBy(1.2);
+  document.getElementById("btnZoomOut").onclick = () => zoomBy(0.85);
+  document.getElementById("btnResetView").onclick = resetView;
+
+  window.addEventListener("resize", () => {
+    initSvg();
+    if(store.currentId) drawGenealogy(store.currentId);
+  });
+}
+
+/* ============================================================
+   INIT
+   ============================================================ */
+(async function initApp(){
+  console.log("INDEX STARTAR");
+  ensureStoreShape();
+  initSvg();
+  wireEvents();
+
+  const ok = await loadServerJSON();
+
+  if(!ok){
+    // fallback: minimal demo
+    const p1 = createEmptyPerson("Israel Grek");
+    const p2 = createEmptyPerson("Julius Lindahl");
+    const p3 = createEmptyPerson("Martin Lindahl");
+    const p4 = createEmptyPerson("Leif Lindahl");
+
+    addParent(p2, p1);
+    addParent(p3, p2);
+    addParent(p4, p3);
+
+    store.people[p1].born = "1845-09-30";
+    store.people[p2].born = "1878-12-24";
+    store.people[p3].born = "1905-07-18";
+    store.people[p4].born = "1943-09-10";
+  }
+
+  rebuildAllRelations();
+  refreshSearchList();
+  fillAllPersonSelects();
+
+  store.currentId = findBestRoot();
+
+  if(store.currentId){
+    openEditor(store.currentId);
+    drawGenealogy(store.currentId);
+  }
+
+  setStatus("INIT klar: " + Object.keys(store.people).length + " personer");
 })();
 </script>
 
