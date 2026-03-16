@@ -433,8 +433,9 @@ function drawNode(g, x, y, id){
 }
 
 function drawCurve(g, x1,y1,x2,y2, spouse=false){
+  if(spouse) return;
   g.append("path")
-   .attr("class", spouse ? "tree-link-spouse" : "tree-link")
+   .attr("class", "tree-link")
    .attr("d", `M${x1},${y1} C${x1},${(y1+y2)/2} ${x2},${(y1+y2)/2} ${x2},${y2}`);
 }
 
