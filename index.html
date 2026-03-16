@@ -422,12 +422,23 @@ function collectDescendants(rootId, maxGen=3){
   return levels;
 }
 
+function calcAge(born, died){
+  const b = born ? new Date(born) : null;
+  if(!b || isNaN(b)) return "";
+  const end = (died && !isNaN(new Date(died))) ? new Date(died) : new Date();
+  let age = end.getFullYear() - b.getFullYear();
+  const m = end.getMonth() - b.getMonth();
+  if(m < 0 || (m === 0 && end.getDate() < b.getDate())) age--;
+  if(age < 0 || age > 100) return "";
+  return age + " år";
+}
+
 function drawNode(g, x, y, id){
   const p = getPerson(id); if(!p) return;
-  const w = 260, h = 110;
-  const imgSize = 80;
+  const w = 260, h = 120;
+  const imgSize = 88;
   const imgPad  = 10;
-  const txtX    = imgSize + imgPad * 2 + 4;
+  const txtX    = imgSize + imgPad * 2 + 2;
   const txtW    = w - txtX - 8;
 
   const grp = g.append("g")
@@ -441,11 +452,11 @@ function drawNode(g, x, y, id){
 
   const clipId = "clip_" + id;
   grp.append("clipPath").attr("id", clipId)
-    .append("rect").attr("x", imgPad).attr("y", imgPad)
+    .append("rect").attr("x", imgPad).attr("y", (h - imgSize)/2)
     .attr("width", imgSize).attr("height", imgSize).attr("rx", 8).attr("ry", 8);
 
   grp.append("image")
-    .attr("x", imgPad).attr("y", imgPad)
+    .attr("x", imgPad).attr("y", (h - imgSize)/2)
     .attr("width", imgSize).attr("height", imgSize)
     .attr("clip-path", `url(#${clipId})`)
     .attr("preserveAspectRatio", "xMidYMid slice")
@@ -455,26 +466,50 @@ function drawNode(g, x, y, id){
   const maxCh = Math.floor(txtW / 7.5);
   function trunc(s, n){ return s && s.length > n ? s.slice(0,n-1)+"\u2026" : (s||""); }
 
+  // Name
   grp.append("text").attr("class","node-name")
-    .attr("x", txtX).attr("y", 22)
+    .attr("x", txtX).attr("y", 20)
     .text(trunc(p.name||"", maxCh));
 
-  const bornStr = [p.born, p.bornParish].filter(Boolean).join("  ");
-  const diedStr = [p.died, p.diedParish].filter(Boolean).join("  ");
-  grp.append("text").attr("class","node-dates")
-    .attr("x", txtX).attr("y", 40)
-    .text(trunc(bornStr ? "f. " + bornStr : "", maxCh));
-  grp.append("text").attr("class","node-dates")
-    .attr("x", txtX).attr("y", 56)
-    .text(trunc(diedStr ? "d. " + diedStr : "", maxCh));
+  // Born date + parish on separate lines
+  if(p.born || p.bornParish){
+    grp.append("text").attr("class","node-dates")
+      .attr("x", txtX).attr("y", 38)
+      .text(trunc("f. " + (p.born||""), maxCh));
+    if(p.bornParish){
+      grp.append("text").attr("class","node-dates").attr("fill","#6b7280")
+        .attr("x", txtX).attr("y", 52)
+        .text(trunc(p.bornParish, maxCh));
+    }
+  }
 
-  grp.append("text").attr("class","node-role")
-    .attr("x", txtX).attr("y", 73)
-    .text(trunc(p.job||"", maxCh));
+  // Died date + parish on separate lines
+  if(p.died || p.diedParish){
+    grp.append("text").attr("class","node-dates")
+      .attr("x", txtX).attr("y", 68)
+      .text(trunc("d. " + (p.died||""), maxCh));
+    if(p.diedParish){
+      grp.append("text").attr("class","node-dates").attr("fill","#6b7280")
+        .attr("x", txtX).attr("y", 82)
+        .text(trunc(p.diedParish, maxCh));
+    }
+  }
 
-  grp.append("text").attr("class","node-dates").attr("fill","#6b7280")
-    .attr("x", txtX).attr("y", 90)
-    .text(trunc(p.role||"", maxCh));
+  // Job
+  if(p.job){
+    grp.append("text").attr("class","node-role")
+      .attr("x", txtX).attr("y", 98)
+      .text(trunc(p.job, maxCh));
+  }
+
+  // Age at bottom-right corner of card
+  const age = calcAge(p.born, p.died);
+  if(age){
+    grp.append("text").attr("class","node-dates")
+      .attr("x", w - 8).attr("y", h - 7)
+      .attr("text-anchor","end").attr("fill","#9ca3af")
+      .text(age);
+  }
 }
 
 function drawCurve(g, x1,y1,x2,y2, spouse=false){
@@ -499,7 +534,7 @@ function drawGenealogy(rootId){
   svg.call(zoom);
 
   const cardW = 260;   // card pixel width
-  const cardH = 110;
+  const cardH = 120;
   const xPad  = 20;    // minimum horizontal gap between any two cards
   const yGap  = 150;   // vertical gap between rows
 
@@ -516,7 +551,7 @@ function drawGenealogy(rootId){
   const parents   = (store.parentsOf[rootId]||[]).slice(0,2);
   const fatherId  = parents[0]||null;
   const motherId  = parents[1]||null;
-  const spouseId  = uniq(store.spousesOf[rootId]||[])[0]||null;
+  const spouseIds = uniq(store.spousesOf[rootId]||[]);
   const children  = sortIdsByBorn(store.childrenOf[rootId]||[]);
 
   // grandchildren grouped per child: [[gkids of child0], [gkids of child1], ...]
@@ -540,8 +575,8 @@ function drawGenealogy(rootId){
   const totalChildSlots = children.length === 0 ? 1
     : children.reduce((s,_,i) => s + childSubtreeSlots(i), 0);
 
-  // Total slots for the root row (root + optional spouse):
-  const rootRowSlots = spouseId ? 2 : 1;
+  // Total slots for the root row (root + all spouses):
+  const rootRowSlots = 1 + spouseIds.length;
 
   // Slots for the parent row (father + mother, each needs room for their own grandparents):
   const fatherSlots = fatherId ? Math.max(1, fatherGP.length > 0 ? fatherGP.length : 1) : 0;
@@ -592,12 +627,13 @@ function drawGenealogy(rootId){
   const rootCX  = midX;
 
   // ── Spouse (right of root, one slot gap) ──
-  const spouseCX = spouseId ? rootCX + slotW : null;
+  const spouseCXs = spouseIds.map((_, i) => rootCX + (i + 1) * slotW);
 
   // ── Children — spread them centred under root+spouse midpoint ──
   let childCXs = [];
   if(children.length > 0){
-    const childAnchorCX = spouseId ? (rootCX + slotW/2) : rootCX;
+    const lastSpouseCX = spouseCXs.length > 0 ? spouseCXs[spouseCXs.length-1] : null;
+  const childAnchorCX = lastSpouseCX ? (rootCX + lastSpouseCX)/2 : rootCX;
     const childBandW = (totalChildSlots - 1) * slotW;
     // Each child gets a centre based on its subtree share:
     let cursor = childAnchorCX - childBandW/2;
@@ -674,14 +710,17 @@ function drawGenealogy(rootId){
   // root
   drawNode(g, cx2x(rootCX), rootY, rootId);
 
-  // spouse
-  if(spouseId){
-    drawNode(g, cx2x(spouseCX), rootY, spouseId);
-    drawCurve(g, rootCX, rootY+cardH/2, spouseCX, rootY+cardH/2, true);
-  }
+  // spouses (one or more)
+  spouseIds.forEach((sid, i) => {
+    const scx = spouseCXs[i];
+    drawNode(g, cx2x(scx), rootY, sid);
+    const prevCX = i === 0 ? rootCX : spouseCXs[i-1];
+    drawCurve(g, prevCX, rootY+cardH/2, scx, rootY+cardH/2, true);
+  });
 
   // children + grandchildren
-  const childAnchorCX = spouseId ? (rootCX + slotW/2) : rootCX;
+  const lastSpouseCX = spouseCXs.length > 0 ? spouseCXs[spouseCXs.length-1] : null;
+  const childAnchorCX = lastSpouseCX ? (rootCX + lastSpouseCX)/2 : rootCX;
   children.forEach((cid, i) => {
     const ccx = childCXs[i];
     drawNode(g, cx2x(ccx), childY, cid);
