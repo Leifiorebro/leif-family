@@ -284,13 +284,26 @@ function searchLinkCandidates(){
   const q = (document.getElementById("linkSearch").value || "").trim().toLowerCase();
   const box = document.getElementById("linkCandidates"); box.innerHTML = "";
   if(!q){ box.innerHTML = '<div class="small">Skriv ett namn först.</div>'; return; }
-  const ids = Object.keys(store.people).filter(id => id !== store.currentId && (store.people[id].name||"").toLowerCase().includes(q)).sort((a,b)=>(store.people[a].name||"").localeCompare(store.people[b].name||"","sv")).slice(0,30);
+  // Snapshot the current person NOW — clicking Visa below changes currentId,
+  // so we must remember who we're linking FROM before the user navigates away.
+  const fromId = store.currentId;
+  if(!fromId){ box.innerHTML = '<div class="small">Välj en person i trädet först.</div>'; return; }
+  const ids = Object.keys(store.people)
+    .filter(id => id !== fromId && (store.people[id].name||"").toLowerCase().includes(q))
+    .sort((a,b)=>(store.people[a].name||"").localeCompare(store.people[b].name||"","sv"))
+    .slice(0,30);
   if(ids.length===0){ box.innerHTML = '<div class="small">Ingen träff.</div>'; return; }
   ids.forEach(id => {
     const row = document.createElement("div"); row.className = "listItem";
     row.innerHTML = `<span>${safeName(id)}</span>`;
     const btns = document.createElement("div");
-    const b1 = document.createElement("button"); b1.textContent = "Koppla"; b1.onclick = () => linkSelected(id);
+    const b1 = document.createElement("button");
+    b1.textContent = "Koppla";
+    b1.onclick = () => {
+      // Restore the original person as current, then link, so the relation is applied correctly
+      store.currentId = fromId;
+      linkSelected(id);
+    };
     const b2 = document.createElement("button"); b2.textContent = "Visa"; b2.onclick = () => openPerson(id);
     btns.appendChild(b1); btns.appendChild(b2); row.appendChild(btns); box.appendChild(row);
   });
@@ -449,7 +462,8 @@ function drawGenealogy(rootId){
   svg.call(zoom);
 
   const cardW = 170, cardH = 78;
-  const xGap = 220, yGap = 160;
+  // hGap = horizontal distance between left edges of sibling cards (must be > cardW to avoid overlap)
+  const hGap = 210, yGap = 160;
 
   // Place root in the centre of the visible canvas
   const rootX = W / 2 - cardW / 2;
@@ -460,19 +474,24 @@ function drawGenealogy(rootId){
   const parents = (store.parentsOf[rootId]||[]).slice(0,2);
   const fatherId = parents[0] || null;
   const motherId = parents[1] || null;
-  const fatherX  = rootX - 130;
-  const motherX  = rootX + 130;
+  // Father left of root centre, mother right — each offset by hGap/2 from root centre
+  const rootCX  = rootX + cardW / 2;
+  const fatherX  = rootCX - hGap - cardW / 2;   // centre of father = rootCX - hGap
+  const motherX  = rootCX + hGap - cardW / 2;   // centre of mother = rootCX + hGap
   const parentY  = rootY - yGap;
 
-  if(fatherId){ drawNode(g, fatherX, parentY, fatherId); drawCurve(g, fatherX+cardW/2, parentY+cardH, rootX+cardW/2, rootY); }
-  if(motherId){ drawNode(g, motherX, parentY, motherId); drawCurve(g, motherX+cardW/2, parentY+cardH, rootX+cardW/2, rootY); }
+  if(fatherId){ drawNode(g, fatherX, parentY, fatherId); drawCurve(g, fatherX+cardW/2, parentY+cardH, rootCX, rootY); }
+  if(motherId){ drawNode(g, motherX, parentY, motherId); drawCurve(g, motherX+cardW/2, parentY+cardH, rootCX, rootY); }
   if(fatherId && motherId){ drawCurve(g, fatherX+cardW, parentY+cardH/2, motherX, parentY+cardH/2, true); }
 
-  function drawGrandParents(childId, cx){
+  function drawGrandParents(childId, childCardX){
     const gp = (store.parentsOf[childId]||[]).slice(0,2);
-    const fx = cx - 130, mx = cx + 130, gy = parentY - yGap;
-    if(gp[0]){ drawNode(g, fx, gy, gp[0]); drawCurve(g, fx+cardW/2, gy+cardH, cx+cardW/2, parentY); }
-    if(gp[1]){ drawNode(g, mx, gy, gp[1]); drawCurve(g, mx+cardW/2, gy+cardH, cx+cardW/2, parentY); }
+    const childCX = childCardX + cardW / 2;
+    const fx = childCX - hGap - cardW / 2;
+    const mx = childCX + hGap - cardW / 2;
+    const gy = parentY - yGap;
+    if(gp[0]){ drawNode(g, fx, gy, gp[0]); drawCurve(g, fx+cardW/2, gy+cardH, childCX, parentY); }
+    if(gp[1]){ drawNode(g, mx, gy, gp[1]); drawCurve(g, mx+cardW/2, gy+cardH, childCX, parentY); }
     if(gp[0] && gp[1]) drawCurve(g, fx+cardW, gy+cardH/2, mx, gy+cardH/2, true);
   }
   if(fatherId) drawGrandParents(fatherId, fatherX);
@@ -480,26 +499,28 @@ function drawGenealogy(rootId){
 
   const spouses = uniq(store.spousesOf[rootId]||[]);
   const spouseId = spouses[0] || null;
-  const spouseX  = rootX + 250;
+  // Spouse sits hGap to the right of root, no overlap
+  const spouseX  = rootX + hGap;
   if(spouseId){ drawNode(g, spouseX, rootY, spouseId); drawCurve(g, rootX+cardW, rootY+cardH/2, spouseX, rootY+cardH/2, true); }
 
   const children = sortIdsByBorn(store.childrenOf[rootId]||[]);
   const childY   = rootY + yGap;
-  const totalW   = Math.max(1, children.length) * xGap;
-  const startX   = rootX - totalW/2 + xGap/2;
+  const totalW   = Math.max(1, children.length) * hGap;
+  const startX   = rootCX - totalW/2 + hGap/2 - cardW/2;
 
   children.forEach((cid, i) => {
-    const cx = startX + i*xGap;
+    const cx = startX + i * hGap;
     drawNode(g, cx, childY, cid);
-    const fromX = spouseId ? ((rootX + spouseX)/2 + cardW/2) : (rootX + cardW/2);
+    const fromX = spouseId ? (rootCX + hGap/2) : rootCX;
     drawCurve(g, fromX, rootY + cardH, cx + cardW/2, childY);
 
     const gkids  = sortIdsByBorn(store.childrenOf[cid]||[]);
     const gkidY  = childY + yGap;
-    const branchW = Math.max(1, gkids.length) * 150;
-    const gx0    = cx + cardW/2 - branchW/2;
+    const gkidGap = hGap;
+    const gTotalW = Math.max(1, gkids.length) * gkidGap;
+    const gx0    = cx + cardW/2 - gTotalW/2 + gkidGap/2 - cardW/2;
     gkids.forEach((gid, j) => {
-      const gx = gx0 + j*150;
+      const gx = gx0 + j * gkidGap;
       drawNode(g, gx, gkidY, gid);
       drawCurve(g, cx + cardW/2, childY + cardH, gx + cardW/2, gkidY);
     });
