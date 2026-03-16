@@ -71,11 +71,14 @@ svg{display:block;width:100%;height:100%}.node-card{fill:var(--card);stroke:#cbd
       <h3>Lägg till / koppla relation</h3>
       <label>Typ av relation</label>
       <select id="linkType"><option value="parent">Lägg till förälder till vald person</option><option value="child">Lägg till barn till vald person</option><option value="spouse">Lägg till make/maka till vald person</option></select>
-      <label>Koppla befintlig person</label>
-      <input id="linkSearch" type="text" placeholder="Skriv namn att söka..." />
-      <button onclick="searchLinkCandidates()">Sök personer</button>
-      <div id="linkCandidates" class="list"></div>
-      <div class="small">Klicka på <b>Koppla</b> vid rätt person för att verkligen utföra kopplingen.</div>
+      <label>Välj person att koppla</label>
+      <input id="linkSearch" type="text" placeholder="Skriv för att filtrera..." oninput="filterLinkDropdown()" />
+      <select id="linkDropdown" size="6" style="width:100%;margin-top:4px;border:1px solid #cbd5e1;border-radius:8px;font-size:13px;padding:4px;" ondblclick="linkFromDropdown()"></select>
+      <div style="display:flex;gap:6px;margin-top:6px;">
+        <button onclick="linkFromDropdown()" class="btn green" style="flex:1">Koppla vald</button>
+        <button onclick="viewFromDropdown()" class="btn secondary" style="flex:1">Visa vald</button>
+      </div>
+      <div class="small" style="margin-top:6px;">Välj en person i listan och klicka <b>Koppla vald</b>, eller dubbelklicka för att koppla direkt.</div>
     </div>
 
     <div class="panel">
@@ -235,7 +238,7 @@ function saveCurrentPerson(){
   saveLocal(); refreshAll(); setStatus("Person sparad");
 }
 
-function fillEditor(){
+function fillEditor(){ populateLinkDropdown();
   const id = store.currentId; const p = getPerson(id); if(!p) return;
   document.getElementById("currentBadge").textContent = id;
   document.getElementById("f_name").value      = p.name || "";
@@ -280,33 +283,45 @@ function createAndLinkPerson(){
   openPerson(id);
 }
 
-function searchLinkCandidates(){
-  const q = (document.getElementById("linkSearch").value || "").trim().toLowerCase();
-  const box = document.getElementById("linkCandidates"); box.innerHTML = "";
-  if(!q){ box.innerHTML = '<div class="small">Skriv ett namn först.</div>'; return; }
-  // Snapshot the current person NOW — clicking Visa below changes currentId,
-  // so we must remember who we're linking FROM before the user navigates away.
+// Populate the link dropdown with all people except current, sorted alphabetically
+function populateLinkDropdown(){
+  const sel = document.getElementById("linkDropdown");
+  const q   = (document.getElementById("linkSearch").value || "").trim().toLowerCase();
   const fromId = store.currentId;
-  if(!fromId){ box.innerHTML = '<div class="small">Välj en person i trädet först.</div>'; return; }
+  sel.innerHTML = "";
   const ids = Object.keys(store.people)
     .filter(id => id !== fromId && (store.people[id].name||"").toLowerCase().includes(q))
-    .sort((a,b)=>(store.people[a].name||"").localeCompare(store.people[b].name||"","sv"))
-    .slice(0,30);
-  if(ids.length===0){ box.innerHTML = '<div class="small">Ingen träff.</div>'; return; }
+    .sort((a,b) => (store.people[a].name||"").localeCompare(store.people[b].name||"","sv"));
   ids.forEach(id => {
-    const row = document.createElement("div"); row.className = "listItem";
-    row.innerHTML = `<span>${safeName(id)}</span>`;
-    const btns = document.createElement("div");
-    const b1 = document.createElement("button");
-    b1.textContent = "Koppla";
-    b1.onclick = () => {
-      // Restore the original person as current, then link, so the relation is applied correctly
-      store.currentId = fromId;
-      linkSelected(id);
-    };
-    const b2 = document.createElement("button"); b2.textContent = "Visa"; b2.onclick = () => openPerson(id);
-    btns.appendChild(b1); btns.appendChild(b2); row.appendChild(btns); box.appendChild(row);
+    const p = store.people[id];
+    const opt = document.createElement("option");
+    opt.value = id;
+    const born = p.born ? p.born.slice(0,4) : "";
+    const died = p.died ? p.died.slice(0,4) : "";
+    const dates = born || died ? " (" + [born, died].filter(Boolean).join("–") + ")" : "";
+    opt.textContent = (p.name||id) + dates;
+    sel.appendChild(opt);
   });
+}
+
+function filterLinkDropdown(){
+  populateLinkDropdown();
+}
+
+function linkFromDropdown(){
+  const sel = document.getElementById("linkDropdown");
+  const targetId = sel.value;
+  if(!targetId) return;
+  const fromId = store.currentId;
+  if(!fromId || fromId === targetId) return;
+  store.currentId = fromId;
+  linkSelected(targetId);
+}
+
+function viewFromDropdown(){
+  const sel = document.getElementById("linkDropdown");
+  const targetId = sel.value;
+  if(targetId) openPerson(targetId);
 }
 
 // ── FIX #8: Confirmation dialogs before destructive relation removal ──
