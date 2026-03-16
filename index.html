@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Leifs Släktprogram –Ver5.1 Version 5</title>
+<title>Leifs Släktprogram – Version 6</title>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <style>
 :root{--bg:#f4f7fb;--panel:#fff;--line:#8aa0b8;--text:#1f2937;--muted:#6b7280;--accent:#1d4ed8;--card:#fff;--shadow:0 6px 18px rgba(0,0,0,.08);--border:#d9e2ec;--danger:#b91c1c;--ok:#166534}
@@ -13,8 +13,8 @@
 #topbar button,.btn{padding:8px 10px;border:none;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;font-size:14px}.btn.secondary{background:#475569}.btn.green{background:#15803d}.btn.red{background:var(--danger)}
 #status{font-size:13px;color:var(--muted);margin-left:6px}
 #wrap{display:grid;grid-template-columns:1fr 360px;height:calc(100vh - 62px)}
-#treeWrap{position:relative;overflow:auto;background:radial-gradient(circle at 20px 20px, rgba(0,0,0,.03) 2px, transparent 2px) 0 0/24px 24px,#f8fbff}
-#tree{width:100%;height:100%;min-width:2200px;min-height:1400px}
+#treeWrap{position:relative;overflow:hidden;background:radial-gradient(circle at 20px 20px, rgba(0,0,0,.03) 2px, transparent 2px) 0 0/24px 24px,#f8fbff}
+#tree{width:100%;height:100%}
 #side{border-left:1px solid var(--border);background:var(--panel);padding:12px;overflow:auto}
 .panel{background:#fff;border:1px solid var(--border);border-radius:16px;padding:12px;margin-bottom:12px;box-shadow:var(--shadow)}
 .panel h3{margin:0 0 10px 0;font-size:18px} label{display:block;margin:8px 0 4px;font-size:13px;color:#334155}
@@ -28,18 +28,23 @@ svg{display:block;width:100%;height:100%}.node-card{fill:var(--card);stroke:#cbd
 .node-name{font-size:14px;font-weight:700;fill:#111827}.node-dates{font-size:11px;fill:#4b5563}.node-role{font-size:11px;fill:#2563eb}
 .tree-link{fill:none;stroke:var(--line);stroke-width:2}.tree-link-spouse{fill:none;stroke:#d97706;stroke-width:2;stroke-dasharray:6 4}
 .badge{display:inline-block;font-size:11px;padding:2px 6px;border-radius:999px;background:#e0ecff;color:#1d4ed8;margin-left:6px}.warning{color:#92400e;font-size:12px}.success{color:var(--ok);font-size:12px}
+/* Search results dropdown */
+#searchResults{position:absolute;top:100%;left:0;background:#fff;border:1px solid var(--border);border-radius:8px;box-shadow:var(--shadow);z-index:100;min-width:220px;max-height:220px;overflow:auto;display:none}
+#searchResults .srItem{padding:8px 12px;cursor:pointer;font-size:14px;border-bottom:1px solid #f0f0f0}
+#searchResults .srItem:last-child{border-bottom:none}
+#searchResults .srItem:hover{background:#f0f5ff}
+.search-wrap{position:relative}
 </style>
 </head>
 <body>
 <div id="topbar">
   <button onclick="loadServerJSON()">Ladda slaktdata.json</button>
   <button onclick="exportJSON()" class="btn green">Exportera JSON</button>
-  <button onclick="repairData()">Reparera data</button>
-  <button onclick="rebuildChildren()">Bygg childrenOf</button>
-  <button onclick="rebuildSpousesFromParents()">Bygg spousesOf</button>
-  <button onclick="debugCurrent()">Debug vald</button>
-  <input id="searchBox" type="text" placeholder="Sök person..." />
-  <button onclick="searchPerson()">Sök</button>
+  <div class="search-wrap">
+    <input id="searchBox" type="text" placeholder="Sök person..." oninput="liveSearch()" onkeydown="searchKeydown(event)" />
+    <div id="searchResults"></div>
+  </div>
+  <button onclick="doSearch()">Sök</button>
   <span id="status">Redo</span>
 </div>
 <div id="wrap">
@@ -48,6 +53,9 @@ svg{display:block;width:100%;height:100%}.node-card{fill:var(--card);stroke:#cbd
     <div class="panel">
       <h3>Vald person <span id="currentBadge" class="badge"></span></h3>
       <label>Namn</label><input id="f_name" type="text" />
+      <!-- FIX #5: Added separate gender field instead of relying on role for parent ordering -->
+      <label>Kön</label>
+      <select id="f_gender"><option value="">(okänt)</option><option value="M">Man</option><option value="F">Kvinna</option></select>
       <label>Roll</label>
       <select id="f_role"><option value="">(ingen)</option><option value="Far">Far</option><option value="Mor">Mor</option><option value="Förälder">Förälder</option><option value="Barn">Barn</option><option value="Make">Make</option><option value="Maka">Maka</option></select>
       <label>Född</label><input id="f_born" type="date" />
@@ -85,6 +93,7 @@ svg{display:block;width:100%;height:100%}.node-card{fill:var(--card);stroke:#cbd
       <div class="warning">Här kan du ta bort felaktiga relationer exakt.</div>
     </div>
 
+    <!-- FIX #7: Repair tools only in sidebar, removed from topbar -->
     <div class="panel">
       <h3>Reparationsverktyg</h3>
       <button onclick="repairData()">Reparera data</button>
@@ -98,6 +107,9 @@ svg{display:block;width:100%;height:100%}.node-card{fill:var(--card);stroke:#cbd
 </div>
 
 <script>
+// FIX #6: Dev-mode flag — debug buttons only shown on localhost
+const DEV = location.hostname === "localhost" || location.hostname === "127.0.0.1";
+
 const store = { people:{}, parentsOf:{}, childrenOf:{}, spousesOf:{}, currentId:null };
 const DATA_URL = "data/slaktdata.json";
 function setStatus(msg){ const el=document.getElementById("status"); if(el) el.textContent=msg; console.log(msg); }
@@ -108,9 +120,9 @@ function getPerson(id){ return store.people[id]||null; }
 function safeName(id){ const p=getPerson(id); return p ? (p.name||id) : id; }
 function parseDateSafe(s){ if(!s) return null; const d=new Date(s); return isNaN(d.getTime()) ? null : d; }
 function sortIdsByBorn(ids){ return (ids||[]).slice().sort((a,b)=>{ const pa=getPerson(a)||{}, pb=getPerson(b)||{}; const da=parseDateSafe(pa.born), db=parseDateSafe(pb.born); if(da&&db) return da-db; if(da&&!db) return -1; if(!da&&db) return 1; return (pa.name||"").localeCompare(pb.name||"","sv"); }); }
-function saveLocal(){ localStorage.setItem("leifFamilyStoreV5", JSON.stringify(store)); }
-function loadLocal(){ try{ const raw=localStorage.getItem("leifFamilyStoreV5"); if(!raw) return false; const data=JSON.parse(raw); store.people=data.people||{}; store.parentsOf=data.parentsOf||{}; store.childrenOf=data.childrenOf||{}; store.spousesOf=data.spousesOf||{}; store.currentId=data.currentId||null; return true; }catch(err){ console.warn(err); return false; } }
-function createBlankPerson(name="Ny person"){ const id=uid(); store.people[id]={id,name,role:"",born:"",bornParish:"",died:"",diedParish:"",job:"",link:"",photo:"",photoId:"",history:""}; return id; }
+function saveLocal(){ localStorage.setItem("leifFamilyStoreV6", JSON.stringify(store)); }
+function loadLocal(){ try{ const raw=localStorage.getItem("leifFamilyStoreV6"); if(!raw) return false; const data=JSON.parse(raw); store.people=data.people||{}; store.parentsOf=data.parentsOf||{}; store.childrenOf=data.childrenOf||{}; store.spousesOf=data.spousesOf||{}; store.currentId=data.currentId||null; return true; }catch(err){ console.warn(err); return false; } }
+function createBlankPerson(name="Ny person"){ const id=uid(); store.people[id]={id,name,gender:"",role:"",born:"",bornParish:"",died:"",diedParish:"",job:"",link:"",photo:"",photoId:"",history:""}; return id; }
 
 async function loadServerJSON(){
   try{
@@ -146,50 +158,45 @@ function findBestRoot(){
   return ids[0];
 }
 
-function rebuildChildren(){
+// ── FIX #1: Collapsed 6 duplicate functions into 3 with a refresh flag ──
+
+function rebuildChildren(refresh=false){
   store.childrenOf = {};
   for(const childId of Object.keys(store.parentsOf||{})){
     const parents = uniq(store.parentsOf[childId]);
-    for(const pid of parents){
-      if(pid===childId) continue;
-      ensureArrayMap(store.childrenOf, pid).push(childId);
-    }
+    for(const pid of parents){ if(pid!==childId) ensureArrayMap(store.childrenOf,pid).push(childId); }
   }
   for(const pid of Object.keys(store.childrenOf)) store.childrenOf[pid] = uniq(store.childrenOf[pid]);
-  saveLocal();
-  refreshAll();
-  setStatus("childrenOf ombyggd");
+  if(refresh){ saveLocal(); refreshAll(); setStatus("childrenOf ombyggd"); }
 }
 
-function rebuildSpousesFromParents(){
+function rebuildSpousesFromParents(refresh=false){
   store.spousesOf ||= {};
   for(const k of Object.keys(store.spousesOf)) store.spousesOf[k] = uniq(store.spousesOf[k]).filter(id => id!==k);
   for(const childId of Object.keys(store.parentsOf||{})){
     const parents = uniq(store.parentsOf[childId]);
-    if(parents.length >= 2){
-      const [a,b] = parents;
-      ensureArrayMap(store.spousesOf, a).push(b);
-      ensureArrayMap(store.spousesOf, b).push(a);
-    }
+    if(parents.length >= 2){ const [a,b] = parents; ensureArrayMap(store.spousesOf,a).push(b); ensureArrayMap(store.spousesOf,b).push(a); }
   }
   for(const id of Object.keys(store.spousesOf)) store.spousesOf[id] = uniq(store.spousesOf[id]).filter(x => x!==id);
-  saveLocal(); refreshAll(); setStatus("spousesOf ombyggd");
+  if(refresh){ saveLocal(); refreshAll(); setStatus("spousesOf ombyggd"); }
 }
 
-function normalizeParentOrder(){
+// ── FIX #5: normalizeParentOrder now uses gender field with role as fallback ──
+function normalizeParentOrder(refresh=false){
   for(const childId of Object.keys(store.parentsOf||{})){
     let arr = uniq(store.parentsOf[childId]).slice(0,2);
     if(arr.length===2){
       const a = getPerson(arr[0])||{}, b = getPerson(arr[1])||{};
-      const aMale = /far|make/i.test(a.role||"");
-      const bMale = /far|make/i.test(b.role||"");
-      const aFemale = /mor|maka/i.test(a.role||"");
-      const bFemale = /mor|maka/i.test(b.role||"");
+      // Prefer explicit gender field; fall back to role-based heuristic
+      const aMale   = a.gender==="M" || /far|make/i.test(a.role||"");
+      const bMale   = b.gender==="M" || /far|make/i.test(b.role||"");
+      const aFemale = a.gender==="F" || /mor|maka/i.test(a.role||"");
+      const bFemale = b.gender==="F" || /mor|maka/i.test(b.role||"");
       if((!aMale && bMale) || (aFemale && !bFemale)) arr = [arr[1], arr[0]];
     }
     store.parentsOf[childId] = arr;
   }
-  saveLocal(); refreshAll(); setStatus("Föräldraordning normaliserad");
+  if(refresh){ saveLocal(); refreshAll(); setStatus("Föräldraordning normaliserad"); }
 }
 
 function repairData(refresh=true){
@@ -198,85 +205,55 @@ function repairData(refresh=true){
     let arr = uniq(store.parentsOf[childId]).filter(pid => pid && pid !== childId && store.people[pid]);
     store.parentsOf[childId] = arr.slice(0,2);
   }
-  rebuildChildrenNoRefresh();
+  rebuildChildren(false);
   for(const pid of Object.keys(store.childrenOf)){
     store.childrenOf[pid] = uniq(store.childrenOf[pid]).filter(cid => cid && cid !== pid && store.people[cid]);
   }
   for(const id of Object.keys(store.spousesOf)){
     store.spousesOf[id] = uniq(store.spousesOf[id]).filter(x => x && x !== id && store.people[x]);
   }
-  rebuildSpousesFromParentsNoRefresh();
-  normalizeParentOrderNoRefresh();
+  rebuildSpousesFromParents(false);
+  normalizeParentOrder(false);
   saveLocal(); if(refresh) refreshAll(); setStatus("Data reparerad");
 }
 
-function rebuildChildrenNoRefresh(){
-  store.childrenOf = {};
-  for(const childId of Object.keys(store.parentsOf||{})){
-    const parents = uniq(store.parentsOf[childId]);
-    for(const pid of parents){ if(pid!==childId) ensureArrayMap(store.childrenOf,pid).push(childId); }
-  }
-  for(const pid of Object.keys(store.childrenOf)) store.childrenOf[pid] = uniq(store.childrenOf[pid]);
-}
-function rebuildSpousesFromParentsNoRefresh(){
-  store.spousesOf ||= {};
-  for(const k of Object.keys(store.spousesOf)) store.spousesOf[k] = uniq(store.spousesOf[k]).filter(id => id!==k);
-  for(const childId of Object.keys(store.parentsOf||{})){
-    const parents = uniq(store.parentsOf[childId]);
-    if(parents.length >= 2){ const [a,b] = parents; ensureArrayMap(store.spousesOf,a).push(b); ensureArrayMap(store.spousesOf,b).push(a); }
-  }
-  for(const id of Object.keys(store.spousesOf)) store.spousesOf[id] = uniq(store.spousesOf[id]).filter(x => x!==id);
-}
-function normalizeParentOrderNoRefresh(){
-  for(const childId of Object.keys(store.parentsOf||{})){
-    let arr = uniq(store.parentsOf[childId]).slice(0,2);
-    if(arr.length===2){
-      const a = getPerson(arr[0])||{}, b = getPerson(arr[1])||{};
-      const aMale = /far|make/i.test(a.role||"");
-      const bMale = /far|make/i.test(b.role||"");
-      const aFemale = /mor|maka/i.test(a.role||"");
-      const bFemale = /mor|maka/i.test(b.role||"");
-      if((!aMale && bMale) || (aFemale && !bFemale)) arr = [arr[1], arr[0]];
-    }
-    store.parentsOf[childId] = arr;
-  }
-}
-
-function openPerson(id){ if(!store.people[id]) return; store.currentId=id; saveLocal(); refreshAll(); }
+function openPerson(id){ if(!store.people[id]) return; store.currentId=id; saveLocal(); refreshAll(); closeSearchResults(); }
 function setAsRoot(){ if(store.currentId){ saveLocal(); drawGenealogy(store.currentId); setStatus("Ny startperson vald"); } }
 
 function saveCurrentPerson(){
   const id = store.currentId; if(!id || !store.people[id]) return;
   const p = store.people[id];
-  p.name = document.getElementById("f_name").value.trim();
-  p.role = document.getElementById("f_role").value;
-  p.born = document.getElementById("f_born").value;
-  p.bornParish = document.getElementById("f_bornParish").value.trim();
-  p.died = document.getElementById("f_died").value;
-  p.diedParish = document.getElementById("f_diedParish").value.trim();
-  p.job = document.getElementById("f_job").value.trim();
-  p.history = document.getElementById("f_history").value.trim();
+  p.name     = document.getElementById("f_name").value.trim();
+  p.gender   = document.getElementById("f_gender").value;
+  p.role     = document.getElementById("f_role").value;
+  p.born     = document.getElementById("f_born").value;
+  p.bornParish  = document.getElementById("f_bornParish").value.trim();
+  p.died     = document.getElementById("f_died").value;
+  p.diedParish  = document.getElementById("f_diedParish").value.trim();
+  p.job      = document.getElementById("f_job").value.trim();
+  p.history  = document.getElementById("f_history").value.trim();
   saveLocal(); refreshAll(); setStatus("Person sparad");
 }
 
 function fillEditor(){
   const id = store.currentId; const p = getPerson(id); if(!p) return;
   document.getElementById("currentBadge").textContent = id;
-  document.getElementById("f_name").value = p.name || "";
-  document.getElementById("f_role").value = p.role || "";
-  document.getElementById("f_born").value = p.born || "";
+  document.getElementById("f_name").value      = p.name || "";
+  document.getElementById("f_gender").value    = p.gender || "";
+  document.getElementById("f_role").value      = p.role || "";
+  document.getElementById("f_born").value      = p.born || "";
   document.getElementById("f_bornParish").value = p.bornParish || "";
-  document.getElementById("f_died").value = p.died || "";
+  document.getElementById("f_died").value      = p.died || "";
   document.getElementById("f_diedParish").value = p.diedParish || "";
-  document.getElementById("f_job").value = p.job || "";
-  document.getElementById("f_history").value = p.history || "";
+  document.getElementById("f_job").value       = p.job || "";
+  document.getElementById("f_history").value   = p.history || "";
 }
 
 function addParent(childId,parentId){
   if(!store.people[childId] || !store.people[parentId] || childId===parentId) return;
   const arr = ensureArrayMap(store.parentsOf, childId);
   if(!arr.includes(parentId) && arr.length < 2) arr.push(parentId);
-  rebuildChildrenNoRefresh(); rebuildSpousesFromParentsNoRefresh(); normalizeParentOrderNoRefresh();
+  rebuildChildren(false); rebuildSpousesFromParents(false); normalizeParentOrder(false);
 }
 function addChild(parentId,childId){ addParent(childId,parentId); }
 function addSpouse(a,b){
@@ -319,9 +296,20 @@ function searchLinkCandidates(){
   });
 }
 
-function removeParent(childId,parentId){ store.parentsOf[childId] = uniq((store.parentsOf[childId]||[]).filter(x => x !== parentId)); rebuildChildrenNoRefresh(); rebuildSpousesFromParentsNoRefresh(); normalizeParentOrderNoRefresh(); saveLocal(); refreshAll(); setStatus("Förälder borttagen"); }
+// ── FIX #8: Confirmation dialogs before destructive relation removal ──
+function removeParent(childId,parentId){
+  if(!confirm(`Ta bort ${safeName(parentId)} som förälder till ${safeName(childId)}?`)) return;
+  store.parentsOf[childId] = uniq((store.parentsOf[childId]||[]).filter(x => x !== parentId));
+  rebuildChildren(false); rebuildSpousesFromParents(false); normalizeParentOrder(false);
+  saveLocal(); refreshAll(); setStatus("Förälder borttagen");
+}
 function removeChild(parentId,childId){ removeParent(childId,parentId); }
-function removeSpouse(a,b){ store.spousesOf[a] = uniq((store.spousesOf[a]||[]).filter(x => x !== b)); store.spousesOf[b] = uniq((store.spousesOf[b]||[]).filter(x => x !== a)); saveLocal(); refreshAll(); setStatus("Make/maka borttagen"); }
+function removeSpouse(a,b){
+  if(!confirm(`Ta bort ${safeName(b)} som make/maka till ${safeName(a)}?`)) return;
+  store.spousesOf[a] = uniq((store.spousesOf[a]||[]).filter(x => x !== b));
+  store.spousesOf[b] = uniq((store.spousesOf[b]||[]).filter(x => x !== a));
+  saveLocal(); refreshAll(); setStatus("Make/maka borttagen");
+}
 
 function renderRelations(){
   const id = store.currentId; if(!id) return;
@@ -336,20 +324,49 @@ function renderRelations(){
 }
 function relRow(id,onShow,onRemove){ const row=document.createElement("div"); row.className="listItem"; row.innerHTML=`<span>${safeName(id)}</span>`; const btns=document.createElement("div"); const b1=document.createElement("button"); b1.textContent="Visa"; b1.onclick=onShow; const b2=document.createElement("button"); b2.textContent="Ta bort"; b2.onclick=onRemove; btns.appendChild(b1); btns.appendChild(b2); row.appendChild(btns); return row; }
 
-function searchPerson(){
-  const q = (document.getElementById("searchBox").value || "").trim().toLowerCase(); if(!q) return;
-  const hit = Object.keys(store.people).find(id => (store.people[id].name||"").toLowerCase().includes(q));
-  if(hit) openPerson(hit); else setStatus("Ingen träff i huvudsökningen");
+// ── FIX #4: Live search with dropdown showing all matches ──
+function liveSearch(){
+  const q = (document.getElementById("searchBox").value || "").trim().toLowerCase();
+  const box = document.getElementById("searchResults");
+  if(!q){ box.style.display="none"; box.innerHTML=""; return; }
+  const ids = Object.keys(store.people)
+    .filter(id => (store.people[id].name||"").toLowerCase().includes(q))
+    .sort((a,b) => (store.people[a].name||"").localeCompare(store.people[b].name||"","sv"))
+    .slice(0,20);
+  if(ids.length===0){ box.style.display="none"; return; }
+  box.innerHTML = ids.map(id => `<div class="srItem" data-id="${id}">${safeName(id)}</div>`).join("");
+  box.style.display = "block";
+  box.querySelectorAll(".srItem").forEach(el => {
+    el.addEventListener("click", () => { openPerson(el.dataset.id); document.getElementById("searchBox").value=""; });
+  });
 }
+function searchKeydown(e){
+  if(e.key==="Enter") doSearch();
+  if(e.key==="Escape") closeSearchResults();
+}
+function closeSearchResults(){
+  const box = document.getElementById("searchResults"); box.style.display="none"; box.innerHTML="";
+}
+function doSearch(){
+  const q = (document.getElementById("searchBox").value || "").trim().toLowerCase(); if(!q) return;
+  const hits = Object.keys(store.people).filter(id => (store.people[id].name||"").toLowerCase().includes(q));
+  if(hits.length===0){ setStatus("Ingen träff"); return; }
+  openPerson(hits[0]);
+  if(hits.length>1) setStatus(`${hits.length} träffar – visar den första`);
+}
+// Close dropdown when clicking outside
+document.addEventListener("click", e => { if(!e.target.closest(".search-wrap")) closeSearchResults(); });
 
+// ── FIX #3: Export now includes childrenOf ──
 function exportJSON(){
-  const data = { people: store.people, parentsOf: store.parentsOf, spousesOf: store.spousesOf };
+  const data = { people: store.people, parentsOf: store.parentsOf, childrenOf: store.childrenOf, spousesOf: store.spousesOf };
   const blob = new Blob([JSON.stringify(data, null, 2)], { type:"application/json" });
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a"); a.href = url; a.download = "slaktdata.json"; a.click();
   URL.revokeObjectURL(url); setStatus("JSON exporterad");
 }
 
+// ── FIX #6: debugCurrent only wired up in DEV mode ──
 function debugCurrent(){
   const id = store.currentId;
   console.log("PERSON:", store.people[id]);
@@ -357,9 +374,16 @@ function debugCurrent(){
   console.log("children:", store.childrenOf[id]);
   console.log("spouses:", store.spousesOf[id]);
 }
+if(DEV){
+  const btn = document.createElement("button");
+  btn.textContent = "Debug vald";
+  btn.onclick = debugCurrent;
+  btn.title = "Bara synlig på localhost";
+  document.getElementById("topbar").appendChild(btn);
+}
 
 function personLabel(p){ return `${p.name||""}`; }
-function datesLabel(p){ const b=p.born||""; const d=p.died||""; return (b||d) ? `${b} - ${d}` : ""; }
+function datesLabel(p){ const b=p.born||""; const d=p.died||""; return (b||d) ? `${b} – ${d}` : ""; }
 
 function collectAncestorLevels(rootId, maxGen=3){
   const levels = [[rootId]];
@@ -395,79 +419,100 @@ function drawNode(g, x, y, id){
   grp.append("text").attr("class","node-role").attr("x",10).attr("y",60).text((p.role||"").slice(0,24));
 }
 
-function line(g, x1,y1,x2,y2, spouse=false){
+function drawCurve(g, x1,y1,x2,y2, spouse=false){
   g.append("path")
    .attr("class", spouse ? "tree-link-spouse" : "tree-link")
    .attr("d", `M${x1},${y1} C${x1},${(y1+y2)/2} ${x2},${(y1+y2)/2} ${x2},${y2}`);
 }
 
+// ── FIX #2: D3 zoom/pan + dynamic SVG sizing ──
 function drawGenealogy(rootId){
   if(!rootId || !store.people[rootId]) return;
-  const svg = d3.select("#tree"); svg.selectAll("*").remove();
+
+  const svgEl = document.getElementById("tree");
+  const wrap  = document.getElementById("treeWrap");
+  const W = wrap.clientWidth  || 900;
+  const H = wrap.clientHeight || 700;
+
+  const svg = d3.select("#tree")
+    .attr("width", W)
+    .attr("height", H);
+  svg.selectAll("*").remove();
+
+  // Zoomable group
   const g = svg.append("g");
 
-  const rootX = 1000, rootY = 650;
+  // Apply zoom behaviour
+  const zoom = d3.zoom()
+    .scaleExtent([0.2, 3])
+    .on("zoom", e => g.attr("transform", e.transform));
+  svg.call(zoom);
+
   const cardW = 170, cardH = 78;
   const xGap = 220, yGap = 160;
 
-  // Root
+  // Place root in the centre of the visible canvas
+  const rootX = W / 2 - cardW / 2;
+  const rootY = H / 2 - cardH / 2;
+
   drawNode(g, rootX, rootY, rootId);
 
-  // Parents above: father left, mother right
   const parents = (store.parentsOf[rootId]||[]).slice(0,2);
   const fatherId = parents[0] || null;
   const motherId = parents[1] || null;
-  const fatherX = rootX - 130;
-  const motherX = rootX + 130;
-  const parentY = rootY - yGap;
+  const fatherX  = rootX - 130;
+  const motherX  = rootX + 130;
+  const parentY  = rootY - yGap;
 
-  if(fatherId){ drawNode(g, fatherX, parentY, fatherId); line(g, fatherX+cardW/2, parentY+cardH, rootX+cardW/2, rootY); }
-  if(motherId){ drawNode(g, motherX, parentY, motherId); line(g, motherX+cardW/2, parentY+cardH, rootX+cardW/2, rootY); }
-  if(fatherId && motherId){ line(g, fatherX+cardW, parentY+cardH/2, motherX, parentY+cardH/2, true); }
+  if(fatherId){ drawNode(g, fatherX, parentY, fatherId); drawCurve(g, fatherX+cardW/2, parentY+cardH, rootX+cardW/2, rootY); }
+  if(motherId){ drawNode(g, motherX, parentY, motherId); drawCurve(g, motherX+cardW/2, parentY+cardH, rootX+cardW/2, rootY); }
+  if(fatherId && motherId){ drawCurve(g, fatherX+cardW, parentY+cardH/2, motherX, parentY+cardH/2, true); }
 
-  // Grandparents above father and mother
   function drawGrandParents(childId, cx){
     const gp = (store.parentsOf[childId]||[]).slice(0,2);
     const fx = cx - 130, mx = cx + 130, gy = parentY - yGap;
-    if(gp[0]){ drawNode(g, fx, gy, gp[0]); line(g, fx+cardW/2, gy+cardH, cx+cardW/2, parentY); }
-    if(gp[1]){ drawNode(g, mx, gy, gp[1]); line(g, mx+cardW/2, gy+cardH, cx+cardW/2, parentY); }
-    if(gp[0] && gp[1]) line(g, fx+cardW, gy+cardH/2, mx, gy+cardH/2, true);
+    if(gp[0]){ drawNode(g, fx, gy, gp[0]); drawCurve(g, fx+cardW/2, gy+cardH, cx+cardW/2, parentY); }
+    if(gp[1]){ drawNode(g, mx, gy, gp[1]); drawCurve(g, mx+cardW/2, gy+cardH, cx+cardW/2, parentY); }
+    if(gp[0] && gp[1]) drawCurve(g, fx+cardW, gy+cardH/2, mx, gy+cardH/2, true);
   }
   if(fatherId) drawGrandParents(fatherId, fatherX);
   if(motherId) drawGrandParents(motherId, motherX);
 
-  // Spouse to the right of root
   const spouses = uniq(store.spousesOf[rootId]||[]);
-  let spouseId = spouses[0] || null;
-  let spouseX = rootX + 250;
-  if(spouseId){ drawNode(g, spouseX, rootY, spouseId); line(g, rootX+cardW, rootY+cardH/2, spouseX, rootY+cardH/2, true); }
+  const spouseId = spouses[0] || null;
+  const spouseX  = rootX + 250;
+  if(spouseId){ drawNode(g, spouseX, rootY, spouseId); drawCurve(g, rootX+cardW, rootY+cardH/2, spouseX, rootY+cardH/2, true); }
 
-  // Children below in age order, left->right
   const children = sortIdsByBorn(store.childrenOf[rootId]||[]);
-  const childY = rootY + yGap;
-  const totalW = Math.max(1, children.length) * xGap;
-  let startX = rootX - totalW/2 + xGap/2;
+  const childY   = rootY + yGap;
+  const totalW   = Math.max(1, children.length) * xGap;
+  const startX   = rootX - totalW/2 + xGap/2;
 
   children.forEach((cid, i) => {
     const cx = startX + i*xGap;
     drawNode(g, cx, childY, cid);
-
     const fromX = spouseId ? ((rootX + spouseX)/2 + cardW/2) : (rootX + cardW/2);
-    const fromY = rootY + cardH;
-    line(g, fromX, fromY, cx + cardW/2, childY);
+    drawCurve(g, fromX, rootY + cardH, cx + cardW/2, childY);
 
-    // Grandchildren under each child, age order within each branch
-    const gkids = sortIdsByBorn(store.childrenOf[cid]||[]);
-    const gkidY = childY + yGap;
+    const gkids  = sortIdsByBorn(store.childrenOf[cid]||[]);
+    const gkidY  = childY + yGap;
     const branchW = Math.max(1, gkids.length) * 150;
-    let gx0 = cx + cardW/2 - branchW/2;
-
+    const gx0    = cx + cardW/2 - branchW/2;
     gkids.forEach((gid, j) => {
       const gx = gx0 + j*150;
       drawNode(g, gx, gkidY, gid);
-      line(g, cx + cardW/2, childY + cardH, gx + cardW/2, gkidY);
+      drawCurve(g, cx + cardW/2, childY + cardH, gx + cardW/2, gkidY);
     });
   });
+
+  // Auto-fit the whole tree into view on first draw
+  const bounds = g.node().getBBox();
+  if(bounds.width > 0 && bounds.height > 0){
+    const scale = Math.min(0.95, Math.min(W / (bounds.width + 60), H / (bounds.height + 60)));
+    const tx    = (W - bounds.width  * scale) / 2 - bounds.x * scale;
+    const ty    = (H - bounds.height * scale) / 2 - bounds.y * scale;
+    svg.call(zoom.transform, d3.zoomIdentity.translate(tx, ty).scale(scale));
+  }
 
   setStatus("Träd ritat för: " + safeName(rootId));
 }
@@ -497,4 +542,3 @@ function refreshAll(){
 </script>
 </body>
 </html>
-
