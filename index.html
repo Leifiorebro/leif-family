@@ -424,12 +424,57 @@ function collectDescendants(rootId, maxGen=3){
 
 function drawNode(g, x, y, id){
   const p = getPerson(id); if(!p) return;
-  const w=170, h=78;
-  const grp = g.append("g").attr("transform", `translate(${x},${y})`).style("cursor","pointer").on("click", ()=>openPerson(id));
-  grp.append("rect").attr("class", "node-card" + (id===store.currentId ? " node-current" : "")).attr("width", w).attr("height", h);
-  grp.append("text").attr("class","node-name").attr("x",10).attr("y",22).text(personLabel(p).slice(0,26));
-  grp.append("text").attr("class","node-dates").attr("x",10).attr("y",42).text(datesLabel(p).slice(0,26));
-  grp.append("text").attr("class","node-role").attr("x",10).attr("y",60).text((p.role||"").slice(0,24));
+  const w = 260, h = 110;
+  const imgSize = 80;
+  const imgPad  = 10;
+  const txtX    = imgSize + imgPad * 2 + 4;
+  const txtW    = w - txtX - 8;
+
+  const grp = g.append("g")
+    .attr("transform", `translate(${x},${y})`)
+    .style("cursor","pointer")
+    .on("click", ()=>openPerson(id));
+
+  grp.append("rect")
+    .attr("class", "node-card" + (id===store.currentId ? " node-current" : ""))
+    .attr("width", w).attr("height", h).attr("rx", 14).attr("ry", 14);
+
+  const clipId = "clip_" + id;
+  grp.append("clipPath").attr("id", clipId)
+    .append("rect").attr("x", imgPad).attr("y", imgPad)
+    .attr("width", imgSize).attr("height", imgSize).attr("rx", 8).attr("ry", 8);
+
+  grp.append("image")
+    .attr("x", imgPad).attr("y", imgPad)
+    .attr("width", imgSize).attr("height", imgSize)
+    .attr("clip-path", `url(#${clipId})`)
+    .attr("preserveAspectRatio", "xMidYMid slice")
+    .on("error", function(){ d3.select(this).attr("href", "images/default.jpg"); })
+    .attr("href", `images/${id}.jpg`);
+
+  const maxCh = Math.floor(txtW / 7.5);
+  function trunc(s, n){ return s && s.length > n ? s.slice(0,n-1)+"\u2026" : (s||""); }
+
+  grp.append("text").attr("class","node-name")
+    .attr("x", txtX).attr("y", 22)
+    .text(trunc(p.name||"", maxCh));
+
+  const bornStr = [p.born, p.bornParish].filter(Boolean).join("  ");
+  const diedStr = [p.died, p.diedParish].filter(Boolean).join("  ");
+  grp.append("text").attr("class","node-dates")
+    .attr("x", txtX).attr("y", 40)
+    .text(trunc(bornStr ? "f. " + bornStr : "", maxCh));
+  grp.append("text").attr("class","node-dates")
+    .attr("x", txtX).attr("y", 56)
+    .text(trunc(diedStr ? "d. " + diedStr : "", maxCh));
+
+  grp.append("text").attr("class","node-role")
+    .attr("x", txtX).attr("y", 73)
+    .text(trunc(p.job||"", maxCh));
+
+  grp.append("text").attr("class","node-dates").attr("fill","#6b7280")
+    .attr("x", txtX).attr("y", 90)
+    .text(trunc(p.role||"", maxCh));
 }
 
 function drawCurve(g, x1,y1,x2,y2, spouse=false){
@@ -453,8 +498,8 @@ function drawGenealogy(rootId){
   const zoom = d3.zoom().scaleExtent([0.15, 4]).on("zoom", e => g.attr("transform", e.transform));
   svg.call(zoom);
 
-  const cardW = 180;   // card pixel width
-  const cardH = 78;
+  const cardW = 260;   // card pixel width
+  const cardH = 110;
   const xPad  = 20;    // minimum horizontal gap between any two cards
   const yGap  = 150;   // vertical gap between rows
 
