@@ -1777,7 +1777,7 @@
       "job": "",
       "link": "",
       "photo": "",
-      "photoId": "",
+      "photoId": "p_e0q1n5ln.jpg",
       "history": ""
     },
     "p_ysll51iu": {
@@ -1792,7 +1792,7 @@
       "job": "",
       "link": "",
       "photo": "",
-      "photoId": "",
+      "photoId": "p_ysll51iu.jpg",
       "history": ""
     },
     "p_p8q9agem": {
@@ -1822,7 +1822,7 @@
       "job": "",
       "link": "",
       "photo": "",
-      "photoId": "",
+      "photoId": "p_lagozehv.jpg",
       "history": ""
     },
     "p_8jgv67fq": {
@@ -1929,6 +1929,51 @@
       "photo": "",
       "photoId": "",
       "history": "Maria Jansdotter\n\nFödd 1716-10-02 Dalkarlshyttan, Lindesbergs landsförsamling\n\nGift med Henrik Klasson EKMAN 1739-07-01 Lindesbergs landsförsamling\n\nDöd 1795-11-07 Fallet, Storfors, Kroppa (S)\n\nNoteringar\nExciting progress have been made by fellow genealogists also regarding the ancestry of Maria. As was the case with Henrik, the \"Smedskivan (6) 2009\" is the origin of the new insights regarding Maria. The following is the current working hypothesis:\n\nMaria was born 1716-10-02 in Dalkarlshyttan, Lindesbergs landsförsamling (T). Her parents were Johan Kristoffersson (miller) and Karin Eriksdotter.\n\nSources:\n\nGID 2106.38.96300, [Örebro, Närke och Värmland] Lindesberg Landsförsamling, CI.4, Födde, 1708 - 1728, 0-0, Bild 109 av 168\n\nSmedskivan 2009 [Örjan Hedenberg]\n\nBackground 2007\n\nMaria married Henrik in Lindesbergs landsförsamling, in Västmanland, Sweden. It was common for couples to marry in the home parish of the bride, thus Lindesbergs landsförsamling probably was Maria's home parish at that time. Their first child, Anna Katarina, was born 28 September 1740 in Kroppa. What else is known?\n\nYear of birth is frequently recorded as 1719, although age given in her death record would indicate the year 1715, place unknown\nHer father's name most likely was Jan (Jean)\nHer mother's name could have been Anna, Katarina or Stina\nShe probably came to Kroppa after marrying Henrik\nPlace of residence in Lindesbergs landsförsamling at the time of her wedding could have been Bor (västra?)\nMaria died 7 November 1795 in Kroppa\nSurname alternatives: Jansdotter, Johansdotter, Jeansdotter"
+    },
+    "p_x1m7h6i6": {
+      "id": "p_x1m7h6i6",
+      "name": "Juni Mimmi",
+      "gender": "F",
+      "role": "Barn",
+      "born": "2022-12-09",
+      "bornParish": "Örebro",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "p_x1m7h6i6.jpg",
+      "history": ""
+    },
+    "p_b0ipc66i": {
+      "id": "p_b0ipc66i",
+      "name": "Matilda Kleber",
+      "gender": "",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "p_b0ipc66i.jpg",
+      "history": ""
+    },
+    "p_5luildj5": {
+      "id": "p_5luildj5",
+      "name": "Lovis Gertie",
+      "gender": "F",
+      "role": "Barn",
+      "born": "2025-04-03",
+      "bornParish": "Örebro",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "p_5luildj5.jpg",
+      "history": ""
     }
   },
   "parentsOf": {
@@ -2261,6 +2306,14 @@
     "p_nqxr123d8": [
       "p_0j5pylfd",
       "p_uknf1cu2"
+    ],
+    "p_x1m7h6i6": [
+      "p_z4rxd74pc",
+      "p_b0ipc66i"
+    ],
+    "p_5luildj5": [
+      "p_z4rxd74pc",
+      "p_b0ipc66i"
     ]
   },
   "childrenOf": {
@@ -2590,6 +2643,14 @@
     ],
     "p_uknf1cu2": [
       "p_nqxr123d8"
+    ],
+    "p_z4rxd74pc": [
+      "p_x1m7h6i6",
+      "p_5luildj5"
+    ],
+    "p_b0ipc66i": [
+      "p_x1m7h6i6",
+      "p_5luildj5"
     ]
   },
   "spousesOf": {
@@ -2854,6 +2915,12 @@
     ],
     "p_uknf1cu2": [
       "p_0j5pylfd"
+    ],
+    "p_z4rxd74pc": [
+      "p_b0ipc66i"
+    ],
+    "p_b0ipc66i": [
+      "p_z4rxd74pc"
     ]
   }
 }
