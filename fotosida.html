@@ -725,8 +725,8 @@ function renderRelationsSection(container, personId, parents, spouses, kids){
   relGrid.appendChild(makeRelationCard(
     "Föräldrar",
     [
-      parents[0] ? relationLink(parents[0], "Mor") : "<div class='small'>Mor: -</div>",
-      parents[1] ? relationLink(parents[1], "Far") : "<div class='small'>Far: -</div>"
+      parents[0] ? relationLink(parents[0], "Far") : "<div class='small'>Far: -</div>",
+      parents[1] ? relationLink(parents[1], "Mor") : "<div class='small'>Mor: -</div>"
     ]
   ));
 
