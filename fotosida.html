@@ -62,7 +62,7 @@ header h1{
 }
 
 #container{
-  max-width:1280px;
+  max-width:1320px;
   margin:0 auto;
   padding:24px 16px 40px;
 }
@@ -77,7 +77,7 @@ header h1{
 
 .hero{
   display:grid;
-  grid-template-columns:minmax(280px, 420px) 1fr;
+  grid-template-columns:minmax(280px, 440px) 1fr;
   gap:0;
 }
 
@@ -94,7 +94,7 @@ header h1{
 .heroPhoto img{
   width:100%;
   max-width:100%;
-  max-height:650px;
+  max-height:700px;
   object-fit:contain;
   display:block;
   background:white;
@@ -112,7 +112,7 @@ header h1{
 
 .meta{
   display:grid;
-  grid-template-columns:170px 1fr;
+  grid-template-columns:180px 1fr;
   gap:8px 12px;
   margin-top:10px;
 }
@@ -162,7 +162,7 @@ header h1{
 
 .gallery{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
   gap:16px;
 }
 
@@ -178,7 +178,7 @@ header h1{
 
 .thumb img{
   width:100%;
-  height:260px;
+  height:280px;
   object-fit:contain;
   background:white;
   display:block;
@@ -200,7 +200,7 @@ header h1{
 .thumbCaption{
   width:100%;
   min-height:90px;
-  max-height:140px;
+  max-height:150px;
   resize:vertical;
   overflow-y:auto;
   padding:10px;
@@ -302,6 +302,7 @@ header h1{
 .small{
   font-size:13px;
   color:#666;
+  line-height:1.5;
 }
 
 .loading{
@@ -402,7 +403,7 @@ header h1{
    ========================================================= */
 
 const DATA_PATH = "data/slaktdata.json";
-const EXTRA_IMAGE_VARIANTS = 8;
+const EXTRA_IMAGE_VARIANTS = 30; // används endast som fallback om photos saknas
 
 /* =========================================================
    GLOBALT
@@ -411,7 +412,7 @@ const EXTRA_IMAGE_VARIANTS = 8;
 let store = null;
 let originalStore = null;
 let currentId = null;
-let currentImageList = [];
+let currentImageList = []; // [{src:"...", caption:"...", sourceType:"photosObject|photosString|legacyCaption|auto"}]
 let unsavedChanges = false;
 
 /* =========================================================
@@ -491,8 +492,13 @@ function normalizeStore(){
     const p = store.people[id] || {};
     p.id = p.id || id;
 
-    if(!p.birthPlace && p.birthParish) p.birthPlace = p.bornParish;
-    if(!p.deathPlace && p.deathParish) p.deathPlace = p.diedParish;
+    if(!p.birthPlace && p.birthParish) p.birthPlace = p.birthParish;
+    if(!p.deathPlace && p.deathParish) p.deathPlace = p.deathParish;
+
+    if(!Array.isArray(p.photos)){
+      p.photos = [];
+    }
+
     if(!p.photoCaptions || typeof p.photoCaptions !== "object"){
       p.photoCaptions = {};
     }
@@ -508,8 +514,8 @@ function normalizeStore(){
 
     const arr = Array.isArray(store.parentsOf[cid]) ? store.parentsOf[cid] : [];
     store.parentsOf[cid] = [
-      arr[0] && store.people[arr[0]] ? arr[0] : null,
-      arr[1] && store.people[arr[1]] ? arr[1] : null
+      arr[0] && store.people[arr[0]] ? arr[0] : null, // Far
+      arr[1] && store.people[arr[1]] ? arr[1] : null  // Mor
     ];
   });
 
@@ -582,9 +588,9 @@ async function renderPersonPage(personId){
   container.innerHTML = "";
 
   const imageBase = sanitizeNameForImage(person.name || "");
-  currentImageList = await collectExistingImages(imageBase);
+  currentImageList = await getPersonImages(person);
 
-  const heroImage = currentImageList.length ? currentImageList[0] : "images/default.jpg";
+  const heroImage = currentImageList.length ? currentImageList[0].src : "images/default.jpg";
 
   const age = calculateAge(person);
   const parents = store.parentsOf[personId] || [null, null];
@@ -618,10 +624,10 @@ async function renderPersonPage(personId){
           <div class="metaValue">${escapeHtml(age || "-")}</div>
 
           <div class="metaLabel">Födelseförsamling</div>
-          <div class="metaValue">${escapeHtml(person.birthPlace || person.bornParish || "-")}</div>
+          <div class="metaValue">${escapeHtml(person.birthPlace || person.birthParish || "-")}</div>
 
           <div class="metaLabel">Dödsförsamling</div>
-          <div class="metaValue">${escapeHtml(person.deathPlace || person.diedParish || "-")}</div>
+          <div class="metaValue">${escapeHtml(person.deathPlace || person.deathParish || "-")}</div>
 
           <div class="metaLabel">Yrke</div>
           <div class="metaValue">${escapeHtml(person.job || "-")}</div>
@@ -665,25 +671,24 @@ function renderGallerySection(container, person, imageBase){
     grid.className = "gallery";
     grid.id = "galleryGrid";
 
-    currentImageList.forEach((src, index)=>{
+    currentImageList.forEach((imgObj, index)=>{
       const box = document.createElement("div");
       box.className = "thumb";
 
-      const captionKey = getCaptionKey(index);
-      const captionValue = getPhotoCaption(person, index);
+      const sourceLabel = getImageSourceLabel(imgObj.sourceType);
 
       box.innerHTML = `
-        <img src="${src}" alt="${escapeHtml(person.name || "")} - bild ${index + 1}">
+        <img src="${imgObj.src}" alt="${escapeHtml(person.name || "")} - bild ${index + 1}">
         <div class="thumbCaptionWrap">
           <div class="thumbCaptionLabel">
-            Bild ${index + 1} — nyckel i JSON: <strong>${escapeHtml(captionKey)}</strong>
+            Bild ${index + 1} — källa: <strong>${escapeHtml(sourceLabel)}</strong>
           </div>
           <textarea
             class="thumbCaption"
             id="caption_${index}"
             data-index="${index}"
             placeholder="Skriv bildtext här...&#10;Flera rader går bra."
-          >${escapeHtml(captionValue)}</textarea>
+          >${escapeHtml(imgObj.caption || "")}</textarea>
           <div class="captionButtons">
             <button onclick="saveSingleCaption(${index})">Spara denna bildtext</button>
             <button onclick="clearSingleCaption(${index})">Töm</button>
@@ -751,24 +756,73 @@ function renderRelationsSection(container, personId, parents, spouses, kids){
 function renderInfoSection(container, person, imageBase){
   const infoSection = document.createElement("div");
   infoSection.className = "section";
-  infoSection.innerHTML = `
-    <h3>Bildmatchning</h3>
-    <div class="small">
-      Denna sida försöker automatiskt hitta bilder baserat på personens namn.<br><br>
-      <strong>Namn:</strong> ${escapeHtml(person.name || "")}<br>
-      <strong>Bildbas:</strong> ${escapeHtml(imageBase)}<br><br>
-      Den provar bland annat:<br>
-      images/${escapeHtml(imageBase)}.jpg<br>
-      images/${escapeHtml(imageBase)}.jpeg<br>
-      images/${escapeHtml(imageBase)}.png<br>
-      images/${escapeHtml(imageBase)}_1.jpg ... _${EXTRA_IMAGE_VARIANTS}.jpg<br><br>
-      <strong>Bildtext-nycklar:</strong><br>
-      första bilden = <strong>main</strong><br>
-      andra bilden = <strong>1</strong><br>
-      tredje bilden = <strong>2</strong><br>
-      fjärde bilden = <strong>3</strong> osv.
-    </div>
-  `;
+
+  const usesPhotoObjects = person.photos.some(item => item && typeof item === "object" && !Array.isArray(item) && item.src);
+  const usesPhotoStrings = person.photos.some(item => typeof item === "string");
+
+  if(usesPhotoObjects){
+    const photoLines = person.photos
+      .map(p => {
+        if(p && typeof p === "object" && p.src){
+          return escapeHtml(p.src);
+        }
+        return "";
+      })
+      .filter(Boolean)
+      .join("<br>");
+
+    infoSection.innerHTML = `
+      <h3>Bildkälla</h3>
+      <div class="small">
+        Denna person använder <strong>den rekommenderade huvudmodellen</strong> i <strong>slaktdata.json</strong>:<br><br>
+        <strong>photos = lista av objekt med src + caption</strong><br><br>
+        Fördelar:
+        <br>✔ obegränsat antal bilder
+        <br>✔ exakt ordning
+        <br>✔ bildtexten följer rätt bild
+        <br>✔ inga problem om du byter ordning på bilderna
+        <br><br>
+        <strong>Bilder i ordning:</strong><br>
+        ${photoLines}
+      </div>
+    `;
+  }else if(usesPhotoStrings){
+    const photoLines = person.photos
+      .map(p => typeof p === "string" ? escapeHtml(p) : "")
+      .filter(Boolean)
+      .join("<br>");
+
+    infoSection.innerHTML = `
+      <h3>Bildkälla</h3>
+      <div class="small">
+        Denna person använder <strong>photos-lista</strong> i <strong>slaktdata.json</strong>, men med äldre strängmodell.<br><br>
+        Det fungerar bra, men den bästa modellen är istället:
+        <br><strong>{ "src": "...", "caption": "..." }</strong>
+        <br><br>
+        <strong>Bilder i ordning:</strong><br>
+        ${photoLines}
+        <br><br>
+        <strong>Obs:</strong> När du redigerar bildtexter här och laddar ner JSON kommer denna sida automatiskt att uppgradera personen till den nya bättre modellen.
+      </div>
+    `;
+  }else{
+    infoSection.innerHTML = `
+      <h3>Bildmatchning</h3>
+      <div class="small">
+        Denna sida använder automatisk namnmatchning eftersom <strong>photos</strong> saknas eller är tom för personen.<br><br>
+        <strong>Namn:</strong> ${escapeHtml(person.name || "")}<br>
+        <strong>Bildbas:</strong> ${escapeHtml(imageBase)}<br><br>
+        Den provar bland annat:<br>
+        images/${escapeHtml(imageBase)}.jpg<br>
+        images/${escapeHtml(imageBase)}.jpeg<br>
+        images/${escapeHtml(imageBase)}.png<br>
+        images/${escapeHtml(imageBase)}_1.jpg ... _${EXTRA_IMAGE_VARIANTS}.jpg<br><br>
+        <strong>Tips:</strong> Lägg till en <strong>photos</strong>-lista i slaktdata.json för obegränsat antal bilder och exakt ordning.<br>
+        När du redigerar bildtexter här och laddar ner JSON kan du sedan själv lägga in bilderna som photos-lista.
+      </div>
+    `;
+  }
+
   container.appendChild(infoSection);
 }
 
@@ -801,151 +855,63 @@ function relationLink(id, prefix=""){
 }
 
 /* =========================================================
-   BILDTEXTER - REDIGERING
+   BILDER - HUVUDLOGIK
    ========================================================= */
 
-function getCaptionKey(imageIndex){
-  return imageIndex === 0 ? "main" : String(imageIndex);
-}
+async function getPersonImages(person){
+  if(!person) return [];
 
-function getPhotoCaption(person, imageIndex){
-  const captions = person && person.photoCaptions ? person.photoCaptions : null;
-  if(!captions) return "";
+  // 1) Huvudlösning: photos-lista
+  if(Array.isArray(person.photos) && person.photos.length){
+    const existing = [];
 
-  const key = getCaptionKey(imageIndex);
-  return captions[key] || "";
-}
+    for(const item of person.photos){
+      // Ny rekommenderad modell: {src, caption}
+      if(item && typeof item === "object" && !Array.isArray(item) && typeof item.src === "string"){
+        const src = item.src.trim();
+        if(!src) continue;
 
-function ensurePhotoCaptionsObject(person){
-  if(!person.photoCaptions || typeof person.photoCaptions !== "object"){
-    person.photoCaptions = {};
-  }
-}
+        const ok = await imageExists(src);
+        if(ok){
+          existing.push({
+            src,
+            caption: typeof item.caption === "string" ? item.caption : "",
+            sourceType: "photosObject"
+          });
+        }
+        continue;
+      }
 
-function saveSingleCaption(index){
-  const person = getPerson(currentId);
-  if(!person) return;
+      // Äldre modell: "images/fil.jpg"
+      if(typeof item === "string"){
+        const src = item.trim();
+        if(!src) continue;
 
-  ensurePhotoCaptionsObject(person);
-
-  const textarea = document.getElementById("caption_" + index);
-  if(!textarea) return;
-
-  const key = getCaptionKey(index);
-  const value = textarea.value.trim();
-
-  if(value){
-    person.photoCaptions[key] = value;
-  }else{
-    delete person.photoCaptions[key];
-  }
-
-  unsavedChanges = true;
-  updateStatus("Bildtext sparad i minnet för " + (person.name || currentId) + ". Ladda ner JSON för permanent sparning.");
-  showSuccess("Bildtext för <strong>bild " + (index + 1) + "</strong> sparad i sidan. Klicka sedan på <strong>Ladda ner uppdaterad slaktdata.json</strong>.");
-}
-
-function clearSingleCaption(index){
-  const textarea = document.getElementById("caption_" + index);
-  if(!textarea) return;
-  textarea.value = "";
-  saveSingleCaption(index);
-}
-
-function saveCurrentPersonCaptions(){
-  const person = getPerson(currentId);
-  if(!person) return;
-
-  ensurePhotoCaptionsObject(person);
-
-  for(let i = 0; i < currentImageList.length; i++){
-    const textarea = document.getElementById("caption_" + i);
-    if(!textarea) continue;
-
-    const key = getCaptionKey(i);
-    const value = textarea.value.trim();
-
-    if(value){
-      person.photoCaptions[key] = value;
-    }else{
-      delete person.photoCaptions[key];
+        const ok = await imageExists(src);
+        if(ok){
+          const legacyCaption = getLegacyCaption(person, existing.length);
+          existing.push({
+            src,
+            caption: legacyCaption,
+            sourceType: "photosString"
+          });
+        }
+      }
     }
+
+    return existing;
   }
 
-  unsavedChanges = true;
-  updateStatus("Alla bildtexter för aktuell person sparade i minnet. Ladda ner JSON för permanent sparning.");
-  showSuccess("Alla bildtexter för <strong>" + escapeHtml(person.name || currentId) + "</strong> sparades i sidan. Klicka nu på <strong>Ladda ner uppdaterad slaktdata.json</strong>.");
+  // 2) Fallback: automatisk namnmatchning
+  const imageBase = sanitizeNameForImage(person.name || "");
+  const found = await collectExistingImages(imageBase);
+
+  return found.map((src, index)=>({
+    src,
+    caption: getLegacyCaption(person, index),
+    sourceType: "auto"
+  }));
 }
-
-function resetCurrentPersonCaptions(){
-  if(!originalStore || !currentId) return;
-
-  const originalPerson = originalStore.people && originalStore.people[currentId] ? originalStore.people[currentId] : null;
-  const currentPerson = getPerson(currentId);
-
-  if(!currentPerson) return;
-
-  currentPerson.photoCaptions = deepClone((originalPerson && originalPerson.photoCaptions) ? originalPerson.photoCaptions : {});
-
-  for(let i = 0; i < currentImageList.length; i++){
-    const textarea = document.getElementById("caption_" + i);
-    if(!textarea) continue;
-
-    const key = getCaptionKey(i);
-    textarea.value = currentPerson.photoCaptions[key] || "";
-  }
-
-  unsavedChanges = true;
-  updateStatus("Bildtexter för aktuell person återställda till ursprungligt innehåll från inläst JSON.");
-  showSuccess("Bildtexterna återställdes för aktuell person. Om du vill behålla återställningen: ladda ner uppdaterad JSON.");
-}
-
-/* =========================================================
-   EXPORT / NEDLADDNING
-   ========================================================= */
-
-function downloadUpdatedJson(){
-  if(!store){
-    showError("Ingen data finns att ladda ner.");
-    return;
-  }
-
-  saveCurrentPersonCaptions();
-
-  const exportData = {
-    people: store.people,
-    parentsOf: store.parentsOf,
-    spousesOf: store.spousesOf,
-    currentId: store.currentId || currentId
-  };
-
-  const jsonText = JSON.stringify(exportData, null, 2);
-  const blob = new Blob([jsonText], { type: "application/json;charset=utf-8" });
-  const url = URL.createObjectURL(blob);
-
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "slaktdata.json";
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-
-  setTimeout(()=> URL.revokeObjectURL(url), 1000);
-
-  unsavedChanges = false;
-  updateStatus("Uppdaterad slaktdata.json nedladdad. Ersätt data/slaktdata.json på GitHub med den nya filen.");
-  showSuccess(
-    "Den uppdaterade filen <strong>slaktdata.json</strong> har laddats ner.<br><br>" +
-    "Nästa steg:<br>" +
-    "1. Öppna din GitHub-repo<br>" +
-    "2. Gå till mappen <strong>data</strong><br>" +
-    "3. Ersätt filen <strong>slaktdata.json</strong> med den nedladdade versionen"
-  );
-}
-
-/* =========================================================
-   BILDER
-   ========================================================= */
 
 async function collectExistingImages(baseName){
   const candidates = [];
@@ -982,6 +948,141 @@ function imageExists(src){
     const separator = src.includes("?") ? "&" : "?";
     img.src = src + separator + "v=" + Date.now();
   });
+}
+
+function getImageSourceLabel(sourceType){
+  switch(sourceType){
+    case "photosObject": return "photos-objekt (rekommenderad)";
+    case "photosString": return "photos-sträng (äldre modell)";
+    case "auto": return "automatisk namnmatchning";
+    default: return "okänd";
+  }
+}
+
+/* =========================================================
+   BILDTEXTER - NY HUVUDMODELL
+   ========================================================= */
+
+function getLegacyCaption(person, imageIndex){
+  const captions = person && person.photoCaptions ? person.photoCaptions : null;
+  if(!captions) return "";
+
+  if(imageIndex === 0){
+    return captions.main || "";
+  }
+
+  return captions[String(imageIndex)] || "";
+}
+
+function saveSingleCaption(index){
+  const textarea = document.getElementById("caption_" + index);
+  if(!textarea) return;
+
+  const value = textarea.value.trim();
+
+  if(!currentImageList[index]) return;
+  currentImageList[index].caption = value;
+
+  unsavedChanges = true;
+  updateStatus("Bildtext sparad i minnet för aktuell bild. Ladda ner JSON för permanent sparning.");
+  showSuccess("Bildtext för <strong>bild " + (index + 1) + "</strong> sparad i sidan. Klicka sedan på <strong>Ladda ner uppdaterad slaktdata.json</strong>.");
+}
+
+function clearSingleCaption(index){
+  const textarea = document.getElementById("caption_" + index);
+  if(!textarea) return;
+
+  textarea.value = "";
+  saveSingleCaption(index);
+}
+
+function saveCurrentPersonCaptions(){
+  const person = getPerson(currentId);
+  if(!person) return;
+
+  // Viktigt: vi uppgraderar alltid till den bästa modellen: photos = [{src, caption}, ...]
+  person.photos = currentImageList.map(img => ({
+    src: img.src,
+    caption: (img.caption || "").trim()
+  }));
+
+  // Äldre captions rensas bort för att undvika dubbla system
+  if(person.photoCaptions){
+    delete person.photoCaptions;
+  }
+
+  unsavedChanges = true;
+  updateStatus("Alla bildtexter för aktuell person sparade i minnet enligt nya photos-modellen.");
+  showSuccess("Alla bildtexter för <strong>" + escapeHtml(person.name || currentId) + "</strong> sparades i den nya rekommenderade <strong>photos</strong>-modellen. Klicka nu på <strong>Ladda ner uppdaterad slaktdata.json</strong>.");
+}
+
+function resetCurrentPersonCaptions(){
+  if(!originalStore || !currentId) return;
+
+  const originalPerson = originalStore.people && originalStore.people[currentId] ? originalStore.people[currentId] : null;
+  const currentPerson = getPerson(currentId);
+
+  if(!currentPerson) return;
+
+  if(originalPerson){
+    currentPerson.photos = deepClone(Array.isArray(originalPerson.photos) ? originalPerson.photos : []);
+    currentPerson.photoCaptions = deepClone(originalPerson.photoCaptions || {});
+  }else{
+    currentPerson.photos = [];
+    currentPerson.photoCaptions = {};
+  }
+
+  renderPersonPage(currentId).then(()=>{
+    unsavedChanges = true;
+    updateStatus("Bildtexter för aktuell person återställda till ursprungligt innehåll från inläst JSON.");
+    showSuccess("Bildtexterna återställdes för aktuell person. Om du vill behålla återställningen: ladda ner uppdaterad JSON.");
+  });
+}
+
+/* =========================================================
+   EXPORT / NEDLADDNING
+   ========================================================= */
+
+function downloadUpdatedJson(){
+  if(!store){
+    showError("Ingen data finns att ladda ner.");
+    return;
+  }
+
+  // Spara alltid aktuell persons bildtexter innan export
+  saveCurrentPersonCaptions();
+
+  const exportData = {
+    people: store.people,
+    parentsOf: store.parentsOf,
+    spousesOf: store.spousesOf,
+    currentId: store.currentId || currentId
+  };
+
+  const jsonText = JSON.stringify(exportData, null, 2);
+  const blob = new Blob([jsonText], { type: "application/json;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "slaktdata.json";
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+
+  setTimeout(()=> URL.revokeObjectURL(url), 1000);
+
+  unsavedChanges = false;
+  updateStatus("Uppdaterad slaktdata.json nedladdad. Ersätt data/slaktdata.json på GitHub med den nya filen.");
+  showSuccess(
+    "Den uppdaterade filen <strong>slaktdata.json</strong> har laddats ner.<br><br>" +
+    "Nästa steg:<br>" +
+    "1. Öppna din GitHub-repo<br>" +
+    "2. Gå till mappen <strong>data</strong><br>" +
+    "3. Ersätt filen <strong>slaktdata.json</strong> med den nedladdade versionen<br><br>" +
+    "<strong>Obs:</strong> Denna sida sparar nu bilddata i den nya rekommenderade modellen:<br>" +
+    "<code>photos: [{ src, caption }]</code>"
+  );
 }
 
 /* =========================================================
