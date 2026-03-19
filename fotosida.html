@@ -323,10 +323,10 @@ async function init(){
   document.getElementById("backToPerson").href = "person.html?id=" + encodeURIComponent(currentId);
 
   try{
-    const res = await fetch("slaktdata.json", { cache: "no-store" });
+    const res = await fetch("data/slaktdata.json", { cache: "no-store" });
 
     if(!res.ok){
-      throw new Error("Kunde inte läsa slaktdata.json (HTTP " + res.status + ")");
+      throw new Error("Kunde inte läsa data/slaktdata.json (HTTP " + res.status + ")");
     }
 
     const data = await res.json();
@@ -350,10 +350,10 @@ async function init(){
   }catch(err){
     console.error(err);
     showError(
-      "Kunde inte läsa <strong>slaktdata.json</strong> automatiskt.<br><br>" +
-      "Kontrollera att filen ligger i <strong>samma mapp</strong> som <strong>fotosida.html</strong> på GitHub."
-    );
-  }
+  "Kunde inte läsa <strong>data/slaktdata.json</strong> automatiskt.<br><br>" +
+  "Kontrollera att filen finns i mappen <strong>data</strong> på GitHub."
+	);
+	}
 }
 
 /* =========================================================
