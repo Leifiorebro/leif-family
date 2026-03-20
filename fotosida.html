@@ -6,358 +6,1179 @@
 <title>Fotosida</title>
 
 <style>
+*{
+  box-sizing:border-box;
+}
+
 body{
-font-family:Arial,Helvetica,sans-serif;
-margin:0;
-background:#f5f5f5;
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f5f5f5;
+  color:#222;
 }
 
 header{
-background:white;
-border-bottom:1px solid #ccc;
-padding:12px 18px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-flex-wrap:wrap;
+  background:white;
+  border-bottom:1px solid #ddd;
+  padding:14px 18px;
+  position:sticky;
+  top:0;
+  z-index:20;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+header h1{
+  margin:0;
+  font-size:24px;
+  color:#2c3e50;
+}
+
+.navButtons{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.navButtons a,
+.navButtons button{
+  display:inline-block;
+  padding:8px 12px;
+  border:1px solid #bbb;
+  background:white;
+  border-radius:8px;
+  cursor:pointer;
+  text-decoration:none;
+  color:#222;
+  font-size:14px;
+}
+
+.navButtons a:hover,
+.navButtons button:hover{
+  background:#f0f0f0;
 }
 
 #container{
-max-width:1200px;
-margin:auto;
-padding:20px;
+  max-width:1320px;
+  margin:0 auto;
+  padding:24px 16px 40px;
+}
+
+.card{
+  background:white;
+  border-radius:14px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.12);
+  overflow:hidden;
+  margin-bottom:24px;
+}
+
+.hero{
+  display:grid;
+  grid-template-columns:minmax(280px, 440px) 1fr;
+  gap:0;
+}
+
+.heroPhoto{
+  background:#fff;
+  border-right:1px solid #eee;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:420px;
+  padding:14px;
+}
+
+.heroPhoto img{
+  width:100%;
+  max-width:100%;
+  max-height:700px;
+  object-fit:contain;
+  display:block;
+  background:white;
+}
+
+.heroInfo{
+  padding:24px 24px 18px;
+}
+
+.heroInfo h2{
+  margin:0 0 12px;
+  font-size:30px;
+  color:#2c3e50;
+}
+
+.meta{
+  display:grid;
+  grid-template-columns:180px 1fr;
+  gap:8px 12px;
+  margin-top:10px;
+}
+
+.metaLabel{
+  font-weight:bold;
+  color:#444;
+}
+
+.metaValue{
+  color:#222;
 }
 
 .section{
-background:white;
-padding:18px;
-border-radius:10px;
-margin-bottom:20px;
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
+  background:white;
+  border-radius:14px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+  padding:18px;
+  margin-bottom:22px;
+}
+
+.section h3{
+  margin:0 0 14px;
+  font-size:22px;
+  color:#2c3e50;
+}
+
+.sectionToolbar{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin:0 0 14px;
+}
+
+.sectionToolbar button{
+  padding:8px 12px;
+  border:1px solid #bbb;
+  background:white;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:14px;
+}
+
+.sectionToolbar button:hover{
+  background:#f0f0f0;
 }
 
 .gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:16px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:16px;
 }
 
 .thumb{
-border:1px solid #ddd;
-border-radius:8px;
-background:white;
-padding:10px;
-display:flex;
-flex-direction:column;
+  background:white;
+  border:1px solid #eee;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 2px 8px rgba(0,0,0,0.05);
+  display:flex;
+  flex-direction:column;
 }
 
 .thumb img{
-width:100%;
-height:240px;
-object-fit:contain;
-background:#fff;
-border-bottom:1px solid #eee;
+  width:100%;
+  height:280px;
+  object-fit:contain;
+  background:white;
+  display:block;
 }
 
-textarea{
-width:100%;
-min-height:70px;
-margin-top:6px;
+.thumbCaptionWrap{
+  border-top:1px solid #f0f0f0;
+  background:#fafafa;
+  padding:10px;
 }
 
-.controls{
-display:flex;
-gap:6px;
-flex-wrap:wrap;
-margin-top:6px;
+.thumbCaptionLabel{
+  font-size:12px;
+  font-weight:bold;
+  color:#555;
+  margin-bottom:6px;
 }
 
-button{
-padding:6px 10px;
-cursor:pointer;
-border:1px solid #aaa;
-border-radius:6px;
-background:white;
+.thumbCaption{
+  width:100%;
+  min-height:90px;
+  max-height:150px;
+  resize:vertical;
+  overflow-y:auto;
+  padding:10px;
+  font-size:13px;
+  line-height:1.45;
+  border:1px solid #d8d8d8;
+  border-radius:8px;
+  font-family:Arial, Helvetica, sans-serif;
+  background:white;
 }
 
-button:hover{
-background:#eee;
+.thumbCaption:focus{
+  outline:none;
+  border-color:#6ea8d6;
+  box-shadow:0 0 0 3px rgba(110,168,214,0.15);
 }
 
-.dragging{
-opacity:0.5;
+.captionButtons{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:8px;
 }
 
-.addBox{
-display:flex;
-gap:10px;
-flex-wrap:wrap;
-margin-top:10px;
+.captionButtons button{
+  padding:6px 10px;
+  border:1px solid #bbb;
+  background:white;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:12px;
 }
 
-.addBox input{
-flex:1;
-padding:6px;
+.captionButtons button:hover{
+  background:#f0f0f0;
+}
+
+.relGrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+  gap:12px;
+}
+
+.relCard{
+  border:1px solid #eee;
+  border-radius:10px;
+  padding:12px;
+  background:#fafafa;
+}
+
+.relCard h4{
+  margin:0 0 8px;
+  font-size:16px;
+  color:#444;
+}
+
+.relList{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.relLink{
+  display:inline-block;
+  text-decoration:none;
+  color:#1d6fa5;
+  padding:6px 8px;
+  border-radius:8px;
+}
+
+.relLink:hover{
+  background:#eef7fd;
 }
 
 .notice{
-background:#fff3cd;
-padding:10px;
-border-radius:6px;
-border:1px solid #ffeeba;
+  background:#fff8e1;
+  border:1px solid #f0d68a;
+  color:#6b5500;
+  padding:12px 14px;
+  border-radius:10px;
+}
+
+.error{
+  background:#ffecec;
+  border:1px solid #f0b3b3;
+  color:#8a1f1f;
+  padding:12px 14px;
+  border-radius:10px;
+}
+
+.success{
+  background:#e9f8ec;
+  border:1px solid #9ed7aa;
+  color:#1f6b2a;
+  padding:12px 14px;
+  border-radius:10px;
+}
+
+.small{
+  font-size:13px;
+  color:#666;
+  line-height:1.5;
+}
+
+.loading{
+  text-align:center;
+  padding:40px 10px;
+  font-size:18px;
+  color:#666;
+}
+
+.statusBar{
+  position:sticky;
+  bottom:0;
+  z-index:15;
+  background:#ffffffee;
+  backdrop-filter:blur(6px);
+  border-top:1px solid #ddd;
+  padding:10px 16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.statusText{
+  font-size:14px;
+  color:#444;
+}
+
+.statusActions{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.statusActions button{
+  padding:8px 12px;
+  border:1px solid #bbb;
+  background:white;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:14px;
+}
+
+.statusActions button:hover{
+  background:#f0f0f0;
+}
+
+@media (max-width:900px){
+  .hero{
+    grid-template-columns:1fr;
+  }
+
+  .heroPhoto{
+    border-right:none;
+    border-bottom:1px solid #eee;
+    min-height:280px;
+  }
+
+  .meta{
+    grid-template-columns:1fr;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+  }
 }
 </style>
 </head>
-
 <body>
 
 <header>
-<h2>Fotosida</h2>
-<div>
-<a id="personLink">Personblad</a>
-<button onclick="downloadJSON()">Ladda ner slaktdata.json</button>
-</div>
+  <h1>Fotosida</h1>
+  <div class="navButtons">
+    <a id="backToPerson" href="#">👤 Personblad</a>
+    <a id="backToTree" href="index.html">🌳 Släktträd</a>
+    <button onclick="reloadPage()">↻ Ladda om</button>
+  </div>
 </header>
 
 <div id="container">
-
-<div id="gallerySection" class="section">
-<h3>Fotogalleri</h3>
-
-<div id="gallery" class="gallery"></div>
-
-<div class="addBox">
-<input id="newImageSrc" placeholder="images/filnamn.jpg">
-<input id="newImageCaption" placeholder="Bildtext">
-<button onclick="addImage()">Lägg till bild</button>
+  <div id="messageArea"></div>
+  <div id="content" class="loading">Laddar persondata...</div>
 </div>
 
-</div>
-
+<div class="statusBar">
+  <div class="statusText" id="statusText">Inga ändringar ännu.</div>
+  <div class="statusActions">
+    <button onclick="saveCurrentPersonCaptions()">💾 Spara bildtexter (lokalt i sidan)</button>
+    <button onclick="resetCurrentPersonCaptions()">↺ Återställ denna persons bildtexter</button>
+    <button onclick="downloadUpdatedJson()">⬇ Ladda ner uppdaterad slaktdata.json</button>
+  </div>
 </div>
 
 <script>
+/* =========================================================
+   KONFIGURATION
+   ========================================================= */
 
-const DATA="data/slaktdata.json"
+const DATA_PATH = "data/slaktdata.json";
+const EXTRA_IMAGE_VARIANTS = 30; // används endast som fallback om photos saknas
 
-let store
-let person
-let currentId
-let images=[]
+/* =========================================================
+   GLOBALT
+   ========================================================= */
 
-init()
+let store = null;
+let originalStore = null;
+let currentId = null;
+let currentImageList = []; // [{src:"...", caption:"...", sourceType:"photosObject|photosString|legacyCaption|auto"}]
+let unsavedChanges = false;
+
+/* =========================================================
+   START
+   ========================================================= */
+
+window.addEventListener("DOMContentLoaded", init);
 
 async function init(){
+  const params = new URLSearchParams(window.location.search);
+  currentId = params.get("id");
 
-const params=new URLSearchParams(location.search)
-currentId=params.get("id")
+  if(!currentId){
+    showError("Ingen person angiven i länken. Öppna sidan som <strong>fotosida.html?id=PERSON_ID</strong>.");
+    return;
+  }
 
-document.getElementById("personLink").href="person.html?id="+currentId
+  document.getElementById("backToPerson").href = "person.html?id=" + encodeURIComponent(currentId);
 
-const res=await fetch(DATA+"?v="+Date.now())
-const data=await res.json()
+  try{
+    const res = await fetch(DATA_PATH, { cache: "no-store" });
 
-store=data
-person=store.people[currentId]
+    if(!res.ok){
+      throw new Error("Kunde inte läsa " + DATA_PATH + " (HTTP " + res.status + ")");
+    }
 
-if(!person.photos)person.photos=[]
+    const data = await res.json();
 
-loadImages()
-renderGallery()
+    store = {
+      people: data.people || {},
+      parentsOf: data.parentsOf || {},
+      spousesOf: data.spousesOf || {},
+      currentId: data.currentId || null
+    };
 
+    originalStore = deepClone(store);
+
+    normalizeStore();
+
+    if(!store.people[currentId]){
+      showError("Personen med id <strong>" + escapeHtml(currentId) + "</strong> hittades inte i <strong>" + escapeHtml(DATA_PATH) + "</strong>.");
+      return;
+    }
+
+    await renderPersonPage(currentId);
+    updateStatus("Data inläst från " + DATA_PATH + ". Redigera bildtexter direkt under bilderna.");
+
+  }catch(err){
+    console.error(err);
+    showError(
+      "Kunde inte läsa <strong>" + escapeHtml(DATA_PATH) + "</strong> automatiskt.<br><br>" +
+      "Kontrollera att filen finns i mappen <strong>data</strong> på GitHub."
+    );
+  }
 }
 
-async function loadImages(){
+window.addEventListener("beforeunload", function(e){
+  if(!unsavedChanges) return;
+  e.preventDefault();
+  e.returnValue = "";
+});
 
-images=[]
+/* =========================================================
+   NORMALISERING / DATA
+   ========================================================= */
 
-if(person.photos.length){
+function normalizeStore(){
+  if(!store || typeof store !== "object"){
+    store = { people:{}, parentsOf:{}, spousesOf:{}, currentId:null };
+  }
 
-for(const p of person.photos){
+  store.people = store.people || {};
+  store.parentsOf = store.parentsOf || {};
+  store.spousesOf = store.spousesOf || {};
 
-if(typeof p==="string"){
+  Object.keys(store.people).forEach(id=>{
+    const p = store.people[id] || {};
+    p.id = p.id || id;
 
-images.push({src:p,caption:""})
+    if(!p.birthPlace && p.birthParish) p.birthPlace = p.birthParish;
+    if(!p.deathPlace && p.deathParish) p.deathPlace = p.deathParish;
 
-}else{
+    if(!Array.isArray(p.photos)){
+      p.photos = [];
+    }
 
-images.push({src:p.src,caption:p.caption||""})
+    if(!p.photoCaptions || typeof p.photoCaptions !== "object"){
+      p.photoCaptions = {};
+    }
 
+    store.people[id] = p;
+  });
+
+  Object.keys(store.parentsOf).forEach(cid=>{
+    if(!store.people[cid]){
+      delete store.parentsOf[cid];
+      return;
+    }
+
+    const arr = Array.isArray(store.parentsOf[cid]) ? store.parentsOf[cid] : [];
+    store.parentsOf[cid] = [
+      arr[0] && store.people[arr[0]] ? arr[0] : null, // Far
+      arr[1] && store.people[arr[1]] ? arr[1] : null  // Mor
+    ];
+  });
+
+  const cleaned = {};
+  Object.keys(store.people).forEach(id=> cleaned[id] = []);
+
+  Object.keys(store.spousesOf).forEach(id=>{
+    if(!store.people[id]) return;
+    const list = Array.isArray(store.spousesOf[id]) ? store.spousesOf[id] : [];
+
+    list.forEach(sid=>{
+      if(!store.people[sid]) return;
+      if(id === sid) return;
+
+      if(!cleaned[id].includes(sid)) cleaned[id].push(sid);
+      if(!cleaned[sid].includes(id)) cleaned[sid].push(id);
+    });
+  });
+
+  store.spousesOf = cleaned;
 }
 
+function getPerson(id){
+  return store && store.people ? store.people[id] : null;
 }
 
-}else{
-
-// fallback
-
-const base=sanitize(person.name)
-const test=[".jpg",".jpeg",".png"]
-
-for(const ext of test){
-
-const src="images/"+base+ext
-if(await imageExists(src)){
-images.push({src,caption:""})
+function getDisplayName(id){
+  const p = getPerson(id);
+  return p && p.name ? p.name : "(saknas)";
 }
 
+function childrenOf(pid){
+  const arr = [];
+
+  Object.entries(store.parentsOf).forEach(([cid, parents])=>{
+    if(Array.isArray(parents) && parents.includes(pid)){
+      arr.push(cid);
+    }
+  });
+
+  arr.sort((a,b)=>{
+    const pa = getPerson(a) || {};
+    const pb = getPerson(b) || {};
+
+    const ya = extractYear(pa.born) || 9999;
+    const yb = extractYear(pb.born) || 9999;
+
+    if(ya !== yb) return ya - yb;
+
+    return (pa.name || "").localeCompare((pb.name || ""), "sv", { sensitivity:"base" });
+  });
+
+  return arr;
 }
 
+/* =========================================================
+   RENDER
+   ========================================================= */
+
+async function renderPersonPage(personId){
+  const person = getPerson(personId);
+
+  if(!person){
+    showError("Personen kunde inte hittas.");
+    return;
+  }
+
+  const container = document.getElementById("content");
+  container.className = "";
+  container.innerHTML = "";
+
+  const imageBase = sanitizeNameForImage(person.name || "");
+  currentImageList = await getPersonImages(person);
+
+  const heroImage = currentImageList.length ? currentImageList[0].src : "images/default.jpg";
+
+  const age = calculateAge(person);
+  const parents = store.parentsOf[personId] || [null, null];
+  const spouses = (store.spousesOf[personId] || []).slice().sort((a,b)=>
+    getDisplayName(a).localeCompare(getDisplayName(b), "sv", { sensitivity:"base" })
+  );
+  const kids = childrenOf(personId);
+
+  const card = document.createElement("div");
+  card.className = "card";
+
+  card.innerHTML = `
+    <div class="hero">
+      <div class="heroPhoto">
+        <img src="${heroImage}" alt="${escapeHtml(person.name || "")}">
+      </div>
+      <div class="heroInfo">
+        <h2>${escapeHtml(person.name || "Namnlös person")}</h2>
+
+        <div class="meta">
+          <div class="metaLabel">ID</div>
+          <div class="metaValue">${escapeHtml(person.id || personId)}</div>
+
+          <div class="metaLabel">Född</div>
+          <div class="metaValue">${escapeHtml(person.born || "-")}</div>
+
+          <div class="metaLabel">Död</div>
+          <div class="metaValue">${escapeHtml(person.died || "-")}</div>
+
+          <div class="metaLabel">Ålder</div>
+          <div class="metaValue">${escapeHtml(age || "-")}</div>
+
+          <div class="metaLabel">Födelseförsamling</div>
+          <div class="metaValue">${escapeHtml(person.birthPlace || person.birthParish || "-")}</div>
+
+          <div class="metaLabel">Dödsförsamling</div>
+          <div class="metaValue">${escapeHtml(person.deathPlace || person.deathParish || "-")}</div>
+
+          <div class="metaLabel">Yrke</div>
+          <div class="metaValue">${escapeHtml(person.job || "-")}</div>
+        </div>
+
+        <div style="margin-top:18px;" class="navButtons">
+          <a href="person.html?id=${encodeURIComponent(personId)}">👤 Öppna personblad</a>
+          <a href="index.html">🌳 Till släktträdet</a>
+        </div>
+      </div>
+    </div>
+  `;
+
+  container.appendChild(card);
+
+  renderGallerySection(container, person, imageBase);
+  renderRelationsSection(container, personId, parents, spouses, kids);
+  renderInfoSection(container, person, imageBase);
 }
 
+function renderGallerySection(container, person, imageBase){
+  const gallerySection = document.createElement("div");
+  gallerySection.className = "section";
+  gallerySection.id = "gallerySection";
+
+  const title = document.createElement("h3");
+  title.textContent = "Fotogalleri";
+  gallerySection.appendChild(title);
+
+  const toolbar = document.createElement("div");
+  toolbar.className = "sectionToolbar";
+  toolbar.innerHTML = `
+    <button onclick="saveCurrentPersonCaptions()">💾 Spara bildtexter (lokalt)</button>
+    <button onclick="resetCurrentPersonCaptions()">↺ Återställ denna persons bildtexter</button>
+    <button onclick="downloadUpdatedJson()">⬇ Ladda ner uppdaterad slaktdata.json</button>
+  `;
+  gallerySection.appendChild(toolbar);
+
+  if(currentImageList.length){
+    const grid = document.createElement("div");
+    grid.className = "gallery";
+    grid.id = "galleryGrid";
+
+    currentImageList.forEach((imgObj, index)=>{
+      const box = document.createElement("div");
+      box.className = "thumb";
+
+      const sourceLabel = getImageSourceLabel(imgObj.sourceType);
+
+      box.innerHTML = `
+        <img src="${imgObj.src}" alt="${escapeHtml(person.name || "")} - bild ${index + 1}">
+        <div class="thumbCaptionWrap">
+          <div class="thumbCaptionLabel">
+            Bild ${index + 1} — källa: <strong>${escapeHtml(sourceLabel)}</strong>
+          </div>
+          <textarea
+            class="thumbCaption"
+            id="caption_${index}"
+            data-index="${index}"
+            placeholder="Skriv bildtext här...&#10;Flera rader går bra."
+          >${escapeHtml(imgObj.caption || "")}</textarea>
+          <div class="captionButtons">
+            <button onclick="saveSingleCaption(${index})">Spara denna bildtext</button>
+            <button onclick="clearSingleCaption(${index})">Töm</button>
+          </div>
+        </div>
+      `;
+
+      grid.appendChild(box);
+    });
+
+    gallerySection.appendChild(grid);
+  }else{
+    gallerySection.innerHTML += `
+      <div class="notice">
+        Inga personspecifika bilder hittades i <strong>/images</strong> för <strong>${escapeHtml(person.name || "")}</strong>.<br><br>
+        Visar därför standardbild i huvudkortet.<br>
+        Förslag på filnamn:
+        <div class="small" style="margin-top:8px;">
+          images/${escapeHtml(imageBase)}.jpg<br>
+          images/${escapeHtml(imageBase)}_1.jpg<br>
+          images/${escapeHtml(imageBase)}_2.jpg
+        </div>
+      </div>
+    `;
+  }
+
+  container.appendChild(gallerySection);
 }
 
-function renderGallery(){
+function renderRelationsSection(container, personId, parents, spouses, kids){
+  const relSection = document.createElement("div");
+  relSection.className = "section";
 
-const g=document.getElementById("gallery")
-g.innerHTML=""
+  relSection.innerHTML = `<h3>Släktrelationer</h3>`;
 
-images.forEach((img,i)=>{
+  const relGrid = document.createElement("div");
+  relGrid.className = "relGrid";
 
-const div=document.createElement("div")
-div.className="thumb"
-div.draggable=true
-div.dataset.index=i
+  relGrid.appendChild(makeRelationCard(
+    "Föräldrar",
+    [
+      parents[0] ? relationLink(parents[0], "Far") : "<div class='small'>Far: -</div>",
+      parents[1] ? relationLink(parents[1], "Mor") : "<div class='small'>Mor: -</div>"
+    ]
+  ));
 
-div.addEventListener("dragstart",dragStart)
-div.addEventListener("dragover",dragOver)
-div.addEventListener("drop",drop)
+  relGrid.appendChild(makeRelationCard(
+    "Partner",
+    spouses.length
+      ? spouses.map(id => relationLink(id))
+      : ["<div class='small'>Inga partner registrerade</div>"]
+  ));
 
-div.innerHTML=`
+  relGrid.appendChild(makeRelationCard(
+    "Barn",
+    kids.length
+      ? kids.map(id => relationLink(id))
+      : ["<div class='small'>Inga barn registrerade</div>"]
+  ));
 
-<img src="${img.src}">
-
-<textarea onchange="updateCaption(${i},this.value)">${img.caption||""}</textarea>
-
-<div class="controls">
-
-<button onclick="moveUp(${i})">↑</button>
-<button onclick="moveDown(${i})">↓</button>
-<button onclick="removeImage(${i})">Ta bort</button>
-
-</div>
-
-`
-
-g.appendChild(div)
-
-})
-
+  relSection.appendChild(relGrid);
+  container.appendChild(relSection);
 }
 
-function updateCaption(i,val){
-images[i].caption=val
+function renderInfoSection(container, person, imageBase){
+  const infoSection = document.createElement("div");
+  infoSection.className = "section";
+
+  const usesPhotoObjects = person.photos.some(item => item && typeof item === "object" && !Array.isArray(item) && item.src);
+  const usesPhotoStrings = person.photos.some(item => typeof item === "string");
+
+  if(usesPhotoObjects){
+    const photoLines = person.photos
+      .map(p => {
+        if(p && typeof p === "object" && p.src){
+          return escapeHtml(p.src);
+        }
+        return "";
+      })
+      .filter(Boolean)
+      .join("<br>");
+
+    infoSection.innerHTML = `
+      <h3>Bildkälla</h3>
+      <div class="small">
+        Denna person använder <strong>den rekommenderade huvudmodellen</strong> i <strong>slaktdata.json</strong>:<br><br>
+        <strong>photos = lista av objekt med src + caption</strong><br><br>
+        Fördelar:
+        <br>✔ obegränsat antal bilder
+        <br>✔ exakt ordning
+        <br>✔ bildtexten följer rätt bild
+        <br>✔ inga problem om du byter ordning på bilderna
+        <br><br>
+        <strong>Bilder i ordning:</strong><br>
+        ${photoLines}
+      </div>
+    `;
+  }else if(usesPhotoStrings){
+    const photoLines = person.photos
+      .map(p => typeof p === "string" ? escapeHtml(p) : "")
+      .filter(Boolean)
+      .join("<br>");
+
+    infoSection.innerHTML = `
+      <h3>Bildkälla</h3>
+      <div class="small">
+        Denna person använder <strong>photos-lista</strong> i <strong>slaktdata.json</strong>, men med äldre strängmodell.<br><br>
+        Det fungerar bra, men den bästa modellen är istället:
+        <br><strong>{ "src": "...", "caption": "..." }</strong>
+        <br><br>
+        <strong>Bilder i ordning:</strong><br>
+        ${photoLines}
+        <br><br>
+        <strong>Obs:</strong> När du redigerar bildtexter här och laddar ner JSON kommer denna sida automatiskt att uppgradera personen till den nya bättre modellen.
+      </div>
+    `;
+  }else{
+    infoSection.innerHTML = `
+      <h3>Bildmatchning</h3>
+      <div class="small">
+        Denna sida använder automatisk namnmatchning eftersom <strong>photos</strong> saknas eller är tom för personen.<br><br>
+        <strong>Namn:</strong> ${escapeHtml(person.name || "")}<br>
+        <strong>Bildbas:</strong> ${escapeHtml(imageBase)}<br><br>
+        Den provar bland annat:<br>
+        images/${escapeHtml(imageBase)}.jpg<br>
+        images/${escapeHtml(imageBase)}.jpeg<br>
+        images/${escapeHtml(imageBase)}.png<br>
+        images/${escapeHtml(imageBase)}_1.jpg ... _${EXTRA_IMAGE_VARIANTS}.jpg<br><br>
+        <strong>Tips:</strong> Lägg till en <strong>photos</strong>-lista i slaktdata.json för obegränsat antal bilder och exakt ordning.<br>
+        När du redigerar bildtexter här och laddar ner JSON kan du sedan själv lägga in bilderna som photos-lista.
+      </div>
+    `;
+  }
+
+  container.appendChild(infoSection);
 }
 
-function moveUp(i){
-if(i===0)return
-const t=images[i]
-images[i]=images[i-1]
-images[i-1]=t
-renderGallery()
+function makeRelationCard(title, items){
+  const box = document.createElement("div");
+  box.className = "relCard";
+
+  const listHtml = items.map(item => `<div>${item}</div>`).join("");
+
+  box.innerHTML = `
+    <h4>${escapeHtml(title)}</h4>
+    <div class="relList">${listHtml}</div>
+  `;
+
+  return box;
 }
 
-function moveDown(i){
-if(i===images.length-1)return
-const t=images[i]
-images[i]=images[i+1]
-images[i+1]=t
-renderGallery()
+function relationLink(id, prefix=""){
+  const name = getDisplayName(id);
+  const label = prefix ? (prefix + ": " + name) : name;
+
+  return `
+    <a class="relLink" href="fotosida.html?id=${encodeURIComponent(id)}">
+      📷 ${escapeHtml(label)}
+    </a>
+    <a class="relLink small" href="person.html?id=${encodeURIComponent(id)}" style="margin-left:4px;">
+      (personblad)
+    </a>
+  `;
 }
 
-function removeImage(i){
-images.splice(i,1)
-renderGallery()
+/* =========================================================
+   BILDER - HUVUDLOGIK
+   ========================================================= */
+
+async function getPersonImages(person){
+  if(!person) return [];
+
+  // 1) Huvudlösning: photos-lista
+  if(Array.isArray(person.photos) && person.photos.length){
+    const existing = [];
+
+    for(const item of person.photos){
+      // Ny rekommenderad modell: {src, caption}
+      if(item && typeof item === "object" && !Array.isArray(item) && typeof item.src === "string"){
+        const src = item.src.trim();
+        if(!src) continue;
+
+        const ok = await imageExists(src);
+        if(ok){
+          existing.push({
+            src,
+            caption: typeof item.caption === "string" ? item.caption : "",
+            sourceType: "photosObject"
+          });
+        }
+        continue;
+      }
+
+      // Äldre modell: "images/fil.jpg"
+      if(typeof item === "string"){
+        const src = item.trim();
+        if(!src) continue;
+
+        const ok = await imageExists(src);
+        if(ok){
+          const legacyCaption = getLegacyCaption(person, existing.length);
+          existing.push({
+            src,
+            caption: legacyCaption,
+            sourceType: "photosString"
+          });
+        }
+      }
+    }
+
+    return existing;
+  }
+
+  // 2) Fallback: automatisk namnmatchning
+  const imageBase = sanitizeNameForImage(person.name || "");
+  const found = await collectExistingImages(imageBase);
+
+  return found.map((src, index)=>({
+    src,
+    caption: getLegacyCaption(person, index),
+    sourceType: "auto"
+  }));
 }
 
-function addImage(){
+async function collectExistingImages(baseName){
+  const candidates = [];
 
-const src=document.getElementById("newImageSrc").value.trim()
-const cap=document.getElementById("newImageCaption").value.trim()
+  candidates.push("images/" + baseName + ".jpg");
+  candidates.push("images/" + baseName + ".jpeg");
+  candidates.push("images/" + baseName + ".png");
 
-if(!src)return
+  for(let i = 1; i <= EXTRA_IMAGE_VARIANTS; i++){
+    candidates.push("images/" + baseName + "_" + i + ".jpg");
+    candidates.push("images/" + baseName + "_" + i + ".jpeg");
+    candidates.push("images/" + baseName + "_" + i + ".png");
+  }
 
-images.push({src,caption:cap})
+  const existing = [];
 
-document.getElementById("newImageSrc").value=""
-document.getElementById("newImageCaption").value=""
+  for(const src of candidates){
+    const ok = await imageExists(src);
+    if(ok){
+      existing.push(src);
+    }
+  }
 
-renderGallery()
-
-}
-
-function dragStart(e){
-
-e.dataTransfer.setData("index",e.target.dataset.index)
-
-}
-
-function dragOver(e){
-e.preventDefault()
-}
-
-function drop(e){
-
-e.preventDefault()
-
-const from=parseInt(e.dataTransfer.getData("index"))
-const to=parseInt(e.target.closest(".thumb").dataset.index)
-
-const item=images.splice(from,1)[0]
-images.splice(to,0,item)
-
-renderGallery()
-
-}
-
-function downloadJSON(){
-
-person.photos=images.map(i=>({
-src:i.src,
-caption:i.caption
-}))
-
-const json=JSON.stringify(store,null,2)
-
-const blob=new Blob([json],{type:"application/json"})
-
-const url=URL.createObjectURL(blob)
-
-const a=document.createElement("a")
-a.href=url
-a.download="slaktdata.json"
-a.click()
-
-}
-
-function sanitize(name){
-
-return name
-.toLowerCase()
-.replace(/å/g,"a")
-.replace(/ä/g,"a")
-.replace(/ö/g,"o")
-.replace(/[^a-z0-9 ]/g,"")
-.trim()
-.replace(/\s+/g,"_")
-
+  return existing;
 }
 
 function imageExists(src){
+  return new Promise(resolve=>{
+    const img = new Image();
 
-return new Promise(r=>{
+    img.onload = ()=> resolve(true);
+    img.onerror = ()=> resolve(false);
 
-const img=new Image()
-
-img.onload=()=>r(true)
-img.onerror=()=>r(false)
-
-img.src=src+"?v="+Date.now()
-
-})
-
+    const separator = src.includes("?") ? "&" : "?";
+    img.src = src + separator + "v=" + Date.now();
+  });
 }
 
+function getImageSourceLabel(sourceType){
+  switch(sourceType){
+    case "photosObject": return "photos-objekt (rekommenderad)";
+    case "photosString": return "photos-sträng (äldre modell)";
+    case "auto": return "automatisk namnmatchning";
+    default: return "okänd";
+  }
+}
+
+/* =========================================================
+   BILDTEXTER - NY HUVUDMODELL
+   ========================================================= */
+
+function getLegacyCaption(person, imageIndex){
+  const captions = person && person.photoCaptions ? person.photoCaptions : null;
+  if(!captions) return "";
+
+  if(imageIndex === 0){
+    return captions.main || "";
+  }
+
+  return captions[String(imageIndex)] || "";
+}
+
+function saveSingleCaption(index){
+  const textarea = document.getElementById("caption_" + index);
+  if(!textarea) return;
+
+  const value = textarea.value.trim();
+
+  if(!currentImageList[index]) return;
+  currentImageList[index].caption = value;
+
+  unsavedChanges = true;
+  updateStatus("Bildtext sparad i minnet för aktuell bild. Ladda ner JSON för permanent sparning.");
+  showSuccess("Bildtext för <strong>bild " + (index + 1) + "</strong> sparad i sidan. Klicka sedan på <strong>Ladda ner uppdaterad slaktdata.json</strong>.");
+}
+
+function clearSingleCaption(index){
+  const textarea = document.getElementById("caption_" + index);
+  if(!textarea) return;
+
+  textarea.value = "";
+  saveSingleCaption(index);
+}
+
+function saveCurrentPersonCaptions(){
+  const person = getPerson(currentId);
+  if(!person) return;
+
+  // Viktigt: vi uppgraderar alltid till den bästa modellen: photos = [{src, caption}, ...]
+  person.photos = currentImageList.map(img => ({
+    src: img.src,
+    caption: (img.caption || "").trim()
+  }));
+
+  // Äldre captions rensas bort för att undvika dubbla system
+  if(person.photoCaptions){
+    delete person.photoCaptions;
+  }
+
+  unsavedChanges = true;
+  updateStatus("Alla bildtexter för aktuell person sparade i minnet enligt nya photos-modellen.");
+  showSuccess("Alla bildtexter för <strong>" + escapeHtml(person.name || currentId) + "</strong> sparades i den nya rekommenderade <strong>photos</strong>-modellen. Klicka nu på <strong>Ladda ner uppdaterad slaktdata.json</strong>.");
+}
+
+function resetCurrentPersonCaptions(){
+  if(!originalStore || !currentId) return;
+
+  const originalPerson = originalStore.people && originalStore.people[currentId] ? originalStore.people[currentId] : null;
+  const currentPerson = getPerson(currentId);
+
+  if(!currentPerson) return;
+
+  if(originalPerson){
+    currentPerson.photos = deepClone(Array.isArray(originalPerson.photos) ? originalPerson.photos : []);
+    currentPerson.photoCaptions = deepClone(originalPerson.photoCaptions || {});
+  }else{
+    currentPerson.photos = [];
+    currentPerson.photoCaptions = {};
+  }
+
+  renderPersonPage(currentId).then(()=>{
+    unsavedChanges = true;
+    updateStatus("Bildtexter för aktuell person återställda till ursprungligt innehåll från inläst JSON.");
+    showSuccess("Bildtexterna återställdes för aktuell person. Om du vill behålla återställningen: ladda ner uppdaterad JSON.");
+  });
+}
+
+/* =========================================================
+   EXPORT / NEDLADDNING
+   ========================================================= */
+
+function downloadUpdatedJson(){
+  if(!store){
+    showError("Ingen data finns att ladda ner.");
+    return;
+  }
+
+  // Spara alltid aktuell persons bildtexter innan export
+  saveCurrentPersonCaptions();
+
+  const exportData = {
+    people: store.people,
+    parentsOf: store.parentsOf,
+    spousesOf: store.spousesOf,
+    currentId: store.currentId || currentId
+  };
+
+  const jsonText = JSON.stringify(exportData, null, 2);
+  const blob = new Blob([jsonText], { type: "application/json;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "slaktdata.json";
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+
+  setTimeout(()=> URL.revokeObjectURL(url), 1000);
+
+  unsavedChanges = false;
+  updateStatus("Uppdaterad slaktdata.json nedladdad. Ersätt data/slaktdata.json på GitHub med den nya filen.");
+  showSuccess(
+    "Den uppdaterade filen <strong>slaktdata.json</strong> har laddats ner.<br><br>" +
+    "Nästa steg:<br>" +
+    "1. Öppna din GitHub-repo<br>" +
+    "2. Gå till mappen <strong>data</strong><br>" +
+    "3. Ersätt filen <strong>slaktdata.json</strong> med den nedladdade versionen<br><br>" +
+    "<strong>Obs:</strong> Denna sida sparar nu bilddata i den nya rekommenderade modellen:<br>" +
+    "<code>photos: [{ src, caption }]</code>"
+  );
+}
+
+/* =========================================================
+   HJÄLPFUNKTIONER
+   ========================================================= */
+
+function sanitizeNameForImage(name){
+  let filename = (name || "").toLowerCase();
+
+  filename = filename
+    .replace(/å/g,"a")
+    .replace(/ä/g,"a")
+    .replace(/ö/g,"o")
+    .replace(/é/g,"e")
+    .replace(/è/g,"e")
+    .replace(/ê/g,"e")
+    .replace(/ë/g,"e")
+    .replace(/ü/g,"u")
+    .replace(/ú/g,"u")
+    .replace(/ù/g,"u")
+    .replace(/û/g,"u")
+    .replace(/ó/g,"o")
+    .replace(/ò/g,"o")
+    .replace(/ô/g,"o")
+    .replace(/á/g,"a")
+    .replace(/à/g,"a")
+    .replace(/â/g,"a")
+    .replace(/[^a-z0-9 ]/g,"")
+    .trim()
+    .replace(/\s+/g,"_");
+
+  return filename;
+}
+
+function extractYear(value){
+  if(!value) return null;
+  const match = String(value).match(/\b(16|17|18|19|20)\d{2}\b/);
+  return match ? parseInt(match[0],10) : null;
+}
+
+function calculateAge(person){
+  if(!person) return "";
+
+  const bornYear = extractYear(person.born);
+  if(!bornYear) return "";
+
+  const diedYear = extractYear(person.died);
+
+  if(diedYear){
+    const age = diedYear - bornYear;
+    return age >= 0 ? age + " år" : "";
+  }
+
+  const now = new Date().getFullYear();
+  const age = now - bornYear;
+
+  if(age < 0 || age > 120) return "";
+  return age + " år";
+}
+
+function deepClone(obj){
+  return JSON.parse(JSON.stringify(obj));
+}
+
+function escapeHtml(value){
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function showError(html){
+  const msg = document.getElementById("messageArea");
+  msg.innerHTML = `<div class="error">${html}</div>`;
+}
+
+function showSuccess(html){
+  const msg = document.getElementById("messageArea");
+  msg.innerHTML = `<div class="success">${html}</div>`;
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function updateStatus(text){
+  const el = document.getElementById("statusText");
+  if(el) el.textContent = text;
+}
+
+function reloadPage(){
+  if(unsavedChanges){
+    const ok = confirm("Du har osparade ändringar i sidan. Vill du verkligen ladda om?");
+    if(!ok) return;
+  }
+  location.reload();
+}
 </script>
 
 </body>
