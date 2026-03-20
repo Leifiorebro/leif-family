@@ -351,6 +351,104 @@ header h1{
   background:#f0f0f0;
 }
 
+/* Drag-and-drop */
+.thumb{
+  cursor:grab;
+  transition:box-shadow 0.15s, opacity 0.15s;
+}
+.thumb.dragging{
+  opacity:0.45;
+  box-shadow:0 0 0 3px #6ea8d6;
+  cursor:grabbing;
+}
+.thumb.drag-over{
+  box-shadow:0 0 0 3px #f0a500 inset;
+}
+.drag-handle{
+  text-align:center;
+  font-size:18px;
+  color:#bbb;
+  padding:6px 0 2px;
+  cursor:grab;
+  user-select:none;
+}
+.drag-handle:active{ cursor:grabbing; }
+
+/* Delete button on card */
+.btn-delete{
+  padding:6px 10px;
+  border:1px solid #f5b8b8;
+  background:#fff5f5;
+  color:#b91c1c;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:12px;
+}
+.btn-delete:hover{ background:#fee2e2; }
+
+/* Image picker modal */
+#imgPickerModal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+  z-index:500;
+  align-items:center;
+  justify-content:center;
+}
+#imgPickerModal.open{ display:flex; }
+#imgPickerBox{
+  background:white;
+  border-radius:14px;
+  padding:22px;
+  max-width:680px;
+  width:95%;
+  max-height:80vh;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  box-shadow:0 12px 40px rgba(0,0,0,0.25);
+}
+#imgPickerBox h3{ margin:0; font-size:20px; }
+#imgPickerSearch{
+  padding:9px 12px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-size:14px;
+  width:100%;
+}
+#imgPickerList{
+  overflow-y:auto;
+  flex:1;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(130px,1fr));
+  gap:10px;
+  padding:4px;
+}
+.picker-item{
+  border:2px solid #eee;
+  border-radius:10px;
+  overflow:hidden;
+  cursor:pointer;
+  background:#fafafa;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  transition:border-color 0.15s;
+}
+.picker-item:hover{ border-color:#6ea8d6; background:#f0f7ff; }
+.picker-item.selected{ border-color:#1d4ed8; background:#eff6ff; }
+.picker-item img{ width:100%; height:90px; object-fit:cover; display:block; }
+.picker-item span{ font-size:11px; color:#555; padding:4px 6px; text-align:center; word-break:break-all; }
+#imgPickerActions{ display:flex; gap:8px; justify-content:flex-end; }
+#imgPickerActions button{
+  padding:9px 18px; border-radius:8px; border:none; cursor:pointer; font-size:14px;
+}
+#btnPickerAdd{ background:#1d4ed8; color:white; }
+#btnPickerAdd:hover{ background:#1e40af; }
+#btnPickerCancel{ background:#f3f4f6; color:#333; border:1px solid #ccc; }
+#btnPickerCancel:hover{ background:#e5e7eb; }
+
 @media (max-width:900px){
   .hero{
     grid-template-columns:1fr;
@@ -391,7 +489,6 @@ header h1{
 <div class="statusBar">
   <div class="statusText" id="statusText">Inga ändringar ännu.</div>
   <div class="statusActions">
-    <button onclick="saveCurrentPersonCaptions()">💾 Spara bildtexter (lokalt i sidan)</button>
     <button onclick="resetCurrentPersonCaptions()">↺ Återställ denna persons bildtexter</button>
     <button onclick="downloadUpdatedJson()">⬇ Ladda ner uppdaterad slaktdata.json</button>
   </div>
@@ -660,59 +757,23 @@ function renderGallerySection(container, person, imageBase){
   const toolbar = document.createElement("div");
   toolbar.className = "sectionToolbar";
   toolbar.innerHTML = `
-    <button onclick="saveCurrentPersonCaptions()">💾 Spara bildtexter (lokalt)</button>
-    <button onclick="resetCurrentPersonCaptions()">↺ Återställ denna persons bildtexter</button>
-    <button onclick="downloadUpdatedJson()">⬇ Ladda ner uppdaterad slaktdata.json</button>
+    <button onclick="openImagePicker()">🖼️ Lägg till bild från images/</button>
+    <button onclick="resetCurrentPersonCaptions()">↺ Återställ bildtexter</button>
+    <button onclick="downloadUpdatedJson()">⬇ Ladda ner slaktdata.json</button>
   `;
   gallerySection.appendChild(toolbar);
 
-  if(currentImageList.length){
-    const grid = document.createElement("div");
-    grid.className = "gallery";
-    grid.id = "galleryGrid";
+  const grid = document.createElement("div");
+  grid.className = "gallery";
+  grid.id = "galleryGrid";
+  gallerySection.appendChild(grid);
 
-    currentImageList.forEach((imgObj, index)=>{
-      const box = document.createElement("div");
-      box.className = "thumb";
-
-      const sourceLabel = getImageSourceLabel(imgObj.sourceType);
-
-      box.innerHTML = `
-        <img src="${imgObj.src}" alt="${escapeHtml(person.name || "")} - bild ${index + 1}">
-        <div class="thumbCaptionWrap">
-          <div class="thumbCaptionLabel">
-            Bild ${index + 1} — källa: <strong>${escapeHtml(sourceLabel)}</strong>
-          </div>
-          <textarea
-            class="thumbCaption"
-            id="caption_${index}"
-            data-index="${index}"
-            placeholder="Skriv bildtext här...&#10;Flera rader går bra."
-          >${escapeHtml(imgObj.caption || "")}</textarea>
-          <div class="captionButtons">
-            <button onclick="saveSingleCaption(${index})">Spara denna bildtext</button>
-            <button onclick="clearSingleCaption(${index})">Töm</button>
-          </div>
-        </div>
-      `;
-
-      grid.appendChild(box);
-    });
-
-    gallerySection.appendChild(grid);
+  if(!currentImageList.length){
+    grid.innerHTML = `<div class="notice" style="grid-column:1/-1">
+      Inga bilder har lagts till ännu. Klicka på <strong>Lägg till bild från images/</strong> för att välja bilder.
+    </div>`;
   }else{
-    gallerySection.innerHTML += `
-      <div class="notice">
-        Inga personspecifika bilder hittades i <strong>/images</strong> för <strong>${escapeHtml(person.name || "")}</strong>.<br><br>
-        Visar därför standardbild i huvudkortet.<br>
-        Förslag på filnamn:
-        <div class="small" style="margin-top:8px;">
-          images/${escapeHtml(imageBase)}.jpg<br>
-          images/${escapeHtml(imageBase)}_1.jpg<br>
-          images/${escapeHtml(imageBase)}_2.jpg
-        </div>
-      </div>
-    `;
+    buildGalleryCards(grid, person);
   }
 
   container.appendChild(gallerySection);
@@ -974,27 +1035,175 @@ function getLegacyCaption(person, imageIndex){
   return captions[String(imageIndex)] || "";
 }
 
-function saveSingleCaption(index){
-  const textarea = document.getElementById("caption_" + index);
-  if(!textarea) return;
-
-  const value = textarea.value.trim();
-
-  if(!currentImageList[index]) return;
-  currentImageList[index].caption = value;
-
+/* =========================================================
+   DELETE IMAGE
+   ========================================================= */
+function deleteImage(index){
+  if(!confirm("Ta bort bild " + (index + 1) + " och dess bildtext?")) return;
+  currentImageList.splice(index, 1);
   unsavedChanges = true;
-  updateStatus("Bildtext sparad i minnet för aktuell bild. Ladda ner JSON för permanent sparning.");
-  showSuccess("Bildtext för <strong>bild " + (index + 1) + "</strong> sparad i sidan. Klicka sedan på <strong>Ladda ner uppdaterad slaktdata.json</strong>.");
+  const grid = document.getElementById("galleryGrid");
+  if(grid) buildGalleryCards(grid, getPerson(currentId));
+  updateStatus("Bild borttagen. Ladda ner slaktdata.json för att spara permanent.");
 }
 
-function clearSingleCaption(index){
-  const textarea = document.getElementById("caption_" + index);
-  if(!textarea) return;
+/* =========================================================
+   DRAG AND DROP SORT
+   ========================================================= */
+let dragSrcIndex = null;
 
-  textarea.value = "";
-  saveSingleCaption(index);
+function onDragStart(e){
+  dragSrcIndex = parseInt(this.dataset.index);
+  this.classList.add("dragging");
+  e.dataTransfer.effectAllowed = "move";
+  e.dataTransfer.setData("text/plain", dragSrcIndex);
 }
+
+function onDragEnd(e){
+  this.classList.remove("dragging");
+  document.querySelectorAll(".thumb").forEach(t => t.classList.remove("drag-over"));
+}
+
+function onDragOver(e){
+  e.preventDefault();
+  e.dataTransfer.dropEffect = "move";
+  document.querySelectorAll(".thumb").forEach(t => t.classList.remove("drag-over"));
+  this.classList.add("drag-over");
+}
+
+function onDragLeave(e){
+  this.classList.remove("drag-over");
+}
+
+function onDrop(e){
+  e.preventDefault();
+  this.classList.remove("drag-over");
+  const targetIndex = parseInt(this.dataset.index);
+  if(dragSrcIndex === null || dragSrcIndex === targetIndex) return;
+
+  // Reorder currentImageList
+  const moved = currentImageList.splice(dragSrcIndex, 1)[0];
+  currentImageList.splice(targetIndex, 0, moved);
+  dragSrcIndex = null;
+  unsavedChanges = true;
+
+  const grid = document.getElementById("galleryGrid");
+  if(grid) buildGalleryCards(grid, getPerson(currentId));
+  updateStatus("Bildordning ändrad. Ladda ner slaktdata.json för att spara.");
+}
+
+/* =========================================================
+   IMAGE PICKER — välj från images/ i repot
+   ========================================================= */
+let allRepoImages   = [];  // [{src, filename}] — alla hittade i images/
+let pickerSelection = new Set(); // valda src-strängar
+
+async function openImagePicker(){
+  pickerSelection.clear();
+  document.getElementById("imgPickerSearch").value = "";
+  document.getElementById("imgPickerModal").classList.add("open");
+
+  if(allRepoImages.length === 0){
+    // Build list from person IDs in store (all have images/{id}.jpg potentially)
+    // Plus scan all people's existing photos arrays for known paths
+    const candidates = new Set();
+
+    // Every person has images/{id}.jpg as the primary photo
+    Object.keys(store.people).forEach(id => {
+      candidates.add("images/" + id + ".jpg");
+      // Also check their photos array for other paths
+      const p = store.people[id];
+      if(Array.isArray(p.photos)){
+        p.photos.forEach(item => {
+          if(item && typeof item === "object" && item.src) candidates.add(item.src);
+          if(typeof item === "string") candidates.add(item);
+        });
+      }
+    });
+    candidates.add("images/default.jpg");
+
+    // Probe which actually exist
+    const results = [];
+    for(const src of candidates){
+      const ok = await imageExists(src);
+      if(ok) results.push({ src, filename: src.replace(/^images\//, "") });
+    }
+    // Sort alphabetically
+    results.sort((a,b) => a.filename.localeCompare(b.filename, "sv"));
+    allRepoImages = results;
+  }
+
+  renderPickerList(allRepoImages);
+}
+
+function filterPickerList(){
+  const q = document.getElementById("imgPickerSearch").value.trim().toLowerCase();
+  const filtered = q
+    ? allRepoImages.filter(i => i.filename.toLowerCase().includes(q))
+    : allRepoImages;
+  renderPickerList(filtered);
+}
+
+function renderPickerList(items){
+  const box = document.getElementById("imgPickerList");
+  box.innerHTML = "";
+
+  if(!items.length){
+    box.innerHTML = "<div style='color:#888;padding:20px;grid-column:1/-1'>Inga bilder hittades.</div>";
+    return;
+  }
+
+  // Already-added srcs for this person
+  const alreadyAdded = new Set(currentImageList.map(i => i.src));
+
+  items.forEach(item => {
+    const el = document.createElement("div");
+    el.className = "picker-item" + (pickerSelection.has(item.src) ? " selected" : "");
+    if(alreadyAdded.has(item.src)) el.style.opacity = "0.4";
+
+    el.innerHTML = `<img src="${item.src}" alt="${item.filename}"><span>${item.filename}</span>`;
+
+    el.addEventListener("click", ()=>{
+      if(pickerSelection.has(item.src)){
+        pickerSelection.delete(item.src);
+        el.classList.remove("selected");
+      }else{
+        pickerSelection.add(item.src);
+        el.classList.add("selected");
+      }
+    });
+
+    box.appendChild(el);
+  });
+}
+
+function closeImagePicker(){
+  document.getElementById("imgPickerModal").classList.remove("open");
+}
+
+function addPickedImages(){
+  if(!pickerSelection.size){ closeImagePicker(); return; }
+
+  const alreadyAdded = new Set(currentImageList.map(i => i.src));
+  pickerSelection.forEach(src => {
+    if(!alreadyAdded.has(src)){
+      currentImageList.push({ src, caption: "", sourceType: "photosObject" });
+    }
+  });
+
+  closeImagePicker();
+  unsavedChanges = true;
+
+  const grid = document.getElementById("galleryGrid");
+  if(grid) buildGalleryCards(grid, getPerson(currentId));
+  updateStatus("Bilder tillagda. Ladda ner slaktdata.json för att spara permanent.");
+}
+
+// Close picker on Escape or backdrop click
+document.addEventListener("keydown", e => { if(e.key === "Escape") closeImagePicker(); });
+document.getElementById("imgPickerModal") && document.getElementById("imgPickerModal").addEventListener("click", e => {
+  if(e.target.id === "imgPickerModal") closeImagePicker();
+});
 
 function saveCurrentPersonCaptions(){
   const person = getPerson(currentId);
@@ -1180,6 +1389,20 @@ function reloadPage(){
   location.reload();
 }
 </script>
+
+
+<!-- Image picker modal -->
+<div id="imgPickerModal" role="dialog" aria-modal="true" aria-label="Välj bild">
+  <div id="imgPickerBox">
+    <h3>🖼️ Välj bild från images/</h3>
+    <input id="imgPickerSearch" type="text" placeholder="Filtrera på filnamn..." oninput="filterPickerList()">
+    <div id="imgPickerList"><div style="color:#888;padding:20px;">Letar efter bilder...</div></div>
+    <div id="imgPickerActions">
+      <button id="btnPickerCancel" onclick="closeImagePicker()">Avbryt</button>
+      <button id="btnPickerAdd" onclick="addPickedImages()">Lägg till valda bilder</button>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
