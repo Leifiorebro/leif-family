@@ -608,8 +608,8 @@ function normalizeStore(){
     const p = store.people[id] || {};
     p.id = p.id || id;
 
-    if(!p.birthPlace && p.birthParish) p.birthPlace = p.birthParish;
-    if(!p.deathPlace && p.deathParish) p.deathPlace = p.deathParish;
+    if(!p.birthPlace && p.birthParish) p.birthPlace = p.bornParish;
+    if(!p.deathPlace && p.deathParish) p.deathPlace = p.diedParish;
 
     if(!Array.isArray(p.photos)){
       p.photos = [];
@@ -740,10 +740,10 @@ async function renderPersonPage(personId){
           <div class="metaValue">${escapeHtml(age || "-")}</div>
 
           <div class="metaLabel">Födelseförsamling</div>
-          <div class="metaValue">${escapeHtml(person.birthPlace || person.birthParish || "-")}</div>
+          <div class="metaValue">${escapeHtml(person.birthPlace || person.bornParish || "-")}</div>
 
           <div class="metaLabel">Dödsförsamling</div>
-          <div class="metaValue">${escapeHtml(person.deathPlace || person.deathParish || "-")}</div>
+          <div class="metaValue">${escapeHtml(person.deathPlace || person.diedParish || "-")}</div>
 
           <div class="metaLabel">Yrke</div>
           <div class="metaValue">${escapeHtml(person.job || "-")}</div>
