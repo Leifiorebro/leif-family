@@ -787,8 +787,24 @@
       "photoId": "anna_blomqvist.jpg",
       "history": "Anna Blomqvist var född 6 oktober 1854 i Söderala församling. Hon var dotter till Lars Jonsson Sten som tagit sig namnet Blomqvist och dennes hustru Brita Larsdotter.\nAnna Blomqvist gifte sig 19 november 1876 med Mats Eklund.\nHon dog 9 december 1926 i Ljusne.\nMats Eklund och Anna Blomqvist fick 9 barn:\n\n\n\n\n\nBarn:\nAnna Erika Eklund gift Lindahl född 23/12 1877 i Söderala. Död 1/7 1961 i Ljusne.\nBrita Vilhelmina Eklund gift Moberg född 24/12 1879 i Söderala. Död 10/8 1966 i Hanebo.\nEmma Kristina Eklund född 23/7 1882 i Söderala. Död 9/4 1885 i Söderala.\nAugusta Matilda Eklund född 12/11 1884 i Söderala. Död 28/2 1901 i Ljusne såg.\nEmma Kristina Eklund född 18/4 1887 i Söderala. Död 26/12 1965 i Ljusne.\nOskar Leonard Eklund född 1/12 1889 i Söderala. Död 15/7 1965 i Ljusne.\nJulia Elfrida Eklund gift Söderlund född 12/4 1892 i Söderala. Död 19/2 1981 i Ljusne.\nGustaf Martin Eklund född 6/1 1895 i Söderala. Död 16/1 1919 i Ljusne.\nMärta Elisabet Eklund född 1/10 1898 i Ljusne. Död 16/11 1948 i Ljusne.",
       "gender": "",
-      "photoCaptions": {},
-      "photos": []
+      "photos": [
+        {
+          "src": "images/p_9smqgh317.jpg",
+          "caption": "Anna Blomqvist"
+        },
+        {
+          "src": "images/Anna_Blomqvist_1.jpg",
+          "caption": "Anna Blomqvist  med maken Mats Eklund"
+        },
+        {
+          "src": "images/Anna_Blomqvist_2.jpg",
+          "caption": "Mats Eklund och Anna Blomqvist"
+        },
+        {
+          "src": "images/Anna _Blomqvist_19261210.jpg",
+          "caption": "Dödsannons"
+        }
+      ]
     },
     "p_9vhcxd8": {
       "id": "p_9vhcxd8",
@@ -1511,7 +1527,8 @@
           "src": "images/Mats_5.jpg",
           "caption": "Tillkännagivande"
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_l0tiqibe0": {
       "id": "p_l0tiqibe0",
