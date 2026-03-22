@@ -2085,7 +2085,8 @@
           "src": "images/Ljusne.jpg",
           "caption": "Ljusne"
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_sh6rs3ypi": {
       "id": "p_sh6rs3ypi",
@@ -2300,8 +2301,32 @@
       "history": "Född 1886-08-11 Nyhagen, Trehörna säteri.\nDöd 1954-12-25 Göteborg\nUnder sin yrkesverksamma tid arbetade Hilda som kallskänksbiträde p?? restaurang Gamleport i Göteborg.\nHilda hade en oäkta son. Hildas son hette Lars.\nHilda bodde vid sin död på Erik Dahlbergsgatan 29 B i Göteborg.\nJordfästningen ägde rum i kapellet på Sahlgrenska sjukhuset i Göteborg Söndagen den 2 januari 1955.",
       "link": "",
       "photoId": "hilda.jpg",
-      "photoCaptions": {},
-      "photos": []
+      "photos": [
+        {
+          "src": "images/p_w45w1n6s2.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/Hilda_1.jpg",
+          "caption": "1947 i Göteborg.\nDagmar , Gun, Leif, Hilda."
+        },
+        {
+          "src": "images/Hilda_2.jpg",
+          "caption": "1947\nVi står på en brygga i Göteborgstrakten tillsammans med Hilda och en okänd man som inte är någon släkting utan bara tillfälligtvis råkade vara med oss av någon anledning vid det tillfället."
+        },
+        {
+          "src": "images/Hilda_3.jpg",
+          "caption": "1952\nLeif och Hilda på balkongen vid vår bostad på Södra Allén 24 A i Örebro."
+        },
+        {
+          "src": "images/Hilda_4.jpg",
+          "caption": "1952\nAlma och hennes syster Hilda är på besök vid vår sommarstuga vid Hällebosjön. Hilda till vänster närmast kameran."
+        },
+        {
+          "src": "images/Paddan.jpg",
+          "caption": "1947\nLeif sitter i knät på sin mamma längre bak till höger, Pappa Martin bredvid och Hilda och Gun på raden framför."
+        }
+      ]
     },
     "p_w9az526b1": {
       "id": "p_w9az526b1",
