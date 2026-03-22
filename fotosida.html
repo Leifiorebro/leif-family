@@ -1281,11 +1281,21 @@ function renderPickerList(files){
     const src = "images/" + fname;
     const div = document.createElement("div");
     div.className = "pickerThumb";
-    div.innerHTML = `
-      <div class="pickerImgWrap">
-        <img src="${escapeHtml(src)}" onerror="this.parentElement.style.background='#ddd'">
-      </div>
-      <span>${escapeHtml(fname)}</span>`;
+
+    // Build with createElement so src is never HTML-escaped
+    const wrap = document.createElement("div");
+    wrap.className = "pickerImgWrap";
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = fname;
+    img.onerror = function(){ this.parentElement.style.background = "#ccc"; };
+    wrap.appendChild(img);
+
+    const label = document.createElement("span");
+    label.textContent = fname;
+
+    div.appendChild(wrap);
+    div.appendChild(label);
     div.onclick = ()=>{ pickImage(src); };
     list.appendChild(div);
   });
@@ -1514,6 +1524,31 @@ function reloadPage(){
     if(!ok) return;
   }
   location.reload();
+}
+
+/* ── Lightbox ── */
+function openLightbox(index){
+  const imgObj = currentImageList[index];
+  if(!imgObj) return;
+  const lb    = document.getElementById("lightbox");
+  const lbImg = document.getElementById("lightboxImg");
+  const lbCap = document.getElementById("lightboxCaption");
+  lbImg.src = imgObj.src;
+  lbCap.textContent = imgObj.caption || "";
+  lbCap.style.display = imgObj.caption ? "block" : "none";
+  lb.classList.add("open");
+  document.addEventListener("keydown", _lbKey);
+}
+
+function closeLightbox(){
+  const lb = document.getElementById("lightbox");
+  lb.classList.remove("open");
+  document.getElementById("lightboxImg").src = "";
+  document.removeEventListener("keydown", _lbKey);
+}
+
+function _lbKey(e){
+  if(e.key === "Escape") closeLightbox();
 }
 </script>
 
