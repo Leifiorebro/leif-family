@@ -464,18 +464,27 @@ header h1{
 }
 #imgPickerList{
   overflow-y:auto; flex:1;
-  display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
   gap:14px; padding:4px;
 }
 .pickerThumb{
   border:2px solid transparent; border-radius:10px;
-  overflow:hidden; cursor:pointer; background:#f5f5f5;
+  overflow:hidden; cursor:pointer; background:#f0f0f0;
   display:flex; flex-direction:column; align-items:center;
-  padding:8px; transition:border-color .12s;
+  padding:0; transition:border-color .12s;
 }
 .pickerThumb:hover{ border-color:#1d4ed8; }
-.pickerThumb img{ width:100%; height:140px; object-fit:contain; background:white; }
-.pickerThumb span{ font-size:12px; color:#444; margin-top:6px; text-align:center; word-break:break-all; }
+.pickerThumb .pickerImgWrap{
+  width:100%; aspect-ratio:1/1; overflow:hidden; background:#e8e8e8;
+}
+.pickerThumb .pickerImgWrap img{
+  width:100%; height:100%; object-fit:cover; display:block;
+}
+.pickerThumb span{
+  font-size:11px; color:#444; padding:5px 6px;
+  text-align:center; word-break:break-all; width:100%;
+  background:white; border-top:1px solid #eee;
+}
 .pickerFooter{ display:flex; gap:8px; justify-content:flex-end; }
 </style>
 </head>
@@ -861,8 +870,7 @@ function makeThumbCard(imgObj, index, personName){
   box.dataset.index = String(index);
   box.innerHTML = `
     <img src="${escapeHtml(imgObj.src)}" alt="${escapeHtml(personName)} bild ${index+1}"
-         onerror="this.style.opacity='.3'"
-         onclick="openLightbox(${index})">
+         onerror="this.style.opacity='.3'" loading="lazy">
     <div class="thumbCaptionWrap">
       <textarea class="thumbCaption" id="caption_${index}" data-index="${index}"
         placeholder="Skriv bildtext här..."
@@ -874,6 +882,19 @@ function makeThumbCard(imgObj, index, personName){
       <button class="deleteBtn" onclick="deleteImage(${index})">✕ Ta bort</button>
     </div>
   `;
+  /* Click-to-zoom: only fires if pointer moved < 6px (i.e. not a drag) */
+  const img = box.querySelector("img");
+  let pointerDownPos = null;
+  img.addEventListener("pointerdown", e=>{
+    pointerDownPos = { x:e.clientX, y:e.clientY };
+  });
+  img.addEventListener("pointerup", e=>{
+    if(!pointerDownPos) return;
+    const dx = e.clientX - pointerDownPos.x;
+    const dy = e.clientY - pointerDownPos.y;
+    if(Math.sqrt(dx*dx + dy*dy) < 6) openLightbox(index);
+    pointerDownPos = null;
+  });
   return box;
 }
 
@@ -1117,12 +1138,9 @@ async function collectExistingImages(baseName){
 function imageExists(src){
   return new Promise(resolve=>{
     const img = new Image();
-
-    img.onload = ()=> resolve(true);
+    img.onload  = ()=> resolve(true);
     img.onerror = ()=> resolve(false);
-
-    const separator = src.includes("?") ? "&" : "?";
-    img.src = src + separator + "v=" + Date.now();
+    img.src = src;  // no cache-buster — prevents GitHub throttling/corrupt JPEG
   });
 }
 
@@ -1263,7 +1281,11 @@ function renderPickerList(files){
     const src = "images/" + fname;
     const div = document.createElement("div");
     div.className = "pickerThumb";
-    div.innerHTML = `<img src="${escapeHtml(src)}" onerror="this.style.display='none'"><span>${escapeHtml(fname)}</span>`;
+    div.innerHTML = `
+      <div class="pickerImgWrap">
+        <img src="${escapeHtml(src)}" onerror="this.parentElement.style.background='#ddd'">
+      </div>
+      <span>${escapeHtml(fname)}</span>`;
     div.onclick = ()=>{ pickImage(src); };
     list.appendChild(div);
   });
