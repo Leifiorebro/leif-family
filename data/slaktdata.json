@@ -804,7 +804,8 @@
           "src": "images/Anna _Blomqvist_19261210.jpg",
           "caption": "Dödsannons"
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_9vhcxd8": {
       "id": "p_9vhcxd8",
@@ -1913,11 +1914,178 @@
           "caption": "Elsa till vänster med sin moster Emma Eklund"
         },
         {
+          "src": "images/Elsa_10.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/19230419_ST.JPG",
+          "caption": "1923-04-19 Lysning"
+        },
+        {
+          "src": "images/Bäckmans.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/Bäckmans_1.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/Bäckmans_9.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/Elsa_7.jpg",
+          "caption": "1944. Elsa med Kirsti"
+        },
+        {
+          "src": "images/Bäckmans sommarstuga.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/Bäckmans villa.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/Elsa_8.jpg",
+          "caption": "Vid Järvsjön 1944.\nAnna Lindahl och Hanna Söderlund i aktern. Elsa och Kirsti (tror jag) och Teodor Söderlund står i fören."
+        },
+        {
+          "src": "images/Bäckmans_10.jpg",
+          "caption": "1952"
+        },
+        {
+          "src": "images/Bäckmans_14.jpg",
+          "caption": "1952"
+        },
+        {
+          "src": "images/Bäckmans_19.jpg",
+          "caption": "1952"
+        },
+        {
+          "src": "images/Elsa_1953.jpg",
+          "caption": "1953 på Vårdbergets topp.\nMartin, Elsa, Leif"
+        },
+        {
           "src": "images/elsa_4.jpg",
           "caption": "1955-07-18 på Ljusne kyrkogård, Fridhem, vid 50-års minnet av mötet vid Fejan."
+        },
+        {
+          "src": "images/elsa_5.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/Bäckmans_11.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/elsa_6.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/Elsa_9.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/Elsa_1959.jpg",
+          "caption": "1959"
+        },
+        {
+          "src": "images/Bäckmans_12.jpg",
+          "caption": "1959"
+        },
+        {
+          "src": "images/Bäckmans_16.jpg",
+          "caption": "1959"
+        },
+        {
+          "src": "images/Bäckmans_15.jpg",
+          "caption": "1960"
+        },
+        {
+          "src": "images/Bäckmans_25.jpg",
+          "caption": "1972\nHos Leif och Yvonne på Ljunggränd 26 i Nora"
+        },
+        {
+          "src": "images/Bäckmans_13.jpg",
+          "caption": "1972\nHos Leif och Yvonne på Ljunggränd 26 i Nora"
+        },
+        {
+          "src": "images/1972_Leif_5.jpg",
+          "caption": "1972\nHos Leif och Yvonne på Ljunggränd 26 i Nora"
+        },
+        {
+          "src": "images/1972_Leif_4.jpg",
+          "caption": "1972\nHos Leif och Yvonne på Ljunggränd 26 i Nora"
+        },
+        {
+          "src": "images/1972_Leif_6.jpg",
+          "caption": "1072\nHos Leif och Yvonne på Ljunggränd 26 i Nora"
+        },
+        {
+          "src": "images/1972_Leif_7.jpg",
+          "caption": "1972\nHos Leif och Yvonne på Ljunggränd 26 i Nora"
+        },
+        {
+          "src": "images/Bäckmans Järvsjön 1973.jpg",
+          "caption": "1973\nLeif med familj och Dagmar besöker Bäckmans sommarstuga i Järvsjön"
+        },
+        {
+          "src": "images/Elsa Bäckman_80 år_1.jpg",
+          "caption": "Elsa på hennes 80-årsdag"
+        },
+        {
+          "src": "images/Elsa Bäckman_85 år_1.jpg",
+          "caption": "Elsa 85 år.\nEbon, Elsa, Pastorn"
+        },
+        {
+          "src": "images/Elsa Bäckman_85 år_2.jpg",
+          "caption": "Elsa får en kram av Sten på sin 85-årsdag"
+        },
+        {
+          "src": "images/Elsa Bäckman_85 år_3.jpg",
+          "caption": "Elsa 85 år.\nEbon, Elsa, Pastorn"
+        },
+        {
+          "src": "images/Elsa Bäckman_85 år_4.jpg",
+          "caption": "Elsa 85 år.\nEbon, Elsa, Helge"
+        },
+        {
+          "src": "images/Elsa Bäckman_85 år_5.jpg",
+          "caption": "Elsa 85 år.\nHelge, Elsa, Ebon"
+        },
+        {
+          "src": "images/19850713_Elsa Bäckmans begravning.jpg",
+          "caption": "1985-07-13 vid Elsas begravning.\nGun, Dagmar, okänd samt Birgitta i vit kappa."
+        },
+        {
+          "src": "images/19850713_Elsa Bäckmans begravning_1.jpg",
+          "caption": "1985-07-13 vid Elsas begravning"
+        },
+        {
+          "src": "images/19850713_Elsa Bäckmans begravning_2.jpg",
+          "caption": "1985-07-13 vid Elsas begravning.\nBirgitta, Margit, Helge samt en för mig okänd kvinna."
+        },
+        {
+          "src": "images/19850713_Elsa Bäckmans begravning_3.jpg",
+          "caption": "1985-07-13 vid Elsas begravning"
+        },
+        {
+          "src": "images/20030526 030.jpg",
+          "caption": "Foto taget 2003-05-26 av Leif\nGraven finns numera inte kvar."
+        },
+        {
+          "src": "images/Elsa Bäckman´s dödsannons.jpg",
+          "caption": "Dödsannons"
+        },
+        {
+          "src": "images/Elsa_gravinformation.jpg",
+          "caption": "Gravinformation"
+        },
+        {
+          "src": "images/Ljusne.jpg",
+          "caption": "Ljusne"
         }
-      ],
-      "photoCaptions": {}
+      ]
     },
     "p_sh6rs3ypi": {
       "id": "p_sh6rs3ypi",
