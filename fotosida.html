@@ -454,7 +454,7 @@ header h1{
 #imgPickerModal.open{ display:flex; }
 #imgPickerBox{
   background:white; border-radius:14px; padding:22px;
-  width:min(720px,95vw); max-height:82vh;
+  width:min(860px,96vw); height:85vh;
   display:flex; flex-direction:column; gap:12px;
 }
 #imgPickerBox h3{ margin:0; font-size:20px; color:#2c3e50; }
@@ -464,26 +464,30 @@ header h1{
 }
 #imgPickerList{
   overflow-y:auto; flex:1;
-  display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
-  gap:14px; padding:4px;
+  display:flex; flex-wrap:wrap;
+  gap:12px; padding:4px; align-content:flex-start;
 }
 .pickerThumb{
-  border:2px solid transparent; border-radius:10px;
+  width:150px; flex:0 0 150px;
+  border:2px solid #ddd; border-radius:10px;
   overflow:hidden; cursor:pointer; background:#f0f0f0;
-  display:flex; flex-direction:column; align-items:center;
-  padding:0; transition:border-color .12s;
+  display:flex; flex-direction:column;
+  transition:border-color .15s;
 }
-.pickerThumb:hover{ border-color:#1d4ed8; }
+.pickerThumb:hover{ border-color:#1d4ed8; background:#eef3ff; }
 .pickerThumb .pickerImgWrap{
-  width:100%; aspect-ratio:1/1; overflow:hidden; background:#e8e8e8;
+  width:150px; height:150px; overflow:hidden;
+  background:#e0e0e0; flex-shrink:0;
 }
 .pickerThumb .pickerImgWrap img{
-  width:100%; height:100%; object-fit:cover; display:block;
+  width:150px; height:150px;
+  object-fit:cover; display:block;
 }
 .pickerThumb span{
-  font-size:11px; color:#444; padding:5px 6px;
-  text-align:center; word-break:break-all; width:100%;
+  font-size:11px; color:#333; padding:5px 6px;
+  text-align:center; word-break:break-all;
   background:white; border-top:1px solid #eee;
+  flex:1;
 }
 .pickerFooter{ display:flex; gap:8px; justify-content:flex-end; }
 </style>
