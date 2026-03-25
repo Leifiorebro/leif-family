@@ -4,6 +4,16 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Leifs Släktprogram – Version 6</title>
+<script>
+  if(localStorage.getItem("familyAccessGranted") !== "yes"){
+    window.location.href = "login.html";
+  }
+
+  function logoutFamilySite(){
+    localStorage.removeItem("familyAccessGranted");
+    window.location.href = "login.html";
+  }
+</script>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <style>
 :root{--bg:#f4f7fb;--panel:#fff;--line:#8aa0b8;--text:#1f2937;--muted:#6b7280;--accent:#1d4ed8;--card:#fff;--shadow:0 6px 18px rgba(0,0,0,.08);--border:#d9e2ec;--danger:#b91c1c;--ok:#166534}
@@ -40,6 +50,7 @@ svg{display:block;width:100%;height:100%}.node-card{fill:var(--card);stroke:#cbd
 <div id="topbar">
   <button onclick="loadServerJSON()">Ladda slaktdata.json</button>
   <button onclick="exportJSON()" class="btn green">Exportera JSON</button>
+  <button onclick="logoutFamilySite()">Logga ut</button>
   <div class="search-wrap">
     <input id="searchBox" type="text" placeholder="Sök person..." oninput="liveSearch()" onkeydown="searchKeydown(event)" />
     <div id="searchResults"></div>

@@ -3,6 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<script>
+  if(localStorage.getItem("familyAccessGranted") !== "yes"){
+    window.location.href = "login.html";
+  }
+
+  function logoutFamilySite(){
+    localStorage.removeItem("familyAccessGranted");
+    window.location.href = "login.html";
+  }
+</script>
 <title>Fotosida</title>
 
 <style>
@@ -500,6 +510,7 @@ header h1{
     <a id="backToPerson" href="#">👤 Personblad</a>
     <a id="backToTree" href="index.html">🌳 Släktträd</a>
     <button onclick="reloadPage()">↻ Ladda om</button>
+	<button onclick="logoutFamilySite()">Logga ut</button>
   </div>
 </header>
 

@@ -2,6 +2,16 @@
 <html lang="sv">
 <head>
 <meta charset="utf-8">
+<script>
+  if(localStorage.getItem("familyAccessGranted") !== "yes"){
+    window.location.href = "login.html";
+  }
+
+  function logoutFamilySite(){
+    localStorage.removeItem("familyAccessGranted");
+    window.location.href = "login.html";
+  }
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -127,6 +137,7 @@
   <div style="display:flex;gap:8px;">
     <button onclick="openFoto()">📷 Fotosida</button>
     <button onclick="window.close()">✕ Stäng</button>
+	<button onclick="logoutFamilySite()">Logga ut</button>
   </div>
 </header>
 
