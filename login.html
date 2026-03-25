@@ -3,112 +3,382 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Familjesida – Inloggning</title>
+  <title>Släktsida – Inloggning</title>
   <style>
+    :root{
+      --bg:#f5f6f8;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --border:#d1d5db;
+      --primary:#2563eb;
+      --primaryHover:#1d4ed8;
+      --danger:#b91c1c;
+      --ok:#166534;
+      --shadow:0 10px 30px rgba(0,0,0,0.12);
+      --radius:16px;
+    }
+
+    *{ box-sizing:border-box; }
+
     body{
       margin:0;
-      font-family:Arial, Helvetica, sans-serif;
-      background:#f5f5f5;
+      min-height:100vh;
       display:flex;
       align-items:center;
       justify-content:center;
-      min-height:100vh;
+      background:linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--text);
+      padding:20px;
     }
 
-    .box{
-      background:white;
-      padding:30px;
-      border-radius:14px;
-      box-shadow:0 8px 24px rgba(0,0,0,0.15);
-      width:min(92vw, 420px);
+    .card{
+      width:min(94vw, 460px);
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:28px;
+      border:1px solid rgba(0,0,0,0.05);
     }
 
     h1{
-      margin-top:0;
+      margin:0 0 10px 0;
       font-size:28px;
-      color:#2c3e50;
+      line-height:1.2;
+      color:#1f2937;
     }
 
-    p{
-      color:#555;
+    .lead{
+      margin:0 0 18px 0;
+      color:var(--muted);
       line-height:1.5;
+      font-size:15px;
     }
 
-    input{
-      width:100%;
-      padding:12px;
-      font-size:16px;
-      border:1px solid #ccc;
-      border-radius:8px;
-      margin:12px 0;
-      box-sizing:border-box;
+    .fieldLabel{
+      display:block;
+      font-size:14px;
+      margin-bottom:8px;
+      color:#374151;
+      font-weight:600;
     }
 
-    button{
+    .passwordWrap{
+      position:relative;
+      margin-bottom:12px;
+    }
+
+    input[type="password"],
+    input[type="text"]{
       width:100%;
-      padding:12px;
+      padding:13px 48px 13px 14px;
       font-size:16px;
+      border:1px solid var(--border);
+      border-radius:10px;
+      outline:none;
+      transition:border-color .15s ease, box-shadow .15s ease;
+    }
+
+    input[type="password"]:focus,
+    input[type="text"]:focus{
+      border-color:#93c5fd;
+      box-shadow:0 0 0 4px rgba(37,99,235,0.12);
+    }
+
+    .toggleBtn{
+      position:absolute;
+      right:8px;
+      top:50%;
+      transform:translateY(-50%);
       border:none;
+      background:transparent;
+      cursor:pointer;
+      padding:8px;
+      font-size:14px;
+      color:#374151;
       border-radius:8px;
-      background:#2c7be5;
+    }
+
+    .toggleBtn:hover{
+      background:#f3f4f6;
+    }
+
+    .actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:8px;
+    }
+
+    .primaryBtn{
+      flex:1;
+      min-width:180px;
+      border:none;
+      border-radius:10px;
+      background:var(--primary);
       color:white;
+      padding:13px 16px;
+      font-size:16px;
+      cursor:pointer;
+      font-weight:600;
+    }
+
+    .primaryBtn:hover{
+      background:var(--primaryHover);
+    }
+
+    .secondaryBtn{
+      border:1px solid var(--border);
+      border-radius:10px;
+      background:white;
+      color:#374151;
+      padding:13px 16px;
+      font-size:15px;
       cursor:pointer;
     }
 
-    button:hover{
-      background:#1f66c2;
+    .secondaryBtn:hover{
+      background:#f9fafb;
     }
 
-    .error{
-      color:#b00020;
-      margin-top:10px;
-      min-height:22px;
+    .message{
+      margin-top:14px;
+      min-height:24px;
       font-size:14px;
+      line-height:1.4;
+    }
+
+    .message.error{
+      color:var(--danger);
+    }
+
+    .message.success{
+      color:var(--ok);
     }
 
     .small{
-      margin-top:16px;
+      margin-top:18px;
       font-size:13px;
-      color:#777;
+      color:var(--muted);
+      line-height:1.45;
+      background:#f8fafc;
+      border:1px solid #e5e7eb;
+      padding:12px;
+      border-radius:10px;
+    }
+
+    .hint{
+      margin-top:8px;
+      font-size:12px;
+      color:#6b7280;
+    }
+
+    .footerRow{
+      margin-top:14px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .linkLike{
+      background:none;
+      border:none;
+      padding:0;
+      margin:0;
+      color:#2563eb;
+      cursor:pointer;
+      font-size:13px;
+      text-decoration:underline;
+    }
+
+    .statusPill{
+      font-size:12px;
+      padding:5px 9px;
+      border-radius:999px;
+      background:#eef2ff;
+      color:#3730a3;
+      border:1px solid #c7d2fe;
     }
   </style>
 </head>
 <body>
 
-  <div class="box">
+  <div class="card">
     <h1>Välkommen</h1>
-    <p>Den här släktsidan är bara avsedd för familj och vänner. Ange lösenord för att fortsätta.</p>
+    <p class="lead">
+      Den här släktsidan är avsedd för familj och vänner. Ange lösenord för att fortsätta.
+    </p>
 
-    <input type="password" id="pw" placeholder="Lösenord" autocomplete="current-password">
-    <button onclick="checkPassword()">Öppna släktsidan</button>
+    <label class="fieldLabel" for="pw">Lösenord</label>
 
-    <div class="error" id="msg"></div>
+    <div class="passwordWrap">
+      <input type="password" id="pw" placeholder="Skriv lösenordet här" autocomplete="current-password">
+      <button type="button" class="toggleBtn" id="togglePwBtn" onclick="togglePassword()">Visa</button>
+    </div>
+
+    <div class="hint">Tips: Eventuella mellanslag i början/slutet ignoreras automatiskt.</div>
+
+    <div class="actions">
+      <button class="primaryBtn" type="button" onclick="checkPassword()">Öppna släktsidan</button>
+      <button class="secondaryBtn" type="button" onclick="resetAccess()">Rensa tidigare inloggning</button>
+    </div>
+
+    <div id="msg" class="message"></div>
+
+    <div class="footerRow">
+      <span class="statusPill" id="statusPill">Ej inloggad</span>
+      <button class="linkLike" type="button" onclick="goDirectIfAlreadyLoggedIn()">Jag är redan inloggad</button>
+    </div>
 
     <div class="small">
-      Obs: Detta är ett enkelt familjelås, inte ett fullständigt säkerhetsskydd.
+      Detta är ett enkelt familjelås för att hålla sidan borta från nyfikna besökare.
+      Det är praktiskt för GitHub Pages, men det är inte ett fullständigt säkerhetsskydd.
     </div>
   </div>
 
   <script>
-    // ===== ÄNDRA DETTA LÖSENORD =====
+    /* =========================================================
+       INSTÄLLNINGAR – ÄNDRA BARA DESSA VID BEHOV
+       ========================================================= */
+
+    // 1) SÄTT DITT LÖSENORD HÄR
     const FAMILY_PASSWORD = "mitthemligalosen";
 
-    function checkPassword(){
-      const value = document.getElementById("pw").value;
+    // 2) VILKEN SIDA SKA ÖPPNAS EFTER GODKÄND INLOGGNING?
+    const START_PAGE = "index.html";
 
-      if(value === FAMILY_PASSWORD){
-        localStorage.setItem("familyAccessGranted", "yes");
-        window.location.href = "index.html";
+    // 3) LOCALSTORAGE-NYCKEL (låt normalt vara som den är)
+    const ACCESS_KEY = "familyAccessGranted";
+
+    /* =========================================================
+       INIT
+       ========================================================= */
+
+    document.addEventListener("DOMContentLoaded", function(){
+      updateStatusPill();
+      document.getElementById("pw").focus();
+
+      document.getElementById("pw").addEventListener("keydown", function(e){
+        if(e.key === "Enter"){
+          checkPassword();
+        }
+      });
+    });
+
+    /* =========================================================
+       HUVUDFUNKTIONER
+       ========================================================= */
+
+    function checkPassword(){
+      const inputEl = document.getElementById("pw");
+      const msgEl = document.getElementById("msg");
+
+      // trim() gör att " mitthemligalosen " fungerar som "mitthemligalosen"
+      const entered = (inputEl.value || "").trim();
+      const expected = (FAMILY_PASSWORD || "").trim();
+
+      clearMessage();
+
+      if(!entered){
+        showError("Du måste skriva in ett lösenord.");
+        inputEl.focus();
+        return;
+      }
+
+      if(entered === expected){
+        localStorage.setItem(ACCESS_KEY, "yes");
+        showSuccess("Lösenord godkänt. Öppnar sidan ...");
+        updateStatusPill();
+
+        // liten fördröjning så användaren ser att det lyckades
+        setTimeout(function(){
+          goToStartPage();
+        }, 250);
       }else{
-        document.getElementById("msg").textContent = "Fel lösenord. Försök igen.";
+        showError("Fel lösenord. Försök igen.");
+        inputEl.select();
       }
     }
 
-    document.getElementById("pw").addEventListener("keydown", function(e){
-      if(e.key === "Enter"){
-        checkPassword();
+    function goToStartPage(){
+      // cache-busting för att minska risken att GitHub visar gammal version
+      const sep = START_PAGE.includes("?") ? "&" : "?";
+      window.location.href = START_PAGE + sep + "v=" + Date.now();
+    }
+
+    function resetAccess(){
+      localStorage.removeItem(ACCESS_KEY);
+      clearMessage();
+      showSuccess("Tidigare inloggning rensad.");
+      updateStatusPill();
+      document.getElementById("pw").focus();
+    }
+
+    function goDirectIfAlreadyLoggedIn(){
+      if(localStorage.getItem(ACCESS_KEY) === "yes"){
+        showSuccess("Du är redan inloggad. Öppnar sidan ...");
+        setTimeout(function(){
+          goToStartPage();
+        }, 200);
+      }else{
+        showError("Ingen aktiv inloggning hittades i denna webbläsare.");
       }
-    });
+    }
+
+    function togglePassword(){
+      const input = document.getElementById("pw");
+      const btn = document.getElementById("togglePwBtn");
+
+      if(input.type === "password"){
+        input.type = "text";
+        btn.textContent = "Dölj";
+      }else{
+        input.type = "password";
+        btn.textContent = "Visa";
+      }
+    }
+
+    /* =========================================================
+       UI-HJÄLP
+       ========================================================= */
+
+    function clearMessage(){
+      const msgEl = document.getElementById("msg");
+      msgEl.textContent = "";
+      msgEl.className = "message";
+    }
+
+    function showError(text){
+      const msgEl = document.getElementById("msg");
+      msgEl.textContent = text;
+      msgEl.className = "message error";
+    }
+
+    function showSuccess(text){
+      const msgEl = document.getElementById("msg");
+      msgEl.textContent = text;
+      msgEl.className = "message success";
+    }
+
+    function updateStatusPill(){
+      const pill = document.getElementById("statusPill");
+      const loggedIn = localStorage.getItem(ACCESS_KEY) === "yes";
+
+      if(loggedIn){
+        pill.textContent = "Redan inloggad";
+        pill.style.background = "#ecfdf5";
+        pill.style.color = "#065f46";
+        pill.style.borderColor = "#a7f3d0";
+      }else{
+        pill.textContent = "Ej inloggad";
+        pill.style.background = "#eef2ff";
+        pill.style.color = "#3730a3";
+        pill.style.borderColor = "#c7d2fe";
+      }
+    }
   </script>
 
 </body>
