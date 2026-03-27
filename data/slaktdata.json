@@ -792,8 +792,104 @@
       "link": "",
       "photoId": "p_77kdyij48.jpg",
       "history": "Judit Alida Dorotea Åberg Eriksson\n\nFödd 1892-08-14 Vikers förs. Nora\n\nDöpt 1892-09-16 \n\nGift med Viktor Emanuel Åberg 1917-11-10 \n\nDöd 1983-03-17 Nora",
-      "photoCaptions": {},
-      "photos": []
+      "photos": [
+        {
+          "src": "images/p_77kdyij48.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/Alida_1.jpg",
+          "caption": "Alida och Viktor Åberg"
+        },
+        {
+          "src": "images/Alida och Viktor Åberg_1.jpg",
+          "caption": "1917-11-10\nAlida och Viktor Åberg\nVigsel"
+        },
+        {
+          "src": "images/Alida till höger1.jpg",
+          "caption": "Alida till höger"
+        },
+        {
+          "src": "images/Alida (2).jpg",
+          "caption": "Alida. Men jag vet inte när och var fotot är taget. Kan det vara vid Connys bröllop 1967-08-12?"
+        },
+        {
+          "src": "images/1967_Alida_1.jpg",
+          "caption": "1967\nJag tror detta foto är taget vid Eddie och Lisbets hyrda sommarstuga vid Klacka Lerberg"
+        },
+        {
+          "src": "images/Alida och Eddie.jpg",
+          "caption": "1969-02-08\nAlida dansar med sin son Eddie på Yvonne och Leifs bröllopsfest"
+        },
+        {
+          "src": "images/1970_Alida_1.jpg",
+          "caption": "1970\n4 generationer"
+        },
+        {
+          "src": "images/1971_Alida_1.jpg",
+          "caption": "1971\n4 generationer"
+        },
+        {
+          "src": "images/1972_Alida_2.jpg",
+          "caption": "1972-08-14\nAlida med sina barnbarn och barnbarnsbarn vid hennes 80-årsdag 1972-08-14"
+        },
+        {
+          "src": "images/1972_Alida_3.jpg",
+          "caption": "1972\nAlida med sina 3 barn Eddie, Gunhild och Elsa"
+        },
+        {
+          "src": "images/Alida och Eddie2.jpg",
+          "caption": "Alida med sin son Eddie och svärdotter Lisbet"
+        },
+        {
+          "src": "images/Sigrid Alida Astrid.jpg",
+          "caption": "Systrarna Sigrid, Alida, Astrid"
+        },
+        {
+          "src": "images/19820814.jpg",
+          "caption": "1982-08-14\nMiddag på Nora Stadshotell vid Alidas 90-årsdag"
+        },
+        {
+          "src": "images/19820814_1.jpg",
+          "caption": "1982-08-14\nMiddag på Nora Stadshotell vid Alidas 90-årsdag"
+        },
+        {
+          "src": "images/19820814_6.jpg",
+          "caption": "1982-08-14"
+        },
+        {
+          "src": "images/19820814_10.jpg",
+          "caption": "1982-08-14\nAlida med sitt barnbarnsbarn Ylva"
+        },
+        {
+          "src": "images/19820814_3.jpg",
+          "caption": "Dottern Elsa bjuder sin Mor på tårta på hennes 90-årsdag"
+        },
+        {
+          "src": "images/19820814_4.jpg",
+          "caption": "Alida med dottern Elsa.\nBarnbarnsbarnen Torbjörn och Ulf i bakgrunden."
+        },
+        {
+          "src": "images/19820814_5.jpg",
+          "caption": "1982-08-14"
+        },
+        {
+          "src": "images/19820814_9.jpg",
+          "caption": "1982-08-14\nAlida gratuleras på sin 90-årsdag av sin kusin Filip Adolf Blomgren"
+        },
+        {
+          "src": "images/Alida Åbergs begravning1 (2).jpg",
+          "caption": "1983-03-17\nAlida Åbergs begravning"
+        },
+        {
+          "src": "images/Alida Åbergs begravning.jpg",
+          "caption": "1983-03-17\nKarlslunds-kyrkogården"
+        },
+        {
+          "src": "images/19830317_dödsannons.jpg",
+          "caption": "Dödsannons"
+        }
+      ]
     },
     "p_7cvmjv393": {
       "id": "p_7cvmjv393",
@@ -2762,7 +2858,8 @@
           "src": "images/Eddie103.jpg",
           "caption": "Gravinformation"
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_ovdwahd": {
       "id": "p_ovdwahd",
