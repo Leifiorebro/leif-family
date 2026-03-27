@@ -2091,8 +2091,24 @@
       "link": "",
       "photoId": "p_izcueyhnf.jpg",
       "history": "Född 1858-06-27 i Gamla Pershyttan, Nora bergsförsamling\nDöd 1933-04-18 i Bondborn, Nora bergsförsamling\nDödsorsak: Lunginflammation\n\nHan växte upp i Gamla Pershyttan men jag har haft svårt att följa Anders Gustaf från tiden han var barn/ung tills innan han gifte sig 1883.\nAnders Gustaf måste sedan ha bott med sin familj i Glanshammar eftersom 2:a barnet Oskar Henning är född där den 27/7 1884.\nAnders Gustaf kom till Kolbergsgården i Skrekarhyttan i Vikers församling från Glanshammar den 24 oktober 1884 och flyttade sedan från Viker 25 november 1885 till Skogalund, Bergsmanshyttan och därifrån till södra Dammtorpet, Bondborn 1888 där han blev kvar till sin död 1933.\nUr Nora tidning 1933: \"Dödens skördar\nFar och son avlidna med ett dygns mellanrum och i samma sjukdom.\nI sitt hem i Bondborn avled på tisdagskvällen en gammal trotjänare vid gården, arbetaren Anders Gustav Åberg. Åberg, som var i sitt 75:e år, var änkling och sörjes närmast av barn. Han drabbades för några dagar sedan av lunginflammation, som tog den nämnda olyckliga utgången.\nUnder eft 45-tal år har Åberg arbetat vid Bondborns gård, under de två förra ägarnas tid och även sedan gården inköptes av direktör S. Nissvandt, Stockholm.\nÅberg har städse gjort sig känd såsom en arbetsam, plikttrogen och pålitlig person.\nPå följande natt – natten mot torsdagen - avled å Nora sjukstuga i samma sjukdom Åbergs son, rättaren vid gården Viktor Emanuel Åberg. Han var i sitt 45:e år och efterlämnar som närmast sörjande hustru och tre barn. Även han har så gott som hela sin tid arbetat vid samma gård och väl förtjänat samma eftermäle som fadern.\"\n\nBarn:\nKarl Hjalmar Åberg (1883-1956)\nOskar Henning Åberg (1884-1964)\nAnna Maria Åberg (1887-1887)\nViktor Åberg (1988-1933)\nEmil Verner Åberg (1891-1894)",
-      "photoCaptions": {},
-      "photos": []
+      "photos": [
+        {
+          "src": "images/p_izcueyhnf.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/Dödsannons1.jpg",
+          "caption": "Dödsannons"
+        },
+        {
+          "src": "images/Nora Stads och Bergslags tidning  April 1933.jpg",
+          "caption": "Nora Stads och Bergslags tidning  April 1933"
+        },
+        {
+          "src": "images/Nora Stads och Bergslags tidning 21 April 1933.jpg",
+          "caption": "Nora Stads och Bergslags tidning  April 1933"
+        }
+      ]
     },
     "p_j0llm0bss": {
       "id": "p_j0llm0bss",
@@ -2330,7 +2346,8 @@
           "src": "images/Nora Stads och Bergslags tidning 21 April 1933 (2).jpg",
           "caption": "Nora Stads och Bergslags tidning  April 1933"
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_mc6jemk": {
       "id": "p_mc6jemk",
