@@ -1855,8 +1855,36 @@
       "job": "Konduktör",
       "link": "",
       "history": "",
-      "photoCaptions": {},
-      "photos": []
+      "photos": [
+        {
+          "src": "images/p_dt9kt6mky.jpg",
+          "caption": "Carl Gustav Eriksson"
+        },
+        {
+          "src": "images/Eriksson_1.jpg",
+          "caption": "Carl Gustav Eriksson"
+        },
+        {
+          "src": "images/Fam. Eriksson_2.jpg",
+          "caption": "Familjen Eriksson"
+        },
+        {
+          "src": "images/Eriksson_2.jpg",
+          "caption": "Familjen Eriksson"
+        },
+        {
+          "src": "images/Eriksson_3.jpg",
+          "caption": "Familjen Eriksson"
+        },
+        {
+          "src": "images/Eriksson_4.jpg",
+          "caption": "Carl Gustav Eriksson och Anna Blomgren"
+        },
+        {
+          "src": "images/Dödsannons_Carl Gustaf Eriksson.jpg",
+          "caption": "Dödsannons"
+        }
+      ]
     },
     "p_e2d8rcv1d": {
       "id": "p_e2d8rcv1d",
@@ -2108,7 +2136,8 @@
           "src": "images/Nora Stads och Bergslags tidning 21 April 1933.jpg",
           "caption": "Nora Stads och Bergslags tidning  April 1933"
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_j0llm0bss": {
       "id": "p_j0llm0bss",
