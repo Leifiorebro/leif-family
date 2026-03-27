@@ -2293,8 +2293,44 @@
       "link": "",
       "photoId": "p_lx16wimrx.jpg",
       "history": "Viktor Emanuel Åberg\n\nFödd 1888-10-22 Nora Bergsförs. \nDöpt 1888-11-18 . Döptes av Löfquist\nGift med Judit Alida Dorotea Eriksson 1917-11-10 \nBrudgummens yrke:Trädgårdsmästare\nBrudens yrke: Hemmadotter\nVigdes av: Låftman\nDöd 1933-04-19 Nora Bergsförs\n\nViktor Emanuel Åberg var rättare på Bondborns gård som ligger vid Fåsjön strax utanför Nora. \nI början på 1900-talet ägdes gården av direktör Sven Nissvandt. \nHan fick en dotter 1911 som fick namnet Karin. \nHon kom att 1932 gifta sig med prins Lennart Bernadotte som i och med detta giftermål förlorade sin prinstitel och även arvsrätten till tronen eftersom Karin var av ofrälse börd. \nDe skilde sig sedan 1971. \nDet verkar som det funnits en stark vänskap mellan Viktor och Karin. \nViktor var ju 23 år äldre än Karin så det handlade säkerligen inte om något kärleksförhållande utan om just en stark vänskap vilket kan ha sin förklaring i att Viktor i sin egenskap av rättare var den som styrde och ansvarade för att allt fungerade på gården. \nVid Viktors begravning fanns bland många blommor en text med orden \"Med tack för vackra barndomsminnen, Karin o Lennart Bernadotte\". Från arbetskamraterna på gården fanns en text till blommorna med orden\"Du gjorde för oss alla vad du kunde. \nDu var först Du var sist i allt. Du deltog i glädje i smärta hav tack kära Viktor för allt. Arbetskamrater\". \nJag tycker detta tyder på att han var en uppriktigt uppskattad kamrat och vän på gården.",
-      "photoCaptions": {},
-      "photos": []
+      "photos": [
+        {
+          "src": "images/p_lx16wimrx.jpg",
+          "caption": "Viktor Åberg"
+        },
+        {
+          "src": "images/1_Viktor Åberg1.jpg",
+          "caption": "Viktor Åberg"
+        },
+        {
+          "src": "images/Bröllopskort_1917.jpg",
+          "caption": "1917-11-10\nAlida Eriksson och Viktor Åberg"
+        },
+        {
+          "src": "images/Viktor Åberg3.jpg",
+          "caption": "Viktor Åberg i mitten"
+        },
+        {
+          "src": "images/Viktor Åberg4.jpg",
+          "caption": "Sittande är Helmer Sjöberg, Ingvar Hansson och Viktor Åberg. Mannen bakom vet jag ej, kan det vara Anders Gustav Åberg? Till höger står Gunhild och Alida. Till vänster står Astrid och Hedvig.\nIngvar var en son till Sigrid och Sven Hansson och han dog 1940. Fotot taget vid Nynäs?"
+        },
+        {
+          "src": "images/Viktor.jpg",
+          "caption": "Grav"
+        },
+        {
+          "src": "images/viktor_Aberg_dödsannons.jpg",
+          "caption": "Dödsannons"
+        },
+        {
+          "src": "images/Nora Stads och Bergslags tidning  April 1933 (2).jpg",
+          "caption": "Nora Stads och Bergslags tidning  April 1933"
+        },
+        {
+          "src": "images/Nora Stads och Bergslags tidning 21 April 1933 (2).jpg",
+          "caption": "Nora Stads och Bergslags tidning  April 1933"
+        }
+      ]
     },
     "p_mc6jemk": {
       "id": "p_mc6jemk",
@@ -3073,7 +3109,8 @@
           "src": "images/Gravsatt_Yvonne Lindahl.JPG",
           "caption": ""
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_p1t2kmcat": {
       "id": "p_p1t2kmcat",
