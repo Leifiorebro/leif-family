@@ -45,8 +45,67 @@ svg{display:block;width:100%;height:100%}.node-card{fill:var(--card);stroke:#cbd
 #searchResults .srItem:hover{background:#f0f5ff}
 .search-wrap{position:relative}
 </style>
+<!-- GOATCOUNTER BESÖKSSTATISTIK -->
+<script data-goatcounter="https://leifiorebro.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
+ <div id="familyTopBar" style="
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px 12px;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+">
+  <div style="
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fafafa;
+    font-size: 14px;
+    color: #333;
+    white-space: nowrap;
+  ">
+    Besök i denna webbläsare: <strong id="localIndexCounter">0</strong>
+  </div>
+
+  <a href="https://leifiorebro.goatcounter.com"
+     target="_blank"
+     rel="noopener"
+     style="
+       padding: 8px 12px;
+       border: 1px solid #ddd;
+       border-radius: 10px;
+       background: #fff;
+       text-decoration: none;
+       color: #2563eb;
+       font-size: 14px;
+       white-space: nowrap;
+     ">
+    Total statistik
+  </a>
+
+  <button onclick="logoutFamilySite()" style="
+    padding: 8px 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #fff;
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+  ">
+    Logga ut
+  </button>
+</div>
 <div id="topbar">
   <button onclick="loadServerJSON()">Ladda slaktdata.json</button>
   <button onclick="exportJSON()" class="btn green">Exportera JSON</button>
@@ -809,6 +868,44 @@ function openFotoPage(){
   if(!id){ alert("Välj en person först."); return; }
   window.open("fotosida.html?id=" + encodeURIComponent(id), "_blank");
 }
+</script>
+
+<script>
+  (function(){
+    const INDEX_COUNTER_KEY = "familyIndexPageVisitCount";
+
+    function increaseLocalIndexCounter(){
+      let count = parseInt(localStorage.getItem(INDEX_COUNTER_KEY) || "0", 10);
+      count += 1;
+      localStorage.setItem(INDEX_COUNTER_KEY, String(count));
+      return count;
+    }
+
+    function renderLocalIndexCounter(){
+      const el = document.getElementById("localIndexCounter");
+      if(!el) return;
+      const count = increaseLocalIndexCounter();
+      el.textContent = count.toLocaleString("sv-SE");
+    }
+
+    function adaptTopBarForMobile(){
+      const bar = document.getElementById("familyTopBar");
+      if(!bar) return;
+
+      if(window.innerWidth < 700){
+        bar.style.justifyContent = "center";
+      }else{
+        bar.style.justifyContent = "flex-end";
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function(){
+      renderLocalIndexCounter();
+      adaptTopBarForMobile();
+    });
+
+    window.addEventListener("resize", adaptTopBarForMobile);
+  })();
 </script>
 </body>
 </html>

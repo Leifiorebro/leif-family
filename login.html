@@ -4,9 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Släktsida – Inloggning</title>
+
   <style>
     :root{
-      --bg:#f5f6f8;
+      --bg1:#f8fafc;
+      --bg2:#eef2f7;
       --card:#ffffff;
       --text:#1f2937;
       --muted:#6b7280;
@@ -15,6 +17,7 @@
       --primaryHover:#1d4ed8;
       --danger:#b91c1c;
       --ok:#166534;
+      --soft:#f8fafc;
       --shadow:0 10px 30px rgba(0,0,0,0.12);
       --radius:16px;
     }
@@ -27,14 +30,14 @@
       display:flex;
       align-items:center;
       justify-content:center;
-      background:linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+      padding:20px;
+      background:linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
       font-family:Arial, Helvetica, sans-serif;
       color:var(--text);
-      padding:20px;
     }
 
     .card{
-      width:min(94vw, 460px);
+      width:min(94vw, 520px);
       background:var(--card);
       border-radius:var(--radius);
       box-shadow:var(--shadow);
@@ -43,17 +46,34 @@
     }
 
     h1{
-      margin:0 0 10px 0;
-      font-size:28px;
+      margin:0 0 8px 0;
+      font-size:30px;
       line-height:1.2;
       color:#1f2937;
     }
 
-    .lead{
+    .subtitle{
       margin:0 0 18px 0;
       color:var(--muted);
       line-height:1.5;
       font-size:15px;
+    }
+
+    .badgeRow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-bottom:18px;
+    }
+
+    .badge{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:12px;
+      border:1px solid #dbeafe;
+      background:#eff6ff;
+      color:#1d4ed8;
     }
 
     .fieldLabel{
@@ -72,7 +92,7 @@
     input[type="password"],
     input[type="text"]{
       width:100%;
-      padding:13px 48px 13px 14px;
+      padding:13px 54px 13px 14px;
       font-size:16px;
       border:1px solid var(--border);
       border-radius:10px;
@@ -104,11 +124,17 @@
       background:#f3f4f6;
     }
 
+    .hint{
+      margin-top:8px;
+      font-size:12px;
+      color:#6b7280;
+    }
+
     .actions{
       display:flex;
       gap:10px;
       flex-wrap:wrap;
-      margin-top:8px;
+      margin-top:14px;
     }
 
     .primaryBtn{
@@ -157,30 +183,22 @@
       color:var(--ok);
     }
 
-    .small{
-      margin-top:18px;
-      font-size:13px;
-      color:var(--muted);
-      line-height:1.45;
-      background:#f8fafc;
-      border:1px solid #e5e7eb;
-      padding:12px;
-      border-radius:10px;
-    }
-
-    .hint{
-      margin-top:8px;
-      font-size:12px;
-      color:#6b7280;
-    }
-
     .footerRow{
-      margin-top:14px;
+      margin-top:16px;
       display:flex;
       justify-content:space-between;
       align-items:center;
       gap:10px;
       flex-wrap:wrap;
+    }
+
+    .statusPill{
+      font-size:12px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:#eef2ff;
+      color:#3730a3;
+      border:1px solid #c7d2fe;
     }
 
     .linkLike{
@@ -194,23 +212,85 @@
       text-decoration:underline;
     }
 
-    .statusPill{
+    .infoBox{
+      margin-top:18px;
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.5;
+      background:var(--soft);
+      border:1px solid #e5e7eb;
+      padding:12px;
+      border-radius:10px;
+    }
+
+    .counterBox{
+      margin-top:18px;
+      border:1px solid #e5e7eb;
+      background:#fafafa;
+      border-radius:12px;
+      padding:12px 14px;
+    }
+
+    .counterTitle{
+      font-size:13px;
+      color:#6b7280;
+      margin-bottom:6px;
+    }
+
+    .counterValue{
+      font-size:16px;
+      font-weight:700;
+      color:#111827;
+    }
+
+    .counterHelp{
+      margin-top:6px;
       font-size:12px;
-      padding:5px 9px;
-      border-radius:999px;
-      background:#eef2ff;
-      color:#3730a3;
-      border:1px solid #c7d2fe;
+      color:#6b7280;
+    }
+
+    .smallMuted{
+      font-size:12px;
+      color:#6b7280;
+    }
+
+    .topRightTools{
+      display:flex;
+      justify-content:flex-end;
+      margin-bottom:8px;
     }
   </style>
+
+  <!-- =========================================================
+       GOATCOUNTER BESÖKSSTATISTIK
+       BYT "DIN-SIDA" TILL DITT EGET GOATCOUNTER-NAMN
+       Exempel:
+       https://minslaktsida.goatcounter.com/count
+       ========================================================= -->
+	   
+  <script data-goatcounter="https://leifiorebro.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 
   <div class="card">
-    <h1>Välkommen</h1>
-    <p class="lead">
-      Den här släktsidan är avsedd för familj och vänner. Ange lösenord för att fortsätta.
+    <div class="topRightTools">
+      <button class="secondaryBtn" type="button" onclick="resetAccess()" style="padding:8px 12px;font-size:13px;">
+        Rensa inloggning
+      </button>
+    </div>
+
+    <h1>Endast för familj och vänner</h1>
+    <p class="subtitle">
+      Ange lösenord för att öppna släktsidan. Om du försökte öppna en person- eller fotosida
+      kommer du automatiskt tillbaka dit efter godkänd inloggning.
     </p>
+
+    <div class="badgeRow">
+      <span class="badge">Släktsida</span>
+      <span class="badge">Familj & vänner</span>
+      <span class="badge">GitHub Pages</span>
+    </div>
 
     <label class="fieldLabel" for="pw">Lösenord</label>
 
@@ -219,39 +299,57 @@
       <button type="button" class="toggleBtn" id="togglePwBtn" onclick="togglePassword()">Visa</button>
     </div>
 
-    <div class="hint">Tips: Eventuella mellanslag i början/slutet ignoreras automatiskt.</div>
+    <div class="hint">
+      Tips: eventuella mellanslag i början/slutet ignoreras automatiskt.
+    </div>
 
     <div class="actions">
       <button class="primaryBtn" type="button" onclick="checkPassword()">Öppna släktsidan</button>
-      <button class="secondaryBtn" type="button" onclick="resetAccess()">Rensa tidigare inloggning</button>
+      <button class="secondaryBtn" type="button" onclick="goDirectIfAlreadyLoggedIn()">Jag är redan inloggad</button>
     </div>
 
     <div id="msg" class="message"></div>
 
     <div class="footerRow">
       <span class="statusPill" id="statusPill">Ej inloggad</span>
-      <button class="linkLike" type="button" onclick="goDirectIfAlreadyLoggedIn()">Jag är redan inloggad</button>
+      <button class="linkLike" type="button" onclick="goToStartPage()">Gå till startsidan</button>
     </div>
 
-    <div class="small">
-      Detta är ett enkelt familjelås för att hålla sidan borta från nyfikna besökare.
-      Det är praktiskt för GitHub Pages, men det är inte ett fullständigt säkerhetsskydd.
+    <!-- Enkel lokal visning (visar bara denna webbläsares antal besök på login-sidan) -->
+    <div class="counterBox">
+      <div class="counterTitle">Besök på denna login-sida i just denna webbläsare</div>
+      <div class="counterValue" id="localLoginCounter">0</div>
+      <div class="counterHelp">
+        Detta är en lokal räknare i webbläsaren. För riktig total statistik använder du GoatCounter.
+      </div>
+    </div>
+
+    <div class="infoBox">
+      <strong>Viktigt:</strong> detta är ett enkelt familjelås för GitHub Pages.
+      Det hindrar vanliga nyfikna besökare, men är inte ett fullständigt säkerhetsskydd.
+      Om du vill ha riktig accesskontroll i framtiden kan sidan senare flyttas till t.ex. Cloudflare Pages.
+    </div>
+
+    <div style="margin-top:12px;" class="smallMuted">
+      För att se total statistik: öppna ditt GoatCounter-konto.
     </div>
   </div>
 
   <script>
     /* =========================================================
-       INSTÄLLNINGAR – ÄNDRA BARA DESSA VID BEHOV
+       INSTÄLLNINGAR – ÄNDRA DESSA
        ========================================================= */
 
     // 1) SÄTT DITT LÖSENORD HÄR
-    const FAMILY_PASSWORD = "mitthemligalosen";
+    const FAMILY_PASSWORD = "knorris";
 
-    // 2) VILKEN SIDA SKA ÖPPNAS EFTER GODKÄND INLOGGNING?
+    // 2) VILKEN SIDA SKA ÖPPNAS OM INGEN SPARAD REDIRECT FINNS?
     const START_PAGE = "index.html";
 
-    // 3) LOCALSTORAGE-NYCKEL (låt normalt vara som den är)
+    // 3) LOCALSTORAGE-NYCKLAR
     const ACCESS_KEY = "familyAccessGranted";
+    const REDIRECT_KEY = "familyRedirectAfterLogin";
+    const LOGIN_COUNTER_KEY = "familyLoginPageVisitCount";
 
     /* =========================================================
        INIT
@@ -266,17 +364,17 @@
           checkPassword();
         }
       });
+
+      increaseLocalLoginCounter();
+      renderLocalLoginCounter();
     });
 
     /* =========================================================
-       HUVUDFUNKTIONER
+       LÖSENORD / NAVIGATION
        ========================================================= */
 
     function checkPassword(){
       const inputEl = document.getElementById("pw");
-      const msgEl = document.getElementById("msg");
-
-      // trim() gör att " mitthemligalosen " fungerar som "mitthemligalosen"
       const entered = (inputEl.value || "").trim();
       const expected = (FAMILY_PASSWORD || "").trim();
 
@@ -293,7 +391,6 @@
         showSuccess("Lösenord godkänt. Öppnar sidan ...");
         updateStatusPill();
 
-        // liten fördröjning så användaren ser att det lyckades
         setTimeout(function(){
           goToStartPage();
         }, 250);
@@ -304,17 +401,17 @@
     }
 
     function goToStartPage(){
-      // cache-busting för att minska risken att GitHub visar gammal version
+      const redirectTo = localStorage.getItem(REDIRECT_KEY);
+
+      if(redirectTo){
+        localStorage.removeItem(REDIRECT_KEY);
+        const sep = redirectTo.includes("?") ? "&" : "?";
+        window.location.href = redirectTo + sep + "v=" + Date.now();
+        return;
+      }
+
       const sep = START_PAGE.includes("?") ? "&" : "?";
       window.location.href = START_PAGE + sep + "v=" + Date.now();
-    }
-
-    function resetAccess(){
-      localStorage.removeItem(ACCESS_KEY);
-      clearMessage();
-      showSuccess("Tidigare inloggning rensad.");
-      updateStatusPill();
-      document.getElementById("pw").focus();
     }
 
     function goDirectIfAlreadyLoggedIn(){
@@ -326,6 +423,15 @@
       }else{
         showError("Ingen aktiv inloggning hittades i denna webbläsare.");
       }
+    }
+
+    function resetAccess(){
+      localStorage.removeItem(ACCESS_KEY);
+      localStorage.removeItem(REDIRECT_KEY);
+      clearMessage();
+      showSuccess("Tidigare inloggning har rensats.");
+      updateStatusPill();
+      document.getElementById("pw").focus();
     }
 
     function togglePassword(){
@@ -378,6 +484,21 @@
         pill.style.color = "#3730a3";
         pill.style.borderColor = "#c7d2fe";
       }
+    }
+
+    /* =========================================================
+       LOKAL BESÖKSRÄKNARE FÖR LOGIN-SIDAN (ENDAST DENNA WEBBLÄSARE)
+       ========================================================= */
+
+    function increaseLocalLoginCounter(){
+      let count = parseInt(localStorage.getItem(LOGIN_COUNTER_KEY) || "0", 10);
+      count += 1;
+      localStorage.setItem(LOGIN_COUNTER_KEY, String(count));
+    }
+
+    function renderLocalLoginCounter(){
+      const count = parseInt(localStorage.getItem(LOGIN_COUNTER_KEY) || "0", 10);
+      document.getElementById("localLoginCounter").textContent = count.toLocaleString("sv-SE");
     }
   </script>
 
