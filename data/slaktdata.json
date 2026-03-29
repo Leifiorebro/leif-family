@@ -4681,24 +4681,84 @@
       "photo": "",
       "photoId": "",
       "history": "Filip Adolf Blomgren\n\nFödd 1900-03-07 Svdb\n\nDöd 1990-08-25 Nora\n\nNoteringar\n19000307-6676\n\nBlomgren, Filip Adolf\n\nKvarnv 16\n713 31  Nora\n\nDöd 25/8 1990.\n\nKyrkobokförd (1974) i Nora bergsförs, Nora kn (Örebro län, Västmanland). Mantalsskriven (1974) på samma ort.\n\nFödd 7/3 1900 i Hjulsjö (Örebro län, Västmanland).\n\nÄnkling (17/5 1964).\n--------------\nMotsvarande folkbokföringsförsamling(ar) 1/1 2017:\nNora bergslagsförs, Nora kn (Örebro län, Västmanland)\n\nFödelseförsamling i källan:\nHjulsjö (Örebro län)\n\nKällor:\nRTB 90 / SPAR 90\n\n________________________________\n\nhttps://sok.riksarkivet.se/bildvisning/00164807_00075\n\nNora stadsförsamling (T) AIIa:4 (1930-1940) Bild 2770 / sid 277 (AID: v219021.b2770.s277, NAD: SE/ULA/12285)"
+    },
+    "p_cfacs46s": {
+      "id": "p_cfacs46s",
+      "name": "Oskar Valfrid Blomgren",
+      "gender": "M",
+      "role": "",
+      "born": "1893-07-18",
+      "bornParish": "Dalkarlsberg",
+      "died": "1980-02-15",
+      "diedParish": "Los Angeles, USA",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Oskar Valfrid Blomgren\n\nFödd 1893-07-18 Dalkarlsberg\n\nGift med Hildur Teresia Helge 1920-08-11 Philadelphia, Pennsylvania, USA\n\nDöd 1980-02-15 Los Angeles, USA\n\nNoteringar\nEmigrerade ensam och ogift till USA 10 november 1913."
+    },
+    "p_pk0srrk9": {
+      "id": "p_pk0srrk9",
+      "name": "Hildur Teresia Helge",
+      "gender": "F",
+      "role": "",
+      "born": "1895-09-17",
+      "bornParish": "Väse",
+      "died": "1969-02-20",
+      "diedParish": "Los Angeles, USA",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Hildur Teresia Helge\n\nFödd 1895-09-17 Väse, Värmland\n\nGift med Oskar Valfrid Blomgren 1920-08-11 Philadelphia, Pennsylvania, USA\n\nDöd 1969-02-20 Los Angeles, Kalifornien, USA\n\nNoteringar\nEmigrerade till USA 19 april 1912. Hon avreste med ängfartyget Aaro som avgick den 26 april 1912 till Hull. Hon reste ensam. Hon var då 16  år och ännu ej fyllda 17 vid avresan."
+    },
+    "p_t1mfpg75": {
+      "id": "p_t1mfpg75",
+      "name": "Marva Jeanne Blomgren",
+      "gender": "F",
+      "role": "Barn",
+      "born": "1927-12-27",
+      "bornParish": "Chicago, Illinois, USA",
+      "died": "1987-05-15",
+      "diedParish": "Los Angeles, USA",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Marva Jeanne Blomgren\n\nFödd 1927-12-27 Chicago, Illinois, USA.\n27 december 1927 i Chicago, Illinois, USA.\n\nGift med Clarence Harold Bergquist 1953-02-21 Los Angeles, USA\n\nDöd 1987-05-15 Los Angeles, Kalifornien, USA,"
+    },
+    "p_p2pltmmk": {
+      "id": "p_p2pltmmk",
+      "name": "Clarence Harold Bergquist",
+      "gender": "M",
+      "role": "",
+      "born": "1923-12-12",
+      "bornParish": "Los Angeles, USA",
+      "died": "2915-03-10",
+      "diedParish": "Culver City, Los Angeles, USA",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Clarence Harold Bergquist\n\nFödd 1923-12-12 Los Angeles, California, USA\n\nGift med Marva Jeanne Blomgren 1953-02-21 Los Angeles, USA\n\nDöd 2015-03-10 Culver City, Los Angeles, California, USA"
     }
   },
   "parentsOf": {
     "p_3qowa85hd": [
-      "p_zobmj6wp8",
-      "p_jrbvidb3g"
+      "p_jrbvidb3g",
+      "p_zobmj6wp8"
     ],
     "p_3uj910se8": [
-      "p_bbclq6f9g",
-      "p_3rw58lslc"
+      "p_3rw58lslc",
+      "p_bbclq6f9g"
     ],
     "p_3w3d8mg0r": [
-      "p_e2d8rcv1d",
-      "p_p1t2kmcat"
+      "p_p1t2kmcat",
+      "p_e2d8rcv1d"
     ],
     "p_607tk2v1i": [
-      "p_7hozznt",
-      "p_fceooch"
+      "p_fceooch",
+      "p_7hozznt"
     ],
     "p_67029sp3z": [
       "p_zdy1zgf",
@@ -4713,16 +4773,16 @@
       "p_bkayc4w"
     ],
     "p_8mchqpopa": [
-      "p_zobmj6wp8",
-      "p_jrbvidb3g"
+      "p_jrbvidb3g",
+      "p_zobmj6wp8"
     ],
     "p_99wt1e8e6": [
       "p_r6gu9qm8a",
       "p_apnevfd1e"
     ],
     "p_anref8x": [
-      "p_q1486bk",
-      "p_a9c12mk"
+      "p_a9c12mk",
+      "p_q1486bk"
     ],
     "p_bbclq6f9g": [
       "p_r6gu9qm8a",
@@ -4737,12 +4797,12 @@
       "p_ymb6wc3q0"
     ],
     "p_c2jyk4pds": [
-      "p_9vhcxd8",
-      "p_mc6jemk"
+      "p_mc6jemk",
+      "p_9vhcxd8"
     ],
     "p_czyydy2g7": [
-      "p_9vhcxd8",
-      "p_mc6jemk"
+      "p_mc6jemk",
+      "p_9vhcxd8"
     ],
     "p_ep1684kzs": [
       "p_n2oxqssdd",
@@ -4753,8 +4813,8 @@
       "p_epbrpkbpc"
     ],
     "p_ir25hn919": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_p1t2kmcat": [
       "p_6c6wnb9",
@@ -4769,8 +4829,8 @@
       "p_ovdwahd"
     ],
     "p_rdbqyhp0a": [
-      "p_fceooch",
-      "p_7hozznt"
+      "p_7hozznt",
+      "p_fceooch"
     ],
     "p_rfz7mk0kt": [
       "p_zdy1zgf",
@@ -4781,12 +4841,12 @@
       "p_ymb6wc3q0"
     ],
     "p_t22zhc497": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_vomcn89yz": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_zobmj6wp8": [
       "p_6c6wnb9",
@@ -4837,12 +4897,12 @@
       "p_apnevfd1e"
     ],
     "p_ir4u61dqa": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_jqtxmllar": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_apnevfd1e": [
       "p_l0tiqibe0",
@@ -4869,12 +4929,12 @@
       "p_apnevfd1e"
     ],
     "p_z4rxd74pc": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_zcl5kw4oh": [
-      "p_e2d8rcv1d",
-      "p_p1t2kmcat"
+      "p_p1t2kmcat",
+      "p_e2d8rcv1d"
     ],
     "p_lx16wimrx": [
       "p_izcueyhnf",
@@ -4888,8 +4948,8 @@
       "p_sh6rs3ypi"
     ],
     "p_4cjwtla35": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_37jcbtegu": [
       "p_n2oxqssdd",
@@ -5072,38 +5132,47 @@
       "p_jn7ws9gr"
     ],
     "p_e25cfnzj": [
-      "p_i4c7mf8d"
+      "p_i4c7mf8d",
+      "p_ujclocoq"
+    ],
+    "p_cfacs46s": [
+      "p_i4c7mf8d",
+      "p_ujclocoq"
+    ],
+    "p_t1mfpg75": [
+      "p_cfacs46s",
+      "p_pk0srrk9"
     ]
   },
   "childrenOf": {
-    "p_jrbvidb3g": [
-      "p_3qowa85hd",
-      "p_8mchqpopa"
-    ],
     "p_zobmj6wp8": [
       "p_3qowa85hd",
       "p_8mchqpopa"
     ],
-    "p_3rw58lslc": [
-      "p_3uj910se8"
+    "p_jrbvidb3g": [
+      "p_3qowa85hd",
+      "p_8mchqpopa"
     ],
     "p_bbclq6f9g": [
       "p_3uj910se8",
       "p_4yyrm3723"
     ],
-    "p_p1t2kmcat": [
-      "p_3w3d8mg0r",
-      "p_zcl5kw4oh"
+    "p_3rw58lslc": [
+      "p_3uj910se8"
     ],
     "p_e2d8rcv1d": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
-    "p_fceooch": [
+    "p_p1t2kmcat": [
+      "p_3w3d8mg0r",
+      "p_zcl5kw4oh"
+    ],
+    "p_7hozznt": [
       "p_607tk2v1i",
       "p_rdbqyhp0a"
     ],
-    "p_7hozznt": [
+    "p_fceooch": [
       "p_607tk2v1i",
       "p_rdbqyhp0a"
     ],
@@ -5143,10 +5212,10 @@
       "p_yhg9e9i5y",
       "p_tdvl922cf"
     ],
-    "p_a9c12mk": [
+    "p_q1486bk": [
       "p_anref8x"
     ],
-    "p_q1486bk": [
+    "p_a9c12mk": [
       "p_anref8x"
     ],
     "p_9smqgh317": [
@@ -5177,11 +5246,11 @@
       "p_trylh546h",
       "p_vit2oe3no"
     ],
-    "p_mc6jemk": [
+    "p_9vhcxd8": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
-    "p_9vhcxd8": [
+    "p_mc6jemk": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
@@ -5193,13 +5262,13 @@
       "p_hyvnwes60",
       "p_n2oxqssdd"
     ],
-    "p_yhg9e9i5y": [
+    "p_n4z6lfc2f": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
       "p_4cjwtla35"
     ],
-    "p_n4z6lfc2f": [
+    "p_yhg9e9i5y": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
@@ -5219,12 +5288,12 @@
       "p_zobmj6wp8",
       "p_0dj5jnxhr"
     ],
-    "p_0dj5jnxhr": [
+    "p_zmfl39a5r": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
     ],
-    "p_zmfl39a5r": [
+    "p_0dj5jnxhr": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
@@ -5463,7 +5532,18 @@
       "p_i4c7mf8d"
     ],
     "p_i4c7mf8d": [
-      "p_e25cfnzj"
+      "p_e25cfnzj",
+      "p_cfacs46s"
+    ],
+    "p_ujclocoq": [
+      "p_e25cfnzj",
+      "p_cfacs46s"
+    ],
+    "p_pk0srrk9": [
+      "p_t1mfpg75"
+    ],
+    "p_cfacs46s": [
+      "p_t1mfpg75"
     ]
   },
   "spousesOf": {
@@ -5841,6 +5921,18 @@
     ],
     "p_yehcxg5d": [
       "p_jn7ws9gr"
+    ],
+    "p_cfacs46s": [
+      "p_pk0srrk9"
+    ],
+    "p_pk0srrk9": [
+      "p_cfacs46s"
+    ],
+    "p_t1mfpg75": [
+      "p_p2pltmmk"
+    ],
+    "p_p2pltmmk": [
+      "p_t1mfpg75"
     ]
   }
 }
