@@ -451,7 +451,8 @@
           "caption": "Systrarna Grek samt moster Mathilda Geschwind. Augusta, Maria, Selma, Mathilda Geschwind samt Elin."
         }
       ],
-      "gender": ""
+      "gender": "",
+      "photoCaptions": {}
     },
     "p_3krvppadg": {
       "id": "p_3krvppadg",
@@ -2153,8 +2154,104 @@
       "link": "",
       "photoId": "p_ep1684kzs.jpg",
       "history": "Johan Nathor Grek född 1886-01-18 i Ljusne, utvandrade och avreste 1905-03-10 i resesällskap med sin äldre syster Elin. De reste med ångfartyget Calypso från Göteborg till Hull i England. Johan och systern Elin avreste sedan från Liverpool 15 mars 1905 med fartyget Baltic och anlände till New York 25 mars 1905.\nSystern Elin finns med på passagerarlistan tillsammans med brodern Johan Grek på både fartyget Calypso från Göteborg till Hull 10 mars 1905 och på fartyget Baltic som avgick från Liverpool 15 mars 1905 och anlände till New York 25 mars 1905. Hon står då på passagerarlistan med hemort Amerika medan brodern Johan Nathor står med hemort Ljusne. Hennes ålder är angiven till 22 år och Johans till 18 år. Johan Grek bosatte sig i Chicago. När han först kom till Amerika så arbetade han som \"a farmer\" hos sin Uncle John Geschwind. Därefter arbetade han för Pullman Co. \"making railroad sleeper cars as a Joiner or inside finisher.\"\nGift med Lilliie M. Anderson 1910-09-14 från Shelbyville, Michigan.\nDe fick 4 barn. John Greek dog 1964-01-12 i Plainwell, Allegan, Michigan, USA.\n\n___________________________________________\n\nJohan Nathor Grek - källförteckning\n\n\nNoteringar:\nBorn 1886-01-18 in Ljusne såg, Söderala (X).\nLived 1890 in Söderala (X).\nLived 1900 in Ljusne såg, Ljusne (X).\nMoved 1905-03-04 from Ljusne såg, Ljusne (X) to Chicago, Illinois, USA.\nLived 1910 in Allen, La Salle, Illinois, USA.\nLived 1920 in Allen, La Salle, Illinois, USA.\nLived 1930 in Chicago, Cook, Illinois, USA.\nDied 1964-01-12 in Plainwell, Allegan, Michigan, USA.\n1884.62.37200, Gävleborg, Söderala (X), AI.24D, Husförhör, 1886-1890, 238-0 Ljusne såg, Sida 219 av 338 .",
-      "photoCaptions": {},
-      "photos": []
+      "photos": [
+        {
+          "src": "images/p_ep1684kzs.jpg",
+          "caption": "Johan Nathor Grek"
+        },
+        {
+          "src": "images/1913_Calypso (2).jpg",
+          "caption": "1905\nCalypso. Göteborg - Hull"
+        },
+        {
+          "src": "images/19050310_1.jpg",
+          "caption": "1905\nPassagerarlista Calypso"
+        },
+        {
+          "src": "images/19050310_2.jpg",
+          "caption": "1905\nPassagerarlista Calypso"
+        },
+        {
+          "src": "images/Baltic.jpg",
+          "caption": "1905\nBalticc . Liverpool - New York"
+        },
+        {
+          "src": "images/1905_Baltic.jpg",
+          "caption": "1905\nPassagerarlista Baltic"
+        },
+        {
+          "src": "images/19050307_Helsingen.JPG",
+          "caption": "Tidningsnotis i Helsingen"
+        },
+        {
+          "src": "images/Syskonen_Grek.jpg",
+          "caption": "Syskonen samlade i Chicago, någon gång efter 1907 då Selma anlänt som den siste utvandrade av syskonen."
+        },
+        {
+          "src": "images/Greks.jpeg",
+          "caption": "Augusta, Johan, Elin, en väninna till John samt Carl Westberg"
+        },
+        {
+          "src": "images/Elin.jpg",
+          "caption": "1909\nJohan ståendes till vänster vid sin systerElins bröllop."
+        },
+        {
+          "src": "images/1910.jpg",
+          "caption": "1910\nÄktenskap"
+        },
+        {
+          "src": "images/Äktenskapsförteckning.jpg",
+          "caption": "Äktenskapsförteckning"
+        },
+        {
+          "src": "images/Aktenskapsförteckning_1.jpg",
+          "caption": "Äktenskapsförteckning"
+        },
+        {
+          "src": "images/Johan Grek_1.jpg",
+          "caption": "Johan med fru"
+        },
+        {
+          "src": "images/Johan Nathor.jpg",
+          "caption": "Johan med familj"
+        },
+        {
+          "src": "images/1920 _Johan Grek.jpg",
+          "caption": "1920\nFolkräkning"
+        },
+        {
+          "src": "images/1940_Johan Grek.jpg",
+          "caption": "Folkräkning"
+        },
+        {
+          "src": "images/Greks.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/Greks_1.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/Familjeträff hos Bromans_1.JPG",
+          "caption": ""
+        },
+        {
+          "src": "images/1930_Johan Nathor Grek.jpg",
+          "caption": "1930\nFolkräkning"
+        },
+        {
+          "src": "images/Chicago.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/Gerald Greek.jpg",
+          "caption": "Död 1930-08-22"
+        },
+        {
+          "src": "images/Registerkort.jpg",
+          "caption": ""
+        }
+      ]
     },
     "p_epbrpkbpc": {
       "id": "p_epbrpkbpc",
