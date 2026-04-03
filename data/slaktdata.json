@@ -1110,9 +1110,10 @@
       "link": "",
       "photo": "data:image/jpeg;base64,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",
       "photoId": "Gun.jpg",
-      "history": "",
+      "history": "Det var i Skattkärr, några mil norr om Karlstad, som det hela började i ett rött tvåvånings trähus.\nMin syster Ebon berättade att en morgon kom en tant (barnmorskan) och sa till henne att nu kan du gå in och hälsa på din lillasyster. Det var jag som sett dagens ljus 4 dec 1935. Ebon visste inget och så var det på den tiden barnen hölls utanför.\nJag blev en söt liten flicka med mörkblå ögon och tjockt., lockigt hår. se ev bild. Mamma sa att folk tittade på mig för jag var en sån söt unge, synd det försvann. \nSen flyttade vi till Småland och där började jag 1:a klass och där föddes också min lillebror Leif. Strax därefter flyttade vi till Stockholm. Pappa hade fått jobb på Winborgs occh vi fick tjänstebostad i ett stort hus i Saltsjö-Järla. Det var där vi upplevde de ryska bombplanen som släppte ett antal bomber över området. Om jag inns rätt så var det röda \"klot\" som föll ner och jag tänkte att nu har kriget kommit hit till oss. Men rädd var jag inte, kanske för att mina föräldrar höll sig lugna.\nMen dagen efter på väg till skolan fanns ett stort hål, som en krater, där en bomb hade fallit och vid pappas arbete hade också en bomb fallit.Mycket skriverier i tidningen dagarna efter.\nMamma vantrivdes i Stockholm. Jag tror hon fått en  förlossningsdepression men det visste ingen vad det var på den tiden.\nSå var det dags för nästa flytt till Örebro. Pappa hade fått jobb i Karlslund som verkmästare på Stramitfabriken där. Det tillverkades isolering till byggen och där trivdes han bra och det gjorde mamma också.Vi hade köpt en 2-rumslägenhet i Riksbyggen, nybyggt o modernt.\nJag började i Engelbrektsskolan och sedan Kommunala Flickskolan, 7 årig. Det var efter kriget och nu fick vi läsa engelska som 1:a språk. Innan var det tyska som gällde men nu blev det ändring. De vita bussarna hade kommit till Örebro med fångar från koncentrationslägren och i Engelbrektsskolan var kvinnliga fångar inkvarterade. \nPå onsdagarna  var det ringdans i Stadsparken och på vägen dit passerade vi skolan och där stod de magra kvinnorna med sina rakade huvuden och klädda i nån slags rockar och tittade på oss som var fina för vi skulle på danslekar i Parken. Vi visste ju knappt vad som hänt dem. Det fanns ju inte TV bara radio och det var ju mest pappa som lyssnade på den.\nSkolan var bra och jag var duktig, fick bra betyg i både engelska, tyska, franska, historia o geografi. Mina dåliga ämnen var kemi, fysik och matte som jag ick underkänt i. Gympa var inte heller nåt för mig men balansgång och springa fort (löpning) gick bra men att slå kullerbyttor eller spela brännboll var inte min grej.\n\nEtt sommarlov var jag och 3 andra flickor i min klass till Uppsala och utbidade oss till flyglottor  på F16. Jätteroligt och spännande. Vi fick följa med ett skolflygplan upp på en rundtur. Så hade vi vapenvård och fick lära oss hur vi skulle rapportera ev främmande flyg på väg. \n\nHur hamnade jag sen i Göteorg?  Jag hade en kompis som arbetade på ett advokatkontor och som kund hade de en fru AG ett känt namn i Örebro. En rik änka med mycket bestämda åsikter om det mesta. Hon hade en dotter i Göteborg som hade polio och var förlamad. Hon behövde hjälp med nästan allt.Jag skulle mata henne och klä på henne och vara hennes allt i allo. Jag följde med till Göteborg och de bodde i en flott våning högst upp på Engelbrekstgatan mitt emot Vasakyrkan.Mannen i huset avskydde sin svärmor Fru Ag som lade sig i allt och när hon kom på besök så försvann han. De hade också 2 barn, Jan o Pia som gick i Ebba Petersons privatskola på Avenyn. En tysk flicka var anställd som kock o hushållerska. Dessutom anlitade de en vaktmästare som kom och lyfte frun när hon skulle i eller ur säng resp rullstolen. Jag förstod ju att jag hamnat i en miljonärsfamilj men jag blev vänligt bemött. Men sen blev det skilsmässa och fru Emilsson frågade om jag ville följa med till Gävle dit hon skulle flytta med barnen. Hon hade en syster där. Men jag tackade nej för jag ville stanna i Göteborg oh jag hade fått så många vänner där.\nJag fick ett kontorsjobb på Jungers Verkstad. De tillverkade maskiner på export till hela världen och dessa maskiner tillverkade mineralull till byggen, alltså en anknytning till Stramitfabriken i Karlslund där pappa hade arbetat.\nFinns en anslutning till - Helén arbetar ju i Karlslund och Daniel har väl spelat fotboll i Karlslund. Känns som att ringen är sluten och allt går igen, eller hur?",
       "photoCaptions": {},
-      "photos": []
+      "photos": [],
+      "gender": "F"
     },
     "p_8mchqpopa": {
       "id": "p_8mchqpopa",
@@ -5753,7 +5754,7 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Jan Olof Geschwind\n\nFödd 1853-05-27 Gustavsström, Gåsborn\nKälla: 1920 United States Federal Census, Year: 1920; Census Place: Allen, La Salle, Illinois; Roll: T625_377; Page: 7A; Enumeration District: 85; Image: .\nCitat: Födelsedatum:  abt 1854 Födelseort:  Sweden Bosatt den:  1920 Bostadsort:  Allen, La Salle, Illinois\n\nEmigrerade 1880-10-25 N. Amerika\n\nBosatt 1880-10-25 till 1880-10-25 Hällefors (T), Hyttbacken\n\nArrival 1881 \nKälla: 1900 United States Federal Census, Year: 1900; Census Place: Chicago Ward 34, Cook, Illinois; Roll: T623_290; Page: 14A; Enumeration District: 1114; FHL microfilm: 1240290.\nCitat: Födelsedatum:  May 1853 Födelseort:  Sweden Vigseldatum:  1898 Vigselort:   Bosatt den:  1900 Bostadsort:  Chicago city, Cook, Illinois Ankomstdatum:  1881 Ankomstort:  \n\nGift med Johanna (Hannah) L. Sundin 1883-08-22 Chicago, Illinois, USA\n\nGift med Anna Lovisa (Louise) Andersdotter 1898-08-03 Roseland, Chicago, Cook, Illinois, USA\n\nBosatt 1900 Chicago city, Cook, Illinois\nKälla: 1900 United States Federal Census, Year: 1900; Census Place: Chicago Ward 34, Cook, Illinois; Roll: T623_290; Page: 14A; Enumeration District: 1114; FHL microfilm: 1240290.\nCitat: Födelsedatum:  May 1853 Födelseort:  Sweden Vigseldatum:  1898 Vigselort:   Bosatt den:  1900 Bostadsort:  Chicago city, Cook, Illinois Ankomstdatum:  1881 Ankomstort:  \n\nBosatt 1920 Allen, La Salle, Illinois\nKälla: 1920 United States Federal Census, Year: 1920; Census Place: Allen, La Salle, Illinois; Roll: T625_377; Page: 7A; Enumeration District: 85; Image: .\nCitat: Födelsedatum:  abt 1854 Födelseort:  Sweden Bosatt den:  1920 Bostadsort:  Allen, La Salle, Illinois\n\nDöd 1946-12-05 Chicago, Cook, Illinois, USA\n\nNoteringar\n490.15.44700 Jan Olof Geschwind Födelsebok Gåsborn 1853\n\nJan Olof Geschwind (1853-1946)\nCarl Johan Geschwind (1825-1899) och hans hustru Cajsa Ulla Kock (1827-1914) fick 8 barn:\nDet äldsta barnet var Gustafva Ulrika Geschwind (1851-1946).\nDet näst äldsta barnet (en broder till Gustafva) var Jan Olof Geschwind. \nHan var född den 27maj 1853 i Gåsborn. \nHan bodde på Hyttbacken i Hällefors fram till 25 oktober 1880 då han emigrerade till USA.\nHan gifte sig den 22 augusti 1883 med Johanna (Hannah) L. Sundin (1858-1897) i Chicago Illinois.\nMed henne fick han 4 barn:\nJennie Geschwind (1884-1902)\nMamie Geschwind (1887-?)\nElmer David Geschwind (1891-1982)\nMabel Geschwind (1895-1924)\n\nHustrun Johanna (Hannah) L. Sundin dog 1897.\n\nJan Olof Geshwind gifte om sig 27 augusti 1898 med Anna Lovisa (Louise) Andersdotter (1864-1944)\nMed henne fick han 4 barn:\nElfreda Pauline Geschwind (1899-1930)  (Gift Johnson)\nPaul Emanuel Geschwind (1902-?) (Tvillingbror till Wilhelm)\nPhilip Wilhelm Geschwind (1902-1971) (Tvillingbror till Paul)\nHelen Catarina Geschwind (1903-1988)\n________________________________\nSverige, förteckning över emigranter, 1783-1991:\n\nNamn:  Jan Olof Geschwind\nKön:  Man\nFödelsedatum:  27 maj 1853\nFödelseort:  Gåsborn, Värmland\nAvresedatum:  25 okt 1880\nAvreseort:  Hällefors, Örebro\nAnkomstort:  Nordamerika\nYrke eller relation:  Valsverksarbetare\nCivilstånd:  Unmarried (Ogift)\nAnteckningar:  Travels alone\nSida:  108\nSida i husförhörslängd:  24\nHushållsmedlemmar:  \nNamn\nJan Olof Geschwind \n\n_________________________________\nSverige, passagerarlistor, 1869 - 1951:\n\nNamn  J Geschvind\nAvresedatum  5 Nov 1880\nAvreseort  Göteborg, Göteborg och Bohus, Sverige\nFartygsnamn  Rollo\nFödelsedatum  abt 1853\nFödelseort  Hellfors Örebro\nÅlder  27\nDestination  Hull, England\n\n_____________________________________________\nUSA:s federala folkräkning från 1900\n\nNamn  John Geschwind\nÅlder  47\nFödelsedatum  May 1853\nFödelseort  Sweden\nBodde år 1900  Chicago Ward 34, Cook, Illinois\nDel av stad  34\nGata  State Street\nHusnummer  10937\nArknummer  14A\nOrdningsnummer för bostadsvisitation  173\nFamiljnummer  253\nHärstamning  White\nKön  Male\nImmigrerade år  1881\nSläktskapsförhållande till familjeöverhuvud  Head\nCivilstånd  Married\nMake/makas namn  Annie Geschwind\nVigselår  1898\nGift antal år  2\nFaderns födelseort  Sweden\nModerns födelseort  Sweden\nAntal år i USA  19\nNaturalisering  Na\nYrke  Day Laborer\nKan läsa  Yes\nKan skriva  Yes\nKan prata engelska  Yes\nÄgd eller hyrd bostad  O\nHem – ägt eller belånat  M\nFarm eller hus  H\nHushållsmedlemmar  \nNamn  Ålder\nJohn Geschwind  \nAnnie Geschwind  \nJennie Geschwind  \nMamie Geschwind  \nElmer Geschwind  \nMable Geschwind  \nFrieda Geschwind  \n\n\n\n_____________________________________________\n1920 års federala folkräkning i USA::\n\nNamn  John Geschwind\nÅlder  66\nFödelseår  abt 1854\nFödelseort  Sweden\nBodde år 1920  Allen, La Salle, Illinois\nHusnummer  Farm\nHärstamning  White\nKön  Male\nSläktskapsförhållande till familjeöverhuvud  Head\nCivilstånd  Married\nMake/makas namn  Anna Geschwind\nFaderns födelseort  Sweden\nModerns födelseort  Sweden\nModersmål  Swedish\nTalar engelska  No\nYrke  Farmer\nIndustri  Farm\nYrkesområde  Own Account\nBostad – ägd eller hyrd  Rent\nNaturaliseringsstatus  Alien\nKan läsa  No\nKan skriva  No\nHushållsmedlemmar  \nNamn  Ålder\nJohn Geschwind  66\nAnna Geschwind  55\nElmer Geschwind  28\nMabel Geschwind  24\nFrieda Geschwind  20\nPaul Geschwind  17\nPhillip Geschwind  17\nHelen Geschwind  16\n\n_______________________________________________________________________\n\nGåsborn (S) C:4 (1838-1854) Bild 83 (AID: v6671.b83, NAD: SE/VA/13174)<br>\n      Gåsborns kyrkoarkiv, Födelse- och dopböcker, SE/VA/13174/C/4 (1838-1854), bildid: C0037602_00088<br>\n      <a href=\"https://sok.riksarkivet.se/bildvisning/C0037602_00088\">Födelseboken</a><br><br>\n\n      Gåsborn (S) AI:12 (1856-1860) Bild 170 / sid 164 (AID: v11484.b170.s164, NAD: SE/VA/13174)<br>\n      Gåsborns kyrkoarkiv, Husförhörslängder, SE/VA/13174/A I/12 (1856-1860), bildid: C0037591_00175, sida 164<br>\n      <a href=\"https://sok.riksarkivet.se/bildvisning/C0037591_00175\">Husförhörslängd</a><br><br>\n\n      Gåsborn (S) AI:13 (1861-1865) Bild 179 / sid 168 (AID: v11485.b179.s168, NAD: SE/VA/13174)<br>\n      Gåsborns kyrkoarkiv, Husförhörslängder, SE/VA/13174/A I/13 (1861-1865), bildid: C0037592_00169, sida 168<br>\n      <a href=\"https://sok.riksarkivet.se/bildvisning/C0037592_00169\">Husförhörslängd</a><br><br>\n\n      Hällefors (T) AI:14aa (1871-1880) Bild 52 / sid 45 (AID: v51484.b52.s45, NAD: SE/ULA/10427)<br>\n      Hällefors kyrkoarkiv, Husförhörslängder, SE/ULA/10427/A I/14 aa (1871-1880), bildid: C0001952_00046, sida 45<br>\n      <a href=\"https://sok.riksarkivet.se/bildvisning/C0001952_00046\">Husförhörslängd</a><br><br>\n\n      Hällefors (T) AI:14aa (1871-1880) Bild 38 / sid 31 (AID: v51484.b38.s31, NAD: SE/ULA/10427)<br>\n      Hällefors kyrkoarkiv, Husförhörslängder, SE/ULA/10427/A I/14 aa (1871-1880), bildid: C0001952_00032, sida 31<br>\n      <a href=\"https://sok.riksarkivet.se/bildvisning/C0001952_00032\">Husförhörslängd</a><br><br>\n\n      Hällefors (T) AI:14aa (1871-1880) Bild 31 / sid 24 (AID: v51484.b31.s24, NAD: SE/ULA/10427)<br>\n      Hällefors kyrkoarkiv, Husförhörslängder, SE/ULA/10427/A I/14 aa (1871-1880), bildid: C0001952_00025, sida 24<br>\n      <a href=\"https://sok.riksarkivet.se/bildvisning/C0001952_00025\">Husförhörslängd</a><br>\n\n___________________________\n\nMin farfars mor, Gustafva Geschwind, var äldst i en syskonskara på 8 barn till smeden Carl Johan Geschwind.\n\nEtt av barnen dog bara 10 månader gammal och av de övriga 7 så utvandrade 4 st till USA eller NordAmerika som man sa på den tiden.\n\nDen äldste i syskonskaran Geschwind som utvandrade var Jan (Johan) Olof Geschwind född 1853-05-27. Han var en två år yngre bror till Gustafva Geschwind (Leif´s farfars mor) och han utvandrade till USA 1880-10-25.\n\nHan avreste 5 november 1880 till Hull i England från Göteborg med ångfartyget Rollo. Han reste ensam och kom till Chicago.\n\nHan gifte sig med Johanna (Hannah) L. Sundin 1883-08-22 i Chicago, Illinois, USA. Johanna Sundin var född i Mögrevsundet i Gåsborns församling 1858-03-03 och hon hade utvandrat till Chicago i USA 1882-08-25.\n\nMed henne fick han\ndottern Jennie Geschwind född 1884-11 i Illinois, USA,\ndottern Mamie Geschwind född 1887-01 i Illinois, USA,\nsonen Elmer David Geschwind född 1891-11-19 i Chicago, Illinois, USA samt\ndottern Mabel A. Geschwind född 1895-09-09 i Illinois, USA.\n\nHustrin Johanna Sundin dog 1897-07-09 i Chicago, Cook, Illinois, USA.\n\nHan gifte sig sedan med Anna Lovisa (Louise) Andersdotter 1898-08-03 i Roseland, Chicago, Cook, Illinois, USA\n\nAnna Lovisa var född 1864-06-15 i Grava, Trangärdstorp i Värmland. Hon hade emigrerat till USA 1885-04-17.\n\nMed henne fick han\ndottern Elfrida Pauline Geschwind född 1899-08-06 i Chicago, Illinois,\ntvillingsonen Philip Wilhelm Geschwind född 1902-07-07 i Chicago, Illinois,\ntvillingsonen Paul Emanuel Geschwind född 1902-07-07 i Chicago, Illinois samt\ndottern Helen Catarina Geschwind född 1903-12-28 i Chicago, Illinois.\n\nVid folkräkningen 1900 står han som ”Day Laborer” vilket väl får översättas med dagsverksarbetare.\n\nVid folkräkningen 1910 står han som Farmer (Bonde) i Allen, Lasalle och jag tror att första tiden som Johan Grek kom till USA så var han som ”a farmers hand” (dräng) hos sin uncle John Geschwind.\n\nVid folkräkningen 1920 står han fortfarande som Farmer (Bonde) i Allen, Lasalle .\nVid folkräkningen 1930 står han fortfarande som Farmer (Bonde) i Allen, Lasalle .\nVid folkräkningen 1940 står han och hustrun som boendes hos dottern Helen i Chicago.\n\nHan avled där 1946-12-05. Hustrun Anna avled 2 år tidigare 1944-01-15 i Chicago.",
+      "history": "Jan Olof Geschwind\n\nFödd 1853-05-27 Gustavsström, Gåsborn\nKälla: 1920 United States Federal Census, Year: 1920; Census Place: Allen, La Salle, Illinois; Roll: T625_377; Page: 7A; Enumeration District: 85; Image: .\nCitat: Födelsedatum:  abt 1854 Födelseort:  Sweden Bosatt den:  1920 Bostadsort:  Allen, La Salle, Illinois\n\nEmigrerade 1880-10-25 N. Amerika\n\nBosatt 1880-10-25 till 1880-10-25 Hällefors (T), Hyttbacken\n\nArrival 1881 \nKälla: 1900 United States Federal Census, Year: 1900; Census Place: Chicago Ward 34, Cook, Illinois; Roll: T623_290; Page: 14A; Enumeration District: 1114; FHL microfilm: 1240290.\nCitat: Födelsedatum:  May 1853 Födelseort:  Sweden Vigseldatum:  1898 Vigselort:   Bosatt den:  1900 Bostadsort:  Chicago city, Cook, Illinois Ankomstdatum:  1881 Ankomstort:  \n\nGift med Johanna (Hannah) L. Sundin 1883-08-22 Chicago, Illinois, USA\n\nGift med Anna Lovisa (Louise) Andersdotter 1898-08-03 Roseland, Chicago, Cook, Illinois, USA\n\nBosatt 1900 Chicago city, Cook, Illinois\nKälla: 1900 United States Federal Census, Year: 1900; Census Place: Chicago Ward 34, Cook, Illinois; Roll: T623_290; Page: 14A; Enumeration District: 1114; FHL microfilm: 1240290.\nCitat: Födelsedatum:  May 1853 Födelseort:  Sweden Vigseldatum:  1898 Vigselort:   Bosatt den:  1900 Bostadsort:  Chicago city, Cook, Illinois Ankomstdatum:  1881 Ankomstort:  \n\nBosatt 1920 Allen, La Salle, Illinois\nKälla: 1920 United States Federal Census, Year: 1920; Census Place: Allen, La Salle, Illinois; Roll: T625_377; Page: 7A; Enumeration District: 85; Image: .\nCitat: Födelsedatum:  abt 1854 Födelseort:  Sweden Bosatt den:  1920 Bostadsort:  Allen, La Salle, Illinois\n\nDöd 1946-12-05 Chicago, Cook, Illinois, USA\n\nNoteringar\n490.15.44700 Jan Olof Geschwind Födelsebok Gåsborn 1853\n\nJan Olof Geschwind (1853-1946)\nCarl Johan Geschwind (1825-1899) och hans hustru Cajsa Ulla Kock (1827-1914) fick 8 barn:\nDet äldsta barnet var Gustafva Ulrika Geschwind (1851-1946).\nDet näst äldsta barnet (en broder till Gustafva) var Jan Olof Geschwind. \nHan var född den 27maj 1853 i Gåsborn. \nHan bodde på Hyttbacken i Hällefors fram till 25 oktober 1880 då han emigrerade till USA.\nHan gifte sig den 22 augusti 1883 med Johanna (Hannah) L. Sundin (1858-1897) i Chicago Illinois.\nMed henne fick han 4 barn:\nJennie Geschwind (1884-1902)\nMamie Geschwind (1887-?)\nElmer David Geschwind (1891-1982)\nMabel Geschwind (1895-1924)\n\nHustrun Johanna (Hannah) L. Sundin dog 1897.\n\nJan Olof Geshwind gifte om sig 27 augusti 1898 med Anna Lovisa (Louise) Andersdotter (1864-1944)\nMed henne fick han 4 barn:\nElfreda Pauline Geschwind (1899-1930)  (Gift Johnson)\nPaul Emanuel Geschwind (1902-?) (Tvillingbror till Wilhelm)\nPhilip Wilhelm Geschwind (1902-1971) (Tvillingbror till Paul)\nHelen Catarina Geschwind (1903-1988)\n________________________________\nSverige, förteckning över emigranter, 1783-1991:\n\nNamn:  Jan Olof Geschwind\nKön:  Man\nFödelsedatum:  27 maj 1853\nFödelseort:  Gåsborn, Värmland\nAvresedatum:  25 okt 1880\nAvreseort:  Hällefors, Örebro\nAnkomstort:  Nordamerika\nYrke eller relation:  Valsverksarbetare\nCivilstånd:  Unmarried (Ogift)\nAnteckningar:  Travels alone\nSida:  108\nSida i husförhörslängd:  24\nHushållsmedlemmar:  \nNamn\nJan Olof Geschwind \n\n_________________________________\nSverige, passagerarlistor, 1869 - 1951:\n\nNamn  J Geschvind\nAvresedatum  5 Nov 1880\nAvreseort  Göteborg, Göteborg och Bohus, Sverige\nFartygsnamn  Rollo\nFödelsedatum  abt 1853\nFödelseort  Hellfors Örebro\nÅlder  27\nDestination  Hull, England\n\n_____________________________________________\nUSA:s federala folkräkning från 1900\n\nNamn  John Geschwind\nÅlder  47\nFödelsedatum  May 1853\nFödelseort  Sweden\nBodde år 1900  Chicago Ward 34, Cook, Illinois\nDel av stad  34\nGata  State Street\nHusnummer  10937\nArknummer  14A\nOrdningsnummer för bostadsvisitation  173\nFamiljnummer  253\nHärstamning  White\nKön  Male\nImmigrerade år  1881\nSläktskapsförhållande till familjeöverhuvud  Head\nCivilstånd  Married\nMake/makas namn  Annie Geschwind\nVigselår  1898\nGift antal år  2\nFaderns födelseort  Sweden\nModerns födelseort  Sweden\nAntal år i USA  19\nNaturalisering  Na\nYrke  Day Laborer\nKan läsa  Yes\nKan skriva  Yes\nKan prata engelska  Yes\nÄgd eller hyrd bostad  O\nHem – ägt eller belånat  M\nFarm eller hus  H\nHushållsmedlemmar  \nNamn  Ålder\nJohn Geschwind  \nAnnie Geschwind  \nJennie Geschwind  \nMamie Geschwind  \nElmer Geschwind  \nMable Geschwind  \nFrieda Geschwind  \n\n\n\n_____________________________________________\n1920 års federala folkräkning i USA::\n\nNamn  John Geschwind\nÅlder  66\nFödelseår  abt 1854\nFödelseort  Sweden\nBodde år 1920  Allen, La Salle, Illinois\nHusnummer  Farm\nHärstamning  White\nKön  Male\nSläktskapsförhållande till familjeöverhuvud  Head\nCivilstånd  Married\nMake/makas namn  Anna Geschwind\nFaderns födelseort  Sweden\nModerns födelseort  Sweden\nModersmål  Swedish\nTalar engelska  No\nYrke  Farmer\nIndustri  Farm\nYrkesområde  Own Account\nBostad – ägd eller hyrd  Rent\nNaturaliseringsstatus  Alien\nKan läsa  No\nKan skriva  No\nHushållsmedlemmar  \nNamn  Ålder\nJohn Geschwind  66\nAnna Geschwind  55\nElmer Geschwind  28\nMabel Geschwind  24\nFrieda Geschwind  20\nPaul Geschwind  17\nPhillip Geschwind  17\nHelen Geschwind  16\n\n_______________________________________________________________________\n\nGåsborn (S) C:4 (1838-1854) Bild 83 (AID: v6671.b83, NAD: SE/VA/13174)<br>\n      Gåsborns kyrkoarkiv, Födelse- och dopböcker, SE/VA/13174/C/4 (1838-1854), bildid: C0037602_00088<br>\n      <a href=\"https://sok.riksarkivet.se/bildvisning/C0037602_00088\">Födelseboken</a><br><br>\n\n      Gåsborn (S) AI:12 (1856-1860) Bild 170 / sid 164 (AID: v11484.b170.s164, NAD: SE/VA/13174)<br>\n      Gåsborns kyrkoarkiv, Husförhörslängder, SE/VA/13174/A I/12 (1856-1860), bildid: C0037591_00175, sida 164<br>\n      <a href=\"https://sok.riksarkivet.se/bildvisning/C0037591_00175\">Husförhörslängd</a><br><br>\n\n      Gåsborn (S) AI:13 (1861-1865) Bild 179 / sid 168 (AID: v11485.b179.s168, NAD: SE/VA/13174)<br>\n      Gåsborns kyrkoarkiv, Husförhörslängder, SE/VA/13174/A I/13 (1861-1865), bildid: C0037592_00169, sida 168<br>\n      <a href=\"https://sok.riksarkivet.se/bildvisning/C0037592_00169\">Husförhörslängd</a><br><br>\n\n      Hällefors (T) AI:14aa (1871-1880) Bild 52 / sid 45 (AID: v51484.b52.s45, NAD: SE/ULA/10427)<br>\n      Hällefors kyrkoarkiv, Husförhörslängder, SE/ULA/10427/A I/14 aa (1871-1880), bildid: C0001952_00046, sida 45<br>\n      <a href=\"https://sok.riksarkivet.se/bildvisning/C0001952_00046\">Husförhörslängd</a><br><br>\n\n      Hällefors (T) AI:14aa (1871-1880) Bild 38 / sid 31 (AID: v51484.b38.s31, NAD: SE/ULA/10427)<br>\n      Hällefors kyrkoarkiv, Husförhörslängder, SE/ULA/10427/A I/14 aa (1871-1880), bildid: C0001952_00032, sida 31<br>\n      <a href=\"https://sok.riksarkivet.se/bildvisning/C0001952_00032\">Husförhörslängd</a><br><br>\n\n      Hällefors (T) AI:14aa (1871-1880) Bild 31 / sid 24 (AID: v51484.b31.s24, NAD: SE/ULA/10427)<br>\n      Hällefors kyrkoarkiv, Husförhörslängder, SE/ULA/10427/A I/14 aa (1871-1880), bildid: C0001952_00025, sida 24<br>\n      <a href=\"https://sok.riksarkivet.se/bildvisning/C0001952_00025\">Husförhörslängd</a><br>\n\n___________________________\n\nMin farfars mor, Gustafva Geschwind, var äldst i en syskonskara på 8 barn till smeden Carl Johan Geschwind.\n\nEtt av barnen dog bara 10 månader gammal och av de övriga 7 så utvandrade 4 st till USA eller NordAmerika som man sa på den tiden.\n\nDen äldste i syskonskaran Geschwind som utvandrade var Jan (Johan) Olof Geschwind född 1853-05-27. Han var en två år yngre bror till Gustafva Geschwind (Leif´s farfars mor) och han utvandrade till USA 1880-10-25.\n\nHan avreste 5 november 1880 till Hull i England från Göteborg med ångfartyget Rollo. Han reste ensam och kom till Chicago.\n\nHan gifte sig med Johanna (Hannah) L. Sundin 1883-08-22 i Chicago, Illinois, USA. Johanna Sundin var född i Mögrevsundet i Gåsborns församling 1858-03-03 och hon hade utvandrat till Chicago i USA 1882-08-25.\n\nMed henne fick han\ndottern Jennie Geschwind född 1884-11 i Illinois, USA,\ndottern Mamie Geschwind född 1887-01 i Illinois, USA,\nsonen Elmer David Geschwind född 1891-11-19 i Chicago, Illinois, USA samt\ndottern Mabel A. Geschwind född 1895-09-09 i Illinois, USA.\n\nHustrin Johanna Sundin dog 1897-07-09 i Chicago, Cook, Illinois, USA.\n\nHan gifte sig sedan med Anna Lovisa (Louise) Andersdotter 1898-08-03 i Roseland, Chicago, Cook, Illinois, USA\n\nAnna Lovisa var född 1864-06-15 i Grava, Trangärdstorp i Värmland. Hon hade emigrerat till USA 1885-04-17.\n\nMed henne fick han\ndottern Elfrida Pauline Geschwind född 1899-08-06 i Chicago, Illinois,\ntvillingsonen Philip Wilhelm Geschwind född 1902-07-07 i Chicago, Illinois,\ntvillingsonen Paul Emanuel Geschwind född 1902-07-07 i Chicago, Illinois samt\ndottern Helen Catarina Geschwind född 1903-12-28 i Chicago, Illinois.\n\nVid folkräkningen 1900 står han som ”Day Laborer” vilket väl får översättas med dagsverksarbetare.\n\nVid folkräkningen 1910 står han som Farmer (Bonde) i Allen, Lasalle och jag tror att första tiden som Johan Grek kom till USA så var han som ”a farmers hand” (dräng) hos sin uncle John Geschwind.\n\nVid folkräkningen 1920 står han fortfarande som Farmer (Bonde) i Allen, Lasalle .\nVid folkräkningen 1930 står han fortfarande som Farmer (Bonde) i Allen, Lasalle .\nVid folkräkningen 1940 står han och hustrun som boendes hos dottern Helen i Chicago.\n\nHan avled där 1946-12-05. Hustrun Anna avled 2 år tidigare 1944-01-15 i Chicago.\n\n________________________\n\nJan Olof Geschwind - källförteckning\n\n\nGåsborn (S) C:4 (1838-1854) Bild 83 (AID: v6671.b83, NAD: SE/VA/13174)\nGåsborns kyrkoarkiv, Födelse- och dopböcker, SE/VA/13174/C/4 (1838-1854), bildid: C0037602_00088\nFödelseboken\n\nGåsborn (S) AI:12 (1856-1860) Bild 170 / sid 164 (AID: v11484.b170.s164, NAD: SE/VA/13174)\nGåsborns kyrkoarkiv, Husförhörslängder, SE/VA/13174/A I/12 (1856-1860), bildid: C0037591_00175, sida 164\nHusförhörslängd\n\nGåsborn (S) AI:13 (1861-1865) Bild 179 / sid 168 (AID: v11485.b179.s168, NAD: SE/VA/13174)\nGåsborns kyrkoarkiv, Husförhörslängder, SE/VA/13174/A I/13 (1861-1865), bildid: C0037592_00169, sida 168\nHusförhörslängd\n\nHällefors (T) AI:14aa (1871-1880) Bild 52 / sid 45 (AID: v51484.b52.s45, NAD: SE/ULA/10427)\nHällefors kyrkoarkiv, Husförhörslängder, SE/ULA/10427/A I/14 aa (1871-1880), bildid: C0001952_00046, sida 45\nHusförhörslängd\n\nHällefors (T) AI:14aa (1871-1880) Bild 38 / sid 31 (AID: v51484.b38.s31, NAD: SE/ULA/10427)\nHällefors kyrkoarkiv, Husförhörslängder, SE/ULA/10427/A I/14 aa (1871-1880), bildid: C0001952_00032, sida 31\nHusförhörslängd\n\nHällefors (T) AI:14aa (1871-1880) Bild 31 / sid 24 (AID: v51484.b31.s24, NAD: SE/ULA/10427)\nHällefors kyrkoarkiv, Husförhörslängder, SE/ULA/10427/A I/14 aa (1871-1880), bildid: C0001952_00025, sida 24\nHusförhörslängd",
       "photos": [],
       "photoCaptions": {}
     },
@@ -6330,10 +6331,7 @@
       "p_r6gu9qm8a",
       "p_apnevfd1e"
     ],
-    "p_bghaex86f": [
-      null,
-      null
-    ],
+    "p_bghaex86f": [],
     "p_bhz72tf5h": [
       "p_k9dqg17ug",
       "p_9smqgh317"
@@ -6491,8 +6489,7 @@
       "p_ccnmbpk25"
     ],
     "p_fsyurpw6g": [
-      "p_sh6rs3ypi",
-      null
+      "p_sh6rs3ypi"
     ],
     "p_4cjwtla35": [
       "p_yhg9e9i5y",
@@ -6535,8 +6532,7 @@
       "p_epbrpkbpc"
     ],
     "p_j0llm0bss": [
-      "p_mcny211om",
-      null
+      "p_mcny211om"
     ],
     "p_mcny211om": [
       "p_njj1v6yja",
@@ -6555,8 +6551,7 @@
       "p_11s7733na"
     ],
     "p_4yyrm3723": [
-      "p_bbclq6f9g",
-      null
+      "p_bbclq6f9g"
     ],
     "p_myxn3zrx2": [
       "p_k9dqg17ug",
@@ -6619,8 +6614,7 @@
       "p_zxsn4f7g"
     ],
     "p_8jgv67fq": [
-      "p_8ep79tnj",
-      null
+      "p_8ep79tnj"
     ],
     "p_nqxr123d8": [
       "p_0j5pylfd",
@@ -6715,16 +6709,13 @@
       "p_ntqz8x0y"
     ],
     "p_50jpwsvr": [
-      "p_mcny211om",
-      null
+      "p_mcny211om"
     ],
     "p_ceoa5gnk": [
-      "p_k7ppxbyh9",
-      null
+      "p_k7ppxbyh9"
     ],
     "p_o7zbzytr5": [
-      "p_30hacm6sw",
-      null
+      "p_30hacm6sw"
     ],
     "p_cj5mk7jm": [
       "p_k7ppxbyh9",
@@ -6786,10 +6777,7 @@
       "p_k9dqg17ug",
       "p_9smqgh317"
     ],
-    "p_o5ifmsge": [
-      null,
-      null
-    ],
+    "p_o5ifmsge": [],
     "p_aq1u3undm": [
       "p_k9dqg17ug",
       "p_9smqgh317"
@@ -6817,6 +6805,509 @@
     "p_4bn3zm19": [
       "p_7wucmui9",
       "p_faax8lven"
+    ]
+  },
+  "childrenOf": {
+    "p_zobmj6wp8": [
+      "p_3qowa85hd",
+      "p_8mchqpopa"
+    ],
+    "p_jrbvidb3g": [
+      "p_3qowa85hd",
+      "p_8mchqpopa"
+    ],
+    "p_bbclq6f9g": [
+      "p_3uj910se8",
+      "p_4yyrm3723"
+    ],
+    "p_3rw58lslc": [
+      "p_3uj910se8"
+    ],
+    "p_e2d8rcv1d": [
+      "p_3w3d8mg0r",
+      "p_zcl5kw4oh"
+    ],
+    "p_p1t2kmcat": [
+      "p_3w3d8mg0r",
+      "p_zcl5kw4oh"
+    ],
+    "p_7hozznt": [
+      "p_607tk2v1i",
+      "p_rdbqyhp0a"
+    ],
+    "p_fceooch": [
+      "p_607tk2v1i",
+      "p_rdbqyhp0a"
+    ],
+    "p_zdy1zgf": [
+      "p_67029sp3z",
+      "p_rfz7mk0kt",
+      "p_9dgcn78",
+      "p_ydxzk5ala"
+    ],
+    "p_mq1wnzd": [
+      "p_67029sp3z",
+      "p_rfz7mk0kt",
+      "p_9dgcn78",
+      "p_ydxzk5ala"
+    ],
+    "p_9dgcn78": [
+      "p_6c6wnb9",
+      "p_7hozznt",
+      "p_mc6jemk"
+    ],
+    "p_bkayc4w": [
+      "p_6c6wnb9",
+      "p_7hozznt",
+      "p_mc6jemk"
+    ],
+    "p_r6gu9qm8a": [
+      "p_99wt1e8e6",
+      "p_bbclq6f9g",
+      "p_bkayc4w",
+      "p_yhg9e9i5y",
+      "p_tdvl922cf"
+    ],
+    "p_apnevfd1e": [
+      "p_99wt1e8e6",
+      "p_bbclq6f9g",
+      "p_bkayc4w",
+      "p_yhg9e9i5y",
+      "p_tdvl922cf"
+    ],
+    "p_q1486bk": [
+      "p_anref8x"
+    ],
+    "p_a9c12mk": [
+      "p_anref8x"
+    ],
+    "p_k9dqg17ug": [
+      "p_bhz72tf5h",
+      "p_mq1wnzd",
+      "p_7cvmjv393",
+      "p_vkvmoix0v",
+      "p_myxn3zrx2",
+      "p_5dx7ywrb5",
+      "p_faax8lven",
+      "p_aq1u3undm",
+      "p_xngn4xyr5"
+    ],
+    "p_9smqgh317": [
+      "p_bhz72tf5h",
+      "p_mq1wnzd",
+      "p_7cvmjv393",
+      "p_vkvmoix0v",
+      "p_myxn3zrx2",
+      "p_5dx7ywrb5",
+      "p_faax8lven",
+      "p_aq1u3undm",
+      "p_xngn4xyr5"
+    ],
+    "p_n2oxqssdd": [
+      "p_bm3vtw18s",
+      "p_ep1684kzs",
+      "p_t1p2rtl5z",
+      "p_zdy1zgf",
+      "p_37jcbtegu",
+      "p_3krvppadg",
+      "p_trylh546h",
+      "p_vit2oe3no"
+    ],
+    "p_ymb6wc3q0": [
+      "p_bm3vtw18s",
+      "p_ep1684kzs",
+      "p_t1p2rtl5z",
+      "p_zdy1zgf",
+      "p_37jcbtegu",
+      "p_3krvppadg",
+      "p_trylh546h",
+      "p_vit2oe3no"
+    ],
+    "p_9vhcxd8": [
+      "p_c2jyk4pds",
+      "p_czyydy2g7"
+    ],
+    "p_mc6jemk": [
+      "p_c2jyk4pds",
+      "p_czyydy2g7"
+    ],
+    "p_j0llm0bss": [
+      "p_hyvnwes60",
+      "p_n2oxqssdd"
+    ],
+    "p_epbrpkbpc": [
+      "p_hyvnwes60",
+      "p_n2oxqssdd"
+    ],
+    "p_n4z6lfc2f": [
+      "p_ir25hn919",
+      "p_ir4u61dqa",
+      "p_jqtxmllar",
+      "p_4cjwtla35"
+    ],
+    "p_yhg9e9i5y": [
+      "p_ir25hn919",
+      "p_ir4u61dqa",
+      "p_jqtxmllar",
+      "p_4cjwtla35"
+    ],
+    "p_6c6wnb9": [
+      "p_p1t2kmcat",
+      "p_q1486bk",
+      "p_r9oewbcw0",
+      "p_zobmj6wp8",
+      "p_0dj5jnxhr"
+    ],
+    "p_ovdwahd": [
+      "p_p1t2kmcat",
+      "p_q1486bk",
+      "p_r9oewbcw0",
+      "p_zobmj6wp8",
+      "p_0dj5jnxhr"
+    ],
+    "p_zmfl39a5r": [
+      "p_t22zhc497",
+      "p_vomcn89yz",
+      "p_z4rxd74pc"
+    ],
+    "p_0dj5jnxhr": [
+      "p_t22zhc497",
+      "p_vomcn89yz",
+      "p_z4rxd74pc"
+    ],
+    "p_odstubz": [
+      "p_ovdwahd"
+    ],
+    "p_00tgdjd": [
+      "p_ovdwahd"
+    ],
+    "p_lx16wimrx": [
+      "p_odstubz",
+      "p_ybat0ucd",
+      "p_pfyko8vm"
+    ],
+    "p_77kdyij48": [
+      "p_odstubz",
+      "p_ybat0ucd",
+      "p_pfyko8vm"
+    ],
+    "p_4ijlwzjnh": [
+      "p_00tgdjd"
+    ],
+    "p_sh6rs3ypi": [
+      "p_00tgdjd",
+      "p_w9az526b1",
+      "p_fsyurpw6g"
+    ],
+    "p_f72wwgf93": [
+      "p_w9az526b1"
+    ],
+    "p_l0yb444du": [
+      "p_r6gu9qm8a"
+    ],
+    "p_cntfcxxpa": [
+      "p_r6gu9qm8a"
+    ],
+    "p_l0tiqibe0": [
+      "p_apnevfd1e",
+      "p_2fl7lqip9",
+      "p_w45w1n6s2"
+    ],
+    "p_jtw2yt4vg": [
+      "p_apnevfd1e",
+      "p_2fl7lqip9",
+      "p_w45w1n6s2"
+    ],
+    "p_k0cytigk5": [
+      "p_1766082418649",
+      "p_jtw2yt4vg",
+      "p_cntfcxxpa"
+    ],
+    "p_11s7733na": [
+      "p_1766082418649",
+      "p_jtw2yt4vg",
+      "p_cntfcxxpa"
+    ],
+    "p_izcueyhnf": [
+      "p_lx16wimrx"
+    ],
+    "p_tnf5rvj1f": [
+      "p_lx16wimrx"
+    ],
+    "p_dt9kt6mky": [
+      "p_77kdyij48",
+      "p_vyxvqyny",
+      "p_cc7u175f",
+      "p_1v06hecw",
+      "p_cp4g43fk",
+      "p_9556pk1r",
+      "p_d4ab27xr",
+      "p_bj9rgytn"
+    ],
+    "p_ccnmbpk25": [
+      "p_77kdyij48",
+      "p_vyxvqyny",
+      "p_cc7u175f",
+      "p_1v06hecw",
+      "p_cp4g43fk",
+      "p_9556pk1r",
+      "p_d4ab27xr",
+      "p_bj9rgytn"
+    ],
+    "p_mcny211om": [
+      "p_j0llm0bss",
+      "p_50jpwsvr"
+    ],
+    "p_njj1v6yja": [
+      "p_mcny211om"
+    ],
+    "p_r5i80yx4z": [
+      "p_mcny211om"
+    ],
+    "p_hvl6b0sns": [
+      "p_njj1v6yja"
+    ],
+    "p_2crerqvof": [
+      "p_njj1v6yja"
+    ],
+    "p_zcilnunxs": [
+      "p_hvl6b0sns"
+    ],
+    "p_0bh8rf5l3": [
+      "p_hvl6b0sns"
+    ],
+    "p_ysll51iu": [
+      "p_e0q1n5ln"
+    ],
+    "p_anref8x": [
+      "p_e0q1n5ln"
+    ],
+    "p_p8q9agem": [
+      "p_a9c12mk"
+    ],
+    "p_lagozehv": [
+      "p_a9c12mk"
+    ],
+    "p_k7ppxbyh9": [
+      "p_ymb6wc3q0",
+      "p_ceoa5gnk",
+      "p_cj5mk7jm",
+      "p_b5agszs4b"
+    ],
+    "p_30hacm6sw": [
+      "p_ymb6wc3q0",
+      "p_o7zbzytr5",
+      "p_cj5mk7jm",
+      "p_b5agszs4b"
+    ],
+    "p_y51vrf3yg": [
+      "p_k7ppxbyh9"
+    ],
+    "p_tkxn8dkh4": [
+      "p_k7ppxbyh9"
+    ],
+    "p_9dzyae8c0": [
+      "p_y51vrf3yg"
+    ],
+    "p_er2yppmdt": [
+      "p_y51vrf3yg"
+    ],
+    "p_c9wudsgyf": [
+      "p_9dzyae8c0"
+    ],
+    "p_xyk5tv6yt": [
+      "p_9dzyae8c0"
+    ],
+    "p_f8vd4gljl": [
+      "p_c9wudsgyf"
+    ],
+    "p_49qqqrb82": [
+      "p_c9wudsgyf"
+    ],
+    "p_cut7c3i5i": [
+      "p_f8vd4gljl"
+    ],
+    "p_qntv202tf": [
+      "p_f8vd4gljl"
+    ],
+    "p_cytjkb2pn": [
+      "p_cut7c3i5i"
+    ],
+    "p_rfetspfdy": [
+      "p_cut7c3i5i"
+    ],
+    "p_j8c0rrmlj": [
+      "p_30hacm6sw"
+    ],
+    "p_drl4xs979": [
+      "p_30hacm6sw"
+    ],
+    "p_nqxr123d8": [
+      "p_drl4xs979"
+    ],
+    "p_8smp68o0u": [
+      "p_drl4xs979"
+    ],
+    "p_8jgv67fq": [
+      "p_j8c0rrmlj"
+    ],
+    "p_io1qiphv": [
+      "p_j8c0rrmlj"
+    ],
+    "p_q5r8a8di": [
+      "p_io1qiphv"
+    ],
+    "p_zxsn4f7g": [
+      "p_io1qiphv"
+    ],
+    "p_8ep79tnj": [
+      "p_8jgv67fq"
+    ],
+    "p_0j5pylfd": [
+      "p_nqxr123d8"
+    ],
+    "p_uknf1cu2": [
+      "p_nqxr123d8"
+    ],
+    "p_z4rxd74pc": [
+      "p_x1m7h6i6",
+      "p_5luildj5"
+    ],
+    "p_b0ipc66i": [
+      "p_x1m7h6i6",
+      "p_5luildj5"
+    ],
+    "p_u9xectr7": [
+      "p_dt9kt6mky"
+    ],
+    "p_ubacyg84": [
+      "p_dt9kt6mky",
+      "p_ejkbgule",
+      "p_72zus6z7",
+      "p_n4v1z3b7"
+    ],
+    "p_y5jlpiuu": [
+      "p_ejkbgule",
+      "p_72zus6z7",
+      "p_n4v1z3b7"
+    ],
+    "p_eu6jpvcr": [
+      "p_xz4345d3"
+    ],
+    "p_n4v1z3b7": [
+      "p_xz4345d3"
+    ],
+    "p_q9go8aou": [
+      "p_g10xw55i"
+    ],
+    "p_ejkbgule": [
+      "p_g10xw55i"
+    ],
+    "p_g10xw55i": [
+      "p_t2u1pvbl",
+      "p_slq4c5iv"
+    ],
+    "p_3djv77iz": [
+      "p_t2u1pvbl",
+      "p_slq4c5iv"
+    ],
+    "p_stlru0px": [
+      "p_q9go8aou",
+      "p_ujclocoq"
+    ],
+    "p_rtgt0wzj": [
+      "p_q9go8aou",
+      "p_ujclocoq"
+    ],
+    "p_jn7ws9gr": [
+      "p_i4c7mf8d",
+      "p_ccnmbpk25"
+    ],
+    "p_yehcxg5d": [
+      "p_i4c7mf8d",
+      "p_ccnmbpk25"
+    ],
+    "p_i4c7mf8d": [
+      "p_e25cfnzj",
+      "p_cfacs46s"
+    ],
+    "p_ujclocoq": [
+      "p_e25cfnzj",
+      "p_cfacs46s"
+    ],
+    "p_cfacs46s": [
+      "p_t1mfpg75"
+    ],
+    "p_pk0srrk9": [
+      "p_t1mfpg75"
+    ],
+    "p_6iwyg799": [
+      "p_jn7ws9gr"
+    ],
+    "p_lf5lph78": [
+      "p_jn7ws9gr"
+    ],
+    "p_9wjiy2we": [
+      "p_6iwyg799"
+    ],
+    "p_qazae6yr": [
+      "p_6iwyg799"
+    ],
+    "p_81cni9rz": [
+      "p_9wjiy2we"
+    ],
+    "p_0qlhdvso": [
+      "p_9wjiy2we"
+    ],
+    "p_vwc1c3x3": [
+      "p_pk0srrk9"
+    ],
+    "p_xw8kwa6t": [
+      "p_pk0srrk9"
+    ],
+    "p_7jbjsqcs": [
+      "p_izcueyhnf"
+    ],
+    "p_ntqz8x0y": [
+      "p_izcueyhnf"
+    ],
+    "p_od2tv6oc": [
+      "p_fvuvuehr"
+    ],
+    "p_ybat0ucd": [
+      "p_fvuvuehr"
+    ],
+    "p_ed909r6e": [
+      "p_6t30mohp",
+      "p_cdv5ie35"
+    ],
+    "p_pfyko8vm": [
+      "p_6t30mohp",
+      "p_cdv5ie35"
+    ],
+    "p_xrztgk56": [
+      "p_73zyd494"
+    ],
+    "p_bhz72tf5h": [
+      "p_73zyd494"
+    ],
+    "p_7cvmjv393": [
+      "p_cw6wpv5a",
+      "p_712is9ht",
+      "p_qpavwkyo"
+    ],
+    "p_l7vr8reo": [
+      "p_cw6wpv5a"
+    ],
+    "p_mubkqsbf": [
+      "p_712is9ht",
+      "p_qpavwkyo"
+    ],
+    "p_7wucmui9": [
+      "p_4bn3zm19"
+    ],
+    "p_faax8lven": [
+      "p_4bn3zm19"
     ]
   },
   "spousesOf": {
@@ -7332,6 +7823,5 @@
       "p_faax8lven"
     ],
     "p_4bn3zm19": []
-  },
-  "currentId": "p_n2oxqssdd"
+  }
 }
