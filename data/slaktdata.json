@@ -449,10 +449,29 @@
         {
           "src": "images/Systrarna_Grek.jpg",
           "caption": "Systrarna Grek samt moster Mathilda Geschwind. Augusta, Maria, Selma, Mathilda Geschwind samt Elin."
+        },
+        {
+          "src": "images/Greks.jpg",
+          "caption": "Familjeträff hos Bromans"
+        },
+        {
+          "src": "images/Greks_1.jpg",
+          "caption": "Familjeträff hos Bromans"
+        },
+        {
+          "src": "images/Familjeträff hos Bromans_1.JPG",
+          "caption": "Deltagarförteckning"
+        },
+        {
+          "src": "images/Greks.jpeg",
+          "caption": "Augusta, Johan, Elin, en väninna till Johan samt Carl Westberg enligt fotot men det bör ju vara Wassberg som var gift med Augusta."
+        },
+        {
+          "src": "images/Chicago.jpg",
+          "caption": "Chicago"
         }
       ],
-      "gender": "",
-      "photoCaptions": {}
+      "gender": ""
     },
     "p_3krvppadg": {
       "id": "p_3krvppadg",
@@ -551,7 +570,8 @@
           "src": "images/Födelsebok.jpg",
           "caption": "Födelsebok"
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_3qowa85hd": {
       "id": "p_3qowa85hd",
