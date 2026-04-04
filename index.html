@@ -70,6 +70,10 @@ svg{display:block;width:100%;height:100%}.node-card{fill:var(--card);stroke:#cbd
       <label>Yrke</label><input id="f_job" type="text" />
       <label>Historik / notering</label><textarea id="f_history"></textarea>
       <div class="linkRow"><button onclick="saveCurrentPerson()" class="btn green">Spara person</button><button onclick="setAsRoot()" class="btn secondary">Gör till startperson</button></div>
+      <div style="display:flex;gap:6px;margin-top:8px;">
+        <button onclick="openPersonPage()" class="btn secondary" style="flex:1">👤 Personkort</button>
+        <button onclick="openFotoPage()" class="btn secondary" style="flex:1">📷 Fotosida</button>
+      </div>
     </div>
 
     <div class="panel">
@@ -804,6 +808,18 @@ function refreshAll(){
   refreshAll();
   setStatus("INIT klar: " + Object.keys(store.people).length + " personer");
 })();
+
+function openPersonPage(){
+  const id = store.currentId;
+  if(!id){ alert("Välj en person först."); return; }
+  window.open("person.html?id=" + encodeURIComponent(id), "_blank");
+}
+
+function openFotoPage(){
+  const id = store.currentId;
+  if(!id){ alert("Välj en person först."); return; }
+  window.open("fotosida.html?id=" + encodeURIComponent(id), "_blank");
+}
 
 function toggleSide(){
   const wrap = document.getElementById("wrap");
