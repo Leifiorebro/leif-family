@@ -4,17 +4,16 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Leifs Släktprogram – Version 6</title>
-<script>
-  if(localStorage.getItem("familyAccessGranted") !== "yes"){
-    window.location.href = "login.html";
-  }
-
-  function logoutFamilySite(){
-    localStorage.removeItem("familyAccessGranted");
-    window.location.href = "login.html";
-  }
+<script src="https://d3js.org/d3.v7.min.js">
+function toggleSide(){
+  const wrap = document.getElementById("wrap");
+  const btn  = document.getElementById("toggleSideBtn");
+  wrap.classList.toggle("side-closed");
+  btn.textContent = wrap.classList.contains("side-closed") ? "▶" : "☰";
+  // Redraw tree to fill the new width
+  setTimeout(()=> { if(store.currentId) drawGenealogy(store.currentId); }, 280);
+}
 </script>
-<script src="https://d3js.org/d3.v7.min.js"></script>
 <style>
 :root{--bg:#f4f7fb;--panel:#fff;--line:#8aa0b8;--text:#1f2937;--muted:#6b7280;--accent:#1d4ed8;--card:#fff;--shadow:0 6px 18px rgba(0,0,0,.08);--border:#d9e2ec;--danger:#b91c1c;--ok:#166534}
 *{box-sizing:border-box} body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -22,10 +21,14 @@
 #topbar input,#topbar select,#topbar textarea{padding:8px;border:1px solid #cbd5e1;border-radius:8px;font-size:14px}
 #topbar button,.btn{padding:8px 10px;border:none;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;font-size:14px}.btn.secondary{background:#475569}.btn.green{background:#15803d}.btn.red{background:var(--danger)}
 #status{font-size:13px;color:var(--muted);margin-left:6px}
-#wrap{display:grid;grid-template-columns:1fr 360px;height:calc(100vh - 62px)}
+#wrap{display:grid;grid-template-columns:1fr 360px;height:calc(100vh - 62px);transition:grid-template-columns .25s ease}
+#wrap.side-closed{grid-template-columns:1fr 0}
+#side{border-left:1px solid var(--border);background:var(--panel);padding:12px;overflow:auto;transition:padding .25s}
+#wrap.side-closed #side{padding:0;overflow:hidden}
+#toggleSideBtn{font-size:18px;padding:6px 10px;line-height:1}
 #treeWrap{position:relative;overflow:hidden;background:radial-gradient(circle at 20px 20px, rgba(0,0,0,.03) 2px, transparent 2px) 0 0/24px 24px,#f8fbff}
 #tree{width:100%;height:100%}
-#side{border-left:1px solid var(--border);background:var(--panel);padding:12px;overflow:auto}
+
 .panel{background:#fff;border:1px solid var(--border);border-radius:16px;padding:12px;margin-bottom:12px;box-shadow:var(--shadow)}
 .panel h3{margin:0 0 10px 0;font-size:18px} label{display:block;margin:8px 0 4px;font-size:13px;color:#334155}
 input[type="text"],input[type="date"],textarea,select{width:100%} textarea{min-height:80px;resize:vertical}
@@ -45,76 +48,17 @@ svg{display:block;width:100%;height:100%}.node-card{fill:var(--card);stroke:#cbd
 #searchResults .srItem:hover{background:#f0f5ff}
 .search-wrap{position:relative}
 </style>
-<!-- GOATCOUNTER BESÖKSSTATISTIK -->
-<script data-goatcounter="https://leifiorebro.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
- <div id="familyTopBar" style="
-  position: sticky;
-  top: 0;
-  z-index: 9999;
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 10px 12px;
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid #ddd;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-">
-  <div style="
-    padding: 8px 12px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background: #fafafa;
-    font-size: 14px;
-    color: #333;
-    white-space: nowrap;
-  ">
-    Besök i denna webbläsare: <strong id="localIndexCounter">0</strong>
-  </div>
-
-  <a href="https://leifiorebro.goatcounter.com"
-     target="_blank"
-     rel="noopener"
-     style="
-       padding: 8px 12px;
-       border: 1px solid #ddd;
-       border-radius: 10px;
-       background: #fff;
-       text-decoration: none;
-       color: #2563eb;
-       font-size: 14px;
-       white-space: nowrap;
-     ">
-    Total statistik
-  </a>
-
-  <button onclick="logoutFamilySite()" style="
-    padding: 8px 14px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background: #fff;
-    color: #333;
-    cursor: pointer;
-    font-size: 14px;
-    white-space: nowrap;
-  ">
-    Logga ut
-  </button>
-</div>
 <div id="topbar">
   <button onclick="loadServerJSON()">Ladda slaktdata.json</button>
   <button onclick="exportJSON()" class="btn green">Exportera JSON</button>
-  <button onclick="logoutFamilySite()">Logga ut</button>
   <div class="search-wrap">
     <input id="searchBox" type="text" placeholder="Sök person..." oninput="liveSearch()" onkeydown="searchKeydown(event)" />
     <div id="searchResults"></div>
   </div>
   <button onclick="doSearch()">Sök</button>
+  <button id="toggleSideBtn" onclick="toggleSide()" title="Visa/dölj sidopanel">☰</button>
   <span id="status">Redo</span>
 </div>
 <div id="wrap">
@@ -128,17 +72,13 @@ svg{display:block;width:100%;height:100%}.node-card{fill:var(--card);stroke:#cbd
       <select id="f_gender"><option value="">(okänt)</option><option value="M">Man</option><option value="F">Kvinna</option></select>
       <label>Roll</label>
       <select id="f_role"><option value="">(ingen)</option><option value="Far">Far</option><option value="Mor">Mor</option><option value="Förälder">Förälder</option><option value="Barn">Barn</option><option value="Make">Make</option><option value="Maka">Maka</option></select>
-      <label>Född</label><input id="f_born" type="date" />
+      <label>Född <span style="font-weight:normal;color:#9ca3af">(t.ex. 1923 eller 1923-06-15)</span></label><input id="f_born" type="text" placeholder="t.ex. 1923 eller 1923-06-15" />
       <label>Födelseförsamling</label><input id="f_bornParish" type="text" />
-      <label>Död</label><input id="f_died" type="date" />
+      <label>Död <span style="font-weight:normal;color:#9ca3af">(t.ex. 1987 eller 1987-03-22)</span></label><input id="f_died" type="text" placeholder="t.ex. 1987 eller 1987-03-22" />
       <label>Dödsförsamling</label><input id="f_diedParish" type="text" />
       <label>Yrke</label><input id="f_job" type="text" />
       <label>Historik / notering</label><textarea id="f_history"></textarea>
       <div class="linkRow"><button onclick="saveCurrentPerson()" class="btn green">Spara person</button><button onclick="setAsRoot()" class="btn secondary">Gör till startperson</button></div>
-      <div style="display:flex;gap:6px;margin-top:8px;">
-        <button onclick="openPersonPage()" class="btn secondary" style="flex:1">👤 Personkort</button>
-        <button onclick="openFotoPage()" class="btn secondary" style="flex:1">📷 Fotosida</button>
-      </div>
     </div>
 
     <div class="panel">
@@ -195,7 +135,19 @@ function ensureArrayMap(map,key){ if(!map[key]) map[key]=[]; if(!Array.isArray(m
 function uniq(arr){ return [...new Set((arr||[]).filter(Boolean))]; }
 function getPerson(id){ return store.people[id]||null; }
 function safeName(id){ const p=getPerson(id); return p ? (p.name||id) : id; }
-function parseDateSafe(s){ if(!s) return null; const d=new Date(s); return isNaN(d.getTime()) ? null : d; }
+// Parses full or partial dates: "1923", "1923-06", "1923-06-15"
+function parseDateSafe(s){
+  if(!s) return null;
+  const trimmed = s.trim();
+  // Year only → treat as Jan 1
+  if(/^\d{3,4}$/.test(trimmed)) return new Date(parseInt(trimmed,10), 0, 1);
+  // Year-month only → treat as 1st of month
+  if(/^\d{3,4}-\d{1,2}$/.test(trimmed)){
+    const [y,m] = trimmed.split("-");
+    return new Date(parseInt(y,10), parseInt(m,10)-1, 1);
+  }
+  const d = new Date(trimmed); return isNaN(d.getTime()) ? null : d;
+}
 function sortIdsByBorn(ids){ return (ids||[]).slice().sort((a,b)=>{ const pa=getPerson(a)||{}, pb=getPerson(b)||{}; const da=parseDateSafe(pa.born), db=parseDateSafe(pb.born); if(da&&db) return da-db; if(da&&!db) return -1; if(!da&&db) return 1; return (pa.name||"").localeCompare(pb.name||"","sv"); }); }
 function saveLocal(){ localStorage.setItem("leifFamilyStoreV6", JSON.stringify(store)); }
 function loadLocal(){ try{ const raw=localStorage.getItem("leifFamilyStoreV6"); if(!raw) return false; const data=JSON.parse(raw); store.people=data.people||{}; store.parentsOf=data.parentsOf||{}; store.childrenOf=data.childrenOf||{}; store.spousesOf=data.spousesOf||{}; store.currentId=data.currentId||null; return true; }catch(err){ console.warn(err); return false; } }
@@ -485,7 +437,12 @@ if(DEV){
 }
 
 function personLabel(p){ return `${p.name||""}`; }
-function datesLabel(p){ const b=p.born||""; const d=p.died||""; return (b||d) ? `${b} – ${d}` : ""; }
+function fmtDate(s){
+  if(!s) return "";
+  const t = s.trim();
+  return t;  // store as-is; display as typed
+}
+function datesLabel(p){ const b=fmtDate(p.born); const d=fmtDate(p.died); return (b||d) ? `${b} – ${d}` : ""; }
 
 function collectAncestorLevels(rootId, maxGen=3){
   const levels = [[rootId]];
@@ -512,9 +469,9 @@ function collectDescendants(rootId, maxGen=3){
 }
 
 function calcAge(born, died){
-  const b = born ? new Date(born) : null;
-  if(!b || isNaN(b)) return "";
-  const end = (died && !isNaN(new Date(died))) ? new Date(died) : new Date();
+  const b = parseDateSafe(born);
+  if(!b) return "";
+  const end = parseDateSafe(died) || new Date();
   let age = end.getFullYear() - b.getFullYear();
   const m = end.getMonth() - b.getMonth();
   if(m < 0 || (m === 0 && end.getDate() < b.getDate())) age--;
@@ -856,56 +813,6 @@ function refreshAll(){
   refreshAll();
   setStatus("INIT klar: " + Object.keys(store.people).length + " personer");
 })();
-
-function openPersonPage(){
-  const id = store.currentId;
-  if(!id){ alert("Välj en person först."); return; }
-  window.open("person.html?id=" + encodeURIComponent(id), "_blank");
-}
-
-function openFotoPage(){
-  const id = store.currentId;
-  if(!id){ alert("Välj en person först."); return; }
-  window.open("fotosida.html?id=" + encodeURIComponent(id), "_blank");
-}
-</script>
-
-<script>
-  (function(){
-    const INDEX_COUNTER_KEY = "familyIndexPageVisitCount";
-
-    function increaseLocalIndexCounter(){
-      let count = parseInt(localStorage.getItem(INDEX_COUNTER_KEY) || "0", 10);
-      count += 1;
-      localStorage.setItem(INDEX_COUNTER_KEY, String(count));
-      return count;
-    }
-
-    function renderLocalIndexCounter(){
-      const el = document.getElementById("localIndexCounter");
-      if(!el) return;
-      const count = increaseLocalIndexCounter();
-      el.textContent = count.toLocaleString("sv-SE");
-    }
-
-    function adaptTopBarForMobile(){
-      const bar = document.getElementById("familyTopBar");
-      if(!bar) return;
-
-      if(window.innerWidth < 700){
-        bar.style.justifyContent = "center";
-      }else{
-        bar.style.justifyContent = "flex-end";
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", function(){
-      renderLocalIndexCounter();
-      adaptTopBarForMobile();
-    });
-
-    window.addEventListener("resize", adaptTopBarForMobile);
-  })();
 </script>
 </body>
 </html>
