@@ -6904,6 +6904,66 @@
       "photo": "",
       "photoId": "",
       "history": ""
+    },
+    "p_14h9l8r8": {
+      "id": "p_14h9l8r8",
+      "name": "Nils Bengtsson-Norman",
+      "gender": "M",
+      "role": "",
+      "born": "",
+      "bornParish": "Elfstorp, Nora",
+      "died": "1692-04-15",
+      "diedParish": "Elfstorp, Nora",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_x85r6oue": {
+      "id": "p_x85r6oue",
+      "name": "Anna Olofsdotter-Norin",
+      "gender": "",
+      "role": "",
+      "born": "",
+      "bornParish": "Staden Nora",
+      "died": "",
+      "diedParish": "Elfstorp, Nora",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_v1dv4r1t": {
+      "id": "p_v1dv4r1t",
+      "name": "Bengt Jönsson",
+      "gender": "M",
+      "role": "",
+      "born": "Omkring 1600",
+      "bornParish": "Västergötland",
+      "died": "1640 ",
+      "diedParish": "Älvstorp, Nora",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_b5sxeisz": {
+      "id": "p_b5sxeisz",
+      "name": "Anna Nilsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "",
+      "bornParish": "Hagby, Nora",
+      "died": "",
+      "diedParish": "Älvstorp, Nora",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
     }
   },
   "parentsOf": {
@@ -7511,6 +7571,14 @@
     "p_sffx5ap5": [
       "p_y9qdhwiy",
       "p_7yxaykj4"
+    ],
+    "p_7yxaykj4": [
+      "p_14h9l8r8",
+      "p_x85r6oue"
+    ],
+    "p_14h9l8r8": [
+      "p_v1dv4r1t",
+      "p_b5sxeisz"
     ]
   },
   "childrenOf": {
@@ -8103,6 +8171,18 @@
     ],
     "p_7yxaykj4": [
       "p_sffx5ap5"
+    ],
+    "p_14h9l8r8": [
+      "p_7yxaykj4"
+    ],
+    "p_x85r6oue": [
+      "p_7yxaykj4"
+    ],
+    "p_v1dv4r1t": [
+      "p_14h9l8r8"
+    ],
+    "p_b5sxeisz": [
+      "p_14h9l8r8"
     ]
   },
   "spousesOf": {
@@ -8715,6 +8795,18 @@
     ],
     "p_7yxaykj4": [
       "p_y9qdhwiy"
+    ],
+    "p_14h9l8r8": [
+      "p_x85r6oue"
+    ],
+    "p_x85r6oue": [
+      "p_14h9l8r8"
+    ],
+    "p_v1dv4r1t": [
+      "p_b5sxeisz"
+    ],
+    "p_b5sxeisz": [
+      "p_v1dv4r1t"
     ]
   }
 }
