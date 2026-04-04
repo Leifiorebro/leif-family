@@ -4,16 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Leifs Släktprogram – Version 6</title>
-<script src="https://d3js.org/d3.v7.min.js">
-function toggleSide(){
-  const wrap = document.getElementById("wrap");
-  const btn  = document.getElementById("toggleSideBtn");
-  wrap.classList.toggle("side-closed");
-  btn.textContent = wrap.classList.contains("side-closed") ? "▶" : "☰";
-  // Redraw tree to fill the new width
-  setTimeout(()=> { if(store.currentId) drawGenealogy(store.currentId); }, 280);
-}
-</script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
 <style>
 :root{--bg:#f4f7fb;--panel:#fff;--line:#8aa0b8;--text:#1f2937;--muted:#6b7280;--accent:#1d4ed8;--card:#fff;--shadow:0 6px 18px rgba(0,0,0,.08);--border:#d9e2ec;--danger:#b91c1c;--ok:#166534}
 *{box-sizing:border-box} body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text)}
@@ -813,6 +804,14 @@ function refreshAll(){
   refreshAll();
   setStatus("INIT klar: " + Object.keys(store.people).length + " personer");
 })();
+
+function toggleSide(){
+  const wrap = document.getElementById("wrap");
+  const btn  = document.getElementById("toggleSideBtn");
+  wrap.classList.toggle("side-closed");
+  btn.textContent = wrap.classList.contains("side-closed") ? "▶" : "☰";
+  setTimeout(()=>{ if(store.currentId) drawGenealogy(store.currentId); }, 280);
+}
 </script>
 </body>
 </html>
