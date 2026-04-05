@@ -7249,20 +7249,245 @@
       "photo": "",
       "photoId": "",
       "history": "Ingeborg Andersdotter\n\nFödd 1747 \nVäse (S) AI:11 (1782-1786) Bild 148 / sid 290 (AID: v8767.b148.s290, NAD: SE/VA/13640)\n\nDöd 1826-03-05 Römåsen, Wäse\nDödsorsak: Lungsot\nVäse (S) FI:2 (1814-1845) Bild 400 / sid 63 (AID: v8829a.b400.s63, NAD: SE/VA/13640)\n\nNoteringar\nVäse (S) AI:11 (1782-1786) Bild 148 / sid 290 (AID: v8767.b148.s290, NAD: SE/VA/13640)\n\nVäse (S) FI:2 (1814-1845) Bild 400 / sid 63 (AID: v8829a.b400.s63, NAD: SE/VA/13640)"
+    },
+    "p_finjul7b": {
+      "id": "p_finjul7b",
+      "name": "Carl Carlsson",
+      "gender": "M",
+      "role": "",
+      "born": "1824-07-18",
+      "bornParish": "Falla ägor, Kil",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Carl Carlsson\n\nFödd 1824-07-18 Falla ägor, Kil\nKil (T) AI:20 (1856-1860) Bild 305 / sid 297 (AID: v51612.b305.s297, NAD: SE/ULA/11160)\nKälla: Kil (T) C:3 (1803-1854) Bild 88 / sid 169 (AID: v53400.b88.s169, NAD: SE/ULA/11160)\n\nNoteringar\nKil (T) C:3 (1803-1854) Bild 88 / sid 169 (AID: v53400.b88.s169, NAD: SE/ULA/11160)\nKil (T) AI:13 (1822-1826) Bild 87 / sid 84 (AID: v51605.b87.s84, NAD: SE/ULA/11160)\nKil (T) AI:20 (1856-1860) Bild 305 / sid 297 (AID: v51612.b305.s297, NAD: SE/ULA/11160)"
+    },
+    "p_03udygdg": {
+      "id": "p_03udygdg",
+      "name": "Carolina Jernberg",
+      "gender": "F",
+      "role": "",
+      "born": "1829-11-18",
+      "bornParish": "Fellingsbro",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Carolina Jernberg\n\nFödd 1829-11-18 Fellingsbro, Örebro län\n\nNoteringar\n\n\nKil (T) AI:20 (1856-1860) Bild 305 / sid 297 (AID: v51612.b305.s297, NAD: SE/ULA/11160)"
+    },
+    "p_nj079xgo": {
+      "id": "p_nj079xgo",
+      "name": "Anders Jernberg",
+      "gender": "M",
+      "role": "",
+      "born": "1802-11-01",
+      "bornParish": "Fellingsbro",
+      "died": "1861-05-06",
+      "diedParish": "Ramshyttan, Kil",
+      "job": "Hammarsmed",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Anders Jernberg\n\nHammarsmed\n\nFödd 1802-11-01 Fellingsbro\n\nDöd 1861-05-06 Ramshyttan, Kil, T\n\nNoteringar\nKil (T) AI:16 (1836-1840) Bild 291 / sid 287 (AID: v51608.b291.s287, NAD: SE/ULA/11160)\nKil (T) AI:17 (1841-1845) Bild 293 / sid 290 (AID: v51609.b293.s290, NAD: SE/ULA/11160)"
+    },
+    "p_fpo3fqgf": {
+      "id": "p_fpo3fqgf",
+      "name": "Brita Cajsa Olsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1804-08-04",
+      "bornParish": "Axberg. Örebro",
+      "died": "1873-01-05",
+      "diedParish": "Ramshyttan, Kils förs. Örebro län",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Brita Cajsa Olsdotter\n\nFödd 1804-08-04 Axberg, Örebro\nKälla: Axberg (T) C:5 (1764-1831) Bild 1360 / sid 263 (AID: v52911a.b1360.s263, NAD: SE/ULA/10047)\n\nDöd 1873-01-05 Ranmshyttan, Kils förs., Örebro län\n\nNoteringar\nAxberg (T) C:5 (1764-1831) Bild 1360 / sid 263 (AID: v52911a.b1360.s263, NAD: SE/ULA/10047)"
+    },
+    "p_27sgz60t": {
+      "id": "p_27sgz60t",
+      "name": "Maja Larsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1790-06-25",
+      "bornParish": "Hovsta",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Maja Larsdotter\n\nFödd 1790-06-25 Hovsta\nKil (T) AI:13 (1822-1826) Bild 87 / sid 84 (AID: v51605.b87.s84, NAD: SE/ULA/11160)\nKälla: Hovsta (T) C:4 (1780-1857) Bild 17 (AID: v53286.b17, NAD: SE/ULA/10411)\n\nNoteringar\nHovsta (T) C:4 (1780-1857) Bild 17 (AID: v53286.b17, NAD: SE/ULA/10411)\nHovsta (T) AI:3 (1788-1793) Bild 70 / sid 65 (AID: v51441.b70.s65, NAD: SE/ULA/10411)\nKil (T) AI:10 (1806-1810) Bild 33 / sid 28 (AID: v51602.b33.s28, NAD: SE/ULA/11160)\nKil (T) AI:10 (1806-1810) Bild 110 / sid 105 (AID: v51602.b110.s105, NAD: SE/ULA/11160)\nKil (T) AI:12 (1816-1821) Bild 78 / sid 75 (AID: v51604.b78.s75, NAD: SE/ULA/11160)"
+    },
+    "p_59e4qi50": {
+      "id": "p_59e4qi50",
+      "name": "Lars Ersson",
+      "gender": "M",
+      "role": "",
+      "born": "1754",
+      "bornParish": "Nora",
+      "died": "1804-12-12",
+      "diedParish": "Billinge, Kil",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Lars Ersson\n\nFödd 1754 Nora\nKil (T) AI:9 (1801-1805) Bild 32 / sid 28 (AID: v51601.b32.s28, NAD: SE/ULA/11160)\n\nDöd 1804-12-12 Billinge, Kil\nKil (T) AI:9 (1801-1805) Bild 32 / sid 28 (AID: v51601.b32.s28, NAD: SE/ULA/11160)\n\nNoteringar\nHovsta (T) AI:3 (1788-1793) Bild 70 / sid 65 (AID: v51441.b70.s65, NAD: SE/ULA/10411)\nKil (T) AI:9 (1801-1805) Bild 32 / sid 28 (AID: v51601.b32.s28, NAD: SE/ULA/11160)"
+    },
+    "p_08m2zzvi": {
+      "id": "p_08m2zzvi",
+      "name": "Stina Persdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1757-11-10",
+      "bornParish": "Hjulsjö",
+      "died": "1823",
+      "diedParish": "Falla ägor, Kil",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Stina Persdotter\n\nFödd 1757-11-10 Hjulsjö\nKil (T) AI:13 (1822-1826) Bild 87 / sid 84 (AID: v51605.b87.s84, NAD: SE/ULA/11160)\n\nDöd 1823 Falla ägor, Kil\nKil (T) AI:13 (1822-1826) Bild 87 / sid 84 (AID: v51605.b87.s84, NAD: SE/ULA/11160)\n\nNoteringar\nHovsta (T) AI:3 (1788-1793) Bild 70 / sid 65 (AID: v51441.b70.s65, NAD: SE/ULA/10411)\nKil (T) AI:10 (1806-1810) Bild 33 / sid 28 (AID: v51602.b33.s28, NAD: SE/ULA/11160)\nKil (T) AI:10 (1806-1810) Bild 110 / sid 105 (AID: v51602.b110.s105, NAD: SE/ULA/11160)\nKil (T) AI:11 (1811-1815) Bild 118 / sid 115 (AID: v51603.b118.s115, NAD: SE/ULA/11160)\nKil (T) AI:12 (1816-1821) Bild 78 / sid 75 (AID: v51604.b78.s75, NAD: SE/ULA/11160)\nKil (T) AI:13 (1822-1826) Bild 87 / sid 84 (AID: v51605.b87.s84, NAD: SE/ULA/11160)"
+    },
+    "p_6nu9iom9": {
+      "id": "p_6nu9iom9",
+      "name": "Karl Hjalmar Åberg",
+      "gender": "M",
+      "role": "",
+      "born": "1883-05-05",
+      "bornParish": "Västgöthyttefors",
+      "died": "1956-05-19",
+      "diedParish": "Ås",
+      "job": "Sågverksarbetare",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Karl Hjalmar Åberg\n\nSågverksarbetare\n\nFödd 1883-05-05 Västgöthyttefors\nhttps://sok.riksarkivet.se/bildvisning/A0003868_00153\n\noäkta\nKälla: https://sok.riksarkivet.se/bildvisning/A0003868_00153\n\nGift med Anna Lovisa Åberg Hansson 1907-04-03 \n\nDöd 1956-05-19 Ås\n\nNoteringar\nPost 3664475\nKarl Hjalmar\nf. 1883 i Nora landsförs (Örebro län, Västmanland)\ns.\nPojke, barn i familjen\nBondborn.\nNora landsförs (Örebro län, Västmanland)\nv\nFödelseort i källan: Nora lands\n\n\nKarl Hjalmar Åberg\n\n    Födelsedatum:\n     1883-05-05\n    Avliden:\n     1956-05-19\n    Gravsattdatum:\n     1956-05-30\n    Ort:\n     Åshyttan NORA\n\n    Kyrkogård:\n     Nora Norra Kyrkogård\n    Församling:\n     Nora Bergslagsförsamling\n    Gravnummer:\n     NO 09 60\n    Del:\n      09"
+    },
+    "p_qhkidczq": {
+      "id": "p_qhkidczq",
+      "name": "Anna Lovisa Hansson",
+      "gender": "F",
+      "role": "",
+      "born": "1887-03-25",
+      "bornParish": "Nora Bergsförs.",
+      "died": "1966-11-30",
+      "diedParish": "Nora",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Anna Lovisa Åberg Hansson\n\nFödd 1887-03-25 Nora Bergsförs\nKälla: Sverige, födelseuppgifter för personer som avled mellan 1947 och 2006\nCitat: Födelsedatum:  25 Mars 1887 Födelseort:  Nora bergsförs\n\nGift med Karl Hjalmar Åberg 1907-04-03 \n\nDöd 1966-11-30 Nora\n\nNoteringar\nAnna Lovisa Åberg\n\n    Födelsedatum:\n     1887-03-25\n    Avliden:\n     1966-11-30\n    Gravsattdatum:\n     1966-12-21\n    Ort:\n     NORA\n\n    Kyrkogård:\n     Nora Norra Kyrkogård\n    Församling:\n     Nora Bergslagsförsamling\n    Gravnummer:\n     NO 09 60\n    Del:\n      09"
+    },
+    "p_ckq4lhim": {
+      "id": "p_ckq4lhim",
+      "name": "KARIN Maria Åberg",
+      "gender": "F",
+      "role": "",
+      "born": "1909-08-02",
+      "bornParish": "Guldsmedshyttan",
+      "died": "1974-05-18",
+      "diedParish": "Gyttorp",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "KARIN Maria Åberg\n\nFödd 1909-08-02 Guldsmedshyttan\n\nDöd 1974-05-18 Gyttorp\nDöd 18/5 1974.\nKälla: sdb\n\nNoteringar\nFörnamn Karin Maria\nFödelsedatum 1909-08-02\nFödelseplats Guldsmedshyttan\nFödelseförsamling (normerat) Guldsmedshyttan, Örebro län\nBoendeförsamling Nora bergsförsamling, Örebro län\nPlats Togdhyttan\nTidsperiod 1919 - 1929\nLänkar\nKälla: Nora bergsförsamling AIIa:8 (1919-1929) Bild 2370 / Sida 752\nFödelsebok: Guldsmedshyttan C:2 (1907-1916)\n\n____________________________________\n\n19090802-6644\n\nEriksson, Karin Maria\n\nBox 66\n710 30 Gyttorp\n(Boendeadress 1 nov 1970)\n\nDöd 18/5 1974.\n\nKyrkobokförd (1974) i Nora bergsförs, Nora kn (Örebro län, Västmanland). Mantalsskriven (1974) på samma ort.\n\nFödd 2/8 1909 i Guldsmedshyttan (Örebro län, Västmanland).\n\nÄnka (5/1 1973).\n--------------\nMotsvarande folkbokföringsförsamling(ar) 1/1 2017:\nNora bergslagsförs, Nora kn (Örebro län, Västmanland)\n\nFödelseförsamling i källan:\nGuldsmedsh. (Örebro län)\n\nKällor:\nMTL 71 / RTB 74"
+    },
+    "p_zf4knwas": {
+      "id": "p_zf4knwas",
+      "name": "Gustav SIXTEN Eriksson",
+      "gender": "M",
+      "role": "",
+      "born": "1904-07-24",
+      "bornParish": "Nora Bergsförs.",
+      "died": "1973-01-05",
+      "diedParish": "Gyttorp",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Gustaf SIXTEN Eriksson\n\nFödd 1904-07-24 Nora bergsförs\nFödd 24/7 1904 i Nora bergsförs \nKälla: sdb\n\nDöd 1973-01-05 Gyttorp\nDöd 5/1 1973.\nKälla: sdb\n\nNoteringar\n19040724-6651\n\nEriksson, Gustaf Sixten\n\nBox 66\n710 30 Gyttorp\n(Boendeadress 1 nov 1970)\n\nDöd 5/1 1973.\n\nKyrkobokförd i Nora bergsförs, Nora kn (Örebro län, Västmanland). Mantalsskriven på samma ort.\n\nFödd 24/7 1904 i Nora bergsförs (Örebro län, Västmanland).\n\nGift man (25/10 1930).\n--------------\nMotsvarande folkbokföringsförsamling(ar) 1/1 2017:\nNora bergslagsförs, Nora kn (Örebro län, Västmanland)\n\nFödelseförsamling i källan:\nNora Bergsf. (Örebro län)\n\nKällor:\nMTL 71 / RTBd 73"
+    },
+    "p_k5r9oatg": {
+      "id": "p_k5r9oatg",
+      "name": "Sven-Erik Sixten Eriksson",
+      "gender": "M",
+      "role": "",
+      "born": "1935-08-24",
+      "bornParish": "Nora Bergsförs.",
+      "died": "2020",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Sven Erik Sixten Eriksson\n\nFödd 1935-08-24 Nora Bergfs, Örebro län\n\nDöd 2020 \n\nNoteringar\nFörnamn Sven Erik Sixten\nEfternamn Erixson\nFödelsedatum 1935-08-24\nFödelseplats Nora bergsförsamling, Örebro län\nCivilstatus Pojke\nTitel/Yrke Varubud\nMantalsskriven Nora Berg, Örebro län\nFastighet Bastnäs 1:1\nAdress Bastnäs, Gyttorp\nTidigare mantalsskrivning\n1949: Nora bergsförsamling, Örebro län, Bastnäs 1:1\nSamma hushåll\nGustaf Sixten Erixson\nKarin Maria Erixson\nSven Erik Sixten Erixson \n1904-07-24\n1909-08-02\n1935-08-24\nGenväg r1.p1786814"
+    },
+    "p_pr8pit4p": {
+      "id": "p_pr8pit4p",
+      "name": "Lena Marie Eriksson",
+      "gender": "F",
+      "role": "",
+      "born": "1964",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_uvc85c4e": {
+      "id": "p_uvc85c4e",
+      "name": "Oskar Henning Åberg",
+      "gender": "M",
+      "role": "",
+      "born": "1884-07-27",
+      "bornParish": "Glanshammar",
+      "died": "1964-03-09",
+      "diedParish": "Älvstorp",
+      "job": "Sågbladsarbetare",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "skar Henning Åberg\n\nSågbladsarbetare\n\nFödd 1884-07-27 Glanshammar\n\nDöd 1964-03-09 Älvstorp\n\nNoteringar\nHENNING ÅBERG var uppe i Dalarna och arbetade i Lekomberga gruvor. Gifte\nsig där med ANNA. Återvände till Nora som änkling och hade då med sig\nbarnen Stina 6 år, Sven 4 år och Fridolf 2 år. Började arbeta hos Sanders\ni övre Bondborn. Barnet Stina dog 21 år gammal i diabetes på Älvestorps\nsjukhem. \n\nPost 3664476\n\nOsk. Henning\n\nf. 1884 i Glanshammar (Örebro län, Närke)\n\ns.\nPojke, barn i familjen\n\nBondborn.\nNora landsförs (Örebro län, Västmanland)\n\nv\n\nFödelseort i källan: Glanshammar, Ör. l.\n\n\nNora bergsförsamling (T) AI:18c (1882-1891) Bild 191 / sid 177 (AID: v52025.b191.s177, NAD: SE/ULA/11098)\n\nhttps://sok.riksarkivet.se/bildvisning/F0016110_00192\n\nhttps://sok.riksarkivet.se/bildvisning/F0016107_00204\nhttps://sok.riksarkivet.se/bildvisning/F0016110_00194"
+    },
+    "p_5j0qpukj": {
+      "id": "p_5j0qpukj",
+      "name": "Anna Linnea Persson",
+      "gender": "F",
+      "role": "",
+      "born": "1888-07-03",
+      "bornParish": "Blexberg, Nora Bergsförs.",
+      "died": "1918-08-22",
+      "diedParish": "Ludvika",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Anna Linnea Åberg Persson\n\nFödd 1888-07-03 Blexberg, Nora bförs.\nKälla: Sverige, födelseuppgifter för personer som avled mellan 1901 och 2006\nCitat: Födelsedatum:  3 Jul 1888 Födelseort:  Nora, Örebro, Sverige\n\nDöd 1918-08-22 Ludvika\n\nNoteringar\n18880703\nÅberg f. Persson, Anna Linnéa\nLekomberg\nDöd 22/8 1918.\nKyrkobokförd i Ludvika (Kopparbergs län, Dalarna).\nFödd 3/7 1888 i Nora (Örebro län, Närke).\nGift kvinna (9/11 1912).\n--------------\nMotsvarande kyrkobokföringsförsamling(ar) 1/1 2010:\nLudvika, Ludvika kn (Dalarnas län, Dalarna)\nFödelseförsamling i källan:\nNora (Örebro län)\nKällor:\nSCB, DB, FS"
     }
   },
   "parentsOf": {
     "p_3qowa85hd": [
-      "p_zobmj6wp8",
-      "p_jrbvidb3g"
+      "p_jrbvidb3g",
+      "p_zobmj6wp8"
     ],
     "p_3uj910se8": [
-      "p_bbclq6f9g",
-      "p_3rw58lslc"
+      "p_3rw58lslc",
+      "p_bbclq6f9g"
     ],
     "p_3w3d8mg0r": [
-      "p_e2d8rcv1d",
-      "p_p1t2kmcat"
+      "p_p1t2kmcat",
+      "p_e2d8rcv1d"
     ],
     "p_607tk2v1i": [
       "p_fceooch",
@@ -7281,16 +7506,16 @@
       "p_bkayc4w"
     ],
     "p_8mchqpopa": [
-      "p_zobmj6wp8",
-      "p_jrbvidb3g"
+      "p_jrbvidb3g",
+      "p_zobmj6wp8"
     ],
     "p_99wt1e8e6": [
       "p_r6gu9qm8a",
       "p_apnevfd1e"
     ],
     "p_anref8x": [
-      "p_q1486bk",
-      "p_a9c12mk"
+      "p_a9c12mk",
+      "p_q1486bk"
     ],
     "p_bbclq6f9g": [
       "p_r6gu9qm8a",
@@ -7306,12 +7531,12 @@
       "p_ymb6wc3q0"
     ],
     "p_c2jyk4pds": [
-      "p_9vhcxd8",
-      "p_mc6jemk"
+      "p_mc6jemk",
+      "p_9vhcxd8"
     ],
     "p_czyydy2g7": [
-      "p_9vhcxd8",
-      "p_mc6jemk"
+      "p_mc6jemk",
+      "p_9vhcxd8"
     ],
     "p_ep1684kzs": [
       "p_n2oxqssdd",
@@ -7322,8 +7547,8 @@
       "p_epbrpkbpc"
     ],
     "p_ir25hn919": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_p1t2kmcat": [
       "p_6c6wnb9",
@@ -7350,12 +7575,12 @@
       "p_ymb6wc3q0"
     ],
     "p_t22zhc497": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_vomcn89yz": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_zobmj6wp8": [
       "p_6c6wnb9",
@@ -7406,12 +7631,12 @@
       "p_apnevfd1e"
     ],
     "p_ir4u61dqa": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_jqtxmllar": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_apnevfd1e": [
       "p_l0tiqibe0",
@@ -7438,12 +7663,12 @@
       "p_apnevfd1e"
     ],
     "p_z4rxd74pc": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_zcl5kw4oh": [
-      "p_e2d8rcv1d",
-      "p_p1t2kmcat"
+      "p_p1t2kmcat",
+      "p_e2d8rcv1d"
     ],
     "p_lx16wimrx": [
       "p_izcueyhnf",
@@ -7457,8 +7682,8 @@
       "p_sh6rs3ypi"
     ],
     "p_4cjwtla35": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_37jcbtegu": [
       "p_n2oxqssdd",
@@ -7902,29 +8127,62 @@
     "p_al00po29": [
       "p_24ozenpq",
       "p_wz2qkic0"
+    ],
+    "p_tnf5rvj1f": [
+      "p_finjul7b",
+      "p_03udygdg"
+    ],
+    "p_03udygdg": [
+      "p_nj079xgo",
+      "p_fpo3fqgf"
+    ],
+    "p_finjul7b": [
+      "p_27sgz60t"
+    ],
+    "p_27sgz60t": [
+      "p_59e4qi50",
+      "p_08m2zzvi"
+    ],
+    "p_6nu9iom9": [
+      "p_izcueyhnf",
+      "p_tnf5rvj1f"
+    ],
+    "p_ckq4lhim": [
+      "p_6nu9iom9",
+      "p_qhkidczq"
+    ],
+    "p_k5r9oatg": [
+      "p_zf4knwas",
+      "p_ckq4lhim"
+    ],
+    "p_pr8pit4p": [
+      "p_k5r9oatg"
+    ],
+    "p_uvc85c4e": [
+      "p_izcueyhnf"
     ]
   },
   "childrenOf": {
-    "p_jrbvidb3g": [
-      "p_3qowa85hd",
-      "p_8mchqpopa"
-    ],
     "p_zobmj6wp8": [
       "p_3qowa85hd",
       "p_8mchqpopa"
     ],
-    "p_3rw58lslc": [
-      "p_3uj910se8"
+    "p_jrbvidb3g": [
+      "p_3qowa85hd",
+      "p_8mchqpopa"
     ],
     "p_bbclq6f9g": [
       "p_3uj910se8",
       "p_4yyrm3723"
     ],
-    "p_p1t2kmcat": [
+    "p_3rw58lslc": [
+      "p_3uj910se8"
+    ],
+    "p_e2d8rcv1d": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
-    "p_e2d8rcv1d": [
+    "p_p1t2kmcat": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
@@ -7972,10 +8230,10 @@
       "p_yhg9e9i5y",
       "p_tdvl922cf"
     ],
-    "p_a9c12mk": [
+    "p_q1486bk": [
       "p_anref8x"
     ],
-    "p_q1486bk": [
+    "p_a9c12mk": [
       "p_anref8x"
     ],
     "p_k9dqg17ug": [
@@ -8020,11 +8278,11 @@
       "p_trylh546h",
       "p_vit2oe3no"
     ],
-    "p_mc6jemk": [
+    "p_9vhcxd8": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
-    "p_9vhcxd8": [
+    "p_mc6jemk": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
@@ -8038,13 +8296,13 @@
       "p_n2oxqssdd",
       "p_kjb1yqku"
     ],
-    "p_yhg9e9i5y": [
+    "p_n4z6lfc2f": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
       "p_4cjwtla35"
     ],
-    "p_n4z6lfc2f": [
+    "p_yhg9e9i5y": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
@@ -8064,12 +8322,12 @@
       "p_zobmj6wp8",
       "p_0dj5jnxhr"
     ],
-    "p_0dj5jnxhr": [
+    "p_zmfl39a5r": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
     ],
-    "p_zmfl39a5r": [
+    "p_0dj5jnxhr": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
@@ -8128,10 +8386,13 @@
       "p_cntfcxxpa"
     ],
     "p_izcueyhnf": [
-      "p_lx16wimrx"
+      "p_lx16wimrx",
+      "p_6nu9iom9",
+      "p_uvc85c4e"
     ],
     "p_tnf5rvj1f": [
-      "p_lx16wimrx"
+      "p_lx16wimrx",
+      "p_6nu9iom9"
     ],
     "p_dt9kt6mky": [
       "p_77kdyij48",
@@ -8560,6 +8821,42 @@
     ],
     "p_wz2qkic0": [
       "p_al00po29"
+    ],
+    "p_finjul7b": [
+      "p_tnf5rvj1f"
+    ],
+    "p_03udygdg": [
+      "p_tnf5rvj1f"
+    ],
+    "p_nj079xgo": [
+      "p_03udygdg"
+    ],
+    "p_fpo3fqgf": [
+      "p_03udygdg"
+    ],
+    "p_27sgz60t": [
+      "p_finjul7b"
+    ],
+    "p_59e4qi50": [
+      "p_27sgz60t"
+    ],
+    "p_08m2zzvi": [
+      "p_27sgz60t"
+    ],
+    "p_6nu9iom9": [
+      "p_ckq4lhim"
+    ],
+    "p_qhkidczq": [
+      "p_ckq4lhim"
+    ],
+    "p_zf4knwas": [
+      "p_k5r9oatg"
+    ],
+    "p_ckq4lhim": [
+      "p_k5r9oatg"
+    ],
+    "p_k5r9oatg": [
+      "p_pr8pit4p"
     ]
   },
   "spousesOf": {
@@ -9238,6 +9535,42 @@
     ],
     "p_wz2qkic0": [
       "p_24ozenpq"
+    ],
+    "p_finjul7b": [
+      "p_03udygdg"
+    ],
+    "p_03udygdg": [
+      "p_finjul7b"
+    ],
+    "p_nj079xgo": [
+      "p_fpo3fqgf"
+    ],
+    "p_fpo3fqgf": [
+      "p_nj079xgo"
+    ],
+    "p_59e4qi50": [
+      "p_08m2zzvi"
+    ],
+    "p_08m2zzvi": [
+      "p_59e4qi50"
+    ],
+    "p_6nu9iom9": [
+      "p_qhkidczq"
+    ],
+    "p_qhkidczq": [
+      "p_6nu9iom9"
+    ],
+    "p_ckq4lhim": [
+      "p_zf4knwas"
+    ],
+    "p_zf4knwas": [
+      "p_ckq4lhim"
+    ],
+    "p_uvc85c4e": [
+      "p_5j0qpukj"
+    ],
+    "p_5j0qpukj": [
+      "p_uvc85c4e"
     ]
   }
 }
