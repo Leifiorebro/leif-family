@@ -1114,7 +1114,7 @@
       "link": "",
       "photo": "data:image/jpeg;base64,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",
       "photoId": "Gun.jpg",
-      "history": "",
+      "history": "Guns levnadshistoria berättad av henne själv i juli 2020.\nDet var i Skattkärr, några mil norr om Karlstad, som det hela började i ett rött tvåvånings trähus.\nMin syster Ebon berättade att en morgon kom en tant (barnmorskan) och sa till henne att nu kan du gå in och hälsa på din lillasyster. Det var jag som sett dagens ljus 4 dec 1935. Ebon visste inget och så var det på den tiden barnen hölls utanför.\nJag blev en söt liten flicka med mörkblå ögon och tjockt., lockigt hår. se ev bild. Mamma sa att folk tittade på mig för jag var en sån söt unge, synd det försvann.\nSen flyttade vi till Småland och där började jag 1:a klass och där föddes också min lillebror Leif. Strax därefter flyttade vi till Stockholm. Pappa hade fått jobb på Winborgs och vi fick tjänstebostad i ett stort hus i Saltsjö-Järla. Det var där vi upplevde de ryska bombplanen som släppte ett antal bomber över området. Om jag minns rätt så var det röda \"klot\" som föll ner och jag tänkte att nu har kriget kommit hit till oss. Men rädd var jag inte, kanske för att mina föräldrar höll sig lugna.\nMen dagen efter på väg till skolan fanns ett stort hål, som en krater, där en bomb hade fallit och vid pappas arbete hade också en bomb fallit. Mycket skriverier i tidningen dagarna efter.\nMamma vantrivdes i Stockholm. Jag tror hon fått en förlossningsdepression men det visste ingen vad det var på den tiden.\nSå var det dags för nästa flytt till Örebro. Pappa hade fått jobb i Karlslund som verkmästare på Stramitfabriken där. Det tillverkades isolering till byggen och där trivdes han bra och det gjorde mamma också. Vi hade köpt en 2-rumslägenhet i Riksbyggen, nybyggt o modernt.\nJag började i Engelbrektsskolan och sedan Kommunala Flickskolan, 7 årig. Det var efter kriget och nu fick vi läsa engelska som 1:a språk. Innan var det tyska som gällde men nu blev det ändring. De vita bussarna hade kommit till Örebro med fångar från koncentrationslägren och i Engelbrektsskolan var kvinnliga fångar inkvarterade.\nPå onsdagarna var det ringdans i Stadsparken och på vägen dit passerade vi skolan och där stod de magra kvinnorna med sina rakade huvuden och klädda i nån slags rockar och tittade på oss som var fina för vi skulle på danslekar i Parken. Vi visste ju knappt vad som hänt dem. Det fanns ju inte TV bara radio och det var ju mest pappa som lyssnade på den.\nSkolan var bra och jag var duktig, fick bra betyg i både engelska, tyska, franska, historia o geografi. Mina dåliga ämnen var kemi, fysik och matte som jag fick underkänt i. Gympa var inte heller nåt för mig men balansgång och springa fort (löpning) gick bra men att slå kullerbyttor eller spela brännboll var inte min grej.\nEtt sommarlov var jag och 3 andra flickor i min klass till Uppsala och utbidade oss till flyglottor på F16. Jätteroligt och spännande. Vi fick följa med ett skolflygplan upp på en rundtur. Så hade vi vapenvård och fick lära oss hur vi skulle rapportera ev. främmande flyg på väg.\nHur hamnade jag sen i Göteorg?\nJag hade en kompis som arbetade på ett advokatkontor och som kund hade de en fru AG ett känt namn i Örebro. En rik änka med mycket bestämda åsikter om det mesta.\nHon hade en dotter i Göteborg som hade polio och var förlamad. Hon behövde hjälp med nästan allt. Jag skulle mata henne och klä på henne och vara hennes allt i allo. Jag följde med till Göteborg och de bodde i en flott våning högst upp på Engelbrekstgatan mitt emot Vasakyrkan.\nMannen i huset avskydde sin svärmor Fru Ag som lade sig i allt och när hon kom på besök så försvann han. De hade också 2 barn, Jan o Pia som gick i Ebba Petersons privatskola på Avenyn. En tysk flicka var anställd som kock o hushållerska. Dessutom anlitade de en vaktmästare som kom och lyfte frun när hon skulle i eller ur säng resp. rullstolen.\nJag förstod ju att jag hamnat i en miljonärsfamilj men jag blev vänligt bemött. Men sen blev det skilsmässa och fru Emilsson frågade om jag ville följa med till Gävle dit hon skulle flytta med barnen. Hon hade en syster där. Men jag tackade nej för jag ville stanna i Göteborg oh jag hade fått så många vänner där.\nJag fick ett kontorsjobb på Jungers Verkstad. De tillverkade maskiner på export till hela världen och dessa maskiner tillverkade mineralull till byggen, alltså en anknytning till Stramitfabriken i Karlslund där pappa hade arbetat.\nMoster Hilda bodde på Erik Dahlbergsgatan i Göteborg och arbetade som kallskänka på anrika Gamle Port.\nEn sommar bodde jag hos henne  och jag hade fått jobb på SKF på lönekontoret. Varje dag cyklade jag till SKF i Gamlestan, fattar inte att jag vågade. Hon var snäll men hon fick nog inte mycket hjälp av mig men hon klagade aldrig.\nHon besökte oss i Örebro flera ggr och både mamma o pappa tyckte bra om henne. Vi var ju och hälsade på henne några gånger hela familjen, fattar inte hur vi fick plats om vi bodde hos henne men det tror jag. Vi träffade också Sonja min kusin, Lisas dotter som dog ganska ung. Minns jag rätt så bodde hon på Örngatan och den ligger ju bakom Redbergsplatsen, alltså inte långt från mig där jag bor nu.\nEn julhelg tror jag det var så fick vi telefon från Berta att moster Hilda hade dött. Det kändes tråkigt och så var den julen förstörd. Jag tror att mamma o pappa var med på hennes begravning. Berta var väl den som ordnade med allt för Hilda hade ju inga barn (inte som vi visste men det ryktades att hon haft en son). Hon var aldrig gift.\nPappa dog 28 september sent på kvällen.\nNär jag kom till mitt jobb på Jungers måndag morgon mötte min chef mig och sa att din syster i Örebro har ringt och du ska ringa henne omedelbart. Jag tänkte att nu har min mormor dött för hon var gammal så det var nästan väntat.\nMen så svarar Ebon att pappa dog i natt - han hade fått en hjärtinfarkt och det gick väldigt fort. Jag fick världens chock, hade aldrig kunnat drömma om att min pappa skulle kunna dö.\nGlömmer det aldrig. Min chef sa att jag kör dig hem så du får packa och sen till tåget så du kommer till Örebro. Dom var så snälla och hjälpsamma men jag var ju i chock. Vilken hemsk tågresa det blev. Och när jag kom hem, vi hade ju släktingar på besök men jag kommer inte ihåg alla. Det är som om jag inte var där. Tänkte bara på mig själv och inte att kanske mamma och du min bror behövde lite tröst. Det var bara mig det var mest synd om. MIN PAPPA fanns inte längre det gick inte att ta in. \n\nDär måste jag säga att Ebon tog ett stort ansvar och jag tror det var hom som fick ordna det mesta och det kan inte ha varit lätt för hennes Sten var ju också helt förkrossad. Tyvärr tror jag inte att någon tackade henne för det hon gjorde eller att hon fick nåt erkännande och nu är det för sent. Hur ofta är det inte så. Enda förklaringen är väl att man befann sig i ett chocktillstånd långt efter.\nKanske jag på något vis försökte gottgöra det mot mamma för jag tog med henne på flera resor så hon skulle komma ifrån lite.\nBland annat var vi till Lökken, Paris, Mallorca och Sälen och så besökte vi Margit i Söderhamn när jag hade bilen. Vi flög även till Fagernes i Norge på vintersemester.\nJag har många gånger tänkt att hur skulle det varit om han fått leva och träffat alla barnbarnen, nu blev det bara Siv som fick träffa honom. Det var en stor Tragedi för min pappa var en verkligt fin människa. Önskar så att vi hade fått behålla honom lite längre.\nVad hände sedan?\nJag började läsa på Filip Holmqvists Handelsinstitut svensk, engelsk, tysk stenografi och Handelskorrespondens. Klarade kursen men idag skulle jag inte kunna ta ett enda stenogram. Men när jag började arbeta på Saab Elektronik så fick jag användning och t.o.m. tog jag ett stenogram på engelska. Idag finns väl knappast några stenografer kvar och det är väl tur det.\nJag blev inte kvar så länge på Saab för jag hade träffat Tore och 1961 förlovade vi oss på Lyckornas Havsbad i Ljungskile. Året därpå fick vi en lägenhet i Kortedala och gifte oss 1962 och året efter så kom Caroline. Efter 3 år så kom Jan 1966.\nNu kan jag känna mig nöjd och glad för 2 barn, 4 barnbarn och 2 barnbarnsbarn. Bra jobbat eller hur?\nResten är historia.",
       "photoCaptions": {},
       "photos": [],
       "gender": "F"
@@ -7359,16 +7359,16 @@
   },
   "parentsOf": {
     "p_3qowa85hd": [
-      "p_zobmj6wp8",
-      "p_jrbvidb3g"
+      "p_jrbvidb3g",
+      "p_zobmj6wp8"
     ],
     "p_3uj910se8": [
-      "p_bbclq6f9g",
-      "p_3rw58lslc"
+      "p_3rw58lslc",
+      "p_bbclq6f9g"
     ],
     "p_3w3d8mg0r": [
-      "p_e2d8rcv1d",
-      "p_p1t2kmcat"
+      "p_p1t2kmcat",
+      "p_e2d8rcv1d"
     ],
     "p_607tk2v1i": [
       "p_fceooch",
@@ -7387,16 +7387,16 @@
       "p_bkayc4w"
     ],
     "p_8mchqpopa": [
-      "p_zobmj6wp8",
-      "p_jrbvidb3g"
+      "p_jrbvidb3g",
+      "p_zobmj6wp8"
     ],
     "p_99wt1e8e6": [
       "p_r6gu9qm8a",
       "p_apnevfd1e"
     ],
     "p_anref8x": [
-      "p_q1486bk",
-      "p_a9c12mk"
+      "p_a9c12mk",
+      "p_q1486bk"
     ],
     "p_bbclq6f9g": [
       "p_r6gu9qm8a",
@@ -7412,12 +7412,12 @@
       "p_ymb6wc3q0"
     ],
     "p_c2jyk4pds": [
-      "p_9vhcxd8",
-      "p_mc6jemk"
+      "p_mc6jemk",
+      "p_9vhcxd8"
     ],
     "p_czyydy2g7": [
-      "p_9vhcxd8",
-      "p_mc6jemk"
+      "p_mc6jemk",
+      "p_9vhcxd8"
     ],
     "p_ep1684kzs": [
       "p_n2oxqssdd",
@@ -7428,8 +7428,8 @@
       "p_epbrpkbpc"
     ],
     "p_ir25hn919": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_p1t2kmcat": [
       "p_6c6wnb9",
@@ -7456,12 +7456,12 @@
       "p_ymb6wc3q0"
     ],
     "p_t22zhc497": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_vomcn89yz": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_zobmj6wp8": [
       "p_6c6wnb9",
@@ -7512,12 +7512,12 @@
       "p_apnevfd1e"
     ],
     "p_ir4u61dqa": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_jqtxmllar": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_apnevfd1e": [
       "p_l0tiqibe0",
@@ -7544,12 +7544,12 @@
       "p_apnevfd1e"
     ],
     "p_z4rxd74pc": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_zcl5kw4oh": [
-      "p_e2d8rcv1d",
-      "p_p1t2kmcat"
+      "p_p1t2kmcat",
+      "p_e2d8rcv1d"
     ],
     "p_lx16wimrx": [
       "p_izcueyhnf",
@@ -7563,8 +7563,8 @@
       "p_sh6rs3ypi"
     ],
     "p_4cjwtla35": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_37jcbtegu": [
       "p_n2oxqssdd",
@@ -8031,26 +8031,26 @@
     ]
   },
   "childrenOf": {
-    "p_jrbvidb3g": [
-      "p_3qowa85hd",
-      "p_8mchqpopa"
-    ],
     "p_zobmj6wp8": [
       "p_3qowa85hd",
       "p_8mchqpopa"
     ],
-    "p_3rw58lslc": [
-      "p_3uj910se8"
+    "p_jrbvidb3g": [
+      "p_3qowa85hd",
+      "p_8mchqpopa"
     ],
     "p_bbclq6f9g": [
       "p_3uj910se8",
       "p_4yyrm3723"
     ],
-    "p_p1t2kmcat": [
+    "p_3rw58lslc": [
+      "p_3uj910se8"
+    ],
+    "p_e2d8rcv1d": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
-    "p_e2d8rcv1d": [
+    "p_p1t2kmcat": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
@@ -8098,10 +8098,10 @@
       "p_yhg9e9i5y",
       "p_tdvl922cf"
     ],
-    "p_a9c12mk": [
+    "p_q1486bk": [
       "p_anref8x"
     ],
-    "p_q1486bk": [
+    "p_a9c12mk": [
       "p_anref8x"
     ],
     "p_k9dqg17ug": [
@@ -8146,11 +8146,11 @@
       "p_trylh546h",
       "p_vit2oe3no"
     ],
-    "p_mc6jemk": [
+    "p_9vhcxd8": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
-    "p_9vhcxd8": [
+    "p_mc6jemk": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
@@ -8164,13 +8164,13 @@
       "p_n2oxqssdd",
       "p_kjb1yqku"
     ],
-    "p_yhg9e9i5y": [
+    "p_n4z6lfc2f": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
       "p_4cjwtla35"
     ],
-    "p_n4z6lfc2f": [
+    "p_yhg9e9i5y": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
@@ -8190,12 +8190,12 @@
       "p_zobmj6wp8",
       "p_0dj5jnxhr"
     ],
-    "p_0dj5jnxhr": [
+    "p_zmfl39a5r": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
     ],
-    "p_zmfl39a5r": [
+    "p_0dj5jnxhr": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
