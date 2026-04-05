@@ -7730,6 +7730,186 @@
       "photo": "",
       "photoId": "",
       "history": ""
+    },
+    "p_cxczwvzu": {
+      "id": "p_cxczwvzu",
+      "name": "Lars Ersson",
+      "gender": "M",
+      "role": "",
+      "born": "1721-11-24",
+      "bornParish": "Norrbyn, Söderala",
+      "died": "1788-08-16",
+      "diedParish": "Norrbyn, Söderala",
+      "job": "Bonde",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Lars Ersson\n\nBonde\n\nFödd 1721-11-24 Norrbyn, Söderala\n\nGift med Margta Michelsdotter 1744 \n\nDöd 1788-08-16 Norrbyn, Söderala\n\nNoteringar\n\nv136719.b84.s109\nSöderala kyrkoarkiv, Husförhörslängder, SE/HLA/1010201/A I/3 a (1761-1767), bildid: C0032106_00090, sida 109\nhttps://sok.riksarkivet.se/bildvisning/C0032106_00090\n\nv136721.b70.s66\nSöderala kyrkoarkiv, Husförhörslängder, SE/HLA/1010201/A I/4 a (1768-1775), bildid: C0032108_00079, sida 66\nhttps://sok.riksarkivet.se/bildvisning/C0032108_00079\n\n\nv136723.b38.s30\nSöderala kyrkoarkiv, Husförhörslängder, SE/HLA/1010201/A I/5 a (1776-1783), bildid: C0032110_00045, sida 30\nhttps://sok.riksarkivet.se/bildvisning/C0032110_00045\n\n\nv136725.b43.s36\nSöderala kyrkoarkiv, Husförhörslängder, SE/HLA/1010201/A I/6 a (1784-1791), bildid: C0032112_00050, sida 36\nhttps://sok.riksarkivet.se/bildvisning/C0032112_00050"
+    },
+    "p_x10v0cth": {
+      "id": "p_x10v0cth",
+      "name": "Margta Michelsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1721-07-04",
+      "bornParish": "Färila",
+      "died": "1793-08-31",
+      "diedParish": "Norrbyn, Söderala",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Margta Michelsdotter\n\nFödd 1721-07-04 Färila\n\nGift med Lars Ersson 1744 \n\nDöd 1793-08-31 Norrbyn Söderala\n\nNoteringar\nEnligt Färila födelsebok (C:1 kort 2/2) föds Margareta den 4 juli 1721, fader är soldaten Mickel(?) Lotsberg. Hon döps den 14 dito. Sedan räknas faddrarna upp. Texten är dock ganska svårläst.\n\nDenna Margareta uppges i dödboken för Söderala vara dotter till \"soldaten i Ferila\" Mikael Lo(t?)sberg och hans hustru Lisa Olsdotter.\n\nMargareta uppges vara född i januari 1721 i \"Ferila och Lohs\" och flyttade 1739 till Söderala sn, där hon 1744 gifte sig med Lars Ersson (1721-1788) i Norrbyn. Hon dog 1/8 1793 i Norrbyn, Söderala sn."
+    },
+    "p_a83t02tj": {
+      "id": "p_a83t02tj",
+      "name": "Mickel Mickelsson Lotsberg Huiskainen",
+      "gender": "M",
+      "role": "",
+      "born": "1687",
+      "bornParish": "Los",
+      "died": "",
+      "diedParish": "",
+      "job": "Soldat",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_4vaudjjh": {
+      "id": "p_4vaudjjh",
+      "name": "Elisabeth Johansdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1691 ",
+      "bornParish": "Los",
+      "died": "1739",
+      "diedParish": "Los",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_wlv5npdq": {
+      "id": "p_wlv5npdq",
+      "name": "Johan Larsson",
+      "gender": "M",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "1692",
+      "diedParish": "Los",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_zcrxsank": {
+      "id": "p_zcrxsank",
+      "name": "Lisbeth Mickelsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1654",
+      "bornParish": "Voxna",
+      "died": "1735-02-12",
+      "diedParish": "Los",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_1su3kdwv": {
+      "id": "p_1su3kdwv",
+      "name": "Mickel Matsson Kirjalainen",
+      "gender": "M",
+      "role": "",
+      "born": "1624",
+      "bornParish": "",
+      "died": "1728-10-28",
+      "diedParish": "Los",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Död 1728-10-28 Los\nbegravd 1728-10-28 i Norra Los, Los (X)"
+    },
+    "p_dccbw7kk": {
+      "id": "p_dccbw7kk",
+      "name": "Malin Olofsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1636",
+      "bornParish": "Tjärnvall, Los",
+      "died": "1718-09-14",
+      "diedParish": "Norra Los, Los",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Död 1718-09-14 Norra Los, Los\nbegravd 1718-09-14"
+    },
+    "p_myly60f3": {
+      "id": "p_myly60f3",
+      "name": "Olof Mickelsson",
+      "gender": "M",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "1679",
+      "diedParish": "Los",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_ftaux8kd": {
+      "id": "p_ftaux8kd",
+      "name": "Mats Persson Kirjalainen",
+      "gender": "M",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "1670",
+      "diedParish": "Los",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Noteringar\nKom tillsammans med sin bror Mickel från Finland och upptog Lillskogstorpet i Färila, för vilket Mickel skattlades 1637 med 2 öre. Mats bodde hos brodern åren 1642-1643 enligt mtl. Men flyttade sedan till Norra Los, det första torpet Loskog (Huiskala) kallades därefter Södra Los. Mats finns i mantal för Norra Los 1645-1663 (1664-66 saknas). \nHans hustru var Elisabet Bertilsdotter, död 169(7) i Norra Los, Los (X). Levde ännu 1694-02-15. [J H Schaeffer HFL Finnmarken M 132]. (dotter till Bertil Persson Huiskainen i Södra Los, Los (X))."
+    },
+    "p_sh5630es": {
+      "id": "p_sh5630es",
+      "name": "Elisabeth Bertilsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "1697",
+      "diedParish": "Los",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_hiqm7ate": {
+      "id": "p_hiqm7ate",
+      "name": "Bertil Persson Huiskainen",
+      "gender": "",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
     }
   },
   "parentsOf": {
@@ -8456,6 +8636,32 @@
     ],
     "p_rezy1r51": [
       "p_39mc2h2z"
+    ],
+    "p_qxysgd2y": [
+      "p_cxczwvzu",
+      "p_x10v0cth"
+    ],
+    "p_x10v0cth": [
+      "p_a83t02tj",
+      "p_4vaudjjh"
+    ],
+    "p_4vaudjjh": [
+      "p_wlv5npdq",
+      "p_zcrxsank"
+    ],
+    "p_zcrxsank": [
+      "p_1su3kdwv",
+      "p_dccbw7kk"
+    ],
+    "p_dccbw7kk": [
+      "p_myly60f3"
+    ],
+    "p_1su3kdwv": [
+      "p_ftaux8kd",
+      "p_sh5630es"
+    ],
+    "p_sh5630es": [
+      "p_hiqm7ate"
     ]
   },
   "childrenOf": {
@@ -9211,6 +9417,42 @@
     ],
     "p_39mc2h2z": [
       "p_rezy1r51"
+    ],
+    "p_cxczwvzu": [
+      "p_qxysgd2y"
+    ],
+    "p_x10v0cth": [
+      "p_qxysgd2y"
+    ],
+    "p_a83t02tj": [
+      "p_x10v0cth"
+    ],
+    "p_4vaudjjh": [
+      "p_x10v0cth"
+    ],
+    "p_wlv5npdq": [
+      "p_4vaudjjh"
+    ],
+    "p_zcrxsank": [
+      "p_4vaudjjh"
+    ],
+    "p_1su3kdwv": [
+      "p_zcrxsank"
+    ],
+    "p_dccbw7kk": [
+      "p_zcrxsank"
+    ],
+    "p_myly60f3": [
+      "p_dccbw7kk"
+    ],
+    "p_ftaux8kd": [
+      "p_1su3kdwv"
+    ],
+    "p_sh5630es": [
+      "p_1su3kdwv"
+    ],
+    "p_hiqm7ate": [
+      "p_sh5630es"
     ]
   },
   "spousesOf": {
@@ -9973,6 +10215,36 @@
     ],
     "p_k3icp23e": [
       "p_rezy1r51"
+    ],
+    "p_cxczwvzu": [
+      "p_x10v0cth"
+    ],
+    "p_x10v0cth": [
+      "p_cxczwvzu"
+    ],
+    "p_a83t02tj": [
+      "p_4vaudjjh"
+    ],
+    "p_4vaudjjh": [
+      "p_a83t02tj"
+    ],
+    "p_wlv5npdq": [
+      "p_zcrxsank"
+    ],
+    "p_zcrxsank": [
+      "p_wlv5npdq"
+    ],
+    "p_1su3kdwv": [
+      "p_dccbw7kk"
+    ],
+    "p_dccbw7kk": [
+      "p_1su3kdwv"
+    ],
+    "p_ftaux8kd": [
+      "p_sh5630es"
+    ],
+    "p_sh5630es": [
+      "p_ftaux8kd"
     ]
   }
 }
