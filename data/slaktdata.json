@@ -8707,20 +8707,50 @@
       "photo": "",
       "photoId": "",
       "history": "Karl Johan Åberg\n\n18600723\n\nÅberg, Karl Johan\n\nVa Sund\n\nDöd 5/6 1914.\n\nKyrkobokförd i Nora bergsförs (Örebro län, Västmanland).\n\nFödd 23/7 1860 i Nora bergsförs (Örebro län, Västmanland).\n\nGift man (24/12 1887).\n--------------\nMotsvarande folkbokföringsförsamling(ar) 1/1 2017:\nNora bergslagsförs, Nora kn (Örebro län, Västmanland)\n\nFödelseförsamling i källan:\nNora Bergsförsamling (Örebro län)\n\nKällor:\nDB, HFL (sida: 767)\n\n_________________________\n\nKarl Johan är vid faderns död 16 år och han lämnar hemmet 2 år senare vid 18 års ålder."
+    },
+    "p_rx7w71tx": {
+      "id": "p_rx7w71tx",
+      "name": "Kristina Åberg",
+      "gender": "F",
+      "role": "",
+      "born": "1862-11-24",
+      "bornParish": "Gamla Pershyttan, Nora Bergsförs.",
+      "died": "1947-01-25",
+      "diedParish": "Eskilstuna Kloster",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "18621124-160\n\nCarlsson f. Åberg, Kristina\n\nS Bangårdsg 12, Eskilstuna\n\nDöd 20/1 1947.\n\nKyrkobokförd i Eskilstuna Kloster (Södermanlands län, Södermanland).\n\nFödd 24/11 1862 i Nora bergsförs (Örebro län, Västmanland).\n\nÄnka (18/11 1923).\n--------------\nMotsvarande folkbokföringsförsamling(ar) 1/1 2017:\nEskilstuna, Eskilstuna kn (Södermanlands län, Södermanland)\n\nFödelseförsamling i källan:\nNora Bergsf (Örebro län)\n\nKällor:"
+    },
+    "p_ibdxiuq6": {
+      "id": "p_ibdxiuq6",
+      "name": "Karolina Åberg",
+      "gender": "F",
+      "role": "",
+      "born": "1865-05-12",
+      "bornParish": "Gamla Pershyttan, Nora Bergsförs.",
+      "died": "1865-07-17",
+      "diedParish": "Gamla Pershyttan, Nora Bergsförs.",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Karolina Åberg Andersdotter\n\nFödd 1865-05-12 Gamla Pershyttan\n\nDöd 1865-07-17 Gamla Pershyttan\nDog i bröstsjukdom 2 månader gammal.\nKälla: Bröstsjuka\n\nNoteringar\nSC-1010_100018__15-022200.jpg"
     }
   },
   "parentsOf": {
     "p_3qowa85hd": [
-      "p_zobmj6wp8",
-      "p_jrbvidb3g"
+      "p_jrbvidb3g",
+      "p_zobmj6wp8"
     ],
     "p_3uj910se8": [
-      "p_bbclq6f9g",
-      "p_3rw58lslc"
+      "p_3rw58lslc",
+      "p_bbclq6f9g"
     ],
     "p_3w3d8mg0r": [
-      "p_e2d8rcv1d",
-      "p_p1t2kmcat"
+      "p_p1t2kmcat",
+      "p_e2d8rcv1d"
     ],
     "p_607tk2v1i": [
       "p_fceooch",
@@ -8739,16 +8769,16 @@
       "p_bkayc4w"
     ],
     "p_8mchqpopa": [
-      "p_zobmj6wp8",
-      "p_jrbvidb3g"
+      "p_jrbvidb3g",
+      "p_zobmj6wp8"
     ],
     "p_99wt1e8e6": [
       "p_r6gu9qm8a",
       "p_apnevfd1e"
     ],
     "p_anref8x": [
-      "p_q1486bk",
-      "p_a9c12mk"
+      "p_a9c12mk",
+      "p_q1486bk"
     ],
     "p_bbclq6f9g": [
       "p_r6gu9qm8a",
@@ -8764,12 +8794,12 @@
       "p_ymb6wc3q0"
     ],
     "p_c2jyk4pds": [
-      "p_9vhcxd8",
-      "p_mc6jemk"
+      "p_mc6jemk",
+      "p_9vhcxd8"
     ],
     "p_czyydy2g7": [
-      "p_9vhcxd8",
-      "p_mc6jemk"
+      "p_mc6jemk",
+      "p_9vhcxd8"
     ],
     "p_ep1684kzs": [
       "p_n2oxqssdd",
@@ -8780,8 +8810,8 @@
       "p_epbrpkbpc"
     ],
     "p_ir25hn919": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_p1t2kmcat": [
       "p_6c6wnb9",
@@ -8808,12 +8838,12 @@
       "p_ymb6wc3q0"
     ],
     "p_t22zhc497": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_vomcn89yz": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_zobmj6wp8": [
       "p_6c6wnb9",
@@ -8864,12 +8894,12 @@
       "p_apnevfd1e"
     ],
     "p_ir4u61dqa": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_jqtxmllar": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_apnevfd1e": [
       "p_l0tiqibe0",
@@ -8896,12 +8926,12 @@
       "p_apnevfd1e"
     ],
     "p_z4rxd74pc": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_zcl5kw4oh": [
-      "p_e2d8rcv1d",
-      "p_p1t2kmcat"
+      "p_p1t2kmcat",
+      "p_e2d8rcv1d"
     ],
     "p_lx16wimrx": [
       "p_izcueyhnf",
@@ -8915,8 +8945,8 @@
       "p_sh6rs3ypi"
     ],
     "p_4cjwtla35": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_37jcbtegu": [
       "p_n2oxqssdd",
@@ -9546,29 +9576,37 @@
     "p_xef47zwi": [
       "p_7jbjsqcs",
       "p_ntqz8x0y"
+    ],
+    "p_rx7w71tx": [
+      "p_7jbjsqcs",
+      "p_ntqz8x0y"
+    ],
+    "p_ibdxiuq6": [
+      "p_7jbjsqcs",
+      "p_ntqz8x0y"
     ]
   },
   "childrenOf": {
-    "p_jrbvidb3g": [
-      "p_3qowa85hd",
-      "p_8mchqpopa"
-    ],
     "p_zobmj6wp8": [
       "p_3qowa85hd",
       "p_8mchqpopa"
     ],
-    "p_3rw58lslc": [
-      "p_3uj910se8"
+    "p_jrbvidb3g": [
+      "p_3qowa85hd",
+      "p_8mchqpopa"
     ],
     "p_bbclq6f9g": [
       "p_3uj910se8",
       "p_4yyrm3723"
     ],
-    "p_p1t2kmcat": [
+    "p_3rw58lslc": [
+      "p_3uj910se8"
+    ],
+    "p_e2d8rcv1d": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
-    "p_e2d8rcv1d": [
+    "p_p1t2kmcat": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
@@ -9616,10 +9654,10 @@
       "p_yhg9e9i5y",
       "p_tdvl922cf"
     ],
-    "p_a9c12mk": [
+    "p_q1486bk": [
       "p_anref8x"
     ],
-    "p_q1486bk": [
+    "p_a9c12mk": [
       "p_anref8x"
     ],
     "p_k9dqg17ug": [
@@ -9662,11 +9700,11 @@
       "p_trylh546h",
       "p_vit2oe3no"
     ],
-    "p_mc6jemk": [
+    "p_9vhcxd8": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
-    "p_9vhcxd8": [
+    "p_mc6jemk": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
@@ -9680,13 +9718,13 @@
       "p_n2oxqssdd",
       "p_kjb1yqku"
     ],
-    "p_yhg9e9i5y": [
+    "p_n4z6lfc2f": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
       "p_4cjwtla35"
     ],
-    "p_n4z6lfc2f": [
+    "p_yhg9e9i5y": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
@@ -9706,12 +9744,12 @@
       "p_zobmj6wp8",
       "p_0dj5jnxhr"
     ],
-    "p_0dj5jnxhr": [
+    "p_zmfl39a5r": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
     ],
-    "p_zmfl39a5r": [
+    "p_0dj5jnxhr": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
@@ -10026,11 +10064,15 @@
     ],
     "p_7jbjsqcs": [
       "p_izcueyhnf",
-      "p_xef47zwi"
+      "p_xef47zwi",
+      "p_rx7w71tx",
+      "p_ibdxiuq6"
     ],
     "p_ntqz8x0y": [
       "p_izcueyhnf",
-      "p_xef47zwi"
+      "p_xef47zwi",
+      "p_rx7w71tx",
+      "p_ibdxiuq6"
     ],
     "p_od2tv6oc": [
       "p_fvuvuehr"
