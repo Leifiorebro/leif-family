@@ -8692,6 +8692,21 @@
       "photo": "",
       "photoId": "",
       "history": "Emil Verner Åberg\n\nFödd 1891-06-14 Bondborn, Nora\n\nDöd 1894-05-04 Bondborn, Nora\nDödsorsak: Scharlakansfeber\n\nNoteringar\nNora bergsförsamling (T) AI:18c (1882-1891) Bild 191 / sid 177 (AID: v52025.b191.s177, NAD: SE/ULA/11098)"
+    },
+    "p_xef47zwi": {
+      "id": "p_xef47zwi",
+      "name": "Karl Johan Åberg",
+      "gender": "M",
+      "role": "",
+      "born": "1860-07-23",
+      "bornParish": "Gamla Pershyttan, Nora bergsförs.",
+      "died": "1914-06-05",
+      "diedParish": "Västra Sund",
+      "job": "Banvakt",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Karl Johan Åberg\n\n18600723\n\nÅberg, Karl Johan\n\nVa Sund\n\nDöd 5/6 1914.\n\nKyrkobokförd i Nora bergsförs (Örebro län, Västmanland).\n\nFödd 23/7 1860 i Nora bergsförs (Örebro län, Västmanland).\n\nGift man (24/12 1887).\n--------------\nMotsvarande folkbokföringsförsamling(ar) 1/1 2017:\nNora bergslagsförs, Nora kn (Örebro län, Västmanland)\n\nFödelseförsamling i källan:\nNora Bergsförsamling (Örebro län)\n\nKällor:\nDB, HFL (sida: 767)\n\n_________________________\n\nKarl Johan är vid faderns död 16 år och han lämnar hemmet 2 år senare vid 18 års ålder."
     }
   },
   "parentsOf": {
@@ -9306,7 +9321,6 @@
       "p_b5sxeisz"
     ],
     "p_ntqz8x0y": [
-      "p_2orz401l",
       "p_yskd71as"
     ],
     "p_yskd71as": [
@@ -9528,6 +9542,10 @@
     "p_ftwzuve8": [
       "p_izcueyhnf",
       "p_tnf5rvj1f"
+    ],
+    "p_xef47zwi": [
+      "p_7jbjsqcs",
+      "p_ntqz8x0y"
     ]
   },
   "childrenOf": {
@@ -10007,10 +10025,12 @@
       "p_pk0srrk9"
     ],
     "p_7jbjsqcs": [
-      "p_izcueyhnf"
+      "p_izcueyhnf",
+      "p_xef47zwi"
     ],
     "p_ntqz8x0y": [
-      "p_izcueyhnf"
+      "p_izcueyhnf",
+      "p_xef47zwi"
     ],
     "p_od2tv6oc": [
       "p_fvuvuehr"
@@ -10142,9 +10162,6 @@
     ],
     "p_b5sxeisz": [
       "p_14h9l8r8"
-    ],
-    "p_2orz401l": [
-      "p_ntqz8x0y"
     ],
     "p_yskd71as": [
       "p_ntqz8x0y"
