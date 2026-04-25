@@ -10165,6 +10165,276 @@
       "photo": "",
       "photoId": "",
       "history": ""
+    },
+    "p_qmpy4l2u": {
+      "id": "p_qmpy4l2u",
+      "name": "Lars Olsson",
+      "gender": "",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_mxrpqjxv": {
+      "id": "p_mxrpqjxv",
+      "name": "Catharina Mathsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1725-07-02",
+      "bornParish": "Setterboda, Lännäs",
+      "died": "1812",
+      "diedParish": "Ältarbacken, Lännäs",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_y28ymsl8": {
+      "id": "p_y28ymsl8",
+      "name": "Maths Matsson",
+      "gender": "M",
+      "role": "",
+      "born": "1698",
+      "bornParish": "",
+      "died": "1748-12-22",
+      "diedParish": "Nytorp, Lännäs",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_svs8d17g": {
+      "id": "p_svs8d17g",
+      "name": "Ingeborg Johansdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1700-12-23",
+      "bornParish": "Lännäs",
+      "died": "1772",
+      "diedParish": "Nytorp, Lännäs",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_9yfs5dde": {
+      "id": "p_9yfs5dde",
+      "name": "Jan Jansson",
+      "gender": "M",
+      "role": "",
+      "born": "1722-11-11",
+      "bornParish": "Sahlbacka, Lännäs",
+      "died": "1791-12-18",
+      "diedParish": "Eketorp, Lännäs",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_8puahwpb": {
+      "id": "p_8puahwpb",
+      "name": "Malin Larsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1738-11-09",
+      "bornParish": "Djursnäs, Lännäs",
+      "died": "1805",
+      "diedParish": "Lännäs",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_kgebe97f": {
+      "id": "p_kgebe97f",
+      "name": "Johan Olsson",
+      "gender": "M",
+      "role": "",
+      "born": "1677",
+      "bornParish": "",
+      "died": "1741-08-02",
+      "diedParish": "Hultbelta, Lännäs",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_m0288uk0": {
+      "id": "p_m0288uk0",
+      "name": "Brita Larsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1697",
+      "bornParish": "",
+      "died": "1764",
+      "diedParish": "Södra Hultbelta, Lännäs",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_80uvamp4": {
+      "id": "p_80uvamp4",
+      "name": "Abraham Horra",
+      "gender": "M",
+      "role": "",
+      "born": "1744-09-08",
+      "bornParish": "Goltorp, Lillkyrka",
+      "died": "1816-06-30",
+      "diedParish": "Höre ägor, Asker",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_mxdoo8wv": {
+      "id": "p_mxdoo8wv",
+      "name": "Brita Olofsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1744",
+      "bornParish": "Sickelsjö",
+      "died": "1807-09-15",
+      "diedParish": "Höre ägor, Asker",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_ttccea68": {
+      "id": "p_ttccea68",
+      "name": "Jon Jansson",
+      "gender": "M",
+      "role": "",
+      "born": "1685-02-23",
+      "bornParish": "Goltorp. Lillkyrka",
+      "died": "1765",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_jnsu1a0s": {
+      "id": "p_jnsu1a0s",
+      "name": "Ingrid Eriksdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1707",
+      "bornParish": "Götlunda",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_f9rgvqub": {
+      "id": "p_f9rgvqub",
+      "name": "Pär Andersson",
+      "gender": "M",
+      "role": "",
+      "born": "1787-02-10",
+      "bornParish": "Asker",
+      "died": "1829-12-28",
+      "diedParish": "Kvarnfallet, Boo",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Pär Andersson\n\nFödd 1787-02-10 Asker\n\nDöd 1829-12-28 Kvarnfallet, Boo\nBo (T) AI:11 (1826-1830) Bild 43 / sid 37 (AID: v50960.b43.s37, NAD: SE/ULA/10125)\n\nNoteringar\nBo (T) AI:9 (1816-1820) Bild 42 / sid 37 (AID: v50958.b42.s37, NAD: SE/ULA/10125)\nBo (T) AI:10 (1821-1825) Bild 41 / sid 37 (AID: v50959.b41.s37, NAD: SE/ULA/10125)\nBo (T) AI:11 (1826-1830) Bild 43 / sid 37 (AID: v50960.b43.s37, NAD: SE/ULA/10125)"
+    },
+    "p_v26420m2": {
+      "id": "p_v26420m2",
+      "name": "Anna Stina Carlsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1789-06-23",
+      "bornParish": "Boo",
+      "died": "1825-05-11",
+      "diedParish": "Boo",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Anna Stina Carlsdotter\n\nFödd 1789-06-23 Boo\nKälla: Bo (T) AI:18 1861-65 s.269 Gryt / GID 2321.6.68400\n\nDöd 1825-05-11 Boo\nBo (T) AI:10 (1821-1825) Bild 41 / sid 37 (AID: v50959.b41.s37, NAD: SE/ULA/10125)\n\nNoteringar\nBo (T) AI:9 (1816-1820) Bild 42 / sid 37 (AID: v50958.b42.s37, NAD: SE/ULA/10125)\n\nBo (T) AI:4 (1786-1790) Bild 71 / sid 67 (AID: v50953.b71.s67, NAD: SE/ULA/10125)\nBo (T) AI:5 (1790-1800) Bild 73 / sid 67 (AID: v50954.b73.s67, NAD: SE/ULA/10125)"
+    },
+    "p_cuozahay": {
+      "id": "p_cuozahay",
+      "name": "Carl Andersson",
+      "gender": "M",
+      "role": "",
+      "born": "1760",
+      "bornParish": "Boo",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Carl Andersson\n\nFödd 1760 Boo\nBo (T) AI:4 (1786-1790) Bild 57 / sid 53 (AID: v50953.b57.s53, NAD: SE/ULA/10125)\n\nNoteringar\nBo (T) AI:5 (1790-1800) Bild 73 / sid 67 (AID: v50954.b73.s67, NAD: SE/ULA/10125)"
+    },
+    "p_mblj9m5i": {
+      "id": "p_mblj9m5i",
+      "name": "Maria Andersdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1770",
+      "bornParish": "Kårtorp, Boo förs.",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Maria Andersdotter\n\nFödd 1770 Kårtorp, Boo förs.\nBo (T) C:2 (1763-1802) Bild 177 / sid 344 (AID: v52931.b177.s344, NAD: SE/ULA/10125)\n\n\nBo (T) AI:4 (1786-1790) Bild 71 / sid 67 (AID: v50953.b71.s67, NAD: SE/ULA/10125)\nKälla: Bo (T) C:2 (1763-1802) Bild 177 / sid 344 (AID: v52931.b177.s344, NAD: SE/ULA/10125)\n\nNoteringar\n\nBo (T) C:2 (1763-1802) Bild 177 / sid 344 (AID: v52931.b177.s344, NAD: SE/ULA/10125)\nBo (T) AI:4 (1786-1790) Bild 71 / sid 67 (AID: v50953.b71.s67, NAD: SE/ULA/10125)\nBo (T) AI:5 (1790-1800) Bild 73 / sid 67 (AID: v50954.b73.s67, NAD: SE/ULA/10125)"
+    },
+    "p_wzyc4u2i": {
+      "id": "p_wzyc4u2i",
+      "name": "Anders Pehrsson",
+      "gender": "M",
+      "role": "",
+      "born": "1734",
+      "bornParish": "Boo förs.",
+      "died": "",
+      "diedParish": "",
+      "job": "Torpare",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Anders Pehrsson\n\nTorpare\n\nFödd 1734 Boo förs.\nBo (T) AI:4 (1786-1790) Bild 71 / sid 67 (AID: v50953.b71.s67, NAD: SE/ULA/10125)\n\nNoteringar\nBo (T) AI:4 (1786-1790) Bild 71 / sid 67 (AID: v50953.b71.s67, NAD: SE/ULA/10125)\nBo (T) AI:5 (1790-1800) Bild 73 / sid 67 (AID: v50954.b73.s67, NAD: SE/ULA/10125)"
+    },
+    "p_f8f00j9p": {
+      "id": "p_f8f00j9p",
+      "name": "Kerstin Jansdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1740",
+      "bornParish": "Boo förs.",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Kerstin Jansdotter\n\nFödd 1740 Boo förs.\nBo (T) AI:4 (1786-1790) Bild 71 / sid 67 (AID: v50953.b71.s67, NAD: SE/ULA/10125)\n\nNoteringar\nBo (T) AI:4 (1786-1790) Bild 71 / sid 67 (AID: v50953.b71.s67, NAD: SE/ULA/10125)\nBo (T) AI:5 (1790-1800) Bild 73 / sid 67 (AID: v50954.b73.s67, NAD: SE/ULA/10125)"
     }
   },
   "parentsOf": {
@@ -11201,6 +11471,42 @@
     "p_za5owu64": [
       "p_vo8dsxpl",
       "p_sxh34h0q"
+    ],
+    "p_vo8dsxpl": [
+      "p_qmpy4l2u",
+      "p_mxrpqjxv"
+    ],
+    "p_mxrpqjxv": [
+      "p_y28ymsl8",
+      "p_svs8d17g"
+    ],
+    "p_sxh34h0q": [
+      "p_9yfs5dde",
+      "p_8puahwpb"
+    ],
+    "p_9yfs5dde": [
+      "p_kgebe97f",
+      "p_m0288uk0"
+    ],
+    "p_ovboh6b3": [
+      "p_80uvamp4",
+      "p_mxdoo8wv"
+    ],
+    "p_80uvamp4": [
+      "p_ttccea68",
+      "p_jnsu1a0s"
+    ],
+    "p_0wshjvy7": [
+      "p_f9rgvqub",
+      "p_v26420m2"
+    ],
+    "p_v26420m2": [
+      "p_cuozahay",
+      "p_mblj9m5i"
+    ],
+    "p_mblj9m5i": [
+      "p_wzyc4u2i",
+      "p_f8f00j9p"
     ]
   },
   "childrenOf": {
@@ -12269,6 +12575,60 @@
     ],
     "p_sxh34h0q": [
       "p_za5owu64"
+    ],
+    "p_qmpy4l2u": [
+      "p_vo8dsxpl"
+    ],
+    "p_mxrpqjxv": [
+      "p_vo8dsxpl"
+    ],
+    "p_y28ymsl8": [
+      "p_mxrpqjxv"
+    ],
+    "p_svs8d17g": [
+      "p_mxrpqjxv"
+    ],
+    "p_9yfs5dde": [
+      "p_sxh34h0q"
+    ],
+    "p_8puahwpb": [
+      "p_sxh34h0q"
+    ],
+    "p_kgebe97f": [
+      "p_9yfs5dde"
+    ],
+    "p_m0288uk0": [
+      "p_9yfs5dde"
+    ],
+    "p_80uvamp4": [
+      "p_ovboh6b3"
+    ],
+    "p_mxdoo8wv": [
+      "p_ovboh6b3"
+    ],
+    "p_ttccea68": [
+      "p_80uvamp4"
+    ],
+    "p_jnsu1a0s": [
+      "p_80uvamp4"
+    ],
+    "p_f9rgvqub": [
+      "p_0wshjvy7"
+    ],
+    "p_v26420m2": [
+      "p_0wshjvy7"
+    ],
+    "p_cuozahay": [
+      "p_v26420m2"
+    ],
+    "p_mblj9m5i": [
+      "p_v26420m2"
+    ],
+    "p_wzyc4u2i": [
+      "p_mblj9m5i"
+    ],
+    "p_f8f00j9p": [
+      "p_mblj9m5i"
     ]
   },
   "spousesOf": {
@@ -13305,6 +13665,60 @@
     ],
     "p_sxh34h0q": [
       "p_vo8dsxpl"
+    ],
+    "p_qmpy4l2u": [
+      "p_mxrpqjxv"
+    ],
+    "p_mxrpqjxv": [
+      "p_qmpy4l2u"
+    ],
+    "p_y28ymsl8": [
+      "p_svs8d17g"
+    ],
+    "p_svs8d17g": [
+      "p_y28ymsl8"
+    ],
+    "p_9yfs5dde": [
+      "p_8puahwpb"
+    ],
+    "p_8puahwpb": [
+      "p_9yfs5dde"
+    ],
+    "p_kgebe97f": [
+      "p_m0288uk0"
+    ],
+    "p_m0288uk0": [
+      "p_kgebe97f"
+    ],
+    "p_80uvamp4": [
+      "p_mxdoo8wv"
+    ],
+    "p_mxdoo8wv": [
+      "p_80uvamp4"
+    ],
+    "p_ttccea68": [
+      "p_jnsu1a0s"
+    ],
+    "p_jnsu1a0s": [
+      "p_ttccea68"
+    ],
+    "p_f9rgvqub": [
+      "p_v26420m2"
+    ],
+    "p_v26420m2": [
+      "p_f9rgvqub"
+    ],
+    "p_cuozahay": [
+      "p_mblj9m5i"
+    ],
+    "p_mblj9m5i": [
+      "p_cuozahay"
+    ],
+    "p_wzyc4u2i": [
+      "p_f8f00j9p"
+    ],
+    "p_f8f00j9p": [
+      "p_wzyc4u2i"
     ]
   }
 }
