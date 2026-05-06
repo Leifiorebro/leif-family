@@ -11530,14 +11530,14 @@
       "gender": "F",
       "role": "",
       "born": "1805-03-03",
-      "bornParish": "Järnboås",
+      "bornParish": "Vassland, Järnboås",
       "died": "",
       "diedParish": "",
       "job": "",
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "Catharina Olsdotter 1805-03-03\nFödelseboken:\nJärnboås (T) C:4 (1775-1805) Bild 141 (AID: v53329.b141, NAD: SE/ULA/10503)\n\nJärnboås (T) AI:8 (1805-1814) Bild 59 / sid 54 (AID: v51500.b59.s54, NAD: SE/ULA/10503)"
     },
     "p_pyzpdjlg": {
       "id": "p_pyzpdjlg",
@@ -11552,7 +11552,7 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Per Persson\nFödelseboken 1777-08-05:\nJärnboås (T) C:4 (1775-1805) Bild 19 (AID: v53329.b19, NAD: SE/ULA/10503)\n\nJärnboås (T) AI:5 (1775-1785) Bild 56 / sid 49 (AID: v51497.b56.s49, NAD: SE/ULA/10503)\nPehr Olsson f. 1748 har gift sig med Anna Pehrsdotter f. 1754 och de har fått sonen Per Persson f. 1777-08-05\nJärnboås (T) AI:6 (1786-1795) Bild 510 / sid 45 (AID: v51498a.b510.s45, NAD: SE/ULA/10503)\n\nPehr Pehrsson finns i Gammelhyttan 1798-1800 \nJärnboås (T) AI:7 (1795-1804) Bild 138 / sid 133 (AID: v51499.b138.s133, NAD: SE/ULA/10503)\n\nPehr Pehrsson gifter sig med Christina Olsdotter i Gammelhyttan 1798-10-04. De får sonen Pehr Persson född 1802-11-24.\nJärnboås (T) AI:8 (1805-1814) Bild 140 / sid 135 (AID: v51500.b140.s135, NAD: SE/ULA/10503)"
+      "history": "Födelseboken:\nJärnboås (T) C:4 (1775-1805) Bild 19 (AID: v53329.b19, NAD: SE/ULA/10503)\n\nJärnboås (T) AI:7 (1795-1804) Bild 138 / sid 133 (AID: v51499.b138.s133, NAD: SE/ULA/10503)\nJärnboås (T) AI:8 (1805-1814) Bild 140 / sid 135 (AID: v51500.b140.s135, NAD: SE/ULA/10503)\nJärnboås (T) AI:9 (1815-1824) Bild 138 / sid 132 (AID: v51501.b138.s132, NAD: SE/ULA/10503)\nJärnboås (T) AI:10 (1825-1830) Bild 137 / sid 142 (AID: v51502.b137.s142, NAD: SE/ULA/10503)\nJärnboås (T) AI:10 (1825-1830) Bild 9 / sid 5 (AID: v51502.b9.s5, NAD: SE/ULA/10503)"
     },
     "p_6uq3m6jg": {
       "id": "p_6uq3m6jg",
@@ -11718,6 +11718,36 @@
       "photo": "",
       "photoId": "",
       "history": "Järnboås (T) AI:5 (1775-1785) Bild 56 / sid 49 (AID: v51497.b56.s49, NAD: SE/ULA/10503)"
+    },
+    "p_8grq6qa6": {
+      "id": "p_8grq6qa6",
+      "name": "Olof Pehrsson",
+      "gender": "M",
+      "role": "",
+      "born": "1761-05-29",
+      "bornParish": "Järnboås",
+      "died": "1811",
+      "diedParish": "Järnboås",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Järnboås (T) AI:8 (1805-1814) Bild 59 / sid 54 (AID: v51500.b59.s54, NAD: SE/ULA/10503)"
+    },
+    "p_q7z8zxj5": {
+      "id": "p_q7z8zxj5",
+      "name": "Catharina Andersdotter",
+      "gender": "",
+      "role": "",
+      "born": "1779-09",
+      "bornParish": "Nora",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Järnboås (T) AI:8 (1805-1814) Bild 59 / sid 54 (AID: v51500.b59.s54, NAD: SE/ULA/10503)"
     }
   },
   "parentsOf": {
@@ -12950,6 +12980,10 @@
     "p_o7kkxs2v": [
       "p_ke5qnjne",
       "p_a8mjka2q"
+    ],
+    "p_4w9dx04t": [
+      "p_8grq6qa6",
+      "p_q7z8zxj5"
     ]
   },
   "childrenOf": {
@@ -14286,6 +14320,12 @@
     ],
     "p_a8mjka2q": [
       "p_o7kkxs2v"
+    ],
+    "p_8grq6qa6": [
+      "p_4w9dx04t"
+    ],
+    "p_q7z8zxj5": [
+      "p_4w9dx04t"
     ]
   },
   "spousesOf": {
@@ -15583,6 +15623,12 @@
     ],
     "p_a8mjka2q": [
       "p_ke5qnjne"
+    ],
+    "p_8grq6qa6": [
+      "p_q7z8zxj5"
+    ],
+    "p_q7z8zxj5": [
+      "p_8grq6qa6"
     ]
   }
 }
