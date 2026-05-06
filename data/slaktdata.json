@@ -5647,14 +5647,14 @@
       "gender": "F",
       "role": "Mor",
       "born": "1824-04-11",
-      "bornParish": "Hjulsjö, Örebro län",
+      "bornParish": "Björksjön, Hjulsjö",
       "died": "",
       "diedParish": "",
       "job": "",
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "",
+      "history": "Födelseboken:\nHjulsjö (T) C:3 (1827-1851) Bild 41 / sid 36 (AID: v58129.b41.s36, NAD: SE/ULA/10404)\n\n\nHjulsjö (T) AI:8 (1833-1841) Bild 73 / sid 64 (AID: v51424.b73.s64, NAD: SE/ULA/10404)",
       "photos": [],
       "photoCaptions": {}
     },
@@ -11748,6 +11748,36 @@
       "photo": "",
       "photoId": "",
       "history": "Järnboås (T) AI:8 (1805-1814) Bild 59 / sid 54 (AID: v51500.b59.s54, NAD: SE/ULA/10503)"
+    },
+    "p_w6jqiehx": {
+      "id": "p_w6jqiehx",
+      "name": "Nils Nilsson",
+      "gender": "M",
+      "role": "",
+      "born": "1791-02-17",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Hjulsjö (T) AI:8 (1833-1841) Bild 73 / sid 64 (AID: v51424.b73.s64, NAD: SE/ULA/10404)"
+    },
+    "p_c4awewqm": {
+      "id": "p_c4awewqm",
+      "name": "Anna Olsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1793-06-07",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Hjulsjö (T) AI:8 (1833-1841) Bild 73 / sid 64 (AID: v51424.b73.s64, NAD: SE/ULA/10404)"
     }
   },
   "parentsOf": {
@@ -11756,12 +11786,12 @@
       "p_zobmj6wp8"
     ],
     "p_3uj910se8": [
-      "p_bbclq6f9g",
-      "p_3rw58lslc"
+      "p_3rw58lslc",
+      "p_bbclq6f9g"
     ],
     "p_3w3d8mg0r": [
-      "p_e2d8rcv1d",
-      "p_p1t2kmcat"
+      "p_p1t2kmcat",
+      "p_e2d8rcv1d"
     ],
     "p_607tk2v1i": [
       "p_fceooch",
@@ -11788,8 +11818,8 @@
       "p_apnevfd1e"
     ],
     "p_anref8x": [
-      "p_q1486bk",
-      "p_a9c12mk"
+      "p_a9c12mk",
+      "p_q1486bk"
     ],
     "p_bbclq6f9g": [
       "p_r6gu9qm8a",
@@ -11805,12 +11835,12 @@
       "p_ymb6wc3q0"
     ],
     "p_c2jyk4pds": [
-      "p_9vhcxd8",
-      "p_mc6jemk"
+      "p_mc6jemk",
+      "p_9vhcxd8"
     ],
     "p_czyydy2g7": [
-      "p_9vhcxd8",
-      "p_mc6jemk"
+      "p_mc6jemk",
+      "p_9vhcxd8"
     ],
     "p_ep1684kzs": [
       "p_n2oxqssdd",
@@ -11821,8 +11851,8 @@
       "p_epbrpkbpc"
     ],
     "p_ir25hn919": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_p1t2kmcat": [
       "p_6c6wnb9",
@@ -11849,12 +11879,12 @@
       "p_ymb6wc3q0"
     ],
     "p_t22zhc497": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_vomcn89yz": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_zobmj6wp8": [
       "p_6c6wnb9",
@@ -11905,12 +11935,12 @@
       "p_apnevfd1e"
     ],
     "p_ir4u61dqa": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_jqtxmllar": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_apnevfd1e": [
       "p_l0tiqibe0",
@@ -11937,12 +11967,12 @@
       "p_apnevfd1e"
     ],
     "p_z4rxd74pc": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_zcl5kw4oh": [
-      "p_e2d8rcv1d",
-      "p_p1t2kmcat"
+      "p_p1t2kmcat",
+      "p_e2d8rcv1d"
     ],
     "p_lx16wimrx": [
       "p_izcueyhnf",
@@ -11956,8 +11986,8 @@
       "p_sh6rs3ypi"
     ],
     "p_4cjwtla35": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_37jcbtegu": [
       "p_n2oxqssdd",
@@ -12984,6 +13014,10 @@
     "p_4w9dx04t": [
       "p_8grq6qa6",
       "p_q7z8zxj5"
+    ],
+    "p_rtgt0wzj": [
+      "p_w6jqiehx",
+      "p_c4awewqm"
     ]
   },
   "childrenOf": {
@@ -12995,18 +13029,18 @@
       "p_3qowa85hd",
       "p_8mchqpopa"
     ],
-    "p_3rw58lslc": [
-      "p_3uj910se8"
-    ],
     "p_bbclq6f9g": [
       "p_3uj910se8",
       "p_4yyrm3723"
     ],
-    "p_p1t2kmcat": [
+    "p_3rw58lslc": [
+      "p_3uj910se8"
+    ],
+    "p_e2d8rcv1d": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
-    "p_e2d8rcv1d": [
+    "p_p1t2kmcat": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
@@ -13054,10 +13088,10 @@
       "p_yhg9e9i5y",
       "p_tdvl922cf"
     ],
-    "p_a9c12mk": [
+    "p_q1486bk": [
       "p_anref8x"
     ],
-    "p_q1486bk": [
+    "p_a9c12mk": [
       "p_anref8x"
     ],
     "p_k9dqg17ug": [
@@ -13100,11 +13134,11 @@
       "p_trylh546h",
       "p_vit2oe3no"
     ],
-    "p_mc6jemk": [
+    "p_9vhcxd8": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
-    "p_9vhcxd8": [
+    "p_mc6jemk": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
@@ -13130,13 +13164,13 @@
       "p_cyl275xx",
       "p_907ij0i8"
     ],
-    "p_yhg9e9i5y": [
+    "p_n4z6lfc2f": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
       "p_4cjwtla35"
     ],
-    "p_n4z6lfc2f": [
+    "p_yhg9e9i5y": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
@@ -13156,12 +13190,12 @@
       "p_zobmj6wp8",
       "p_0dj5jnxhr"
     ],
-    "p_0dj5jnxhr": [
+    "p_zmfl39a5r": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
     ],
-    "p_zmfl39a5r": [
+    "p_0dj5jnxhr": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
@@ -14326,6 +14360,12 @@
     ],
     "p_q7z8zxj5": [
       "p_4w9dx04t"
+    ],
+    "p_w6jqiehx": [
+      "p_rtgt0wzj"
+    ],
+    "p_c4awewqm": [
+      "p_rtgt0wzj"
     ]
   },
   "spousesOf": {
@@ -15629,6 +15669,12 @@
     ],
     "p_q7z8zxj5": [
       "p_8grq6qa6"
+    ],
+    "p_w6jqiehx": [
+      "p_c4awewqm"
+    ],
+    "p_c4awewqm": [
+      "p_w6jqiehx"
     ]
   }
 }
