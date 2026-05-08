@@ -11782,13 +11782,13 @@
     "p_lks00jb0": {
       "id": "p_lks00jb0",
       "name": "Nils Andersson",
-      "gender": "",
+      "gender": "M",
       "role": "",
-      "born": "1748-03-26",
+      "born": "1743-03-26",
       "bornParish": "Hjulsjö",
-      "died": "",
-      "diedParish": "",
-      "job": "",
+      "died": "1820-08-31",
+      "diedParish": "Björksjön, Hjulsjö",
+      "job": "Nämndeman",
       "link": "",
       "photo": "",
       "photoId": "",
@@ -11799,8 +11799,38 @@
       "name": "Catharina Pehrsdotter",
       "gender": "F",
       "role": "",
-      "born": "1760",
+      "born": "1760-03-12",
       "bornParish": "Gåsborn",
+      "died": "1825-03-25",
+      "diedParish": "Björksjön, Hjulsjö",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Födelseboken:\nGåsborn (S) C:2 (1733-1775) Bild 208 / sid 407 (AID: v6656.b208.s407, NAD: SE/VA/13174)"
+    },
+    "p_mzudk6vt": {
+      "id": "p_mzudk6vt",
+      "name": "Pehr Samuelsson",
+      "gender": "",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_2yafssv9": {
+      "id": "p_2yafssv9",
+      "name": "Annika Larsdotter",
+      "gender": "",
+      "role": "",
+      "born": "",
+      "bornParish": "",
       "died": "",
       "diedParish": "",
       "job": "",
@@ -13052,6 +13082,10 @@
     "p_w6jqiehx": [
       "p_lks00jb0",
       "p_u4asejvk"
+    ],
+    "p_u4asejvk": [
+      "p_mzudk6vt",
+      "p_2yafssv9"
     ]
   },
   "childrenOf": {
@@ -14406,6 +14440,12 @@
     ],
     "p_u4asejvk": [
       "p_w6jqiehx"
+    ],
+    "p_mzudk6vt": [
+      "p_u4asejvk"
+    ],
+    "p_2yafssv9": [
+      "p_u4asejvk"
     ]
   },
   "spousesOf": {
@@ -15721,6 +15761,12 @@
     ],
     "p_u4asejvk": [
       "p_lks00jb0"
+    ],
+    "p_mzudk6vt": [
+      "p_2yafssv9"
+    ],
+    "p_2yafssv9": [
+      "p_mzudk6vt"
     ]
   }
 }
