@@ -3171,7 +3171,7 @@
         },
         {
           "src": "images/Viktor Åberg4.jpg",
-          "caption": "Sittande är Helmer Sjöberg, Ingvar Hansson och Viktor Åberg. Mannen bakom vet jag ej, kan det vara Anders Gustav Åberg? Till höger står Gunhild och Alida. Till vänster står Astrid och Hedvig.\nIngvar var en son till Sigrid och Sven Hansson och han dog 1940. Fotot taget vid Nynäs?"
+          "caption": "Bild från Dammtorpet nära Nedre Bondborn där Viktor med familj bodde.\n\nSittande: Helmer, Eddy, Viktor\nBakom dem sitter Anders Gustav Åberg\nStående till höger: Gunhild och Alida\nTill vänster: Astrid och Anna Leidzen"
         },
         {
           "src": "images/Viktor.jpg",
@@ -3190,7 +3190,6 @@
           "caption": "Nora Stads och Bergslags tidning  April 1933"
         }
       ],
-      "photoCaptions": {},
       "gender": "M"
     },
     "p_mc6jemk": {
@@ -9927,7 +9926,8 @@
           "src": "images/Kyrkogårdsgatan 36.jpg",
           "caption": "Kyrkogårdsgatan 36 i Örebro.\nHär i det lilla huset till vänster bor Karl Oskar Wall med sin familj 1915."
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_tv4l6njk": {
       "id": "p_tv4l6njk",
@@ -10877,7 +10877,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_cf032hxf": {
       "id": "p_cf032hxf",
@@ -10892,7 +10894,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_60dhbac8": {
       "id": "p_60dhbac8",
@@ -10907,7 +10911,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_m3h7tvqt": {
       "id": "p_m3h7tvqt",
@@ -10922,7 +10928,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_mxxh3ia1": {
       "id": "p_mxxh3ia1",
@@ -10937,7 +10945,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_0ce6pwis": {
       "id": "p_0ce6pwis",
@@ -10952,7 +10962,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_l2l9m2xa": {
       "id": "p_l2l9m2xa",
@@ -10967,7 +10979,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_4183rsn8": {
       "id": "p_4183rsn8",
@@ -10982,7 +10996,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_cdqppohe": {
       "id": "p_cdqppohe",
@@ -10997,7 +11013,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_105mpc29": {
       "id": "p_105mpc29",
@@ -11012,7 +11030,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_ltfab07x": {
       "id": "p_ltfab07x",
@@ -11027,7 +11047,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_s02kv7ia": {
       "id": "p_s02kv7ia",
@@ -11042,7 +11064,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_bhtww2s0": {
       "id": "p_bhtww2s0",
@@ -11057,7 +11081,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_j5s82phe": {
       "id": "p_j5s82phe",
@@ -11072,7 +11098,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_kyyta414": {
       "id": "p_kyyta414",
@@ -11087,7 +11115,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_yo2l4hfy": {
       "id": "p_yo2l4hfy",
@@ -11102,7 +11132,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_1vn1qzrq": {
       "id": "p_1vn1qzrq",
@@ -11117,7 +11149,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_x7rcfqll": {
       "id": "p_x7rcfqll",
@@ -11132,7 +11166,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_42u46q4c": {
       "id": "p_42u46q4c",
@@ -11147,7 +11183,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_l8bicz8e": {
       "id": "p_l8bicz8e",
@@ -11162,7 +11200,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_r2ob25uj": {
       "id": "p_r2ob25uj",
@@ -11177,7 +11217,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_o5l6u47i": {
       "id": "p_o5l6u47i",
@@ -11192,7 +11234,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Karolina MATHILDA Blomgren\n\nFödd 1850-10-06 Älvhyttan, Nora,\nKälla: Sverige, födelseuppgifter för personer som avled mellan 1901 och 2006\nCitat: Födelsedatum:  6 Oct 1850 Födelseort:  Nora, Örebro, Sverige\n\nBosatt  Torpet Hagarna i Älvhyttan\n\nDöd 1920-09-27 Vikers förs. Nora\n\nNoteringar\n18501006\n\nSvensson f. Blomgren, Karolina Matilda\n\nÄlvhyttan\n\nDöd 27/9 1920.\n\nKyrkobokförd i Viker (Örebro län, Västmanland).\n\nFödd 6/10 1850 i Nora (Örebro län, Västmanland).\n\nGift kvinna (28/2 1874).\n--------------\nMotsvarande folkbokföringsförsamling(ar) 1/1 2017:\nNora bergslagsförs, Nora kn (Örebro län, Västmanland)\n\nFödelseförsamling i källan:\nNora (Örebro län)\n\nKällor:\nDB HFL\n\n\n_________________________\n\nNora bergsförsamling (T) AI:15c (1851-1861) Bild 540 / sid 49 (AID: v52010a.b540.s49, NAD: SE/ULA/11098)\n\nNora bergsförsamling (T) AI:16c (1861-1871) Bild 65 / sid 58 (AID: v52016.b65.s58, NAD: SE/ULA/11098)\n\nViker (T) AI:1 (1872-1881) Bild 258 / sid 237 (AID: v52615.b258.s237, NAD: SE/ULA/11689)\n\nViker (T) AI:1 (1872-1881) Bild 354 / sid 331 (AID: v52615.b354.s331, NAD: SE/ULA/11689)\n\nViker (T) AI:2b (1882-1891) Bild 191 / sid 490 (AID: v52617.b191.s490, NAD: SE/ULA/11689)\n\nViker (T) AI:2a (1882-1891) Bild 286 / sid 273 (AID: v52616.b286.s273, NAD: SE/ULA/11689)\n\nViker (T) AIIa:1b (1900-1912) Bild 2460 / sid 640 (AID: v146822.b2460.s640, NAD: SE/ULA/11689)\n\nViker (T) AIIa:3b (1913-1927) Bild 2890 / sid 678 (AID: v146825.b2890.s678, NAD: SE/ULA/11689)"
+      "history": "Karolina MATHILDA Blomgren\n\nFödd 1850-10-06 Älvhyttan, Nora,\nKälla: Sverige, födelseuppgifter för personer som avled mellan 1901 och 2006\nCitat: Födelsedatum:  6 Oct 1850 Födelseort:  Nora, Örebro, Sverige\n\nBosatt  Torpet Hagarna i Älvhyttan\n\nDöd 1920-09-27 Vikers förs. Nora\n\nNoteringar\n18501006\n\nSvensson f. Blomgren, Karolina Matilda\n\nÄlvhyttan\n\nDöd 27/9 1920.\n\nKyrkobokförd i Viker (Örebro län, Västmanland).\n\nFödd 6/10 1850 i Nora (Örebro län, Västmanland).\n\nGift kvinna (28/2 1874).\n--------------\nMotsvarande folkbokföringsförsamling(ar) 1/1 2017:\nNora bergslagsförs, Nora kn (Örebro län, Västmanland)\n\nFödelseförsamling i källan:\nNora (Örebro län)\n\nKällor:\nDB HFL\n\n\n_________________________\n\nNora bergsförsamling (T) AI:15c (1851-1861) Bild 540 / sid 49 (AID: v52010a.b540.s49, NAD: SE/ULA/11098)\n\nNora bergsförsamling (T) AI:16c (1861-1871) Bild 65 / sid 58 (AID: v52016.b65.s58, NAD: SE/ULA/11098)\n\nViker (T) AI:1 (1872-1881) Bild 258 / sid 237 (AID: v52615.b258.s237, NAD: SE/ULA/11689)\n\nViker (T) AI:1 (1872-1881) Bild 354 / sid 331 (AID: v52615.b354.s331, NAD: SE/ULA/11689)\n\nViker (T) AI:2b (1882-1891) Bild 191 / sid 490 (AID: v52617.b191.s490, NAD: SE/ULA/11689)\n\nViker (T) AI:2a (1882-1891) Bild 286 / sid 273 (AID: v52616.b286.s273, NAD: SE/ULA/11689)\n\nViker (T) AIIa:1b (1900-1912) Bild 2460 / sid 640 (AID: v146822.b2460.s640, NAD: SE/ULA/11689)\n\nViker (T) AIIa:3b (1913-1927) Bild 2890 / sid 678 (AID: v146825.b2890.s678, NAD: SE/ULA/11689)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_5j8sz5ay": {
       "id": "p_5j8sz5ay",
@@ -11207,7 +11251,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Lovisa Blomgren\n\nFödd 1855-06-01 Nora Bergfs.\nhttps://sok.riksarkivet.se/bildvisning/C0002283_00066\n\nDöd 1938-05-02 Nora stadsforsamling, Örebro\n\nNoteringar\nhttps://sok.riksarkivet.se/bildvisning/C0002283_00066\n\n18550601\n\nJansson f. Blomgren, Kristina Lovisa\n\nStg 178\n\nDöd 2/5 1938.\n\nKyrkobokförd i Nora stadsförs (Örebro län, Västmanland).\n\nFödd 1/6 1855 i Nora bergsförs (Örebro län, Västmanland).\n\nÄnka (12/11 1926).\n--------------\nMotsvarande folkbokföringsförsamling(ar) 1/1 2017:\nNora bergslagsförs, Nora kn (Örebro län, Västmanland)\n\nFödelseförsamling i källan:\nNora bergsfs (Örebro län)\n\nKällor:\nDB, FS (sida: 449)"
+      "history": "Lovisa Blomgren\n\nFödd 1855-06-01 Nora Bergfs.\nhttps://sok.riksarkivet.se/bildvisning/C0002283_00066\n\nDöd 1938-05-02 Nora stadsforsamling, Örebro\n\nNoteringar\nhttps://sok.riksarkivet.se/bildvisning/C0002283_00066\n\n18550601\n\nJansson f. Blomgren, Kristina Lovisa\n\nStg 178\n\nDöd 2/5 1938.\n\nKyrkobokförd i Nora stadsförs (Örebro län, Västmanland).\n\nFödd 1/6 1855 i Nora bergsförs (Örebro län, Västmanland).\n\nÄnka (12/11 1926).\n--------------\nMotsvarande folkbokföringsförsamling(ar) 1/1 2017:\nNora bergslagsförs, Nora kn (Örebro län, Västmanland)\n\nFödelseförsamling i källan:\nNora bergsfs (Örebro län)\n\nKällor:\nDB, FS (sida: 449)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_t4lrqvvs": {
       "id": "p_t4lrqvvs",
@@ -11222,7 +11268,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Israel Blomgren\n\nStationsmästare\n\nFödd 1858-11-16 Nora bergsförs\nhttps://sok.riksarkivet.se/bildvisning/C0002283_00066\n\nDöd 1941-10-04 Karlskoga\n\nNoteringar\nStationsmästare vid Rockesholm\n\nhttps://sok.riksarkivet.se/bildvisning/C0002283_00066\n\n18581116\n\nBlomgren, Israel\n\nGrönfeltsgatan 12\n\nDöd 4/10 1941.\n\nKyrkobokförd i Karlskoga (Örebro län, Värmland).\n\nFödd 16/11 1858 i Nora (Örebro län, Västmanland).\n\nÄnkling (27/6 1939).\n--------------\nMotsvarande folkbokföringsförsamling(ar) 1/1 2017:\nKarlskoga, Karlskoga kn (Örebro län, Värmland)\n\nFödelseförsamling i källan:\nNora (Örebro län)\n\nKällor:\nDB, FS (sida: 43)"
+      "history": "Israel Blomgren\n\nStationsmästare\n\nFödd 1858-11-16 Nora bergsförs\nhttps://sok.riksarkivet.se/bildvisning/C0002283_00066\n\nDöd 1941-10-04 Karlskoga\n\nNoteringar\nStationsmästare vid Rockesholm\n\nhttps://sok.riksarkivet.se/bildvisning/C0002283_00066\n\n18581116\n\nBlomgren, Israel\n\nGrönfeltsgatan 12\n\nDöd 4/10 1941.\n\nKyrkobokförd i Karlskoga (Örebro län, Värmland).\n\nFödd 16/11 1858 i Nora (Örebro län, Västmanland).\n\nÄnkling (27/6 1939).\n--------------\nMotsvarande folkbokföringsförsamling(ar) 1/1 2017:\nKarlskoga, Karlskoga kn (Örebro län, Värmland)\n\nFödelseförsamling i källan:\nNora (Örebro län)\n\nKällor:\nDB, FS (sida: 43)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_dnuh2ph1": {
       "id": "p_dnuh2ph1",
@@ -11237,7 +11285,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Lars Blomgren\n\nFödd 1853-11-17 Nora bergsförs.\nhttps://sok.riksarkivet.se/bildvisning/C0002283_00066\n\nDöd 1876-03-21 Vikers förs. Nora\n\nNoteringar\nhttps://sok.riksarkivet.se/bildvisning/C0002283_00066\n\nKlumpfotad"
+      "history": "Lars Blomgren\n\nFödd 1853-11-17 Nora bergsförs.\nhttps://sok.riksarkivet.se/bildvisning/C0002283_00066\n\nDöd 1876-03-21 Vikers förs. Nora\n\nNoteringar\nhttps://sok.riksarkivet.se/bildvisning/C0002283_00066\n\nKlumpfotad",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_c7dzeupo": {
       "id": "p_c7dzeupo",
@@ -11252,7 +11302,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_0ojw1vj1": {
       "id": "p_0ojw1vj1",
@@ -11267,7 +11319,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "18480917\n\nSvensson, Karl\n\nAggerud\n\nDöd 27/6 1934.\n\nKyrkobokförd i Karlskoga (Örebro län, Värmland).\n\nFödd 17/9 1848 i Hidinge (Örebro län, Närke).\n\nÄnkling (27/9 1920).\n--------------\nMotsvarande folkbokföringsförsamling(ar) 1/1 2017:\nKarlskoga, Karlskoga kn (Örebro län, Värmland)\n\nFödelseförsamling i källan:\nHidinge (Örebro län)\n\nKällor:\nDB, FS (sida: C 1 314)\n______________________\n\nNora bergsförsamling (T) AI:15c (1851-1861) Bild 540 / sid 49 (AID: v52010a.b540.s49, NAD: SE/ULA/11098)\n\nNora bergsförsamling (T) AI:16c (1861-1871) Bild 65 / sid 58 (AID: v52016.b65.s58, NAD: SE/ULA/11098)\n\nViker (T) AI:1 (1872-1881) Bild 258 / sid 237 (AID: v52615.b258.s237, NAD: SE/ULA/11689)\n\nViker (T) AI:1 (1872-1881) Bild 354 / sid 331 (AID: v52615.b354.s331, NAD: SE/ULA/11689)\n\nViker (T) AI:2b (1882-1891) Bild 191 / sid 490 (AID: v52617.b191.s490, NAD: SE/ULA/11689)\n\nViker (T) AI:2a (1882-1891) Bild 286 / sid 273 (AID: v52616.b286.s273, NAD: SE/ULA/11689)\n\nViker (T) AIIa:1b (1900-1912) Bild 2460 / sid 640 (AID: v146822.b2460.s640, NAD: SE/ULA/11689)\n\nViker (T) AIIa:3b (1913-1927) Bild 2890 / sid 678 (AID: v146825.b2890.s678, NAD: SE/ULA/11689)"
+      "history": "18480917\n\nSvensson, Karl\n\nAggerud\n\nDöd 27/6 1934.\n\nKyrkobokförd i Karlskoga (Örebro län, Värmland).\n\nFödd 17/9 1848 i Hidinge (Örebro län, Närke).\n\nÄnkling (27/9 1920).\n--------------\nMotsvarande folkbokföringsförsamling(ar) 1/1 2017:\nKarlskoga, Karlskoga kn (Örebro län, Värmland)\n\nFödelseförsamling i källan:\nHidinge (Örebro län)\n\nKällor:\nDB, FS (sida: C 1 314)\n______________________\n\nNora bergsförsamling (T) AI:15c (1851-1861) Bild 540 / sid 49 (AID: v52010a.b540.s49, NAD: SE/ULA/11098)\n\nNora bergsförsamling (T) AI:16c (1861-1871) Bild 65 / sid 58 (AID: v52016.b65.s58, NAD: SE/ULA/11098)\n\nViker (T) AI:1 (1872-1881) Bild 258 / sid 237 (AID: v52615.b258.s237, NAD: SE/ULA/11689)\n\nViker (T) AI:1 (1872-1881) Bild 354 / sid 331 (AID: v52615.b354.s331, NAD: SE/ULA/11689)\n\nViker (T) AI:2b (1882-1891) Bild 191 / sid 490 (AID: v52617.b191.s490, NAD: SE/ULA/11689)\n\nViker (T) AI:2a (1882-1891) Bild 286 / sid 273 (AID: v52616.b286.s273, NAD: SE/ULA/11689)\n\nViker (T) AIIa:1b (1900-1912) Bild 2460 / sid 640 (AID: v146822.b2460.s640, NAD: SE/ULA/11689)\n\nViker (T) AIIa:3b (1913-1927) Bild 2890 / sid 678 (AID: v146825.b2890.s678, NAD: SE/ULA/11689)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_1d1nmjtx": {
       "id": "p_1d1nmjtx",
@@ -11282,7 +11336,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Nora bergsförsamling (T) AI:15c (1851-1861) Bild 540 / sid 49 (AID: v52010a.b540.s49, NAD: SE/ULA/11098)"
+      "history": "Nora bergsförsamling (T) AI:15c (1851-1861) Bild 540 / sid 49 (AID: v52010a.b540.s49, NAD: SE/ULA/11098)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_q90q12n1": {
       "id": "p_q90q12n1",
@@ -11297,7 +11353,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Israel Israelsson finns med sin familj i Älvhyttan och han har gift sig med Stina Hansdotter 1819. Förra hustrun Christina Persdotter dog 1817-10-29. Men han själv dör 1825. Dottern Maria Greta flyttar till Venatorp och gifter sig 1824-07-11 med sonen i familjen Petter Persson som blivit änkling 1822.\nNora bergsförsamling (T) AI:12a (1821-1829) Bild 181 / sid 174 (AID: v51994.b181.s174, NAD: SE/ULA/11098)\n\n\nMaria Greta Israelsdotter flyttar till Venatorpet och gifter sig 1824-07-11 med sonen i familjen Petter Persson som blivit änkling 1822.\nNora bergsförsamling (T) AI:12a (1821-1829) Bild 90 / sid 83 (AID: v51994.b90.s83, NAD: SE/ULA/11098)\n\n\nMaria Greta Israelsdotter bor nu i Venatorp i Elfhyttan och är hustru till Petter Persson Lind. Dottern Maria Ulrica Pehrsdotter föds 1826-08-29.\nNora bergsförsamling (T) AI:13a (1828-1841) Bild 317 / sid 312 (AID: v51996.b317.s312, NAD: SE/ULA/11098)\n\n\nSkräddaren Jacob Blomgren flyttar in hos familjen och gifter sig med dottern Maria Ulrica Pehrsdotter. Jacob Blomgren står som Måg.\nNora bergsförsamling (T) AI:14a (1841-1850) Bild 60 / sid 55 (AID: v52002.b60.s55, NAD: SE/ULA/11098)\n\nPetter Pehrsson Lind avlider 1857-12-02 och hustrun, änkan Maria Israelsdotter avlider 1866-12-30.\nSkräddaren Jacob Blomgren bor nu i Venatorp med hustrun Maria Ulrica Pehrsdotter. Här föds barnen: Carl Gustaf 1847-12-24, Carolina Mathilda 1850-10-06, Lars Erik 1853-11-17, Christina Lovisa 1855-06-01, Israel 1858-11-16, Johan 1861-09-09, Maria Susanna 1865-03-12 men död 1865-08-31, Anna Wilhelmina 1866-10-12.\nNora bergsförsamling (T) AI:16c (1861-1871) Bild 65 / sid 58 (AID: v52016.b65.s58, NAD: SE/ULA/11098)"
+      "history": "Israel Israelsson finns med sin familj i Älvhyttan och han har gift sig med Stina Hansdotter 1819. Förra hustrun Christina Persdotter dog 1817-10-29. Men han själv dör 1825. Dottern Maria Greta flyttar till Venatorp och gifter sig 1824-07-11 med sonen i familjen Petter Persson som blivit änkling 1822.\nNora bergsförsamling (T) AI:12a (1821-1829) Bild 181 / sid 174 (AID: v51994.b181.s174, NAD: SE/ULA/11098)\n\n\nMaria Greta Israelsdotter flyttar till Venatorpet och gifter sig 1824-07-11 med sonen i familjen Petter Persson som blivit änkling 1822.\nNora bergsförsamling (T) AI:12a (1821-1829) Bild 90 / sid 83 (AID: v51994.b90.s83, NAD: SE/ULA/11098)\n\n\nMaria Greta Israelsdotter bor nu i Venatorp i Elfhyttan och är hustru till Petter Persson Lind. Dottern Maria Ulrica Pehrsdotter föds 1826-08-29.\nNora bergsförsamling (T) AI:13a (1828-1841) Bild 317 / sid 312 (AID: v51996.b317.s312, NAD: SE/ULA/11098)\n\n\nSkräddaren Jacob Blomgren flyttar in hos familjen och gifter sig med dottern Maria Ulrica Pehrsdotter. Jacob Blomgren står som Måg.\nNora bergsförsamling (T) AI:14a (1841-1850) Bild 60 / sid 55 (AID: v52002.b60.s55, NAD: SE/ULA/11098)\n\nPetter Pehrsson Lind avlider 1857-12-02 och hustrun, änkan Maria Israelsdotter avlider 1866-12-30.\nSkräddaren Jacob Blomgren bor nu i Venatorp med hustrun Maria Ulrica Pehrsdotter. Här föds barnen: Carl Gustaf 1847-12-24, Carolina Mathilda 1850-10-06, Lars Erik 1853-11-17, Christina Lovisa 1855-06-01, Israel 1858-11-16, Johan 1861-09-09, Maria Susanna 1865-03-12 men död 1865-08-31, Anna Wilhelmina 1866-10-12.\nNora bergsförsamling (T) AI:16c (1861-1871) Bild 65 / sid 58 (AID: v52016.b65.s58, NAD: SE/ULA/11098)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_uqd9uhmf": {
       "id": "p_uqd9uhmf",
@@ -11312,7 +11370,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Nora bergsförsamling (T) AI:13a (1828-1841) Bild 317 / sid 312 (AID: v51996.b317.s312, NAD: SE/ULA/11098)"
+      "history": "Nora bergsförsamling (T) AI:13a (1828-1841) Bild 317 / sid 312 (AID: v51996.b317.s312, NAD: SE/ULA/11098)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_l10lhxrc": {
       "id": "p_l10lhxrc",
@@ -11327,7 +11387,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Nora bergsförsamling (T) AI:13a (1828-1841) Bild 317 / sid 312 (AID: v51996.b317.s312, NAD: SE/ULA/11098)"
+      "history": "Nora bergsförsamling (T) AI:13a (1828-1841) Bild 317 / sid 312 (AID: v51996.b317.s312, NAD: SE/ULA/11098)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_mcixmc3g": {
       "id": "p_mcixmc3g",
@@ -11342,7 +11404,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Olof Nilsson finns 1713 och 1714 med hustrun Ingrid Johansdotter i Torphyttan. De har dottern Anna.\nLindesberg (T) AIa:4 (1713-1726) Bild 17 / sid 23 (AID: v51791a.b17.s23, NAD: SE/ULA/10851)\n\nOlof Nilsson finns 1713 och 1714 med hustrun Ingrid Johansdotter i Torphyttan. De har dottern Anna.\nLindesberg (T) AIa:4 (1713-1726) Bild 56 / sid 111 (AID: v51791a.b56.s111, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1717 med hustrun Ingrid Johansdotter i Torphyttan. De har sonen Nils Olofsson.\nLindesberg (T) AIa:4 (1713-1726) Bild 79 / sid 157 (AID: v51791a.b79.s157, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1719 med hustrun Ingrid Johansdotter i Torphyttan. De har sonen Nils Olofsson.\nLindesberg (T) AIa:4 (1713-1726) Bild 123 / sid 245 (AID: v51791a.b123.s245, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1721 i Torphyttan. Hustrun har dött året innan och sonen Nils Olofsson har gift sig med Ingeborg Israelsdotter och de bor nu på samma plats.\nLindesberg (T) AIa:4 (1713-1726) Bild 149 / sid 297 (AID: v51791a.b149.s297, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1723 och 1724 i Torphyttan tillsammans med sonen Nils Olofsson och dennes hustru Ingeborg Israelsdotter. De har fått barnen Petter, Kerstin, Elias och Maria.\nLindesberg (T) AIa:4 (1713-1726) Bild 171 / sid 341 (AID: v51791a.b171.s341, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1725 och 1726 i Torphyttan tillsammans med sonen Nils Olofsson och dennes familj\nLindesberg (T) AIa:4 (1713-1726) Bild 212 / sid 423 (AID: v51791a.b212.s423, NAD: SE/ULA/10851)\n\n\nNils Olsson bor i Bergsmanshyttan med hustru Ingeborg Israelsdotter och sin familj inkluderande sonen Israel Nilsson som har gift sig med Maria Andersdotter och bor på samma plats.\nLindesberg (T) AIa:7 (1748-1756) Bild 330 / sid 33 (AID: v51795a.b330.s33, NAD: SE/ULA/10851)\n\nNils Olssons änka bor i Bergsmanshyttan med sonen Israel Nilsson och dennes familj.\nLindesberg (T) AIa:9 (1757-1764) Bild 44 / sid 38 (AID: v51797.b44.s38, NAD: SE/ULA/10851)\n\nIsrael Nilsson dör 1769 endast 42år gammal. Sonen Israel Israelsson är då endast 4 år. Hustrun Maria gifter om sig 1773 med Petter Persson från Järnboås, född 1754. I nästa husförhörslängd har prästen skrivit om Petter Persson att han är galen och håller sig i Öskevik. Har skilt sig vid..(kan jag ej tyda)\nLindesberg (T) AIa:11 (1765-1774) Bild 86 / sid 80 (AID: v51799.b86.s80, NAD: SE/ULA/10851)\n\nIsrael Israelsson lämnar hemmet och flyttar till Nora 1780-02-22. Han är då ännu ej fyllda 15 år.\nLindesberg (T) AIa:13 (1775-1785) Bild 104 / sid 97 (AID: v51801.b104.s97, NAD: SE/ULA/10851)\n\nFödelseboken\nLindesberg (T) CI:7 (1756-1768) Bild 239 / sid 235 (AID: v53505.b239.s235, NAD: SE/ULA/10851)\n\nIsrael Israelsson kommer som knappt fyllda 15 år 1780 som dräng till Björklund i Nora men där han stannar bara ungefär ett år innan han återvänder till Lindesberg och Bergsmanshyttan.\nNora bergsförsamling (T) AI:8b (1775-1784) Bild 147 / sid 505 (AID: v51987.b147.s505, NAD: SE/ULA/11098)\n\nHan kommer 16/12 1780 till sin svåger Eric Andersson i Bergsmanshyttan som är gift med systern Stina Israelsdotter. Här stannar han i 2 år innan han flyttar till Nora.\nLindesberg (T) AIa:13 (1775-1785) Bild 108 / sid 101 (AID: v51801.b108.s101, NAD: SE/ULA/10851)\n\nHan kommmer till Bergsmannen Lambert Larsson i Södra Husby.\nNora bergsförsamling (T) AI:7b (1771-1790) Bild 297 / sid 101 (AID: v51985.b297.s101, NAD: SE/ULA/11098)\n\n\nHan återfinns i Skrikarhyttan där han har gift sig 1790-10-02 med Christina Persdotter.\nNora bergsförsamling (T) AI:9a (1791-1800) Bild 99 / sid 93 (AID: v51988.b99.s93, NAD: SE/ULA/11098)\n\nHär föds dottern Maja Greta Israelssdotter 1799-10-13\nFödelseboken\nNora bergsförsamling (T) C:4 (1788-1805) Bild 262 (AID: v53619.b262, NAD: SE/ULA/11098)\n\n\nHan finns med sin familj i Skrekarhyttan\nNora bergsförsamling (T) AI:10b (1801-1810) Bild 116 / sid 110 (AID: v51991.b116.s110, NAD: SE/ULA/11098)\n\n\nHan finns med sin familj i Skrekarhyttan\nNora bergsförsamling (T) AI:11a (1811-1820) Bild 108 / sid 100 (AID: v51992.b108.s100, NAD: SE/ULA/11098)\n\nHan finns nu med sin familj i Älvhyttan och han har gift sig med Stina Hansdotter 1819. Men han dör 1825. Dottern Maja Greta flyttar till Venatorpet och gifter sig 1824-07-11 med sonen i familjen Petter Persson som blivit änkling 1822.\nNora bergsförsamling (T) AI:12a (1821-1829) Bild 181 / sid 174 (AID: v51994.b181.s174, NAD: SE/ULA/11098)\n\n\nDödboken\nNora bergsförsamling (T) F:5 (1811-1827) Bild 165 (AID: v53646.b165, NAD: SE/ULA/11098)"
+      "history": "Olof Nilsson finns 1713 och 1714 med hustrun Ingrid Johansdotter i Torphyttan. De har dottern Anna.\nLindesberg (T) AIa:4 (1713-1726) Bild 17 / sid 23 (AID: v51791a.b17.s23, NAD: SE/ULA/10851)\n\nOlof Nilsson finns 1713 och 1714 med hustrun Ingrid Johansdotter i Torphyttan. De har dottern Anna.\nLindesberg (T) AIa:4 (1713-1726) Bild 56 / sid 111 (AID: v51791a.b56.s111, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1717 med hustrun Ingrid Johansdotter i Torphyttan. De har sonen Nils Olofsson.\nLindesberg (T) AIa:4 (1713-1726) Bild 79 / sid 157 (AID: v51791a.b79.s157, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1719 med hustrun Ingrid Johansdotter i Torphyttan. De har sonen Nils Olofsson.\nLindesberg (T) AIa:4 (1713-1726) Bild 123 / sid 245 (AID: v51791a.b123.s245, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1721 i Torphyttan. Hustrun har dött året innan och sonen Nils Olofsson har gift sig med Ingeborg Israelsdotter och de bor nu på samma plats.\nLindesberg (T) AIa:4 (1713-1726) Bild 149 / sid 297 (AID: v51791a.b149.s297, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1723 och 1724 i Torphyttan tillsammans med sonen Nils Olofsson och dennes hustru Ingeborg Israelsdotter. De har fått barnen Petter, Kerstin, Elias och Maria.\nLindesberg (T) AIa:4 (1713-1726) Bild 171 / sid 341 (AID: v51791a.b171.s341, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1725 och 1726 i Torphyttan tillsammans med sonen Nils Olofsson och dennes familj\nLindesberg (T) AIa:4 (1713-1726) Bild 212 / sid 423 (AID: v51791a.b212.s423, NAD: SE/ULA/10851)\n\n\nNils Olsson bor i Bergsmanshyttan med hustru Ingeborg Israelsdotter och sin familj inkluderande sonen Israel Nilsson som har gift sig med Maria Andersdotter och bor på samma plats.\nLindesberg (T) AIa:7 (1748-1756) Bild 330 / sid 33 (AID: v51795a.b330.s33, NAD: SE/ULA/10851)\n\nNils Olssons änka bor i Bergsmanshyttan med sonen Israel Nilsson och dennes familj.\nLindesberg (T) AIa:9 (1757-1764) Bild 44 / sid 38 (AID: v51797.b44.s38, NAD: SE/ULA/10851)\n\nIsrael Nilsson dör 1769 endast 42år gammal. Sonen Israel Israelsson är då endast 4 år. Hustrun Maria gifter om sig 1773 med Petter Persson från Järnboås, född 1754. I nästa husförhörslängd har prästen skrivit om Petter Persson att han är galen och håller sig i Öskevik. Har skilt sig vid..(kan jag ej tyda)\nLindesberg (T) AIa:11 (1765-1774) Bild 86 / sid 80 (AID: v51799.b86.s80, NAD: SE/ULA/10851)\n\nIsrael Israelsson lämnar hemmet och flyttar till Nora 1780-02-22. Han är då ännu ej fyllda 15 år.\nLindesberg (T) AIa:13 (1775-1785) Bild 104 / sid 97 (AID: v51801.b104.s97, NAD: SE/ULA/10851)\n\nFödelseboken\nLindesberg (T) CI:7 (1756-1768) Bild 239 / sid 235 (AID: v53505.b239.s235, NAD: SE/ULA/10851)\n\nIsrael Israelsson kommer som knappt fyllda 15 år 1780 som dräng till Björklund i Nora men där han stannar bara ungefär ett år innan han återvänder till Lindesberg och Bergsmanshyttan.\nNora bergsförsamling (T) AI:8b (1775-1784) Bild 147 / sid 505 (AID: v51987.b147.s505, NAD: SE/ULA/11098)\n\nHan kommer 16/12 1780 till sin svåger Eric Andersson i Bergsmanshyttan som är gift med systern Stina Israelsdotter. Här stannar han i 2 år innan han flyttar till Nora.\nLindesberg (T) AIa:13 (1775-1785) Bild 108 / sid 101 (AID: v51801.b108.s101, NAD: SE/ULA/10851)\n\nHan kommmer till Bergsmannen Lambert Larsson i Södra Husby.\nNora bergsförsamling (T) AI:7b (1771-1790) Bild 297 / sid 101 (AID: v51985.b297.s101, NAD: SE/ULA/11098)\n\n\nHan återfinns i Skrikarhyttan där han har gift sig 1790-10-02 med Christina Persdotter.\nNora bergsförsamling (T) AI:9a (1791-1800) Bild 99 / sid 93 (AID: v51988.b99.s93, NAD: SE/ULA/11098)\n\nHär föds dottern Maja Greta Israelssdotter 1799-10-13\nFödelseboken\nNora bergsförsamling (T) C:4 (1788-1805) Bild 262 (AID: v53619.b262, NAD: SE/ULA/11098)\n\n\nHan finns med sin familj i Skrekarhyttan\nNora bergsförsamling (T) AI:10b (1801-1810) Bild 116 / sid 110 (AID: v51991.b116.s110, NAD: SE/ULA/11098)\n\n\nHan finns med sin familj i Skrekarhyttan\nNora bergsförsamling (T) AI:11a (1811-1820) Bild 108 / sid 100 (AID: v51992.b108.s100, NAD: SE/ULA/11098)\n\nHan finns nu med sin familj i Älvhyttan och han har gift sig med Stina Hansdotter 1819. Men han dör 1825. Dottern Maja Greta flyttar till Venatorpet och gifter sig 1824-07-11 med sonen i familjen Petter Persson som blivit änkling 1822.\nNora bergsförsamling (T) AI:12a (1821-1829) Bild 181 / sid 174 (AID: v51994.b181.s174, NAD: SE/ULA/11098)\n\n\nDödboken\nNora bergsförsamling (T) F:5 (1811-1827) Bild 165 (AID: v53646.b165, NAD: SE/ULA/11098)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_b2my52rq": {
       "id": "p_b2my52rq",
@@ -11357,7 +11421,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Christina Pehrsdotter gift med Israel Israelsson\nDödboken: Dog av förstoppning 29 oktober 1817.\nNora bergsförsamling (T) F:5 (1811-1827) Bild 76 (AID: v53646.b76, NAD: SE/ULA/11098)\n\n________________________\n\nChristina Persdotter född 1768-09-07\n\nFödelseboken\nNora bergsförsamling (T) C:2 (1756-1770) Bild 213 / sid 419 (AID: v53617.b213.s419, NAD: SE/ULA/11098)\n\nNora bergsförsamling (T) AI:6b (1761-1770) Bild 189 / sid 183 (AID: v51983.b189.s183, NAD: SE/ULA/11098)\nNora bergsförsamling (T) AI:7a (1771-1790) Bild 74 / sid 68 (AID: v51984.b74.s68, NAD: SE/ULA/11098)\nNora bergsförsamling (T) AI:8a (1775-1784) Bild 148 / sid 143 (AID: v51986.b148.s143, NAD: SE/ULA/11098)"
+      "history": "Christina Pehrsdotter gift med Israel Israelsson\nDödboken: Dog av förstoppning 29 oktober 1817.\nNora bergsförsamling (T) F:5 (1811-1827) Bild 76 (AID: v53646.b76, NAD: SE/ULA/11098)\n\n________________________\n\nChristina Persdotter född 1768-09-07\n\nFödelseboken\nNora bergsförsamling (T) C:2 (1756-1770) Bild 213 / sid 419 (AID: v53617.b213.s419, NAD: SE/ULA/11098)\n\nNora bergsförsamling (T) AI:6b (1761-1770) Bild 189 / sid 183 (AID: v51983.b189.s183, NAD: SE/ULA/11098)\nNora bergsförsamling (T) AI:7a (1771-1790) Bild 74 / sid 68 (AID: v51984.b74.s68, NAD: SE/ULA/11098)\nNora bergsförsamling (T) AI:8a (1775-1784) Bild 148 / sid 143 (AID: v51986.b148.s143, NAD: SE/ULA/11098)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_ppapq3x9": {
       "id": "p_ppapq3x9",
@@ -11372,7 +11438,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Födelseboken\nLindesberg (T) CI:7 (1756-1768) Bild 239 / sid 235 (AID: v53505.b239.s235, NAD: SE/ULA/10851)\n\n_______________________\n\nOlof Nilsson finns 1713 och 1714 med hustrun Ingrid Johansdotter i Torphyttan. De har dottern Anna.\nLindesberg (T) AIa:4 (1713-1726) Bild 17 / sid 23 (AID: v51791a.b17.s23, NAD: SE/ULA/10851)\n\nOlof Nilsson finns 1713 och 1714 med hustrun Ingrid Johansdotter i Torphyttan. De har dottern Anna.\nLindesberg (T) AIa:4 (1713-1726) Bild 56 / sid 111 (AID: v51791a.b56.s111, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1717 med hustrun Ingrid Johansdotter i Torphyttan. De har sonen Nils Olofsson.\nLindesberg (T) AIa:4 (1713-1726) Bild 79 / sid 157 (AID: v51791a.b79.s157, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1719 med hustrun Ingrid Johansdotter i Torphyttan. De har sonen Nils Olofsson.\nLindesberg (T) AIa:4 (1713-1726) Bild 123 / sid 245 (AID: v51791a.b123.s245, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1721 i Torphyttan. Hustrun har dött året innan och sonen Nils Olofsson har gift sig med Ingeborg Israelsdotter och de bor nu på samma plats.\nLindesberg (T) AIa:4 (1713-1726) Bild 149 / sid 297 (AID: v51791a.b149.s297, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1723 och 1724 i Torphyttan tillsammans med sonen Nils Olofsson och dennes hustru Ingeborg Israelsdotter. De har fått barnen Petter, Kerstin, Elias och Maria.\nLindesberg (T) AIa:4 (1713-1726) Bild 171 / sid 341 (AID: v51791a.b171.s341, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1725 och 1726 i Torphyttan tillsammans med sonen Nils Olofsson och dennes familj\nLindesberg (T) AIa:4 (1713-1726) Bild 212 / sid 423 (AID: v51791a.b212.s423, NAD: SE/ULA/10851)\n\n\nNils Olsson bor i Bergsmanshyttan med hustru Ingeborg Israelsdotter och sin familj inkluderande sonen Israel Nilsson som har gift sig med Maria Andersdotter och bor på samma plats.\nLindesberg (T) AIa:7 (1748-1756) Bild 330 / sid 33 (AID: v51795a.b330.s33, NAD: SE/ULA/10851)\n\nNils Olssons änka bor i Bergsmanshyttan med sonen Israel Nilsson och dennes familj.\nLindesberg (T) AIa:9 (1757-1764) Bild 44 / sid 38 (AID: v51797.b44.s38, NAD: SE/ULA/10851)\n\nIsrael Nilsson dör 1769 endast 42år gammal. Sonen Israel Israelsson är då endast 4 år. Hustrun Maria gifter om sig 1773 med Petter Persson från Järnboås, född 1754. I nästa husförhörslängd har prästen skrivit om Petter Persson att han är galen och håller sig i Öskevik. Har skilt sig vid..(kan jag ej tyda)\nLindesberg (T) AIa:11 (1765-1774) Bild 86 / sid 80 (AID: v51799.b86.s80, NAD: SE/ULA/10851)\n\nIsrael Israelsson lämnar hemmet och flyttar till Nora 1780-02-22. Han är då ännu ej fyllda 15 år.\nLindesberg (T) AIa:13 (1775-1785) Bild 104 / sid 97 (AID: v51801.b104.s97, NAD: SE/ULA/10851)\n\nFödelseboken\nLindesberg (T) CI:7 (1756-1768) Bild 239 / sid 235 (AID: v53505.b239.s235, NAD: SE/ULA/10851)\n\nIsrael Israelsson kommer som knappt fyllda 15 år 1780 som dräng till Björklund i Nora men där han stannar bara ungefär ett år innan han återvänder till Lindesberg och Bergsmanshyttan.\nNora bergsförsamling (T) AI:8b (1775-1784) Bild 147 / sid 505 (AID: v51987.b147.s505, NAD: SE/ULA/11098)\n\nHan kommer 16/12 1780 till sin svåger Eric Andersson i Bergsmanshyttan som är gift med systern Stina Israelsdotter. Här stannar han i 2 år innan han flyttar till Nora.\nLindesberg (T) AIa:13 (1775-1785) Bild 108 / sid 101 (AID: v51801.b108.s101, NAD: SE/ULA/10851)\n\nHan kommmer till Bergsmannen Lambert Larsson i Södra Husby.\nNora bergsförsamling (T) AI:7b (1771-1790) Bild 297 / sid 101 (AID: v51985.b297.s101, NAD: SE/ULA/11098)\n\n\nHan återfinns i Skrikarhyttan där han har gift sig 1790-10-02 med Christina Persdotter.\nNora bergsförsamling (T) AI:9a (1791-1800) Bild 99 / sid 93 (AID: v51988.b99.s93, NAD: SE/ULA/11098)\n\nHär föds dottern Maja Greta Israelssdotter 1799-10-13\nFödelseboken\nNora bergsförsamling (T) C:4 (1788-1805) Bild 262 (AID: v53619.b262, NAD: SE/ULA/11098)\n\n\nHan finns med sin familj i Skrekarhyttan\nNora bergsförsamling (T) AI:10b (1801-1810) Bild 116 / sid 110 (AID: v51991.b116.s110, NAD: SE/ULA/11098)\n\n\nHan finns med sin familj i Skrekarhyttan\nNora bergsförsamling (T) AI:11a (1811-1820) Bild 108 / sid 100 (AID: v51992.b108.s100, NAD: SE/ULA/11098)\n\nHan finns nu med sin familj i Älvhyttan och han har gift sig med Stina Hansdotter 1819. Men han dör 1825. Dottern Maja Greta flyttar\nNora bergsförsamling (T) AI:12a (1821-1829) Bild 181 / sid 174 (AID: v51994.b181.s174, NAD: SE/ULA/11098)\n\n\nDödboken\nNora bergsförsamling (T) F:5 (1811-1827) Bild 165 (AID: v53646.b165, NAD: SE/ULA/11098)"
+      "history": "Födelseboken\nLindesberg (T) CI:7 (1756-1768) Bild 239 / sid 235 (AID: v53505.b239.s235, NAD: SE/ULA/10851)\n\n_______________________\n\nOlof Nilsson finns 1713 och 1714 med hustrun Ingrid Johansdotter i Torphyttan. De har dottern Anna.\nLindesberg (T) AIa:4 (1713-1726) Bild 17 / sid 23 (AID: v51791a.b17.s23, NAD: SE/ULA/10851)\n\nOlof Nilsson finns 1713 och 1714 med hustrun Ingrid Johansdotter i Torphyttan. De har dottern Anna.\nLindesberg (T) AIa:4 (1713-1726) Bild 56 / sid 111 (AID: v51791a.b56.s111, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1717 med hustrun Ingrid Johansdotter i Torphyttan. De har sonen Nils Olofsson.\nLindesberg (T) AIa:4 (1713-1726) Bild 79 / sid 157 (AID: v51791a.b79.s157, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1719 med hustrun Ingrid Johansdotter i Torphyttan. De har sonen Nils Olofsson.\nLindesberg (T) AIa:4 (1713-1726) Bild 123 / sid 245 (AID: v51791a.b123.s245, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1721 i Torphyttan. Hustrun har dött året innan och sonen Nils Olofsson har gift sig med Ingeborg Israelsdotter och de bor nu på samma plats.\nLindesberg (T) AIa:4 (1713-1726) Bild 149 / sid 297 (AID: v51791a.b149.s297, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1723 och 1724 i Torphyttan tillsammans med sonen Nils Olofsson och dennes hustru Ingeborg Israelsdotter. De har fått barnen Petter, Kerstin, Elias och Maria.\nLindesberg (T) AIa:4 (1713-1726) Bild 171 / sid 341 (AID: v51791a.b171.s341, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1725 och 1726 i Torphyttan tillsammans med sonen Nils Olofsson och dennes familj\nLindesberg (T) AIa:4 (1713-1726) Bild 212 / sid 423 (AID: v51791a.b212.s423, NAD: SE/ULA/10851)\n\n\nNils Olsson bor i Bergsmanshyttan med hustru Ingeborg Israelsdotter och sin familj inkluderande sonen Israel Nilsson som har gift sig med Maria Andersdotter och bor på samma plats.\nLindesberg (T) AIa:7 (1748-1756) Bild 330 / sid 33 (AID: v51795a.b330.s33, NAD: SE/ULA/10851)\n\nNils Olssons änka bor i Bergsmanshyttan med sonen Israel Nilsson och dennes familj.\nLindesberg (T) AIa:9 (1757-1764) Bild 44 / sid 38 (AID: v51797.b44.s38, NAD: SE/ULA/10851)\n\nIsrael Nilsson dör 1769 endast 42år gammal. Sonen Israel Israelsson är då endast 4 år. Hustrun Maria gifter om sig 1773 med Petter Persson från Järnboås, född 1754. I nästa husförhörslängd har prästen skrivit om Petter Persson att han är galen och håller sig i Öskevik. Har skilt sig vid..(kan jag ej tyda)\nLindesberg (T) AIa:11 (1765-1774) Bild 86 / sid 80 (AID: v51799.b86.s80, NAD: SE/ULA/10851)\n\nIsrael Israelsson lämnar hemmet och flyttar till Nora 1780-02-22. Han är då ännu ej fyllda 15 år.\nLindesberg (T) AIa:13 (1775-1785) Bild 104 / sid 97 (AID: v51801.b104.s97, NAD: SE/ULA/10851)\n\nFödelseboken\nLindesberg (T) CI:7 (1756-1768) Bild 239 / sid 235 (AID: v53505.b239.s235, NAD: SE/ULA/10851)\n\nIsrael Israelsson kommer som knappt fyllda 15 år 1780 som dräng till Björklund i Nora men där han stannar bara ungefär ett år innan han återvänder till Lindesberg och Bergsmanshyttan.\nNora bergsförsamling (T) AI:8b (1775-1784) Bild 147 / sid 505 (AID: v51987.b147.s505, NAD: SE/ULA/11098)\n\nHan kommer 16/12 1780 till sin svåger Eric Andersson i Bergsmanshyttan som är gift med systern Stina Israelsdotter. Här stannar han i 2 år innan han flyttar till Nora.\nLindesberg (T) AIa:13 (1775-1785) Bild 108 / sid 101 (AID: v51801.b108.s101, NAD: SE/ULA/10851)\n\nHan kommmer till Bergsmannen Lambert Larsson i Södra Husby.\nNora bergsförsamling (T) AI:7b (1771-1790) Bild 297 / sid 101 (AID: v51985.b297.s101, NAD: SE/ULA/11098)\n\n\nHan återfinns i Skrikarhyttan där han har gift sig 1790-10-02 med Christina Persdotter.\nNora bergsförsamling (T) AI:9a (1791-1800) Bild 99 / sid 93 (AID: v51988.b99.s93, NAD: SE/ULA/11098)\n\nHär föds dottern Maja Greta Israelssdotter 1799-10-13\nFödelseboken\nNora bergsförsamling (T) C:4 (1788-1805) Bild 262 (AID: v53619.b262, NAD: SE/ULA/11098)\n\n\nHan finns med sin familj i Skrekarhyttan\nNora bergsförsamling (T) AI:10b (1801-1810) Bild 116 / sid 110 (AID: v51991.b116.s110, NAD: SE/ULA/11098)\n\n\nHan finns med sin familj i Skrekarhyttan\nNora bergsförsamling (T) AI:11a (1811-1820) Bild 108 / sid 100 (AID: v51992.b108.s100, NAD: SE/ULA/11098)\n\nHan finns nu med sin familj i Älvhyttan och han har gift sig med Stina Hansdotter 1819. Men han dör 1825. Dottern Maja Greta flyttar\nNora bergsförsamling (T) AI:12a (1821-1829) Bild 181 / sid 174 (AID: v51994.b181.s174, NAD: SE/ULA/11098)\n\n\nDödboken\nNora bergsförsamling (T) F:5 (1811-1827) Bild 165 (AID: v53646.b165, NAD: SE/ULA/11098)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_f4zn80gf": {
       "id": "p_f4zn80gf",
@@ -11387,7 +11455,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Maken Israel Nilsson dör 1769 endast 42år gammal. Sonen Israel Israelsson är då endast 4 år. Maria gifter om sig 1773 med Petter Persson från Järnboås, född 1754. I nästa husförhörslängd har prästen skrivit om Petter Persson att han är galen och håller sig i Öskevik. Har skilt sig vid..(kan jag ej tyda)\n\nLindesberg (T) AIa:11 (1765-1774) Bild 86 / sid 80 (AID: v51799.b86.s80, NAD: SE/ULA/10851)\n\nLindesberg (T) AIa:13 (1775-1785) Bild 104 / sid 97 (AID: v51801.b104.s97, NAD: SE/ULA/10851)\n\nI denna husförhörslängd står det fortfarande att Petter Persson är galen samt att han och hustrun är bortflyttade men inte vart.\nLindesberg (T) AIa:17 (1786-1795) Bild 103 / sid 97 (AID: v51805.b103.s97, NAD: SE/ULA/10851)\n\nÄnkan Maja Andersdotter i södra Ås gift med Hemmansbrukare Pehr Pehrsson\nDödboken: död 4 januari 1807\nNora bergsförsamling (T) F:4 (1795-1810) Bild 177 / sid 173 (AID: v53645.b177.s173, NAD: SE/ULA/11098)"
+      "history": "Maken Israel Nilsson dör 1769 endast 42år gammal. Sonen Israel Israelsson är då endast 4 år. Maria gifter om sig 1773 med Petter Persson från Järnboås, född 1754. I nästa husförhörslängd har prästen skrivit om Petter Persson att han är galen och håller sig i Öskevik. Har skilt sig vid..(kan jag ej tyda)\n\nLindesberg (T) AIa:11 (1765-1774) Bild 86 / sid 80 (AID: v51799.b86.s80, NAD: SE/ULA/10851)\n\nLindesberg (T) AIa:13 (1775-1785) Bild 104 / sid 97 (AID: v51801.b104.s97, NAD: SE/ULA/10851)\n\nI denna husförhörslängd står det fortfarande att Petter Persson är galen samt att han och hustrun är bortflyttade men inte vart.\nLindesberg (T) AIa:17 (1786-1795) Bild 103 / sid 97 (AID: v51805.b103.s97, NAD: SE/ULA/10851)\n\nÄnkan Maja Andersdotter i södra Ås gift med Hemmansbrukare Pehr Pehrsson\nDödboken: död 4 januari 1807\nNora bergsförsamling (T) F:4 (1795-1810) Bild 177 / sid 173 (AID: v53645.b177.s173, NAD: SE/ULA/11098)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_y9kadtb6": {
       "id": "p_y9kadtb6",
@@ -11402,7 +11472,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Olof Nilsson finns 1713 och 1714 med hustrun Ingrid Johansdotter i Torphyttan. De har dottern Anna.\nLindesberg (T) AIa:4 (1713-1726) Bild 17 / sid 23 (AID: v51791a.b17.s23, NAD: SE/ULA/10851)\n\nOlof Nilsson finns 1713 och 1714 med hustrun Ingrid Johansdotter i Torphyttan. De har dottern Anna.\nLindesberg (T) AIa:4 (1713-1726) Bild 56 / sid 111 (AID: v51791a.b56.s111, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1717 med hustrun Ingrid Johansdotter i Torphyttan. De har sonen Nils Olofsson.\nLindesberg (T) AIa:4 (1713-1726) Bild 79 / sid 157 (AID: v51791a.b79.s157, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1719 med hustrun Ingrid Johansdotter i Torphyttan. De har sonen Nils Olofsson.\nLindesberg (T) AIa:4 (1713-1726) Bild 123 / sid 245 (AID: v51791a.b123.s245, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1721 i Torphyttan. Hustrun har dött året innan och sonen Nils Olofsson har gift sig med Ingeborg Israelsdotter och de bor nu på samma plats.\nLindesberg (T) AIa:4 (1713-1726) Bild 149 / sid 297 (AID: v51791a.b149.s297, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1723 och 1724 i Torphyttan tillsammans med sonen Nils Olofsson och dennes hustru Ingeborg Israelsdotter. De har fått barnen Petter, Kerstin, Elias och Maria.\nLindesberg (T) AIa:4 (1713-1726) Bild 171 / sid 341 (AID: v51791a.b171.s341, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1725 och 1726 i Torphyttan tillsammans med sonen Nils Olofsson och dennes familj\nLindesberg (T) AIa:4 (1713-1726) Bild 212 / sid 423 (AID: v51791a.b212.s423, NAD: SE/ULA/10851)\n\n\nNils Olsson bor i Bergsmanshyttan med hustru Ingeborg Israelsdotter och sin familj inkluderande sonen Israel Nilsson som har gift sig med Maria Andersdotter och bor på samma plats.\nLindesberg (T) AIa:7 (1748-1756) Bild 330 / sid 33 (AID: v51795a.b330.s33, NAD: SE/ULA/10851)\n\nNils Olssons änka bor i Bergsmanshyttan med sonen Israel Nilsson och dennes familj.\nLindesberg (T) AIa:9 (1757-1764) Bild 44 / sid 38 (AID: v51797.b44.s38, NAD: SE/ULA/10851)\n\nIsrael Nilsson dör 1769 endast 42år gammal. Sonen Israel Israelsson är då endast 4 år. Hustrun Maria gifter om sig 1773 med Petter Persson från Järnboås, född 1754. I nästa husförhörslängd har prästen skrivit om Petter Persson att han är galen och håller sig i Öskevik. Har skilt sig vid..(kan jag ej tyda)\nLindesberg (T) AIa:11 (1765-1774) Bild 86 / sid 80 (AID: v51799.b86.s80, NAD: SE/ULA/10851)\n\nIsrael Israelsson lämnar hemmet och flyttar till Nora 1780-02-22. Han är då ännu ej fyllda 15 år.\nLindesberg (T) AIa:13 (1775-1785) Bild 104 / sid 97 (AID: v51801.b104.s97, NAD: SE/ULA/10851)\n\nFödelseboken\nLindesberg (T) CI:7 (1756-1768) Bild 239 / sid 235 (AID: v53505.b239.s235, NAD: SE/ULA/10851)\n\nIsrael Israelsson kommer som knappt fyllda 15 år 1780 som dräng till Björklund i Nora men där han stannar bara ungefär ett år innan han återvänder till Lindesberg och Bergsmanshyttan.\nNora bergsförsamling (T) AI:8b (1775-1784) Bild 147 / sid 505 (AID: v51987.b147.s505, NAD: SE/ULA/11098)\n\nHan kommer 16/12 1780 till sin svåger Eric Andersson i Bergsmanshyttan som är gift med systern Stina Israelsdotter. Här stannar han i 2 år innan han flyttar till Nora.\nLindesberg (T) AIa:13 (1775-1785) Bild 108 / sid 101 (AID: v51801.b108.s101, NAD: SE/ULA/10851)\n\nHan kommmer till Bergsmannen Lambert Larsson i Södra Husby.\nNora bergsförsamling (T) AI:7b (1771-1790) Bild 297 / sid 101 (AID: v51985.b297.s101, NAD: SE/ULA/11098)\n\n\nHan återfinns i Skrikarhyttan där han har gift sig 1790-10-02 med Christina Persdotter.\nNora bergsförsamling (T) AI:9a (1791-1800) Bild 99 / sid 93 (AID: v51988.b99.s93, NAD: SE/ULA/11098)\n\nHär föds dottern Maja Greta Israelssdotter 1799-10-13\nFödelseboken\nNora bergsförsamling (T) C:4 (1788-1805) Bild 262 (AID: v53619.b262, NAD: SE/ULA/11098)\n\n\nHan finns med sin familj i Skrekarhyttan\nNora bergsförsamling (T) AI:10b (1801-1810) Bild 116 / sid 110 (AID: v51991.b116.s110, NAD: SE/ULA/11098)\n\n\nHan finns med sin familj i Skrekarhyttan\nNora bergsförsamling (T) AI:11a (1811-1820) Bild 108 / sid 100 (AID: v51992.b108.s100, NAD: SE/ULA/11098)\n\nHan finns nu med sin familj i Älvhyttan och han har gift sig med Stina Hansdotter 1819. Men han dör 1825. Dottern Maja Greta flyttar\nNora bergsförsamling (T) AI:12a (1821-1829) Bild 181 / sid 174 (AID: v51994.b181.s174, NAD: SE/ULA/11098)\n\n\nDödboken\nNora bergsförsamling (T) F:5 (1811-1827) Bild 165 (AID: v53646.b165, NAD: SE/ULA/11098)"
+      "history": "Olof Nilsson finns 1713 och 1714 med hustrun Ingrid Johansdotter i Torphyttan. De har dottern Anna.\nLindesberg (T) AIa:4 (1713-1726) Bild 17 / sid 23 (AID: v51791a.b17.s23, NAD: SE/ULA/10851)\n\nOlof Nilsson finns 1713 och 1714 med hustrun Ingrid Johansdotter i Torphyttan. De har dottern Anna.\nLindesberg (T) AIa:4 (1713-1726) Bild 56 / sid 111 (AID: v51791a.b56.s111, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1717 med hustrun Ingrid Johansdotter i Torphyttan. De har sonen Nils Olofsson.\nLindesberg (T) AIa:4 (1713-1726) Bild 79 / sid 157 (AID: v51791a.b79.s157, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1719 med hustrun Ingrid Johansdotter i Torphyttan. De har sonen Nils Olofsson.\nLindesberg (T) AIa:4 (1713-1726) Bild 123 / sid 245 (AID: v51791a.b123.s245, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1721 i Torphyttan. Hustrun har dött året innan och sonen Nils Olofsson har gift sig med Ingeborg Israelsdotter och de bor nu på samma plats.\nLindesberg (T) AIa:4 (1713-1726) Bild 149 / sid 297 (AID: v51791a.b149.s297, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1723 och 1724 i Torphyttan tillsammans med sonen Nils Olofsson och dennes hustru Ingeborg Israelsdotter. De har fått barnen Petter, Kerstin, Elias och Maria.\nLindesberg (T) AIa:4 (1713-1726) Bild 171 / sid 341 (AID: v51791a.b171.s341, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1725 och 1726 i Torphyttan tillsammans med sonen Nils Olofsson och dennes familj\nLindesberg (T) AIa:4 (1713-1726) Bild 212 / sid 423 (AID: v51791a.b212.s423, NAD: SE/ULA/10851)\n\n\nNils Olsson bor i Bergsmanshyttan med hustru Ingeborg Israelsdotter och sin familj inkluderande sonen Israel Nilsson som har gift sig med Maria Andersdotter och bor på samma plats.\nLindesberg (T) AIa:7 (1748-1756) Bild 330 / sid 33 (AID: v51795a.b330.s33, NAD: SE/ULA/10851)\n\nNils Olssons änka bor i Bergsmanshyttan med sonen Israel Nilsson och dennes familj.\nLindesberg (T) AIa:9 (1757-1764) Bild 44 / sid 38 (AID: v51797.b44.s38, NAD: SE/ULA/10851)\n\nIsrael Nilsson dör 1769 endast 42år gammal. Sonen Israel Israelsson är då endast 4 år. Hustrun Maria gifter om sig 1773 med Petter Persson från Järnboås, född 1754. I nästa husförhörslängd har prästen skrivit om Petter Persson att han är galen och håller sig i Öskevik. Har skilt sig vid..(kan jag ej tyda)\nLindesberg (T) AIa:11 (1765-1774) Bild 86 / sid 80 (AID: v51799.b86.s80, NAD: SE/ULA/10851)\n\nIsrael Israelsson lämnar hemmet och flyttar till Nora 1780-02-22. Han är då ännu ej fyllda 15 år.\nLindesberg (T) AIa:13 (1775-1785) Bild 104 / sid 97 (AID: v51801.b104.s97, NAD: SE/ULA/10851)\n\nFödelseboken\nLindesberg (T) CI:7 (1756-1768) Bild 239 / sid 235 (AID: v53505.b239.s235, NAD: SE/ULA/10851)\n\nIsrael Israelsson kommer som knappt fyllda 15 år 1780 som dräng till Björklund i Nora men där han stannar bara ungefär ett år innan han återvänder till Lindesberg och Bergsmanshyttan.\nNora bergsförsamling (T) AI:8b (1775-1784) Bild 147 / sid 505 (AID: v51987.b147.s505, NAD: SE/ULA/11098)\n\nHan kommer 16/12 1780 till sin svåger Eric Andersson i Bergsmanshyttan som är gift med systern Stina Israelsdotter. Här stannar han i 2 år innan han flyttar till Nora.\nLindesberg (T) AIa:13 (1775-1785) Bild 108 / sid 101 (AID: v51801.b108.s101, NAD: SE/ULA/10851)\n\nHan kommmer till Bergsmannen Lambert Larsson i Södra Husby.\nNora bergsförsamling (T) AI:7b (1771-1790) Bild 297 / sid 101 (AID: v51985.b297.s101, NAD: SE/ULA/11098)\n\n\nHan återfinns i Skrikarhyttan där han har gift sig 1790-10-02 med Christina Persdotter.\nNora bergsförsamling (T) AI:9a (1791-1800) Bild 99 / sid 93 (AID: v51988.b99.s93, NAD: SE/ULA/11098)\n\nHär föds dottern Maja Greta Israelssdotter 1799-10-13\nFödelseboken\nNora bergsförsamling (T) C:4 (1788-1805) Bild 262 (AID: v53619.b262, NAD: SE/ULA/11098)\n\n\nHan finns med sin familj i Skrekarhyttan\nNora bergsförsamling (T) AI:10b (1801-1810) Bild 116 / sid 110 (AID: v51991.b116.s110, NAD: SE/ULA/11098)\n\n\nHan finns med sin familj i Skrekarhyttan\nNora bergsförsamling (T) AI:11a (1811-1820) Bild 108 / sid 100 (AID: v51992.b108.s100, NAD: SE/ULA/11098)\n\nHan finns nu med sin familj i Älvhyttan och han har gift sig med Stina Hansdotter 1819. Men han dör 1825. Dottern Maja Greta flyttar\nNora bergsförsamling (T) AI:12a (1821-1829) Bild 181 / sid 174 (AID: v51994.b181.s174, NAD: SE/ULA/11098)\n\n\nDödboken\nNora bergsförsamling (T) F:5 (1811-1827) Bild 165 (AID: v53646.b165, NAD: SE/ULA/11098)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_84576abd": {
       "id": "p_84576abd",
@@ -11417,7 +11489,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_v6jd0tju": {
       "id": "p_v6jd0tju",
@@ -11432,7 +11506,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Olof Nilsson finns 1713 och 1714 med hustrun Ingrid Johansdotter i Torphyttan. De har dottern Anna.\nLindesberg (T) AIa:4 (1713-1726) Bild 17 / sid 23 (AID: v51791a.b17.s23, NAD: SE/ULA/10851)\n\nOlof Nilsson finns 1713 och 1714 med hustrun Ingrid Johansdotter i Torphyttan. De har dottern Anna.\nLindesberg (T) AIa:4 (1713-1726) Bild 56 / sid 111 (AID: v51791a.b56.s111, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1717 med hustrun Ingrid Johansdotter i Torphyttan. De har sonen Nils Olofsson.\nLindesberg (T) AIa:4 (1713-1726) Bild 79 / sid 157 (AID: v51791a.b79.s157, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1719 med hustrun Ingrid Johansdotter i Torphyttan. De har sonen Nils Olofsson.\nLindesberg (T) AIa:4 (1713-1726) Bild 123 / sid 245 (AID: v51791a.b123.s245, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1721 i Torphyttan. Hustrun har dött året innan och sonen Nils Olofsson har gift sig med Ingeborg Israelsdotter och de bor nu på samma plats.\nLindesberg (T) AIa:4 (1713-1726) Bild 149 / sid 297 (AID: v51791a.b149.s297, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1723 och 1724 i Torphyttan tillsammans med sonen Nils Olofsson och dennes hustru Ingeborg Israelsdotter. De har fått barnen Petter, Kerstin, Elias och Maria.\nLindesberg (T) AIa:4 (1713-1726) Bild 171 / sid 341 (AID: v51791a.b171.s341, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1725 och 1726 i Torphyttan tillsammans med sonen Nils Olofsson och dennes familj\nLindesberg (T) AIa:4 (1713-1726) Bild 212 / sid 423 (AID: v51791a.b212.s423, NAD: SE/ULA/10851)\n\n\nNils Olsson bor i Bergsmanshyttan med hustru Ingeborg Israelsdotter och sin familj inkluderande sonen Israel Nilsson som har gift sig med Maria Andersdotter och bor på samma plats.\nLindesberg (T) AIa:7 (1748-1756) Bild 330 / sid 33 (AID: v51795a.b330.s33, NAD: SE/ULA/10851)\n\nNils Olssons änka bor i Bergsmanshyttan med sonen Israel Nilsson och dennes familj.\nLindesberg (T) AIa:9 (1757-1764) Bild 44 / sid 38 (AID: v51797.b44.s38, NAD: SE/ULA/10851)\n\nIsrael Nilsson dör 1769 endast 42år gammal. Sonen Israel Israelsson är då endast 4 år. Hustrun Maria gifter om sig 1773 med Petter Persson från Järnboås, född 1754. I nästa husförhörslängd har prästen skrivit om Petter Persson att han är galen och håller sig i Öskevik. Har skilt sig vid..(kan jag ej tyda)\nLindesberg (T) AIa:11 (1765-1774) Bild 86 / sid 80 (AID: v51799.b86.s80, NAD: SE/ULA/10851)\n\nIsrael Israelsson lämnar hemmet och flyttar till Nora 1780-02-22. Han är då ännu ej fyllda 15 år.\nLindesberg (T) AIa:13 (1775-1785) Bild 104 / sid 97 (AID: v51801.b104.s97, NAD: SE/ULA/10851)\n\nFödelseboken\nLindesberg (T) CI:7 (1756-1768) Bild 239 / sid 235 (AID: v53505.b239.s235, NAD: SE/ULA/10851)\n\nIsrael Israelsson kommer som knappt fyllda 15 år 1780 som dräng till Björklund i Nora men där han stannar bara ungefär ett år innan han återvänder till Lindesberg och Bergsmanshyttan.\nNora bergsförsamling (T) AI:8b (1775-1784) Bild 147 / sid 505 (AID: v51987.b147.s505, NAD: SE/ULA/11098)\n\nHan kommer 16/12 1780 till sin svåger Eric Andersson i Bergsmanshyttan som är gift med systern Stina Israelsdotter. Här stannar han i 2 år innan han flyttar till Nora.\nLindesberg (T) AIa:13 (1775-1785) Bild 108 / sid 101 (AID: v51801.b108.s101, NAD: SE/ULA/10851)\n\nHan kommmer till Bergsmannen Lambert Larsson i Södra Husby.\nNora bergsförsamling (T) AI:7b (1771-1790) Bild 297 / sid 101 (AID: v51985.b297.s101, NAD: SE/ULA/11098)\n\n\nHan återfinns i Skrikarhyttan där han har gift sig 1790-10-02 med Christina Persdotter.\nNora bergsförsamling (T) AI:9a (1791-1800) Bild 99 / sid 93 (AID: v51988.b99.s93, NAD: SE/ULA/11098)\n\nHär föds dottern Maja Greta Israelssdotter 1799-10-13\nFödelseboken\nNora bergsförsamling (T) C:4 (1788-1805) Bild 262 (AID: v53619.b262, NAD: SE/ULA/11098)\n\n\nHan finns med sin familj i Skrekarhyttan\nNora bergsförsamling (T) AI:10b (1801-1810) Bild 116 / sid 110 (AID: v51991.b116.s110, NAD: SE/ULA/11098)\n\n\nHan finns med sin familj i Skrekarhyttan\nNora bergsförsamling (T) AI:11a (1811-1820) Bild 108 / sid 100 (AID: v51992.b108.s100, NAD: SE/ULA/11098)\n\nHan finns nu med sin familj i Älvhyttan och han har gift sig med Stina Hansdotter 1819. Men han dör 1825. Dottern Maja Greta flyttar\nNora bergsförsamling (T) AI:12a (1821-1829) Bild 181 / sid 174 (AID: v51994.b181.s174, NAD: SE/ULA/11098)\n\n\nDödboken\nNora bergsförsamling (T) F:5 (1811-1827) Bild 165 (AID: v53646.b165, NAD: SE/ULA/11098)"
+      "history": "Olof Nilsson finns 1713 och 1714 med hustrun Ingrid Johansdotter i Torphyttan. De har dottern Anna.\nLindesberg (T) AIa:4 (1713-1726) Bild 17 / sid 23 (AID: v51791a.b17.s23, NAD: SE/ULA/10851)\n\nOlof Nilsson finns 1713 och 1714 med hustrun Ingrid Johansdotter i Torphyttan. De har dottern Anna.\nLindesberg (T) AIa:4 (1713-1726) Bild 56 / sid 111 (AID: v51791a.b56.s111, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1717 med hustrun Ingrid Johansdotter i Torphyttan. De har sonen Nils Olofsson.\nLindesberg (T) AIa:4 (1713-1726) Bild 79 / sid 157 (AID: v51791a.b79.s157, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1719 med hustrun Ingrid Johansdotter i Torphyttan. De har sonen Nils Olofsson.\nLindesberg (T) AIa:4 (1713-1726) Bild 123 / sid 245 (AID: v51791a.b123.s245, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1721 i Torphyttan. Hustrun har dött året innan och sonen Nils Olofsson har gift sig med Ingeborg Israelsdotter och de bor nu på samma plats.\nLindesberg (T) AIa:4 (1713-1726) Bild 149 / sid 297 (AID: v51791a.b149.s297, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1723 och 1724 i Torphyttan tillsammans med sonen Nils Olofsson och dennes hustru Ingeborg Israelsdotter. De har fått barnen Petter, Kerstin, Elias och Maria.\nLindesberg (T) AIa:4 (1713-1726) Bild 171 / sid 341 (AID: v51791a.b171.s341, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1725 och 1726 i Torphyttan tillsammans med sonen Nils Olofsson och dennes familj\nLindesberg (T) AIa:4 (1713-1726) Bild 212 / sid 423 (AID: v51791a.b212.s423, NAD: SE/ULA/10851)\n\n\nNils Olsson bor i Bergsmanshyttan med hustru Ingeborg Israelsdotter och sin familj inkluderande sonen Israel Nilsson som har gift sig med Maria Andersdotter och bor på samma plats.\nLindesberg (T) AIa:7 (1748-1756) Bild 330 / sid 33 (AID: v51795a.b330.s33, NAD: SE/ULA/10851)\n\nNils Olssons änka bor i Bergsmanshyttan med sonen Israel Nilsson och dennes familj.\nLindesberg (T) AIa:9 (1757-1764) Bild 44 / sid 38 (AID: v51797.b44.s38, NAD: SE/ULA/10851)\n\nIsrael Nilsson dör 1769 endast 42år gammal. Sonen Israel Israelsson är då endast 4 år. Hustrun Maria gifter om sig 1773 med Petter Persson från Järnboås, född 1754. I nästa husförhörslängd har prästen skrivit om Petter Persson att han är galen och håller sig i Öskevik. Har skilt sig vid..(kan jag ej tyda)\nLindesberg (T) AIa:11 (1765-1774) Bild 86 / sid 80 (AID: v51799.b86.s80, NAD: SE/ULA/10851)\n\nIsrael Israelsson lämnar hemmet och flyttar till Nora 1780-02-22. Han är då ännu ej fyllda 15 år.\nLindesberg (T) AIa:13 (1775-1785) Bild 104 / sid 97 (AID: v51801.b104.s97, NAD: SE/ULA/10851)\n\nFödelseboken\nLindesberg (T) CI:7 (1756-1768) Bild 239 / sid 235 (AID: v53505.b239.s235, NAD: SE/ULA/10851)\n\nIsrael Israelsson kommer som knappt fyllda 15 år 1780 som dräng till Björklund i Nora men där han stannar bara ungefär ett år innan han återvänder till Lindesberg och Bergsmanshyttan.\nNora bergsförsamling (T) AI:8b (1775-1784) Bild 147 / sid 505 (AID: v51987.b147.s505, NAD: SE/ULA/11098)\n\nHan kommer 16/12 1780 till sin svåger Eric Andersson i Bergsmanshyttan som är gift med systern Stina Israelsdotter. Här stannar han i 2 år innan han flyttar till Nora.\nLindesberg (T) AIa:13 (1775-1785) Bild 108 / sid 101 (AID: v51801.b108.s101, NAD: SE/ULA/10851)\n\nHan kommmer till Bergsmannen Lambert Larsson i Södra Husby.\nNora bergsförsamling (T) AI:7b (1771-1790) Bild 297 / sid 101 (AID: v51985.b297.s101, NAD: SE/ULA/11098)\n\n\nHan återfinns i Skrikarhyttan där han har gift sig 1790-10-02 med Christina Persdotter.\nNora bergsförsamling (T) AI:9a (1791-1800) Bild 99 / sid 93 (AID: v51988.b99.s93, NAD: SE/ULA/11098)\n\nHär föds dottern Maja Greta Israelssdotter 1799-10-13\nFödelseboken\nNora bergsförsamling (T) C:4 (1788-1805) Bild 262 (AID: v53619.b262, NAD: SE/ULA/11098)\n\n\nHan finns med sin familj i Skrekarhyttan\nNora bergsförsamling (T) AI:10b (1801-1810) Bild 116 / sid 110 (AID: v51991.b116.s110, NAD: SE/ULA/11098)\n\n\nHan finns med sin familj i Skrekarhyttan\nNora bergsförsamling (T) AI:11a (1811-1820) Bild 108 / sid 100 (AID: v51992.b108.s100, NAD: SE/ULA/11098)\n\nHan finns nu med sin familj i Älvhyttan och han har gift sig med Stina Hansdotter 1819. Men han dör 1825. Dottern Maja Greta flyttar\nNora bergsförsamling (T) AI:12a (1821-1829) Bild 181 / sid 174 (AID: v51994.b181.s174, NAD: SE/ULA/11098)\n\n\nDödboken\nNora bergsförsamling (T) F:5 (1811-1827) Bild 165 (AID: v53646.b165, NAD: SE/ULA/11098)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_5jrs87ti": {
       "id": "p_5jrs87ti",
@@ -11447,7 +11523,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Olof Nilsson finns 1713 och 1714 med hustrun Ingrid Johansdotter i Torphyttan. De har dottern Anna.\nLindesberg (T) AIa:4 (1713-1726) Bild 17 / sid 23 (AID: v51791a.b17.s23, NAD: SE/ULA/10851)\n\nOlof Nilsson finns 1713 och 1714 med hustrun Ingrid Johansdotter i Torphyttan. De har dottern Anna.\nLindesberg (T) AIa:4 (1713-1726) Bild 56 / sid 111 (AID: v51791a.b56.s111, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1717 med hustrun Ingrid Johansdotter i Torphyttan. De har sonen Nils Olofsson.\nLindesberg (T) AIa:4 (1713-1726) Bild 79 / sid 157 (AID: v51791a.b79.s157, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1719 med hustrun Ingrid Johansdotter i Torphyttan. De har sonen Nils Olofsson.\nLindesberg (T) AIa:4 (1713-1726) Bild 123 / sid 245 (AID: v51791a.b123.s245, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1721 i Torphyttan. Hustrun har dött året innan och sonen Nils Olofsson har gift sig med Ingeborg Israelsdotter och de bor nu på samma plats.\nLindesberg (T) AIa:4 (1713-1726) Bild 149 / sid 297 (AID: v51791a.b149.s297, NAD: SE/ULA/10851)"
+      "history": "Olof Nilsson finns 1713 och 1714 med hustrun Ingrid Johansdotter i Torphyttan. De har dottern Anna.\nLindesberg (T) AIa:4 (1713-1726) Bild 17 / sid 23 (AID: v51791a.b17.s23, NAD: SE/ULA/10851)\n\nOlof Nilsson finns 1713 och 1714 med hustrun Ingrid Johansdotter i Torphyttan. De har dottern Anna.\nLindesberg (T) AIa:4 (1713-1726) Bild 56 / sid 111 (AID: v51791a.b56.s111, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1717 med hustrun Ingrid Johansdotter i Torphyttan. De har sonen Nils Olofsson.\nLindesberg (T) AIa:4 (1713-1726) Bild 79 / sid 157 (AID: v51791a.b79.s157, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1719 med hustrun Ingrid Johansdotter i Torphyttan. De har sonen Nils Olofsson.\nLindesberg (T) AIa:4 (1713-1726) Bild 123 / sid 245 (AID: v51791a.b123.s245, NAD: SE/ULA/10851)\n\nOlof Nilsson bor 1721 i Torphyttan. Hustrun har dött året innan och sonen Nils Olofsson har gift sig med Ingeborg Israelsdotter och de bor nu på samma plats.\nLindesberg (T) AIa:4 (1713-1726) Bild 149 / sid 297 (AID: v51791a.b149.s297, NAD: SE/ULA/10851)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_hqb6ou1y": {
       "id": "p_hqb6ou1y",
@@ -11462,7 +11540,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Peter Gregorsson bor i Hovmanstorp\nNora bergsförsamling (T) AI:3a (1733-1742) Bild 1680 / sid 163 (AID: v51976a.b1680.s163, NAD: SE/ULA/11098)\nNora bergsförsamling (T) AI:4b (1743-1752) Bild 280 / sid 22 (AID: v51979a.b280.s22, NAD: SE/ULA/11098)\nNora bergsförsamling (T) AI:5b (1751-1760) Bild 38 / sid 31a (AID: v51981.b38.s31a, NAD: SE/ULA/11098)\nNora bergsförsamling (T) AI:6b (1761-1770) Bild 189 / sid 183 (AID: v51983.b189.s183, NAD: SE/ULA/11098)\nNora bergsförsamling (T) AI:7a (1771-1790) Bild 74 / sid 68 (AID: v51984.b74.s68, NAD: SE/ULA/11098)\nNora bergsförsamling (T) AI:8a (1775-1784) Bild 148 / sid 143 (AID: v51986.b148.s143, NAD: SE/ULA/11098)"
+      "history": "Peter Gregorsson bor i Hovmanstorp\nNora bergsförsamling (T) AI:3a (1733-1742) Bild 1680 / sid 163 (AID: v51976a.b1680.s163, NAD: SE/ULA/11098)\nNora bergsförsamling (T) AI:4b (1743-1752) Bild 280 / sid 22 (AID: v51979a.b280.s22, NAD: SE/ULA/11098)\nNora bergsförsamling (T) AI:5b (1751-1760) Bild 38 / sid 31a (AID: v51981.b38.s31a, NAD: SE/ULA/11098)\nNora bergsförsamling (T) AI:6b (1761-1770) Bild 189 / sid 183 (AID: v51983.b189.s183, NAD: SE/ULA/11098)\nNora bergsförsamling (T) AI:7a (1771-1790) Bild 74 / sid 68 (AID: v51984.b74.s68, NAD: SE/ULA/11098)\nNora bergsförsamling (T) AI:8a (1775-1784) Bild 148 / sid 143 (AID: v51986.b148.s143, NAD: SE/ULA/11098)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_ti3p1gsm": {
       "id": "p_ti3p1gsm",
@@ -11477,7 +11557,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_ye7ueyiu": {
       "id": "p_ye7ueyiu",
@@ -11492,7 +11574,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Gregor Persson bor i Hovmanstorp\nNora bergsförsamling (T) AI:3a (1733-1742) Bild 1680 / sid 163 (AID: v51976a.b1680.s163, NAD: SE/ULA/11098)\nNora bergsförsamling (T) AI:4b (1743-1752) Bild 280 / sid 22 (AID: v51979a.b280.s22, NAD: SE/ULA/11098)\nNora bergsförsamling (T) AI:5b (1751-1760) Bild 38 / sid 31a (AID: v51981.b38.s31a, NAD: SE/ULA/11098)\nNora bergsförsamling (T) AI:6b (1761-1770) Bild 46 / sid 39 (AID: v51983.b46.s39, NAD: SE/ULA/11098)"
+      "history": "Gregor Persson bor i Hovmanstorp\nNora bergsförsamling (T) AI:3a (1733-1742) Bild 1680 / sid 163 (AID: v51976a.b1680.s163, NAD: SE/ULA/11098)\nNora bergsförsamling (T) AI:4b (1743-1752) Bild 280 / sid 22 (AID: v51979a.b280.s22, NAD: SE/ULA/11098)\nNora bergsförsamling (T) AI:5b (1751-1760) Bild 38 / sid 31a (AID: v51981.b38.s31a, NAD: SE/ULA/11098)\nNora bergsförsamling (T) AI:6b (1761-1770) Bild 46 / sid 39 (AID: v51983.b46.s39, NAD: SE/ULA/11098)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_kdwgumsj": {
       "id": "p_kdwgumsj",
@@ -11507,7 +11591,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_u3dbz43e": {
       "id": "p_u3dbz43e",
@@ -11522,7 +11608,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Per Persson\nFödelseboken 1777-08-05:\nJärnboås (T) C:4 (1775-1805) Bild 19 (AID: v53329.b19, NAD: SE/ULA/10503)\n\nJärnboås (T) AI:5 (1775-1785) Bild 56 / sid 49 (AID: v51497.b56.s49, NAD: SE/ULA/10503)\nPehr Olsson f. 1748 har gift sig med Anna Pehrsdotter f. 1754 och de har fått sonen Per Persson f. 1777-08-05\nJärnboås (T) AI:6 (1786-1795) Bild 510 / sid 45 (AID: v51498a.b510.s45, NAD: SE/ULA/10503)\n\nPehr Pehrsson finns i Gammelhyttan 1798-1800 \nJärnboås (T) AI:7 (1795-1804) Bild 138 / sid 133 (AID: v51499.b138.s133, NAD: SE/ULA/10503)\n\nPehr Pehrsson gifter sig med Christina Olsdotter i Gammelhyttan 1798-10-04. De får sonen Pehr Persson född 1802-11-24.\nJärnboås (T) AI:8 (1805-1814) Bild 140 / sid 135 (AID: v51500.b140.s135, NAD: SE/ULA/10503)\n\nPehr Pehrsson den yngre växer upp med föräldrarna Pehr Pehrsson den äldre och dennes hustru Christina Olsdotter i Gammelhyttan\nJärnboås (T) AI:9 (1815-1824) Bild 138 / sid 132 (AID: v51501.b138.s132, NAD: SE/ULA/10503)\n\nPehr Pehrsson f. 1802 är nu Bergsman i Gammelhyttan och har gift sig med Catharina Olsdotter f. 1805 och de har fått sonen Per Persson född 1825-09-15\nJärnboås (T) AI:10 (1825-1830) Bild 137 / sid 142 (AID: v51502.b137.s142, NAD: SE/ULA/10503)\nJärnboås (T) AI:10 (1825-1830) Bild 9 / sid 5 (AID: v51502.b9.s5, NAD: SE/ULA/10503)\n\nPehr Pehrsson och Cathatina Olsdotter får sonen Per 1825.\nJärnboås (T) AI:10 (1825-1830) Bild 9 / sid 5 (AID: v51502.b9.s5, NAD: SE/ULA/10503)\nFlyttar till Finnshyttan\n\nJärnboås (T) AI:10 (1825-1830) Bild 137 / sid 142 (AID: v51502.b137.s142, NAD: SE/ULA/10503)\nJärnboås (T) AI:11 (1831-1835) Bild 11 / sid 5 (AID: v51503.b11.s5, NAD: SE/ULA/10503)\nJärnboås (T) AI:12a (1835-1840) Bild 14 / sid 9 (AID: v51504.b14.s9, NAD: SE/ULA/10503)\nJärnboås (T) AI:13a (1840-1845) Bild 24 / sid 8 (AID: v51506.b24.s8, NAD: SE/ULA/10503)\nJärnboås (T) AI:13a (1840-1845) Bild 202 / sid 180 (AID: v51506.b202.s180, NAD: SE/ULA/10503)\n\nSexman och nämndeman Per Persson i Gammelhyttan\nJärnboås (T) AI:14 (1845-1855) Bild 198 / sid 194 (AID: v51508.b198.s194, NAD: SE/ULA/10503)\n\nPer Persson dör 1861-03-27 i Gammelhyttan\nJärnboås (T) AI:15b (1856-1865) Bild 17 / sid 240 (AID: v51510.b17.s240, NAD: SE/ULA/10503)"
+      "history": "Per Persson\nFödelseboken 1777-08-05:\nJärnboås (T) C:4 (1775-1805) Bild 19 (AID: v53329.b19, NAD: SE/ULA/10503)\n\nJärnboås (T) AI:5 (1775-1785) Bild 56 / sid 49 (AID: v51497.b56.s49, NAD: SE/ULA/10503)\nPehr Olsson f. 1748 har gift sig med Anna Pehrsdotter f. 1754 och de har fått sonen Per Persson f. 1777-08-05\nJärnboås (T) AI:6 (1786-1795) Bild 510 / sid 45 (AID: v51498a.b510.s45, NAD: SE/ULA/10503)\n\nPehr Pehrsson finns i Gammelhyttan 1798-1800 \nJärnboås (T) AI:7 (1795-1804) Bild 138 / sid 133 (AID: v51499.b138.s133, NAD: SE/ULA/10503)\n\nPehr Pehrsson gifter sig med Christina Olsdotter i Gammelhyttan 1798-10-04. De får sonen Pehr Persson född 1802-11-24.\nJärnboås (T) AI:8 (1805-1814) Bild 140 / sid 135 (AID: v51500.b140.s135, NAD: SE/ULA/10503)\n\nPehr Pehrsson den yngre växer upp med föräldrarna Pehr Pehrsson den äldre och dennes hustru Christina Olsdotter i Gammelhyttan\nJärnboås (T) AI:9 (1815-1824) Bild 138 / sid 132 (AID: v51501.b138.s132, NAD: SE/ULA/10503)\n\nPehr Pehrsson f. 1802 är nu Bergsman i Gammelhyttan och har gift sig med Catharina Olsdotter f. 1805 och de har fått sonen Per Persson född 1825-09-15\nJärnboås (T) AI:10 (1825-1830) Bild 137 / sid 142 (AID: v51502.b137.s142, NAD: SE/ULA/10503)\nJärnboås (T) AI:10 (1825-1830) Bild 9 / sid 5 (AID: v51502.b9.s5, NAD: SE/ULA/10503)\n\nPehr Pehrsson och Cathatina Olsdotter får sonen Per 1825.\nJärnboås (T) AI:10 (1825-1830) Bild 9 / sid 5 (AID: v51502.b9.s5, NAD: SE/ULA/10503)\nFlyttar till Finnshyttan\n\nJärnboås (T) AI:10 (1825-1830) Bild 137 / sid 142 (AID: v51502.b137.s142, NAD: SE/ULA/10503)\nJärnboås (T) AI:11 (1831-1835) Bild 11 / sid 5 (AID: v51503.b11.s5, NAD: SE/ULA/10503)\nJärnboås (T) AI:12a (1835-1840) Bild 14 / sid 9 (AID: v51504.b14.s9, NAD: SE/ULA/10503)\nJärnboås (T) AI:13a (1840-1845) Bild 24 / sid 8 (AID: v51506.b24.s8, NAD: SE/ULA/10503)\nJärnboås (T) AI:13a (1840-1845) Bild 202 / sid 180 (AID: v51506.b202.s180, NAD: SE/ULA/10503)\n\nSexman och nämndeman Per Persson i Gammelhyttan\nJärnboås (T) AI:14 (1845-1855) Bild 198 / sid 194 (AID: v51508.b198.s194, NAD: SE/ULA/10503)\n\nPer Persson dör 1861-03-27 i Gammelhyttan\nJärnboås (T) AI:15b (1856-1865) Bild 17 / sid 240 (AID: v51510.b17.s240, NAD: SE/ULA/10503)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_4w9dx04t": {
       "id": "p_4w9dx04t",
@@ -11537,7 +11625,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Catharina Olsdotter 1805-03-03\nFödelseboken:\nJärnboås (T) C:4 (1775-1805) Bild 141 (AID: v53329.b141, NAD: SE/ULA/10503)\n\nPehr Pehrsson och Catharina Olsdotter får sonen Per 1825.\nJärnboås (T) AI:10 (1825-1830) Bild 9 / sid 5 (AID: v51502.b9.s5, NAD: SE/ULA/10503)\nFlyttar till Finnshyttan\n\nJärnboås (T) AI:10 (1825-1830) Bild 137 / sid 142 (AID: v51502.b137.s142, NAD: SE/ULA/10503)\nJärnboås (T) AI:11 (1831-1835) Bild 11 / sid 5 (AID: v51503.b11.s5, NAD: SE/ULA/10503)\nJärnboås (T) AI:12a (1835-1840) Bild 14 / sid 9 (AID: v51504.b14.s9, NAD: SE/ULA/10503)\nJärnboås (T) AI:13a (1840-1845) Bild 24 / sid 8 (AID: v51506.b24.s8, NAD: SE/ULA/10503)\nJärnboås (T) AI:13a (1840-1845) Bild 202 / sid 180 (AID: v51506.b202.s180, NAD: SE/ULA/10503)\n\nSexman och nämndeman Per Persson i Gammelhyttan\nJärnboås (T) AI:14 (1845-1855) Bild 198 / sid 194 (AID: v51508.b198.s194, NAD: SE/ULA/10503)\n\nPer Persson dör 1861-03-27 i Gammelhyttan\nJärnboås (T) AI:15b (1856-1865) Bild 17 / sid 240 (AID: v51510.b17.s240, NAD: SE/ULA/10503)\n\nÄnkan Catharina Olsdotter som numera står med namnet Wassrin flyttar 1862 till Finnsjön i Finnshytte rote,\nJärnboås (T) AI:15a (1856-1865) Bild 280 / sid 13 (AID: v51509a.b280.s13, NAD: SE/ULA/10503)\n\nÄnkan efter Bergsmannen Pehr Pehrsson (1802-1861) bor i Finnsjön i Finnshytte rote med namnet Carin Wassrin till sin död 1869-05-12.\nJärnboås (T) AI:16a (1866-1875) Bild 33 / sid 14 (AID: v51511a.b33.s14, NAD: SE/ULA/10503)"
+      "history": "Catharina Olsdotter 1805-03-03\nFödelseboken:\nJärnboås (T) C:4 (1775-1805) Bild 141 (AID: v53329.b141, NAD: SE/ULA/10503)\n\nPehr Pehrsson och Catharina Olsdotter får sonen Per 1825.\nJärnboås (T) AI:10 (1825-1830) Bild 9 / sid 5 (AID: v51502.b9.s5, NAD: SE/ULA/10503)\nFlyttar till Finnshyttan\n\nJärnboås (T) AI:10 (1825-1830) Bild 137 / sid 142 (AID: v51502.b137.s142, NAD: SE/ULA/10503)\nJärnboås (T) AI:11 (1831-1835) Bild 11 / sid 5 (AID: v51503.b11.s5, NAD: SE/ULA/10503)\nJärnboås (T) AI:12a (1835-1840) Bild 14 / sid 9 (AID: v51504.b14.s9, NAD: SE/ULA/10503)\nJärnboås (T) AI:13a (1840-1845) Bild 24 / sid 8 (AID: v51506.b24.s8, NAD: SE/ULA/10503)\nJärnboås (T) AI:13a (1840-1845) Bild 202 / sid 180 (AID: v51506.b202.s180, NAD: SE/ULA/10503)\n\nSexman och nämndeman Per Persson i Gammelhyttan\nJärnboås (T) AI:14 (1845-1855) Bild 198 / sid 194 (AID: v51508.b198.s194, NAD: SE/ULA/10503)\n\nPer Persson dör 1861-03-27 i Gammelhyttan\nJärnboås (T) AI:15b (1856-1865) Bild 17 / sid 240 (AID: v51510.b17.s240, NAD: SE/ULA/10503)\n\nÄnkan Catharina Olsdotter som numera står med namnet Wassrin flyttar 1862 till Finnsjön i Finnshytte rote,\nJärnboås (T) AI:15a (1856-1865) Bild 280 / sid 13 (AID: v51509a.b280.s13, NAD: SE/ULA/10503)\n\nÄnkan efter Bergsmannen Pehr Pehrsson (1802-1861) bor i Finnsjön i Finnshytte rote med namnet Carin Wassrin till sin död 1869-05-12.\nJärnboås (T) AI:16a (1866-1875) Bild 33 / sid 14 (AID: v51511a.b33.s14, NAD: SE/ULA/10503)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_pyzpdjlg": {
       "id": "p_pyzpdjlg",
@@ -11552,7 +11642,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Födelseboken:\nJärnboås (T) C:4 (1775-1805) Bild 19 (AID: v53329.b19, NAD: SE/ULA/10503)\n\nJärnboås (T) AI:7 (1795-1804) Bild 138 / sid 133 (AID: v51499.b138.s133, NAD: SE/ULA/10503)\nJärnboås (T) AI:8 (1805-1814) Bild 140 / sid 135 (AID: v51500.b140.s135, NAD: SE/ULA/10503)\nJärnboås (T) AI:9 (1815-1824) Bild 138 / sid 132 (AID: v51501.b138.s132, NAD: SE/ULA/10503)\nJärnboås (T) AI:10 (1825-1830) Bild 137 / sid 142 (AID: v51502.b137.s142, NAD: SE/ULA/10503)\nJärnboås (T) AI:10 (1825-1830) Bild 9 / sid 5 (AID: v51502.b9.s5, NAD: SE/ULA/10503)"
+      "history": "Födelseboken:\nJärnboås (T) C:4 (1775-1805) Bild 19 (AID: v53329.b19, NAD: SE/ULA/10503)\n\nJärnboås (T) AI:7 (1795-1804) Bild 138 / sid 133 (AID: v51499.b138.s133, NAD: SE/ULA/10503)\nJärnboås (T) AI:8 (1805-1814) Bild 140 / sid 135 (AID: v51500.b140.s135, NAD: SE/ULA/10503)\nJärnboås (T) AI:9 (1815-1824) Bild 138 / sid 132 (AID: v51501.b138.s132, NAD: SE/ULA/10503)\nJärnboås (T) AI:10 (1825-1830) Bild 137 / sid 142 (AID: v51502.b137.s142, NAD: SE/ULA/10503)\nJärnboås (T) AI:10 (1825-1830) Bild 9 / sid 5 (AID: v51502.b9.s5, NAD: SE/ULA/10503)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_6uq3m6jg": {
       "id": "p_6uq3m6jg",
@@ -11567,7 +11659,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Olof Hansson finns 1776-1785 i Lindesby\nBrita Ersdotter dör 1783. Olof Hansson gifter sig med Maria Carlsdotter. De får dottern Christina Olsdotter född 1775-10-07\nJärnboås (T) AI:5 (1775-1785) Bild 191 / sid 184 (AID: v51497.b191.s184, NAD: SE/ULA/10503)\n\nMågen Pehr Pehrsson kommer till Olof Hansson i Gammelhyttan och gifter sig 1798-10-04 med dottern Christina Olsdotter.\nJärnboås (T) AI:7 (1795-1804) Bild 138 / sid 133 (AID: v51499.b138.s133, NAD: SE/ULA/10503)\n\nGammelhyttan\nJärnboås (T) AI:8 (1805-1814) Bild 140 / sid 135 (AID: v51500.b140.s135, NAD: SE/ULA/10503)\n\nGammelhyttan\nJärnboås (T) AI:9 (1815-1824) Bild 138 / sid 132 (AID: v51501.b138.s132, NAD: SE/ULA/10503)\n\nBergsman, nämndeman samt Häradsdomaren Per Persson i Gammelhyttan. Hustrun Christina Olsdotter\nJärnboås (T) AI:10 (1825-1830) Bild 136 / sid 141 (AID: v51502.b136.s141, NAD: SE/ULA/10503)\n\nRiksdagsmannen och Häradsdomaren Pehr Pehrsson i Gammelhyttan. Hustrun Christina Olsdotter\nJärnboås (T) AI:11 (1831-1835) Bild 175 / sid 169 (AID: v51503.b175.s169, NAD: SE/ULA/10503)\n\nHäradsdomaren och Riksdagsfullmäktigen Pehr Pehrsson i Gammelhyttan. Hustrun Christina Olsdotter\nJärnboås (T) AI:12a (1835-1840) Bild 183 / sid 178 (AID: v51504.b183.s178, NAD: SE/ULA/10503)\n\nHäradsdomaren och Riksdagsfullmäktigen Pehr Pehrsson i Gammelhyttan. Hustrun Christina Olsdotter\nJärnboås (T) AI:13a (1840-1845) Bild 200 / sid 178 (AID: v51506.b200.s178, NAD: SE/ULA/10503)\n\nHäradsdomaren Pehr Pehrsson i Gammelhyttan. Död 1856-01-26.\nJärnboås (T) AI:14 (1845-1855) Bild 201 / sid 197 (AID: v51508.b201.s197, NAD: SE/ULA/10503)\n\nÄnkan Christina Olsdotter död i Gammelhyttan 1858-02-11.\nJärnboås (T) AI:15b (1856-1865) Bild 23 / sid 246 (AID: v51510.b23.s246, NAD: SE/ULA/10503)\nOlof Hansson finns 1786-1795 i Lindesby\nJärnboås (T) AI:6 (1786-1795) Bild 2030 / sid 197 (AID: v51498a.b2030.s197, NAD: SE/ULA/10503)\n\nOlof Hansson finns 1795-1804 i Gammelhyttan\nChristina Olsdotter gifter sig med Per Persson 1798-10-04\nJärnboås (T) AI:7 (1795-1804) Bild 137 / sid 132 (AID: v51499.b137.s132, NAD: SE/ULA/10503)\n\nMågen Pehr Pehrsson kommer till Olof Hansson i Gammelhyttan och gifter sig 1798-10-04 med dottern Christina Olsdotter.\nJärnboås (T) AI:7 (1795-1804) Bild 138 / sid 133 (AID: v51499.b138.s133, NAD: SE/ULA/10503)\n\nGammelhyttan\nJärnboås (T) AI:8 (1805-1814) Bild 140 / sid 135 (AID: v51500.b140.s135, NAD: SE/ULA/10503)\n\nGammelhyttan\nJärnboås (T) AI:9 (1815-1824) Bild 138 / sid 132 (AID: v51501.b138.s132, NAD: SE/ULA/10503)\n\nBergsman, nämndeman samt Häradsdomaren Per Persson i Gammelhyttan. Hustrun Christina Olsdotter\nJärnboås (T) AI:10 (1825-1830) Bild 136 / sid 141 (AID: v51502.b136.s141, NAD: SE/ULA/10503)\n\nRiksdagsmannen och Häradsdomaren Pehr Pehrsson i Gammelhyttan. Hustrun Christina Olsdotter\nJärnboås (T) AI:11 (1831-1835) Bild 175 / sid 169 (AID: v51503.b175.s169, NAD: SE/ULA/10503)\n\nHäradsdomaren och Riksdagsfullmäktigen Pehr Pehrsson i Gammelhyttan. Hustrun Christina Olsdotter\nJärnboås (T) AI:12a (1835-1840) Bild 183 / sid 178 (AID: v51504.b183.s178, NAD: SE/ULA/10503)\n\nHäradsdomaren och Riksdagsfullmäktigen Pehr Pehrsson i Gammelhyttan. Hustrun Christina Olsdotter\nJärnboås (T) AI:13a (1840-1845) Bild 200 / sid 178 (AID: v51506.b200.s178, NAD: SE/ULA/10503)\n\nHäradsdomaren Pehr Pehrsson i Gammelhyttan. Död 1856-01-26.\nJärnboås (T) AI:14 (1845-1855) Bild 201 / sid 197 (AID: v51508.b201.s197, NAD: SE/ULA/10503)\n\nÄnkan Christina Olsdotter död i Gammelhyttan 1858-02-11.\nJärnboås (T) AI:15b (1856-1865) Bild 23 / sid 246 (AID: v51510.b23.s246, NAD: SE/ULA/10503)"
+      "history": "Olof Hansson finns 1776-1785 i Lindesby\nBrita Ersdotter dör 1783. Olof Hansson gifter sig med Maria Carlsdotter. De får dottern Christina Olsdotter född 1775-10-07\nJärnboås (T) AI:5 (1775-1785) Bild 191 / sid 184 (AID: v51497.b191.s184, NAD: SE/ULA/10503)\n\nMågen Pehr Pehrsson kommer till Olof Hansson i Gammelhyttan och gifter sig 1798-10-04 med dottern Christina Olsdotter.\nJärnboås (T) AI:7 (1795-1804) Bild 138 / sid 133 (AID: v51499.b138.s133, NAD: SE/ULA/10503)\n\nGammelhyttan\nJärnboås (T) AI:8 (1805-1814) Bild 140 / sid 135 (AID: v51500.b140.s135, NAD: SE/ULA/10503)\n\nGammelhyttan\nJärnboås (T) AI:9 (1815-1824) Bild 138 / sid 132 (AID: v51501.b138.s132, NAD: SE/ULA/10503)\n\nBergsman, nämndeman samt Häradsdomaren Per Persson i Gammelhyttan. Hustrun Christina Olsdotter\nJärnboås (T) AI:10 (1825-1830) Bild 136 / sid 141 (AID: v51502.b136.s141, NAD: SE/ULA/10503)\n\nRiksdagsmannen och Häradsdomaren Pehr Pehrsson i Gammelhyttan. Hustrun Christina Olsdotter\nJärnboås (T) AI:11 (1831-1835) Bild 175 / sid 169 (AID: v51503.b175.s169, NAD: SE/ULA/10503)\n\nHäradsdomaren och Riksdagsfullmäktigen Pehr Pehrsson i Gammelhyttan. Hustrun Christina Olsdotter\nJärnboås (T) AI:12a (1835-1840) Bild 183 / sid 178 (AID: v51504.b183.s178, NAD: SE/ULA/10503)\n\nHäradsdomaren och Riksdagsfullmäktigen Pehr Pehrsson i Gammelhyttan. Hustrun Christina Olsdotter\nJärnboås (T) AI:13a (1840-1845) Bild 200 / sid 178 (AID: v51506.b200.s178, NAD: SE/ULA/10503)\n\nHäradsdomaren Pehr Pehrsson i Gammelhyttan. Död 1856-01-26.\nJärnboås (T) AI:14 (1845-1855) Bild 201 / sid 197 (AID: v51508.b201.s197, NAD: SE/ULA/10503)\n\nÄnkan Christina Olsdotter död i Gammelhyttan 1858-02-11.\nJärnboås (T) AI:15b (1856-1865) Bild 23 / sid 246 (AID: v51510.b23.s246, NAD: SE/ULA/10503)\nOlof Hansson finns 1786-1795 i Lindesby\nJärnboås (T) AI:6 (1786-1795) Bild 2030 / sid 197 (AID: v51498a.b2030.s197, NAD: SE/ULA/10503)\n\nOlof Hansson finns 1795-1804 i Gammelhyttan\nChristina Olsdotter gifter sig med Per Persson 1798-10-04\nJärnboås (T) AI:7 (1795-1804) Bild 137 / sid 132 (AID: v51499.b137.s132, NAD: SE/ULA/10503)\n\nMågen Pehr Pehrsson kommer till Olof Hansson i Gammelhyttan och gifter sig 1798-10-04 med dottern Christina Olsdotter.\nJärnboås (T) AI:7 (1795-1804) Bild 138 / sid 133 (AID: v51499.b138.s133, NAD: SE/ULA/10503)\n\nGammelhyttan\nJärnboås (T) AI:8 (1805-1814) Bild 140 / sid 135 (AID: v51500.b140.s135, NAD: SE/ULA/10503)\n\nGammelhyttan\nJärnboås (T) AI:9 (1815-1824) Bild 138 / sid 132 (AID: v51501.b138.s132, NAD: SE/ULA/10503)\n\nBergsman, nämndeman samt Häradsdomaren Per Persson i Gammelhyttan. Hustrun Christina Olsdotter\nJärnboås (T) AI:10 (1825-1830) Bild 136 / sid 141 (AID: v51502.b136.s141, NAD: SE/ULA/10503)\n\nRiksdagsmannen och Häradsdomaren Pehr Pehrsson i Gammelhyttan. Hustrun Christina Olsdotter\nJärnboås (T) AI:11 (1831-1835) Bild 175 / sid 169 (AID: v51503.b175.s169, NAD: SE/ULA/10503)\n\nHäradsdomaren och Riksdagsfullmäktigen Pehr Pehrsson i Gammelhyttan. Hustrun Christina Olsdotter\nJärnboås (T) AI:12a (1835-1840) Bild 183 / sid 178 (AID: v51504.b183.s178, NAD: SE/ULA/10503)\n\nHäradsdomaren och Riksdagsfullmäktigen Pehr Pehrsson i Gammelhyttan. Hustrun Christina Olsdotter\nJärnboås (T) AI:13a (1840-1845) Bild 200 / sid 178 (AID: v51506.b200.s178, NAD: SE/ULA/10503)\n\nHäradsdomaren Pehr Pehrsson i Gammelhyttan. Död 1856-01-26.\nJärnboås (T) AI:14 (1845-1855) Bild 201 / sid 197 (AID: v51508.b201.s197, NAD: SE/ULA/10503)\n\nÄnkan Christina Olsdotter död i Gammelhyttan 1858-02-11.\nJärnboås (T) AI:15b (1856-1865) Bild 23 / sid 246 (AID: v51510.b23.s246, NAD: SE/ULA/10503)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_4enuhnv7": {
       "id": "p_4enuhnv7",
@@ -11582,7 +11676,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Olof hansson bor med sina föräldrar i Lindesby. Fadern Mats Hansson född 1700 och dör i Lindesby 1763. Modern Brita Ersdotter född 1720 i Järnboås.\nJärnboås (T) AI:3 (1761-1770) Bild 82 / sid 78 (AID: v51495.b82.s78, NAD: SE/ULA/10503)\nJärnboås (T) AI:3 (1761-1770) Bild 236 / sid 232 (AID: v51495.b236.s232, NAD: SE/ULA/10503)\n\nBrita Ersdotter bor med sonen Olof Hansson i Lindesby 1771-1774\nJärnboås (T) AI:4 (1771-1774) Bild 175 / sid 169 (AID: v51496.b175.s169, NAD: SE/ULA/10503)\n\nOlof Hansson är nu gift och finns i Gammelhyttan 1775 och 1776\nJärnboås (T) AI:5 (1775-1785) Bild 132 / sid 125 (AID: v51497.b132.s125, NAD: SE/ULA/10503)\n\nOlof Hansson finns 1776-1785 i Lindesby\nBrita Ersdotter dör 1783. Olof Hansson gifter sig med Maria Carlsdotter. De får dottern Christina Olsdotter född 1775-10-07\nJärnboås (T) AI:5 (1775-1785) Bild 191 / sid 184 (AID: v51497.b191.s184, NAD: SE/ULA/10503)\n\nOlof Hansson finns 1786-1795 i Lindesby\nJärnboås (T) AI:6 (1786-1795) Bild 2030 / sid 197 (AID: v51498a.b2030.s197, NAD: SE/ULA/10503)\n\nOlof Hansson finns 1795-1804 i Gammelhyttan\nChristina Olsdotter gifter sig med Per Persson 1798-10-04\nJärnboås (T) AI:7 (1795-1804) Bild 137 / sid 132 (AID: v51499.b137.s132, NAD: SE/ULA/10503)\n\nOlof Hansson dog i Gammelhyttan 1811 och hustrun Maria Carlsdotter dog året därpå 1812 i Gammelhyttan.\nJärnboås (T) AI:8 (1805-1814) Bild 137 / sid 132 (AID: v51500.b137.s132, NAD: SE/ULA/10503)"
+      "history": "Olof hansson bor med sina föräldrar i Lindesby. Fadern Mats Hansson född 1700 och dör i Lindesby 1763. Modern Brita Ersdotter född 1720 i Järnboås.\nJärnboås (T) AI:3 (1761-1770) Bild 82 / sid 78 (AID: v51495.b82.s78, NAD: SE/ULA/10503)\nJärnboås (T) AI:3 (1761-1770) Bild 236 / sid 232 (AID: v51495.b236.s232, NAD: SE/ULA/10503)\n\nBrita Ersdotter bor med sonen Olof Hansson i Lindesby 1771-1774\nJärnboås (T) AI:4 (1771-1774) Bild 175 / sid 169 (AID: v51496.b175.s169, NAD: SE/ULA/10503)\n\nOlof Hansson är nu gift och finns i Gammelhyttan 1775 och 1776\nJärnboås (T) AI:5 (1775-1785) Bild 132 / sid 125 (AID: v51497.b132.s125, NAD: SE/ULA/10503)\n\nOlof Hansson finns 1776-1785 i Lindesby\nBrita Ersdotter dör 1783. Olof Hansson gifter sig med Maria Carlsdotter. De får dottern Christina Olsdotter född 1775-10-07\nJärnboås (T) AI:5 (1775-1785) Bild 191 / sid 184 (AID: v51497.b191.s184, NAD: SE/ULA/10503)\n\nOlof Hansson finns 1786-1795 i Lindesby\nJärnboås (T) AI:6 (1786-1795) Bild 2030 / sid 197 (AID: v51498a.b2030.s197, NAD: SE/ULA/10503)\n\nOlof Hansson finns 1795-1804 i Gammelhyttan\nChristina Olsdotter gifter sig med Per Persson 1798-10-04\nJärnboås (T) AI:7 (1795-1804) Bild 137 / sid 132 (AID: v51499.b137.s132, NAD: SE/ULA/10503)\n\nOlof Hansson dog i Gammelhyttan 1811 och hustrun Maria Carlsdotter dog året därpå 1812 i Gammelhyttan.\nJärnboås (T) AI:8 (1805-1814) Bild 137 / sid 132 (AID: v51500.b137.s132, NAD: SE/ULA/10503)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_dcs1vqtc": {
       "id": "p_dcs1vqtc",
@@ -11597,7 +11693,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Olof Hansson är nu gift och finns i Gammelhyttan 1775 och 1776\nJärnboås (T) AI:5 (1775-1785) Bild 132 / sid 125 (AID: v51497.b132.s125, NAD: SE/ULA/10503)\n\nOlof Hansson finns 1776-1785 i Lindesby\nBrita Ersdotter dör 1783. Olof Hansson gifter sig med Maria Carlsdotter. De får dottern Christina Olsdotter född 1775-10-07\nJärnboås (T) AI:5 (1775-1785) Bild 191 / sid 184 (AID: v51497.b191.s184, NAD: SE/ULA/10503)\n\nOlof Hansson finns 1786-1795 i Lindesby\nJärnboås (T) AI:6 (1786-1795) Bild 2030 / sid 197 (AID: v51498a.b2030.s197, NAD: SE/ULA/10503)\n\nOlof Hansson finns 1795-1804 i Gammelhyttan\nChristina Olsdotter gifter sig med Per Persson 1798-10-04\nJärnboås (T) AI:7 (1795-1804) Bild 137 / sid 132 (AID: v51499.b137.s132, NAD: SE/ULA/10503)\n\nOlof Hansson dog i Gammelhyttan 1811 och hustrun Maria Carlsdotter dog året därpå 1812 i Gammelhyttan.\nJärnboås (T) AI:8 (1805-1814) Bild 137 / sid 132 (AID: v51500.b137.s132, NAD: SE/ULA/10503)"
+      "history": "Olof Hansson är nu gift och finns i Gammelhyttan 1775 och 1776\nJärnboås (T) AI:5 (1775-1785) Bild 132 / sid 125 (AID: v51497.b132.s125, NAD: SE/ULA/10503)\n\nOlof Hansson finns 1776-1785 i Lindesby\nBrita Ersdotter dör 1783. Olof Hansson gifter sig med Maria Carlsdotter. De får dottern Christina Olsdotter född 1775-10-07\nJärnboås (T) AI:5 (1775-1785) Bild 191 / sid 184 (AID: v51497.b191.s184, NAD: SE/ULA/10503)\n\nOlof Hansson finns 1786-1795 i Lindesby\nJärnboås (T) AI:6 (1786-1795) Bild 2030 / sid 197 (AID: v51498a.b2030.s197, NAD: SE/ULA/10503)\n\nOlof Hansson finns 1795-1804 i Gammelhyttan\nChristina Olsdotter gifter sig med Per Persson 1798-10-04\nJärnboås (T) AI:7 (1795-1804) Bild 137 / sid 132 (AID: v51499.b137.s132, NAD: SE/ULA/10503)\n\nOlof Hansson dog i Gammelhyttan 1811 och hustrun Maria Carlsdotter dog året därpå 1812 i Gammelhyttan.\nJärnboås (T) AI:8 (1805-1814) Bild 137 / sid 132 (AID: v51500.b137.s132, NAD: SE/ULA/10503)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_i8g9wmcq": {
       "id": "p_i8g9wmcq",
@@ -11612,7 +11710,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Olof hansson bor med sina föräldrar i Lindesby. Fadern Mats Hansson född 1700 och dör i Lindesby 1763. Modern Brita Ersdotter född 1720 i Järnboås.\nJärnboås (T) AI:3 (1761-1770) Bild 82 / sid 78 (AID: v51495.b82.s78, NAD: SE/ULA/10503)\nJärnboås (T) AI:3 (1761-1770) Bild 236 / sid 232 (AID: v51495.b236.s232, NAD: SE/ULA/10503)\n\nBrita Ersdotter bor med sonen Olof Hansson i Lindesby 1771-1774\nJärnboås (T) AI:4 (1771-1774) Bild 175 / sid 169 (AID: v51496.b175.s169, NAD: SE/ULA/10503)\n\nOlof Hansson är nu gift och finns i Gammelhyttan 1775 och 1776\nJärnboås (T) AI:5 (1775-1785) Bild 132 / sid 125 (AID: v51497.b132.s125, NAD: SE/ULA/10503)\n\nOlof Hansson finns 1776-1785 i Lindesby\nBrita Ersdotter dör 1783. Olof Hansson gifter sig med Maria Carlsdotter. De får dottern Christina Olsdotter född 1775-10-07\nJärnboås (T) AI:5 (1775-1785) Bild 191 / sid 184 (AID: v51497.b191.s184, NAD: SE/ULA/10503)\n\n_______________________\n\nKan detta vara hon 1720-08-16 i födelseboken???\nJärnboås (T) C:3 (1717-1774) Bild 10 / sid 6 (AID: v53328.b10.s6, NAD: SE/ULA/10503)"
+      "history": "Olof hansson bor med sina föräldrar i Lindesby. Fadern Mats Hansson född 1700 och dör i Lindesby 1763. Modern Brita Ersdotter född 1720 i Järnboås.\nJärnboås (T) AI:3 (1761-1770) Bild 82 / sid 78 (AID: v51495.b82.s78, NAD: SE/ULA/10503)\nJärnboås (T) AI:3 (1761-1770) Bild 236 / sid 232 (AID: v51495.b236.s232, NAD: SE/ULA/10503)\n\nBrita Ersdotter bor med sonen Olof Hansson i Lindesby 1771-1774\nJärnboås (T) AI:4 (1771-1774) Bild 175 / sid 169 (AID: v51496.b175.s169, NAD: SE/ULA/10503)\n\nOlof Hansson är nu gift och finns i Gammelhyttan 1775 och 1776\nJärnboås (T) AI:5 (1775-1785) Bild 132 / sid 125 (AID: v51497.b132.s125, NAD: SE/ULA/10503)\n\nOlof Hansson finns 1776-1785 i Lindesby\nBrita Ersdotter dör 1783. Olof Hansson gifter sig med Maria Carlsdotter. De får dottern Christina Olsdotter född 1775-10-07\nJärnboås (T) AI:5 (1775-1785) Bild 191 / sid 184 (AID: v51497.b191.s184, NAD: SE/ULA/10503)\n\n_______________________\n\nKan detta vara hon 1720-08-16 i födelseboken???\nJärnboås (T) C:3 (1717-1774) Bild 10 / sid 6 (AID: v53328.b10.s6, NAD: SE/ULA/10503)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_hlklfupz": {
       "id": "p_hlklfupz",
@@ -11627,7 +11727,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Olof hansson bor med sina föräldrar i Lindesby. Fadern Mats Hansson född 1700 och dör i Lindesby 1763. Modern Brita Ersdotter född 1720 i Järnboås.\nJärnboås (T) AI:3 (1761-1770) Bild 82 / sid 78 (AID: v51495.b82.s78, NAD: SE/ULA/10503)\nJärnboås (T) AI:3 (1761-1770) Bild 236 / sid 232 (AID: v51495.b236.s232, NAD: SE/ULA/10503)"
+      "history": "Olof hansson bor med sina föräldrar i Lindesby. Fadern Mats Hansson född 1700 och dör i Lindesby 1763. Modern Brita Ersdotter född 1720 i Järnboås.\nJärnboås (T) AI:3 (1761-1770) Bild 82 / sid 78 (AID: v51495.b82.s78, NAD: SE/ULA/10503)\nJärnboås (T) AI:3 (1761-1770) Bild 236 / sid 232 (AID: v51495.b236.s232, NAD: SE/ULA/10503)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_o7kkxs2v": {
       "id": "p_o7kkxs2v",
@@ -11642,7 +11744,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Olof Andersson f. 1717 bor med hustrun Anna Pehrsdotter f. 1724 i Vassland, Järnboås\nJärnboås (T) AI:1 (1730-1745) Bild 48 / sid 42 (AID: v51493.b48.s42, NAD: SE/ULA/10503)\nJärnboås (T) AI:1 (1730-1745) Bild 123 / sid 117 (AID: v51493.b123.s117, NAD: SE/ULA/10503)\nJärnboås (T) AI:1 (1730-1745) Bild 155 / sid 149 (AID: v51493.b155.s149, NAD: SE/ULA/10503)\nJärnboås (T) AI:1 (1730-1745) Bild 211 / sid 205 (AID: v51493.b211.s205, NAD: SE/ULA/10503)\n\nDe får sonen Per Olsson 1748\nJärnboås (T) AI:2 (1747-1760) Bild 30 / sid 25 (AID: v51494.b30.s25, NAD: SE/ULA/10503)\nJärnboås (T) AI:2 (1747-1760) Bild 95 / sid 90 (AID: v51494.b95.s90, NAD: SE/ULA/10503)\nJärnboås (T) AI:2 (1747-1760) Bild 177 / sid 171 (AID: v51494.b177.s171, NAD: SE/ULA/10503)\n\nOlof Andersson dör i Vassland 1784\nJärnboås (T) AI:5 (1775-1785) Bild 56 / sid 49 (AID: v51497.b56.s49, NAD: SE/ULA/10503)\n______________________\n\n1748-10-08 i födelseboken\nJärnboås (T) C:3 (1717-1774) Bild 91 (AID: v53328.b91, NAD: SE/ULA/10503)\n_________________________\n\nPehr Olsson och hustru Anna Pehrsdotter\n\nPehr Olsson flyttar in hos Pehr Pehrsson i Vassland och gifter sig med dottern Anna Pehrsdotter. När Pehr Pehrsson dör tar Pehr Olsson över gården tillsammans med hustrun Anna Pehrsdotter.\nJärnboås (T) AI:5 (1775-1785) Bild 51 / sid 44 (AID: v51497.b51.s44, NAD: SE/ULA/10503)\n\nJärnboås (T) AI:6 (1786-1795) Bild 510 / sid 45 (AID: v51498a.b510.s45, NAD: SE/ULA/10503)\n\nJag tolkar prästens anteckningar som att svärmodern är sängliggande.\nJärnboås (T) AI:7 (1795-1804) Bild 48 / sid 43 (AID: v51499.b48.s43, NAD: SE/ULA/10503)\n\nJärnboås (T) AI:8 (1805-1814) Bild 49 / sid 44 (AID: v51500.b49.s44, NAD: SE/ULA/10503)\n\nSvärmodern dör 1816 och hustrun Anna Pehrsdotter dör 1817 och Pehr Olsson dör 1819\nJärnboås (T) AI:9 (1815-1824) Bild 49 / sid 44 (AID: v51501.b49.s44, NAD: SE/ULA/10503)\n\nDödboken Pehr Olsson:\nJärnboås (T) F:3 (1806-1831) Bild 790 (AID: v53340a.b790, NAD: SE/ULA/10503)\n\nDödboken Anna Pehrsdotter:\nJärnboås (T) F:3 (1806-1831) Bild 710 (AID: v53340a.b710, NAD: SE/ULA/10503)\n\nDödboken Catharina Ersdotter\nJärnboås (T) F:3 (1806-1831) Bild 600 (AID: v53340a.b600, NAD: SE/ULA/10503)"
+      "history": "Olof Andersson f. 1717 bor med hustrun Anna Pehrsdotter f. 1724 i Vassland, Järnboås\nJärnboås (T) AI:1 (1730-1745) Bild 48 / sid 42 (AID: v51493.b48.s42, NAD: SE/ULA/10503)\nJärnboås (T) AI:1 (1730-1745) Bild 123 / sid 117 (AID: v51493.b123.s117, NAD: SE/ULA/10503)\nJärnboås (T) AI:1 (1730-1745) Bild 155 / sid 149 (AID: v51493.b155.s149, NAD: SE/ULA/10503)\nJärnboås (T) AI:1 (1730-1745) Bild 211 / sid 205 (AID: v51493.b211.s205, NAD: SE/ULA/10503)\n\nDe får sonen Per Olsson 1748\nJärnboås (T) AI:2 (1747-1760) Bild 30 / sid 25 (AID: v51494.b30.s25, NAD: SE/ULA/10503)\nJärnboås (T) AI:2 (1747-1760) Bild 95 / sid 90 (AID: v51494.b95.s90, NAD: SE/ULA/10503)\nJärnboås (T) AI:2 (1747-1760) Bild 177 / sid 171 (AID: v51494.b177.s171, NAD: SE/ULA/10503)\n\nOlof Andersson dör i Vassland 1784\nJärnboås (T) AI:5 (1775-1785) Bild 56 / sid 49 (AID: v51497.b56.s49, NAD: SE/ULA/10503)\n______________________\n\n1748-10-08 i födelseboken\nJärnboås (T) C:3 (1717-1774) Bild 91 (AID: v53328.b91, NAD: SE/ULA/10503)\n_________________________\n\nPehr Olsson och hustru Anna Pehrsdotter\n\nPehr Olsson flyttar in hos Pehr Pehrsson i Vassland och gifter sig med dottern Anna Pehrsdotter. När Pehr Pehrsson dör tar Pehr Olsson över gården tillsammans med hustrun Anna Pehrsdotter.\nJärnboås (T) AI:5 (1775-1785) Bild 51 / sid 44 (AID: v51497.b51.s44, NAD: SE/ULA/10503)\n\nJärnboås (T) AI:6 (1786-1795) Bild 510 / sid 45 (AID: v51498a.b510.s45, NAD: SE/ULA/10503)\n\nJag tolkar prästens anteckningar som att svärmodern är sängliggande.\nJärnboås (T) AI:7 (1795-1804) Bild 48 / sid 43 (AID: v51499.b48.s43, NAD: SE/ULA/10503)\n\nJärnboås (T) AI:8 (1805-1814) Bild 49 / sid 44 (AID: v51500.b49.s44, NAD: SE/ULA/10503)\n\nSvärmodern dör 1816 och hustrun Anna Pehrsdotter dör 1817 och Pehr Olsson dör 1819\nJärnboås (T) AI:9 (1815-1824) Bild 49 / sid 44 (AID: v51501.b49.s44, NAD: SE/ULA/10503)\n\nDödboken Pehr Olsson:\nJärnboås (T) F:3 (1806-1831) Bild 790 (AID: v53340a.b790, NAD: SE/ULA/10503)\n\nDödboken Anna Pehrsdotter:\nJärnboås (T) F:3 (1806-1831) Bild 710 (AID: v53340a.b710, NAD: SE/ULA/10503)\n\nDödboken Catharina Ersdotter\nJärnboås (T) F:3 (1806-1831) Bild 600 (AID: v53340a.b600, NAD: SE/ULA/10503)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_sbk27pi6": {
       "id": "p_sbk27pi6",
@@ -11657,7 +11761,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Pehr Olsson och hustru Anna Pehrsdotter\n\nPehr Olsson flyttar in hos Pehr Pehrsson i Vassland och gifter sig med dottern Anna Pehrsdotter. När Pehr Pehrsson dör tar Pehr Olsson över gården tillsammans med hustrun Anna Pehrsdotter.\nJärnboås (T) AI:5 (1775-1785) Bild 51 / sid 44 (AID: v51497.b51.s44, NAD: SE/ULA/10503)\n\nJärnboås (T) AI:6 (1786-1795) Bild 510 / sid 45 (AID: v51498a.b510.s45, NAD: SE/ULA/10503)\n\nJag tolkar prästens anteckningar som att svärmodern är sängliggande.\nJärnboås (T) AI:7 (1795-1804) Bild 48 / sid 43 (AID: v51499.b48.s43, NAD: SE/ULA/10503)\n\nJärnboås (T) AI:8 (1805-1814) Bild 49 / sid 44 (AID: v51500.b49.s44, NAD: SE/ULA/10503)\n\nSvärmodern dör 1816 och hustrun Anna Pehrsdotter dör 1817 och Pehr Olsson dör 1819\nJärnboås (T) AI:9 (1815-1824) Bild 49 / sid 44 (AID: v51501.b49.s44, NAD: SE/ULA/10503)\n\nDödboken Pehr Olsson:\nJärnboås (T) F:3 (1806-1831) Bild 790 (AID: v53340a.b790, NAD: SE/ULA/10503)\n\nDödboken Anna Pehrsdotter:\nJärnboås (T) F:3 (1806-1831) Bild 710 (AID: v53340a.b710, NAD: SE/ULA/10503)\n\nDödboken Catharina Ersdotter\nJärnboås (T) F:3 (1806-1831) Bild 600 (AID: v53340a.b600, NAD: SE/ULA/10503)"
+      "history": "Pehr Olsson och hustru Anna Pehrsdotter\n\nPehr Olsson flyttar in hos Pehr Pehrsson i Vassland och gifter sig med dottern Anna Pehrsdotter. När Pehr Pehrsson dör tar Pehr Olsson över gården tillsammans med hustrun Anna Pehrsdotter.\nJärnboås (T) AI:5 (1775-1785) Bild 51 / sid 44 (AID: v51497.b51.s44, NAD: SE/ULA/10503)\n\nJärnboås (T) AI:6 (1786-1795) Bild 510 / sid 45 (AID: v51498a.b510.s45, NAD: SE/ULA/10503)\n\nJag tolkar prästens anteckningar som att svärmodern är sängliggande.\nJärnboås (T) AI:7 (1795-1804) Bild 48 / sid 43 (AID: v51499.b48.s43, NAD: SE/ULA/10503)\n\nJärnboås (T) AI:8 (1805-1814) Bild 49 / sid 44 (AID: v51500.b49.s44, NAD: SE/ULA/10503)\n\nSvärmodern dör 1816 och hustrun Anna Pehrsdotter dör 1817 och Pehr Olsson dör 1819\nJärnboås (T) AI:9 (1815-1824) Bild 49 / sid 44 (AID: v51501.b49.s44, NAD: SE/ULA/10503)\n\nDödboken Pehr Olsson:\nJärnboås (T) F:3 (1806-1831) Bild 790 (AID: v53340a.b790, NAD: SE/ULA/10503)\n\nDödboken Anna Pehrsdotter:\nJärnboås (T) F:3 (1806-1831) Bild 710 (AID: v53340a.b710, NAD: SE/ULA/10503)\n\nDödboken Catharina Ersdotter\nJärnboås (T) F:3 (1806-1831) Bild 600 (AID: v53340a.b600, NAD: SE/ULA/10503)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_pa3nm4hw": {
       "id": "p_pa3nm4hw",
@@ -11672,7 +11778,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Järnboås (T) AI:5 (1775-1785) Bild 51 / sid 44 (AID: v51497.b51.s44, NAD: SE/ULA/10503)\n\nDet står att han dog 31 april, men i dagens almanacka har april bara 30 dagar.\n\n________________________\n\nPehr Olsson och hustru Anna Pehrsdotter\n\nPehr Olsson flyttar in hos Pehr Pehrsson i Vassland och gifter sig med dottern Anna Pehrsdotter. När Pehr Pehrsson dör tar Pehr Olsson över gården tillsammans med hustrun Anna Pehrsdotter.\nJärnboås (T) AI:5 (1775-1785) Bild 51 / sid 44 (AID: v51497.b51.s44, NAD: SE/ULA/10503)\n\nJärnboås (T) AI:6 (1786-1795) Bild 510 / sid 45 (AID: v51498a.b510.s45, NAD: SE/ULA/10503)\n\nJag tolkar prästens anteckningar som att svärmodern är sängliggande.\nJärnboås (T) AI:7 (1795-1804) Bild 48 / sid 43 (AID: v51499.b48.s43, NAD: SE/ULA/10503)\n\nJärnboås (T) AI:8 (1805-1814) Bild 49 / sid 44 (AID: v51500.b49.s44, NAD: SE/ULA/10503)\n\nSvärmodern dör 1816 och hustrun Anna Pehrsdotter dör 1817 och Pehr Olsson dör 1819\nJärnboås (T) AI:9 (1815-1824) Bild 49 / sid 44 (AID: v51501.b49.s44, NAD: SE/ULA/10503)\n\nDödboken Pehr Olsson:\nJärnboås (T) F:3 (1806-1831) Bild 790 (AID: v53340a.b790, NAD: SE/ULA/10503)\n\nDödboken Anna Pehrsdotter:\nJärnboås (T) F:3 (1806-1831) Bild 710 (AID: v53340a.b710, NAD: SE/ULA/10503)\n\nDödboken Catharina Ersdotter\nJärnboås (T) F:3 (1806-1831) Bild 600 (AID: v53340a.b600, NAD: SE/ULA/10503)"
+      "history": "Järnboås (T) AI:5 (1775-1785) Bild 51 / sid 44 (AID: v51497.b51.s44, NAD: SE/ULA/10503)\n\nDet står att han dog 31 april, men i dagens almanacka har april bara 30 dagar.\n\n________________________\n\nPehr Olsson och hustru Anna Pehrsdotter\n\nPehr Olsson flyttar in hos Pehr Pehrsson i Vassland och gifter sig med dottern Anna Pehrsdotter. När Pehr Pehrsson dör tar Pehr Olsson över gården tillsammans med hustrun Anna Pehrsdotter.\nJärnboås (T) AI:5 (1775-1785) Bild 51 / sid 44 (AID: v51497.b51.s44, NAD: SE/ULA/10503)\n\nJärnboås (T) AI:6 (1786-1795) Bild 510 / sid 45 (AID: v51498a.b510.s45, NAD: SE/ULA/10503)\n\nJag tolkar prästens anteckningar som att svärmodern är sängliggande.\nJärnboås (T) AI:7 (1795-1804) Bild 48 / sid 43 (AID: v51499.b48.s43, NAD: SE/ULA/10503)\n\nJärnboås (T) AI:8 (1805-1814) Bild 49 / sid 44 (AID: v51500.b49.s44, NAD: SE/ULA/10503)\n\nSvärmodern dör 1816 och hustrun Anna Pehrsdotter dör 1817 och Pehr Olsson dör 1819\nJärnboås (T) AI:9 (1815-1824) Bild 49 / sid 44 (AID: v51501.b49.s44, NAD: SE/ULA/10503)\n\nDödboken Pehr Olsson:\nJärnboås (T) F:3 (1806-1831) Bild 790 (AID: v53340a.b790, NAD: SE/ULA/10503)\n\nDödboken Anna Pehrsdotter:\nJärnboås (T) F:3 (1806-1831) Bild 710 (AID: v53340a.b710, NAD: SE/ULA/10503)\n\nDödboken Catharina Ersdotter\nJärnboås (T) F:3 (1806-1831) Bild 600 (AID: v53340a.b600, NAD: SE/ULA/10503)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_ho21gihu": {
       "id": "p_ho21gihu",
@@ -11687,7 +11795,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Pehr Olsson och hustru Anna Pehrsdotter\n\nPehr Olsson flyttar in hos Pehr Pehrsson i Vassland och gifter sig med dottern Anna Pehrsdotter. När Pehr Pehrsson dör tar Pehr Olsson över gården tillsammans med hustrun Anna Pehrsdotter.\nJärnboås (T) AI:5 (1775-1785) Bild 51 / sid 44 (AID: v51497.b51.s44, NAD: SE/ULA/10503)\n\nJärnboås (T) AI:6 (1786-1795) Bild 510 / sid 45 (AID: v51498a.b510.s45, NAD: SE/ULA/10503)\n\nJag tolkar prästens anteckningar som att svärmodern är sängliggande.\nJärnboås (T) AI:7 (1795-1804) Bild 48 / sid 43 (AID: v51499.b48.s43, NAD: SE/ULA/10503)\n\nJärnboås (T) AI:8 (1805-1814) Bild 49 / sid 44 (AID: v51500.b49.s44, NAD: SE/ULA/10503)\n\nSvärmodern dör 1816 och hustrun Anna Pehrsdotter dör 1817 och Pehr Olsson dör 1819\nJärnboås (T) AI:9 (1815-1824) Bild 49 / sid 44 (AID: v51501.b49.s44, NAD: SE/ULA/10503)\n\nDödboken Pehr Olsson:\nJärnboås (T) F:3 (1806-1831) Bild 790 (AID: v53340a.b790, NAD: SE/ULA/10503)\n\nDödboken Anna Pehrsdotter:\nJärnboås (T) F:3 (1806-1831) Bild 710 (AID: v53340a.b710, NAD: SE/ULA/10503)\n\nDödboken Catharina Ersdotter\nJärnboås (T) F:3 (1806-1831) Bild 600 (AID: v53340a.b600, NAD: SE/ULA/10503)"
+      "history": "Pehr Olsson och hustru Anna Pehrsdotter\n\nPehr Olsson flyttar in hos Pehr Pehrsson i Vassland och gifter sig med dottern Anna Pehrsdotter. När Pehr Pehrsson dör tar Pehr Olsson över gården tillsammans med hustrun Anna Pehrsdotter.\nJärnboås (T) AI:5 (1775-1785) Bild 51 / sid 44 (AID: v51497.b51.s44, NAD: SE/ULA/10503)\n\nJärnboås (T) AI:6 (1786-1795) Bild 510 / sid 45 (AID: v51498a.b510.s45, NAD: SE/ULA/10503)\n\nJag tolkar prästens anteckningar som att svärmodern är sängliggande.\nJärnboås (T) AI:7 (1795-1804) Bild 48 / sid 43 (AID: v51499.b48.s43, NAD: SE/ULA/10503)\n\nJärnboås (T) AI:8 (1805-1814) Bild 49 / sid 44 (AID: v51500.b49.s44, NAD: SE/ULA/10503)\n\nSvärmodern dör 1816 och hustrun Anna Pehrsdotter dör 1817 och Pehr Olsson dör 1819\nJärnboås (T) AI:9 (1815-1824) Bild 49 / sid 44 (AID: v51501.b49.s44, NAD: SE/ULA/10503)\n\nDödboken Pehr Olsson:\nJärnboås (T) F:3 (1806-1831) Bild 790 (AID: v53340a.b790, NAD: SE/ULA/10503)\n\nDödboken Anna Pehrsdotter:\nJärnboås (T) F:3 (1806-1831) Bild 710 (AID: v53340a.b710, NAD: SE/ULA/10503)\n\nDödboken Catharina Ersdotter\nJärnboås (T) F:3 (1806-1831) Bild 600 (AID: v53340a.b600, NAD: SE/ULA/10503)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_ke5qnjne": {
       "id": "p_ke5qnjne",
@@ -11702,7 +11812,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Olof Andersson f. 1717 bor med hustrun Anna Pehrsdotter f. 1724 i Vassland, Järnboås\nJärnboås (T) AI:1 (1730-1745) Bild 48 / sid 42 (AID: v51493.b48.s42, NAD: SE/ULA/10503)\nJärnboås (T) AI:1 (1730-1745) Bild 123 / sid 117 (AID: v51493.b123.s117, NAD: SE/ULA/10503)\nJärnboås (T) AI:1 (1730-1745) Bild 155 / sid 149 (AID: v51493.b155.s149, NAD: SE/ULA/10503)\nJärnboås (T) AI:1 (1730-1745) Bild 211 / sid 205 (AID: v51493.b211.s205, NAD: SE/ULA/10503)\n\nDe får sonen Per Olsson 1748\nJärnboås (T) AI:2 (1747-1760) Bild 30 / sid 25 (AID: v51494.b30.s25, NAD: SE/ULA/10503)\nJärnboås (T) AI:2 (1747-1760) Bild 95 / sid 90 (AID: v51494.b95.s90, NAD: SE/ULA/10503)\nJärnboås (T) AI:2 (1747-1760) Bild 177 / sid 171 (AID: v51494.b177.s171, NAD: SE/ULA/10503)\n\nOlof Andersson dör i Vassland 1784\nJärnboås (T) AI:5 (1775-1785) Bild 56 / sid 49 (AID: v51497.b56.s49, NAD: SE/ULA/10503)"
+      "history": "Olof Andersson f. 1717 bor med hustrun Anna Pehrsdotter f. 1724 i Vassland, Järnboås\nJärnboås (T) AI:1 (1730-1745) Bild 48 / sid 42 (AID: v51493.b48.s42, NAD: SE/ULA/10503)\nJärnboås (T) AI:1 (1730-1745) Bild 123 / sid 117 (AID: v51493.b123.s117, NAD: SE/ULA/10503)\nJärnboås (T) AI:1 (1730-1745) Bild 155 / sid 149 (AID: v51493.b155.s149, NAD: SE/ULA/10503)\nJärnboås (T) AI:1 (1730-1745) Bild 211 / sid 205 (AID: v51493.b211.s205, NAD: SE/ULA/10503)\n\nDe får sonen Per Olsson 1748\nJärnboås (T) AI:2 (1747-1760) Bild 30 / sid 25 (AID: v51494.b30.s25, NAD: SE/ULA/10503)\nJärnboås (T) AI:2 (1747-1760) Bild 95 / sid 90 (AID: v51494.b95.s90, NAD: SE/ULA/10503)\nJärnboås (T) AI:2 (1747-1760) Bild 177 / sid 171 (AID: v51494.b177.s171, NAD: SE/ULA/10503)\n\nOlof Andersson dör i Vassland 1784\nJärnboås (T) AI:5 (1775-1785) Bild 56 / sid 49 (AID: v51497.b56.s49, NAD: SE/ULA/10503)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_a8mjka2q": {
       "id": "p_a8mjka2q",
@@ -11717,7 +11829,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Järnboås (T) AI:5 (1775-1785) Bild 56 / sid 49 (AID: v51497.b56.s49, NAD: SE/ULA/10503)"
+      "history": "Järnboås (T) AI:5 (1775-1785) Bild 56 / sid 49 (AID: v51497.b56.s49, NAD: SE/ULA/10503)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_8grq6qa6": {
       "id": "p_8grq6qa6",
@@ -11732,7 +11846,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Järnboås (T) AI:8 (1805-1814) Bild 59 / sid 54 (AID: v51500.b59.s54, NAD: SE/ULA/10503)"
+      "history": "Järnboås (T) AI:8 (1805-1814) Bild 59 / sid 54 (AID: v51500.b59.s54, NAD: SE/ULA/10503)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_q7z8zxj5": {
       "id": "p_q7z8zxj5",
@@ -11747,7 +11863,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Järnboås (T) AI:8 (1805-1814) Bild 59 / sid 54 (AID: v51500.b59.s54, NAD: SE/ULA/10503)"
+      "history": "Järnboås (T) AI:8 (1805-1814) Bild 59 / sid 54 (AID: v51500.b59.s54, NAD: SE/ULA/10503)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_w6jqiehx": {
       "id": "p_w6jqiehx",
@@ -11762,7 +11880,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Nils Andersson 1748-03-26 Hjulsjö hustru Catharina Pehrsdotter 1760 Gåsborn. Gift 1786.\nHjulsjö (T) AI:4 (1796-1804) Bild 89 / sid 105 (AID: v51420.b89.s105, NAD: SE/ULA/10404)\n\nHjulsjö (T) AI:5 (1805-1815) Bild 89 / sid 82 (AID: v51421.b89.s82, NAD: SE/ULA/10404)\n\nHjulsjö (T) AI:6 (1816-1825) Bild 550 / sid 48 (AID: v51422a.b550.s48, NAD: SE/ULA/10404)\n\nHjulsjö (T) AI:6 (1816-1825) Bild 550 / sid 48 (AID: v51422a.b550.s48, NAD: SE/ULA/10404)\n\nNils Nilsson med hustru Anna Stina Olsdotter\nHjulsjö (T) AI:7 (1825-1833) Bild 530 / sid 46 (AID: v51423a.b530.s46, NAD: SE/ULA/10404)\n\nDottern Erika tillkommit 1834-05-19\nHjulsjö (T) AI:8 (1833-1841) Bild 73 / sid 64 (AID: v51424.b73.s64, NAD: SE/ULA/10404)\n\nHjulsjö (T) AI:9 (1842-1847) Bild 93 / sid 87 (AID: v51425.b93.s87, NAD: SE/ULA/10404)\n\nDottern Erika flyttar till Järnboås 1852\nHjulsjö (T) AI:10 (1848-1852) Bild 88 / sid 74 (AID: v51426.b88.s74, NAD: SE/ULA/10404)\n\nHjulsjö, Grängshytteby. Hustrun dör 1851. Nils gifter sig 1855 med Christina Elisabet Hansdotter född 1826-01-18.\nHjulsjö (T) AI:11a (1853-1861) Bild 164 / sid 153 (AID: v51427.b164.s153, NAD: SE/ULA/10404)\n\nNils Nilsson flyttar från Hjulsjö till Skomakartorp i Nora Bergsförsamling 1857. Han har gift sig 1855 med Christina Elisabet Hansdotter född 1826-01-18.\nNora bergsförsamling (T) AI:15b (1851-1861) Bild 220 / sid 205 (AID: v52009.b220.s205, NAD: SE/ULA/11098)\n\nHjulsjö (T) AI:11a (1853-1861) Bild 160 / sid 149 (AID: v51427.b160.s149, NAD: SE/ULA/10404)\n\nNils Nilsson dör i Skomakartorp i Nora Bergsförsamling 1866-01-11\nNora bergsförsamling (T) AI:16b (1861-1871) Bild 282 / sid 275 (AID: v52015.b282.s275, NAD: SE/ULA/11098)"
+      "history": "Nils Andersson 1748-03-26 Hjulsjö hustru Catharina Pehrsdotter 1760 Gåsborn. Gift 1786.\nHjulsjö (T) AI:4 (1796-1804) Bild 89 / sid 105 (AID: v51420.b89.s105, NAD: SE/ULA/10404)\n\nHjulsjö (T) AI:5 (1805-1815) Bild 89 / sid 82 (AID: v51421.b89.s82, NAD: SE/ULA/10404)\n\nHjulsjö (T) AI:6 (1816-1825) Bild 550 / sid 48 (AID: v51422a.b550.s48, NAD: SE/ULA/10404)\n\nHjulsjö (T) AI:6 (1816-1825) Bild 550 / sid 48 (AID: v51422a.b550.s48, NAD: SE/ULA/10404)\n\nNils Nilsson med hustru Anna Stina Olsdotter\nHjulsjö (T) AI:7 (1825-1833) Bild 530 / sid 46 (AID: v51423a.b530.s46, NAD: SE/ULA/10404)\n\nDottern Erika tillkommit 1834-05-19\nHjulsjö (T) AI:8 (1833-1841) Bild 73 / sid 64 (AID: v51424.b73.s64, NAD: SE/ULA/10404)\n\nHjulsjö (T) AI:9 (1842-1847) Bild 93 / sid 87 (AID: v51425.b93.s87, NAD: SE/ULA/10404)\n\nDottern Erika flyttar till Järnboås 1852\nHjulsjö (T) AI:10 (1848-1852) Bild 88 / sid 74 (AID: v51426.b88.s74, NAD: SE/ULA/10404)\n\nHjulsjö, Grängshytteby. Hustrun dör 1851. Nils gifter sig 1855 med Christina Elisabet Hansdotter född 1826-01-18.\nHjulsjö (T) AI:11a (1853-1861) Bild 164 / sid 153 (AID: v51427.b164.s153, NAD: SE/ULA/10404)\n\nNils Nilsson flyttar från Hjulsjö till Skomakartorp i Nora Bergsförsamling 1857. Han har gift sig 1855 med Christina Elisabet Hansdotter född 1826-01-18.\nNora bergsförsamling (T) AI:15b (1851-1861) Bild 220 / sid 205 (AID: v52009.b220.s205, NAD: SE/ULA/11098)\n\nHjulsjö (T) AI:11a (1853-1861) Bild 160 / sid 149 (AID: v51427.b160.s149, NAD: SE/ULA/10404)\n\nNils Nilsson dör i Skomakartorp i Nora Bergsförsamling 1866-01-11\nNora bergsförsamling (T) AI:16b (1861-1871) Bild 282 / sid 275 (AID: v52015.b282.s275, NAD: SE/ULA/11098)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_c4awewqm": {
       "id": "p_c4awewqm",
@@ -11777,7 +11897,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Hjulsjö (T) AI:8 (1833-1841) Bild 73 / sid 64 (AID: v51424.b73.s64, NAD: SE/ULA/10404)"
+      "history": "Hjulsjö (T) AI:8 (1833-1841) Bild 73 / sid 64 (AID: v51424.b73.s64, NAD: SE/ULA/10404)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_lks00jb0": {
       "id": "p_lks00jb0",
@@ -11792,7 +11914,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Nils Andersson 1748-03-26 Hjulsjö hustru Catharina Pehrsdotter 1760 Gåsborn. Gift 1786.\nHjulsjö (T) AI:4 (1796-1804) Bild 89 / sid 105 (AID: v51420.b89.s105, NAD: SE/ULA/10404)\n\nHjulsjö (T) AI:5 (1805-1815) Bild 89 / sid 82 (AID: v51421.b89.s82, NAD: SE/ULA/10404)\n\nHjulsjö (T) AI:6 (1816-1825) Bild 550 / sid 48 (AID: v51422a.b550.s48, NAD: SE/ULA/10404)\n\nHjulsjö (T) AI:6 (1816-1825) Bild 550 / sid 48 (AID: v51422a.b550.s48, NAD: SE/ULA/10404)"
+      "history": "Nils Andersson 1748-03-26 Hjulsjö hustru Catharina Pehrsdotter 1760 Gåsborn. Gift 1786.\nHjulsjö (T) AI:4 (1796-1804) Bild 89 / sid 105 (AID: v51420.b89.s105, NAD: SE/ULA/10404)\n\nHjulsjö (T) AI:5 (1805-1815) Bild 89 / sid 82 (AID: v51421.b89.s82, NAD: SE/ULA/10404)\n\nHjulsjö (T) AI:6 (1816-1825) Bild 550 / sid 48 (AID: v51422a.b550.s48, NAD: SE/ULA/10404)\n\nHjulsjö (T) AI:6 (1816-1825) Bild 550 / sid 48 (AID: v51422a.b550.s48, NAD: SE/ULA/10404)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_u4asejvk": {
       "id": "p_u4asejvk",
@@ -11807,7 +11931,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": "Födelseboken:\nGåsborn (S) C:2 (1733-1775) Bild 208 / sid 407 (AID: v6656.b208.s407, NAD: SE/VA/13174)"
+      "history": "Födelseboken:\nGåsborn (S) C:2 (1733-1775) Bild 208 / sid 407 (AID: v6656.b208.s407, NAD: SE/VA/13174)",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_mzudk6vt": {
       "id": "p_mzudk6vt",
@@ -11822,7 +11948,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "",
+      "photos": [],
+      "photoCaptions": {}
     },
     "p_2yafssv9": {
       "id": "p_2yafssv9",
@@ -11837,7 +11965,9 @@
       "link": "",
       "photo": "",
       "photoId": "",
-      "history": ""
+      "history": "",
+      "photos": [],
+      "photoCaptions": {}
     }
   },
   "parentsOf": {
@@ -11885,7 +12015,10 @@
       "p_r6gu9qm8a",
       "p_apnevfd1e"
     ],
-    "p_bghaex86f": [],
+    "p_bghaex86f": [
+      null,
+      null
+    ],
     "p_bhz72tf5h": [
       "p_k9dqg17ug",
       "p_9smqgh317"
@@ -12043,7 +12176,8 @@
       "p_ccnmbpk25"
     ],
     "p_fsyurpw6g": [
-      "p_sh6rs3ypi"
+      "p_sh6rs3ypi",
+      null
     ],
     "p_4cjwtla35": [
       "p_n4z6lfc2f",
@@ -12086,7 +12220,8 @@
       "p_epbrpkbpc"
     ],
     "p_j0llm0bss": [
-      "p_mcny211om"
+      "p_mcny211om",
+      null
     ],
     "p_mcny211om": [
       "p_njj1v6yja",
@@ -12105,13 +12240,17 @@
       "p_11s7733na"
     ],
     "p_4yyrm3723": [
-      "p_bbclq6f9g"
+      "p_bbclq6f9g",
+      null
     ],
     "p_myxn3zrx2": [
       "p_k9dqg17ug",
       "p_9smqgh317"
     ],
-    "p_5dx7ywrb5": [],
+    "p_5dx7ywrb5": [
+      null,
+      null
+    ],
     "p_e0q1n5ln": [
       "p_ysll51iu",
       "p_anref8x"
@@ -12165,7 +12304,8 @@
       "p_zxsn4f7g"
     ],
     "p_8jgv67fq": [
-      "p_8ep79tnj"
+      "p_8ep79tnj",
+      null
     ],
     "p_nqxr123d8": [
       "p_0j5pylfd",
@@ -12263,7 +12403,10 @@
       "p_en97ykqn",
       "p_mcny211om"
     ],
-    "p_ceoa5gnk": [],
+    "p_ceoa5gnk": [
+      null,
+      null
+    ],
     "p_o7zbzytr5": [
       "p_k7ppxbyh9",
       "p_30hacm6sw"
@@ -12328,7 +12471,10 @@
       "p_k9dqg17ug",
       "p_9smqgh317"
     ],
-    "p_o5ifmsge": [],
+    "p_o5ifmsge": [
+      null,
+      null
+    ],
     "p_aq1u3undm": [
       "p_k9dqg17ug",
       "p_9smqgh317"
@@ -12358,20 +12504,24 @@
       "p_faax8lven"
     ],
     "p_164qnsv4": [
-      "p_k7ppxbyh9"
+      "p_k7ppxbyh9",
+      null
     ],
     "p_25o4lrxe6": [
-      "p_30hacm6sw"
+      "p_30hacm6sw",
+      null
     ],
     "p_vt288hxg": [
       "p_k7ppxbyh9",
       "p_30hacm6sw"
     ],
     "p_njsfz349": [
-      "p_k7ppxbyh9"
+      "p_k7ppxbyh9",
+      null
     ],
     "p_gii1zydfe": [
-      "p_30hacm6sw"
+      "p_30hacm6sw",
+      null
     ],
     "p_9yepedwn4": [
       "p_k7ppxbyh9",
@@ -12386,13 +12536,16 @@
       "p_osmy2svx"
     ],
     "p_vv7xbfpg": [
-      "p_1c6u8six"
+      "p_1c6u8six",
+      null
     ],
     "p_6f3g4eai": [
-      "p_vv7xbfpg"
+      "p_vv7xbfpg",
+      null
     ],
     "p_x33kgh6m": [
-      "p_6f3g4eai"
+      "p_6f3g4eai",
+      null
     ],
     "p_osmy2svx": [
       "p_70091dn1",
@@ -12403,7 +12556,8 @@
       "p_wkprbgdd"
     ],
     "p_70091dn1": [
-      "p_bdbuxxo2"
+      "p_bdbuxxo2",
+      null
     ],
     "p_bdbuxxo2": [
       "p_9j1bspog",
@@ -12414,7 +12568,8 @@
       "p_ekdro25b"
     ],
     "p_ekdro25b": [
-      "p_8xubundc"
+      "p_8xubundc",
+      null
     ],
     "p_lw3ga5vu": [
       "p_70091dn1",
@@ -12453,7 +12608,8 @@
       "p_b5sxeisz"
     ],
     "p_ntqz8x0y": [
-      "p_yskd71as"
+      "p_yskd71as",
+      null
     ],
     "p_yskd71as": [
       "p_icsn6de9",
@@ -12472,10 +12628,12 @@
       "p_amf43mbx"
     ],
     "p_amf43mbx": [
-      "p_c819fdbq"
+      "p_c819fdbq",
+      null
     ],
     "p_ipfs2v2j": [
-      "p_cfbwgo8o"
+      "p_cfbwgo8o",
+      null
     ],
     "p_7jbjsqcs": [
       "p_al00po29",
@@ -12546,21 +12704,24 @@
       "p_lenuwl55"
     ],
     "p_wby05zs2": [
-      "p_s2ay7l75"
+      "p_s2ay7l75",
+      null
     ],
     "p_ljrb1cdp": [
       "p_qxysgd2y",
       "p_f5fokvi0"
     ],
     "p_f5fokvi0": [
-      "p_22h3sgzl"
+      "p_22h3sgzl",
+      null
     ],
     "p_22h3sgzl": [
       "p_rezy1r51",
       "p_k3icp23e"
     ],
     "p_rezy1r51": [
-      "p_39mc2h2z"
+      "p_39mc2h2z",
+      null
     ],
     "p_qxysgd2y": [
       "p_cxczwvzu",
@@ -12579,14 +12740,16 @@
       "p_dccbw7kk"
     ],
     "p_dccbw7kk": [
-      "p_myly60f3"
+      "p_myly60f3",
+      null
     ],
     "p_1su3kdwv": [
       "p_ftaux8kd",
       "p_sh5630es"
     ],
     "p_sh5630es": [
-      "p_hiqm7ate"
+      "p_hiqm7ate",
+      null
     ],
     "p_cxczwvzu": [
       "p_fs66mghd",
@@ -12605,7 +12768,8 @@
       "p_p8haqbrs"
     ],
     "p_p8haqbrs": [
-      "p_xsmerazv"
+      "p_xsmerazv",
+      null
     ],
     "p_756duqri": [
       "p_p9giaf1e",
@@ -12651,13 +12815,17 @@
       "p_etpnnab1",
       "p_ps90vfas"
     ],
-    "p_erinlj7u": [],
+    "p_erinlj7u": [
+      null,
+      null
+    ],
     "p_xz9ds1hs": [
       "p_erinlj7u",
       "p_8e1ep5he"
     ],
     "p_fpy0unhs": [
-      "p_xz9ds1hs"
+      "p_xz9ds1hs",
+      null
     ],
     "p_vtuv90x3": [
       "p_g1yxl52e",
@@ -12712,7 +12880,8 @@
       "p_g8hhg2qy"
     ],
     "p_bn69tmdt": [
-      "p_n1vjigrn"
+      "p_n1vjigrn",
+      null
     ],
     "p_n1vjigrn": [
       "p_fmtb4rms",
@@ -12746,7 +12915,10 @@
       "p_eaemwf9f",
       "p_50jpwsvr"
     ],
-    "p_eaemwf9f": [],
+    "p_eaemwf9f": [
+      null,
+      null
+    ],
     "p_b0vwac00": [
       "p_eaemwf9f",
       "p_50jpwsvr"
@@ -12760,7 +12932,8 @@
       "p_50jpwsvr"
     ],
     "p_qchjhtsa": [
-      "p_mcny211om"
+      "p_mcny211om",
+      null
     ],
     "p_cjure2a4": [
       "p_j0llm0bss",
@@ -12807,7 +12980,8 @@
       "p_lw3ga5vu"
     ],
     "p_85tts4cv": [
-      "p_qw3tl1fs"
+      "p_qw3tl1fs",
+      null
     ],
     "p_jrbvidb3g": [
       "p_meqkciax",
@@ -12830,7 +13004,8 @@
       "p_yvyoxfms"
     ],
     "p_c7ffpjpt": [
-      "p_hbs2s8es"
+      "p_hbs2s8es",
+      null
     ],
     "p_c65gu54v": [
       "p_lu93n8up",
@@ -12857,7 +13032,8 @@
       "p_w5c5uw81"
     ],
     "p_tv4l6njk": [
-      "p_ch1uhaqg"
+      "p_ch1uhaqg",
+      null
     ],
     "p_ch1uhaqg": [
       "p_0wshjvy7",
@@ -12944,7 +13120,8 @@
       "p_jsukgoxm"
     ],
     "p_n3qgtkzf": [
-      "p_60fo4esk"
+      "p_60fo4esk",
+      null
     ],
     "p_vxfiqv7u": [
       "p_g8whx763",
@@ -12967,13 +13144,16 @@
       "p_105mpc29"
     ],
     "p_cdqppohe": [
-      "p_ltfab07x"
+      "p_ltfab07x",
+      null
     ],
     "p_ltfab07x": [
-      "p_s02kv7ia"
+      "p_s02kv7ia",
+      null
     ],
     "p_105mpc29": [
-      "p_bhtww2s0"
+      "p_bhtww2s0",
+      null
     ],
     "p_g8whx763": [
       "p_j5s82phe",
@@ -13086,1366 +13266,6 @@
     "p_u4asejvk": [
       "p_mzudk6vt",
       "p_2yafssv9"
-    ]
-  },
-  "childrenOf": {
-    "p_jrbvidb3g": [
-      "p_3qowa85hd",
-      "p_8mchqpopa"
-    ],
-    "p_zobmj6wp8": [
-      "p_3qowa85hd",
-      "p_8mchqpopa"
-    ],
-    "p_3rw58lslc": [
-      "p_3uj910se8"
-    ],
-    "p_bbclq6f9g": [
-      "p_3uj910se8",
-      "p_4yyrm3723"
-    ],
-    "p_p1t2kmcat": [
-      "p_3w3d8mg0r",
-      "p_zcl5kw4oh"
-    ],
-    "p_e2d8rcv1d": [
-      "p_3w3d8mg0r",
-      "p_zcl5kw4oh"
-    ],
-    "p_fceooch": [
-      "p_607tk2v1i",
-      "p_rdbqyhp0a"
-    ],
-    "p_7hozznt": [
-      "p_607tk2v1i",
-      "p_rdbqyhp0a"
-    ],
-    "p_zdy1zgf": [
-      "p_67029sp3z",
-      "p_rfz7mk0kt",
-      "p_9dgcn78",
-      "p_ydxzk5ala"
-    ],
-    "p_mq1wnzd": [
-      "p_67029sp3z",
-      "p_rfz7mk0kt",
-      "p_9dgcn78",
-      "p_ydxzk5ala"
-    ],
-    "p_9dgcn78": [
-      "p_6c6wnb9",
-      "p_7hozznt",
-      "p_mc6jemk"
-    ],
-    "p_bkayc4w": [
-      "p_6c6wnb9",
-      "p_7hozznt",
-      "p_mc6jemk"
-    ],
-    "p_r6gu9qm8a": [
-      "p_99wt1e8e6",
-      "p_bbclq6f9g",
-      "p_bkayc4w",
-      "p_yhg9e9i5y",
-      "p_tdvl922cf"
-    ],
-    "p_apnevfd1e": [
-      "p_99wt1e8e6",
-      "p_bbclq6f9g",
-      "p_bkayc4w",
-      "p_yhg9e9i5y",
-      "p_tdvl922cf"
-    ],
-    "p_a9c12mk": [
-      "p_anref8x"
-    ],
-    "p_q1486bk": [
-      "p_anref8x"
-    ],
-    "p_k9dqg17ug": [
-      "p_bhz72tf5h",
-      "p_mq1wnzd",
-      "p_7cvmjv393",
-      "p_vkvmoix0v",
-      "p_myxn3zrx2",
-      "p_faax8lven",
-      "p_aq1u3undm",
-      "p_xngn4xyr5"
-    ],
-    "p_9smqgh317": [
-      "p_bhz72tf5h",
-      "p_mq1wnzd",
-      "p_7cvmjv393",
-      "p_vkvmoix0v",
-      "p_myxn3zrx2",
-      "p_faax8lven",
-      "p_aq1u3undm",
-      "p_xngn4xyr5"
-    ],
-    "p_n2oxqssdd": [
-      "p_bm3vtw18s",
-      "p_ep1684kzs",
-      "p_t1p2rtl5z",
-      "p_zdy1zgf",
-      "p_37jcbtegu",
-      "p_3krvppadg",
-      "p_trylh546h",
-      "p_vit2oe3no"
-    ],
-    "p_ymb6wc3q0": [
-      "p_bm3vtw18s",
-      "p_ep1684kzs",
-      "p_t1p2rtl5z",
-      "p_zdy1zgf",
-      "p_37jcbtegu",
-      "p_3krvppadg",
-      "p_trylh546h",
-      "p_vit2oe3no"
-    ],
-    "p_mc6jemk": [
-      "p_c2jyk4pds",
-      "p_czyydy2g7"
-    ],
-    "p_9vhcxd8": [
-      "p_c2jyk4pds",
-      "p_czyydy2g7"
-    ],
-    "p_j0llm0bss": [
-      "p_hyvnwes60",
-      "p_n2oxqssdd",
-      "p_kjb1yqku",
-      "p_cjure2a4",
-      "p_lkh3zp9u",
-      "p_wgh11mrg",
-      "p_7okhp4rz",
-      "p_cyl275xx",
-      "p_907ij0i8"
-    ],
-    "p_epbrpkbpc": [
-      "p_hyvnwes60",
-      "p_n2oxqssdd",
-      "p_kjb1yqku",
-      "p_cjure2a4",
-      "p_lkh3zp9u",
-      "p_wgh11mrg",
-      "p_7okhp4rz",
-      "p_cyl275xx",
-      "p_907ij0i8"
-    ],
-    "p_yhg9e9i5y": [
-      "p_ir25hn919",
-      "p_ir4u61dqa",
-      "p_jqtxmllar",
-      "p_4cjwtla35"
-    ],
-    "p_n4z6lfc2f": [
-      "p_ir25hn919",
-      "p_ir4u61dqa",
-      "p_jqtxmllar",
-      "p_4cjwtla35"
-    ],
-    "p_6c6wnb9": [
-      "p_p1t2kmcat",
-      "p_q1486bk",
-      "p_r9oewbcw0",
-      "p_zobmj6wp8",
-      "p_0dj5jnxhr"
-    ],
-    "p_ovdwahd": [
-      "p_p1t2kmcat",
-      "p_q1486bk",
-      "p_r9oewbcw0",
-      "p_zobmj6wp8",
-      "p_0dj5jnxhr"
-    ],
-    "p_0dj5jnxhr": [
-      "p_t22zhc497",
-      "p_vomcn89yz",
-      "p_z4rxd74pc"
-    ],
-    "p_zmfl39a5r": [
-      "p_t22zhc497",
-      "p_vomcn89yz",
-      "p_z4rxd74pc"
-    ],
-    "p_odstubz": [
-      "p_ovdwahd"
-    ],
-    "p_00tgdjd": [
-      "p_ovdwahd"
-    ],
-    "p_lx16wimrx": [
-      "p_odstubz",
-      "p_ybat0ucd",
-      "p_pfyko8vm"
-    ],
-    "p_77kdyij48": [
-      "p_odstubz",
-      "p_ybat0ucd",
-      "p_pfyko8vm"
-    ],
-    "p_4ijlwzjnh": [
-      "p_00tgdjd"
-    ],
-    "p_sh6rs3ypi": [
-      "p_00tgdjd",
-      "p_w9az526b1",
-      "p_fsyurpw6g"
-    ],
-    "p_f72wwgf93": [
-      "p_w9az526b1"
-    ],
-    "p_l0yb444du": [
-      "p_r6gu9qm8a"
-    ],
-    "p_cntfcxxpa": [
-      "p_r6gu9qm8a"
-    ],
-    "p_l0tiqibe0": [
-      "p_apnevfd1e",
-      "p_2fl7lqip9",
-      "p_w45w1n6s2"
-    ],
-    "p_jtw2yt4vg": [
-      "p_apnevfd1e",
-      "p_2fl7lqip9",
-      "p_w45w1n6s2"
-    ],
-    "p_k0cytigk5": [
-      "p_1766082418649",
-      "p_jtw2yt4vg",
-      "p_cntfcxxpa"
-    ],
-    "p_11s7733na": [
-      "p_1766082418649",
-      "p_jtw2yt4vg",
-      "p_cntfcxxpa"
-    ],
-    "p_izcueyhnf": [
-      "p_lx16wimrx",
-      "p_lwanlgvj",
-      "p_etpnnab1",
-      "p_0f1q57r0",
-      "p_ftwzuve8"
-    ],
-    "p_tnf5rvj1f": [
-      "p_lx16wimrx",
-      "p_lwanlgvj",
-      "p_etpnnab1",
-      "p_0f1q57r0",
-      "p_ftwzuve8"
-    ],
-    "p_dt9kt6mky": [
-      "p_77kdyij48",
-      "p_vyxvqyny",
-      "p_cc7u175f",
-      "p_1v06hecw",
-      "p_cp4g43fk",
-      "p_9556pk1r",
-      "p_d4ab27xr",
-      "p_bj9rgytn"
-    ],
-    "p_ccnmbpk25": [
-      "p_77kdyij48",
-      "p_vyxvqyny",
-      "p_cc7u175f",
-      "p_1v06hecw",
-      "p_cp4g43fk",
-      "p_9556pk1r",
-      "p_d4ab27xr",
-      "p_bj9rgytn"
-    ],
-    "p_mcny211om": [
-      "p_j0llm0bss",
-      "p_50jpwsvr",
-      "p_qchjhtsa"
-    ],
-    "p_njj1v6yja": [
-      "p_mcny211om",
-      "p_ruc9yto3"
-    ],
-    "p_r5i80yx4z": [
-      "p_mcny211om",
-      "p_ruc9yto3"
-    ],
-    "p_hvl6b0sns": [
-      "p_njj1v6yja"
-    ],
-    "p_2crerqvof": [
-      "p_njj1v6yja"
-    ],
-    "p_zcilnunxs": [
-      "p_hvl6b0sns"
-    ],
-    "p_0bh8rf5l3": [
-      "p_hvl6b0sns"
-    ],
-    "p_ysll51iu": [
-      "p_e0q1n5ln"
-    ],
-    "p_anref8x": [
-      "p_e0q1n5ln"
-    ],
-    "p_p8q9agem": [
-      "p_a9c12mk"
-    ],
-    "p_lagozehv": [
-      "p_a9c12mk"
-    ],
-    "p_k7ppxbyh9": [
-      "p_ymb6wc3q0",
-      "p_o7zbzytr5",
-      "p_cj5mk7jm",
-      "p_b5agszs4b",
-      "p_164qnsv4",
-      "p_vt288hxg",
-      "p_njsfz349",
-      "p_9yepedwn4"
-    ],
-    "p_30hacm6sw": [
-      "p_ymb6wc3q0",
-      "p_o7zbzytr5",
-      "p_cj5mk7jm",
-      "p_b5agszs4b",
-      "p_25o4lrxe6",
-      "p_vt288hxg",
-      "p_gii1zydfe",
-      "p_9yepedwn4"
-    ],
-    "p_y51vrf3yg": [
-      "p_k7ppxbyh9"
-    ],
-    "p_tkxn8dkh4": [
-      "p_k7ppxbyh9"
-    ],
-    "p_9dzyae8c0": [
-      "p_y51vrf3yg"
-    ],
-    "p_er2yppmdt": [
-      "p_y51vrf3yg"
-    ],
-    "p_c9wudsgyf": [
-      "p_9dzyae8c0"
-    ],
-    "p_xyk5tv6yt": [
-      "p_9dzyae8c0"
-    ],
-    "p_f8vd4gljl": [
-      "p_c9wudsgyf"
-    ],
-    "p_49qqqrb82": [
-      "p_c9wudsgyf"
-    ],
-    "p_cut7c3i5i": [
-      "p_f8vd4gljl"
-    ],
-    "p_qntv202tf": [
-      "p_f8vd4gljl"
-    ],
-    "p_cytjkb2pn": [
-      "p_cut7c3i5i"
-    ],
-    "p_rfetspfdy": [
-      "p_cut7c3i5i"
-    ],
-    "p_j8c0rrmlj": [
-      "p_30hacm6sw"
-    ],
-    "p_drl4xs979": [
-      "p_30hacm6sw"
-    ],
-    "p_nqxr123d8": [
-      "p_drl4xs979"
-    ],
-    "p_8smp68o0u": [
-      "p_drl4xs979"
-    ],
-    "p_8jgv67fq": [
-      "p_j8c0rrmlj"
-    ],
-    "p_io1qiphv": [
-      "p_j8c0rrmlj"
-    ],
-    "p_q5r8a8di": [
-      "p_io1qiphv"
-    ],
-    "p_zxsn4f7g": [
-      "p_io1qiphv"
-    ],
-    "p_8ep79tnj": [
-      "p_8jgv67fq"
-    ],
-    "p_0j5pylfd": [
-      "p_nqxr123d8"
-    ],
-    "p_uknf1cu2": [
-      "p_nqxr123d8"
-    ],
-    "p_z4rxd74pc": [
-      "p_x1m7h6i6",
-      "p_5luildj5"
-    ],
-    "p_b0ipc66i": [
-      "p_x1m7h6i6",
-      "p_5luildj5"
-    ],
-    "p_u9xectr7": [
-      "p_dt9kt6mky"
-    ],
-    "p_ubacyg84": [
-      "p_dt9kt6mky",
-      "p_ejkbgule",
-      "p_72zus6z7",
-      "p_n4v1z3b7"
-    ],
-    "p_y5jlpiuu": [
-      "p_ejkbgule",
-      "p_72zus6z7",
-      "p_n4v1z3b7"
-    ],
-    "p_eu6jpvcr": [
-      "p_xz4345d3"
-    ],
-    "p_n4v1z3b7": [
-      "p_xz4345d3"
-    ],
-    "p_q9go8aou": [
-      "p_g10xw55i"
-    ],
-    "p_ejkbgule": [
-      "p_g10xw55i"
-    ],
-    "p_g10xw55i": [
-      "p_t2u1pvbl",
-      "p_slq4c5iv"
-    ],
-    "p_3djv77iz": [
-      "p_t2u1pvbl",
-      "p_slq4c5iv"
-    ],
-    "p_stlru0px": [
-      "p_q9go8aou",
-      "p_ujclocoq"
-    ],
-    "p_rtgt0wzj": [
-      "p_q9go8aou",
-      "p_ujclocoq"
-    ],
-    "p_jn7ws9gr": [
-      "p_i4c7mf8d",
-      "p_ccnmbpk25",
-      "p_f4parqh6",
-      "p_o5l6u47i",
-      "p_5j8sz5ay",
-      "p_t4lrqvvs",
-      "p_dnuh2ph1",
-      "p_c7dzeupo"
-    ],
-    "p_yehcxg5d": [
-      "p_i4c7mf8d",
-      "p_ccnmbpk25",
-      "p_f4parqh6",
-      "p_o5l6u47i",
-      "p_5j8sz5ay",
-      "p_t4lrqvvs",
-      "p_dnuh2ph1",
-      "p_c7dzeupo"
-    ],
-    "p_i4c7mf8d": [
-      "p_e25cfnzj",
-      "p_cfacs46s"
-    ],
-    "p_ujclocoq": [
-      "p_e25cfnzj",
-      "p_cfacs46s"
-    ],
-    "p_cfacs46s": [
-      "p_t1mfpg75"
-    ],
-    "p_pk0srrk9": [
-      "p_t1mfpg75"
-    ],
-    "p_6iwyg799": [
-      "p_jn7ws9gr"
-    ],
-    "p_lf5lph78": [
-      "p_jn7ws9gr"
-    ],
-    "p_9wjiy2we": [
-      "p_6iwyg799"
-    ],
-    "p_qazae6yr": [
-      "p_6iwyg799"
-    ],
-    "p_81cni9rz": [
-      "p_9wjiy2we"
-    ],
-    "p_0qlhdvso": [
-      "p_9wjiy2we"
-    ],
-    "p_vwc1c3x3": [
-      "p_pk0srrk9"
-    ],
-    "p_xw8kwa6t": [
-      "p_pk0srrk9"
-    ],
-    "p_7jbjsqcs": [
-      "p_izcueyhnf",
-      "p_xef47zwi",
-      "p_rx7w71tx",
-      "p_ibdxiuq6",
-      "p_lxgazo9q",
-      "p_3yh92iw7",
-      "p_6w36vq6u"
-    ],
-    "p_ntqz8x0y": [
-      "p_izcueyhnf",
-      "p_xef47zwi",
-      "p_rx7w71tx",
-      "p_ibdxiuq6",
-      "p_lxgazo9q",
-      "p_3yh92iw7",
-      "p_6w36vq6u"
-    ],
-    "p_en97ykqn": [
-      "p_50jpwsvr"
-    ],
-    "p_od2tv6oc": [
-      "p_fvuvuehr"
-    ],
-    "p_ybat0ucd": [
-      "p_fvuvuehr"
-    ],
-    "p_ed909r6e": [
-      "p_6t30mohp",
-      "p_cdv5ie35"
-    ],
-    "p_pfyko8vm": [
-      "p_6t30mohp",
-      "p_cdv5ie35"
-    ],
-    "p_xrztgk56": [
-      "p_73zyd494"
-    ],
-    "p_bhz72tf5h": [
-      "p_73zyd494"
-    ],
-    "p_7cvmjv393": [
-      "p_cw6wpv5a",
-      "p_712is9ht",
-      "p_qpavwkyo"
-    ],
-    "p_l7vr8reo": [
-      "p_cw6wpv5a"
-    ],
-    "p_mubkqsbf": [
-      "p_712is9ht",
-      "p_qpavwkyo"
-    ],
-    "p_7wucmui9": [
-      "p_4bn3zm19"
-    ],
-    "p_faax8lven": [
-      "p_4bn3zm19"
-    ],
-    "p_hyvnwes60": [
-      "p_xp21b1lx",
-      "p_1c6u8six"
-    ],
-    "p_osmy2svx": [
-      "p_xp21b1lx",
-      "p_1c6u8six"
-    ],
-    "p_1c6u8six": [
-      "p_vv7xbfpg"
-    ],
-    "p_vv7xbfpg": [
-      "p_6f3g4eai"
-    ],
-    "p_6f3g4eai": [
-      "p_x33kgh6m"
-    ],
-    "p_70091dn1": [
-      "p_osmy2svx",
-      "p_lw3ga5vu"
-    ],
-    "p_z9y4rbyh": [
-      "p_osmy2svx",
-      "p_lw3ga5vu"
-    ],
-    "p_il6z924j": [
-      "p_z9y4rbyh",
-      "p_qd68ufb4"
-    ],
-    "p_wkprbgdd": [
-      "p_z9y4rbyh",
-      "p_qd68ufb4"
-    ],
-    "p_bdbuxxo2": [
-      "p_70091dn1"
-    ],
-    "p_9j1bspog": [
-      "p_bdbuxxo2"
-    ],
-    "p_3lgs85bg": [
-      "p_bdbuxxo2"
-    ],
-    "p_6tki32nc": [
-      "p_3lgs85bg"
-    ],
-    "p_ekdro25b": [
-      "p_3lgs85bg"
-    ],
-    "p_8xubundc": [
-      "p_ekdro25b"
-    ],
-    "p_vxfiqv7u": [
-      "p_epbrpkbpc"
-    ],
-    "p_hnadfe96": [
-      "p_epbrpkbpc"
-    ],
-    "p_fc9mapsn": [
-      "p_hnadfe96"
-    ],
-    "p_dipuxqdg": [
-      "p_hnadfe96"
-    ],
-    "p_wf1uo6vf": [
-      "p_dipuxqdg"
-    ],
-    "p_sffx5ap5": [
-      "p_dipuxqdg"
-    ],
-    "p_d570ehiu": [
-      "p_wf1uo6vf"
-    ],
-    "p_zm07mkyg": [
-      "p_wf1uo6vf"
-    ],
-    "p_y9qdhwiy": [
-      "p_sffx5ap5"
-    ],
-    "p_7yxaykj4": [
-      "p_sffx5ap5"
-    ],
-    "p_14h9l8r8": [
-      "p_7yxaykj4"
-    ],
-    "p_x85r6oue": [
-      "p_7yxaykj4"
-    ],
-    "p_v1dv4r1t": [
-      "p_14h9l8r8"
-    ],
-    "p_b5sxeisz": [
-      "p_14h9l8r8"
-    ],
-    "p_yskd71as": [
-      "p_ntqz8x0y"
-    ],
-    "p_icsn6de9": [
-      "p_yskd71as"
-    ],
-    "p_s65668uh": [
-      "p_yskd71as"
-    ],
-    "p_vlngx0kv": [
-      "p_s65668uh"
-    ],
-    "p_etz89lv7": [
-      "p_s65668uh"
-    ],
-    "p_9i99iocv": [
-      "p_vlngx0kv"
-    ],
-    "p_ncwtion0": [
-      "p_vlngx0kv"
-    ],
-    "p_es9gfibq": [
-      "p_ncwtion0"
-    ],
-    "p_amf43mbx": [
-      "p_ncwtion0"
-    ],
-    "p_c819fdbq": [
-      "p_amf43mbx"
-    ],
-    "p_cfbwgo8o": [
-      "p_ipfs2v2j"
-    ],
-    "p_al00po29": [
-      "p_7jbjsqcs"
-    ],
-    "p_etk2mnea": [
-      "p_7jbjsqcs"
-    ],
-    "p_s45zn0av": [
-      "p_etk2mnea"
-    ],
-    "p_bxwrj5ae": [
-      "p_etk2mnea"
-    ],
-    "p_24ozenpq": [
-      "p_al00po29"
-    ],
-    "p_wz2qkic0": [
-      "p_al00po29"
-    ],
-    "p_o542rse9": [
-      "p_r5i80yx4z"
-    ],
-    "p_0d1odxhc": [
-      "p_r5i80yx4z"
-    ],
-    "p_mj97s45a": [
-      "p_o542rse9"
-    ],
-    "p_epxm26g7": [
-      "p_o542rse9"
-    ],
-    "p_kjb1yqku": [
-      "p_5e7mui5y",
-      "p_l9obrbwa",
-      "p_dop4h9wa",
-      "p_qi971txu",
-      "p_3yxfv6jq",
-      "p_qw3tl1fs"
-    ],
-    "p_lw3ga5vu": [
-      "p_5e7mui5y",
-      "p_l9obrbwa",
-      "p_dop4h9wa",
-      "p_qi971txu",
-      "p_3yxfv6jq",
-      "p_qw3tl1fs"
-    ],
-    "p_dfs3hjev": [
-      "p_k9dqg17ug"
-    ],
-    "p_sf098aey": [
-      "p_k9dqg17ug"
-    ],
-    "p_84q08ryl": [
-      "p_dfs3hjev"
-    ],
-    "p_cxolpn2y": [
-      "p_dfs3hjev"
-    ],
-    "p_3zwdqnar": [
-      "p_84q08ryl"
-    ],
-    "p_t6cox0cg": [
-      "p_84q08ryl"
-    ],
-    "p_smsy8hkx": [
-      "p_3zwdqnar"
-    ],
-    "p_svyjp77l": [
-      "p_3zwdqnar"
-    ],
-    "p_gcufrcue": [
-      "p_svyjp77l"
-    ],
-    "p_12rfqfxh": [
-      "p_svyjp77l"
-    ],
-    "p_g9q64r5y": [
-      "p_9smqgh317"
-    ],
-    "p_okz02khy": [
-      "p_9smqgh317"
-    ],
-    "p_sd2e16w1": [
-      "p_g9q64r5y"
-    ],
-    "p_ljrb1cdp": [
-      "p_g9q64r5y"
-    ],
-    "p_x1rn197t": [
-      "p_sd2e16w1"
-    ],
-    "p_u6hpgsd3": [
-      "p_sd2e16w1"
-    ],
-    "p_wby05zs2": [
-      "p_x1rn197t"
-    ],
-    "p_lenuwl55": [
-      "p_x1rn197t"
-    ],
-    "p_s2ay7l75": [
-      "p_wby05zs2"
-    ],
-    "p_qxysgd2y": [
-      "p_ljrb1cdp"
-    ],
-    "p_f5fokvi0": [
-      "p_ljrb1cdp"
-    ],
-    "p_22h3sgzl": [
-      "p_f5fokvi0"
-    ],
-    "p_rezy1r51": [
-      "p_22h3sgzl"
-    ],
-    "p_k3icp23e": [
-      "p_22h3sgzl"
-    ],
-    "p_39mc2h2z": [
-      "p_rezy1r51"
-    ],
-    "p_cxczwvzu": [
-      "p_qxysgd2y"
-    ],
-    "p_x10v0cth": [
-      "p_qxysgd2y"
-    ],
-    "p_a83t02tj": [
-      "p_x10v0cth"
-    ],
-    "p_4vaudjjh": [
-      "p_x10v0cth"
-    ],
-    "p_wlv5npdq": [
-      "p_4vaudjjh"
-    ],
-    "p_zcrxsank": [
-      "p_4vaudjjh"
-    ],
-    "p_1su3kdwv": [
-      "p_zcrxsank"
-    ],
-    "p_dccbw7kk": [
-      "p_zcrxsank"
-    ],
-    "p_myly60f3": [
-      "p_dccbw7kk"
-    ],
-    "p_ftaux8kd": [
-      "p_1su3kdwv"
-    ],
-    "p_sh5630es": [
-      "p_1su3kdwv"
-    ],
-    "p_hiqm7ate": [
-      "p_sh5630es"
-    ],
-    "p_fs66mghd": [
-      "p_cxczwvzu"
-    ],
-    "p_xo6tjyis": [
-      "p_cxczwvzu"
-    ],
-    "p_xf87a35e": [
-      "p_fs66mghd"
-    ],
-    "p_ubbszd4q": [
-      "p_fs66mghd"
-    ],
-    "p_ogpuqa60": [
-      "p_xo6tjyis"
-    ],
-    "p_jr71wsrv": [
-      "p_xo6tjyis"
-    ],
-    "p_756duqri": [
-      "p_okz02khy"
-    ],
-    "p_p8haqbrs": [
-      "p_okz02khy"
-    ],
-    "p_xsmerazv": [
-      "p_p8haqbrs"
-    ],
-    "p_p9giaf1e": [
-      "p_756duqri"
-    ],
-    "p_ssupls3i": [
-      "p_756duqri"
-    ],
-    "p_nazivpjt": [
-      "p_p9giaf1e"
-    ],
-    "p_mdz7i545": [
-      "p_p9giaf1e"
-    ],
-    "p_wrft8jna": [
-      "p_ssupls3i"
-    ],
-    "p_apt4rbei": [
-      "p_ssupls3i"
-    ],
-    "p_lwanlgvj": [
-      "p_n7xj5v57",
-      "p_z23coqaf",
-      "p_u2jsp24d"
-    ],
-    "p_ey5z1ovr": [
-      "p_n7xj5v57",
-      "p_z23coqaf",
-      "p_u2jsp24d"
-    ],
-    "p_etpnnab1": [
-      "p_frzkmwpo",
-      "p_8e1ep5he",
-      "p_ybxp9qp3"
-    ],
-    "p_ps90vfas": [
-      "p_frzkmwpo",
-      "p_8e1ep5he",
-      "p_ybxp9qp3"
-    ],
-    "p_erinlj7u": [
-      "p_xz9ds1hs"
-    ],
-    "p_8e1ep5he": [
-      "p_xz9ds1hs"
-    ],
-    "p_xz9ds1hs": [
-      "p_fpy0unhs"
-    ],
-    "p_g1yxl52e": [
-      "p_vtuv90x3",
-      "p_cnv8bocs"
-    ],
-    "p_ybxp9qp3": [
-      "p_vtuv90x3",
-      "p_cnv8bocs"
-    ],
-    "p_bn69tmdt": [
-      "p_tnf5rvj1f"
-    ],
-    "p_7wpzev9i": [
-      "p_tnf5rvj1f"
-    ],
-    "p_3vbx4uaf": [
-      "p_7wpzev9i"
-    ],
-    "p_g8hhg2qy": [
-      "p_7wpzev9i"
-    ],
-    "p_n1vjigrn": [
-      "p_bn69tmdt"
-    ],
-    "p_fmtb4rms": [
-      "p_n1vjigrn"
-    ],
-    "p_fd3hr1hm": [
-      "p_n1vjigrn"
-    ],
-    "p_bbaeoqyx": [
-      "p_3vbx4uaf"
-    ],
-    "p_z9zgag3v": [
-      "p_3vbx4uaf"
-    ],
-    "p_frbwxofh": [
-      "p_g8hhg2qy"
-    ],
-    "p_tqc16rhc": [
-      "p_g8hhg2qy"
-    ],
-    "p_eaemwf9f": [
-      "p_xeub1gr2",
-      "p_0x8847bi",
-      "p_75nzf58c",
-      "p_qcmrv3ts",
-      "p_s9ob7qre",
-      "p_b0vwac00",
-      "p_2hbdrqig",
-      "p_exjmvx9t"
-    ],
-    "p_50jpwsvr": [
-      "p_xeub1gr2",
-      "p_0x8847bi",
-      "p_75nzf58c",
-      "p_qcmrv3ts",
-      "p_s9ob7qre",
-      "p_b0vwac00",
-      "p_2hbdrqig",
-      "p_exjmvx9t"
-    ],
-    "p_qw3tl1fs": [
-      "p_85tts4cv"
-    ],
-    "p_meqkciax": [
-      "p_jrbvidb3g"
-    ],
-    "p_msevi269": [
-      "p_jrbvidb3g"
-    ],
-    "p_c65gu54v": [
-      "p_msevi269"
-    ],
-    "p_1pwrl7ff": [
-      "p_msevi269"
-    ],
-    "p_n32khm4k": [
-      "p_1pwrl7ff"
-    ],
-    "p_kib9etn2": [
-      "p_1pwrl7ff"
-    ],
-    "p_d5s40ycd": [
-      "p_n32khm4k"
-    ],
-    "p_mhnnj6o6": [
-      "p_n32khm4k"
-    ],
-    "p_c7ffpjpt": [
-      "p_d5s40ycd"
-    ],
-    "p_yvyoxfms": [
-      "p_d5s40ycd"
-    ],
-    "p_hbs2s8es": [
-      "p_c7ffpjpt"
-    ],
-    "p_lu93n8up": [
-      "p_c65gu54v"
-    ],
-    "p_tv4l6njk": [
-      "p_c65gu54v"
-    ],
-    "p_jb88hu17": [
-      "p_lu93n8up"
-    ],
-    "p_d58ggyg3": [
-      "p_lu93n8up"
-    ],
-    "p_p41j5bs4": [
-      "p_jb88hu17"
-    ],
-    "p_yi5o4oyg": [
-      "p_jb88hu17"
-    ],
-    "p_oy0a4qx3": [
-      "p_yi5o4oyg"
-    ],
-    "p_4ktiw9b8": [
-      "p_yi5o4oyg"
-    ],
-    "p_vno51whp": [
-      "p_p41j5bs4"
-    ],
-    "p_dc9eqif0": [
-      "p_p41j5bs4"
-    ],
-    "p_zs3ojxol": [
-      "p_d58ggyg3"
-    ],
-    "p_w5c5uw81": [
-      "p_d58ggyg3"
-    ],
-    "p_ch1uhaqg": [
-      "p_tv4l6njk"
-    ],
-    "p_0wshjvy7": [
-      "p_ch1uhaqg"
-    ],
-    "p_6p7zwd47": [
-      "p_ch1uhaqg"
-    ],
-    "p_mk1vpfwn": [
-      "p_6p7zwd47"
-    ],
-    "p_15zjelkk": [
-      "p_6p7zwd47"
-    ],
-    "p_ovboh6b3": [
-      "p_15zjelkk"
-    ],
-    "p_za5owu64": [
-      "p_15zjelkk"
-    ],
-    "p_vo8dsxpl": [
-      "p_za5owu64"
-    ],
-    "p_sxh34h0q": [
-      "p_za5owu64"
-    ],
-    "p_qmpy4l2u": [
-      "p_vo8dsxpl"
-    ],
-    "p_mxrpqjxv": [
-      "p_vo8dsxpl"
-    ],
-    "p_y28ymsl8": [
-      "p_mxrpqjxv"
-    ],
-    "p_svs8d17g": [
-      "p_mxrpqjxv"
-    ],
-    "p_9yfs5dde": [
-      "p_sxh34h0q"
-    ],
-    "p_8puahwpb": [
-      "p_sxh34h0q"
-    ],
-    "p_kgebe97f": [
-      "p_9yfs5dde"
-    ],
-    "p_m0288uk0": [
-      "p_9yfs5dde"
-    ],
-    "p_80uvamp4": [
-      "p_ovboh6b3"
-    ],
-    "p_mxdoo8wv": [
-      "p_ovboh6b3"
-    ],
-    "p_ttccea68": [
-      "p_80uvamp4"
-    ],
-    "p_jnsu1a0s": [
-      "p_80uvamp4"
-    ],
-    "p_f9rgvqub": [
-      "p_0wshjvy7"
-    ],
-    "p_v26420m2": [
-      "p_0wshjvy7"
-    ],
-    "p_cuozahay": [
-      "p_v26420m2"
-    ],
-    "p_mblj9m5i": [
-      "p_v26420m2"
-    ],
-    "p_wzyc4u2i": [
-      "p_mblj9m5i"
-    ],
-    "p_f8f00j9p": [
-      "p_mblj9m5i"
-    ],
-    "p_syz25dww": [
-      "p_kib9etn2"
-    ],
-    "p_gyson76r": [
-      "p_kib9etn2"
-    ],
-    "p_jlcn21vz": [
-      "p_gyson76r"
-    ],
-    "p_6lzv9jo0": [
-      "p_gyson76r"
-    ],
-    "p_ypwoov09": [
-      "p_syz25dww"
-    ],
-    "p_3ngcwxlq": [
-      "p_syz25dww"
-    ],
-    "p_zv6hzeg4": [
-      "p_mhnnj6o6"
-    ],
-    "p_f6bzhi8m": [
-      "p_mhnnj6o6"
-    ],
-    "p_g8x7e4fo": [
-      "p_f6bzhi8m"
-    ],
-    "p_vikbfyk3": [
-      "p_f6bzhi8m"
-    ],
-    "p_flqfp7en": [
-      "p_vikbfyk3"
-    ],
-    "p_londt064": [
-      "p_vikbfyk3"
-    ],
-    "p_m8se9uzb": [
-      "p_hbs2s8es"
-    ],
-    "p_ihkm5nif": [
-      "p_hbs2s8es"
-    ],
-    "p_n3qgtkzf": [
-      "p_m8se9uzb"
-    ],
-    "p_jsukgoxm": [
-      "p_m8se9uzb"
-    ],
-    "p_60fo4esk": [
-      "p_n3qgtkzf"
-    ],
-    "p_g8whx763": [
-      "p_vxfiqv7u"
-    ],
-    "p_cf032hxf": [
-      "p_vxfiqv7u"
-    ],
-    "p_60dhbac8": [
-      "p_cf032hxf"
-    ],
-    "p_m3h7tvqt": [
-      "p_cf032hxf"
-    ],
-    "p_mxxh3ia1": [
-      "p_60dhbac8"
-    ],
-    "p_0ce6pwis": [
-      "p_60dhbac8"
-    ],
-    "p_l2l9m2xa": [
-      "p_m3h7tvqt"
-    ],
-    "p_4183rsn8": [
-      "p_m3h7tvqt"
-    ],
-    "p_cdqppohe": [
-      "p_4183rsn8"
-    ],
-    "p_105mpc29": [
-      "p_4183rsn8"
-    ],
-    "p_ltfab07x": [
-      "p_cdqppohe"
-    ],
-    "p_s02kv7ia": [
-      "p_ltfab07x"
-    ],
-    "p_bhtww2s0": [
-      "p_105mpc29"
-    ],
-    "p_j5s82phe": [
-      "p_g8whx763"
-    ],
-    "p_kyyta414": [
-      "p_g8whx763"
-    ],
-    "p_yo2l4hfy": [
-      "p_kyyta414"
-    ],
-    "p_1vn1qzrq": [
-      "p_kyyta414"
-    ],
-    "p_x7rcfqll": [
-      "p_yo2l4hfy"
-    ],
-    "p_42u46q4c": [
-      "p_yo2l4hfy"
-    ],
-    "p_l8bicz8e": [
-      "p_j5s82phe"
-    ],
-    "p_r2ob25uj": [
-      "p_j5s82phe"
-    ],
-    "p_1d1nmjtx": [
-      "p_yehcxg5d"
-    ],
-    "p_q90q12n1": [
-      "p_yehcxg5d"
-    ],
-    "p_uqd9uhmf": [
-      "p_1d1nmjtx"
-    ],
-    "p_l10lhxrc": [
-      "p_1d1nmjtx"
-    ],
-    "p_mcixmc3g": [
-      "p_q90q12n1"
-    ],
-    "p_b2my52rq": [
-      "p_q90q12n1"
-    ],
-    "p_ppapq3x9": [
-      "p_mcixmc3g"
-    ],
-    "p_f4zn80gf": [
-      "p_mcixmc3g"
-    ],
-    "p_y9kadtb6": [
-      "p_ppapq3x9"
-    ],
-    "p_84576abd": [
-      "p_ppapq3x9"
-    ],
-    "p_v6jd0tju": [
-      "p_y9kadtb6"
-    ],
-    "p_5jrs87ti": [
-      "p_y9kadtb6"
-    ],
-    "p_hqb6ou1y": [
-      "p_b2my52rq"
-    ],
-    "p_ti3p1gsm": [
-      "p_b2my52rq"
-    ],
-    "p_ye7ueyiu": [
-      "p_hqb6ou1y"
-    ],
-    "p_kdwgumsj": [
-      "p_hqb6ou1y"
-    ],
-    "p_u3dbz43e": [
-      "p_stlru0px"
-    ],
-    "p_4w9dx04t": [
-      "p_stlru0px"
-    ],
-    "p_pyzpdjlg": [
-      "p_u3dbz43e"
-    ],
-    "p_6uq3m6jg": [
-      "p_u3dbz43e"
-    ],
-    "p_4enuhnv7": [
-      "p_6uq3m6jg"
-    ],
-    "p_dcs1vqtc": [
-      "p_6uq3m6jg"
-    ],
-    "p_hlklfupz": [
-      "p_4enuhnv7"
-    ],
-    "p_i8g9wmcq": [
-      "p_4enuhnv7"
-    ],
-    "p_o7kkxs2v": [
-      "p_pyzpdjlg"
-    ],
-    "p_sbk27pi6": [
-      "p_pyzpdjlg"
-    ],
-    "p_pa3nm4hw": [
-      "p_sbk27pi6"
-    ],
-    "p_ho21gihu": [
-      "p_sbk27pi6"
-    ],
-    "p_ke5qnjne": [
-      "p_o7kkxs2v"
-    ],
-    "p_a8mjka2q": [
-      "p_o7kkxs2v"
-    ],
-    "p_8grq6qa6": [
-      "p_4w9dx04t"
-    ],
-    "p_q7z8zxj5": [
-      "p_4w9dx04t"
-    ],
-    "p_w6jqiehx": [
-      "p_rtgt0wzj"
-    ],
-    "p_c4awewqm": [
-      "p_rtgt0wzj"
-    ],
-    "p_lks00jb0": [
-      "p_w6jqiehx"
-    ],
-    "p_u4asejvk": [
-      "p_w6jqiehx"
-    ],
-    "p_mzudk6vt": [
-      "p_u4asejvk"
-    ],
-    "p_2yafssv9": [
-      "p_u4asejvk"
     ]
   },
   "spousesOf": {
@@ -15624,6 +14444,9 @@
     "p_105mpc29": [
       "p_cdqppohe"
     ],
+    "p_ltfab07x": [],
+    "p_s02kv7ia": [],
+    "p_bhtww2s0": [],
     "p_j5s82phe": [
       "p_kyyta414"
     ],
@@ -15651,6 +14474,10 @@
     "p_o5l6u47i": [
       "p_0ojw1vj1"
     ],
+    "p_5j8sz5ay": [],
+    "p_t4lrqvvs": [],
+    "p_dnuh2ph1": [],
+    "p_c7dzeupo": [],
     "p_0ojw1vj1": [
       "p_o5l6u47i"
     ],
@@ -15768,5 +14595,6 @@
     "p_2yafssv9": [
       "p_mzudk6vt"
     ]
-  }
+  },
+  "currentId": "p_lx16wimrx"
 }
