@@ -12890,6 +12890,51 @@
       "photo": "",
       "photoId": "",
       "history": "Rose F Carlson\n\nFödd 1897-07-21 Illinois\nKälla: 1920 United States Federal Census, Year: 1920; Census Place: Chicago Ward 9, Cook (Chicago), Illinois; Roll: T625_311; Page: 9B; Enumeration District: 574; Image: 750.\nCitat: Födelsedatum:  abt 1897 Födelseort:  Illinois Bosatt den:  1920 Bostadsort:  Chicago Ward 9, Cook (Chicago), Illinois\n\nBosatt 1920 Chicago Ward 9, Cook (Chicago), Illinois\nKälla: 1920 United States Federal Census, Year: 1920; Census Place: Chicago Ward 9, Cook (Chicago), Illinois; Roll: T625_311; Page: 9B; Enumeration District: 574; Image: 750.\nCitat: Födelsedatum:  abt 1897 Födelseort:  Illinois Bosatt den:  1920 Bostadsort:  Chicago Ward 9, Cook (Chicago), Illinois\n\nDöd 1969-04-05 Elgin IL"
+    },
+    "p_yo6jndg5": {
+      "id": "p_yo6jndg5",
+      "name": "Emma Catharina Amy Carlson",
+      "gender": "F",
+      "role": "",
+      "born": "1902-07-23",
+      "bornParish": "Chicago, Cook, Illinois, USA",
+      "died": "1975-12-26 ",
+      "diedParish": "Collier, Florida, USA",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Emma Catharina Amy Carlson\n\nFödd 1902-07-23 Chicago, Cook, Illinois, United States\n\nBosatt 1910 Chicago Ward 33, Cook, Illinois\nKälla: 1910 United States Federal Census, Year: 1910; Census Place: Chicago Ward 33, Cook, Illinois; Roll: ; Page: ; Enumeration District: ; Image: .\nCitat: Födelsedatum:  1903 Födelseort:  Illinois Bosatt den:  1910 Bostadsort:  Chicago Ward 33, Cook, Illinois\n\nBosatt 1940-04-01 Chicago, Cook, Illinois, United States\nKälla: 1940 United States Federal Census, Year: 1940; Census Place: Chicago, Cook, Illinois; Roll: T627_1013; Page: 21A; Enumeration District: 103-2913.\nCitat: Födelsedatum:  abt 1902 Födelseort:  Illinois Bosatt den:  1 Apr 1940 Bostadsort:  Chicago, Cook, Illinois, United States\n\nDöd 1975-12-26 Collier, Florida, United States\nKälla: Florida Death Index, 1877-1998\nCitat: Födelsedatum:  23 Jul 1902 Födelseort:   Dödsdatum:  26 Dec 1975 Dödsort:  Collier, Florida, United States\n\nNoteringar\nBorn about 1903 in Illinois, USA. [1]\nLived 1910 in Chicago, Cook, Illinois, USA. [1]\nLived 1920 in Chicago, Cook, Illinois, USA. [2]\nLived 1930 in Chicago, Cook, Illinois, USA. [3]"
+    },
+    "p_l9t6oskn": {
+      "id": "p_l9t6oskn",
+      "name": "Annie Carlson",
+      "gender": "F",
+      "role": "",
+      "born": "1903",
+      "bornParish": "Illinois, USA",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Annie Carlson\n\nFödd omkring 1903 Illinois\nKälla: 1920 United States Federal Census, Year: 1920; Census Place: Chicago Ward 9, Cook (Chicago), Illinois; Roll: T625_311; Page: 9B; Enumeration District: 574; Image: 750.\nCitat: Födelsedatum:  abt 1903 Födelseort:  Illinois Bosatt den:  1920 Bostadsort:  Chicago Ward 9, Cook (Chicago), Illinois\n\nBosatt 1920 Chicago Ward 9, Cook (Chicago), Illinois\nKälla: 1920 United States Federal Census, Year: 1920; Census Place: Chicago Ward 9, Cook (Chicago), Illinois; Roll: T625_311; Page: 9B; Enumeration District: 574; Image: 750.\nCitat: Födelsedatum:  abt 1903 Födelseort:  Illinois Bosatt den:  1920 Bostadsort:  Chicago Ward 9, Cook (Chicago), Illinois\n\nBosatt 1930 Chicago, Cook, Illinois\nKälla: 1930 United States Federal Census, Year: 1930; Census Place: Chicago, Cook, Illinois; Roll: 430; Page: 10A; Enumeration District: 382; Image: 132.0; FHL microfilm: 2340165.\nCitat: Födelsedatum:  abt 1903 Födelseort:  Illinois Bosatt den:  1930 Bostadsort:  Chicago, Cook, Illinois"
+    },
+    "p_k1eqaw3w": {
+      "id": "p_k1eqaw3w",
+      "name": "Dwight A. Carlson",
+      "gender": "M",
+      "role": "",
+      "born": "1903",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Dwight A Carlson\n\nFödd omkring 1903 Illinois\nKälla: 1920 United States Federal Census, Year: 1920; Census Place: Chicago Ward 26, Cook (Chicago), Illinois; Roll: T625_336; Page: 7A; Enumeration District: 1524; Image: 958.\nCitat: Födelsedatum:  abt 1903 Födelseort:  Illinois Bosatt den:  1920 Bostadsort:  Chicago Ward 26, Cook (Chicago), Illinois\n\nBosatt 1920 Chicago Ward 26, Cook (Chicago), Illinois\nKälla: 1920 United States Federal Census, Year: 1920; Census Place: Chicago Ward 26, Cook (Chicago), Illinois; Roll: T625_336; Page: 7A; Enumeration District: 1524; Image: 958.\nCitat: Födelsedatum:  abt 1903 Födelseort:  Illinois Bosatt den:  1920 Bostadsort:  Chicago Ward 26, Cook (Chicago), Illinois"
     }
   },
   "parentsOf": {
@@ -14336,6 +14381,18 @@
       "p_cj5mk7jm"
     ],
     "p_y6lkpsom": [
+      "p_oiw1l7kk",
+      "p_cj5mk7jm"
+    ],
+    "p_yo6jndg5": [
+      "p_oiw1l7kk",
+      "p_cj5mk7jm"
+    ],
+    "p_l9t6oskn": [
+      "p_oiw1l7kk",
+      "p_cj5mk7jm"
+    ],
+    "p_k1eqaw3w": [
       "p_oiw1l7kk",
       "p_cj5mk7jm"
     ]
@@ -15822,7 +15879,10 @@
       "p_ioe9x05g",
       "p_xkaachog",
       "p_bvql21gh",
-      "p_y6lkpsom"
+      "p_y6lkpsom",
+      "p_yo6jndg5",
+      "p_l9t6oskn",
+      "p_k1eqaw3w"
     ],
     "p_cj5mk7jm": [
       "p_cu197mov",
@@ -15831,7 +15891,10 @@
       "p_ioe9x05g",
       "p_xkaachog",
       "p_bvql21gh",
-      "p_y6lkpsom"
+      "p_y6lkpsom",
+      "p_yo6jndg5",
+      "p_l9t6oskn",
+      "p_k1eqaw3w"
     ]
   },
   "spousesOf": {
