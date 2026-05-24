@@ -74,6 +74,9 @@ svg{display:block;width:100%;height:100%}.node-card{fill:var(--card);stroke:#cbd
         <button onclick="openPersonPage()" class="btn secondary" style="flex:1">👤 Personkort</button>
         <button onclick="openFotoPage()" class="btn secondary" style="flex:1">📷 Fotosida</button>
       </div>
+      <div style="margin-top:8px;">
+        <button onclick="deleteCurrentPerson()" class="btn red" style="width:100%">🗑 Ta bort denna person permanent</button>
+      </div>
     </div>
 
     <div class="panel">
@@ -923,6 +926,54 @@ function toggleSide(){
   wrap.classList.toggle("side-closed");
   btn.textContent = wrap.classList.contains("side-closed") ? "▶" : "☰";
   setTimeout(()=>{ if(store.currentId) drawGenealogy(store.currentId); }, 280);
+}
+
+function deleteCurrentPerson(){
+  const id = store.currentId;
+  if(!id || !store.people[id]) return;
+  const name = store.people[id].name || id;
+
+  const parents  = (store.parentsOf[id]  || []).length;
+  const children = (store.childrenOf[id] || []).length;
+  const spouses  = (store.spousesOf[id]  || []).length;
+  const relCount = parents + children + spouses;
+
+  let msg = 'Ta bort "' + name + '" permanent?\n\nDetta går inte att ångra.';
+  if(relCount > 0){
+    msg += '\n\nOBS: Personen har ' + relCount + ' relation(er) ('
+         + parents + ' förälder, ' + children + ' barn, ' + spouses
+         + ' make/maka). Alla dessa kopplingar tas också bort.';
+  }
+  if(!confirm(msg)) return;
+
+  // Remove from all parentsOf values
+  for(const pid of Object.keys(store.parentsOf)){
+    store.parentsOf[pid] = (store.parentsOf[pid]||[]).filter(x => x !== id);
+  }
+  delete store.parentsOf[id];
+
+  // Remove from all childrenOf values
+  for(const pid of Object.keys(store.childrenOf)){
+    store.childrenOf[pid] = (store.childrenOf[pid]||[]).filter(x => x !== id);
+  }
+  delete store.childrenOf[id];
+
+  // Remove from all spousesOf values
+  for(const pid of Object.keys(store.spousesOf)){
+    store.spousesOf[pid] = (store.spousesOf[pid]||[]).filter(x => x !== id);
+  }
+  delete store.spousesOf[id];
+
+  // Remove the person
+  delete store.people[id];
+
+  // Move to another person
+  const remaining = Object.keys(store.people);
+  store.currentId = remaining.length > 0 ? (findBestRoot() || remaining[0]) : null;
+
+  saveLocal();
+  refreshAll();
+  setStatus('"' + name + '" borttagen permanent.');
 }
 </script>
 </body>
