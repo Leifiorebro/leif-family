@@ -14782,6 +14782,21 @@
       "photo": "",
       "photoId": "",
       "history": "Kerstin Persdotter\n\nNoteringar\nKristinehamn (S) CI:5 (1765-1810) Bild 3570 / sid 706 (AID: v7274a.b3570.s706, NAD: SE/VA/13289)"
+    },
+    "p_hwheltu5": {
+      "id": "p_hwheltu5",
+      "name": "Mårten Henriksson Bonnevier",
+      "gender": "M",
+      "role": "",
+      "born": "1691-02-15",
+      "bornParish": "Karlströmbs bruk, Kristberg",
+      "died": "1729-06-16",
+      "diedParish": "Lesjöfors, Gåsborn",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Mårten Henriksson Bonnevier\n\nFödd 1691-02-15 Karlströms bruk, Kristberg\n1691-02-15 i Karlströms bruk, Kristberg\n\nGift med Maria Johansdotter 1712-05-02 Svennevad (T)\n\nDöd 1729-06-16 Lesjöfors, Gåsborn\n1729-06-16 i Lesjöfors, Gåsborn\n\nNoteringar\nMårten Henriksson Bonnevier, född 1691-02-15 i Karlströms bruk, Kristberg, död 1729-06-16 i Lesjöfors, Gåsborn. Hammarsmed. (SoH:1992:2)(ÖH). \n\nMårten är som hammarsmed verksam vid Haddebo före år 1714 samt 1714-15 vid Kårberg i Snavlunda sn. Efter något eller några år som bergssoldat, antas han åter som lärodräng vid Borggårds bruk i Hällestad sn år 1720. Han smider senare i Villingsberg Knista sn 1724, Valåsen, Karlskoga socken 1725-26 och Lesjöfors i Gåsborns socken 1727-1729. \nBarn:\nJohan Mårtensson Bonnevier, född 1713-04-16, död 1786-06-13 \nHenrik Mårtensson Bonnevier, född 1715-02-22, död 1715-05-11 \nMaria Mårtensdotter Bonnevier, född 1716-08-19, död 1752 \nKatarina Mårtensdotter Bonnevier, döpt 1721-03-19 \nAnnika Mårtensdotter, född 1724, död 1772-11-15 \nPeter Mårtensson Bonnevier, född 1726-11-12 \n\nInflyttad till Haddebo bruk, Svennevad sn. Inflyttad 1714 till Kårbergs bruk, Snavlunda sn. Inflyttad 1720? till Borggårds bruk, Hällestad sn. Inflyttad 1724 till Villingsberg, Knista sn. Inflyttad 1725 till Valåsen, Karlskoga sn. Inflyttad 1727 till Lesjöfors bruk, Rämmen sn"
     }
   },
   "parentsOf": {
@@ -14790,12 +14805,12 @@
       "p_zobmj6wp8"
     ],
     "p_3uj910se8": [
-      "p_bbclq6f9g",
-      "p_3rw58lslc"
+      "p_3rw58lslc",
+      "p_bbclq6f9g"
     ],
     "p_3w3d8mg0r": [
-      "p_e2d8rcv1d",
-      "p_p1t2kmcat"
+      "p_p1t2kmcat",
+      "p_e2d8rcv1d"
     ],
     "p_607tk2v1i": [
       "p_fceooch",
@@ -14822,8 +14837,8 @@
       "p_apnevfd1e"
     ],
     "p_anref8x": [
-      "p_q1486bk",
-      "p_a9c12mk"
+      "p_a9c12mk",
+      "p_q1486bk"
     ],
     "p_bbclq6f9g": [
       "p_r6gu9qm8a",
@@ -14839,12 +14854,12 @@
       "p_ymb6wc3q0"
     ],
     "p_c2jyk4pds": [
-      "p_9vhcxd8",
-      "p_mc6jemk"
+      "p_mc6jemk",
+      "p_9vhcxd8"
     ],
     "p_czyydy2g7": [
-      "p_9vhcxd8",
-      "p_mc6jemk"
+      "p_mc6jemk",
+      "p_9vhcxd8"
     ],
     "p_ep1684kzs": [
       "p_n2oxqssdd",
@@ -14855,8 +14870,8 @@
       "p_epbrpkbpc"
     ],
     "p_ir25hn919": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_p1t2kmcat": [
       "p_6c6wnb9",
@@ -14883,12 +14898,12 @@
       "p_ymb6wc3q0"
     ],
     "p_t22zhc497": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_vomcn89yz": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_zobmj6wp8": [
       "p_6c6wnb9",
@@ -14939,12 +14954,12 @@
       "p_apnevfd1e"
     ],
     "p_ir4u61dqa": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_jqtxmllar": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_apnevfd1e": [
       "p_l0tiqibe0",
@@ -14971,12 +14986,12 @@
       "p_apnevfd1e"
     ],
     "p_z4rxd74pc": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_zcl5kw4oh": [
-      "p_e2d8rcv1d",
-      "p_p1t2kmcat"
+      "p_p1t2kmcat",
+      "p_e2d8rcv1d"
     ],
     "p_lx16wimrx": [
       "p_izcueyhnf",
@@ -14990,8 +15005,8 @@
       "p_sh6rs3ypi"
     ],
     "p_4cjwtla35": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_37jcbtegu": [
       "p_n2oxqssdd",
@@ -16548,6 +16563,12 @@
     "p_xztucv6k": [
       "p_bdi9ltus",
       "p_hzw46583"
+    ],
+    "p_tkxn8dkh4": [
+      "p_8jgv67fq"
+    ],
+    "p_q5r8a8di": [
+      "p_hwheltu5"
     ]
   },
   "childrenOf": {
@@ -16559,18 +16580,18 @@
       "p_3qowa85hd",
       "p_8mchqpopa"
     ],
-    "p_3rw58lslc": [
-      "p_3uj910se8"
-    ],
     "p_bbclq6f9g": [
       "p_3uj910se8",
       "p_4yyrm3723"
     ],
-    "p_p1t2kmcat": [
+    "p_3rw58lslc": [
+      "p_3uj910se8"
+    ],
+    "p_e2d8rcv1d": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
-    "p_e2d8rcv1d": [
+    "p_p1t2kmcat": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
@@ -16618,10 +16639,10 @@
       "p_yhg9e9i5y",
       "p_tdvl922cf"
     ],
-    "p_a9c12mk": [
+    "p_q1486bk": [
       "p_anref8x"
     ],
-    "p_q1486bk": [
+    "p_a9c12mk": [
       "p_anref8x"
     ],
     "p_k9dqg17ug": [
@@ -16664,11 +16685,11 @@
       "p_trylh546h",
       "p_vit2oe3no"
     ],
-    "p_mc6jemk": [
+    "p_9vhcxd8": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
-    "p_9vhcxd8": [
+    "p_mc6jemk": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
@@ -16694,13 +16715,13 @@
       "p_cyl275xx",
       "p_907ij0i8"
     ],
-    "p_yhg9e9i5y": [
+    "p_n4z6lfc2f": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
       "p_4cjwtla35"
     ],
-    "p_n4z6lfc2f": [
+    "p_yhg9e9i5y": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
@@ -16720,12 +16741,12 @@
       "p_zobmj6wp8",
       "p_0dj5jnxhr"
     ],
-    "p_0dj5jnxhr": [
+    "p_zmfl39a5r": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
     ],
-    "p_zmfl39a5r": [
+    "p_0dj5jnxhr": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
@@ -16923,7 +16944,8 @@
       "p_drl4xs979"
     ],
     "p_8jgv67fq": [
-      "p_j8c0rrmlj"
+      "p_j8c0rrmlj",
+      "p_tkxn8dkh4"
     ],
     "p_io1qiphv": [
       "p_j8c0rrmlj"
@@ -18376,6 +18398,9 @@
     ],
     "p_hzw46583": [
       "p_xztucv6k"
+    ],
+    "p_hwheltu5": [
+      "p_q5r8a8di"
     ]
   },
   "spousesOf": {
