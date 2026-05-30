@@ -14947,6 +14947,36 @@
       "photo": "",
       "photoId": "",
       "history": "Karin\n\nFödd 1595 \n\nDöd 1651 Finspång, Risinge (E)\n1651 i Finspång, Risinge\n\nNoteringar\nKarin, född cirka 1595, död 1651 i Finspång, Risinge. Bosatt i Finspång, Risinge. (KL). \n\nDopvittne i Risinge 1635-11-15. \"Test. pengar av Mester Hindrich i Finspång, efter sin hustru.\""
+    },
+    "p_rlc4b60z": {
+      "id": "p_rlc4b60z",
+      "name": "Carl Pedersson",
+      "gender": "M",
+      "role": "",
+      "born": "1682",
+      "bornParish": "Gåsborn",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_467b6mfi": {
+      "id": "p_467b6mfi",
+      "name": "Lisken Giotesdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1686",
+      "bornParish": "Gåsborn",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
     }
   },
   "parentsOf": {
@@ -16715,7 +16745,8 @@
       "p_hzw46583"
     ],
     "p_tkxn8dkh4": [
-      "p_8jgv67fq"
+      "p_8jgv67fq",
+      "p_io1qiphv"
     ],
     "p_q5r8a8di": [
       "p_hwheltu5",
@@ -16741,6 +16772,10 @@
     "p_gq87a0q9": [
       "p_ls9an7cw",
       "p_0eg8akgz"
+    ],
+    "p_zxsn4f7g": [
+      "p_rlc4b60z",
+      "p_467b6mfi"
     ]
   },
   "childrenOf": {
@@ -17120,7 +17155,8 @@
       "p_tkxn8dkh4"
     ],
     "p_io1qiphv": [
-      "p_j8c0rrmlj"
+      "p_j8c0rrmlj",
+      "p_tkxn8dkh4"
     ],
     "p_q5r8a8di": [
       "p_io1qiphv"
@@ -18603,6 +18639,12 @@
     ],
     "p_0eg8akgz": [
       "p_gq87a0q9"
+    ],
+    "p_rlc4b60z": [
+      "p_zxsn4f7g"
+    ],
+    "p_467b6mfi": [
+      "p_zxsn4f7g"
     ]
   },
   "spousesOf": {
@@ -20274,6 +20316,12 @@
     ],
     "p_0eg8akgz": [
       "p_ls9an7cw"
+    ],
+    "p_rlc4b60z": [
+      "p_467b6mfi"
+    ],
+    "p_467b6mfi": [
+      "p_rlc4b60z"
     ]
   }
 }
