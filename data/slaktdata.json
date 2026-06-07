@@ -16177,6 +16177,306 @@
       "photo": "",
       "photoId": "",
       "history": ""
+    },
+    "p_x35kahlw": {
+      "id": "p_x35kahlw",
+      "name": "Daniels Mats Matsson",
+      "gender": "M",
+      "role": "",
+      "born": "1741-11-29",
+      "bornParish": "Moje, Gagnef",
+      "died": "1813-09-09",
+      "diedParish": "Moje, Gagnef",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_v95fnu0i": {
+      "id": "p_v95fnu0i",
+      "name": "Anna Matsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1768-08-04",
+      "bornParish": "Moje, Gagnef",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Gagnefs kyrkoarkiv, Husförhörslängder, SE/ULA/11214/A I/16 (1826-1835), bildid: C0012537_00061\n\nhttps://sok.riksarkivet.se/bildvisning/C0012537_00061\n\nVigsel: 1795-06-02"
+    },
+    "p_ub3t9tyh": {
+      "id": "p_ub3t9tyh",
+      "name": "Jönis Mats Matsson",
+      "gender": "M",
+      "role": "",
+      "born": "1701",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_0bv4jpk1": {
+      "id": "p_0bv4jpk1",
+      "name": "Caren Danielsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1707-04-13",
+      "bornParish": "Moje, Gagnef",
+      "died": "1746-03-16",
+      "diedParish": "Moje, Gagnef",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_taltm4iv": {
+      "id": "p_taltm4iv",
+      "name": "Daniel Matsson",
+      "gender": "",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_t2pot78x": {
+      "id": "p_t2pot78x",
+      "name": "Britta Jansdotter",
+      "gender": "",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_v2ohjbj3": {
+      "id": "p_v2ohjbj3",
+      "name": "Mats Andersson",
+      "gender": "M",
+      "role": "",
+      "born": "1742-09-20",
+      "bornParish": "Moje, Gagnef",
+      "died": "1799-02-17",
+      "diedParish": "Moje, Gagnef",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_ecsi8nno": {
+      "id": "p_ecsi8nno",
+      "name": "Marghta Ohlsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1741-12-28",
+      "bornParish": "Östtjärna, Gagnef",
+      "died": "1802-05-03",
+      "diedParish": "Moje, Gagnef",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_0twpm4ke": {
+      "id": "p_0twpm4ke",
+      "name": "Jönis Anders Matsson",
+      "gender": "M",
+      "role": "",
+      "born": "1706-09-14",
+      "bornParish": "Moje, Gagnef",
+      "died": "1781",
+      "diedParish": "Stockholm",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_u4azq60r": {
+      "id": "p_u4azq60r",
+      "name": "Anna Olsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1706-09-09",
+      "bornParish": "Gagnef",
+      "died": "1773",
+      "diedParish": "Gagnef",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_1tu26jrj": {
+      "id": "p_1tu26jrj",
+      "name": "Mats Ersson",
+      "gender": "",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_s58gdzum": {
+      "id": "p_s58gdzum",
+      "name": "Anna Andersdotter",
+      "gender": "",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_6xoe9ckl": {
+      "id": "p_6xoe9ckl",
+      "name": "Olof Olsson",
+      "gender": "M",
+      "role": "",
+      "born": "1709",
+      "bornParish": "Östtjärna, Gagnef",
+      "died": "1772",
+      "diedParish": "Gagnef",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Sverige, kyrkböcker, 1451-1943 Kopparberg Gagnef Husförhör (Household examination) 1738 - 1757 (AI:1) sid 285\nhttps://search.ancestry.se/search/db.aspx?dbid=2225"
+    },
+    "p_nha1tna6": {
+      "id": "p_nha1tna6",
+      "name": "Kerstin Jacobsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1711-04-14",
+      "bornParish": "Berggården, Gagnef",
+      "died": "1765-02-24",
+      "diedParish": "Östtjärna, Gagnef",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_gyh0jpjw": {
+      "id": "p_gyh0jpjw",
+      "name": "Jacob Jacobsson",
+      "gender": "",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_r8p23jmc": {
+      "id": "p_r8p23jmc",
+      "name": "Britta Olofsdotter",
+      "gender": "",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_bthhc982": {
+      "id": "p_bthhc982",
+      "name": "Olof Larsson",
+      "gender": "M",
+      "role": "",
+      "born": "1673",
+      "bornParish": "",
+      "died": "1740",
+      "diedParish": "Östtjärna",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_1fjqbx83": {
+      "id": "p_1fjqbx83",
+      "name": "Margta Ersdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1681",
+      "bornParish": "Moje, Gagnef",
+      "died": "1736-10-10",
+      "diedParish": "Östtjärna",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_ow2olxex": {
+      "id": "p_ow2olxex",
+      "name": "Erik Olsson",
+      "gender": "",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_qf6q34jh": {
+      "id": "p_qf6q34jh",
+      "name": "Karin Olsdotter",
+      "gender": "",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
     }
   },
   "parentsOf": {
@@ -18169,6 +18469,46 @@
     ],
     "p_m6569y0b": [
       "p_rpoobckk"
+    ],
+    "p_41iz5j2a": [
+      "p_x35kahlw",
+      "p_v95fnu0i"
+    ],
+    "p_x35kahlw": [
+      "p_ub3t9tyh",
+      "p_0bv4jpk1"
+    ],
+    "p_0bv4jpk1": [
+      "p_taltm4iv",
+      "p_t2pot78x"
+    ],
+    "p_v95fnu0i": [
+      "p_v2ohjbj3",
+      "p_ecsi8nno"
+    ],
+    "p_v2ohjbj3": [
+      "p_0twpm4ke",
+      "p_u4azq60r"
+    ],
+    "p_0twpm4ke": [
+      "p_1tu26jrj",
+      "p_s58gdzum"
+    ],
+    "p_ecsi8nno": [
+      "p_6xoe9ckl",
+      "p_nha1tna6"
+    ],
+    "p_nha1tna6": [
+      "p_gyh0jpjw",
+      "p_r8p23jmc"
+    ],
+    "p_6xoe9ckl": [
+      "p_bthhc982",
+      "p_1fjqbx83"
+    ],
+    "p_1fjqbx83": [
+      "p_ow2olxex",
+      "p_qf6q34jh"
     ]
   },
   "childrenOf": {
@@ -20270,6 +20610,66 @@
     ],
     "p_rpoobckk": [
       "p_m6569y0b"
+    ],
+    "p_x35kahlw": [
+      "p_41iz5j2a"
+    ],
+    "p_v95fnu0i": [
+      "p_41iz5j2a"
+    ],
+    "p_ub3t9tyh": [
+      "p_x35kahlw"
+    ],
+    "p_0bv4jpk1": [
+      "p_x35kahlw"
+    ],
+    "p_taltm4iv": [
+      "p_0bv4jpk1"
+    ],
+    "p_t2pot78x": [
+      "p_0bv4jpk1"
+    ],
+    "p_v2ohjbj3": [
+      "p_v95fnu0i"
+    ],
+    "p_ecsi8nno": [
+      "p_v95fnu0i"
+    ],
+    "p_0twpm4ke": [
+      "p_v2ohjbj3"
+    ],
+    "p_u4azq60r": [
+      "p_v2ohjbj3"
+    ],
+    "p_1tu26jrj": [
+      "p_0twpm4ke"
+    ],
+    "p_s58gdzum": [
+      "p_0twpm4ke"
+    ],
+    "p_6xoe9ckl": [
+      "p_ecsi8nno"
+    ],
+    "p_nha1tna6": [
+      "p_ecsi8nno"
+    ],
+    "p_gyh0jpjw": [
+      "p_nha1tna6"
+    ],
+    "p_r8p23jmc": [
+      "p_nha1tna6"
+    ],
+    "p_bthhc982": [
+      "p_6xoe9ckl"
+    ],
+    "p_1fjqbx83": [
+      "p_6xoe9ckl"
+    ],
+    "p_ow2olxex": [
+      "p_1fjqbx83"
+    ],
+    "p_qf6q34jh": [
+      "p_1fjqbx83"
     ]
   },
   "spousesOf": {
@@ -22133,6 +22533,66 @@
     ],
     "p_8ib6bmnx": [
       "p_m6569y0b"
+    ],
+    "p_x35kahlw": [
+      "p_v95fnu0i"
+    ],
+    "p_v95fnu0i": [
+      "p_x35kahlw"
+    ],
+    "p_ub3t9tyh": [
+      "p_0bv4jpk1"
+    ],
+    "p_0bv4jpk1": [
+      "p_ub3t9tyh"
+    ],
+    "p_taltm4iv": [
+      "p_t2pot78x"
+    ],
+    "p_t2pot78x": [
+      "p_taltm4iv"
+    ],
+    "p_v2ohjbj3": [
+      "p_ecsi8nno"
+    ],
+    "p_ecsi8nno": [
+      "p_v2ohjbj3"
+    ],
+    "p_0twpm4ke": [
+      "p_u4azq60r"
+    ],
+    "p_u4azq60r": [
+      "p_0twpm4ke"
+    ],
+    "p_1tu26jrj": [
+      "p_s58gdzum"
+    ],
+    "p_s58gdzum": [
+      "p_1tu26jrj"
+    ],
+    "p_6xoe9ckl": [
+      "p_nha1tna6"
+    ],
+    "p_nha1tna6": [
+      "p_6xoe9ckl"
+    ],
+    "p_gyh0jpjw": [
+      "p_r8p23jmc"
+    ],
+    "p_r8p23jmc": [
+      "p_gyh0jpjw"
+    ],
+    "p_bthhc982": [
+      "p_1fjqbx83"
+    ],
+    "p_1fjqbx83": [
+      "p_bthhc982"
+    ],
+    "p_ow2olxex": [
+      "p_qf6q34jh"
+    ],
+    "p_qf6q34jh": [
+      "p_ow2olxex"
     ]
   }
 }
