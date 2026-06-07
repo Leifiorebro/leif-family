@@ -15832,6 +15832,36 @@
       "photo": "",
       "photoId": "",
       "history": "Per Nilsson\n\nFödd 1590 Säfsnäs, Dalarnas, Sweden\n\nDöd 1670 Säfsnäs, Dalarnas, Sweden\n\nNoteringar\n1590 Per Nilson Bott i Håvberget, Säfsbyn död 1670; enl Henry Mattsson 41-44 i Håvberget, ml 45-64 i Säfsbyn Barn: Bertil 20, Karin 40, Per 40, Elisabet 48 Syskon: Brita f.70, Karin f.00\nEnl domb 49 har han tagit hö för Erik Nilson i Håen Enl domb 55 har han hyst en lösfinne Enl domb 59 får han betalt förhalm Enl domb 61 har hans granne Nils Knutsson gjort åverkan Domb 62 talar om svedjebrännaren Per Nilsson och att hanånyo hyst en lösfinne Domb 65 talar om Per Nilssons änka som äger halva torpet och att Per Nilsson tillsammans med sinmåg Lars Jönsson är rätt åbo i Säfsbyn I domb 65 och 66 anklagas han för olaga skogfällande I domb 66 tvistar han medMats Larsson i Tomsjön om ett svedjefall och köper halva Nils Knutssons torp Enl domb 66 har Elin Eriksdotter bott hoshonom och fött oäkta tvillingbarn I domb 69 är han osams med mågen Lars Jönsson Enl domb 70 tvistar han om mark med Johan Sigfridsson Enl domb 76 vill sonen Bertil överta Lars Jönssons hemmansdel I domb 80 nämns salig Per Nilsson Enl domb 90 köpte Nils Person halva Mats Persons torp för 70 år sedan."
+    },
+    "p_knwr17ye": {
+      "id": "p_knwr17ye",
+      "name": "Flitt Per Ersson",
+      "gender": "M",
+      "role": "",
+      "born": "1797-07-06",
+      "bornParish": "Tjärna, Gagnef",
+      "died": "1852-02-28",
+      "diedParish": "Moje, Gagnef",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_41iz5j2a": {
+      "id": "p_41iz5j2a",
+      "name": "Anna Matsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1800-11-30",
+      "bornParish": "Moje, Gagnef",
+      "died": "1854-11-11",
+      "diedParish": "Moje, Gagnef",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
     }
   },
   "parentsOf": {
@@ -17777,6 +17807,10 @@
     ],
     "p_aoi4vbkl": [
       "p_du0cs4f7"
+    ],
+    "p_sf098aey": [
+      "p_knwr17ye",
+      "p_41iz5j2a"
     ]
   },
   "childrenOf": {
@@ -19809,6 +19843,12 @@
     ],
     "p_du0cs4f7": [
       "p_aoi4vbkl"
+    ],
+    "p_knwr17ye": [
+      "p_sf098aey"
+    ],
+    "p_41iz5j2a": [
+      "p_sf098aey"
     ]
   },
   "spousesOf": {
@@ -21606,6 +21646,12 @@
     ],
     "p_26nqvmnf": [
       "p_aoi4vbkl"
+    ],
+    "p_knwr17ye": [
+      "p_41iz5j2a"
+    ],
+    "p_41iz5j2a": [
+      "p_knwr17ye"
     ]
   }
 }
