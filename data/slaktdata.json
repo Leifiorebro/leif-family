@@ -15862,6 +15862,321 @@
       "photo": "",
       "photoId": "",
       "history": ""
+    },
+    "p_i51giu2x": {
+      "id": "p_i51giu2x",
+      "name": "Flitts Eric Persson",
+      "gender": "M",
+      "role": "",
+      "born": "1764-01-09",
+      "bornParish": "Gärde, Gagnef",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_od2se628": {
+      "id": "p_od2se628",
+      "name": "Karen Olsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1755-10-08",
+      "bornParish": "Tjärna, Gagnef",
+      "died": "1820-12-16",
+      "diedParish": "Tjärna 37",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_e6ddkhkp": {
+      "id": "p_e6ddkhkp",
+      "name": "Backs Olof Olsson",
+      "gender": "M",
+      "role": "",
+      "born": "1710-09-27",
+      "bornParish": "Tjärna, Gagnef",
+      "died": "1779-08-24",
+      "diedParish": "Tjärna, Gagnef",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_rer9kf7x": {
+      "id": "p_rer9kf7x",
+      "name": "Karen Ersdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1713-04-17",
+      "bornParish": "Mjälgen, Gagnef",
+      "died": "1773-07-18",
+      "diedParish": "Tjärna, Gagnef",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_lmfy4qru": {
+      "id": "p_lmfy4qru",
+      "name": "Olof Persson",
+      "gender": "",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_nzvdie9a": {
+      "id": "p_nzvdie9a",
+      "name": "Brita Ersdotter",
+      "gender": "",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_b4xdakzc": {
+      "id": "p_b4xdakzc",
+      "name": "Per Ersson",
+      "gender": "M",
+      "role": "",
+      "born": "1735-09-28",
+      "bornParish": "Tjärna, Gagnef",
+      "died": "1795-03-10",
+      "diedParish": "Gärde, Gagnef",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_e1v76swe": {
+      "id": "p_e1v76swe",
+      "name": "Kerstin Mathsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1746-04-29",
+      "bornParish": "Gärde, Gagnef",
+      "died": "1812-11-21",
+      "diedParish": "Gärde, Gagnef",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_hcdscynn": {
+      "id": "p_hcdscynn",
+      "name": "Maths Ersson",
+      "gender": "M",
+      "role": "",
+      "born": "1719-10-08",
+      "bornParish": "Gagnef",
+      "died": "1758",
+      "diedParish": "Gagnef",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_y4ei0i7f": {
+      "id": "p_y4ei0i7f",
+      "name": "Anna Jansdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1713",
+      "bornParish": "Gagnef",
+      "died": "1774",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_e7n4bfqm": {
+      "id": "p_e7n4bfqm",
+      "name": "Erik Ersson",
+      "gender": "M",
+      "role": "",
+      "born": "1670",
+      "bornParish": "Gagnef",
+      "died": "1740",
+      "diedParish": "Gagnef",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_nzekby1k": {
+      "id": "p_nzekby1k",
+      "name": "Kerstin Matsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1686-09-19",
+      "bornParish": "Fläckebo, Västmanland",
+      "died": "1724-10",
+      "diedParish": "Bodarna, Gagnef",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_pwtxgt7p": {
+      "id": "p_pwtxgt7p",
+      "name": "Eric Matsson",
+      "gender": "M",
+      "role": "",
+      "born": "1644",
+      "bornParish": "Gagnef",
+      "died": "",
+      "diedParish": "Bodarna, Gagnef",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_gjg67sdh": {
+      "id": "p_gjg67sdh",
+      "name": "Anna Ersdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1649",
+      "bornParish": "Gagnef",
+      "died": "",
+      "diedParish": "Bodarna, Gagnef",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_bm1xqphz": {
+      "id": "p_bm1xqphz",
+      "name": "Erik Olsson",
+      "gender": "M",
+      "role": "",
+      "born": "1705-09-26",
+      "bornParish": "Tjärna, Gagnef",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_hgz7bi6t": {
+      "id": "p_hgz7bi6t",
+      "name": "Karen Persdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1706",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_lkzfnh87": {
+      "id": "p_lkzfnh87",
+      "name": "Olof Ersson",
+      "gender": "M",
+      "role": "",
+      "born": "1672",
+      "bornParish": "Tjärna 18, Gagnef",
+      "died": "1733-04-12",
+      "diedParish": "Tjärna 18, Gagnef",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_91n0f2i8": {
+      "id": "p_91n0f2i8",
+      "name": "Marit Hansdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1676-02-15",
+      "bornParish": "Gagnefsbyn, Gagnef",
+      "died": "1749-06-11",
+      "diedParish": "Gagnef",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_m6569y0b": {
+      "id": "p_m6569y0b",
+      "name": "Hans Matsson",
+      "gender": "M",
+      "role": "",
+      "born": "1649",
+      "bornParish": "",
+      "died": "1710",
+      "diedParish": "Gagnefsbyn, Gagnef",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_8ib6bmnx": {
+      "id": "p_8ib6bmnx",
+      "name": "Kerstin Larsdotter",
+      "gender": "",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_rpoobckk": {
+      "id": "p_rpoobckk",
+      "name": "Margita Larsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "1705",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
     }
   },
   "parentsOf": {
@@ -17811,6 +18126,49 @@
     "p_sf098aey": [
       "p_knwr17ye",
       "p_41iz5j2a"
+    ],
+    "p_knwr17ye": [
+      "p_i51giu2x",
+      "p_od2se628"
+    ],
+    "p_od2se628": [
+      "p_e6ddkhkp",
+      "p_rer9kf7x"
+    ],
+    "p_e6ddkhkp": [
+      "p_lmfy4qru",
+      "p_nzvdie9a"
+    ],
+    "p_i51giu2x": [
+      "p_b4xdakzc",
+      "p_e1v76swe"
+    ],
+    "p_e1v76swe": [
+      "p_hcdscynn",
+      "p_y4ei0i7f"
+    ],
+    "p_hcdscynn": [
+      "p_e7n4bfqm",
+      "p_nzekby1k"
+    ],
+    "p_e7n4bfqm": [
+      "p_pwtxgt7p",
+      "p_gjg67sdh"
+    ],
+    "p_b4xdakzc": [
+      "p_bm1xqphz",
+      "p_hgz7bi6t"
+    ],
+    "p_bm1xqphz": [
+      "p_lkzfnh87",
+      "p_91n0f2i8"
+    ],
+    "p_91n0f2i8": [
+      "p_m6569y0b",
+      "p_8ib6bmnx"
+    ],
+    "p_m6569y0b": [
+      "p_rpoobckk"
     ]
   },
   "childrenOf": {
@@ -19849,6 +20207,69 @@
     ],
     "p_41iz5j2a": [
       "p_sf098aey"
+    ],
+    "p_i51giu2x": [
+      "p_knwr17ye"
+    ],
+    "p_od2se628": [
+      "p_knwr17ye"
+    ],
+    "p_e6ddkhkp": [
+      "p_od2se628"
+    ],
+    "p_rer9kf7x": [
+      "p_od2se628"
+    ],
+    "p_lmfy4qru": [
+      "p_e6ddkhkp"
+    ],
+    "p_nzvdie9a": [
+      "p_e6ddkhkp"
+    ],
+    "p_b4xdakzc": [
+      "p_i51giu2x"
+    ],
+    "p_e1v76swe": [
+      "p_i51giu2x"
+    ],
+    "p_hcdscynn": [
+      "p_e1v76swe"
+    ],
+    "p_y4ei0i7f": [
+      "p_e1v76swe"
+    ],
+    "p_e7n4bfqm": [
+      "p_hcdscynn"
+    ],
+    "p_nzekby1k": [
+      "p_hcdscynn"
+    ],
+    "p_pwtxgt7p": [
+      "p_e7n4bfqm"
+    ],
+    "p_gjg67sdh": [
+      "p_e7n4bfqm"
+    ],
+    "p_bm1xqphz": [
+      "p_b4xdakzc"
+    ],
+    "p_hgz7bi6t": [
+      "p_b4xdakzc"
+    ],
+    "p_lkzfnh87": [
+      "p_bm1xqphz"
+    ],
+    "p_91n0f2i8": [
+      "p_bm1xqphz"
+    ],
+    "p_m6569y0b": [
+      "p_91n0f2i8"
+    ],
+    "p_8ib6bmnx": [
+      "p_91n0f2i8"
+    ],
+    "p_rpoobckk": [
+      "p_m6569y0b"
     ]
   },
   "spousesOf": {
@@ -21652,6 +22073,66 @@
     ],
     "p_41iz5j2a": [
       "p_knwr17ye"
+    ],
+    "p_i51giu2x": [
+      "p_od2se628"
+    ],
+    "p_od2se628": [
+      "p_i51giu2x"
+    ],
+    "p_e6ddkhkp": [
+      "p_rer9kf7x"
+    ],
+    "p_rer9kf7x": [
+      "p_e6ddkhkp"
+    ],
+    "p_lmfy4qru": [
+      "p_nzvdie9a"
+    ],
+    "p_nzvdie9a": [
+      "p_lmfy4qru"
+    ],
+    "p_b4xdakzc": [
+      "p_e1v76swe"
+    ],
+    "p_e1v76swe": [
+      "p_b4xdakzc"
+    ],
+    "p_hcdscynn": [
+      "p_y4ei0i7f"
+    ],
+    "p_y4ei0i7f": [
+      "p_hcdscynn"
+    ],
+    "p_e7n4bfqm": [
+      "p_nzekby1k"
+    ],
+    "p_nzekby1k": [
+      "p_e7n4bfqm"
+    ],
+    "p_pwtxgt7p": [
+      "p_gjg67sdh"
+    ],
+    "p_gjg67sdh": [
+      "p_pwtxgt7p"
+    ],
+    "p_bm1xqphz": [
+      "p_hgz7bi6t"
+    ],
+    "p_hgz7bi6t": [
+      "p_bm1xqphz"
+    ],
+    "p_lkzfnh87": [
+      "p_91n0f2i8"
+    ],
+    "p_91n0f2i8": [
+      "p_lkzfnh87"
+    ],
+    "p_m6569y0b": [
+      "p_8ib6bmnx"
+    ],
+    "p_8ib6bmnx": [
+      "p_m6569y0b"
     ]
   }
 }
