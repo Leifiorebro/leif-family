@@ -16744,6 +16744,66 @@
       "photo": "",
       "photoId": "",
       "history": "Karin Gothardsdotter\n\nFödd 1738 \nKarl Gustav (N, P) AI:1 (1798-1816) Bild 38 / sid 19 (AID: v92699.b38.s19, NAD: SE/LLA/13198)\n\nNoteringar\nKarl Gustav (N, P) AI:1 (1798-1816) Bild 55 / sid 17 (AID: v92699.b55.s17, NAD: SE/LLA/13198)"
+    },
+    "p_ojfjjbqi": {
+      "id": "p_ojfjjbqi",
+      "name": "Olof Jönsson",
+      "gender": "M",
+      "role": "",
+      "born": "1789-07-22",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Olof Jönsson\n\nÅbo\n\nFödd 1789-07-22 \nKarl Gustav (N, P) AI:6 (1831-1849) Bild 6 / sid 3 (AID: v92706.b6.s3, NAD: SE/LLA/13198)\n\nNoteringar\nKarl Gustav (N, P) AI:7 (1850-1859) Bild 21 / sid 17 (AID: v92707.b21.s17, NAD: SE/LLA/13198)"
+    },
+    "p_3j7gkr52": {
+      "id": "p_3j7gkr52",
+      "name": "Sarah Persdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1792",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Sara Pehrsdotter\n\nFödd 1792 \nKarl Gustav (N, P) AI:6 (1831-1849) Bild 6 / sid 3 (AID: v92706.b6.s3, NAD: SE/LLA/13198)"
+    },
+    "p_7b7llh5m": {
+      "id": "p_7b7llh5m",
+      "name": "Jöns Olofsson",
+      "gender": "M",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Jöns Olofsson\n\nNoteringar\nKarl Gustav (N, P) AI:7 (1850-1859) Bild 21 / sid 17 (AID: v92707.b21.s17, NAD: SE/LLA/13198)"
+    },
+    "p_o0ltj5be": {
+      "id": "p_o0ltj5be",
+      "name": "Lisa Svensdotter",
+      "gender": "F",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Lisa Svensdotter\n\nNoteringar\nKarl Gustav (N, P) AI:7 (1850-1859) Bild 21 / sid 17 (AID: v92707.b21.s17, NAD: SE/LLA/13198)"
     }
   },
   "parentsOf": {
@@ -18814,6 +18874,14 @@
     "p_3z35dbxf": [
       "p_1awiu4qr",
       "p_td336zi2"
+    ],
+    "p_xd1afbes": [
+      "p_ojfjjbqi",
+      "p_3j7gkr52"
+    ],
+    "p_ojfjjbqi": [
+      "p_7b7llh5m",
+      "p_o0ltj5be"
     ]
   },
   "childrenOf": {
@@ -21029,6 +21097,18 @@
     ],
     "p_td336zi2": [
       "p_3z35dbxf"
+    ],
+    "p_ojfjjbqi": [
+      "p_xd1afbes"
+    ],
+    "p_3j7gkr52": [
+      "p_xd1afbes"
+    ],
+    "p_7b7llh5m": [
+      "p_ojfjjbqi"
+    ],
+    "p_o0ltj5be": [
+      "p_ojfjjbqi"
     ]
   },
   "spousesOf": {
@@ -23005,6 +23085,18 @@
     ],
     "p_td336zi2": [
       "p_1awiu4qr"
+    ],
+    "p_ojfjjbqi": [
+      "p_3j7gkr52"
+    ],
+    "p_3j7gkr52": [
+      "p_ojfjjbqi"
+    ],
+    "p_7b7llh5m": [
+      "p_o0ltj5be"
+    ],
+    "p_o0ltj5be": [
+      "p_7b7llh5m"
     ]
   }
 }
