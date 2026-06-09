@@ -17691,6 +17691,111 @@
       "photo": "",
       "photoId": "",
       "history": ""
+    },
+    "p_xi1lb2x9": {
+      "id": "p_xi1lb2x9",
+      "name": "Anders Månsson",
+      "gender": "M",
+      "role": "",
+      "born": "1650",
+      "bornParish": "Basteberg, Malexander",
+      "died": "1719-01-04",
+      "diedParish": "Kisa",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_qcqqhyj4": {
+      "id": "p_qcqqhyj4",
+      "name": "Ingrid Sunesdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1655",
+      "bornParish": "Aspenäs, Malexander",
+      "died": "1728-03-03",
+      "diedParish": "Kisa",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_wdqk69f5": {
+      "id": "p_wdqk69f5",
+      "name": "Sune Månsson",
+      "gender": "M",
+      "role": "",
+      "born": "1620",
+      "bornParish": "Östergötland",
+      "died": "1682",
+      "diedParish": "Östergötland",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_2xp3cw69": {
+      "id": "p_2xp3cw69",
+      "name": "Brita Hemmingsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1610",
+      "bornParish": "Österåker, Södermanland",
+      "died": "1695-04-14",
+      "diedParish": "Haredal, Tidersrum, Östergötland",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_8kz0ebbp": {
+      "id": "p_8kz0ebbp",
+      "name": "Måns Nilsson",
+      "gender": "",
+      "role": "",
+      "born": "1590",
+      "bornParish": "",
+      "died": "1633",
+      "diedParish": "Tidersrum, Östergötland",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_nstzrad2": {
+      "id": "p_nstzrad2",
+      "name": "Lucia Månsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1600",
+      "bornParish": "Småland",
+      "died": "1671",
+      "diedParish": "Tidersrum, Östergötland",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_752xxhf4": {
+      "id": "p_752xxhf4",
+      "name": "Måns Nilsson",
+      "gender": "M",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "1691",
+      "diedParish": "Malexander",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
     }
   },
   "parentsOf": {
@@ -17699,12 +17804,12 @@
       "p_zobmj6wp8"
     ],
     "p_3uj910se8": [
-      "p_3rw58lslc",
-      "p_bbclq6f9g"
+      "p_bbclq6f9g",
+      "p_3rw58lslc"
     ],
     "p_3w3d8mg0r": [
-      "p_p1t2kmcat",
-      "p_e2d8rcv1d"
+      "p_e2d8rcv1d",
+      "p_p1t2kmcat"
     ],
     "p_607tk2v1i": [
       "p_fceooch",
@@ -17731,8 +17836,8 @@
       "p_apnevfd1e"
     ],
     "p_anref8x": [
-      "p_a9c12mk",
-      "p_q1486bk"
+      "p_q1486bk",
+      "p_a9c12mk"
     ],
     "p_bbclq6f9g": [
       "p_r6gu9qm8a",
@@ -17748,12 +17853,12 @@
       "p_ymb6wc3q0"
     ],
     "p_c2jyk4pds": [
-      "p_mc6jemk",
-      "p_9vhcxd8"
+      "p_9vhcxd8",
+      "p_mc6jemk"
     ],
     "p_czyydy2g7": [
-      "p_mc6jemk",
-      "p_9vhcxd8"
+      "p_9vhcxd8",
+      "p_mc6jemk"
     ],
     "p_ep1684kzs": [
       "p_n2oxqssdd",
@@ -17764,8 +17869,8 @@
       "p_epbrpkbpc"
     ],
     "p_ir25hn919": [
-      "p_yhg9e9i5y",
-      "p_n4z6lfc2f"
+      "p_n4z6lfc2f",
+      "p_yhg9e9i5y"
     ],
     "p_p1t2kmcat": [
       "p_6c6wnb9",
@@ -17792,12 +17897,12 @@
       "p_ymb6wc3q0"
     ],
     "p_t22zhc497": [
-      "p_0dj5jnxhr",
-      "p_zmfl39a5r"
+      "p_zmfl39a5r",
+      "p_0dj5jnxhr"
     ],
     "p_vomcn89yz": [
-      "p_0dj5jnxhr",
-      "p_zmfl39a5r"
+      "p_zmfl39a5r",
+      "p_0dj5jnxhr"
     ],
     "p_zobmj6wp8": [
       "p_6c6wnb9",
@@ -17848,12 +17953,12 @@
       "p_apnevfd1e"
     ],
     "p_ir4u61dqa": [
-      "p_yhg9e9i5y",
-      "p_n4z6lfc2f"
+      "p_n4z6lfc2f",
+      "p_yhg9e9i5y"
     ],
     "p_jqtxmllar": [
-      "p_yhg9e9i5y",
-      "p_n4z6lfc2f"
+      "p_n4z6lfc2f",
+      "p_yhg9e9i5y"
     ],
     "p_apnevfd1e": [
       "p_l0tiqibe0",
@@ -17880,12 +17985,12 @@
       "p_apnevfd1e"
     ],
     "p_z4rxd74pc": [
-      "p_0dj5jnxhr",
-      "p_zmfl39a5r"
+      "p_zmfl39a5r",
+      "p_0dj5jnxhr"
     ],
     "p_zcl5kw4oh": [
-      "p_p1t2kmcat",
-      "p_e2d8rcv1d"
+      "p_e2d8rcv1d",
+      "p_p1t2kmcat"
     ],
     "p_lx16wimrx": [
       "p_izcueyhnf",
@@ -17899,8 +18004,8 @@
       "p_sh6rs3ypi"
     ],
     "p_4cjwtla35": [
-      "p_yhg9e9i5y",
-      "p_n4z6lfc2f"
+      "p_n4z6lfc2f",
+      "p_yhg9e9i5y"
     ],
     "p_37jcbtegu": [
       "p_n2oxqssdd",
@@ -19893,6 +19998,21 @@
     "p_5yerksa6": [
       "p_7sta0s75",
       "p_u21n6q3y"
+    ],
+    "p_bcmaqmt8": [
+      "p_xi1lb2x9",
+      "p_qcqqhyj4"
+    ],
+    "p_qcqqhyj4": [
+      "p_wdqk69f5",
+      "p_2xp3cw69"
+    ],
+    "p_wdqk69f5": [
+      "p_8kz0ebbp",
+      "p_nstzrad2"
+    ],
+    "p_xi1lb2x9": [
+      "p_752xxhf4"
     ]
   },
   "childrenOf": {
@@ -19904,18 +20024,18 @@
       "p_3qowa85hd",
       "p_8mchqpopa"
     ],
+    "p_3rw58lslc": [
+      "p_3uj910se8"
+    ],
     "p_bbclq6f9g": [
       "p_3uj910se8",
       "p_4yyrm3723"
     ],
-    "p_3rw58lslc": [
-      "p_3uj910se8"
-    ],
-    "p_e2d8rcv1d": [
+    "p_p1t2kmcat": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
-    "p_p1t2kmcat": [
+    "p_e2d8rcv1d": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
@@ -19963,10 +20083,10 @@
       "p_yhg9e9i5y",
       "p_tdvl922cf"
     ],
-    "p_q1486bk": [
+    "p_a9c12mk": [
       "p_anref8x"
     ],
-    "p_a9c12mk": [
+    "p_q1486bk": [
       "p_anref8x"
     ],
     "p_k9dqg17ug": [
@@ -20009,11 +20129,11 @@
       "p_trylh546h",
       "p_vit2oe3no"
     ],
-    "p_9vhcxd8": [
+    "p_mc6jemk": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
-    "p_mc6jemk": [
+    "p_9vhcxd8": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
@@ -20039,13 +20159,13 @@
       "p_cyl275xx",
       "p_907ij0i8"
     ],
-    "p_n4z6lfc2f": [
+    "p_yhg9e9i5y": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
       "p_4cjwtla35"
     ],
-    "p_yhg9e9i5y": [
+    "p_n4z6lfc2f": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
@@ -20065,12 +20185,12 @@
       "p_zobmj6wp8",
       "p_0dj5jnxhr"
     ],
-    "p_zmfl39a5r": [
+    "p_0dj5jnxhr": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
     ],
-    "p_0dj5jnxhr": [
+    "p_zmfl39a5r": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
@@ -22300,6 +22420,27 @@
     ],
     "p_u21n6q3y": [
       "p_5yerksa6"
+    ],
+    "p_xi1lb2x9": [
+      "p_bcmaqmt8"
+    ],
+    "p_qcqqhyj4": [
+      "p_bcmaqmt8"
+    ],
+    "p_wdqk69f5": [
+      "p_qcqqhyj4"
+    ],
+    "p_2xp3cw69": [
+      "p_qcqqhyj4"
+    ],
+    "p_8kz0ebbp": [
+      "p_wdqk69f5"
+    ],
+    "p_nstzrad2": [
+      "p_wdqk69f5"
+    ],
+    "p_752xxhf4": [
+      "p_xi1lb2x9"
     ]
   },
   "spousesOf": {
@@ -24454,6 +24595,24 @@
     ],
     "p_u21n6q3y": [
       "p_7sta0s75"
+    ],
+    "p_xi1lb2x9": [
+      "p_qcqqhyj4"
+    ],
+    "p_qcqqhyj4": [
+      "p_xi1lb2x9"
+    ],
+    "p_wdqk69f5": [
+      "p_2xp3cw69"
+    ],
+    "p_2xp3cw69": [
+      "p_wdqk69f5"
+    ],
+    "p_8kz0ebbp": [
+      "p_nstzrad2"
+    ],
+    "p_nstzrad2": [
+      "p_8kz0ebbp"
     ]
   }
 }
