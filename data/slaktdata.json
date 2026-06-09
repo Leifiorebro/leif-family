@@ -186,24 +186,6 @@
       "photoCaptions": {},
       "photos": []
     },
-    "p_1766082418649": {
-      "id": "p_1766082418649",
-      "name": "Anna Margareta Andersdotter",
-      "createdAt": 1766082418649,
-      "birthDate": "1848-04-29",
-      "birthParish": "Randen, Rinna",
-      "deathDate": "1921-05-08",
-      "deathParish": "Fleminge, Ekeby förs.",
-      "occupation": "",
-      "history": "",
-      "photoId": "greta_andersdotter.jpg",
-      "born": "",
-      "died": "",
-      "photoCaptions": {},
-      "birthPlace": "Randen, Rinna",
-      "deathPlace": "Fleminge, Ekeby förs.",
-      "photos": []
-    },
     "p_1766163986623": {
       "id": "p_1766163986623",
       "name": "Israel Grek",
@@ -17796,6 +17778,96 @@
       "photo": "",
       "photoId": "",
       "history": ""
+    },
+    "p_smy1eoq7": {
+      "id": "p_smy1eoq7",
+      "name": "Israel Persson",
+      "gender": "M",
+      "role": "",
+      "born": "1780-05-28",
+      "bornParish": "Stortorps ägor, Rinna",
+      "died": "1853-12-31",
+      "diedParish": "Randen, Rinna",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Israel Persson\n\nFödd 1780-05-28 Stortorps ägor, Rinna\nFaddrar Jahn  Skräppe hustru Maija Samuelsdotter i Linåsen Sven Nilsson Linåsen hustru Anna Håkansdr.\n\nRinna C:2 (1740-1802) Bild 142 / sid 273 (AID: v39914.b142.s273, NAD: SE/VALA/00305)\nKälla: Rinna C:2 (1740-1802) Bild 142 / sid 273 (AID: v39914.b142.s273, NAD: SE/VALA/00305)\n\nGift med Margareta Jönsdotter 1811-10-15 Rinna\nRinna C:2 (1740-1802) Bild 29 / sid 47 (AID: v39914.b29.s47, NAD: SE/VALA/00305)\nKälla: Rinna C:2 (1740-1802) Bild 29 / sid 47 (AID: v39914.b29.s47, NAD: SE/VALA/00305)\n\nDöd 1853-12-31 Randen, Rinna\n\nNoteringar\nRinna C:2 (1740-1802) Bild 142 / sid 273 (AID: v39914.b142.s273, NAD: SE/VALA/00305)\nRinna AI:1 (1788-1799) Bild 97 / sid 181 (AID: v28667.b97.s181, NAD: SE/VALA/00305)\nRinna C:2 (1740-1802) Bild 29 / sid 47 (AID: v39914.b29.s47, NAD: SE/VALA/00305)\nRinna AI:3 (1815-1823) Bild 192 / sid 371 (AID: v28669.b192.s371\nRinna AI:5 (1829-1837) Bild 228 / sid 441 (AID: v28671.b228.s441\nRinna AI:6 (1838-1845) Bild 224 / sid 433 (AID: v28672.b224.s433\nRinna AI:7 (1845-1851) Bild 217 / sid 407 (AID: v28673.b217.s407\nRinna AI:8 (1852-1860) Bild 234 / sid 445 (AID: v28674.b234.s445"
+    },
+    "p_z429xvse": {
+      "id": "p_z429xvse",
+      "name": "Margareta Jönsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1788",
+      "bornParish": "Ekeby",
+      "died": "1845-01-20",
+      "diedParish": "Rinna",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Margareta Jönsdotter\n\nFödd 1788 Ekeby\n\nGift med Israel Persson 1811-10-15 Rinna\nRinna C:2 (1740-1802) Bild 29 / sid 47 (AID: v39914.b29.s47, NAD: SE/VALA/00305)\nKälla: Rinna C:2 (1740-1802) Bild 29 / sid 47 (AID: v39914.b29.s47, NAD: SE/VALA/00305)\n\nDöd 1845-01-20 Rinna\nRinna AI:6 (1838-1845) Bild 224 / sid 433 (AID: v28672.b224.s433, NAD: SE/VALA/00305)\n\nNoteringar\nRinna AI:6 (1838-1845) Bild 224 / sid 433 (AID: v28672.b224.s433, NAD: SE/VALA/00305)"
+    },
+    "p_i8s6awyw": {
+      "id": "p_i8s6awyw",
+      "name": "Peter Hammarsten",
+      "gender": "M",
+      "role": "",
+      "born": "1755",
+      "bornParish": "Mjölby",
+      "died": "",
+      "diedParish": "",
+      "job": "Soldat i Östgöta regemente till fots",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Peter Hammarsten\n\nSoldat i Östgöta regemente till fot\n\nFödd 1755 Mjölby\n\nGift med Lena Eriksdotter 1778-12-18 \n\nNoteringar\nRinna AI:1 (1788-1799) Bild 97 / sid 181 (AID: v28667.b97.s181, NAD: SE/VALA/00305)\nGeneralmönsterrullor - Östgöta regemente (E) 253 (1789-1790) Bild 48 (AID: v65390.b48, NAD: SE/KrA/0023)\nGenväg r37.p268887629"
+    },
+    "p_0y39j5ai": {
+      "id": "p_0y39j5ai",
+      "name": "Lena Eriksdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1756",
+      "bornParish": "Ekeby",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Lena Eriksdotter\n\nFödd 1756 Ekeby\n\nGift med Peter Hammarsten 1778-12-18 \n\nNoteringar\nRinna AI:1 (1788-1799) Bild 97 / sid 181 (AID: v28667.b97.s181, NAD: SE/VALA/00305)"
+    },
+    "p_3qxdy3o5": {
+      "id": "p_3qxdy3o5",
+      "name": "Peter Persson",
+      "gender": "M",
+      "role": "",
+      "born": "1784-03-14",
+      "bornParish": "Rinna",
+      "died": "1854-01-03",
+      "diedParish": "Rinna",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Peter Persson\n\nFödd 1784-03-14 Rinna\n\nGift med Anna Maja Persdotter 1813-04-02 \n\nDöd 1854-01-03 Rinna\n\nNoteringar\nFlyttade till Ekeby efter 19/11 1818"
+    },
+    "p_lu2iypmf": {
+      "id": "p_lu2iypmf",
+      "name": "Anna Maja Persdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1783-10-30",
+      "bornParish": "Hogstad",
+      "died": "1857-10-17",
+      "diedParish": "Rinna",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
     }
   },
   "parentsOf": {
@@ -17804,12 +17876,12 @@
       "p_zobmj6wp8"
     ],
     "p_3uj910se8": [
-      "p_bbclq6f9g",
-      "p_3rw58lslc"
+      "p_3rw58lslc",
+      "p_bbclq6f9g"
     ],
     "p_3w3d8mg0r": [
-      "p_e2d8rcv1d",
-      "p_p1t2kmcat"
+      "p_p1t2kmcat",
+      "p_e2d8rcv1d"
     ],
     "p_607tk2v1i": [
       "p_fceooch",
@@ -17836,8 +17908,8 @@
       "p_apnevfd1e"
     ],
     "p_anref8x": [
-      "p_q1486bk",
-      "p_a9c12mk"
+      "p_a9c12mk",
+      "p_q1486bk"
     ],
     "p_bbclq6f9g": [
       "p_r6gu9qm8a",
@@ -17853,12 +17925,12 @@
       "p_ymb6wc3q0"
     ],
     "p_c2jyk4pds": [
-      "p_9vhcxd8",
-      "p_mc6jemk"
+      "p_mc6jemk",
+      "p_9vhcxd8"
     ],
     "p_czyydy2g7": [
-      "p_9vhcxd8",
-      "p_mc6jemk"
+      "p_mc6jemk",
+      "p_9vhcxd8"
     ],
     "p_ep1684kzs": [
       "p_n2oxqssdd",
@@ -17869,8 +17941,8 @@
       "p_epbrpkbpc"
     ],
     "p_ir25hn919": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_p1t2kmcat": [
       "p_6c6wnb9",
@@ -17897,12 +17969,12 @@
       "p_ymb6wc3q0"
     ],
     "p_t22zhc497": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_vomcn89yz": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_zobmj6wp8": [
       "p_6c6wnb9",
@@ -17953,20 +18025,16 @@
       "p_apnevfd1e"
     ],
     "p_ir4u61dqa": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_jqtxmllar": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_apnevfd1e": [
       "p_l0tiqibe0",
       "p_jtw2yt4vg"
-    ],
-    "p_1766082418649": [
-      "p_k0cytigk5",
-      "p_11s7733na"
     ],
     "p_jtw2yt4vg": [
       "p_k0cytigk5",
@@ -17985,12 +18053,12 @@
       "p_apnevfd1e"
     ],
     "p_z4rxd74pc": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_zcl5kw4oh": [
-      "p_e2d8rcv1d",
-      "p_p1t2kmcat"
+      "p_p1t2kmcat",
+      "p_e2d8rcv1d"
     ],
     "p_lx16wimrx": [
       "p_izcueyhnf",
@@ -18004,8 +18072,8 @@
       "p_sh6rs3ypi"
     ],
     "p_4cjwtla35": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_37jcbtegu": [
       "p_n2oxqssdd",
@@ -20013,6 +20081,18 @@
     ],
     "p_xi1lb2x9": [
       "p_752xxhf4"
+    ],
+    "p_k0cytigk5": [
+      "p_smy1eoq7",
+      "p_z429xvse"
+    ],
+    "p_smy1eoq7": [
+      "p_i8s6awyw",
+      "p_0y39j5ai"
+    ],
+    "p_11s7733na": [
+      "p_3qxdy3o5",
+      "p_lu2iypmf"
     ]
   },
   "childrenOf": {
@@ -20024,18 +20104,18 @@
       "p_3qowa85hd",
       "p_8mchqpopa"
     ],
-    "p_3rw58lslc": [
-      "p_3uj910se8"
-    ],
     "p_bbclq6f9g": [
       "p_3uj910se8",
       "p_4yyrm3723"
     ],
-    "p_p1t2kmcat": [
+    "p_3rw58lslc": [
+      "p_3uj910se8"
+    ],
+    "p_e2d8rcv1d": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
-    "p_e2d8rcv1d": [
+    "p_p1t2kmcat": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
@@ -20083,10 +20163,10 @@
       "p_yhg9e9i5y",
       "p_tdvl922cf"
     ],
-    "p_a9c12mk": [
+    "p_q1486bk": [
       "p_anref8x"
     ],
-    "p_q1486bk": [
+    "p_a9c12mk": [
       "p_anref8x"
     ],
     "p_k9dqg17ug": [
@@ -20129,11 +20209,11 @@
       "p_trylh546h",
       "p_vit2oe3no"
     ],
-    "p_mc6jemk": [
+    "p_9vhcxd8": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
-    "p_9vhcxd8": [
+    "p_mc6jemk": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
@@ -20159,13 +20239,13 @@
       "p_cyl275xx",
       "p_907ij0i8"
     ],
-    "p_yhg9e9i5y": [
+    "p_n4z6lfc2f": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
       "p_4cjwtla35"
     ],
-    "p_n4z6lfc2f": [
+    "p_yhg9e9i5y": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
@@ -20185,12 +20265,12 @@
       "p_zobmj6wp8",
       "p_0dj5jnxhr"
     ],
-    "p_0dj5jnxhr": [
+    "p_zmfl39a5r": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
     ],
-    "p_zmfl39a5r": [
+    "p_0dj5jnxhr": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
@@ -20239,12 +20319,10 @@
       "p_w45w1n6s2"
     ],
     "p_k0cytigk5": [
-      "p_1766082418649",
       "p_jtw2yt4vg",
       "p_cntfcxxpa"
     ],
     "p_11s7733na": [
-      "p_1766082418649",
       "p_jtw2yt4vg",
       "p_cntfcxxpa"
     ],
@@ -22441,6 +22519,24 @@
     ],
     "p_752xxhf4": [
       "p_xi1lb2x9"
+    ],
+    "p_smy1eoq7": [
+      "p_k0cytigk5"
+    ],
+    "p_z429xvse": [
+      "p_k0cytigk5"
+    ],
+    "p_i8s6awyw": [
+      "p_smy1eoq7"
+    ],
+    "p_0y39j5ai": [
+      "p_smy1eoq7"
+    ],
+    "p_3qxdy3o5": [
+      "p_11s7733na"
+    ],
+    "p_lu2iypmf": [
+      "p_11s7733na"
     ]
   },
   "spousesOf": {
@@ -22456,7 +22552,6 @@
     "p_11s7733na": [
       "p_k0cytigk5"
     ],
-    "p_1766082418649": [],
     "p_1766163986623": [],
     "p_1766164196543": [],
     "p_1p1ix8jf1": [],
@@ -24613,6 +24708,24 @@
     ],
     "p_nstzrad2": [
       "p_8kz0ebbp"
+    ],
+    "p_smy1eoq7": [
+      "p_z429xvse"
+    ],
+    "p_z429xvse": [
+      "p_smy1eoq7"
+    ],
+    "p_i8s6awyw": [
+      "p_0y39j5ai"
+    ],
+    "p_0y39j5ai": [
+      "p_i8s6awyw"
+    ],
+    "p_3qxdy3o5": [
+      "p_lu2iypmf"
+    ],
+    "p_lu2iypmf": [
+      "p_3qxdy3o5"
     ]
   }
 }
