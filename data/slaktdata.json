@@ -4648,20 +4648,6 @@
       "photoCaptions": {},
       "photos": []
     },
-    "p_v3mkcmhrg": {
-      "id": "p_v3mkcmhrg",
-      "name": "Lotta Persdotter",
-      "role": "Mor",
-      "born": "1809-10-19",
-      "bornParish": "Rinna",
-      "died": "1873-07-07",
-      "diedParish": "Widekärret, Källevik",
-      "job": "",
-      "link": "",
-      "history": "",
-      "photoCaptions": {},
-      "photos": []
-    },
     "p_vit2oe3no": {
       "id": "p_vit2oe3no",
       "name": "Emelie Matilda Grek",
@@ -17525,6 +17511,186 @@
       "photo": "",
       "photoId": "",
       "history": ""
+    },
+    "p_c8cy7ts9": {
+      "id": "p_c8cy7ts9",
+      "name": "Carl Persson",
+      "gender": "M",
+      "role": "",
+      "born": "1754-05-23",
+      "bornParish": "Fiskarhemmet, Malexander",
+      "died": "1827-08-15",
+      "diedParish": "Bjurshultet, Malexander",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_ezw5hljn": {
+      "id": "p_ezw5hljn",
+      "name": "Eva Maria Carlsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1758-10-11",
+      "bornParish": "Landsnäs, Malexander",
+      "died": "1830-01-26",
+      "diedParish": "Lövrahultet, Malexander",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_73tcnn16": {
+      "id": "p_73tcnn16",
+      "name": "Per Nilsson",
+      "gender": "M",
+      "role": "",
+      "born": "1710",
+      "bornParish": "Malexander",
+      "died": "1798-08-25",
+      "diedParish": "Malexander",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_r444zs4i": {
+      "id": "p_r444zs4i",
+      "name": "Ingeborg Nilsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1721",
+      "bornParish": "Malexander",
+      "died": "1791-04-17",
+      "diedParish": "Malexander",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_k60m18p2": {
+      "id": "p_k60m18p2",
+      "name": "Peter Jonsson",
+      "gender": "M",
+      "role": "",
+      "born": "1774-09-27",
+      "bornParish": "Höghult",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Peter Jonsson\n\nFödd 1774-09-27 Höghult\n\nNoteringar\nAI:2 sid 121"
+    },
+    "p_dpqxfn10": {
+      "id": "p_dpqxfn10",
+      "name": "Anna Stina Persdotter",
+      "gender": "",
+      "role": "",
+      "born": "1778",
+      "bornParish": "Harstad",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_fu09bi2h": {
+      "id": "p_fu09bi2h",
+      "name": "Birger Jönsson",
+      "gender": "M",
+      "role": "",
+      "born": "1685",
+      "bornParish": "Kisa",
+      "died": "1757-12-02",
+      "diedParish": "Kisa",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_bcmaqmt8": {
+      "id": "p_bcmaqmt8",
+      "name": "Margareta Andersdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1697-09-28",
+      "bornParish": "Kisa",
+      "died": "1728",
+      "diedParish": "Kisa",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_p1mtaynx": {
+      "id": "p_p1mtaynx",
+      "name": "Jöns Eriksson",
+      "gender": "M",
+      "role": "",
+      "born": "1638",
+      "bornParish": "",
+      "died": "1706-06",
+      "diedParish": "Kisa",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_5yerksa6": {
+      "id": "p_5yerksa6",
+      "name": "Maria Jacobsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1650",
+      "bornParish": "Kisa",
+      "died": "1707",
+      "diedParish": "Kisa",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Maria Jakobsdotter\n\nFödd (CA 1650) Kisa, Östergötland, Sverige\n\nDöd 1707 Kisa, Ostergotland, Sweden"
+    },
+    "p_7sta0s75": {
+      "id": "p_7sta0s75",
+      "name": "Jacob Birgersson",
+      "gender": "M",
+      "role": "",
+      "born": "1620",
+      "bornParish": "Grönede, Kisa",
+      "died": "1661-07-19",
+      "diedParish": "Folkinge, Kisa",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Född omkring 1620 Grönede, Kisa (E)\n\nDöd 1661-07-19 Folkinge, Kisa (E)"
+    },
+    "p_u21n6q3y": {
+      "id": "p_u21n6q3y",
+      "name": "Kerstin Nilsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1626",
+      "bornParish": "Folkinge, Kisa",
+      "died": "1706-02-18",
+      "diedParish": "Folkinge, Kisa",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
     }
   },
   "parentsOf": {
@@ -19703,6 +19869,30 @@
     "p_b2ut9uqm": [
       "p_hgcq6f8h",
       "p_hcg1i08u"
+    ],
+    "p_xxqg76w1": [
+      "p_c8cy7ts9",
+      "p_ezw5hljn"
+    ],
+    "p_c8cy7ts9": [
+      "p_73tcnn16",
+      "p_r444zs4i"
+    ],
+    "p_2og5ombk": [
+      "p_k60m18p2",
+      "p_dpqxfn10"
+    ],
+    "p_ki55qf8b": [
+      "p_fu09bi2h",
+      "p_bcmaqmt8"
+    ],
+    "p_fu09bi2h": [
+      "p_p1mtaynx",
+      "p_5yerksa6"
+    ],
+    "p_5yerksa6": [
+      "p_7sta0s75",
+      "p_u21n6q3y"
     ]
   },
   "childrenOf": {
@@ -22074,6 +22264,42 @@
     ],
     "p_hcg1i08u": [
       "p_b2ut9uqm"
+    ],
+    "p_c8cy7ts9": [
+      "p_xxqg76w1"
+    ],
+    "p_ezw5hljn": [
+      "p_xxqg76w1"
+    ],
+    "p_73tcnn16": [
+      "p_c8cy7ts9"
+    ],
+    "p_r444zs4i": [
+      "p_c8cy7ts9"
+    ],
+    "p_k60m18p2": [
+      "p_2og5ombk"
+    ],
+    "p_dpqxfn10": [
+      "p_2og5ombk"
+    ],
+    "p_fu09bi2h": [
+      "p_ki55qf8b"
+    ],
+    "p_bcmaqmt8": [
+      "p_ki55qf8b"
+    ],
+    "p_p1mtaynx": [
+      "p_fu09bi2h"
+    ],
+    "p_5yerksa6": [
+      "p_fu09bi2h"
+    ],
+    "p_7sta0s75": [
+      "p_5yerksa6"
+    ],
+    "p_u21n6q3y": [
+      "p_5yerksa6"
     ]
   },
   "spousesOf": {
@@ -22359,7 +22585,6 @@
       "p_oiygcmhz"
     ],
     "p_twr06ftd4": [],
-    "p_v3mkcmhrg": [],
     "p_vit2oe3no": [],
     "p_vkvmoix0v": [],
     "p_vomcn89yz": [],
@@ -24193,6 +24418,42 @@
     ],
     "p_hcg1i08u": [
       "p_hgcq6f8h"
+    ],
+    "p_c8cy7ts9": [
+      "p_ezw5hljn"
+    ],
+    "p_ezw5hljn": [
+      "p_c8cy7ts9"
+    ],
+    "p_73tcnn16": [
+      "p_r444zs4i"
+    ],
+    "p_r444zs4i": [
+      "p_73tcnn16"
+    ],
+    "p_k60m18p2": [
+      "p_dpqxfn10"
+    ],
+    "p_dpqxfn10": [
+      "p_k60m18p2"
+    ],
+    "p_fu09bi2h": [
+      "p_bcmaqmt8"
+    ],
+    "p_bcmaqmt8": [
+      "p_fu09bi2h"
+    ],
+    "p_p1mtaynx": [
+      "p_5yerksa6"
+    ],
+    "p_5yerksa6": [
+      "p_p1mtaynx"
+    ],
+    "p_7sta0s75": [
+      "p_u21n6q3y"
+    ],
+    "p_u21n6q3y": [
+      "p_7sta0s75"
     ]
   }
 }
