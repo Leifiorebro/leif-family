@@ -18288,6 +18288,96 @@
       "photo": "",
       "photoId": "",
       "history": "Maja Lisa Andreasdotter\n\nFödd 1837-07-23 Nössemark\nDatumet 23 är ? \n\nNoteringar\nNössemark (P) C:5 (1861-1888) Bild 44 (AID: v11630.b44, NAD: SE/GLA/13416)\nNössemark (P) AI:10 (1866-1875) Bild 321 / sid 311 (AID: v4046.b321.s311, NAD: SE/GLA/13416)"
+    },
+    "p_hgaxze14": {
+      "id": "p_hgaxze14",
+      "name": "August Leonard Karlsson",
+      "gender": "M",
+      "role": "",
+      "born": "1853-09-08",
+      "bornParish": "Kils förs. Örebro län",
+      "died": "1906-12-21",
+      "diedParish": "Horndal, By förs.",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "August Leonard Carlsson\n\nFödd 1853-09-08 Kil\nKil (T) AI:20 (1856-1860) Bild 305 / sid 297 (AID: v51612.b305.s297, NAD: SE/ULA/11160)\n\nDöd 1906-12-21 Horndal, By förs.\nKälla: By kyrkoarkiv, Dalarnas län, Församlingsböcker. Bunden serie, SE/ULA/10148/A II/1 a (1896-1915), bildid: 00187457_00100, sida 93\n\nNoteringar\nKil (T) AI:20 (1856-1860) Bild 305 / sid 297 (AID: v51612.b305.s297, NAD: SE/ULA/11160)\nBy kyrkoarkiv, Dalarnas län, Församlingsböcker. Bunden serie, SE/ULA/10148/A II/1 a (1896-1915), bildid: 00187457_00100, sida 93\nhttps://sok.riksarkivet.se/bildvisning/00187457_00100"
+    },
+    "p_348euw21": {
+      "id": "p_348euw21",
+      "name": "Johanna Karolina Lötgren",
+      "gender": "F",
+      "role": "",
+      "born": "1849-08-24",
+      "bornParish": "Tjällmo, Östergötland",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Johanna Karolina Lötgren\n\nFödd 1849-08-24 Tjällmo (E)\nKälla: By kyrkoarkiv, Dalarnas län, Församlingsböcker. Bunden serie, SE/ULA/10148/A II/1 a (1896-1915), bildid: 00187457_00100, sida 93\n\nNoteringar\nhttps://sok.riksarkivet.se/bildvisning/00187457_00100"
+    },
+    "p_e5w5pdij": {
+      "id": "p_e5w5pdij",
+      "name": "Ture Axel Karlsson",
+      "gender": "M",
+      "role": "",
+      "born": "1879-04-27",
+      "bornParish": "Motala",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Ture Axel Karlsson\n\nFödd 1879-04-27 Motala\nBy kyrkoarkiv, Dalarnas län, Församlingsböcker. Bunden serie, SE/ULA/10148/A II/1 a (1896-1915), bildid: 00187457_00100, sida 93\n\nNoteringar\nBy kyrkoarkiv, Dalarnas län, Församlingsböcker. Bunden serie, SE/ULA/10148/A II/1 a (1896-1915), bildid: 00187457_00100, sida 93\nhttps://sok.riksarkivet.se/bildvisning/00187457_00100\n\nUtvandrade till Nordamerika 3/8 1905 från Horndals bruk i Dalarna.\nBy kyrkoarkiv, Dalarnas län, Församlingsböcker. Bunden serie, SE/ULA/10148/A II/1 a (1896-1915), bildid: 00187457_00100, sida 93\nhttps://sok.riksarkivet.se/bildvisning/00187457_00100"
+    },
+    "p_0og7s5w1": {
+      "id": "p_0og7s5w1",
+      "name": "Selma Viktoria",
+      "gender": "F",
+      "role": "",
+      "born": "1882-03-12",
+      "bornParish": "Motala",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_uv65vssj": {
+      "id": "p_uv65vssj",
+      "name": "David Leonard Karlsson",
+      "gender": "M",
+      "role": "",
+      "born": "1885-05-03",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_iy0adfaf": {
+      "id": "p_iy0adfaf",
+      "name": "Karl Henning Karlsson",
+      "gender": "M",
+      "role": "",
+      "born": "1888-09-27",
+      "bornParish": "Hosjö",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
     }
   },
   "parentsOf": {
@@ -20585,6 +20675,26 @@
     "p_qqh4bi6y": [
       "p_dqm846ep",
       "p_ygr4nevk"
+    ],
+    "p_hgaxze14": [
+      "p_bn69tmdt",
+      "p_7wpzev9i"
+    ],
+    "p_e5w5pdij": [
+      "p_hgaxze14",
+      "p_348euw21"
+    ],
+    "p_0og7s5w1": [
+      "p_hgaxze14",
+      "p_348euw21"
+    ],
+    "p_uv65vssj": [
+      "p_hgaxze14",
+      "p_348euw21"
+    ],
+    "p_iy0adfaf": [
+      "p_hgaxze14",
+      "p_348euw21"
     ]
   },
   "childrenOf": {
@@ -21546,10 +21656,12 @@
       "p_cnv8bocs"
     ],
     "p_bn69tmdt": [
-      "p_tnf5rvj1f"
+      "p_tnf5rvj1f",
+      "p_hgaxze14"
     ],
     "p_7wpzev9i": [
-      "p_tnf5rvj1f"
+      "p_tnf5rvj1f",
+      "p_hgaxze14"
     ],
     "p_3vbx4uaf": [
       "p_7wpzev9i"
@@ -23087,6 +23199,18 @@
     ],
     "p_ygr4nevk": [
       "p_qqh4bi6y"
+    ],
+    "p_hgaxze14": [
+      "p_e5w5pdij",
+      "p_0og7s5w1",
+      "p_uv65vssj",
+      "p_iy0adfaf"
+    ],
+    "p_348euw21": [
+      "p_e5w5pdij",
+      "p_0og7s5w1",
+      "p_uv65vssj",
+      "p_iy0adfaf"
     ]
   },
   "spousesOf": {
@@ -25329,6 +25453,12 @@
     ],
     "p_ygr4nevk": [
       "p_dqm846ep"
+    ],
+    "p_hgaxze14": [
+      "p_348euw21"
+    ],
+    "p_348euw21": [
+      "p_hgaxze14"
     ]
   }
 }
