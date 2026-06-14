@@ -19268,8 +19268,16 @@
       "photo": "",
       "photoId": "",
       "history": "Han utvandrade till Nordamerika 15/11 1909. (Nora bergsförs AIIa: 3 1901-1909 sid. 1268 samt möjligen AIIa: 4 1909-1919 sid. 278).\nEnligt Ellis Island: Carl Ludvig Westberg f. i Norabergs, Sweden. Ankom 22/12 1909 med ångaren Oscar II från Christiania, betalt resan själv.\nSkall till moster/faster Karolina Samuelsson Box 47RR No1 i Stockholm, Wisconsin.\nHan kom åter på besök till Nora på 1910-talet och ska då ha försökt övertyga Alida om att följa med tillbaka till USA. Foton finns på honom ensam och med Alida.\n\n\nNora bergsförsamlings kyrkoarkiv (T-län), Födelse- och dopböcker, SE/ULA/11098/C/13 (1875-1899), bildid: A0003868_00263\nhttps://sok.riksarkivet.se/bildvisning/A0003868_00263\n\nNora bergsförsamlings kyrkoarkiv (T-län), Husförhörslängder, SE/ULA/11098/A I/18 b (1882-1891), bildid: C0002291_00366, sida 1212\nhttps://sok.riksarkivet.se/bildvisning/C0002291_00366\n\nNora bergsförsamlings kyrkoarkiv (T-län), Församlingsböcker. Bunden serie, SE/ULA/11098/A II a/3 (1901-1909), bildid: 00169945_00292, sida 1268\nhttps://sok.riksarkivet.se/bildvisning/00169945_00292",
-      "photos": [],
-      "photoCaptions": {}
+      "photos": [
+        {
+          "src": "images/Karl Ludwig Westberg_1.JPG",
+          "caption": "Anlände till New York med fartyget Oscar II den 22 december 1909. Han var då 20 år."
+        },
+        {
+          "src": "images/Karl Ludwig Westberg.JPG",
+          "caption": "Passagerarlista fartyget Oscar II. Carl Ludwig Westberg finns på rad 3."
+        }
+      ]
     },
     "p_iowyoxdc": {
       "id": "p_iowyoxdc",
@@ -19379,7 +19387,8 @@
           "src": "images/Per E Ericksson.JPG",
           "caption": "Passagerarlista rad 550 fartyget Gallia"
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_unrgustx": {
       "id": "p_unrgustx",
