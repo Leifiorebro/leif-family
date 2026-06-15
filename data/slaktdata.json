@@ -19179,7 +19179,8 @@
           "src": "images/RMS Ivernia.jpg",
           "caption": "Ivernia"
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_0og7s5w1": {
       "id": "p_0og7s5w1",
@@ -19399,9 +19400,12 @@
         {
           "src": "images/Per E Ericksson.JPG",
           "caption": "Passagerarlista rad 550 fartyget Gallia"
+        },
+        {
+          "src": "images/RMS_Gallia.jpg",
+          "caption": "RMS Gallia was built in 1878 for the Cunard Line, entering service in 1879. In service until 1899, the vessel ran aground off the coast of Quebec, Canada and was not repaired. The ship was broken up for scrap in 1900."
         }
-      ],
-      "photoCaptions": {}
+      ]
     },
     "p_unrgustx": {
       "id": "p_unrgustx",
