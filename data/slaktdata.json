@@ -15324,8 +15324,28 @@
       "photo": "",
       "photoId": "",
       "history": "Gustafva Arolina Jonsdotter\n\nFödd 1818-03-27 Gåsbornshöjden, Gåsborn\n\nGift med Olof Geschwind 1843-07-04 \n\nBosatt 1880 Alexandria, Douglas, Minnesota, United States\n\nDöd 1895-11-13 Douglas Co, Minnesota\n\nNoteringar\nDet finns en annan födelseuppgift för datumet som säger 1818-12-27\n\nSäfsnäs AI:10 (1835-1844) Bild 204 / sid 199 (AID: v132045.b204.s199, NAD: SE/ULA/11506)\nSäfsnäs AI:11 (1845-1854) Bild 1650 / sid 160 (AID: v132046a.b1650.s160, NAD: SE/ULA/11506)\nSäfsnäs (W) AI:16 (1865-1874) Bild 333 / sid 326 (AID: v132051.b333.s326, NAD: SE/ULA/11506)",
-      "photos": [],
-      "photoCaptions": {}
+      "photos": [
+        {
+          "src": "images/Arolina Geschwind.jpeg",
+          "caption": "Gustafva Arolina Geschwind"
+        },
+        {
+          "src": "images/Födelseboken_Arolina.JPG",
+          "caption": "Födelseboken: \nGåsborns kyrkoarkiv, Födelse- och dopböcker, SE/VA/13174/C/3 (1776-1839), bildid: C0037601_00183, sida 320\nhttps://sok.riksarkivet.se/bildvisning/C0037601_00183"
+        },
+        {
+          "src": "images/Arolina.JPG",
+          "caption": ""
+        },
+        {
+          "src": "images/Arolina2.JPG",
+          "caption": "Begravningsplats"
+        },
+        {
+          "src": "images/Arolina1.JPG",
+          "caption": "Begravningsplats"
+        }
+      ]
     },
     "p_n9y54xjt": {
       "id": "p_n9y54xjt",
@@ -19405,7 +19425,8 @@
           "src": "images/RMS_Gallia.jpg",
           "caption": "RMS Gallia was built in 1878 for the Cunard Line, entering service in 1879. In service until 1899, the vessel ran aground off the coast of Quebec, Canada and was not repaired. The ship was broken up for scrap in 1900."
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_unrgustx": {
       "id": "p_unrgustx",
