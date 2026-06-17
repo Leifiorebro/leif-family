@@ -20013,6 +20013,51 @@
       "photo": "",
       "photoId": "",
       "history": "Kristina Elisabeth Geschwind\n\nFödd 1815-11-15 Fredriksberg, Säfsnäs\n\nDöd 1902-08-05 Karlsdal, Hällefors\n\nNoteringar\n\nSäfsnäs AI:8 (1815-1825) Bild 1520 / sid 146 (AID: v132043a.b1520.s146, NAD: SE/ULA/11506)\nSäfsnäs AI:9 (1825-1834) Bild 186 / sid 180 (AID: v132044.b186.s180, NAD: SE/ULA/11506)\nSäfsnäs AI:10 (1835-1844) Bild 217 / sid 212 (AID: v132045.b217.s212, NAD: SE/ULA/11506)"
+    },
+    "p_puolihoq": {
+      "id": "p_puolihoq",
+      "name": "Lars Geschwind",
+      "gender": "M",
+      "role": "",
+      "born": "1822-06-27",
+      "bornParish": "Fredriksberg, Säfsnäs",
+      "died": "1897-01-31",
+      "diedParish": "Greenburg, New York, USA",
+      "job": "Mästersven",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Mästersven Lars Geschwind\n\nFödd 1822-06-27 Fredriksberg, Säfsnäs\n\nGift med Stina ELG 1848-11-06 \n\nDöd 1897-01-31 Greenburgh, New York, USA\n\nNoteringar\nFlyttade 1850 till RISINGE\nFrån Risinge till Latorp 1853.\nFrån Bo till Sköllersta 1868-10-16.\n\nResidence 1880\nSköllersta (T), Kärrs ägor 55). Residence 1890 Sköllersta (T), Pålsboda järnvägsstation 63). Residence to\n1895-08-16 Sköllersta (T), Pålsboda. Emigrated 1895-08-16 N. Amerika 67). Destination New York\n\nSäfsnäs AI:8 (1815-1825) Bild 1520 / sid 146 (AID: v132043a.b1520.s146, NAD: SE/ULA/11506)\nSäfsnäs AI:9 (1825-1834) Bild 186 / sid 180 (AID: v132044.b186.s180, NAD: SE/ULA/11506)\nSäfsnäs AI:10 (1835-1844) Bild 217 / sid 212 (AID: v132045.b217.s212, NAD: SE/ULA/11506)"
+    },
+    "p_ttlfo20q": {
+      "id": "p_ttlfo20q",
+      "name": "Karl Johan Geschwind",
+      "gender": "M",
+      "role": "",
+      "born": "1825-05-17",
+      "bornParish": "Hökärrsbacken, Säfsnäs",
+      "died": "1902-01-17",
+      "diedParish": "Kolaretorp, Bo förs. Örebro län",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Karl Johan Geschwind\n\nFödd 1825-05-17 Hökärrsbacken, Säfsnäs\n\nGift med Maria Johansdotter Bork 1847-10-24 Säfsnäs\n\nDöd 1902-01-17 Kolaretorp, Bo förs, Örebro län\n\nNoteringar\nSäfsnäs AI:9 (1825-1834) Bild 186 / sid 180 (AID: v132044.b186.s180, NAD: SE/ULA/11506)\nSäfsnäs AI:10 (1835-1844) Bild 217 / sid 212 (AID: v132045.b217.s212, NAD: SE/ULA/11506)\nSäfsnäs AI:11 (1845-1854) Bild 1680 / sid 163 (AID: v132046a.b1680.s163, NAD: SE/ULA/11506)\n\nFlyttade till Finnspång 1850-10-22 från Rämmen (S) till Risinge (E). \n\nFlyttade till Lesjöfors Bruk 1848-10-22 från Säfsnäs (W) till Rämmen (S). \n\nDräng på Lesjöfors Bruk från 1848 till 1850 i Rämmen (S)."
+    },
+    "p_u0nryn8g": {
+      "id": "p_u0nryn8g",
+      "name": "Nils Erik Geschwind",
+      "gender": "M",
+      "role": "",
+      "born": "1832-03-28",
+      "bornParish": "Fredriksberg, Säfsnäs",
+      "died": "",
+      "diedParish": "Troligtvis död i USA",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Nils Erik Geschwind\n\nFödd 1832-03-28 Fredriksberg, Säfsnäs\n\nDöd  Troligtvis död i USA\n\nGift med Stina Andersdotter 1859-12-17 Säfsnäs\n\nNoteringar\nv132050.b72.s65\nUtvandrat till N. Amerika 1878-04-19.\nSäfsnäs (W) AI:19 (1875-1884) Bild 60 / sid 289 (AID: v132054.b60.s289, NAD: SE/ULA/11506)"
     }
   },
   "parentsOf": {
@@ -22474,6 +22519,18 @@
       "p_roo13fod"
     ],
     "p_yf1f1970": [
+      "p_b3i5xcc0",
+      "p_roo13fod"
+    ],
+    "p_puolihoq": [
+      "p_b3i5xcc0",
+      "p_roo13fod"
+    ],
+    "p_ttlfo20q": [
+      "p_b3i5xcc0",
+      "p_roo13fod"
+    ],
+    "p_u0nryn8g": [
       "p_b3i5xcc0",
       "p_roo13fod"
     ]
@@ -25084,11 +25141,17 @@
     ],
     "p_b3i5xcc0": [
       "p_a7i4e923",
-      "p_yf1f1970"
+      "p_yf1f1970",
+      "p_puolihoq",
+      "p_ttlfo20q",
+      "p_u0nryn8g"
     ],
     "p_roo13fod": [
       "p_a7i4e923",
-      "p_yf1f1970"
+      "p_yf1f1970",
+      "p_puolihoq",
+      "p_ttlfo20q",
+      "p_u0nryn8g"
     ]
   },
   "spousesOf": {
