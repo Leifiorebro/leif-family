@@ -20523,6 +20523,66 @@
       "photo": "",
       "photoId": "",
       "history": "Clara Helena Norman\n\nFödd 1839-10-24 Säfsen\n\nDöd 1851-11-21 Fredriksberg, Säfsnäs\nSäfsnäs AI:11 (1845-1854) Bild 2450 / sid 240 (AID: v132046a.b2450.s240, NAD: SE/ULA/11506)\n\nNoteringar\nSäfsnäs AI:11 (1845-1854) Bild 2450 / sid 240 (AID: v132046a.b2450.s240, NAD: SE/ULA/11506)\nSäfsnäs AI:10 (1835-1844) Bild 206 / sid 201 (AID: v132045.b206.s201, NAD: SE/ULA/11506)"
+    },
+    "p_0aw4i30l": {
+      "id": "p_0aw4i30l",
+      "name": "Johan Gustaf Geschwind",
+      "gender": "M",
+      "role": "",
+      "born": "1834-05-11",
+      "bornParish": "Masnäs, Norrbärke",
+      "died": "1876-02-18",
+      "diedParish": "Näs såg, Hosjö",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_rts7wu71": {
+      "id": "p_rts7wu71",
+      "name": "Carl Olof Geschwind",
+      "gender": "M",
+      "role": "",
+      "born": "1838-01-04",
+      "bornParish": "Masnäs, Norrbärke",
+      "died": "1917-05-03",
+      "diedParish": "Östansbo, Ludvika",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Carl Olof Geschwind\n\nFödd 1838-01-04 Marnäs, Norrbärke, Dalarna\n\nGift med Kristina Karolina Berglöf 1860-06-30 \n\nDöd 1917-05-03 Östansbo, Ludvika\n\nNoteringar\n18380104\n\nGeschwind, Karl Olov\n\nÖstansbo\n\nDöd 3/5 1917.\n\nKyrkobokförd i Ludvika (Kopparbergs län, Dalarna).\n\nFödd 4/1 1838 i Norrbärke (Kopparbergs län, Dalarna).\n\nGift man (30/6 1860).\n--------------\nMotsvarande kyrkobokföringsförsamling(ar) 1/1 2010:\nLudvika, Ludvika kn (Dalarnas län, Dalarna)\n\nFödelseförsamling i källan:\nNorrbärke (Kopparbergs län)\n\nKällor:\nDB, FS"
+    },
+    "p_6845q9sr": {
+      "id": "p_6845q9sr",
+      "name": "Erik August Geschwind",
+      "gender": "M",
+      "role": "",
+      "born": "1842-01-25",
+      "bornParish": "Masnäs, Norrbärke",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_qpoh71qj": {
+      "id": "p_qpoh71qj",
+      "name": "Per August Geschwind",
+      "gender": "M",
+      "role": "",
+      "born": "1845-02-03",
+      "bornParish": "Norrbärke",
+      "died": "1919",
+      "diedParish": "Ludvika",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Per August Geschwind\n\nFödd 1845-02-03 Norrbärke, Dalarna\n\nDöd 1919 Ludvika\n\nNoteringar\nLudvika (W) AIIa:3 (1899-1909) Bild 440 / sid 613 (AID: v130894.b440.s613, NAD: SE/ULA/11344)"
     }
   },
   "parentsOf": {
@@ -23106,6 +23166,22 @@
     "p_d790lcnz": [
       "p_a1mnqahe",
       "p_o9mbxru6"
+    ],
+    "p_0aw4i30l": [
+      "p_zyspd2lx",
+      "p_4lrjddgf"
+    ],
+    "p_rts7wu71": [
+      "p_zyspd2lx",
+      "p_4lrjddgf"
+    ],
+    "p_6845q9sr": [
+      "p_zyspd2lx",
+      "p_4lrjddgf"
+    ],
+    "p_qpoh71qj": [
+      "p_zyspd2lx",
+      "p_4lrjddgf"
     ]
   },
   "childrenOf": {
@@ -25791,6 +25867,18 @@
       "p_vrtmnvfd",
       "p_pxz7b11w",
       "p_d790lcnz"
+    ],
+    "p_zyspd2lx": [
+      "p_0aw4i30l",
+      "p_rts7wu71",
+      "p_6845q9sr",
+      "p_qpoh71qj"
+    ],
+    "p_4lrjddgf": [
+      "p_0aw4i30l",
+      "p_rts7wu71",
+      "p_6845q9sr",
+      "p_qpoh71qj"
     ]
   },
   "spousesOf": {
