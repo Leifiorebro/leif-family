@@ -20148,6 +20148,66 @@
       "photo": "",
       "photoId": "",
       "history": "Margareta Geschwind\n\nFödd 1809-04-25 Säfsnäs (W), Fredriksberg\n\nDöpt 1809-04-28 Säfsnäs (W)\n\nDöd 1809-04-28 (W) Kopparberg Säfsnäs Fredriksberg\n\nNoteringar\nSäfsnäs AI:7 (1805-1814) Bild 107 / sid 101 (AID: v132042.b107.s101, NAD: SE/ULA/11506)"
+    },
+    "p_cystldo3": {
+      "id": "p_cystldo3",
+      "name": "Peter Salomonsson Bork",
+      "gender": "M",
+      "role": "",
+      "born": "1791-07-20",
+      "bornParish": "Fredriksberg, Säfsnäs",
+      "died": "1866-09-29",
+      "diedParish": "Alvik, Siljansnäs",
+      "job": "Mästersmed",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Peter Salomonsson Bork\n\nMästersmed\n\nFödd 1791-07-20 Fredriksberg Säfsnäs Dalarna\n\nGift med Anna Maria Olsdotter Geschwind 1812-11-01 Säfsnäs, Dalarna\n\nDöd 1866-09-29 Alvik Siljansnäs Leksand  Dalarna\n\nNoteringar\nSäfsnäs AI:7 (1805-1814) Bild 109 / sid 103 (AID: v132042.b109.s103, NAD: SE/ULA/11506)\nSäfsnäs AI:8 (1815-1825) Bild 1540 / sid 148 (AID: v132043a.b1540.s148, NAD: SE/ULA/11506)"
+    },
+    "p_9u2fylwl": {
+      "id": "p_9u2fylwl",
+      "name": "Gustaf Hellsing",
+      "gender": "M",
+      "role": "",
+      "born": "1781-01-31",
+      "bornParish": "Säfsnäs",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Gustaf Hellsing\n\nFödd 1785-01-31 Säfsnäs, Dalarna, Sweden\n\nGift med Catharina Geschwind 1814 \n\nNoteringar\nSäfsnäs AI:7 (1805-1814) Bild 107 / sid 101 (AID: v132042.b107.s101, NAD: SE/ULA/11506)\nSäfsnäs AI:8 (1815-1825) Bild 1520 / sid 146 (AID: v132043a.b1520.s146, NAD: SE/ULA/11506)\nSäfsnäs AI:9 (1825-1834) Bild 191 / sid 185 (AID: v132044.b191.s185, NAD: SE/ULA/11506)\nSäfsnäs AI:11 (1845-1854) Bild 1700 / sid 165 (AID: v132046a.b1700.s165, NAD: SE/ULA/11506)\nSäfsnäs AI:11 (1845-1854) Bild 1700 / sid 165 (AID: v132046a.b1700.s165, NAD: SE/ULA/11506)\nSäfsnäs AI:11 (1845-1854) Bild 2360 / sid 231 (AID: v132046a.b2360.s231, NAD: SE/ULA/11506)"
+    },
+    "p_a1mnqahe": {
+      "id": "p_a1mnqahe",
+      "name": "Olof Olsson Norman",
+      "gender": "M",
+      "role": "",
+      "born": "1795-12-05",
+      "bornParish": "1844",
+      "died": "Fredriksberg, Säfsnäs",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Olof Olsson Norman\n\nFödd 1795-12-05 \n\nGift med Helena Geschwind 1820 \n\nDöd 1844 Fredriksberg, Säfsnäs\nSäfsnäs AI:10 (1835-1844) Bild 206 / sid 201 (AID: v132045.b206.s201, NAD: SE/ULA/11506)\n\nNoteringar\nSäfsnäs AI:9 (1825-1834) Bild 192 / sid 186 (AID: v132044.b192.s186, NAD: SE/ULA/11506)\nSäfsnäs AI:10 (1835-1844) Bild 206 / sid 201 (AID: v132045.b206.s201, NAD: SE/ULA/11506)"
+    },
+    "p_4lrjddgf": {
+      "id": "p_4lrjddgf",
+      "name": "Katarina Johansdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1802-02-20",
+      "bornParish": "Skräddartorpet, Säfsnäs",
+      "died": "1864-12-28",
+      "diedParish": "Östanbo, Ludvika förs.",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
     }
   },
   "parentsOf": {
@@ -27710,6 +27770,30 @@
     ],
     "p_roo13fod": [
       "p_b3i5xcc0"
+    ],
+    "p_i08l9pif": [
+      "p_cystldo3"
+    ],
+    "p_cystldo3": [
+      "p_i08l9pif"
+    ],
+    "p_w5ucdlw6": [
+      "p_9u2fylwl"
+    ],
+    "p_9u2fylwl": [
+      "p_w5ucdlw6"
+    ],
+    "p_o9mbxru6": [
+      "p_a1mnqahe"
+    ],
+    "p_a1mnqahe": [
+      "p_o9mbxru6"
+    ],
+    "p_zyspd2lx": [
+      "p_4lrjddgf"
+    ],
+    "p_4lrjddgf": [
+      "p_zyspd2lx"
     ]
   }
 }
