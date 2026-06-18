@@ -20208,6 +20208,156 @@
       "photo": "",
       "photoId": "",
       "history": ""
+    },
+    "p_3my7czgt": {
+      "id": "p_3my7czgt",
+      "name": "Kristina Persdotter Bork",
+      "gender": "F",
+      "role": "",
+      "born": "1814-08-12",
+      "bornParish": "Säfsnäs",
+      "died": "1815-05-23",
+      "diedParish": "Säfsnäs",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_pdp1gucx": {
+      "id": "p_pdp1gucx",
+      "name": "Maria Persdotter Bork",
+      "gender": "F",
+      "role": "",
+      "born": "1816-06-21",
+      "bornParish": "Säfsnäs",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Maria Persdotter Bork\n\nFödd 1816-06-21 Säfsnäs\n\nGift med Erik Ersson-Wikström 1842 Leksand (W)\n\nNoteringar\nSäfsnäs AI:8 (1815-1825) Bild 1540 / sid 148 (AID: v132043a.b1540.s148, NAD: SE/ULA/11506)"
+    },
+    "p_426szq52": {
+      "id": "p_426szq52",
+      "name": "Kristina Bork",
+      "gender": "F",
+      "role": "",
+      "born": "1819-04-24",
+      "bornParish": "Siljansnäs",
+      "died": "1890-05-21",
+      "diedParish": "Siljansnäs",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_zkcuul38": {
+      "id": "p_zkcuul38",
+      "name": "Maria Bork",
+      "gender": "F",
+      "role": "",
+      "born": "1822-02-04",
+      "bornParish": "Säfsnäs",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_pps297uv": {
+      "id": "p_pps297uv",
+      "name": "Lena Helena Persdotter Bork",
+      "gender": "F",
+      "role": "",
+      "born": "1822-03-07",
+      "bornParish": "Leksand",
+      "died": "1825",
+      "diedParish": "Leksand",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_k7ffieo7": {
+      "id": "p_k7ffieo7",
+      "name": "Katarina Bork",
+      "gender": "F",
+      "role": "",
+      "born": "1824",
+      "bornParish": "Limån nr 7, Leksand",
+      "died": "1825",
+      "diedParish": "Limån nr 7, Leksand",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_khiwzqi8": {
+      "id": "p_khiwzqi8",
+      "name": "Per Persson Bork",
+      "gender": "M",
+      "role": "",
+      "born": "1825",
+      "bornParish": "Limån nr 7, Leksand",
+      "died": "1826",
+      "diedParish": "Limån nr 7, Leksand",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_4mr7dlg0": {
+      "id": "p_4mr7dlg0",
+      "name": "Karolina Persdotter Bork",
+      "gender": "F",
+      "role": "",
+      "born": "1827",
+      "bornParish": "Leksand",
+      "died": "",
+      "diedParish": "Leksand",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_nzwj85im": {
+      "id": "p_nzwj85im",
+      "name": "Johanna Persdotter Bork",
+      "gender": "F",
+      "role": "",
+      "born": "1830-04-13",
+      "bornParish": "Leksand",
+      "died": "1894-12-13",
+      "diedParish": "Arkhyttan, Stora Skedvi",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_pzibp59c": {
+      "id": "p_pzibp59c",
+      "name": "Anna Charlotta Bork",
+      "gender": "F",
+      "role": "",
+      "born": "1833",
+      "bornParish": "Leksand",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
     }
   },
   "parentsOf": {
@@ -20216,12 +20366,12 @@
       "p_zobmj6wp8"
     ],
     "p_3uj910se8": [
-      "p_3rw58lslc",
-      "p_bbclq6f9g"
+      "p_bbclq6f9g",
+      "p_3rw58lslc"
     ],
     "p_3w3d8mg0r": [
-      "p_p1t2kmcat",
-      "p_e2d8rcv1d"
+      "p_e2d8rcv1d",
+      "p_p1t2kmcat"
     ],
     "p_607tk2v1i": [
       "p_fceooch",
@@ -20248,8 +20398,8 @@
       "p_apnevfd1e"
     ],
     "p_anref8x": [
-      "p_a9c12mk",
-      "p_q1486bk"
+      "p_q1486bk",
+      "p_a9c12mk"
     ],
     "p_bbclq6f9g": [
       "p_r6gu9qm8a",
@@ -20265,12 +20415,12 @@
       "p_ymb6wc3q0"
     ],
     "p_c2jyk4pds": [
-      "p_mc6jemk",
-      "p_9vhcxd8"
+      "p_9vhcxd8",
+      "p_mc6jemk"
     ],
     "p_czyydy2g7": [
-      "p_mc6jemk",
-      "p_9vhcxd8"
+      "p_9vhcxd8",
+      "p_mc6jemk"
     ],
     "p_ep1684kzs": [
       "p_n2oxqssdd",
@@ -20281,8 +20431,8 @@
       "p_epbrpkbpc"
     ],
     "p_ir25hn919": [
-      "p_yhg9e9i5y",
-      "p_n4z6lfc2f"
+      "p_n4z6lfc2f",
+      "p_yhg9e9i5y"
     ],
     "p_p1t2kmcat": [
       "p_6c6wnb9",
@@ -20309,12 +20459,12 @@
       "p_ymb6wc3q0"
     ],
     "p_t22zhc497": [
-      "p_0dj5jnxhr",
-      "p_zmfl39a5r"
+      "p_zmfl39a5r",
+      "p_0dj5jnxhr"
     ],
     "p_vomcn89yz": [
-      "p_0dj5jnxhr",
-      "p_zmfl39a5r"
+      "p_zmfl39a5r",
+      "p_0dj5jnxhr"
     ],
     "p_zobmj6wp8": [
       "p_6c6wnb9",
@@ -20365,12 +20515,12 @@
       "p_apnevfd1e"
     ],
     "p_ir4u61dqa": [
-      "p_yhg9e9i5y",
-      "p_n4z6lfc2f"
+      "p_n4z6lfc2f",
+      "p_yhg9e9i5y"
     ],
     "p_jqtxmllar": [
-      "p_yhg9e9i5y",
-      "p_n4z6lfc2f"
+      "p_n4z6lfc2f",
+      "p_yhg9e9i5y"
     ],
     "p_apnevfd1e": [
       "p_l0tiqibe0",
@@ -20393,12 +20543,12 @@
       "p_apnevfd1e"
     ],
     "p_z4rxd74pc": [
-      "p_0dj5jnxhr",
-      "p_zmfl39a5r"
+      "p_zmfl39a5r",
+      "p_0dj5jnxhr"
     ],
     "p_zcl5kw4oh": [
-      "p_p1t2kmcat",
-      "p_e2d8rcv1d"
+      "p_e2d8rcv1d",
+      "p_p1t2kmcat"
     ],
     "p_lx16wimrx": [
       "p_izcueyhnf",
@@ -20412,8 +20562,8 @@
       "p_sh6rs3ypi"
     ],
     "p_4cjwtla35": [
-      "p_yhg9e9i5y",
-      "p_n4z6lfc2f"
+      "p_n4z6lfc2f",
+      "p_yhg9e9i5y"
     ],
     "p_37jcbtegu": [
       "p_n2oxqssdd",
@@ -22707,6 +22857,46 @@
     "p_4pbdxl1t": [
       "p_9dzyae8c0",
       "p_er2yppmdt"
+    ],
+    "p_3my7czgt": [
+      "p_cystldo3",
+      "p_i08l9pif"
+    ],
+    "p_pdp1gucx": [
+      "p_cystldo3",
+      "p_i08l9pif"
+    ],
+    "p_426szq52": [
+      "p_cystldo3",
+      "p_i08l9pif"
+    ],
+    "p_zkcuul38": [
+      "p_cystldo3",
+      "p_i08l9pif"
+    ],
+    "p_pps297uv": [
+      "p_cystldo3",
+      "p_i08l9pif"
+    ],
+    "p_k7ffieo7": [
+      "p_cystldo3",
+      "p_i08l9pif"
+    ],
+    "p_khiwzqi8": [
+      "p_cystldo3",
+      "p_i08l9pif"
+    ],
+    "p_4mr7dlg0": [
+      "p_cystldo3",
+      "p_i08l9pif"
+    ],
+    "p_nzwj85im": [
+      "p_cystldo3",
+      "p_i08l9pif"
+    ],
+    "p_pzibp59c": [
+      "p_cystldo3",
+      "p_i08l9pif"
     ]
   },
   "childrenOf": {
@@ -22718,18 +22908,18 @@
       "p_3qowa85hd",
       "p_8mchqpopa"
     ],
+    "p_3rw58lslc": [
+      "p_3uj910se8"
+    ],
     "p_bbclq6f9g": [
       "p_3uj910se8",
       "p_4yyrm3723"
     ],
-    "p_3rw58lslc": [
-      "p_3uj910se8"
-    ],
-    "p_e2d8rcv1d": [
+    "p_p1t2kmcat": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
-    "p_p1t2kmcat": [
+    "p_e2d8rcv1d": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
@@ -22777,10 +22967,10 @@
       "p_yhg9e9i5y",
       "p_tdvl922cf"
     ],
-    "p_q1486bk": [
+    "p_a9c12mk": [
       "p_anref8x"
     ],
-    "p_a9c12mk": [
+    "p_q1486bk": [
       "p_anref8x"
     ],
     "p_k9dqg17ug": [
@@ -22823,11 +23013,11 @@
       "p_trylh546h",
       "p_vit2oe3no"
     ],
-    "p_9vhcxd8": [
+    "p_mc6jemk": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
-    "p_mc6jemk": [
+    "p_9vhcxd8": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
@@ -22853,13 +23043,13 @@
       "p_cyl275xx",
       "p_907ij0i8"
     ],
-    "p_n4z6lfc2f": [
+    "p_yhg9e9i5y": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
       "p_4cjwtla35"
     ],
-    "p_yhg9e9i5y": [
+    "p_n4z6lfc2f": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
@@ -22879,12 +23069,12 @@
       "p_zobmj6wp8",
       "p_0dj5jnxhr"
     ],
-    "p_zmfl39a5r": [
+    "p_0dj5jnxhr": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
     ],
-    "p_0dj5jnxhr": [
+    "p_zmfl39a5r": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
@@ -25338,6 +25528,30 @@
       "p_puolihoq",
       "p_ttlfo20q",
       "p_u0nryn8g"
+    ],
+    "p_cystldo3": [
+      "p_3my7czgt",
+      "p_pdp1gucx",
+      "p_426szq52",
+      "p_zkcuul38",
+      "p_pps297uv",
+      "p_k7ffieo7",
+      "p_khiwzqi8",
+      "p_4mr7dlg0",
+      "p_nzwj85im",
+      "p_pzibp59c"
+    ],
+    "p_i08l9pif": [
+      "p_3my7czgt",
+      "p_pdp1gucx",
+      "p_426szq52",
+      "p_zkcuul38",
+      "p_pps297uv",
+      "p_k7ffieo7",
+      "p_khiwzqi8",
+      "p_4mr7dlg0",
+      "p_nzwj85im",
+      "p_pzibp59c"
     ]
   },
   "spousesOf": {
