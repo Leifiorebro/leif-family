@@ -28,7 +28,7 @@ input[type="text"],input[type="date"],textarea,select{width:100%} textarea{min-h
 .list{border:1px solid #e5e7eb;border-radius:12px;padding:8px;max-height:160px;overflow:auto;background:#fafcff}
 .listItem{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:6px 0;border-bottom:1px dashed #e5e7eb}.listItem:last-child{border-bottom:none}
 .listItem button{padding:4px 8px;font-size:12px;border:none;border-radius:8px;cursor:pointer;background:#e2e8f0}
-svg{display:block;width:100%;height:100%}.node-card{fill:var(--card);stroke:#cbd5e1;stroke-width:1.5;rx:14;ry:14;filter:drop-shadow(0 4px 10px rgba(0,0,0,.08))}.node-current{stroke:var(--accent);stroke-width:3}.node-child{fill:#dbeafe;stroke:#93c5fd;stroke-width:1.5;rx:14;ry:14;filter:drop-shadow(0 4px 10px rgba(0,0,0,.08))}.node-grandchild{fill:#dcfce7;stroke:#86efac;stroke-width:1.5;rx:14;ry:14;filter:drop-shadow(0 4px 10px rgba(0,0,0,.08))}
+svg{display:block;width:100%;height:100%}.node-card{fill:var(--card);stroke:#cbd5e1;stroke-width:1.5;rx:14;ry:14;filter:drop-shadow(0 4px 10px rgba(0,0,0,.08))}.node-current{stroke:var(--accent);stroke-width:3}.node-child{fill:#dbeafe;stroke:#93c5fd;stroke-width:1.5;rx:14;ry:14;filter:drop-shadow(0 4px 10px rgba(0,0,0,.08))}.node-grandchild{fill:#dcfce7;stroke:#86efac;stroke-width:1.5;rx:14;ry:14;filter:drop-shadow(0 4px 10px rgba(0,0,0,.08))}.node-spouse{fill:#fef9c3;stroke:#fcd34d;stroke-width:1.5;rx:14;ry:14;filter:drop-shadow(0 4px 10px rgba(0,0,0,.08))}
 .node-name{font-size:14px;font-weight:700;fill:#111827}.node-dates{font-size:11px;fill:#4b5563}.node-role{font-size:11px;fill:#2563eb}
 .tree-link{fill:none;stroke:var(--line);stroke-width:2}.tree-link-spouse{fill:none;stroke:#d97706;stroke-width:2;stroke-dasharray:6 4}
 .badge{display:inline-block;font-size:11px;padding:2px 6px;border-radius:999px;background:#e0ecff;color:#1d4ed8;margin-left:6px}.warning{color:#92400e;font-size:12px}.success{color:var(--ok);font-size:12px}
@@ -600,6 +600,7 @@ function drawNodeCompact(g, x, y, id, level="child"){
   // Card background — blue for children, green for grandchildren
   const cardClass = id===store.currentId ? "node-current"
                   : level==="grandchild"  ? "node-grandchild"
+                  : level==="spouse"      ? "node-spouse"
                   :                         "node-child";
   grp.append("rect")
     .attr("class", cardClass)
@@ -904,27 +905,55 @@ function drawGenealogy(rootId){
     // genDepth  = how many more generations to draw (counts down)
     // genIndex  = visual depth index for color selection
     // Returns   = the Y bottom of the last card drawn in this column
-    function drawDescColumn(parentId, cx, startY, genDepth, genIndex){
+    // Draw a straight vertical connector line
+    function vline(cx, y1, y2){
+      g.append("line")
+        .attr("x1", cx).attr("y1", y1)
+        .attr("x2", cx).attr("y2", y2)
+        .attr("stroke","var(--line)").attr("stroke-width", 2);
+    }
+
+    // Persons to exclude from spouse cards: rootId and rootId's own spouses
+    const excludeFromSpouseCards = new Set([rootId, ...uniq(store.spousesOf[rootId]||[])]);
+
+    // Draw spouse(s) of parentId between parent and their children.
+    // Returns updated currentY after all spouse cards.
+    function drawSpouseCard(parentId, cx, currentY, prevBottomY){
+      const spouses = uniq(store.spousesOf[parentId]||[])
+        .filter(sid => !excludeFromSpouseCards.has(sid) && store.people[sid]);
+      if(!spouses.length) return currentY;
+      spouses.forEach(sid => {
+        vline(cx, prevBottomY, currentY);
+        drawNodeCompact(g, cx - compactW/2, currentY, sid, "spouse");
+        prevBottomY = currentY + cardH;
+        currentY   = prevBottomY + gkGapY;
+      });
+      return currentY;
+    }
+
+    // Recursive: draw descendants of parentId vertically starting at startY.
+    // Also inserts spouse card(s) of parentId before the descendants.
+    // Returns Y bottom of last card drawn.
+    function drawDescColumn(parentId, cx, startY, genDepth, genIndex, parentBottomY){
       if(genDepth <= 0) return startY;
-      const kids = getChildren(parentId);
-      if(!kids.length) return startY;
 
       let currentY = startY;
+
+      // Insert spouse card between parent and children
+      currentY = drawSpouseCard(parentId, cx, currentY, parentBottomY);
+
+      const kids = getChildren(parentId);
+      if(!kids.length) return currentY;
+
       kids.forEach((kid, ki) => {
         const color = levelColors[genIndex % levelColors.length];
+        vline(cx, ki === 0 ? currentY - gkGapY : currentY - gkGapY, currentY);
         drawNodeCompact(g, cx - compactW/2, currentY, kid, color);
+        const kidBottom = currentY + cardH;
+        currentY = kidBottom;
 
-        // Vertical line from previous card bottom (or parent bottom) to this card top
-        const lineFromY = ki === 0 ? startY - gkGapY : currentY - gkGapY;
-        g.append("line")
-          .attr("x1", cx).attr("y1", lineFromY)
-          .attr("x2", cx).attr("y2", currentY)
-          .attr("stroke","var(--line)").attr("stroke-width", 2);
-
-        currentY += cardH;
-
-        // Recurse: draw this kid's descendants below
-        currentY = drawDescColumn(kid, cx, currentY + gkGapY, genDepth - 1, genIndex + 1);
+        // Recurse for this kid's children and spouse
+        currentY = drawDescColumn(kid, cx, currentY + gkGapY, genDepth - 1, genIndex + 1, kidBottom);
       });
       return currentY;
     }
@@ -932,14 +961,13 @@ function drawGenealogy(rootId){
     children.forEach((cid, ci) => {
       const ccx = childCXs[ci];
 
-      // Draw the child card (generation 1 below root)
+      // Draw child card (generation 1 below root)
       drawNodeCompact(g, ccx - compactW/2, childY, cid, "child");
       drawCurve(g, adjChildAnchorCX, rootY + cardH, ccx, childY);
 
-      // Draw all further descendant generations vertically below this child
-      // GEN_DOWN - 1 because generation 1 (child) is already drawn above
+      // Draw spouse(s) and further descendants below this child
       if(GEN_DOWN > 1){
-        drawDescColumn(cid, ccx, childY + cardH + gkGapY, GEN_DOWN - 1, 1);
+        drawDescColumn(cid, ccx, childY + cardH + gkGapY, GEN_DOWN - 1, 1, childY + cardH);
       }
     });
   }
