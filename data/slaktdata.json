@@ -21318,6 +21318,51 @@
       "photo": "",
       "photoId": "",
       "history": "GEORG Lennart Israelsson\n\nFödd 1926-12-30 Fogdhyttan, Nora bergsförsamling\n\nDöd 1999-11-11 Nora\n\nNoteringar\n1926-12-30\nIsraelsson, Georg Lennart\nTorget 5\n710 30  Gyttorp\nKyrkobokförd i Nora bergsförs (Nora kn, Örebro län, Västmanland), distrikt 03, fastighet 37419. Mantalsskriven på samma ort.\nFödd 30/12 1926 i Nora bergsförs (Örebro län, Västmanland).\n--------------\nKälla: Mtl Örebro län 1971\n____________________________\n19261230-6619\nIsraelsson, Georg Lennart\nRådmansg 44\n713 31  Nora\nDöd 11/11 1999.\nKyrkobokförd i Nora bergsförs, Nora kn (Örebro län, Västmanland).\nFödd 30/12 1926 i Nora bergsförs (Örebro län, Västmanland).\nOgift man.\n--------------\nFödelseförsamling i källan:\nNORA BERGSF. (Örebro län)\nKällor:\nRTB 99\n\nGenväg r5.p148597703"
+    },
+    "p_03bmhn3n": {
+      "id": "p_03bmhn3n",
+      "name": "Ragnar Joel Grythberg",
+      "gender": "M",
+      "role": "",
+      "born": "1917-05-26",
+      "bornParish": "Nora Bergsförs.",
+      "died": "1957-10-16",
+      "diedParish": "Nora Bergsförs.",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Ragnar Joel Grytberg\n\nFödd 1917-05-26 Nora Bergfs, Örebro län\n\nGift med ANNA Elvira Grythberg 1945-12-01 \n\nDöd 1957-10-16 Nora Bergfs, Örebro län\nKälla: Svdb\n\nNoteringar\n19170526-685\n\nGrythberg, Joel Ragnar\n\nFogdhyttan 4:37\n\nDöd 16/10 1957.\n\nKyrkobokförd i Nora bergsförs, Noraskogs kn (Örebro län, Västmanland).\n\nFödd 26/5 1917 i Nora bergsförs (Örebro län, Västmanland).\n\nGift man (1/12 1945).\n--------------\nMotsvarande folkbokföringsförsamling(ar) 1/1 2017:\nNora bergslagsförs, Nora kn (Örebro län, Västmanland)\n\nFödelseförsamling i källan:\nNora bf (Örebro län)\n\nKällor:\nDB, FS / DOR 52-60"
+    },
+    "p_zq7q5zw1": {
+      "id": "p_zq7q5zw1",
+      "name": "CURT Ragnar Grythberg",
+      "gender": "M",
+      "role": "",
+      "born": "1948-03-06",
+      "bornParish": "Nora Bergsförs.",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "CURT Ragnar Grythberg\n\nFödd 1948-03-06 Nora bergsförsamling\n\nBosatt 2003-12-14 : Bäckhagen, 713 72 Gyttorp\n\nNoteringar\n1948-03-06\n\nGrytberg, Kurt Ragnar\n\nBorgmästarg 15 C\n713 00  Nora Stad\n\nKyrkobokförd i Nora stadsförs (Nora kn, Örebro län, Västmanland), distrikt 01, fastighet 01018. Mantalsskriven på samma ort.\n\nFödd 6/3 1948 i Nora bergsförs (Örebro län, Västmanland).\n--------------\nKälla: Mtl Örebro län 1971"
+    },
+    "p_1c95txz2": {
+      "id": "p_1c95txz2",
+      "name": "Sten LENNART Grytberg",
+      "gender": "M",
+      "role": "",
+      "born": "1950-03-18",
+      "bornParish": "Nora Bergsförs.",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Sten LENNART Grythberg\n\nFödd 1950-03-18 Nora bergsförsamling\n\nBosatt 2003-12-14 : Hälltorp 1125, 713 72 Gyttorp\n\nNoteringar\n1950-03-18\n\nGrytberg, Sten Lennart\n\nÅbrinken 6 B\n710 30  Gyttorp\n\nKyrkobokförd i Nora bergsförs (Nora kn, Örebro län, Västmanland), distrikt 03, fastighet 37419. Mantalsskriven på samma ort.\n\nFödd 18/3 1950 i Nora bergsförs (Örebro län, Västmanland).\n--------------\nKälla: Mtl Örebro län 1971"
     }
   },
   "parentsOf": {
@@ -21326,12 +21371,12 @@
       "p_zobmj6wp8"
     ],
     "p_3uj910se8": [
-      "p_3rw58lslc",
-      "p_bbclq6f9g"
+      "p_bbclq6f9g",
+      "p_3rw58lslc"
     ],
     "p_3w3d8mg0r": [
-      "p_p1t2kmcat",
-      "p_e2d8rcv1d"
+      "p_e2d8rcv1d",
+      "p_p1t2kmcat"
     ],
     "p_607tk2v1i": [
       "p_fceooch",
@@ -21358,8 +21403,8 @@
       "p_apnevfd1e"
     ],
     "p_anref8x": [
-      "p_a9c12mk",
-      "p_q1486bk"
+      "p_q1486bk",
+      "p_a9c12mk"
     ],
     "p_bbclq6f9g": [
       "p_r6gu9qm8a",
@@ -21375,12 +21420,12 @@
       "p_ymb6wc3q0"
     ],
     "p_c2jyk4pds": [
-      "p_mc6jemk",
-      "p_9vhcxd8"
+      "p_9vhcxd8",
+      "p_mc6jemk"
     ],
     "p_czyydy2g7": [
-      "p_mc6jemk",
-      "p_9vhcxd8"
+      "p_9vhcxd8",
+      "p_mc6jemk"
     ],
     "p_ep1684kzs": [
       "p_n2oxqssdd",
@@ -21391,8 +21436,8 @@
       "p_epbrpkbpc"
     ],
     "p_ir25hn919": [
-      "p_yhg9e9i5y",
-      "p_n4z6lfc2f"
+      "p_n4z6lfc2f",
+      "p_yhg9e9i5y"
     ],
     "p_p1t2kmcat": [
       "p_6c6wnb9",
@@ -21419,12 +21464,12 @@
       "p_ymb6wc3q0"
     ],
     "p_t22zhc497": [
-      "p_0dj5jnxhr",
-      "p_zmfl39a5r"
+      "p_zmfl39a5r",
+      "p_0dj5jnxhr"
     ],
     "p_vomcn89yz": [
-      "p_0dj5jnxhr",
-      "p_zmfl39a5r"
+      "p_zmfl39a5r",
+      "p_0dj5jnxhr"
     ],
     "p_zobmj6wp8": [
       "p_6c6wnb9",
@@ -21475,12 +21520,12 @@
       "p_apnevfd1e"
     ],
     "p_ir4u61dqa": [
-      "p_yhg9e9i5y",
-      "p_n4z6lfc2f"
+      "p_n4z6lfc2f",
+      "p_yhg9e9i5y"
     ],
     "p_jqtxmllar": [
-      "p_yhg9e9i5y",
-      "p_n4z6lfc2f"
+      "p_n4z6lfc2f",
+      "p_yhg9e9i5y"
     ],
     "p_apnevfd1e": [
       "p_l0tiqibe0",
@@ -21503,12 +21548,12 @@
       "p_apnevfd1e"
     ],
     "p_z4rxd74pc": [
-      "p_0dj5jnxhr",
-      "p_zmfl39a5r"
+      "p_zmfl39a5r",
+      "p_0dj5jnxhr"
     ],
     "p_zcl5kw4oh": [
-      "p_p1t2kmcat",
-      "p_e2d8rcv1d"
+      "p_e2d8rcv1d",
+      "p_p1t2kmcat"
     ],
     "p_lx16wimrx": [
       "p_izcueyhnf",
@@ -21522,8 +21567,8 @@
       "p_sh6rs3ypi"
     ],
     "p_4cjwtla35": [
-      "p_yhg9e9i5y",
-      "p_n4z6lfc2f"
+      "p_n4z6lfc2f",
+      "p_yhg9e9i5y"
     ],
     "p_37jcbtegu": [
       "p_n2oxqssdd",
@@ -24052,6 +24097,14 @@
     "p_sylt33cr": [
       "p_7ebdz5i1",
       "p_1v06hecw"
+    ],
+    "p_zq7q5zw1": [
+      "p_03bmhn3n",
+      "p_g04jsmxu"
+    ],
+    "p_1c95txz2": [
+      "p_03bmhn3n",
+      "p_g04jsmxu"
     ]
   },
   "childrenOf": {
@@ -24063,18 +24116,18 @@
       "p_3qowa85hd",
       "p_8mchqpopa"
     ],
+    "p_3rw58lslc": [
+      "p_3uj910se8"
+    ],
     "p_bbclq6f9g": [
       "p_3uj910se8",
       "p_4yyrm3723"
     ],
-    "p_3rw58lslc": [
-      "p_3uj910se8"
-    ],
-    "p_e2d8rcv1d": [
+    "p_p1t2kmcat": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
-    "p_p1t2kmcat": [
+    "p_e2d8rcv1d": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
@@ -24122,10 +24175,10 @@
       "p_yhg9e9i5y",
       "p_tdvl922cf"
     ],
-    "p_q1486bk": [
+    "p_a9c12mk": [
       "p_anref8x"
     ],
-    "p_a9c12mk": [
+    "p_q1486bk": [
       "p_anref8x"
     ],
     "p_k9dqg17ug": [
@@ -24168,11 +24221,11 @@
       "p_trylh546h",
       "p_vit2oe3no"
     ],
-    "p_9vhcxd8": [
+    "p_mc6jemk": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
-    "p_mc6jemk": [
+    "p_9vhcxd8": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
@@ -24198,13 +24251,13 @@
       "p_cyl275xx",
       "p_907ij0i8"
     ],
-    "p_n4z6lfc2f": [
+    "p_yhg9e9i5y": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
       "p_4cjwtla35"
     ],
-    "p_yhg9e9i5y": [
+    "p_n4z6lfc2f": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
@@ -24224,12 +24277,12 @@
       "p_zobmj6wp8",
       "p_0dj5jnxhr"
     ],
-    "p_zmfl39a5r": [
+    "p_0dj5jnxhr": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
     ],
-    "p_0dj5jnxhr": [
+    "p_zmfl39a5r": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
@@ -26880,6 +26933,14 @@
       "p_jhe36rjb",
       "p_g04jsmxu",
       "p_sylt33cr"
+    ],
+    "p_03bmhn3n": [
+      "p_zq7q5zw1",
+      "p_1c95txz2"
+    ],
+    "p_g04jsmxu": [
+      "p_zq7q5zw1",
+      "p_1c95txz2"
     ]
   },
   "spousesOf": {
@@ -29418,6 +29479,12 @@
     ],
     "p_feywmns6": [
       "p_5j8sz5ay"
+    ],
+    "p_g04jsmxu": [
+      "p_03bmhn3n"
+    ],
+    "p_03bmhn3n": [
+      "p_g04jsmxu"
     ]
   }
 }
