@@ -21738,6 +21738,141 @@
       "photo": "",
       "photoId": "",
       "history": ""
+    },
+    "p_us8m5ni7": {
+      "id": "p_us8m5ni7",
+      "name": "Lars Erik Pettersson",
+      "gender": "M",
+      "role": "",
+      "born": "1927-10-23",
+      "bornParish": "Viker",
+      "died": "",
+      "diedParish": "",
+      "job": "Mekanisk reparatör",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_r7qebm33": {
+      "id": "p_r7qebm33",
+      "name": "Lars Åke Pettersson",
+      "gender": "M",
+      "role": "",
+      "born": "1951-04-20",
+      "bornParish": "Viker",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_rxa0628j": {
+      "id": "p_rxa0628j",
+      "name": "Eva-Lena Pettersson",
+      "gender": "F",
+      "role": "",
+      "born": "1953-03-30",
+      "bornParish": "Nora Bergsförs.",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_gjemt6ex": {
+      "id": "p_gjemt6ex",
+      "name": "Agnes Ulla Maria Karlsson",
+      "gender": "F",
+      "role": "",
+      "born": "1938-08-31",
+      "bornParish": "Olaus Petri, Örebro",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_b58bkd77": {
+      "id": "p_b58bkd77",
+      "name": "Bengt Torbjörn Halldén",
+      "gender": "M",
+      "role": "",
+      "born": "1959-10-16",
+      "bornParish": "Viker",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_d8q5xw9y": {
+      "id": "p_d8q5xw9y",
+      "name": "Kerstin Birgitta",
+      "gender": "F",
+      "role": "",
+      "born": "1950-01-17",
+      "bornParish": "Nora",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Kerstin Birgitta\n\nFödd 1950-01-17 Nora\nGenväg r17.p120231470\nKälla: Genväg r17.p120231470\n\nNoteringar\nGenväg r17.p120231470"
+    },
+    "p_cnxdwh3h": {
+      "id": "p_cnxdwh3h",
+      "name": "Linda Birgitta Halldén",
+      "gender": "F",
+      "role": "",
+      "born": "1973-06-15",
+      "bornParish": "Karlskoga",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Linda Birgitta Halldén\n\nFödd 1973-06-15 Karlskoga\nGenväg r17.p120231471\n\nNoteringar\nGenväg r17.p120231471"
+    },
+    "p_mbqdh266": {
+      "id": "p_mbqdh266",
+      "name": "Jenny Kristina Halldén",
+      "gender": "F",
+      "role": "",
+      "born": "1975-06-03",
+      "bornParish": "Karlskoga",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Jenny Kristina Halldén\n\nFödd 1975-06-03 Karlskoga\nGenväg r17.p120231472\n\nNoteringar\nGenväg r17.p120231472"
+    },
+    "p_ako5vhtt": {
+      "id": "p_ako5vhtt",
+      "name": "Kurt Åke Jacobsson",
+      "gender": "M",
+      "role": "",
+      "born": "1959-04-01",
+      "bornParish": "Ljusnarsberg",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Kurt Åke Jacobsson\n\nFödd 1959-04-01 Ljusnarsberg, Örebro län\nGenväg r36.p266456375\n\nNoteringar\nGenväg r36.p266456375"
     }
   },
   "parentsOf": {
@@ -21746,12 +21881,12 @@
       "p_zobmj6wp8"
     ],
     "p_3uj910se8": [
-      "p_3rw58lslc",
-      "p_bbclq6f9g"
+      "p_bbclq6f9g",
+      "p_3rw58lslc"
     ],
     "p_3w3d8mg0r": [
-      "p_p1t2kmcat",
-      "p_e2d8rcv1d"
+      "p_e2d8rcv1d",
+      "p_p1t2kmcat"
     ],
     "p_607tk2v1i": [
       "p_fceooch",
@@ -21778,8 +21913,8 @@
       "p_apnevfd1e"
     ],
     "p_anref8x": [
-      "p_a9c12mk",
-      "p_q1486bk"
+      "p_q1486bk",
+      "p_a9c12mk"
     ],
     "p_bbclq6f9g": [
       "p_r6gu9qm8a",
@@ -21795,12 +21930,12 @@
       "p_ymb6wc3q0"
     ],
     "p_c2jyk4pds": [
-      "p_mc6jemk",
-      "p_9vhcxd8"
+      "p_9vhcxd8",
+      "p_mc6jemk"
     ],
     "p_czyydy2g7": [
-      "p_mc6jemk",
-      "p_9vhcxd8"
+      "p_9vhcxd8",
+      "p_mc6jemk"
     ],
     "p_ep1684kzs": [
       "p_n2oxqssdd",
@@ -21811,8 +21946,8 @@
       "p_epbrpkbpc"
     ],
     "p_ir25hn919": [
-      "p_yhg9e9i5y",
-      "p_n4z6lfc2f"
+      "p_n4z6lfc2f",
+      "p_yhg9e9i5y"
     ],
     "p_p1t2kmcat": [
       "p_6c6wnb9",
@@ -21839,12 +21974,12 @@
       "p_ymb6wc3q0"
     ],
     "p_t22zhc497": [
-      "p_0dj5jnxhr",
-      "p_zmfl39a5r"
+      "p_zmfl39a5r",
+      "p_0dj5jnxhr"
     ],
     "p_vomcn89yz": [
-      "p_0dj5jnxhr",
-      "p_zmfl39a5r"
+      "p_zmfl39a5r",
+      "p_0dj5jnxhr"
     ],
     "p_zobmj6wp8": [
       "p_6c6wnb9",
@@ -21895,12 +22030,12 @@
       "p_apnevfd1e"
     ],
     "p_ir4u61dqa": [
-      "p_yhg9e9i5y",
-      "p_n4z6lfc2f"
+      "p_n4z6lfc2f",
+      "p_yhg9e9i5y"
     ],
     "p_jqtxmllar": [
-      "p_yhg9e9i5y",
-      "p_n4z6lfc2f"
+      "p_n4z6lfc2f",
+      "p_yhg9e9i5y"
     ],
     "p_apnevfd1e": [
       "p_l0tiqibe0",
@@ -21923,12 +22058,12 @@
       "p_apnevfd1e"
     ],
     "p_z4rxd74pc": [
-      "p_0dj5jnxhr",
-      "p_zmfl39a5r"
+      "p_zmfl39a5r",
+      "p_0dj5jnxhr"
     ],
     "p_zcl5kw4oh": [
-      "p_p1t2kmcat",
-      "p_e2d8rcv1d"
+      "p_e2d8rcv1d",
+      "p_p1t2kmcat"
     ],
     "p_lx16wimrx": [
       "p_izcueyhnf",
@@ -21942,8 +22077,8 @@
       "p_sh6rs3ypi"
     ],
     "p_4cjwtla35": [
-      "p_yhg9e9i5y",
-      "p_n4z6lfc2f"
+      "p_n4z6lfc2f",
+      "p_yhg9e9i5y"
     ],
     "p_37jcbtegu": [
       "p_n2oxqssdd",
@@ -24541,6 +24676,26 @@
     ],
     "p_fzuoiqua": [
       "p_i2zoe6ri"
+    ],
+    "p_r7qebm33": [
+      "p_us8m5ni7",
+      "p_i1xg88mx"
+    ],
+    "p_rxa0628j": [
+      "p_us8m5ni7",
+      "p_i1xg88mx"
+    ],
+    "p_b58bkd77": [
+      "p_hw2qum3s",
+      "p_gjemt6ex"
+    ],
+    "p_cnxdwh3h": [
+      "p_76lkymlr",
+      "p_d8q5xw9y"
+    ],
+    "p_mbqdh266": [
+      "p_76lkymlr",
+      "p_d8q5xw9y"
     ]
   },
   "childrenOf": {
@@ -24552,18 +24707,18 @@
       "p_3qowa85hd",
       "p_8mchqpopa"
     ],
+    "p_3rw58lslc": [
+      "p_3uj910se8"
+    ],
     "p_bbclq6f9g": [
       "p_3uj910se8",
       "p_4yyrm3723"
     ],
-    "p_3rw58lslc": [
-      "p_3uj910se8"
-    ],
-    "p_e2d8rcv1d": [
+    "p_p1t2kmcat": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
-    "p_p1t2kmcat": [
+    "p_e2d8rcv1d": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
@@ -24611,10 +24766,10 @@
       "p_yhg9e9i5y",
       "p_tdvl922cf"
     ],
-    "p_q1486bk": [
+    "p_a9c12mk": [
       "p_anref8x"
     ],
-    "p_a9c12mk": [
+    "p_q1486bk": [
       "p_anref8x"
     ],
     "p_k9dqg17ug": [
@@ -24657,11 +24812,11 @@
       "p_trylh546h",
       "p_vit2oe3no"
     ],
-    "p_9vhcxd8": [
+    "p_mc6jemk": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
-    "p_mc6jemk": [
+    "p_9vhcxd8": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
@@ -24687,13 +24842,13 @@
       "p_cyl275xx",
       "p_907ij0i8"
     ],
-    "p_n4z6lfc2f": [
+    "p_yhg9e9i5y": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
       "p_4cjwtla35"
     ],
-    "p_yhg9e9i5y": [
+    "p_n4z6lfc2f": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
@@ -24713,12 +24868,12 @@
       "p_zobmj6wp8",
       "p_0dj5jnxhr"
     ],
-    "p_zmfl39a5r": [
+    "p_0dj5jnxhr": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
     ],
-    "p_0dj5jnxhr": [
+    "p_zmfl39a5r": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
@@ -27444,6 +27599,28 @@
       "p_metvgbxh",
       "p_nnzcw37c",
       "p_fzuoiqua"
+    ],
+    "p_us8m5ni7": [
+      "p_r7qebm33",
+      "p_rxa0628j"
+    ],
+    "p_i1xg88mx": [
+      "p_r7qebm33",
+      "p_rxa0628j"
+    ],
+    "p_hw2qum3s": [
+      "p_b58bkd77"
+    ],
+    "p_gjemt6ex": [
+      "p_b58bkd77"
+    ],
+    "p_76lkymlr": [
+      "p_cnxdwh3h",
+      "p_mbqdh266"
+    ],
+    "p_d8q5xw9y": [
+      "p_cnxdwh3h",
+      "p_mbqdh266"
     ]
   },
   "spousesOf": {
@@ -30042,6 +30219,30 @@
     ],
     "p_wgbkf4o0": [
       "p_1y3tyd9q"
+    ],
+    "p_i1xg88mx": [
+      "p_us8m5ni7"
+    ],
+    "p_us8m5ni7": [
+      "p_i1xg88mx"
+    ],
+    "p_hw2qum3s": [
+      "p_gjemt6ex"
+    ],
+    "p_gjemt6ex": [
+      "p_hw2qum3s"
+    ],
+    "p_76lkymlr": [
+      "p_d8q5xw9y"
+    ],
+    "p_d8q5xw9y": [
+      "p_76lkymlr"
+    ],
+    "p_20fjbgzf": [
+      "p_ako5vhtt"
+    ],
+    "p_ako5vhtt": [
+      "p_20fjbgzf"
     ]
   }
 }
