@@ -21693,6 +21693,51 @@
       "photo": "",
       "photoId": "",
       "history": "Nils Eddie Egron\n\nFödd 1942-10-04 Olaus Petri församling, Örebro\nNora stadsförsamling (T) AIIa:5 (1940-1949) Bild 2400 / sid 268 (AID: v229628.b2400.s268, NAD: SE/ULA/12285)"
+    },
+    "p_metvgbxh": {
+      "id": "p_metvgbxh",
+      "name": "Ylva Maria Madeleine Igelström",
+      "gender": "F",
+      "role": "",
+      "born": "11975-06-05",
+      "bornParish": "Spånga, Stockholm stad",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_nnzcw37c": {
+      "id": "p_nnzcw37c",
+      "name": "Ylva Helena Ulrika Igelström",
+      "gender": "F",
+      "role": "",
+      "born": "1978-02-03",
+      "bornParish": "Spånga, Stockholm stad",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_fzuoiqua": {
+      "id": "p_fzuoiqua",
+      "name": "Karl Ulf Stefan Igelström",
+      "gender": "M",
+      "role": "",
+      "born": "1985-04-21",
+      "bornParish": "Nora Bergsförs.",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
     }
   },
   "parentsOf": {
@@ -24487,6 +24532,15 @@
     "p_l2cctvu0": [
       "p_wgbkf4o0",
       "p_1y3tyd9q"
+    ],
+    "p_metvgbxh": [
+      "p_i2zoe6ri"
+    ],
+    "p_nnzcw37c": [
+      "p_i2zoe6ri"
+    ],
+    "p_fzuoiqua": [
+      "p_i2zoe6ri"
     ]
   },
   "childrenOf": {
@@ -27385,6 +27439,11 @@
     ],
     "p_1y3tyd9q": [
       "p_l2cctvu0"
+    ],
+    "p_i2zoe6ri": [
+      "p_metvgbxh",
+      "p_nnzcw37c",
+      "p_fzuoiqua"
     ]
   },
   "spousesOf": {
