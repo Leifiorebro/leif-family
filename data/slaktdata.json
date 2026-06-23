@@ -21873,6 +21873,186 @@
       "photo": "",
       "photoId": "",
       "history": "Kurt Åke Jacobsson\n\nFödd 1959-04-01 Ljusnarsberg, Örebro län\nGenväg r36.p266456375\n\nNoteringar\nGenväg r36.p266456375"
+    },
+    "p_5qf7fi13": {
+      "id": "p_5qf7fi13",
+      "name": "Lars Erik Persson",
+      "gender": "M",
+      "role": "",
+      "born": "1853-04-21",
+      "bornParish": "Grythyttan",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Lars Erik Persson\n\nFödd 1853-04-21 Grythyttan\n\nNoteringar\nGrythyttan (T) CII:4 (1842-1877) Bild 29 (AID: v53154.b29, NAD: SE/ULA/10337)"
+    },
+    "p_nk482pai": {
+      "id": "p_nk482pai",
+      "name": "Sara Ulrika Jonsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1857-03-04",
+      "bornParish": "Grythyttan",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_m65wx96j": {
+      "id": "p_m65wx96j",
+      "name": "Emil Sjöberg",
+      "gender": "",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_zf0xj790": {
+      "id": "p_zf0xj790",
+      "name": "Johanna Katrina Vestberg",
+      "gender": "",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_h58b71ef": {
+      "id": "p_h58b71ef",
+      "name": "Otto Hansson",
+      "gender": "",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_e1ccw3j0": {
+      "id": "p_e1ccw3j0",
+      "name": "Matilda Andersson",
+      "gender": "",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_veume33d": {
+      "id": "p_veume33d",
+      "name": "Karl Otto Leidzén",
+      "gender": "",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_ehvrv54b": {
+      "id": "p_ehvrv54b",
+      "name": "Beda Charlotta Carlsson",
+      "gender": "",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_rppkj5fa": {
+      "id": "p_rppkj5fa",
+      "name": "Carl Persson",
+      "gender": "M",
+      "role": "",
+      "born": "1782-11-26",
+      "bornParish": "Karlskoga",
+      "died": "1869-08-28",
+      "diedParish": "Nyttorp, Nora Bergsförs.",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Carl Persson\n\nFödd 1782-11-26 Karlskoga\n\nDöd 1869-08-28 Nyttorp, Nora bergsf.\nNora bergsförsamling (T) AI:16e (1861-1871) Bild 388 / sid 381 (AID: v52018.b388.s381, NAD: SE/ULA/11098)\n\nNoteringar\nNora bergsförsamling (T) AI:16e (1861-1871) Bild 388 / sid 381 (AID: v52018.b388.s381, NAD: SE/ULA/11098)"
+    },
+    "p_c8aarubq": {
+      "id": "p_c8aarubq",
+      "name": "Brita Ersdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1788-07-28",
+      "bornParish": "Karlskoga",
+      "died": "1863-09-06",
+      "diedParish": "Nyttorp, Nora Bergsförs.",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Brita Ersdotter\n\nFödd 1788-07-28 Karlskoga\n\nDöd 1863-09-06 Nyttorp, Nora bergsf.\nNora bergsförsamling (T) AI:16e (1861-1871) Bild 388 / sid 381 (AID: v52018.b388.s381, NAD: SE/ULA/11098)"
+    },
+    "p_77eaho7s": {
+      "id": "p_77eaho7s",
+      "name": "Nils Persson",
+      "gender": "M",
+      "role": "",
+      "born": "1804-03-13",
+      "bornParish": "Emtfalla, Varnum socken, Värmland",
+      "died": "1892-01-17",
+      "diedParish": "Älvstorp",
+      "job": "Torpare",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_m2900xer": {
+      "id": "p_m2900xer",
+      "name": "Maria Olsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1806-07-23",
+      "bornParish": "Bovik, Grythyttan",
+      "died": "1886-07-26",
+      "diedParish": "Älvstorp",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
     }
   },
   "parentsOf": {
@@ -21881,12 +22061,12 @@
       "p_zobmj6wp8"
     ],
     "p_3uj910se8": [
-      "p_bbclq6f9g",
-      "p_3rw58lslc"
+      "p_3rw58lslc",
+      "p_bbclq6f9g"
     ],
     "p_3w3d8mg0r": [
-      "p_e2d8rcv1d",
-      "p_p1t2kmcat"
+      "p_p1t2kmcat",
+      "p_e2d8rcv1d"
     ],
     "p_607tk2v1i": [
       "p_fceooch",
@@ -21913,8 +22093,8 @@
       "p_apnevfd1e"
     ],
     "p_anref8x": [
-      "p_q1486bk",
-      "p_a9c12mk"
+      "p_a9c12mk",
+      "p_q1486bk"
     ],
     "p_bbclq6f9g": [
       "p_r6gu9qm8a",
@@ -21930,12 +22110,12 @@
       "p_ymb6wc3q0"
     ],
     "p_c2jyk4pds": [
-      "p_9vhcxd8",
-      "p_mc6jemk"
+      "p_mc6jemk",
+      "p_9vhcxd8"
     ],
     "p_czyydy2g7": [
-      "p_9vhcxd8",
-      "p_mc6jemk"
+      "p_mc6jemk",
+      "p_9vhcxd8"
     ],
     "p_ep1684kzs": [
       "p_n2oxqssdd",
@@ -21946,8 +22126,8 @@
       "p_epbrpkbpc"
     ],
     "p_ir25hn919": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_p1t2kmcat": [
       "p_6c6wnb9",
@@ -21974,12 +22154,12 @@
       "p_ymb6wc3q0"
     ],
     "p_t22zhc497": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_vomcn89yz": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_zobmj6wp8": [
       "p_6c6wnb9",
@@ -22030,12 +22210,12 @@
       "p_apnevfd1e"
     ],
     "p_ir4u61dqa": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_jqtxmllar": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_apnevfd1e": [
       "p_l0tiqibe0",
@@ -22058,12 +22238,12 @@
       "p_apnevfd1e"
     ],
     "p_z4rxd74pc": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_zcl5kw4oh": [
-      "p_e2d8rcv1d",
-      "p_p1t2kmcat"
+      "p_p1t2kmcat",
+      "p_e2d8rcv1d"
     ],
     "p_lx16wimrx": [
       "p_izcueyhnf",
@@ -22077,8 +22257,8 @@
       "p_sh6rs3ypi"
     ],
     "p_4cjwtla35": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_37jcbtegu": [
       "p_n2oxqssdd",
@@ -24192,7 +24372,10 @@
       "p_hgaxze14",
       "p_348euw21"
     ],
-    "p_u9xectr7": [],
+    "p_u9xectr7": [
+      "p_rppkj5fa",
+      "p_c8aarubq"
+    ],
     "p_o2q2sszn": [
       "p_u9xectr7",
       "p_ubacyg84"
@@ -24696,6 +24879,26 @@
     "p_mbqdh266": [
       "p_76lkymlr",
       "p_d8q5xw9y"
+    ],
+    "p_e0eztlmz": [
+      "p_5qf7fi13",
+      "p_nk482pai"
+    ],
+    "p_61bntgv4": [
+      "p_m65wx96j",
+      "p_zf0xj790"
+    ],
+    "p_8gvl34a3": [
+      "p_h58b71ef",
+      "p_e1ccw3j0"
+    ],
+    "p_yp6l6ko6": [
+      "p_veume33d",
+      "p_ehvrv54b"
+    ],
+    "p_ubacyg84": [
+      "p_77eaho7s",
+      "p_m2900xer"
     ]
   },
   "childrenOf": {
@@ -24707,18 +24910,18 @@
       "p_3qowa85hd",
       "p_8mchqpopa"
     ],
-    "p_3rw58lslc": [
-      "p_3uj910se8"
-    ],
     "p_bbclq6f9g": [
       "p_3uj910se8",
       "p_4yyrm3723"
     ],
-    "p_p1t2kmcat": [
+    "p_3rw58lslc": [
+      "p_3uj910se8"
+    ],
+    "p_e2d8rcv1d": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
-    "p_e2d8rcv1d": [
+    "p_p1t2kmcat": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
@@ -24766,10 +24969,10 @@
       "p_yhg9e9i5y",
       "p_tdvl922cf"
     ],
-    "p_a9c12mk": [
+    "p_q1486bk": [
       "p_anref8x"
     ],
-    "p_q1486bk": [
+    "p_a9c12mk": [
       "p_anref8x"
     ],
     "p_k9dqg17ug": [
@@ -24812,11 +25015,11 @@
       "p_trylh546h",
       "p_vit2oe3no"
     ],
-    "p_mc6jemk": [
+    "p_9vhcxd8": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
-    "p_9vhcxd8": [
+    "p_mc6jemk": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
@@ -24842,13 +25045,13 @@
       "p_cyl275xx",
       "p_907ij0i8"
     ],
-    "p_yhg9e9i5y": [
+    "p_n4z6lfc2f": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
       "p_4cjwtla35"
     ],
-    "p_n4z6lfc2f": [
+    "p_yhg9e9i5y": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
@@ -24868,12 +25071,12 @@
       "p_zobmj6wp8",
       "p_0dj5jnxhr"
     ],
-    "p_0dj5jnxhr": [
+    "p_zmfl39a5r": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
     ],
-    "p_zmfl39a5r": [
+    "p_0dj5jnxhr": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
@@ -27240,6 +27443,12 @@
       "p_uv65vssj",
       "p_iy0adfaf"
     ],
+    "p_rppkj5fa": [
+      "p_u9xectr7"
+    ],
+    "p_c8aarubq": [
+      "p_u9xectr7"
+    ],
     "p_f99emt5c": [
       "p_kkbvde30",
       "p_iowyoxdc",
@@ -27621,6 +27830,36 @@
     "p_d8q5xw9y": [
       "p_cnxdwh3h",
       "p_mbqdh266"
+    ],
+    "p_5qf7fi13": [
+      "p_e0eztlmz"
+    ],
+    "p_nk482pai": [
+      "p_e0eztlmz"
+    ],
+    "p_m65wx96j": [
+      "p_61bntgv4"
+    ],
+    "p_zf0xj790": [
+      "p_61bntgv4"
+    ],
+    "p_h58b71ef": [
+      "p_8gvl34a3"
+    ],
+    "p_e1ccw3j0": [
+      "p_8gvl34a3"
+    ],
+    "p_veume33d": [
+      "p_yp6l6ko6"
+    ],
+    "p_ehvrv54b": [
+      "p_yp6l6ko6"
+    ],
+    "p_77eaho7s": [
+      "p_ubacyg84"
+    ],
+    "p_m2900xer": [
+      "p_ubacyg84"
     ]
   },
   "spousesOf": {
@@ -30243,6 +30482,42 @@
     ],
     "p_ako5vhtt": [
       "p_20fjbgzf"
+    ],
+    "p_5qf7fi13": [
+      "p_nk482pai"
+    ],
+    "p_nk482pai": [
+      "p_5qf7fi13"
+    ],
+    "p_m65wx96j": [
+      "p_zf0xj790"
+    ],
+    "p_zf0xj790": [
+      "p_m65wx96j"
+    ],
+    "p_h58b71ef": [
+      "p_e1ccw3j0"
+    ],
+    "p_e1ccw3j0": [
+      "p_h58b71ef"
+    ],
+    "p_veume33d": [
+      "p_ehvrv54b"
+    ],
+    "p_ehvrv54b": [
+      "p_veume33d"
+    ],
+    "p_rppkj5fa": [
+      "p_c8aarubq"
+    ],
+    "p_c8aarubq": [
+      "p_rppkj5fa"
+    ],
+    "p_77eaho7s": [
+      "p_m2900xer"
+    ],
+    "p_m2900xer": [
+      "p_77eaho7s"
     ]
   }
 }
