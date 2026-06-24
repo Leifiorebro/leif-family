@@ -5408,7 +5408,7 @@
       "name": "Eric Carlson",
       "gender": "M",
       "role": "",
-      "born": "",
+      "born": "1870",
       "bornParish": "Sverige",
       "died": "",
       "diedParish": "",
@@ -5425,7 +5425,7 @@
       "name": "Agnes Carlson",
       "gender": "F",
       "role": "Barn",
-      "born": "",
+      "born": "1899",
       "bornParish": "Chicago",
       "died": "",
       "diedParish": "",
@@ -22053,6 +22053,51 @@
       "photo": "",
       "photoId": "",
       "history": ""
+    },
+    "p_rwa0wlev": {
+      "id": "p_rwa0wlev",
+      "name": "Johan Blomgren",
+      "gender": "M",
+      "role": "",
+      "born": "1808-01-03",
+      "bornParish": "Kil, Örebro län",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_bj1wvk34": {
+      "id": "p_bj1wvk34",
+      "name": "Stina Ersdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1807",
+      "bornParish": "Kil, Örebro län",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_zx7ymmnz": {
+      "id": "p_zx7ymmnz",
+      "name": "Lars Erik Blomgren",
+      "gender": "",
+      "role": "",
+      "born": "1835",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
     }
   },
   "parentsOf": {
@@ -24899,6 +24944,13 @@
     "p_ubacyg84": [
       "p_77eaho7s",
       "p_m2900xer"
+    ],
+    "p_rwa0wlev": [
+      "p_6iwyg799"
+    ],
+    "p_zx7ymmnz": [
+      "p_rwa0wlev",
+      "p_bj1wvk34"
     ]
   },
   "childrenOf": {
@@ -25423,7 +25475,8 @@
       "p_t1mfpg75"
     ],
     "p_6iwyg799": [
-      "p_jn7ws9gr"
+      "p_jn7ws9gr",
+      "p_rwa0wlev"
     ],
     "p_lf5lph78": [
       "p_jn7ws9gr"
@@ -27860,6 +27913,12 @@
     ],
     "p_m2900xer": [
       "p_ubacyg84"
+    ],
+    "p_rwa0wlev": [
+      "p_zx7ymmnz"
+    ],
+    "p_bj1wvk34": [
+      "p_zx7ymmnz"
     ]
   },
   "spousesOf": {
@@ -30518,6 +30577,12 @@
     ],
     "p_m2900xer": [
       "p_77eaho7s"
+    ],
+    "p_rwa0wlev": [
+      "p_bj1wvk34"
+    ],
+    "p_bj1wvk34": [
+      "p_rwa0wlev"
     ]
   }
 }
