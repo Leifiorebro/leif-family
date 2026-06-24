@@ -22098,6 +22098,156 @@
       "photo": "",
       "photoId": "",
       "history": ""
+    },
+    "p_hshkvila": {
+      "id": "p_hshkvila",
+      "name": "Lars Jacobsson Blomgren",
+      "gender": "M",
+      "role": "",
+      "born": "1810-10-05",
+      "bornParish": "Kil, Örebro län",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Lars Jacobsson Blomgren\n\nFödd 1810-10-05 Kil, Örebro, Sverige\n\nNoteringar\nSonen Lars, som sedan treårsåldern var förlamad i en arm, flyttar1846 till Nora, lär ha varit småskollärare utanför Lindesberg."
+    },
+    "p_p93tm6wy": {
+      "id": "p_p93tm6wy",
+      "name": "Anna Stina Jacobsdotter Blomgren",
+      "gender": "F",
+      "role": "",
+      "born": "1816-12-08",
+      "bornParish": "Kil, Örebro län",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Anna Stina Jacobsdotter Blomgren\n\nFödd 1816-12-08 Kil, Örebro, Sverige\n\nNoteringar\nAnna Stina finns också vid Nybråten med sin familj, Torpare Per Jansson född 1816 i Kil, barnen Per Gustaf född 1839, Carl Johan född 1841, Daniel född 1843, Lotta född 1846, denna familj står efter 1847, då Karl flyttar, som brukare av Nybråten."
+    },
+    "p_hnz4yyw8": {
+      "id": "p_hnz4yyw8",
+      "name": "Per Jansson",
+      "gender": "M",
+      "role": "",
+      "born": "1816",
+      "bornParish": "Kil, Örebro län",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_rspj61na": {
+      "id": "p_rspj61na",
+      "name": "Per Gustaf",
+      "gender": "M",
+      "role": "",
+      "born": "1839",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_f1cnkv23": {
+      "id": "p_f1cnkv23",
+      "name": "Carl Johan",
+      "gender": "M",
+      "role": "",
+      "born": "1841",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_lf8wyyhi": {
+      "id": "p_lf8wyyhi",
+      "name": "Daniel",
+      "gender": "M",
+      "role": "",
+      "born": "1843",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_2n0x4fmu": {
+      "id": "p_2n0x4fmu",
+      "name": "Lotta",
+      "gender": "F",
+      "role": "",
+      "born": "1846",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_70rehwtt": {
+      "id": "p_70rehwtt",
+      "name": "Karl Jacobsson Blomgren",
+      "gender": "M",
+      "role": "",
+      "born": "1820-04-06",
+      "bornParish": "Kil, Örebro län",
+      "died": "1902-07-02",
+      "diedParish": "Kil, Örebro län",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Karl Jakobsson Blomgren\n\nFödd 1820-04-06 Kil, Örebro, Sverige\n\nDöd 1902-07-02 Kil, Örebro, Sverige\n\nNoteringar\nKarl gifter sig 1844 och står som brukare av torpet till 1847 då familjen flytar till Spåhagen. \n\nKarl Blomgren står från 1843 som brukare av 2/12 mtl. Nybråten, Lekebergs rote. Samma år står också Lovisa Axelsdotter som piga där, året efter gifter dom sej, (Lovisa kom 1843 från Nora) här stannar familjen till 1847 då de flyttar till Spåhagen, ett torp under Klockhammar. Här bor familjen i 50 år, barnen har under tiden flugit ut, utom dottern Maria Lovisa som gift sig 1886, hon och maken bor där åtminstonde till 1897 då Karl och husrtun Lovisa flyttar till en stuga strax norr om Klockhammar."
+    },
+    "p_zioc1yb6": {
+      "id": "p_zioc1yb6",
+      "name": "Lovisa Axelsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1823-05-03",
+      "bornParish": "Nora Stadsförs.",
+      "died": "1905-08-16",
+      "diedParish": "Kil, Örebro län",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_smummdir": {
+      "id": "p_smummdir",
+      "name": "Maria Lovisa",
+      "gender": "F",
+      "role": "",
+      "born": "1860",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
     }
   },
   "parentsOf": {
@@ -22106,12 +22256,12 @@
       "p_zobmj6wp8"
     ],
     "p_3uj910se8": [
-      "p_3rw58lslc",
-      "p_bbclq6f9g"
+      "p_bbclq6f9g",
+      "p_3rw58lslc"
     ],
     "p_3w3d8mg0r": [
-      "p_p1t2kmcat",
-      "p_e2d8rcv1d"
+      "p_e2d8rcv1d",
+      "p_p1t2kmcat"
     ],
     "p_607tk2v1i": [
       "p_fceooch",
@@ -22138,8 +22288,8 @@
       "p_apnevfd1e"
     ],
     "p_anref8x": [
-      "p_a9c12mk",
-      "p_q1486bk"
+      "p_q1486bk",
+      "p_a9c12mk"
     ],
     "p_bbclq6f9g": [
       "p_r6gu9qm8a",
@@ -22155,12 +22305,12 @@
       "p_ymb6wc3q0"
     ],
     "p_c2jyk4pds": [
-      "p_mc6jemk",
-      "p_9vhcxd8"
+      "p_9vhcxd8",
+      "p_mc6jemk"
     ],
     "p_czyydy2g7": [
-      "p_mc6jemk",
-      "p_9vhcxd8"
+      "p_9vhcxd8",
+      "p_mc6jemk"
     ],
     "p_ep1684kzs": [
       "p_n2oxqssdd",
@@ -22171,8 +22321,8 @@
       "p_epbrpkbpc"
     ],
     "p_ir25hn919": [
-      "p_yhg9e9i5y",
-      "p_n4z6lfc2f"
+      "p_n4z6lfc2f",
+      "p_yhg9e9i5y"
     ],
     "p_p1t2kmcat": [
       "p_6c6wnb9",
@@ -22199,12 +22349,12 @@
       "p_ymb6wc3q0"
     ],
     "p_t22zhc497": [
-      "p_0dj5jnxhr",
-      "p_zmfl39a5r"
+      "p_zmfl39a5r",
+      "p_0dj5jnxhr"
     ],
     "p_vomcn89yz": [
-      "p_0dj5jnxhr",
-      "p_zmfl39a5r"
+      "p_zmfl39a5r",
+      "p_0dj5jnxhr"
     ],
     "p_zobmj6wp8": [
       "p_6c6wnb9",
@@ -22255,12 +22405,12 @@
       "p_apnevfd1e"
     ],
     "p_ir4u61dqa": [
-      "p_yhg9e9i5y",
-      "p_n4z6lfc2f"
+      "p_n4z6lfc2f",
+      "p_yhg9e9i5y"
     ],
     "p_jqtxmllar": [
-      "p_yhg9e9i5y",
-      "p_n4z6lfc2f"
+      "p_n4z6lfc2f",
+      "p_yhg9e9i5y"
     ],
     "p_apnevfd1e": [
       "p_l0tiqibe0",
@@ -22283,12 +22433,12 @@
       "p_apnevfd1e"
     ],
     "p_z4rxd74pc": [
-      "p_0dj5jnxhr",
-      "p_zmfl39a5r"
+      "p_zmfl39a5r",
+      "p_0dj5jnxhr"
     ],
     "p_zcl5kw4oh": [
-      "p_p1t2kmcat",
-      "p_e2d8rcv1d"
+      "p_e2d8rcv1d",
+      "p_p1t2kmcat"
     ],
     "p_lx16wimrx": [
       "p_izcueyhnf",
@@ -22302,8 +22452,8 @@
       "p_sh6rs3ypi"
     ],
     "p_4cjwtla35": [
-      "p_yhg9e9i5y",
-      "p_n4z6lfc2f"
+      "p_n4z6lfc2f",
+      "p_yhg9e9i5y"
     ],
     "p_37jcbtegu": [
       "p_n2oxqssdd",
@@ -24946,11 +25096,43 @@
       "p_m2900xer"
     ],
     "p_rwa0wlev": [
-      "p_6iwyg799"
+      "p_6iwyg799",
+      "p_lf5lph78"
     ],
     "p_zx7ymmnz": [
       "p_rwa0wlev",
       "p_bj1wvk34"
+    ],
+    "p_hshkvila": [
+      "p_6iwyg799",
+      "p_lf5lph78"
+    ],
+    "p_p93tm6wy": [
+      "p_6iwyg799",
+      "p_lf5lph78"
+    ],
+    "p_rspj61na": [
+      "p_hnz4yyw8",
+      "p_p93tm6wy"
+    ],
+    "p_f1cnkv23": [
+      "p_hnz4yyw8",
+      "p_p93tm6wy"
+    ],
+    "p_lf8wyyhi": [
+      "p_hnz4yyw8",
+      "p_p93tm6wy"
+    ],
+    "p_2n0x4fmu": [
+      "p_hnz4yyw8",
+      "p_p93tm6wy"
+    ],
+    "p_70rehwtt": [
+      "p_6iwyg799"
+    ],
+    "p_smummdir": [
+      "p_70rehwtt",
+      "p_zioc1yb6"
     ]
   },
   "childrenOf": {
@@ -24962,18 +25144,18 @@
       "p_3qowa85hd",
       "p_8mchqpopa"
     ],
+    "p_3rw58lslc": [
+      "p_3uj910se8"
+    ],
     "p_bbclq6f9g": [
       "p_3uj910se8",
       "p_4yyrm3723"
     ],
-    "p_3rw58lslc": [
-      "p_3uj910se8"
-    ],
-    "p_e2d8rcv1d": [
+    "p_p1t2kmcat": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
-    "p_p1t2kmcat": [
+    "p_e2d8rcv1d": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
@@ -25021,10 +25203,10 @@
       "p_yhg9e9i5y",
       "p_tdvl922cf"
     ],
-    "p_q1486bk": [
+    "p_a9c12mk": [
       "p_anref8x"
     ],
-    "p_a9c12mk": [
+    "p_q1486bk": [
       "p_anref8x"
     ],
     "p_k9dqg17ug": [
@@ -25067,11 +25249,11 @@
       "p_trylh546h",
       "p_vit2oe3no"
     ],
-    "p_9vhcxd8": [
+    "p_mc6jemk": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
-    "p_mc6jemk": [
+    "p_9vhcxd8": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
@@ -25097,13 +25279,13 @@
       "p_cyl275xx",
       "p_907ij0i8"
     ],
-    "p_n4z6lfc2f": [
+    "p_yhg9e9i5y": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
       "p_4cjwtla35"
     ],
-    "p_yhg9e9i5y": [
+    "p_n4z6lfc2f": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
@@ -25123,12 +25305,12 @@
       "p_zobmj6wp8",
       "p_0dj5jnxhr"
     ],
-    "p_zmfl39a5r": [
+    "p_0dj5jnxhr": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
     ],
-    "p_0dj5jnxhr": [
+    "p_zmfl39a5r": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
@@ -25476,10 +25658,16 @@
     ],
     "p_6iwyg799": [
       "p_jn7ws9gr",
-      "p_rwa0wlev"
+      "p_rwa0wlev",
+      "p_hshkvila",
+      "p_p93tm6wy",
+      "p_70rehwtt"
     ],
     "p_lf5lph78": [
-      "p_jn7ws9gr"
+      "p_jn7ws9gr",
+      "p_rwa0wlev",
+      "p_hshkvila",
+      "p_p93tm6wy"
     ],
     "p_9wjiy2we": [
       "p_6iwyg799"
@@ -27919,6 +28107,24 @@
     ],
     "p_bj1wvk34": [
       "p_zx7ymmnz"
+    ],
+    "p_hnz4yyw8": [
+      "p_rspj61na",
+      "p_f1cnkv23",
+      "p_lf8wyyhi",
+      "p_2n0x4fmu"
+    ],
+    "p_p93tm6wy": [
+      "p_rspj61na",
+      "p_f1cnkv23",
+      "p_lf8wyyhi",
+      "p_2n0x4fmu"
+    ],
+    "p_zioc1yb6": [
+      "p_smummdir"
+    ],
+    "p_70rehwtt": [
+      "p_smummdir"
     ]
   },
   "spousesOf": {
@@ -30583,6 +30789,18 @@
     ],
     "p_bj1wvk34": [
       "p_rwa0wlev"
+    ],
+    "p_p93tm6wy": [
+      "p_hnz4yyw8"
+    ],
+    "p_hnz4yyw8": [
+      "p_p93tm6wy"
+    ],
+    "p_70rehwtt": [
+      "p_zioc1yb6"
+    ],
+    "p_zioc1yb6": [
+      "p_70rehwtt"
     ]
   }
 }
