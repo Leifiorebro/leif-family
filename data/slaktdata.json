@@ -22248,6 +22248,216 @@
       "photo": "",
       "photoId": "",
       "history": ""
+    },
+    "p_8d7hc8zl": {
+      "id": "p_8d7hc8zl",
+      "name": "Lars Larsson",
+      "gender": "M",
+      "role": "",
+      "born": "1743-12-08",
+      "bornParish": "Kil, Örebro län",
+      "died": "1799-07-22",
+      "diedParish": "Kil, Örebro län",
+      "job": "Bergsman",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Lars Larsson\n\nBergsman\n\nFödd 1743-12-08 Kil, Örebro, Sverige\n\nBosatt  Blankhult, Närkes Kil\n\nDöd 1799-07-22 Närkes Kil\n\nNoteringar\nLivshistoria\nhttp://trees.ancestry.com/rd?f=document&guid=bf050ca0-6a84-42b7-8e28-a8c487ff08fc&tid=33421111&pid=897\n\nÅr 1757 finns Lars, då 14 år gammal, som dräng vid Vallby Kils socken. 1768 är han torpare vid Klockarhyttan, han är nu gift.\n\nFamiljen flyttar 1777 till Blankhult där de av Per Jansson och hans hustru Elif Olofsdotter för 1650 riksdaler kopparmynt köpt 1/4 mtl. bergskatte-hemman uti Blankhult. 1796 köper de ytterligare 1/4 mtl. i samma hemman av Erik Olsson i Lockhyttan för 333 (myntslag ej läsbart) gångbart mynt. \n\nDottern Maria flyttar 1789 till Kils Prästgård, Catarina kommer också dit fyra år senar, Britta gifter sig 1799 och bor på ett torpställe, granne till föräldrarna. \n\nOm Lars Larsson har prästen antecknat att han föddes om morgonen den 8 dec och döptes 11 i samma månad 1743, dopvittnen var Frans Nilsson uti Hammarby, drängen Isac Jonsson i S. Billinge, hustrun kerstin Iraeldotter, Pigan Karin Andersdotter uti Hammarby.\n\nOm Maria står att hon föddes 13 aug om morgonen döptes d 19 i samma månad 1743, vittnen Capitienen högvälborne herr Mårten Holmberg, herr Samuel Brudelius, Madam Elisabeth Staaf, fru Hedvig Green, alla uti Blaksta. \n\nSonen Lars gifter sig 1800 med Christina Persdotter född 1780. Men redan 1798 köper Lars, då 20 år gammal, gården av sina föräldrar för 400 (myntslag ej läsbart). År 1816 lånar Lars av sexman Israel Nilsson i Skrikarhytta 226 riksdaler bancosedlar med 6% ränta och som säkerhet får Nilsson inteckning i  1/12 mtl. Blankhult."
+    },
+    "p_gicd0ue3": {
+      "id": "p_gicd0ue3",
+      "name": "Maria Nilsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1743-08-13",
+      "bornParish": "Kil, Örebro län",
+      "died": "1813-11-25",
+      "diedParish": "Kil, Örebro län",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_urtq9iyo": {
+      "id": "p_urtq9iyo",
+      "name": "Lars Larsson",
+      "gender": "M",
+      "role": "",
+      "born": "1716-11-28",
+      "bornParish": "Kil, Örebro län",
+      "died": "1759-06-24",
+      "diedParish": "Kil, Örebro län",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Lars Larsson\n\nFödd 1716-11-28 Kil, Örebro, Sverige\n\nBosatt  Hammarby\n\nDöd 1759-06-24 Kil, Örebro, Sverige\n\nNoteringar\nLars Larsson 1759 död"
+    },
+    "p_ucl5qc6m": {
+      "id": "p_ucl5qc6m",
+      "name": "Karin Nilsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1716-03-19",
+      "bornParish": "Kil, Örebro län",
+      "died": "1766",
+      "diedParish": "Kil, Örebro län",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_fhumorwb": {
+      "id": "p_fhumorwb",
+      "name": "Lars Larsson",
+      "gender": "M",
+      "role": "",
+      "born": "1686",
+      "bornParish": "Kil, Örebro län",
+      "died": "1738",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_r3jl7oh3": {
+      "id": "p_r3jl7oh3",
+      "name": "Karin Andersdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1679",
+      "bornParish": "Kil, Örebro län",
+      "died": "1758",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_djfmvw5l": {
+      "id": "p_djfmvw5l",
+      "name": "Nils Jansson",
+      "gender": "M",
+      "role": "",
+      "born": "1680",
+      "bornParish": "Kil, Örebro län",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_z2s4f9tr": {
+      "id": "p_z2s4f9tr",
+      "name": "Karin Persdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1680",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_gsip9qih": {
+      "id": "p_gsip9qih",
+      "name": "Nils Andersson",
+      "gender": "M",
+      "role": "",
+      "born": "1717-08-04",
+      "bornParish": "Kil, Örebro län",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_ygc4jp76": {
+      "id": "p_ygc4jp76",
+      "name": "Sara Jansdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1719-04-24",
+      "bornParish": "Kil, Örebro län",
+      "died": "1774",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_66dahcwd": {
+      "id": "p_66dahcwd",
+      "name": "Anders Larsson",
+      "gender": "M",
+      "role": "",
+      "born": "1663",
+      "bornParish": "Kil, Örebro län",
+      "died": "1742",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_z8di67xb": {
+      "id": "p_z8di67xb",
+      "name": "Karin Nilsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1688",
+      "bornParish": "Kil, Örebro, län",
+      "died": "1763",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_jh5nli9x": {
+      "id": "p_jh5nli9x",
+      "name": "Jan Månsson",
+      "gender": "M",
+      "role": "",
+      "born": "1679",
+      "bornParish": "Kil, Örebro län",
+      "died": "1756",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_gxlh3fow": {
+      "id": "p_gxlh3fow",
+      "name": "Britta Jonsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1675",
+      "bornParish": "Kil, Örebro län",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
     }
   },
   "parentsOf": {
@@ -25133,6 +25343,34 @@
     "p_smummdir": [
       "p_70rehwtt",
       "p_zioc1yb6"
+    ],
+    "p_lf5lph78": [
+      "p_8d7hc8zl",
+      "p_gicd0ue3"
+    ],
+    "p_8d7hc8zl": [
+      "p_urtq9iyo",
+      "p_ucl5qc6m"
+    ],
+    "p_urtq9iyo": [
+      "p_fhumorwb",
+      "p_r3jl7oh3"
+    ],
+    "p_ucl5qc6m": [
+      "p_djfmvw5l",
+      "p_z2s4f9tr"
+    ],
+    "p_gicd0ue3": [
+      "p_gsip9qih",
+      "p_ygc4jp76"
+    ],
+    "p_gsip9qih": [
+      "p_66dahcwd",
+      "p_z8di67xb"
+    ],
+    "p_ygc4jp76": [
+      "p_jh5nli9x",
+      "p_gxlh3fow"
     ]
   },
   "childrenOf": {
@@ -28120,11 +28358,53 @@
       "p_lf8wyyhi",
       "p_2n0x4fmu"
     ],
+    "p_70rehwtt": [
+      "p_smummdir"
+    ],
     "p_zioc1yb6": [
       "p_smummdir"
     ],
-    "p_70rehwtt": [
-      "p_smummdir"
+    "p_8d7hc8zl": [
+      "p_lf5lph78"
+    ],
+    "p_gicd0ue3": [
+      "p_lf5lph78"
+    ],
+    "p_urtq9iyo": [
+      "p_8d7hc8zl"
+    ],
+    "p_ucl5qc6m": [
+      "p_8d7hc8zl"
+    ],
+    "p_fhumorwb": [
+      "p_urtq9iyo"
+    ],
+    "p_r3jl7oh3": [
+      "p_urtq9iyo"
+    ],
+    "p_djfmvw5l": [
+      "p_ucl5qc6m"
+    ],
+    "p_z2s4f9tr": [
+      "p_ucl5qc6m"
+    ],
+    "p_gsip9qih": [
+      "p_gicd0ue3"
+    ],
+    "p_ygc4jp76": [
+      "p_gicd0ue3"
+    ],
+    "p_66dahcwd": [
+      "p_gsip9qih"
+    ],
+    "p_z8di67xb": [
+      "p_gsip9qih"
+    ],
+    "p_jh5nli9x": [
+      "p_ygc4jp76"
+    ],
+    "p_gxlh3fow": [
+      "p_ygc4jp76"
     ]
   },
   "spousesOf": {
@@ -30801,6 +31081,48 @@
     ],
     "p_zioc1yb6": [
       "p_70rehwtt"
+    ],
+    "p_8d7hc8zl": [
+      "p_gicd0ue3"
+    ],
+    "p_gicd0ue3": [
+      "p_8d7hc8zl"
+    ],
+    "p_urtq9iyo": [
+      "p_ucl5qc6m"
+    ],
+    "p_ucl5qc6m": [
+      "p_urtq9iyo"
+    ],
+    "p_fhumorwb": [
+      "p_r3jl7oh3"
+    ],
+    "p_r3jl7oh3": [
+      "p_fhumorwb"
+    ],
+    "p_djfmvw5l": [
+      "p_z2s4f9tr"
+    ],
+    "p_z2s4f9tr": [
+      "p_djfmvw5l"
+    ],
+    "p_gsip9qih": [
+      "p_ygc4jp76"
+    ],
+    "p_ygc4jp76": [
+      "p_gsip9qih"
+    ],
+    "p_66dahcwd": [
+      "p_z8di67xb"
+    ],
+    "p_z8di67xb": [
+      "p_66dahcwd"
+    ],
+    "p_jh5nli9x": [
+      "p_gxlh3fow"
+    ],
+    "p_gxlh3fow": [
+      "p_jh5nli9x"
     ]
   }
 }
