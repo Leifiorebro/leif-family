@@ -5767,7 +5767,7 @@
       "role": "",
       "born": "1743-08-27",
       "bornParish": "Kil, Örebro län",
-      "died": "",
+      "died": "1818",
       "diedParish": "",
       "job": "",
       "link": "",
@@ -22458,6 +22458,111 @@
       "photo": "",
       "photoId": "",
       "history": ""
+    },
+    "p_cmc9atd5": {
+      "id": "p_cmc9atd5",
+      "name": "Olof Eriksson",
+      "gender": "M",
+      "role": "",
+      "born": "1710",
+      "bornParish": "Kil, Örebro län",
+      "died": "1772-12-04",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Olof Eriksson\n\nFödd 1710 Kil, Örebro, Sverige\n\nDöd 1772-12-04 \n\nNoteringar\nLivshistoria\nhttp://trees.ancestry.com/rd?f=document&guid=87277b24-1561-4c3e-9a3b-b277d3b6e7dc&tid=33421111&pid=987\n\nOlof Eriksson var bergsman i Ramshyttan där han övertog föräldrarnas kronobergsmans-hemman, här stannade familjen hela tiden och efter dem tog äldste sonen Olof vid, han gifte sig med Magdalena Andersdotter och 1768 har de unga tre barn. Med denna sista generation är det fem kända generationer som haft denna bergsmansgård. (Troligt att bergsmansgården fortsätter att gå i arv, men ej inom denna släkt.)\nDottern Britta flyttar hemifrån 1765"
+    },
+    "p_p5wv5q92": {
+      "id": "p_p5wv5q92",
+      "name": "Karin Pedersdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1716",
+      "bornParish": "Tysslinge",
+      "died": "1770-03-13",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Karin Pedersdotter\n\nFödd 1716 Tysslinge, Örebro, Sverige\n\nDöd (13 MARS 1770) \n\nNoteringar\nLivshistoria\nhttp://trees.ancestry.com/rd?f=document&guid=87277b24-1561-4c3e-9a3b-b277d3b6e7dc&tid=33421111&pid=986"
+    },
+    "p_k5bu5vvl": {
+      "id": "p_k5bu5vvl",
+      "name": "Erik Olsson",
+      "gender": "M",
+      "role": "",
+      "born": "1672",
+      "bornParish": "Kil, Örebro län",
+      "died": "1728",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_z57u09rb": {
+      "id": "p_z57u09rb",
+      "name": "Karin Eriksdotter",
+      "gender": "",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_78g4rd2n": {
+      "id": "p_78g4rd2n",
+      "name": "Olof Eriksson",
+      "gender": "M",
+      "role": "",
+      "born": "1647 ",
+      "bornParish": "Kil, Örebro län",
+      "died": "1723-01-03",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_luw43kar": {
+      "id": "p_luw43kar",
+      "name": "Karin Persdotter",
+      "gender": "",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_gd7yonl9": {
+      "id": "p_gd7yonl9",
+      "name": "Erik Olofsson",
+      "gender": "M",
+      "role": "",
+      "born": "1580",
+      "bornParish": "Ramshyttan, Kil",
+      "died": "1675",
+      "diedParish": "Ramshyttan, Kil",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
     }
   },
   "parentsOf": {
@@ -22466,12 +22571,12 @@
       "p_zobmj6wp8"
     ],
     "p_3uj910se8": [
-      "p_bbclq6f9g",
-      "p_3rw58lslc"
+      "p_3rw58lslc",
+      "p_bbclq6f9g"
     ],
     "p_3w3d8mg0r": [
-      "p_e2d8rcv1d",
-      "p_p1t2kmcat"
+      "p_p1t2kmcat",
+      "p_e2d8rcv1d"
     ],
     "p_607tk2v1i": [
       "p_fceooch",
@@ -22498,8 +22603,8 @@
       "p_apnevfd1e"
     ],
     "p_anref8x": [
-      "p_q1486bk",
-      "p_a9c12mk"
+      "p_a9c12mk",
+      "p_q1486bk"
     ],
     "p_bbclq6f9g": [
       "p_r6gu9qm8a",
@@ -22515,12 +22620,12 @@
       "p_ymb6wc3q0"
     ],
     "p_c2jyk4pds": [
-      "p_9vhcxd8",
-      "p_mc6jemk"
+      "p_mc6jemk",
+      "p_9vhcxd8"
     ],
     "p_czyydy2g7": [
-      "p_9vhcxd8",
-      "p_mc6jemk"
+      "p_mc6jemk",
+      "p_9vhcxd8"
     ],
     "p_ep1684kzs": [
       "p_n2oxqssdd",
@@ -22531,8 +22636,8 @@
       "p_epbrpkbpc"
     ],
     "p_ir25hn919": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_p1t2kmcat": [
       "p_6c6wnb9",
@@ -22559,12 +22664,12 @@
       "p_ymb6wc3q0"
     ],
     "p_t22zhc497": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_vomcn89yz": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_zobmj6wp8": [
       "p_6c6wnb9",
@@ -22615,12 +22720,12 @@
       "p_apnevfd1e"
     ],
     "p_ir4u61dqa": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_jqtxmllar": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_apnevfd1e": [
       "p_l0tiqibe0",
@@ -22643,12 +22748,12 @@
       "p_apnevfd1e"
     ],
     "p_z4rxd74pc": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_zcl5kw4oh": [
-      "p_e2d8rcv1d",
-      "p_p1t2kmcat"
+      "p_p1t2kmcat",
+      "p_e2d8rcv1d"
     ],
     "p_lx16wimrx": [
       "p_izcueyhnf",
@@ -22662,8 +22767,8 @@
       "p_sh6rs3ypi"
     ],
     "p_4cjwtla35": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_37jcbtegu": [
       "p_n2oxqssdd",
@@ -25371,6 +25476,20 @@
     "p_ygc4jp76": [
       "p_jh5nli9x",
       "p_gxlh3fow"
+    ],
+    "p_qazae6yr": [
+      "p_cmc9atd5",
+      "p_p5wv5q92"
+    ],
+    "p_cmc9atd5": [
+      "p_k5bu5vvl",
+      "p_z57u09rb"
+    ],
+    "p_k5bu5vvl": [
+      "p_78g4rd2n"
+    ],
+    "p_78g4rd2n": [
+      "p_gd7yonl9"
     ]
   },
   "childrenOf": {
@@ -25382,18 +25501,18 @@
       "p_3qowa85hd",
       "p_8mchqpopa"
     ],
-    "p_3rw58lslc": [
-      "p_3uj910se8"
-    ],
     "p_bbclq6f9g": [
       "p_3uj910se8",
       "p_4yyrm3723"
     ],
-    "p_p1t2kmcat": [
+    "p_3rw58lslc": [
+      "p_3uj910se8"
+    ],
+    "p_e2d8rcv1d": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
-    "p_e2d8rcv1d": [
+    "p_p1t2kmcat": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
@@ -25441,10 +25560,10 @@
       "p_yhg9e9i5y",
       "p_tdvl922cf"
     ],
-    "p_a9c12mk": [
+    "p_q1486bk": [
       "p_anref8x"
     ],
-    "p_q1486bk": [
+    "p_a9c12mk": [
       "p_anref8x"
     ],
     "p_k9dqg17ug": [
@@ -25487,11 +25606,11 @@
       "p_trylh546h",
       "p_vit2oe3no"
     ],
-    "p_mc6jemk": [
+    "p_9vhcxd8": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
-    "p_9vhcxd8": [
+    "p_mc6jemk": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
@@ -25517,13 +25636,13 @@
       "p_cyl275xx",
       "p_907ij0i8"
     ],
-    "p_yhg9e9i5y": [
+    "p_n4z6lfc2f": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
       "p_4cjwtla35"
     ],
-    "p_n4z6lfc2f": [
+    "p_yhg9e9i5y": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
@@ -25543,12 +25662,12 @@
       "p_zobmj6wp8",
       "p_0dj5jnxhr"
     ],
-    "p_0dj5jnxhr": [
+    "p_zmfl39a5r": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
     ],
-    "p_zmfl39a5r": [
+    "p_0dj5jnxhr": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
@@ -28405,6 +28524,24 @@
     ],
     "p_gxlh3fow": [
       "p_ygc4jp76"
+    ],
+    "p_cmc9atd5": [
+      "p_qazae6yr"
+    ],
+    "p_p5wv5q92": [
+      "p_qazae6yr"
+    ],
+    "p_k5bu5vvl": [
+      "p_cmc9atd5"
+    ],
+    "p_z57u09rb": [
+      "p_cmc9atd5"
+    ],
+    "p_78g4rd2n": [
+      "p_k5bu5vvl"
+    ],
+    "p_gd7yonl9": [
+      "p_78g4rd2n"
     ]
   },
   "spousesOf": {
@@ -31123,6 +31260,24 @@
     ],
     "p_gxlh3fow": [
       "p_jh5nli9x"
+    ],
+    "p_cmc9atd5": [
+      "p_p5wv5q92"
+    ],
+    "p_p5wv5q92": [
+      "p_cmc9atd5"
+    ],
+    "p_k5bu5vvl": [
+      "p_z57u09rb"
+    ],
+    "p_z57u09rb": [
+      "p_k5bu5vvl"
+    ],
+    "p_78g4rd2n": [
+      "p_luw43kar"
+    ],
+    "p_luw43kar": [
+      "p_78g4rd2n"
     ]
   }
 }
