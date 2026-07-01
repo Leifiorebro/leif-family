@@ -23463,6 +23463,111 @@
       "photo": "",
       "photoId": "",
       "history": "Hans Jacobsson\n\nFödd 1745-10-01 Bråten i Grythyttans församling\nGrythyttans kyrkoarkiv, Födelse- och dopböcker, SE/ULA/10337/C I/3 (1737-1757), bildid: C0000547_00096\n\nhttps://sok.riksarkivet.se/bildvisning/C0000547_00096\nKälla: v53136.b190\n\nNoteringar\nv53136.b190\n\nGrythyttans kyrkoarkiv, Födelse- och dopböcker, SE/ULA/10337/C I/3 (1737-1757), bildid: C0000547_00096\n\nhttps://sok.riksarkivet.se/bildvisning/C0000547_00096"
+    },
+    "p_cwd7ox76": {
+      "id": "p_cwd7ox76",
+      "name": "Florence Elisabeth Lexander",
+      "gender": "F",
+      "role": "",
+      "born": "1893-09-26",
+      "bornParish": "Chicago, Cook, Illinois, USA",
+      "died": "1921-02-14",
+      "diedParish": "Stromsburg, Polk Co, Nebraska",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_8655n6o4": {
+      "id": "p_8655n6o4",
+      "name": "Edvin Emanuel Lexander",
+      "gender": "M",
+      "role": "",
+      "born": "1896-07",
+      "bornParish": "Pullman, Cook Co, Illinois, USA",
+      "died": "1898",
+      "diedParish": "Roseland, Cook Co, Illinois, USA",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_njb9weut": {
+      "id": "p_njb9weut",
+      "name": "Shirley Florence Rasmussen",
+      "gender": "F",
+      "role": "",
+      "born": "1924-01-13",
+      "bornParish": "Chicago, Cook Co, Illinois, USA",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Shirley Florence Rasmussen\n\nFödd 1924-01-13 Chicago, Cook Co, Illinois\n\nGift med John Eugene Kasperek 1948-10-02 \n\nNoteringar\nSvenskar i USA 1940 (USA) IL:12 (1940-1940) Bild 14120 (AID: v834683.b14120, NAD: )"
+    },
+    "p_utvgsqwu": {
+      "id": "p_utvgsqwu",
+      "name": "Walter Nelson",
+      "gender": "",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_y2257ua2": {
+      "id": "p_y2257ua2",
+      "name": "Olof Mauritz Forsberg",
+      "gender": "M",
+      "role": "",
+      "born": "1861-09-20",
+      "bornParish": "Nyfors, Malingsbo, Kopparberg",
+      "died": "1920-03-15",
+      "diedParish": "Chicago, Cook Co, Illinois, USA",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Olof Mauritz Forsberg\n\nDräng\n\nFödd 1861-09-20 Nyfors, Malingsbo, Kopparberg\n\nGift med Hulda Elisabeth Grek 1885-06-22 \n\nDöd 1920-03-15 Chicago, Cook Co., Illinois\n\nNoteringar\nOlof Mauritz och August Wilhelm är tvillingar.\n\nMalingsbo (W) AI:13 (1881-1890) Bild 139 / sid 130 (AID: v130928.b139.s130, NAD: SE/ULA/11055)"
+    },
+    "p_1wosxy5t": {
+      "id": "p_1wosxy5t",
+      "name": "Dödfött flickebarn",
+      "gender": "F",
+      "role": "",
+      "born": "1867-08-21",
+      "bornParish": "Pettersfors, Järnboås",
+      "died": "1867-08-21",
+      "diedParish": "Pettersfors, Järnboås",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Dödfött flickebarn\n\nFödd 1867-08-21 Petersfors\n\nDöd 1867-08-21 Petersfors\n\nNoteringar\n18670821_dödfött flickebarn.jpg"
+    },
+    "p_50axv3cc": {
+      "id": "p_50axv3cc",
+      "name": "Gustaf Primus",
+      "gender": "M",
+      "role": "",
+      "born": "1880-05-24",
+      "bornParish": "Malingsbo, Kopparberg",
+      "died": "1881-12-25",
+      "diedParish": "Malingsbo, Kopparberg",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
     }
   },
   "parentsOf": {
@@ -24002,9 +24107,11 @@
       "p_osmy2svx"
     ],
     "p_vv7xbfpg": [
+      "p_w3tmbxjd",
       "p_1c6u8six"
     ],
     "p_6f3g4eai": [
+      "p_75f3j5sv",
       "p_vv7xbfpg"
     ],
     "p_x33kgh6m": [
@@ -26592,6 +26699,26 @@
     "p_algs6691": [
       "p_mj97s45a",
       "p_epxm26g7"
+    ],
+    "p_cwd7ox76": [
+      "p_w3tmbxjd",
+      "p_1c6u8six"
+    ],
+    "p_8655n6o4": [
+      "p_w3tmbxjd",
+      "p_1c6u8six"
+    ],
+    "p_njb9weut": [
+      "p_75f3j5sv",
+      "p_vv7xbfpg"
+    ],
+    "p_1wosxy5t": [
+      "p_hyvnwes60",
+      "p_osmy2svx"
+    ],
+    "p_50axv3cc": [
+      "p_hyvnwes60",
+      "p_osmy2svx"
     ]
   },
   "childrenOf": {
@@ -27229,17 +27356,33 @@
     ],
     "p_hyvnwes60": [
       "p_xp21b1lx",
-      "p_1c6u8six"
+      "p_1c6u8six",
+      "p_1wosxy5t",
+      "p_50axv3cc"
     ],
     "p_osmy2svx": [
       "p_xp21b1lx",
-      "p_1c6u8six"
+      "p_1c6u8six",
+      "p_1wosxy5t",
+      "p_50axv3cc"
+    ],
+    "p_w3tmbxjd": [
+      "p_vv7xbfpg",
+      "p_cwd7ox76",
+      "p_8655n6o4"
     ],
     "p_1c6u8six": [
-      "p_vv7xbfpg"
+      "p_vv7xbfpg",
+      "p_cwd7ox76",
+      "p_8655n6o4"
+    ],
+    "p_75f3j5sv": [
+      "p_6f3g4eai",
+      "p_njb9weut"
     ],
     "p_vv7xbfpg": [
-      "p_6f3g4eai"
+      "p_6f3g4eai",
+      "p_njb9weut"
     ],
     "p_6f3g4eai": [
       "p_x33kgh6m"
@@ -30328,7 +30471,9 @@
     "p_njsfz349": [
       "p_kx116bv9"
     ],
-    "p_xp21b1lx": [],
+    "p_xp21b1lx": [
+      "p_y2257ua2"
+    ],
     "p_1c6u8six": [
       "p_w3tmbxjd"
     ],
@@ -32569,6 +32714,15 @@
     "p_76b983u7": [
       "p_bpkh3795"
     ],
-    "p_6vw5pxqg": []
+    "p_6vw5pxqg": [],
+    "p_cwd7ox76": [
+      "p_utvgsqwu"
+    ],
+    "p_utvgsqwu": [
+      "p_cwd7ox76"
+    ],
+    "p_y2257ua2": [
+      "p_xp21b1lx"
+    ]
   }
 }
