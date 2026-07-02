@@ -23634,40 +23634,10 @@
       "name": "Philip Emanuel Forsberg",
       "gender": "M",
       "role": "",
-      "born": "1892-05-01",
+      "born": "§892-05-01",
       "bornParish": "Chicago, Cook Co, Illinois, USA",
       "died": "1970-11-24",
       "diedParish": "San Marcos, San Diego, California, USA",
-      "job": "",
-      "link": "",
-      "photo": "",
-      "photoId": "",
-      "history": ""
-    },
-    "p_17y76xcm": {
-      "id": "p_17y76xcm",
-      "name": "Signe Forsberg",
-      "gender": "F",
-      "role": "",
-      "born": "1894-09-14",
-      "bornParish": "Illinois, USA",
-      "died": "1982-09-28",
-      "diedParish": "Essex Fells, Essex, New Jersey, USA",
-      "job": "",
-      "link": "",
-      "photo": "",
-      "photoId": "",
-      "history": ""
-    },
-    "p_jqd7xy3e": {
-      "id": "p_jqd7xy3e",
-      "name": "Eva W Forsberg",
-      "gender": "F",
-      "role": "",
-      "born": "1897",
-      "bornParish": "Illinois",
-      "died": "",
-      "diedParish": "",
       "job": "",
       "link": "",
       "photo": "",
@@ -26842,14 +26812,6 @@
       "p_xp21b1lx"
     ],
     "p_nl5o8e8v": [
-      "p_y2257ua2",
-      "p_xp21b1lx"
-    ],
-    "p_17y76xcm": [
-      "p_y2257ua2",
-      "p_xp21b1lx"
-    ],
-    "p_jqd7xy3e": [
       "p_y2257ua2",
       "p_xp21b1lx"
     ]
@@ -30060,18 +30022,14 @@
       "p_wwekz3xy",
       "p_px471aur",
       "p_d92l1b5s",
-      "p_nl5o8e8v",
-      "p_17y76xcm",
-      "p_jqd7xy3e"
+      "p_nl5o8e8v"
     ],
     "p_xp21b1lx": [
       "p_k8n1fz50",
       "p_wwekz3xy",
       "p_px471aur",
       "p_d92l1b5s",
-      "p_nl5o8e8v",
-      "p_17y76xcm",
-      "p_jqd7xy3e"
+      "p_nl5o8e8v"
     ]
   },
   "spousesOf": {
