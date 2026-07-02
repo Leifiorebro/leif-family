@@ -23568,6 +23568,111 @@
       "photo": "",
       "photoId": "",
       "history": ""
+    },
+    "p_k8n1fz50": {
+      "id": "p_k8n1fz50",
+      "name": "Agnes Elisabeth Forsberg",
+      "gender": "F",
+      "role": "",
+      "born": "1885-04-08",
+      "bornParish": "Malingsbo, Kopparberg",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Agnes Elisabeth Forsberg\n\nFödd 1885-04-08 Malingsbo, Kopparberg\n\nNoteringar\nMalingsbo (W) AI:13 (1881-1890) Bild 139 / sid 130 (AID: v130928.b139.s130, NAD: SE/ULA/11055)"
+    },
+    "p_wwekz3xy": {
+      "id": "p_wwekz3xy",
+      "name": "Elizabeth Forsberg",
+      "gender": "F",
+      "role": "",
+      "born": "1886",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_px471aur": {
+      "id": "p_px471aur",
+      "name": "George Forsberg",
+      "gender": "M",
+      "role": "",
+      "born": "1888-02-25",
+      "bornParish": "Pullman, Cook Co Illinois, USA",
+      "died": "1910-08-14",
+      "diedParish": "Chicago, Cook Co, Illinois, USA",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_d92l1b5s": {
+      "id": "p_d92l1b5s",
+      "name": "Harold Olaf Forsberg",
+      "gender": "M",
+      "role": "",
+      "born": "1890-05-21",
+      "bornParish": "Pullman, Cook Co, Illinois, USA",
+      "died": "1955-04-18",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_nl5o8e8v": {
+      "id": "p_nl5o8e8v",
+      "name": "Philip Emanuel Forsberg",
+      "gender": "M",
+      "role": "",
+      "born": "1892-05-01",
+      "bornParish": "Chicago, Cook Co, Illinois, USA",
+      "died": "1970-11-24",
+      "diedParish": "San Marcos, San Diego, California, USA",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_17y76xcm": {
+      "id": "p_17y76xcm",
+      "name": "Signe Forsberg",
+      "gender": "F",
+      "role": "",
+      "born": "1894-09-14",
+      "bornParish": "Illinois, USA",
+      "died": "1982-09-28",
+      "diedParish": "Essex Fells, Essex, New Jersey, USA",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_jqd7xy3e": {
+      "id": "p_jqd7xy3e",
+      "name": "Eva W Forsberg",
+      "gender": "F",
+      "role": "",
+      "born": "1897",
+      "bornParish": "Illinois",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
     }
   },
   "parentsOf": {
@@ -26719,6 +26824,34 @@
     "p_50axv3cc": [
       "p_hyvnwes60",
       "p_osmy2svx"
+    ],
+    "p_k8n1fz50": [
+      "p_y2257ua2",
+      "p_xp21b1lx"
+    ],
+    "p_wwekz3xy": [
+      "p_y2257ua2",
+      "p_xp21b1lx"
+    ],
+    "p_px471aur": [
+      "p_y2257ua2",
+      "p_xp21b1lx"
+    ],
+    "p_d92l1b5s": [
+      "p_y2257ua2",
+      "p_xp21b1lx"
+    ],
+    "p_nl5o8e8v": [
+      "p_y2257ua2",
+      "p_xp21b1lx"
+    ],
+    "p_17y76xcm": [
+      "p_y2257ua2",
+      "p_xp21b1lx"
+    ],
+    "p_jqd7xy3e": [
+      "p_y2257ua2",
+      "p_xp21b1lx"
     ]
   },
   "childrenOf": {
@@ -29921,6 +30054,24 @@
     ],
     "p_gn3k4hu8": [
       "p_d41wxuqv"
+    ],
+    "p_y2257ua2": [
+      "p_k8n1fz50",
+      "p_wwekz3xy",
+      "p_px471aur",
+      "p_d92l1b5s",
+      "p_nl5o8e8v",
+      "p_17y76xcm",
+      "p_jqd7xy3e"
+    ],
+    "p_xp21b1lx": [
+      "p_k8n1fz50",
+      "p_wwekz3xy",
+      "p_px471aur",
+      "p_d92l1b5s",
+      "p_nl5o8e8v",
+      "p_17y76xcm",
+      "p_jqd7xy3e"
     ]
   },
   "spousesOf": {
