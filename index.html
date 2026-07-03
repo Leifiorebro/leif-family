@@ -514,54 +514,53 @@ function drawNode(g, x, y, id){
     .append("rect").attr("x", imgPad).attr("y", (h - imgSize)/2)
     .attr("width", imgSize).attr("height", imgSize).attr("rx", 8).attr("ry", 8);
 
-  grp.append("image")
+  // Load photo — if fails, remove image and use full card width for text
+  const imgEl = grp.append("image")
     .attr("x", imgPad).attr("y", (h - imgSize)/2)
     .attr("width", imgSize).attr("height", imgSize)
     .attr("clip-path", `url(#${clipId})`)
     .attr("preserveAspectRatio", "xMidYMid slice")
-    .on("error", function(){ d3.select(this).attr("href", "images/default.jpg"); })
     .attr("href", `images/${id}.jpg`);
 
   const maxCh = Math.floor(txtW / 7.5);
   function trunc(s, n){ return s && s.length > n ? s.slice(0,n-1)+"\u2026" : (s||""); }
 
-  // Name
-  grp.append("text").attr("class","node-name")
-    .attr("x", txtX).attr("y", 20)
-    .text(trunc(p.name||"", maxCh));
-
-  // Born date + parish on separate lines
-  if(p.born || p.bornParish){
-    grp.append("text").attr("class","node-dates")
-      .attr("x", txtX).attr("y", 38)
-      .text(trunc("f. " + (p.born||""), maxCh));
-    if(p.bornParish){
-      grp.append("text").attr("class","node-dates").attr("fill","#6b7280")
-        .attr("x", txtX).attr("y", 52)
-        .text(trunc(p.bornParish, maxCh));
+  // Text WITH photo (right of image)
+  const grpWith = grp.append("g").attr("display","none");
+  (function(){
+    grpWith.append("text").attr("class","node-name").attr("x",txtX).attr("y",20).text(trunc(p.name||"",maxCh));
+    if(p.born||p.bornParish){
+      grpWith.append("text").attr("class","node-dates").attr("x",txtX).attr("y",38).text(trunc("f. "+(p.born||""),maxCh));
+      if(p.bornParish) grpWith.append("text").attr("class","node-dates").attr("fill","#6b7280").attr("x",txtX).attr("y",52).text(trunc(p.bornParish,maxCh));
     }
-  }
-
-  // Died date + parish on separate lines
-  if(p.died || p.diedParish){
-    grp.append("text").attr("class","node-dates")
-      .attr("x", txtX).attr("y", 68)
-      .text(trunc("d. " + (p.died||""), maxCh));
-    if(p.diedParish){
-      grp.append("text").attr("class","node-dates").attr("fill","#6b7280")
-        .attr("x", txtX).attr("y", 82)
-        .text(trunc(p.diedParish, maxCh));
+    if(p.died||p.diedParish){
+      grpWith.append("text").attr("class","node-dates").attr("x",txtX).attr("y",68).text(trunc("d. "+(p.died||""),maxCh));
+      if(p.diedParish) grpWith.append("text").attr("class","node-dates").attr("fill","#6b7280").attr("x",txtX).attr("y",82).text(trunc(p.diedParish,maxCh));
     }
-  }
+    if(p.job) grpWith.append("text").attr("class","node-role").attr("x",txtX).attr("y",98).text(trunc(p.job,maxCh));
+  })();
 
-  // Job
-  if(p.job){
-    grp.append("text").attr("class","node-role")
-      .attr("x", txtX).attr("y", 98)
-      .text(trunc(p.job, maxCh));
-  }
+  // Text WITHOUT photo (full card width)
+  const noTxtX  = 10;
+  const noMaxCh = Math.floor((w - 18) / 7.5);
+  const grpNo = grp.append("g").attr("display","inline");
+  (function(){
+    grpNo.append("text").attr("class","node-name").attr("x",noTxtX).attr("y",18).text(trunc(p.name||"",noMaxCh));
+    if(p.born||p.bornParish){
+      grpNo.append("text").attr("class","node-dates").attr("x",noTxtX).attr("y",34).text(trunc("f. "+(p.born||""),noMaxCh));
+      if(p.bornParish) grpNo.append("text").attr("class","node-dates").attr("fill","#6b7280").attr("x",noTxtX).attr("y",48).text(trunc(p.bornParish,noMaxCh));
+    }
+    if(p.died||p.diedParish){
+      grpNo.append("text").attr("class","node-dates").attr("x",noTxtX).attr("y",64).text(trunc("d. "+(p.died||""),noMaxCh));
+      if(p.diedParish) grpNo.append("text").attr("class","node-dates").attr("fill","#6b7280").attr("x",noTxtX).attr("y",78).text(trunc(p.diedParish,noMaxCh));
+    }
+    if(p.job) grpNo.append("text").attr("class","node-role").attr("x",noTxtX).attr("y",94).text(trunc(p.job,noMaxCh));
+  })();
 
-  // Age at bottom-right corner of card
+  imgEl.on("load",  function(){ grpWith.attr("display","inline"); grpNo.attr("display","none"); });
+  imgEl.on("error", function(){ d3.select(this).remove(); grpWith.attr("display","none"); grpNo.attr("display","inline"); });
+
+  // Age at bottom-right corner
   const age = calcAge(p.born, p.died);
   if(age){
     grp.append("text").attr("class","node-dates")
@@ -570,6 +569,7 @@ function drawNode(g, x, y, id){
       .text(age);
   }
 }
+
 
 function drawCurve(g, x1,y1,x2,y2, spouse=false){
   if(spouse) return;
@@ -611,41 +611,42 @@ function drawNodeCompact(g, x, y, id, level="child"){
     .append("rect").attr("x", imgPad).attr("y", (h-imgSize)/2)
     .attr("width", imgSize).attr("height", imgSize).attr("rx", 6).attr("ry", 6);
 
-  grp.append("image")
+  // Load photo — if fails, remove image and expand text to full card width
+  const imgElC = grp.append("image")
     .attr("x", imgPad).attr("y", (h-imgSize)/2)
     .attr("width", imgSize).attr("height", imgSize)
     .attr("clip-path", `url(#${clipId})`)
     .attr("preserveAspectRatio", "xMidYMid slice")
-    .on("error", function(){ d3.select(this).attr("href", "images/default.jpg"); })
     .attr("href", `images/${id}.jpg`);
 
-  // Row y-positions — 7 rows to fit name, born, parish, died, parish, job, age
-  let row = 17;
-  const dy = 14;
+  // Text group WITH photo (right of image)
+  const withG = grp.append("g").attr("display","none");
+  (function(){
+    let row = 17; const dy = 14;
+    withG.append("text").attr("class","node-name").attr("font-size","12px").attr("x",txtX).attr("y",row).text(trunc(p.name||"",maxCh)); row+=dy;
+    if(p.born){ withG.append("text").attr("class","node-dates").attr("x",txtX).attr("y",row).text(trunc("f. "+(p.born||""),maxCh)); row+=dy-2; }
+    if(p.bornParish){ withG.append("text").attr("class","node-dates").attr("fill","#6b7280").attr("x",txtX).attr("y",row).text(trunc(p.bornParish,maxCh)); row+=dy-2; }
+    if(p.died){ withG.append("text").attr("class","node-dates").attr("x",txtX).attr("y",row).text(trunc("d. "+(p.died||""),maxCh)); row+=dy-2; }
+    if(p.diedParish){ withG.append("text").attr("class","node-dates").attr("fill","#6b7280").attr("x",txtX).attr("y",row).text(trunc(p.diedParish,maxCh)); }
+    if(p.job){ withG.append("text").attr("class","node-role").attr("x",txtX).attr("y",row+dy-2).text(trunc(p.job,maxCh)); }
+  })();
 
-  grp.append("text").attr("class","node-name").attr("font-size","12px")
-    .attr("x", txtX).attr("y", row).text(trunc(p.name||"", maxCh));
-  row += dy;
+  // Text group WITHOUT photo (full card width)
+  const noTxtX  = 6;
+  const noMaxCh = Math.floor((w - 12) / 6.5);
+  const noG = grp.append("g").attr("display","inline");
+  (function(){
+    let row = 15; const dy = 13;
+    noG.append("text").attr("class","node-name").attr("font-size","12px").attr("x",noTxtX).attr("y",row).text(trunc(p.name||"",noMaxCh)); row+=dy;
+    if(p.born){ noG.append("text").attr("class","node-dates").attr("x",noTxtX).attr("y",row).text(trunc("f. "+(p.born||""),noMaxCh)); row+=dy-2; }
+    if(p.bornParish){ noG.append("text").attr("class","node-dates").attr("fill","#6b7280").attr("x",noTxtX).attr("y",row).text(trunc(p.bornParish,noMaxCh)); row+=dy-2; }
+    if(p.died){ noG.append("text").attr("class","node-dates").attr("x",noTxtX).attr("y",row).text(trunc("d. "+(p.died||""),noMaxCh)); row+=dy-2; }
+    if(p.diedParish){ noG.append("text").attr("class","node-dates").attr("fill","#6b7280").attr("x",noTxtX).attr("y",row).text(trunc(p.diedParish,noMaxCh)); }
+    if(p.job){ noG.append("text").attr("class","node-role").attr("x",noTxtX).attr("y",row+dy-2).text(trunc(p.job,noMaxCh)); }
+  })();
 
-  if(p.born){
-    grp.append("text").attr("class","node-dates").attr("x", txtX).attr("y", row)
-      .text(trunc("f. "+(p.born||""), maxCh));
-    row += dy - 2;
-  }
-  if(p.bornParish){
-    grp.append("text").attr("class","node-dates").attr("fill","#6b7280")
-      .attr("x", txtX).attr("y", row).text(trunc(p.bornParish, maxCh));
-    row += dy - 2;
-  }
-  if(p.died){
-    grp.append("text").attr("class","node-dates").attr("x", txtX).attr("y", row)
-      .text(trunc("d. "+(p.died||""), maxCh));
-    row += dy - 2;
-  }
-  if(p.diedParish){
-    grp.append("text").attr("class","node-dates").attr("fill","#6b7280")
-      .attr("x", txtX).attr("y", row).text(trunc(p.diedParish, maxCh));
-  }
+  imgElC.on("load",  function(){ withG.attr("display","inline"); noG.attr("display","none"); });
+  imgElC.on("error", function(){ d3.select(this).remove(); withG.attr("display","none"); noG.attr("display","inline"); });
 
   const age = calcAge(p.born, p.died);
   if(age){
@@ -655,6 +656,7 @@ function drawNodeCompact(g, x, y, id, level="child"){
       .text(age);
   }
 }
+
 
 
 // ── Bottom-up layout engine: calculates subtree widths before placing any node ──
