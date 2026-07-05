@@ -23988,171 +23988,6 @@
       "photo": "",
       "photoId": "",
       "history": ""
-    },
-    "p_pnbegwzk": {
-      "id": "p_pnbegwzk",
-      "name": "Laura Jean Geschwind",
-      "gender": "F",
-      "role": "",
-      "born": "1959-05-10",
-      "bornParish": "Dwight, Illinois, USA",
-      "died": "",
-      "diedParish": "",
-      "job": "",
-      "link": "",
-      "photo": "",
-      "photoId": "",
-      "history": ""
-    },
-    "p_7892pzq1": {
-      "id": "p_7892pzq1",
-      "name": "Jill Ann Geschwind",
-      "gender": "F",
-      "role": "",
-      "born": "1964-09-29",
-      "bornParish": "Dwight, Illinois, USA",
-      "died": "",
-      "diedParish": "",
-      "job": "",
-      "link": "",
-      "photo": "",
-      "photoId": "",
-      "history": ""
-    },
-    "p_o4zto6yt": {
-      "id": "p_o4zto6yt",
-      "name": "Amy Sue Geschwind",
-      "gender": "F",
-      "role": "",
-      "born": "1968-04-08",
-      "bornParish": "Dwight, Illinois, USA",
-      "died": "",
-      "diedParish": "",
-      "job": "",
-      "link": "",
-      "photo": "",
-      "photoId": "",
-      "history": ""
-    },
-    "p_y1qhzijb": {
-      "id": "p_y1qhzijb",
-      "name": "Richard Dale Geschwind",
-      "gender": "M",
-      "role": "",
-      "born": "1937-10-02",
-      "bornParish": "Ransom, Illinois, USA",
-      "died": "",
-      "diedParish": "",
-      "job": "",
-      "link": "",
-      "photo": "",
-      "photoId": "",
-      "history": "Richard Dale Geschwind\n\nFödd 1937-10-02 Ransom, Illinois, USA\nKälla: 1940 United States Federal Census, Year: 1940; Census Place: Allen, LaSalle, Illinois; Roll: T627_832; Page: 2A; Enumeration District: 50-4.\nCitat: Födelsedatum:  abt 1938 Födelseort:  Illinois Bosatt den:  1 Apr 1940 Bostadsort:  Allen, LaSalle, Illinois, United States\n\nBosatt 1940-04-01 Allen, LaSalle, Illinois, United States\nKälla: 1940 United States Federal Census, Year: 1940; Census Place: Allen, LaSalle, Illinois; Roll: T627_832; Page: 2A; Enumeration District: 50-4.\nCitat: Födelsedatum:  abt 1938 Födelseort:  Illinois Bosatt den:  1 Apr 1940 Bostadsort:  Allen, LaSalle, Illinois, United States\n\nGift med Sheila 1961-08-06"
-    },
-    "p_abzv5p57": {
-      "id": "p_abzv5p57",
-      "name": "Sheila",
-      "gender": "",
-      "role": "",
-      "born": "",
-      "bornParish": "",
-      "died": "",
-      "diedParish": "",
-      "job": "",
-      "link": "",
-      "photo": "",
-      "photoId": "",
-      "history": ""
-    },
-    "p_a7ttvjl5": {
-      "id": "p_a7ttvjl5",
-      "name": "David Paul Geschwind",
-      "gender": "M",
-      "role": "",
-      "born": "1966-01-16",
-      "bornParish": "DeKalb, Illinois, USA",
-      "died": "",
-      "diedParish": "",
-      "job": "",
-      "link": "",
-      "photo": "",
-      "photoId": "",
-      "history": ""
-    },
-    "p_mzyxc7yo": {
-      "id": "p_mzyxc7yo",
-      "name": "Susan Marie Geschwind",
-      "gender": "F",
-      "role": "",
-      "born": "1967-09-06",
-      "bornParish": "Streator, Illinois, USA",
-      "died": "",
-      "diedParish": "",
-      "job": "",
-      "link": "",
-      "photo": "",
-      "photoId": "",
-      "history": ""
-    },
-    "p_6039wj72": {
-      "id": "p_6039wj72",
-      "name": "Janice Geschwind",
-      "gender": "F",
-      "role": "",
-      "born": "1940-06-02",
-      "bornParish": "Ransom, Illinois, USA",
-      "died": "",
-      "diedParish": "",
-      "job": "",
-      "link": "",
-      "photo": "",
-      "photoId": "",
-      "history": ""
-    },
-    "p_7zymrige": {
-      "id": "p_7zymrige",
-      "name": "Wayne Sampson",
-      "gender": "",
-      "role": "",
-      "born": "",
-      "bornParish": "",
-      "died": "",
-      "diedParish": "",
-      "job": "",
-      "link": "",
-      "photo": "",
-      "photoId": "",
-      "history": ""
-    },
-    "p_uha2nqc7": {
-      "id": "p_uha2nqc7",
-      "name": "Sally Ann Sampson",
-      "gender": "F",
-      "role": "",
-      "born": "1965-10-28",
-      "bornParish": "Anawan, Illinois",
-      "died": "",
-      "diedParish": "",
-      "job": "",
-      "link": "",
-      "photo": "",
-      "photoId": "",
-      "history": ""
-    },
-    "p_cgf150eu": {
-      "id": "p_cgf150eu",
-      "name": "Brian Sampson",
-      "gender": "M",
-      "role": "",
-      "born": "1967-05-24",
-      "bornParish": "Anawan, Illinois, USA",
-      "died": "",
-      "diedParish": "",
-      "job": "",
-      "link": "",
-      "photo": "",
-      "photoId": "",
-      "history": ""
     }
   },
   "parentsOf": {
@@ -24161,12 +23996,12 @@
       "p_zobmj6wp8"
     ],
     "p_3uj910se8": [
-      "p_bbclq6f9g",
-      "p_3rw58lslc"
+      "p_3rw58lslc",
+      "p_bbclq6f9g"
     ],
     "p_3w3d8mg0r": [
-      "p_e2d8rcv1d",
-      "p_p1t2kmcat"
+      "p_p1t2kmcat",
+      "p_e2d8rcv1d"
     ],
     "p_607tk2v1i": [
       "p_fceooch",
@@ -24193,8 +24028,8 @@
       "p_apnevfd1e"
     ],
     "p_anref8x": [
-      "p_q1486bk",
-      "p_a9c12mk"
+      "p_a9c12mk",
+      "p_q1486bk"
     ],
     "p_bbclq6f9g": [
       "p_r6gu9qm8a",
@@ -24210,12 +24045,12 @@
       "p_ymb6wc3q0"
     ],
     "p_c2jyk4pds": [
-      "p_9vhcxd8",
-      "p_mc6jemk"
+      "p_mc6jemk",
+      "p_9vhcxd8"
     ],
     "p_czyydy2g7": [
-      "p_9vhcxd8",
-      "p_mc6jemk"
+      "p_mc6jemk",
+      "p_9vhcxd8"
     ],
     "p_ep1684kzs": [
       "p_n2oxqssdd",
@@ -24226,8 +24061,8 @@
       "p_epbrpkbpc"
     ],
     "p_ir25hn919": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_p1t2kmcat": [
       "p_6c6wnb9",
@@ -24254,12 +24089,12 @@
       "p_ymb6wc3q0"
     ],
     "p_t22zhc497": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_vomcn89yz": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_zobmj6wp8": [
       "p_6c6wnb9",
@@ -24310,12 +24145,12 @@
       "p_apnevfd1e"
     ],
     "p_ir4u61dqa": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_jqtxmllar": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_apnevfd1e": [
       "p_l0tiqibe0",
@@ -24338,12 +24173,12 @@
       "p_apnevfd1e"
     ],
     "p_z4rxd74pc": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_zcl5kw4oh": [
-      "p_e2d8rcv1d",
-      "p_p1t2kmcat"
+      "p_p1t2kmcat",
+      "p_e2d8rcv1d"
     ],
     "p_lx16wimrx": [
       "p_izcueyhnf",
@@ -24357,8 +24192,8 @@
       "p_sh6rs3ypi"
     ],
     "p_4cjwtla35": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_37jcbtegu": [
       "p_n2oxqssdd",
@@ -27371,42 +27206,6 @@
     "p_1gw6tgwd": [
       "p_4s3p8xxj",
       "p_pvz9wgam"
-    ],
-    "p_pnbegwzk": [
-      "p_4s3p8xxj",
-      "p_pvz9wgam"
-    ],
-    "p_7892pzq1": [
-      "p_4s3p8xxj",
-      "p_pvz9wgam"
-    ],
-    "p_o4zto6yt": [
-      "p_4s3p8xxj",
-      "p_pvz9wgam"
-    ],
-    "p_y1qhzijb": [
-      "p_1ltsdjza",
-      "p_evw3so46"
-    ],
-    "p_a7ttvjl5": [
-      "p_y1qhzijb",
-      "p_abzv5p57"
-    ],
-    "p_mzyxc7yo": [
-      "p_y1qhzijb",
-      "p_abzv5p57"
-    ],
-    "p_6039wj72": [
-      "p_1ltsdjza",
-      "p_evw3so46"
-    ],
-    "p_uha2nqc7": [
-      "p_7zymrige",
-      "p_6039wj72"
-    ],
-    "p_cgf150eu": [
-      "p_7zymrige",
-      "p_6039wj72"
     ]
   },
   "childrenOf": {
@@ -27418,18 +27217,18 @@
       "p_3qowa85hd",
       "p_8mchqpopa"
     ],
-    "p_3rw58lslc": [
-      "p_3uj910se8"
-    ],
     "p_bbclq6f9g": [
       "p_3uj910se8",
       "p_4yyrm3723"
     ],
-    "p_p1t2kmcat": [
+    "p_3rw58lslc": [
+      "p_3uj910se8"
+    ],
+    "p_e2d8rcv1d": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
-    "p_e2d8rcv1d": [
+    "p_p1t2kmcat": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
@@ -27477,10 +27276,10 @@
       "p_yhg9e9i5y",
       "p_tdvl922cf"
     ],
-    "p_a9c12mk": [
+    "p_q1486bk": [
       "p_anref8x"
     ],
-    "p_q1486bk": [
+    "p_a9c12mk": [
       "p_anref8x"
     ],
     "p_k9dqg17ug": [
@@ -27523,11 +27322,11 @@
       "p_trylh546h",
       "p_vit2oe3no"
     ],
-    "p_mc6jemk": [
+    "p_9vhcxd8": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
-    "p_9vhcxd8": [
+    "p_mc6jemk": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
@@ -27553,13 +27352,13 @@
       "p_cyl275xx",
       "p_907ij0i8"
     ],
-    "p_yhg9e9i5y": [
+    "p_n4z6lfc2f": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
       "p_4cjwtla35"
     ],
-    "p_n4z6lfc2f": [
+    "p_yhg9e9i5y": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
@@ -27579,12 +27378,12 @@
       "p_zobmj6wp8",
       "p_0dj5jnxhr"
     ],
-    "p_0dj5jnxhr": [
+    "p_zmfl39a5r": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
     ],
-    "p_zmfl39a5r": [
+    "p_0dj5jnxhr": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
@@ -30658,44 +30457,18 @@
       "p_81muljib"
     ],
     "p_1ltsdjza": [
-      "p_4s3p8xxj",
-      "p_y1qhzijb",
-      "p_6039wj72"
+      "p_4s3p8xxj"
     ],
     "p_evw3so46": [
-      "p_4s3p8xxj",
-      "p_y1qhzijb",
-      "p_6039wj72"
+      "p_4s3p8xxj"
     ],
     "p_4s3p8xxj": [
       "p_8y1g2co1",
-      "p_1gw6tgwd",
-      "p_pnbegwzk",
-      "p_7892pzq1",
-      "p_o4zto6yt"
+      "p_1gw6tgwd"
     ],
     "p_pvz9wgam": [
       "p_8y1g2co1",
-      "p_1gw6tgwd",
-      "p_pnbegwzk",
-      "p_7892pzq1",
-      "p_o4zto6yt"
-    ],
-    "p_y1qhzijb": [
-      "p_a7ttvjl5",
-      "p_mzyxc7yo"
-    ],
-    "p_abzv5p57": [
-      "p_a7ttvjl5",
-      "p_mzyxc7yo"
-    ],
-    "p_7zymrige": [
-      "p_uha2nqc7",
-      "p_cgf150eu"
-    ],
-    "p_6039wj72": [
-      "p_uha2nqc7",
-      "p_cgf150eu"
+      "p_1gw6tgwd"
     ]
   },
   "spousesOf": {
@@ -33561,18 +33334,6 @@
     ],
     "p_pvz9wgam": [
       "p_4s3p8xxj"
-    ],
-    "p_y1qhzijb": [
-      "p_abzv5p57"
-    ],
-    "p_abzv5p57": [
-      "p_y1qhzijb"
-    ],
-    "p_6039wj72": [
-      "p_7zymrige"
-    ],
-    "p_7zymrige": [
-      "p_6039wj72"
     ]
   }
 }
