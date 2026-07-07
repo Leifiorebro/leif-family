@@ -24498,6 +24498,51 @@
       "photo": "",
       "photoId": "",
       "history": "Hattie J. Sandee\n\nFödd 1896-08 Michigan\nKälla: 1940 United States Federal Census, Year: 1940; Census Place: Three Oaks, Berrien, Michigan; Roll: T627_1733; Page: 1B; Enumeration District: 11-86.\nCitat: Födelsedatum:  abt 1895 Födelseort:  Michigan Bosatt den:  1 Apr 1940 Bostadsort:  Three Oaks, Berrien, Michigan, United States\n\nBosatt 1900 Muskegon city, Muskegon, Michigan\nKälla: 1900 United States Federal Census, Year: 1900; Census Place: Muskegon Ward 1, Muskegon, Michigan; Roll: T623_734; Page: 12A; Enumeration District: 67; FHL microfilm: 1240734.\nCitat: Födelsedatum:  Aug 1896 Födelseort:  Michigan Bosatt den:  1900 Bostadsort:  Muskegon city, Muskegon, Michigan\n\nBosatt 1920 Chicago Ward 35, Cook (Chicago), Illinois\nKälla: 1920 United States Federal Census, Year: 1920; Census Place: Chicago Ward 35, Cook (Chicago), Illinois; Roll: T625_356; Page: 7A; Enumeration District: 2242; Image: 455.\nCitat: Födelsedatum:  abt 1895 Födelseort:  Michigan Bosatt den:  1920 Bostadsort:  Chicago Ward 35, Cook (Chicago), Illinois\n\nBosatt 1940-04-01 Three Oaks, Berrien, Michigan, United States\nKälla: 1940 United States Federal Census, Year: 1940; Census Place: Three Oaks, Berrien, Michigan; Roll: T627_1733; Page: 1B; Enumeration District: 11-86.\nCitat: Födelsedatum:  abt 1895 Födelseort:  Michigan Bosatt den:  1 Apr 1940 Bostadsort:  Three Oaks, Berrien, Michigan, United States\n\nDöd 1984-07-25 Muskegon, Michigan, USA"
+    },
+    "p_8upheli7": {
+      "id": "p_8upheli7",
+      "name": "Arthur Carlson",
+      "gender": "M",
+      "role": "",
+      "born": "1920",
+      "bornParish": "Illinois",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Arthur Carlson\n\nFödd omkring 1920 Illinois\nKälla: 1940 United States Federal Census, Year: 1940; Census Place: Three Oaks, Berrien, Michigan; Roll: T627_1733; Page: 1B; Enumeration District: 11-86.\nCitat: Födelsedatum:  abt 1920 Födelseort:  Illinois Bosatt den:  1 Apr 1940 Bostadsort:  Three Oaks, Berrien, Michigan, United States\n\nBosatt 1940-04-01 Three Oaks, Berrien, Michigan, United States\nKälla: 1940 United States Federal Census, Year: 1940; Census Place: Three Oaks, Berrien, Michigan; Roll: T627_1733; Page: 1B; Enumeration District: 11-86.\nCitat: Födelsedatum:  abt 1920 Födelseort:  Illinois Bosatt den:  1 Apr 1940 Bostadsort:  Three Oaks, Berrien, Michigan, United States"
+    },
+    "p_4gbhw9hz": {
+      "id": "p_4gbhw9hz",
+      "name": "Edvin Carlson",
+      "gender": "M",
+      "role": "",
+      "born": "1922-09-21",
+      "bornParish": "Michigan",
+      "died": "1991-08-05",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Edwin Carlson\n\nFödd 1922-09-21 Michigan\nKälla: 1940 United States Federal Census, Year: 1940; Census Place: Three Oaks, Berrien, Michigan; Roll: T627_1733; Page: 1B; Enumeration District: 11-86.\nCitat: Födelsedatum:  abt 1922 Födelseort:  Michigan Bosatt den:  1 Apr 1940 Bostadsort:  Three Oaks, Berrien, Michigan, United States\n\nBosatt 1940-04-01 Three Oaks, Berrien, Michigan, United States\nKälla: 1940 United States Federal Census, Year: 1940; Census Place: Three Oaks, Berrien, Michigan; Roll: T627_1733; Page: 1B; Enumeration District: 11-86.\nCitat: Födelsedatum:  abt 1922 Födelseort:  Michigan Bosatt den:  1 Apr 1940 Bostadsort:  Three Oaks, Berrien, Michigan, United States\n\nDöd 1991-08-05"
+    },
+    "p_b9wfs2ps": {
+      "id": "p_b9wfs2ps",
+      "name": "Harriet Carlson",
+      "gender": "F",
+      "role": "",
+      "born": "1926",
+      "bornParish": "Illinois",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Harriett Carlson\n\nFödd omkring 1926 Illinois\nKälla: 1940 United States Federal Census, Year: 1940; Census Place: Three Oaks, Berrien, Michigan; Roll: T627_1733; Page: 1B; Enumeration District: 11-86.\nCitat: Födelsedatum:  abt 1926 Födelseort:  Illinois Bosatt den:  1 Apr 1940 Bostadsort:  Three Oaks, Berrien, Michigan, United States\n\nBosatt 1940-04-01 Three Oaks, Berrien, Michigan, United States\nKälla: 1940 United States Federal Census, Year: 1940; Census Place: Three Oaks, Berrien, Michigan; Roll: T627_1733; Page: 1B; Enumeration District: 11-86.\nCitat: Födelsedatum:  abt 1926 Födelseort:  Illinois Bosatt den:  1 Apr 1940 Bostadsort:  Three Oaks, Berrien, Michigan, United States"
     }
   },
   "parentsOf": {
@@ -27809,6 +27854,18 @@
     "p_5zrs09bx": [
       "p_ioe9x05g",
       "p_qi8rksi3"
+    ],
+    "p_8upheli7": [
+      "p_xkaachog",
+      "p_mc3sb89k"
+    ],
+    "p_4gbhw9hz": [
+      "p_xkaachog",
+      "p_mc3sb89k"
+    ],
+    "p_b9wfs2ps": [
+      "p_xkaachog",
+      "p_mc3sb89k"
     ]
   },
   "childrenOf": {
@@ -31153,6 +31210,16 @@
     "p_qi8rksi3": [
       "p_xbplpsyp",
       "p_5zrs09bx"
+    ],
+    "p_xkaachog": [
+      "p_8upheli7",
+      "p_4gbhw9hz",
+      "p_b9wfs2ps"
+    ],
+    "p_mc3sb89k": [
+      "p_8upheli7",
+      "p_4gbhw9hz",
+      "p_b9wfs2ps"
     ]
   },
   "spousesOf": {
