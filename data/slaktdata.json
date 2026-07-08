@@ -12105,7 +12105,8 @@
           "src": "images/p_9apnuga1.jpg",
           "caption": "Clas Broman"
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_1q9hhqh6": {
       "id": "p_1q9hhqh6",
@@ -12512,8 +12513,12 @@
       "photo": "",
       "photoId": "",
       "history": "Hildor ANDREAS Andersson\n\nÅngbåtsmaskinist\n\nFödd 1892-09-27 Öregrund, Stockholms län\nKälla: Sverige, namnindexerade födelseuppgifter, 1880-1920\nCitat: Födelsedatum:  27 Sep 1892 Födelseort:  Öregrund, Stockholm, Sweden\n\nGift med Elsa Paulina Grek 1913-10-25 Ljusne\n\nDöd 1976-06-15 Ljusne\n\nNoteringar\nv189277.b3030.s287",
-      "photos": [],
-      "photoCaptions": {}
+      "photos": [
+        {
+          "src": "images/p_oiygcmhz.jpg",
+          "caption": "Hildor ANDREAS Andersson"
+        }
+      ]
     },
     "p_96edjz7u": {
       "id": "p_96edjz7u",
