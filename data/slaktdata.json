@@ -24989,8 +24989,12 @@
       "photo": "",
       "photoId": "",
       "history": "Virginia Marie Larson\n\nBook-keeper (1930).\n\nFödd 1910-08-03 Chicago, Cook, Illinois, United States\n\nDöd 2000-07-24 Cowley, Kansas, USA\n\nNoteringar\nBook-keeper (1930). \nBorn 1910-08-03 in Chicago, Cook, Illinois, USA. [1] \nLived 1920 in Chicago, Cook, Illinois, USA. [2] \nLived 1930 in Scott, Bourbon, Kansas, USA. [3] \n\nSources\nIllinois, Cook County Birth Certificates 1878-1922 (familysearch.org) film no 1288201, digital GS no 4298160, image no 01199, ref no 9666\nUS Census År: 1920;Folkräkningsplats: Chicago Ward 9, Cook (Chicago), Illinois; Rulle: T625_311; Sida: 16B; Räkningsdistrikt: 570; Bild: 608.\nUS Census År: 1930; Folkräkningsplats: Scott, Bourbon, Kansas; Rulle: 694; Sida: 7B; Räkningsdistrikt: 21; Bild: 444.0.",
-      "photos": [],
-      "photoCaptions": {}
+      "photos": [
+        {
+          "src": "images/Larsson Virginia Marie_19100803.jpg",
+          "caption": "Kyrkogård: Evergreen Cemetery\nOrt för begravning/kremering: Fort Scott, Bourbon County (Bourbon), Kansas, United States of America"
+        }
+      ]
     },
     "p_yhta8med": {
       "id": "p_yhta8med",
@@ -25531,7 +25535,8 @@
           "src": "images/Emily and Martin Anderson.jpg",
           "caption": ""
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_cxyk7jmu": {
       "id": "p_cxyk7jmu",
