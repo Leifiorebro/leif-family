@@ -12931,8 +12931,12 @@
       "photo": "",
       "photoId": "",
       "history": "Arthur W. Carlson\n\nFödd 1893-01-13 Illinois\n\nDöd  \n\nBosatt 1920 Chicago Ward 26, Cook (Chicago), Illinois\nKälla: 1920 United States Federal Census, Year: 1920; Census Place: Chicago Ward 26, Cook (Chicago), Illinois; Roll: T625_336; Page: 7A; Enumeration District: 1524; Image: 958.\nCitat: Födelsedatum:  abt 1893 Födelseort:  Illinois Bosatt den:  1920 Bostadsort:  Chicago Ward 26, Cook (Chicago), Illinois",
-      "photos": [],
-      "photoCaptions": {}
+      "photos": [
+        {
+          "src": "images/p_ioe9x05g.jpg",
+          "caption": "Arthur W. Carlson"
+        }
+      ]
     },
     "p_xkaachog": {
       "id": "p_xkaachog",
@@ -12953,7 +12957,8 @@
           "src": "images/Carlson Clarence Eugene.jpg",
           "caption": "Naples Memorial Gardens Cemetery"
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_bvql21gh": {
       "id": "p_bvql21gh",
