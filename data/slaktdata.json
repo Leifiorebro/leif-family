@@ -12778,8 +12778,12 @@
       "photo": "",
       "photoId": "",
       "history": "Elfrida Pauline Johnson Geschwind\n\nFödd 1899-08-06 Chicago, Illinois, USA\n\nBosatt  10912 Eggleston Ave.\nKälla: Illinois, Deaths and Stillbirths Index, 1916-1947\nCitat: Födelsedatum:  6 Aug 1899 Födelseort:  Chicago, Illinois Dödsdatum:  27 Jan 1930 Dödsort:  Chicago, Cook, Illinois Bosatt den:   Bostadsort:  10912 Eggleston Ave.\n\nDöd 1930-01-27 Chicago, Cook, Illinois\nKälla: Illinois, Deaths and Stillbirths Index, 1916-1947\nCitat: Födelsedatum:  6 Aug 1899 Födelseort:  Chicago, Illinois Dödsdatum:  27 Jan 1930 Dödsort:  Chicago, Cook, Illinois Bosatt den:   Bostadsort:  10912 Eggleston Ave.\n\nNoteringar\nBorn 1899-08-06 in Illinois, USA. [1]\nLived 1900 in Chicago, Cook, Illinois, USA. [2]\nLived 1910 in Brookfield, La Salle, Illinois, USA. [3]\nLived 1920 in Allen, La Salle, Illinois, USA. [4]",
-      "photos": [],
-      "photoCaptions": {}
+      "photos": [
+        {
+          "src": "images/p_4uv9bl9k.jpg",
+          "caption": ""
+        }
+      ]
     },
     "p_1ltsdjza": {
       "id": "p_1ltsdjza",
@@ -12936,7 +12940,8 @@
           "src": "images/p_ioe9x05g.jpg",
           "caption": "Arthur W. Carlson"
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_xkaachog": {
       "id": "p_xkaachog",
