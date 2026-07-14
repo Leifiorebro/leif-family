@@ -12800,8 +12800,20 @@
       "photo": "",
       "photoId": "",
       "history": "Philip Wilhelm Geschwind\n\nFödd 1902-07-07 Chicago, Illinois, USA\n\nBosatt 1930 Allen, LaSalle, Illinois\nKälla: 1930 United States Federal Census, Year: 1930; Census Place: Allen, LaSalle, Illinois; Roll: ; Page: ; Enumeration District: ; Image: .\nCitat: Födelsedatum:  abt 1903 Födelseort:  Illinois Bosatt den:  1930 Bostadsort:  Allen, LaSalle, Illinois\n\nBosatt 1940-04-01 Allen, LaSalle, Illinois, United States\nKälla: 1940 United States Federal Census, Year: 1940; Census Place: Allen, LaSalle, Illinois; Roll: T627_832; Page: 2A; Enumeration District: 50-4.\nCitat: Födelsedatum:  abt 1903 Födelseort:  Illinois Bosatt den:  1 Apr 1940 Bostadsort:  Allen, LaSalle, Illinois, United States\n\nDöd 1971-12-13 Ransom, La Salle, Illinois, USA\n\nNoteringar\nBorn 1902-07-07 in Illinois, USA. [1]\nLived 1910 in Brookfield, La Salle, Illinois, USA. [2]\nLived 1920 in Allen, La Salle, Illinois, USA. [3]\nLived 1930 in Allen, La Salle, Illinois, USA. [4]\nDied 1972-01-.. in Ransom, La Salle, Illinois, USA. [5]",
-      "photos": [],
-      "photoCaptions": {}
+      "photos": [
+        {
+          "src": "images/p_1ltsdjza.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/Paul och Philip Geschwind.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/Philip och Garnet Geschwind_1.jpg",
+          "caption": "Garnet M Geschwind\nBIRTH 1903\nDEATH 1997 (aged 93–94)\nBURIAL \nAllen Cemetery\nRansom, LaSalle County, Illinois, USA\nMEMORIAL ID 74757860 · View Source\n\nhttps://www.findagrave.com/memorial/74757860"
+        }
+      ]
     },
     "p_5kdsgl7s": {
       "id": "p_5kdsgl7s",
@@ -12839,7 +12851,8 @@
           "src": "images/p_oihio3zl.jpg",
           "caption": ""
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_oiw1l7kk": {
       "id": "p_oiw1l7kk",
