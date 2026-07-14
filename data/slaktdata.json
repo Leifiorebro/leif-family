@@ -12783,7 +12783,8 @@
           "src": "images/p_4uv9bl9k.jpg",
           "caption": ""
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_1ltsdjza": {
       "id": "p_1ltsdjza",
@@ -12833,8 +12834,12 @@
       "photo": "",
       "photoId": "",
       "history": "Helen Catarina Geschwind\n\nStenographer\n\nFödd 1903-12-28 Chicago, Illinois, USA\n\nBosatt 1930 Allen, LaSalle, Illinois\nKälla: 1930 United States Federal Census, Year: 1930; Census Place: Allen, LaSalle, Illinois; Roll: ; Page: ; Enumeration District: ; Image: .\nCitat: Födelsedatum:  abt 1905 Födelseort:  Illinois Bosatt den:  1930 Bostadsort:  Allen, LaSalle, Illinois\n\nDöd 1988-04-06 Dwight, Livingstone, Illinois, USA\n\nNoteringar\nOgift\nStenographer.\nBorn 1903-12-28 in Illinois, USA. [1]\nLived 1910 in Brookfield, La Salle, Illinois, USA. [2]\nLived 1920 in Allen, La Salle, Illinois, USA. [3]\nLived 1930 in Allen, La Salle, Illinois, USA. [4]\nDied 1988-04-06 in Dwight, Livingstone, Illinois, USA. [5] \n\nOgift, barnlös.",
-      "photos": [],
-      "photoCaptions": {}
+      "photos": [
+        {
+          "src": "images/p_oihio3zl.jpg",
+          "caption": ""
+        }
+      ]
     },
     "p_oiw1l7kk": {
       "id": "p_oiw1l7kk",
