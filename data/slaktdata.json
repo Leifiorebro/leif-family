@@ -12782,9 +12782,12 @@
         {
           "src": "images/p_4uv9bl9k.jpg",
           "caption": ""
+        },
+        {
+          "src": "images/Elfrieda Geschwind_2.jpg",
+          "caption": "https://www.findagrave.com/memorial/191019390/elfrieda-pauline-johnson"
         }
-      ],
-      "photoCaptions": {}
+      ]
     },
     "p_1ltsdjza": {
       "id": "p_1ltsdjza",
@@ -12835,7 +12838,8 @@
           "src": "images/p_5kdsgl7s.jpg",
           "caption": ""
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_oihio3zl": {
       "id": "p_oihio3zl",
