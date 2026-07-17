@@ -25782,6 +25782,36 @@
       "photo": "",
       "photoId": "",
       "history": "Armi Anneli Nexell\n\nFödd 1946-06-21 \n\nNoteringar\n1946-06-21\nNexell, Armi Anneli\nVÃ¤sterled 20 nb\n161 37  Bromma\nKyrkobokfÃ¶rd i VÃ¤sterled (Stockholms stad, Stockholms lÃ¤n, Uppland), distrikt 05, fastighet 01373. Mantalsskriven pÃ¥ samma ort.\nFÃ¶dd 21/6 1946.\n--------------\nKÃ¤lla: Mtl Stockholms stad och lÃ¤n 1971\n\n____________________________________\n\nFörnamn Armi Anneli\nEfternamn Nexell\nFödelsedatum 1946-06-21\nCivilstånd Gift kvinna 1967-10-31\nTitel/Yrke Kassörska\nAdress Oxens G 247\nPostadress 136 63 Handen\nAktuell mantalsskrivning\nMantalsår 1975\nFörsamling Österhaninge\nKommun Haninge\nLän Stockholm\nFöregående mantalsskrivning\nMantalsår 1973\nFörsamling Österhaninge\nKommun Haninge\nLän Stockholm\nGenväg r17.p114087186"
+    },
+    "p_gbwnxymi": {
+      "id": "p_gbwnxymi",
+      "name": "Ingeborg Linnea Sahlin",
+      "gender": "F",
+      "role": "",
+      "born": "1919-03-19",
+      "bornParish": "Tierp",
+      "died": "2005-09-01",
+      "diedParish": "Ljusne",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_eh4kdzy6": {
+      "id": "p_eh4kdzy6",
+      "name": "Siv Margareta Andersson",
+      "gender": "F",
+      "role": "",
+      "born": "1941-08-16",
+      "bornParish": "Söderhamn",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
     }
   },
   "parentsOf": {
@@ -29157,6 +29187,10 @@
     "p_h17nvbm5": [
       "p_96edjz7u",
       "p_awov9y7y"
+    ],
+    "p_eh4kdzy6": [
+      "p_wte1pefs",
+      "p_gbwnxymi"
     ]
   },
   "childrenOf": {
@@ -32565,6 +32599,12 @@
       "p_e30p29lf",
       "p_fheezbb4",
       "p_h17nvbm5"
+    ],
+    "p_gbwnxymi": [
+      "p_eh4kdzy6"
+    ],
+    "p_wte1pefs": [
+      "p_eh4kdzy6"
     ]
   },
   "spousesOf": {
@@ -33980,7 +34020,9 @@
     "p_96edjz7u": [
       "p_awov9y7y"
     ],
-    "p_wte1pefs": [],
+    "p_wte1pefs": [
+      "p_gbwnxymi"
+    ],
     "p_cvjhwn0x": [],
     "p_39zlyxr5": [],
     "p_fp41cl1g": [
@@ -35718,6 +35760,9 @@
     ],
     "p_awov9y7y": [
       "p_96edjz7u"
+    ],
+    "p_gbwnxymi": [
+      "p_wte1pefs"
     ]
   }
 }
