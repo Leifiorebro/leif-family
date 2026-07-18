@@ -26067,6 +26067,51 @@
       "photo": "",
       "photoId": "",
       "history": "Glenn Georges Oakes\n\nFödd 1923-09-23 Chicago, Cook Co., Illinois\n\nDöd 2008-10-14 USA\nDöd av \"blunt force trauma\""
+    },
+    "p_0rlldl1x": {
+      "id": "p_0rlldl1x",
+      "name": "Kenneth John Oakes",
+      "gender": "M",
+      "role": "",
+      "born": "1946",
+      "bornParish": "USA",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_g22908ki": {
+      "id": "p_g22908ki",
+      "name": "Gregory Glenn Oakes",
+      "gender": "M",
+      "role": "",
+      "born": "1950",
+      "bornParish": "USA",
+      "died": "2014-10-07",
+      "diedParish": "Sandwich, Illinois, USA",
+      "job": "Teacher",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Gregory Glenn Oakes\n\nHigh school teacher\n\nFödd 1950 USA\n\nDöd 2014-10-07 San"
+    },
+    "p_dqop25bn": {
+      "id": "p_dqop25bn",
+      "name": "Beth Ellen Oakes Heath",
+      "gender": "F",
+      "role": "",
+      "born": "1956-10-30",
+      "bornParish": "USA",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
     }
   },
   "parentsOf": {
@@ -29494,6 +29539,18 @@
     "p_d1a7u4to": [
       "p_t4yjwirb",
       "p_e2azk2tb"
+    ],
+    "p_0rlldl1x": [
+      "p_gmksdsy1",
+      "p_aawetd9g"
+    ],
+    "p_g22908ki": [
+      "p_gmksdsy1",
+      "p_aawetd9g"
+    ],
+    "p_dqop25bn": [
+      "p_gmksdsy1",
+      "p_aawetd9g"
     ]
   },
   "childrenOf": {
@@ -32944,6 +33001,16 @@
       "p_77bkhct5",
       "p_ftw8qjjf",
       "p_d1a7u4to"
+    ],
+    "p_gmksdsy1": [
+      "p_0rlldl1x",
+      "p_g22908ki",
+      "p_dqop25bn"
+    ],
+    "p_aawetd9g": [
+      "p_0rlldl1x",
+      "p_g22908ki",
+      "p_dqop25bn"
     ]
   },
   "spousesOf": {
