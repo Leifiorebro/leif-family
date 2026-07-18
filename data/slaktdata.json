@@ -25917,6 +25917,66 @@
       "photo": "",
       "photoId": "",
       "history": "Lars ÅKE Rask\n\nFödd 1948-07-05 Ljusne\n\nNoteringar\n1948-07-05\nRask, Lars Åke\nBarkv 7\n820 20  Ljusne\nKyrkobokförd i Ljusne (Söderhamns kn, Gävleborgs län, Hälsingland), distrikt 13, fastighet 43807. Mantalsskriven på samma ort.\nFödd 5/7 1948 i Ljusne (Gävleborgs län, Hälsingland).\n--------------\nKälla: Mtl Gävleborgs län 1971\n\n______________________________\n\n19480705-XXXX\n\nSvarvarvägen 52\n826 75 Ljusne"
+    },
+    "p_anj812l9": {
+      "id": "p_anj812l9",
+      "name": "Ingrid Margareta Brondell",
+      "gender": "F",
+      "role": "",
+      "born": "1915-10-07",
+      "bornParish": "Klara förs., Stocholm stad",
+      "died": "1987-04-25",
+      "diedParish": "Bergvik, Söderhamns kn",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Ingrid Margareta Brondell\n\nFödd 1915-10-07 Klara förs. Stockholm stad\n\nDöd 1987-04-25 Bergvik, Söderhamns kn\n\nNoteringar\n19151007-0186\n\nBrondell, Ingrid Margareta\n\nG:a Söderhamnsv 47\n820 23  Bergvik\n\nDöd 25/4 1987.\n\nKyrkobokförd (1985) i Skog, Söderhamns kn (Gävleborgs län, Hälsingland). Mantalsskriven (1985) på samma ort.\n\nFödd 7/10 1915 i Klara (Stockholms stad, Uppland).\n\nGift kvinna (24/11 1945).\n--------------\nFödelseförsamling i källan:\nKlara (Stockholms län)\n\nKällor:\nRTB 87 / SPAR 90"
+    },
+    "p_okvwcpl9": {
+      "id": "p_okvwcpl9",
+      "name": "Ann Margret Bengtsson",
+      "gender": "F",
+      "role": "",
+      "born": "1938-09-24",
+      "bornParish": "Hedvig Eleonora, Stockholm",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_faev1bmt": {
+      "id": "p_faev1bmt",
+      "name": "Ingrid Lillemor Brondell",
+      "gender": "F",
+      "role": "",
+      "born": "1941-02-21",
+      "bornParish": "Maria Magdalena, Stockholm",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_4pygtg3h": {
+      "id": "p_4pygtg3h",
+      "name": "Marie-Louise Brondell",
+      "gender": "F",
+      "role": "",
+      "born": "1946-10-19",
+      "bornParish": "Enskede",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
     }
   },
   "parentsOf": {
@@ -25925,12 +25985,12 @@
       "p_zobmj6wp8"
     ],
     "p_3uj910se8": [
-      "p_bbclq6f9g",
-      "p_3rw58lslc"
+      "p_3rw58lslc",
+      "p_bbclq6f9g"
     ],
     "p_3w3d8mg0r": [
-      "p_e2d8rcv1d",
-      "p_p1t2kmcat"
+      "p_p1t2kmcat",
+      "p_e2d8rcv1d"
     ],
     "p_607tk2v1i": [
       "p_fceooch",
@@ -25957,8 +26017,8 @@
       "p_apnevfd1e"
     ],
     "p_anref8x": [
-      "p_q1486bk",
-      "p_a9c12mk"
+      "p_a9c12mk",
+      "p_q1486bk"
     ],
     "p_bbclq6f9g": [
       "p_r6gu9qm8a",
@@ -25974,12 +26034,12 @@
       "p_ymb6wc3q0"
     ],
     "p_c2jyk4pds": [
-      "p_9vhcxd8",
-      "p_mc6jemk"
+      "p_mc6jemk",
+      "p_9vhcxd8"
     ],
     "p_czyydy2g7": [
-      "p_9vhcxd8",
-      "p_mc6jemk"
+      "p_mc6jemk",
+      "p_9vhcxd8"
     ],
     "p_ep1684kzs": [
       "p_n2oxqssdd",
@@ -25990,8 +26050,8 @@
       "p_epbrpkbpc"
     ],
     "p_ir25hn919": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_p1t2kmcat": [
       "p_6c6wnb9",
@@ -26018,12 +26078,12 @@
       "p_ymb6wc3q0"
     ],
     "p_t22zhc497": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_vomcn89yz": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_zobmj6wp8": [
       "p_6c6wnb9",
@@ -26074,12 +26134,12 @@
       "p_apnevfd1e"
     ],
     "p_ir4u61dqa": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_jqtxmllar": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_apnevfd1e": [
       "p_l0tiqibe0",
@@ -26102,12 +26162,12 @@
       "p_apnevfd1e"
     ],
     "p_z4rxd74pc": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_zcl5kw4oh": [
-      "p_e2d8rcv1d",
-      "p_p1t2kmcat"
+      "p_p1t2kmcat",
+      "p_e2d8rcv1d"
     ],
     "p_lx16wimrx": [
       "p_izcueyhnf",
@@ -26121,8 +26181,8 @@
       "p_sh6rs3ypi"
     ],
     "p_4cjwtla35": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_37jcbtegu": [
       "p_n2oxqssdd",
@@ -29320,6 +29380,18 @@
     "p_963na7wq": [
       "p_msjxzjvc",
       "p_cvjhwn0x"
+    ],
+    "p_okvwcpl9": [
+      "p_39zlyxr5",
+      "p_anj812l9"
+    ],
+    "p_faev1bmt": [
+      "p_39zlyxr5",
+      "p_anj812l9"
+    ],
+    "p_4pygtg3h": [
+      "p_39zlyxr5",
+      "p_anj812l9"
     ]
   },
   "childrenOf": {
@@ -29331,18 +29403,18 @@
       "p_3qowa85hd",
       "p_8mchqpopa"
     ],
-    "p_3rw58lslc": [
-      "p_3uj910se8"
-    ],
     "p_bbclq6f9g": [
       "p_3uj910se8",
       "p_4yyrm3723"
     ],
-    "p_p1t2kmcat": [
+    "p_3rw58lslc": [
+      "p_3uj910se8"
+    ],
+    "p_e2d8rcv1d": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
-    "p_e2d8rcv1d": [
+    "p_p1t2kmcat": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
@@ -29390,10 +29462,10 @@
       "p_yhg9e9i5y",
       "p_tdvl922cf"
     ],
-    "p_a9c12mk": [
+    "p_q1486bk": [
       "p_anref8x"
     ],
-    "p_q1486bk": [
+    "p_a9c12mk": [
       "p_anref8x"
     ],
     "p_k9dqg17ug": [
@@ -29436,11 +29508,11 @@
       "p_trylh546h",
       "p_vit2oe3no"
     ],
-    "p_mc6jemk": [
+    "p_9vhcxd8": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
-    "p_9vhcxd8": [
+    "p_mc6jemk": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
@@ -29466,13 +29538,13 @@
       "p_cyl275xx",
       "p_907ij0i8"
     ],
-    "p_yhg9e9i5y": [
+    "p_n4z6lfc2f": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
       "p_4cjwtla35"
     ],
-    "p_n4z6lfc2f": [
+    "p_yhg9e9i5y": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
@@ -29492,12 +29564,12 @@
       "p_zobmj6wp8",
       "p_0dj5jnxhr"
     ],
-    "p_0dj5jnxhr": [
+    "p_zmfl39a5r": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
     ],
-    "p_zmfl39a5r": [
+    "p_0dj5jnxhr": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
@@ -32750,6 +32822,16 @@
       "p_1icq0sje",
       "p_77msrf20",
       "p_963na7wq"
+    ],
+    "p_39zlyxr5": [
+      "p_okvwcpl9",
+      "p_faev1bmt",
+      "p_4pygtg3h"
+    ],
+    "p_anj812l9": [
+      "p_okvwcpl9",
+      "p_faev1bmt",
+      "p_4pygtg3h"
     ]
   },
   "spousesOf": {
@@ -34171,7 +34253,9 @@
     "p_cvjhwn0x": [
       "p_msjxzjvc"
     ],
-    "p_39zlyxr5": [],
+    "p_39zlyxr5": [
+      "p_anj812l9"
+    ],
     "p_fp41cl1g": [
       "p_qz5ss79q"
     ],
@@ -35913,6 +35997,9 @@
     ],
     "p_msjxzjvc": [
       "p_cvjhwn0x"
+    ],
+    "p_anj812l9": [
+      "p_39zlyxr5"
     ]
   }
 }
