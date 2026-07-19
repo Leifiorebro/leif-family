@@ -12510,8 +12510,16 @@
       "photo": "",
       "photoId": "",
       "history": "",
-      "photos": [],
-      "photoCaptions": {}
+      "photos": [
+        {
+          "src": "images/p_e2azk2tb.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/Geraldine Avis Goss.jpg",
+          "caption": "Kyrkogård::\nFort Leavenworth National Cemetery\n\nOrt för begravning/kremering: \nFort Leavenworth, Leavenworth County (Leavenworth), Kansas, United States of America\n\nhttps://www.findagrave.com/memorial/125230206/geraldine-avis-goss"
+        }
+      ]
     },
     "p_v613fv76": {
       "id": "p_v613fv76",
@@ -26063,7 +26071,8 @@
           "src": "images/Goss.jpg",
           "caption": ""
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_77bkhct5": {
       "id": "p_77bkhct5",
