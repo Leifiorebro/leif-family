@@ -26112,6 +26112,36 @@
       "photo": "",
       "photoId": "",
       "history": ""
+    },
+    "p_mamix6ca": {
+      "id": "p_mamix6ca",
+      "name": "Charles Goss",
+      "gender": "M",
+      "role": "",
+      "born": "1887-07-14",
+      "bornParish": "Kanada",
+      "died": "1970-05",
+      "diedParish": "",
+      "job": "Elektriker",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Charles Goss\n\nElektriker\n\nFödd 1887-07-14 Kanada\n\nDöd 1970-05 \n\nNoteringar\nNamn: Charles Goss\n[Charles Fross] \n[Charles Gass] \nÅlder: 32\nFödelseår: cirka 1888\nFödelseort: Rhode Island\nBodde år 1920: Braintree, Norfolk, Massachusetts\nHusnummer: 51\nBosatt datum: 1920\nHärstamning: White (Vit)\nKön: Male (Man)\nImmigrerade år: 1891\nSläktskapsförhållande till familjeöverhuvud: Head (Chef)\nCivilstånd: Married (Gift)\nMake/Makas namn: Flora Goss\nFaderns födelseort: Canada (Kanada)\nModerns födelseort: Canada (Kanada)\nTalar engelska: Yes\nSysselsättning: Electricaor\nIndustri: Ship Building\nBostad – ägd eller hyrd: Own\nHem – ägt eller belånat: Mortgaged\nGrannar: Visa andra på sidan\nHushållsmedlemmar: \nNamn Ålder\nCharles Goss 32\nFlora Goss 31\nCharles Goss 5\nSpara"
+    },
+    "p_6kbqk9vj": {
+      "id": "p_6kbqk9vj",
+      "name": "Flora Cameron Ramsay",
+      "gender": "",
+      "role": "",
+      "born": "",
+      "bornParish": "Campbeltown, Argyleshire, Skottland",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
     }
   },
   "parentsOf": {
@@ -29551,6 +29581,10 @@
     "p_dqop25bn": [
       "p_gmksdsy1",
       "p_aawetd9g"
+    ],
+    "p_t4yjwirb": [
+      "p_mamix6ca",
+      "p_6kbqk9vj"
     ]
   },
   "childrenOf": {
@@ -33011,6 +33045,12 @@
       "p_0rlldl1x",
       "p_g22908ki",
       "p_dqop25bn"
+    ],
+    "p_mamix6ca": [
+      "p_t4yjwirb"
+    ],
+    "p_6kbqk9vj": [
+      "p_t4yjwirb"
     ]
   },
   "spousesOf": {
@@ -36194,6 +36234,12 @@
     ],
     "p_gmksdsy1": [
       "p_aawetd9g"
+    ],
+    "p_mamix6ca": [
+      "p_6kbqk9vj"
+    ],
+    "p_6kbqk9vj": [
+      "p_mamix6ca"
     ]
   }
 }
