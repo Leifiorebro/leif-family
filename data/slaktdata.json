@@ -26404,6 +26404,111 @@
       "photo": "",
       "photoId": "",
       "history": "Carl Johan Jansson\n\nFödd 1861-11-17 Nora\n\nNoteringar\nJärnboås (T) AI:14 (1845-1855) Bild 278 / sid 273 (AID: v51508.b278.s273, NAD: SE/ULA/10503)\nJärnboås (T) AI:17b (1876-1885) Bild 180 / sid 422 (AID: v51514.b180.s422, NAD: SE/ULA/10503)\nJärnboås (T) AI:18b (1886-1895) Bild 198 / sid 570 (AID: v51516.b198.s570, NAD: SE/ULA/10503)"
+    },
+    "p_reom5gvx": {
+      "id": "p_reom5gvx",
+      "name": "Carolina Larsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1823-07-05",
+      "bornParish": "Grythyttan",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Carolina Larsdotter\n\nFödd 1823-07-05 Grythyttan\n\nGift med Petter Persson 1846-05-09 \n\nNoteringar\nJärnboås (T) AI:14 (1845-1855) Bild 278 / sid 273 (AID: v51508.b278.s273, NAD: SE/ULA/10503)"
+    },
+    "p_tcj82oxc": {
+      "id": "p_tcj82oxc",
+      "name": "Anders Persson",
+      "gender": "M",
+      "role": "",
+      "born": "1846-09-18",
+      "bornParish": "Järnboås",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Anders Persson\n\nPersson\n\nFödd 1846-09-18 Järnboås\n\nNoteringar\nJärnboås (T) AI:14 (1845-1855) Bild 278 / sid 273 (AID: v51508.b278.s273, NAD: SE/ULA/10503)"
+    },
+    "p_htk27h8q": {
+      "id": "p_htk27h8q",
+      "name": "Anna Stina Perdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1848-03-02",
+      "bornParish": "Järnboås",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Anna Stina Persdotter\n\nFödd 1848-03-02 Järnboås\n\nNoteringar\nJärnboås (T) AI:14 (1845-1855) Bild 278 / sid 273 (AID: v51508.b278.s273, NAD: SE/ULA/10503)"
+    },
+    "p_5pis87x0": {
+      "id": "p_5pis87x0",
+      "name": "Per Persson",
+      "gender": "M",
+      "role": "",
+      "born": "1849-10-28",
+      "bornParish": "Järnboås",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Per Persson\n\nFödd 1849-10-28 Järnboås\n\nNoteringar\nJärnboås (T) AI:14 (1845-1855) Bild 278 / sid 273 (AID: v51508.b278.s273, NAD: SE/ULA/10503)"
+    },
+    "p_sc3tjuep": {
+      "id": "p_sc3tjuep",
+      "name": "Carl Persson",
+      "gender": "",
+      "role": "",
+      "born": "1852-05-24",
+      "bornParish": "Järnboås",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Carl Persson\n\nFödd 1852-05-24 \n\nNoteringar\nJärnboås (T) AI:14 (1845-1855) Bild 278 / sid 273 (AID: v51508.b278.s273, NAD: SE/ULA/10503)"
+    },
+    "p_kga1tccl": {
+      "id": "p_kga1tccl",
+      "name": "Erik Persson",
+      "gender": "M",
+      "role": "",
+      "born": "1854-10-18",
+      "bornParish": "Järnboås",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Erik Persson\n\nFödd 1854-10-18 Järnboås\n\nNoteringar\nJärnboås (T) AI:14 (1845-1855) Bild 278 / sid 273 (AID: v51508.b278.s273, NAD: SE/ULA/10503)"
+    },
+    "p_hj14zey4": {
+      "id": "p_hj14zey4",
+      "name": "Carolina Persdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1855-12-20",
+      "bornParish": "Järnboås",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Carolina Persdotter\n\nFödd 1855-12-20 Järnboås\n\nNoteringar\nJärnboås (T) AI:14 (1845-1855) Bild 278 / sid 273 (AID: v51508.b278.s273, NAD: SE/ULA/10503)"
     }
   },
   "parentsOf": {
@@ -29879,6 +29984,30 @@
     "p_j5ezsmb0": [
       "p_70091dn1",
       "p_z9y4rbyh"
+    ],
+    "p_tcj82oxc": [
+      "p_uvgjx8bt",
+      "p_reom5gvx"
+    ],
+    "p_htk27h8q": [
+      "p_uvgjx8bt",
+      "p_reom5gvx"
+    ],
+    "p_5pis87x0": [
+      "p_uvgjx8bt",
+      "p_reom5gvx"
+    ],
+    "p_sc3tjuep": [
+      "p_uvgjx8bt",
+      "p_reom5gvx"
+    ],
+    "p_kga1tccl": [
+      "p_uvgjx8bt",
+      "p_reom5gvx"
+    ],
+    "p_hj14zey4": [
+      "p_uvgjx8bt",
+      "p_reom5gvx"
     ]
   },
   "childrenOf": {
@@ -33357,6 +33486,22 @@
       "p_0rlldl1x",
       "p_g22908ki",
       "p_dqop25bn"
+    ],
+    "p_uvgjx8bt": [
+      "p_tcj82oxc",
+      "p_htk27h8q",
+      "p_5pis87x0",
+      "p_sc3tjuep",
+      "p_kga1tccl",
+      "p_hj14zey4"
+    ],
+    "p_reom5gvx": [
+      "p_tcj82oxc",
+      "p_htk27h8q",
+      "p_5pis87x0",
+      "p_sc3tjuep",
+      "p_kga1tccl",
+      "p_hj14zey4"
     ]
   },
   "spousesOf": {
@@ -36563,6 +36708,12 @@
     ],
     "p_0rlldl1x": [],
     "p_g22908ki": [],
-    "p_dqop25bn": []
+    "p_dqop25bn": [],
+    "p_uvgjx8bt": [
+      "p_reom5gvx"
+    ],
+    "p_reom5gvx": [
+      "p_uvgjx8bt"
+    ]
   }
 }
