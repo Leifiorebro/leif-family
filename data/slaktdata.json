@@ -26641,6 +26641,36 @@
       "photo": "",
       "photoId": "",
       "history": "Svea Cecilia Andersén\n\nFödd 1923-09-08 Bo i Örebro län\n\nDöd 1988-11-27 Kumla\n\nNoteringar\n1923-09-08\nAndersén, Svea Cecilia\nMyntg 20\n692 00  Kumla\nKyrkobokförd i Kumla (Kumla kn, Örebro län, Närke), distrikt 02, fastighet 52961. Mantalsskriven på samma ort.\nFödd 8/9 1923 i Bo (Örebro län, Närke).\n--------------\nKälla: Mtl Örebro län 1971\n_______________________\n19230908-6805\nAndersén, Svea Cecilia\nGränsg 2 /Englund/\n692 33  Kumla\nDöd 27/11 1988.\nKyrkobokförd (1985) i Kumla, Kumla kn (Örebro län, Närke). Personen är \"på församlingen skriven\" eller är \"utan känd hemvist\". Mantalsskriven (1985) på samma ort.\nFödd 8/9 1923 i Bo (Örebro län, Närke).\nÄnka (14/10 1983).\n--------------\nFödelseförsamling i källan:\nBO (Örebro län)\nKällor:\nRTB 88 / SPAR 90"
+    },
+    "p_f9vatqup": {
+      "id": "p_f9vatqup",
+      "name": "Aina Englund",
+      "gender": "F",
+      "role": "",
+      "born": "1930-07-30",
+      "bornParish": "Kumla",
+      "died": "2025-05-24",
+      "diedParish": "Kumla",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Aina Englund\n\nFödd 1930-07-30 Kumla\n\nDöd 2025-05-24 Kumla\n\nNoteringar\n1930-07-30\nEnglund, Aina Henrietta\nGränsg 2\n692 00  Kumla\nKyrkobokförd i Kumla (Kumla kn, Örebro län, Närke), distrikt 02, fastighet 43678. Mantalsskriven på samma ort.\nFödd 30/7 1930 i Kumla (Örebro län, Närke).\n--------------\nKälla: Mtl Örebro län 1971"
+    },
+    "p_dc6gxru1": {
+      "id": "p_dc6gxru1",
+      "name": "Lars-Göran Englund",
+      "gender": "M",
+      "role": "",
+      "born": "1957-01-30",
+      "bornParish": "Kumla",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Lars-Göran Englund\n\nFödd 1957-01-30 Kumla\n\nNoteringar\n1957-01-30\nEnglund, Lars-Göran\nGränsg 2\n692 00  Kumla\nKyrkobokförd i Kumla (Kumla kn, Örebro län, Närke), distrikt 02, fastighet 43678. Mantalsskriven på samma ort.\nFödd 30/1 1957 i Kumla (Örebro län, Närke).\n--------------\nKälla: Mtl Örebro län 1971"
     }
   },
   "parentsOf": {
@@ -30148,6 +30178,10 @@
     "p_zmfl39a5r": [
       "p_7ruj4d8d",
       "p_3n6a6p2n"
+    ],
+    "p_dc6gxru1": [
+      "p_w9az526b1",
+      "p_f9vatqup"
     ]
   },
   "childrenOf": {
@@ -33650,6 +33684,12 @@
     ],
     "p_3n6a6p2n": [
       "p_zmfl39a5r"
+    ],
+    "p_f9vatqup": [
+      "p_dc6gxru1"
+    ],
+    "p_w9az526b1": [
+      "p_dc6gxru1"
     ]
   },
   "spousesOf": {
@@ -33944,7 +33984,9 @@
     "p_vkvmoix0v": [],
     "p_vomcn89yz": [],
     "p_w45w1n6s2": [],
-    "p_w9az526b1": [],
+    "p_w9az526b1": [
+      "p_f9vatqup"
+    ],
     "p_xngn4xyr5": [],
     "p_xyk5tv6yt": [
       "p_c9wudsgyf"
@@ -36888,6 +36930,9 @@
     ],
     "p_sviaeoj0": [
       "p_fsyurpw6g"
+    ],
+    "p_f9vatqup": [
+      "p_w9az526b1"
     ]
   }
 }
