@@ -26626,6 +26626,21 @@
       "photo": "",
       "photoId": "",
       "history": ""
+    },
+    "p_sviaeoj0": {
+      "id": "p_sviaeoj0",
+      "name": "Svea Cecilia Andersén",
+      "gender": "F",
+      "role": "",
+      "born": "1923-09-08",
+      "bornParish": "Bo, Örebro län",
+      "died": "1988-11-27",
+      "diedParish": "Kumla",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Svea Cecilia Andersén\n\nFödd 1923-09-08 Bo i Örebro län\n\nDöd 1988-11-27 Kumla\n\nNoteringar\n1923-09-08\nAndersén, Svea Cecilia\nMyntg 20\n692 00  Kumla\nKyrkobokförd i Kumla (Kumla kn, Örebro län, Närke), distrikt 02, fastighet 52961. Mantalsskriven på samma ort.\nFödd 8/9 1923 i Bo (Örebro län, Närke).\n--------------\nKälla: Mtl Örebro län 1971\n_______________________\n19230908-6805\nAndersén, Svea Cecilia\nGränsg 2 /Englund/\n692 33  Kumla\nDöd 27/11 1988.\nKyrkobokförd (1985) i Kumla, Kumla kn (Örebro län, Närke). Personen är \"på församlingen skriven\" eller är \"utan känd hemvist\". Mantalsskriven (1985) på samma ort.\nFödd 8/9 1923 i Bo (Örebro län, Närke).\nÄnka (14/10 1983).\n--------------\nFödelseförsamling i källan:\nBO (Örebro län)\nKällor:\nRTB 88 / SPAR 90"
     }
   },
   "parentsOf": {
@@ -33798,7 +33813,9 @@
     "p_fceooch": [
       "p_7hozznt"
     ],
-    "p_fsyurpw6g": [],
+    "p_fsyurpw6g": [
+      "p_sviaeoj0"
+    ],
     "p_hvl6b0sns": [
       "p_2crerqvof"
     ],
@@ -36868,6 +36885,9 @@
     ],
     "p_3n6a6p2n": [
       "p_7ruj4d8d"
+    ],
+    "p_sviaeoj0": [
+      "p_fsyurpw6g"
     ]
   }
 }
