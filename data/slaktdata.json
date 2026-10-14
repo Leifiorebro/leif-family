@@ -4486,8 +4486,36 @@
       "link": "",
       "photoId": "p_sh6rs3ypi.jpg",
       "history": "19010822-6622\nEnglund f. Andersén, Greta Viktoria\nStensäter 4, Örsta 2:17\nDöd 21/9 1968.\nKyrkobokförd i Kumla, Kumla kn (Örebro län, Närke).\nFödd 22/8 1901 i Kumla (Örebro län, Närke).\nÄnka (15/3 1966).\n\nGreta Viktoria växte upp med föräldrarna boende på Skogstorp, Örsta i Kumla.\n\nKumla (T) AIIa:4a (1916-1921) Bild 2420 / sid 222 (AID: v146311.b2420.s222, NAD: SE/ULA/10666)",
-      "photoCaptions": {},
-      "photos": []
+      "photos": [
+        {
+          "src": "images/p_sh6rs3ypi.jpg",
+          "caption": "Greta Andersén"
+        },
+        {
+          "src": "images/Greta Andersén.JPG",
+          "caption": "Greta Andersén"
+        },
+        {
+          "src": "images/Greta nr 2.jpg",
+          "caption": "Fr.v: Lisbeth, Greta, Gustaf, Okänd, Inga, Martin, Okänd, Okänd, Lars Englund"
+        },
+        {
+          "src": "images/Greta_A (1).png",
+          "caption": "Greta med maken Gustaf längst upp till höger. De övriga vet jag ej."
+        },
+        {
+          "src": "images/Greta_A (2).png",
+          "caption": "Greta med dottern Lisbeth"
+        },
+        {
+          "src": "images/Greta_vigselbok.jpg",
+          "caption": "Vigselboken, Greta och Gustaf."
+        },
+        {
+          "src": "images/Kumla-T-AIIa-4a-1916-1921-Bild-2420-Sida-222.jpg",
+          "caption": "Gretas familj"
+        }
+      ]
     },
     "p_swhhfozg2": {
       "id": "p_swhhfozg2",
@@ -4843,7 +4871,8 @@
           "src": "images/Lars till höger.jpg",
           "caption": "Fr.v: Lisbeth, Greta, Gustaf Englund, Okänd, Inga, Martin, Okänd, Okänd, Lars Englund"
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_xngn4xyr5": {
       "id": "p_xngn4xyr5",
