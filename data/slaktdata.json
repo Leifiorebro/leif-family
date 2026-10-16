@@ -2766,7 +2766,8 @@
           "caption": "Tores grav"
         }
       ],
-      "gender": "M"
+      "gender": "M",
+      "photoCaptions": {}
     },
     "p_fsyurpw6g": {
       "id": "p_fsyurpw6g",
@@ -17724,8 +17725,32 @@
       "photo": "",
       "photoId": "",
       "history": "Klara Teodora Johansson\n\nFödd 1898-09-10 Bua, Karl Gustav, Halland\nKälla: Karl Gustav (N, P) CI:6 (1895-1909) Bild 180 / sid 12 (AID: v230572.b180.s12, NAD: SE/LLA/13198)\n\nGift med Gustaf Lorens Johansson 1933-06-23 \n\nDöd 1994-01-11 Bergsjön, Göteborgs kn\n\nNoteringar\n1898-09-10\nJohansson, Klara Teodora\nHagbergsg 25\n415 06  Göteborg\nKyrkobokförd i Nylöse (Göteborgs kn, Göteborgs och Bohus län, Västergötland), distrikt 04, fastighet 91510. Mantalsskriven på samma ort.\nFödd 10/9 1898 i Karl Gustav (Hallands län, Västergötland).\n--------------\nKälla: Mtl Göteborgs och Bohus län 1971\n_____________\n18980910-5001\nJohansson, Klara Teodora\nGalileis g 32\n415 17  Göteborg\nDöd 11/1 1994.\nKyrkobokförd i Bergsjön, Göteborgs kn (Göteborgs och Bohus län, Västergötland).\nFödd 10/9 1898 i Karl Gustav (Hallands län, Västergötland).\nÄnka (19/1 1953).\n--------------\nMotsvarande kyrkobokföringsförsamling(ar) 1/1 2007:\nBergsjön, Göteborgs kn (Västra Götalands län, Västergötland)\nFödelseförsamling i källan:\nKARL GUSTAF (Älvsborgs län)\nKällor:\nRTB 94 / SPAR 92f / SPAR 95\n\nDora\nhttp://trees.ancestry.com/rd?f=image&guid=2a872ea5-dc5d-4945-8027-d57241214d10&tid=33421111&pid=855\n\nKarl Gustav (N, P) CI:6 (1895-1909) Bild 180 / sid 12 (AID: v230572.b180.s12, NAD: SE/LLA/13198)\nKarl Gustav (N, P) AI:11 (1890-1898) Bild 520 / sid 39 (AID: v92701a.b520.s39, NAD: SE/LLA/13198)\nKarl Gustav (N, P) AIIa:1 (1899-1908) Bild 570 / sid 40 (AID: v230420.b570.s40, NAD: SE/LLA/13198)\nKarl Gustav (N, P) AIIa:2 (1909-1921) Bild 580 / sid 46 (AID: v230421.b580.s46, NAD: SE/LLA/13198)\nKarl Gustav (N, P) B:3 (1917-1965) Bild 210 / sid 15 (AID: v230566.b210.s15, NAD: SE/LLA/13198)",
-      "photos": [],
-      "photoCaptions": {}
+      "photos": [
+        {
+          "src": "images/p_oyukfixj.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/Dora med mor och mormor.png",
+          "caption": "Dora med sonen Tore i knät samt tillsammans med sin mor Berta och mormor Anna"
+        },
+        {
+          "src": "images/Dora och Dagmar.jpg",
+          "caption": "Dagmar och Dora"
+        },
+        {
+          "src": "images/Familjen Teodor Johansson.jpg",
+          "caption": "Dora med sina föräldrar och syskon"
+        },
+        {
+          "src": "images/Bua Storegård.jpg",
+          "caption": "Bua Storegård där Dora är född."
+        },
+        {
+          "src": "images/Doras grav.jpg",
+          "caption": "Doras grav"
+        }
+      ]
     },
     "p_wl4rymyc": {
       "id": "p_wl4rymyc",
