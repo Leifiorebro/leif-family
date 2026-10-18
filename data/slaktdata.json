@@ -14359,8 +14359,28 @@
       "photo": "",
       "photoId": "",
       "history": "Jonas Blomqvist\n\nSkogsarbetare\n\nFödd 1863-09-08 Söderala\n\nGift med Anna Greta Dahlberg 1890-07-20 \n\nDöd 1930-10-11 Norr Ljusne\n\nNoteringar\n\nv136748.b168.s162\nSöderala kyrkoarkiv, Husförhörslängder, SE/HLA/1010201/A I/19 b (1861-1865), bildid: C0032138_00138, sida 162\nhttps://sok.riksarkivet.se/bildvisning/C0032138_00138\n\n\nv189277.b230.s7\nLjusne kyrkoarkiv, Församlingsböcker, SE/HLA/1010114/A II a/5 a (1925-1936), bildid: 00201466_00015, sida 7\nhttps://sok.riksarkivet.se/bildvisning/00201466_00015\n\n\n\nBilden föreställer\n\nJonas Blomqvist och hustrun Anna Margareta Blomqvist f. Anna Margareta Dahlberg\nBodde på gården Skräddars, Norrljusne\nJonas född 1863\nAnna Margareta född 1863\nÖvriga upplysningar\n\nJonas Blomqvist var stabbläggare i brädgården i Ljusne, förutom att han hade gården som skulle skötas. Anna Margareta skötte djuren, några kor och getter. På somrarna hade alltså Jonas extrajobb med att t.ex. slå foder åt djuren, Täkterna låg då där huset ligger idag, 2015.\nJonas Blomqvist var barnbarn till skräddaren/skolmästaren Lars Skalman\nJonas och Anna var föräldrar till:\nAnna Blomqvist född 1898 (gift med Johan Melin)\nOlga (född 1903), Olga var lärarinna i Hassela, men dog vid 25 års ålder\nJohan Blomqvist född 1893 (som var slaktare)\nSigne Blomqvist född 1905, senare efter Annas död gift med Johan Melin\nPer Blomqvist född 1895, gift med Gudrun, hade bl.a kafé i Ljusne",
-      "photos": [],
-      "photoCaptions": {}
+      "photos": [
+        {
+          "src": "images/p_h4rzmlya.jpg",
+          "caption": "Jonas Blomqvist"
+        },
+        {
+          "src": "images/Jonas Blomqvist_edited_1.jpg",
+          "caption": "Jonas Blomqvist med hustru Anna Greta Dahlberg"
+        },
+        {
+          "src": "images/Skräddars_1.jpg",
+          "caption": "Skräddars"
+        },
+        {
+          "src": "images/19301013_ST_Jonas Blomqvist_1.JPG",
+          "caption": "Dödsannons 1930-10-13 i Söderhamns Tidning"
+        },
+        {
+          "src": "images/19301013_ST_Jonas Blomqvist.JPG",
+          "caption": "Minnesord i Söderhamns Tidning 1930-10-13."
+        }
+      ]
     },
     "p_l81v31o1": {
       "id": "p_l81v31o1",
@@ -14457,7 +14477,8 @@
           "src": "images/Johan Blomqvist_3.jpeg",
           "caption": "Bröderna Johan och Per Blomqvist"
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_pcx0l6n6": {
       "id": "p_pcx0l6n6",
