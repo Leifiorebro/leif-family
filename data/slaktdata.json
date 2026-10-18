@@ -14521,7 +14521,8 @@
           "src": "images/Olga Blomqvist_2.jpg",
           "caption": "Olga Blomqvist"
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_oceyi57b": {
       "id": "p_oceyi57b",
@@ -27984,8 +27985,28 @@
       "photo": "",
       "photoId": "",
       "history": "Anna Birgitta Mellin\n\nFödd 1925-02-28 Ljusne\n\nGift med Rune Axel Larsson 1947-06-23 \n\nNoteringar\nSveriges befolkning 1950 (ArkivDigital) AID: r1.p1159486",
-      "photos": [],
-      "photoCaptions": {}
+      "photos": [
+        {
+          "src": "images/p_wotcj3vt.jpg",
+          "caption": "Birgit Melin"
+        },
+        {
+          "src": "images/Birgit Mellin_3.jpg",
+          "caption": "Foto taget i samband med Birgits konfirmation i Ljusne 1939"
+        },
+        {
+          "src": "images/Birgit Mellin_4.jpg",
+          "caption": "1947-06-23\nBrudparet Birgit och Rune Larsson\nBrudnäbb Birgitta Tapper (som gift)"
+        },
+        {
+          "src": "images/Birgit Mellin_2.jpg",
+          "caption": "På skidor"
+        },
+        {
+          "src": "images/Birgit Mellin_1.jpg",
+          "caption": "Birgit Mellin med pappa Johan Mellins häst vid Skräddars, Norrljusne"
+        }
+      ]
     },
     "p_3c0ccj9y": {
       "id": "p_3c0ccj9y",
