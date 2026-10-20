@@ -28266,6 +28266,36 @@
       "photo": "",
       "photoId": "",
       "history": "Ellen Ingeborg Blomqvist\n\nFödd 1912-10-24 Ljusne\n\nDöd 1912-11-11 Ljusne"
+    },
+    "p_2p27fg0f": {
+      "id": "p_2p27fg0f",
+      "name": "Anders Asker",
+      "gender": "M",
+      "role": "",
+      "born": "1842-12-10",
+      "bornParish": "Sunne",
+      "died": "1903-05-02",
+      "diedParish": "Ljusne",
+      "job": "Lantbonde",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_bclc3fmq": {
+      "id": "p_bclc3fmq",
+      "name": "Marit Jonsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1843-03-03",
+      "bornParish": "Fryksände, Värmland",
+      "died": "1929-03-03",
+      "diedParish": "Ljusne",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Noteringar\nMarit och maken Anders hade varit landbönder i Norrljusne tills Anders dog 1903, då tog svärsonen Abram Blomquist över hemmanet, som ska ha legat någonstans vid nuvarande villaområdet i Askers, där bodde familjen Blomquist till 1911/1912 då Abram med familj flyttade till Sörljusne. Det huset övergavs då det var i så dåligt skick. Marit och sonen Alex bodde då i det här huset som man ser närmast i bild. \n\nSigrid Knapp var dotterdotter till Marit, i en skrift från 1991 där hon beskriver sin barndom berättar hon om Marits död:\n”Mormor dog 1929 genom en olyckshändelse. Hon stod med ryggen mot en kakelugnsbrasa och kläderna fattade eld. Hon dog efter sviterna efter händelsen.”"
     }
   },
   "parentsOf": {
@@ -31941,6 +31971,10 @@
     "p_7hmk9i5s": [
       "p_dhv8gzu6",
       "p_ascm5f6i"
+    ],
+    "p_ascm5f6i": [
+      "p_2p27fg0f",
+      "p_bclc3fmq"
     ]
   },
   "childrenOf": {
@@ -35637,6 +35671,12 @@
       "p_1r9wmqyg",
       "p_0uit2r76",
       "p_7hmk9i5s"
+    ],
+    "p_2p27fg0f": [
+      "p_ascm5f6i"
+    ],
+    "p_bclc3fmq": [
+      "p_ascm5f6i"
     ]
   },
   "spousesOf": {
@@ -39041,6 +39081,12 @@
     ],
     "p_ascm5f6i": [
       "p_dhv8gzu6"
+    ],
+    "p_2p27fg0f": [
+      "p_bclc3fmq"
+    ],
+    "p_bclc3fmq": [
+      "p_2p27fg0f"
     ]
   }
 }
