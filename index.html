@@ -746,7 +746,7 @@ function drawGenealogy(rootId){
   const ancestorRows = buildAncestorRows(); // [0]=root row, [1]=parents, ...
   const descRows     = buildDescRows();     // [0]=children, [1]=grandchildren, ...
 
-  const spouseIds = uniq(store.spousesOf[rootId]||[]);
+  const spouseIds = sortIdsByBorn(uniq(store.spousesOf[rootId]||[]));
 
   // ── Layout: assign Y positions ──
   // Root sits in the middle. Ancestors go up, descendants go down.
@@ -891,9 +891,7 @@ function drawGenealogy(rootId){
     const childAnchorCX = lastSpouseCX ? (rootCX + lastSpouseCX)/2 : rootCX;
 
     // Spread children horizontally centred under root (drift-adjusted)
-    const adjChildAnchorCX = adjSpouseCXs.length > 0
-      ? (adjRootCX + adjSpouseCXs[adjSpouseCXs.length-1]) / 2
-      : adjRootCX;
+    const adjChildAnchorCX = adjRootCX; // per-family anchor set in buildFamilyGroups
     const levelColors = ["child","grandchild","child","grandchild"];
 
     function vline(cx, y1, y2){
@@ -974,7 +972,11 @@ function drawGenealogy(rootId){
     });
 
     // Start cursor centred under adjChildAnchorCX
-    let famCursor = adjChildAnchorCX - totalFamilyW / 2;
+    // Centre all families under the entire root+spouses row
+    const rowMidX = adjSpouseCXs.length > 0
+      ? (adjRootCX + adjSpouseCXs[adjSpouseCXs.length-1]) / 2
+      : adjRootCX;
+    let famCursor = rowMidX - totalFamilyW / 2;
 
     familyGroups.forEach((fam, fi) => {
       // Compute cx for each child in this family
