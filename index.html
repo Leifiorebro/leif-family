@@ -894,32 +894,19 @@ function drawGenealogy(rootId){
     const adjChildAnchorCX = adjSpouseCXs.length > 0
       ? (adjRootCX + adjSpouseCXs[adjSpouseCXs.length-1]) / 2
       : adjRootCX;
-    let cursor = adjChildAnchorCX - (children.length * childSlotW) / 2;
-    const childCXs = children.map(() => { const cx = cursor + childSlotW/2; cursor += childSlotW; return cx; });
-
-    // Level colors: alternating blue/green per generation depth
     const levelColors = ["child","grandchild","child","grandchild"];
 
-    // Recursive function: draw a node and all its descendants vertically
-    // parentId  = the person whose descendants to draw
-    // cx        = horizontal centre for this column
-    // startY    = Y of the top of the first descendant card
-    // genDepth  = how many more generations to draw (counts down)
-    // genIndex  = visual depth index for color selection
-    // Returns   = the Y bottom of the last card drawn in this column
-    // Draw a straight vertical connector line
     function vline(cx, y1, y2){
+      if(y2 <= y1) return;
       g.append("line")
-        .attr("x1", cx).attr("y1", y1)
-        .attr("x2", cx).attr("y2", y2)
-        .attr("stroke","var(--line)").attr("stroke-width", 2);
+        .attr("x1",cx).attr("y1",y1)
+        .attr("x2",cx).attr("y2",y2)
+        .attr("stroke","var(--line)").attr("stroke-width",2);
     }
 
-    // Persons to exclude from spouse cards: rootId and rootId's own spouses
+    // Exclude rootId and rootId's spouses from appearing as spouse cards in columns
     const excludeFromSpouseCards = new Set([rootId, ...uniq(store.spousesOf[rootId]||[])]);
 
-    // Draw spouse(s) of parentId between parent and their children.
-    // Returns updated currentY after all spouse cards.
     function drawSpouseCard(parentId, cx, currentY, prevBottomY){
       const spouses = uniq(store.spousesOf[parentId]||[])
         .filter(sid => !excludeFromSpouseCards.has(sid) && store.people[sid]);
@@ -933,44 +920,88 @@ function drawGenealogy(rootId){
       return currentY;
     }
 
-    // Recursive: draw descendants of parentId vertically starting at startY.
-    // Also inserts spouse card(s) of parentId before the descendants.
-    // Returns Y bottom of last card drawn.
     function drawDescColumn(parentId, cx, startY, genDepth, genIndex, parentBottomY){
       if(genDepth <= 0) return startY;
-
       let currentY = startY;
-
-      // Insert spouse card between parent and children
       currentY = drawSpouseCard(parentId, cx, currentY, parentBottomY);
-
       const kids = getChildren(parentId);
       if(!kids.length) return currentY;
-
       kids.forEach((kid, ki) => {
-        const color = levelColors[genIndex % levelColors.length];
-        vline(cx, ki === 0 ? currentY - gkGapY : currentY - gkGapY, currentY);
-        drawNodeCompact(g, cx - compactW/2, currentY, kid, color);
+        vline(cx, currentY - gkGapY, currentY);
+        drawNodeCompact(g, cx - compactW/2, currentY, kid, levelColors[genIndex % levelColors.length]);
         const kidBottom = currentY + cardH;
         currentY = kidBottom;
-
-        // Recurse for this kid's children and spouse
         currentY = drawDescColumn(kid, cx, currentY + gkGapY, genDepth - 1, genIndex + 1, kidBottom);
       });
       return currentY;
     }
 
-    children.forEach((cid, ci) => {
-      const ccx = childCXs[ci];
+    // ── Group children by family (shared spouse) ──────────────────────────
+    // Each family = rootId paired with one specific spouse.
+    // Children are assigned to the family whose spouse is also their parent.
+    // Families are ordered by spouse birth date; unknowns go last.
+    function buildFamilyGroups(){
+      const orderedSpouses = sortIdsByBorn([...spouseIds]);
+      const familyMap = new Map();
+      orderedSpouses.forEach(sid => familyMap.set(sid, []));
+      familyMap.set("solo", []);
 
-      // Draw child card (generation 1 below root)
-      drawNodeCompact(g, ccx - compactW/2, childY, cid, "child");
-      drawCurve(g, adjChildAnchorCX, rootY + cardH, ccx, childY);
+      children.forEach(cid => {
+        const cParents = store.parentsOf[cid] || [];
+        const matchSpouse = orderedSpouses.find(sid => cParents.includes(sid));
+        if(matchSpouse) familyMap.get(matchSpouse).push(cid);
+        else            familyMap.get("solo").push(cid);
+      });
 
-      // Draw spouse(s) and further descendants below this child
-      if(GEN_DOWN > 1){
-        drawDescColumn(cid, ccx, childY + cardH + gkGapY, GEN_DOWN - 1, 1, childY + cardH);
+      const groups = [];
+      orderedSpouses.forEach(sid => {
+        if(familyMap.get(sid).length > 0)
+          groups.push({ spouseId: sid, kids: familyMap.get(sid) });
+      });
+      if(familyMap.get("solo").length > 0)
+        groups.push({ spouseId: null, kids: familyMap.get("solo") });
+      return groups;
+    }
+
+    const familyGroups  = buildFamilyGroups();
+    const familyGap     = 24;  // extra horizontal gap between different families
+
+    // Total width for all children across all families
+    let totalFamilyW = 0;
+    familyGroups.forEach((fam, fi) => {
+      totalFamilyW += fam.kids.length * childSlotW;
+      if(fi < familyGroups.length - 1) totalFamilyW += familyGap;
+    });
+
+    // Start cursor centred under adjChildAnchorCX
+    let famCursor = adjChildAnchorCX - totalFamilyW / 2;
+
+    familyGroups.forEach((fam, fi) => {
+      // Compute cx for each child in this family
+      const famChildCXs = fam.kids.map(() => {
+        const cx = famCursor + childSlotW / 2;
+        famCursor += childSlotW;
+        return cx;
+      });
+      if(fi < familyGroups.length - 1) famCursor += familyGap;
+
+      // Anchor line comes from midpoint of rootId + this family's spouse
+      let famAnchorCX = adjRootCX;
+      if(fam.spouseId){
+        const spouseIdx = spouseIds.indexOf(fam.spouseId);
+        if(spouseIdx >= 0)
+          famAnchorCX = (adjRootCX + adjSpouseCXs[spouseIdx]) / 2;
       }
+
+      // Draw each child card with line from this family's anchor
+      fam.kids.forEach((cid, ci) => {
+        const ccx = famChildCXs[ci];
+        drawNodeCompact(g, ccx - compactW/2, childY, cid, "child");
+        drawCurve(g, famAnchorCX, rootY + cardH, ccx, childY);
+        if(GEN_DOWN > 1){
+          drawDescColumn(cid, ccx, childY + cardH + gkGapY, GEN_DOWN - 1, 1, childY + cardH);
+        }
+      });
     });
   }
 
