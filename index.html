@@ -973,14 +973,12 @@ function drawGenealogy(rootId){
       if(fi < familyGroups.length - 1) totalFamilyW += familyGap;
     });
 
-    // Centre all families under the midpoint of root+spouses row
+    // Start cursor centred under adjChildAnchorCX
+    // Centre all families under the entire root+spouses row
     const rowMidX = adjSpouseCXs.length > 0
       ? (adjRootCX + adjSpouseCXs[adjSpouseCXs.length-1]) / 2
       : adjRootCX;
     let famCursor = rowMidX - totalFamilyW / 2;
-
-    // Horizontal bar Y — halfway between parent row and child row
-    const hBarY = rootY + cardH + (yGap - cardH) / 2;
 
     familyGroups.forEach((fam, fi) => {
       // Compute cx for each child in this family
@@ -991,9 +989,7 @@ function drawGenealogy(rootId){
       });
       if(fi < familyGroups.length - 1) famCursor += familyGap;
 
-      if(!famChildCXs.length) return;
-
-      // Anchor = midpoint of rootId + this family's spouse
+      // Anchor line comes from midpoint of rootId + this family's spouse
       let famAnchorCX = adjRootCX;
       if(fam.spouseId){
         const spouseIdx = spouseIds.indexOf(fam.spouseId);
@@ -1001,38 +997,15 @@ function drawGenealogy(rootId){
           famAnchorCX = (adjRootCX + adjSpouseCXs[spouseIdx]) / 2;
       }
 
-      // 1. Vertical line from anchor down to hBarY
-      g.append("line")
-        .attr("x1", famAnchorCX).attr("y1", rootY + cardH)
-        .attr("x2", famAnchorCX).attr("y2", hBarY)
-        .attr("stroke","var(--line)").attr("stroke-width",2);
-
-      // 2. Horizontal bar across all children of this family
-      const leftCX  = famChildCXs[0];
-      const rightCX = famChildCXs[famChildCXs.length - 1];
-      if(famChildCXs.length > 1){
-        g.append("line")
-          .attr("x1", leftCX).attr("y1", hBarY)
-          .attr("x2", rightCX).attr("y2", hBarY)
-          .attr("stroke","var(--line)").attr("stroke-width",2);
-      }
-
-      // 3. Draw each child card + vertical drop line from hBarY
+      // Draw each child card with line from this family's anchor
       fam.kids.forEach((cid, ci) => {
         const ccx = famChildCXs[ci];
         drawNodeCompact(g, ccx - compactW/2, childY, cid, "child");
-        // Vertical line from hBarY down to child top
-        g.append("line")
-          .attr("x1", ccx).attr("y1", hBarY)
-          .attr("x2", ccx).attr("y2", childY)
-          .attr("stroke","var(--line)").attr("stroke-width",2);
+        drawCurve(g, famAnchorCX, rootY + cardH, ccx, childY);
         if(GEN_DOWN > 1){
           drawDescColumn(cid, ccx, childY + cardH + gkGapY, GEN_DOWN - 1, 1, childY + cardH);
         }
       });
-
-    });
-
     });
   }
 
