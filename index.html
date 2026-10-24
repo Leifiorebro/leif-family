@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Leifs Släktprogram – Version 7.3</title>
+<title>Leifs Släktprogram – Version 7.4</title>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <style>
 :root{--bg:#f4f7fb;--panel:#fff;--line:#8aa0b8;--text:#1f2937;--muted:#6b7280;--accent:#1d4ed8;--card:#fff;--shadow:0 6px 18px rgba(0,0,0,.08);--border:#d9e2ec;--danger:#b91c1c;--ok:#166534}
@@ -42,7 +42,7 @@ svg{display:block;width:100%;height:100%}.node-card{fill:var(--card);stroke:#cbd
 </head>
 <body>
 <div id="topbar">
-  <span style="font-size:11px;color:#1d4ed8;font-weight:700;padding:4px 8px;background:#dbeafe;border-radius:6px;">v7.3</span>
+  <span style="font-size:11px;color:#1d4ed8;font-weight:700;padding:4px 8px;background:#dbeafe;border-radius:6px;">v7.4</span>
   <button onclick="loadServerJSON()">Ladda slaktdata.json</button>
   <button onclick="exportJSON()" class="btn green">Exportera JSON</button>
   <div class="search-wrap">
@@ -1001,29 +1001,32 @@ function drawGenealogy(rootId){
           famAnchorCX = (adjRootCX + adjSpouseCXs[spouseIdx]) / 2;
       }
 
-      // T-bar connector:
-      // - Vertical line from famAnchorCX (between root and spouse) down to hBarY
-      // - Elbow line from famAnchorCX to midpoint of children bar at hBarY
-      // - Horizontal bar across all children at hBarY
+      // T-bar connector per family:
+      // 1. Vertical from famAnchorCX down to hBarY
+      // 2. Horizontal elbow — CLAMPED to this family's bar [leftCX..rightCX]
+      //    so it never reaches into another family's children
+      // 3. Horizontal bar across this family's children
       const leftCX   = famChildCXs[0];
       const rightCX  = famChildCXs[famChildCXs.length - 1];
-      const barMidCX = (leftCX + rightCX) / 2;
 
-      // Vertical from parent anchor down to hBarY
+      // Clamp anchor to bar range so elbow stays within this family
+      const clampedAnchorCX = Math.max(leftCX, Math.min(rightCX, famAnchorCX));
+
+      // 1. Vertical from famAnchorCX down to hBarY
       g.append("line")
         .attr("x1", famAnchorCX).attr("y1", rootY + cardH)
         .attr("x2", famAnchorCX).attr("y2", hBarY)
         .attr("stroke","var(--line)").attr("stroke-width",2);
 
-      // Horizontal elbow from anchor to bar midpoint (only if they differ)
-      if(Math.abs(famAnchorCX - barMidCX) > 2){
+      // 2. Horizontal elbow from famAnchorCX to clampedAnchorCX (stays within bar)
+      if(Math.abs(famAnchorCX - clampedAnchorCX) > 2){
         g.append("line")
           .attr("x1", famAnchorCX).attr("y1", hBarY)
-          .attr("x2", barMidCX).attr("y2", hBarY)
+          .attr("x2", clampedAnchorCX).attr("y2", hBarY)
           .attr("stroke","var(--line)").attr("stroke-width",2);
       }
 
-      // Horizontal bar from leftmost to rightmost child
+      // 3. Horizontal bar from leftmost to rightmost child
       if(famChildCXs.length > 1){
         g.append("line")
           .attr("x1", leftCX).attr("y1", hBarY)
