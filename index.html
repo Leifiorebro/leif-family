@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Leifs Släktprogram – Version 7.8</title>
+<title>Leifs Släktprogram – Version 7.9</title>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <style>
 :root{--bg:#f4f7fb;--panel:#fff;--line:#8aa0b8;--text:#1f2937;--muted:#6b7280;--accent:#1d4ed8;--card:#fff;--shadow:0 6px 18px rgba(0,0,0,.08);--border:#d9e2ec;--danger:#b91c1c;--ok:#166534}
@@ -42,7 +42,7 @@ svg{display:block;width:100%;height:100%}.node-card{fill:var(--card);stroke:#cbd
 </head>
 <body>
 <div id="topbar">
-  <span style="font-size:11px;color:#1d4ed8;font-weight:700;padding:4px 8px;background:#dbeafe;border-radius:6px;">v7.8</span>
+  <span style="font-size:11px;color:#1d4ed8;font-weight:700;padding:4px 8px;background:#dbeafe;border-radius:6px;">v7.9</span>
   <button onclick="loadServerJSON()">Ladda slaktdata.json</button>
   <button onclick="exportJSON()" class="btn green">Exportera JSON</button>
   <div class="search-wrap">
@@ -883,44 +883,30 @@ function drawGenealogy(rootId){
   // ── Draw descendants ──
   if(descRows.length > 0){
     const children = descRows[0];
-    const childY   = rootY + yGap;
-    const hBarY    = rootY + cardH + Math.round((yGap - cardH) * 0.45);
+    // spouseY: spouse cards sit between root row and children row
+    const hasSpouses = spouseIds.length > 0;
+    const spouseY  = hasSpouses ? rootY + Math.round(yGap * 0.35) : rootY;
+    const childY   = rootY + yGap + (hasSpouses ? Math.round(yGap * 0.35) : 0);
+    const hBarY    = childY - Math.round((childY - (spouseY + cardH)) * 0.5);
     const levelColors = ["child","grandchild","child","grandchild"];
 
-    // ── Helpers ──
-    function sline(x1,y1,x2,y2){
-      g.append("line").attr("x1",x1).attr("y1",y1).attr("x2",x2).attr("y2",y2)
-       .attr("stroke","var(--line)").attr("stroke-width",2);
-    }
-    function vln(cx,y1,y2){ if(y2>y1) sline(cx,y1,cx,y2); }
-    function hln(x1,x2,y){ if(Math.abs(x1-x2)>1) sline(Math.min(x1,x2),y,Math.max(x1,x2),y); }
+    function vln(cx,y1,y2){ if(y2>y1) g.append("line").attr("x1",cx).attr("y1",y1).attr("x2",cx).attr("y2",y2).attr("stroke","var(--line)").attr("stroke-width",2); }
+    function hln(x1,x2,y){ const a=Math.min(x1,x2),b=Math.max(x1,x2); if(b-a>1) g.append("line").attr("x1",a).attr("y1",y).attr("x2",b).attr("y2",y).attr("stroke","var(--line)").attr("stroke-width",2); }
 
-    // Exclude root and root's spouses from appearing as spouse cards under children
     const excludeSpCards = new Set([rootId,...uniq(store.spousesOf[rootId]||[])]);
 
-    function drawSpCard(parentId,cx,curY,prevBot){
-      const sp=uniq(store.spousesOf[parentId]||[]).filter(s=>!excludeSpCards.has(s)&&store.people[s]);
+    function drawSpCard(pid,cx,curY,prevBot){
+      const sp=uniq(store.spousesOf[pid]||[]).filter(s=>!excludeSpCards.has(s)&&store.people[s]);
       if(!sp.length) return curY;
-      sp.forEach(sid=>{
-        vln(cx,prevBot,curY);
-        drawNodeCompact(g,cx-compactW/2,curY,sid,"spouse");
-        prevBot=curY+cardH; curY=prevBot+gkGapY;
-      });
+      sp.forEach(sid=>{ vln(cx,prevBot,curY); drawNodeCompact(g,cx-compactW/2,curY,sid,"spouse"); prevBot=curY+cardH; curY=prevBot+gkGapY; });
       return curY;
     }
 
     function drawCol(pid,cx,startY,depth,gi,prevBot){
       if(depth<=0) return startY;
-      let y=startY;
-      y=drawSpCard(pid,cx,y,prevBot);
-      const kids=getChildren(pid);
-      if(!kids.length) return y;
-      kids.forEach(kid=>{
-        vln(cx,y-gkGapY,y);
-        drawNodeCompact(g,cx-compactW/2,y,kid,levelColors[gi%levelColors.length]);
-        const bot=y+cardH; y=bot;
-        y=drawCol(kid,cx,y+gkGapY,depth-1,gi+1,bot);
-      });
+      let y=startY; y=drawSpCard(pid,cx,y,prevBot);
+      const kids=getChildren(pid); if(!kids.length) return y;
+      kids.forEach(kid=>{ vln(cx,y-gkGapY,y); drawNodeCompact(g,cx-compactW/2,y,kid,levelColors[gi%levelColors.length]); const bot=y+cardH; y=bot; y=drawCol(kid,cx,y+gkGapY,depth-1,gi+1,bot); });
       return y;
     }
 
@@ -932,73 +918,64 @@ function drawGenealogy(rootId){
     children.forEach(cid=>{
       const cp=store.parentsOf[cid]||[];
       const m=orderedSpouses.find(s=>cp.includes(s));
-      if(m) famMap.get(m).push(cid);
-      else  famMap.get("solo").push(cid);
+      if(m) famMap.get(m).push(cid); else famMap.get("solo").push(cid);
     });
     const families=[];
     orderedSpouses.forEach(s=>{ if(famMap.get(s).length) families.push({sid:s,kids:famMap.get(s)}); });
     if(famMap.get("solo").length) families.push({sid:null,kids:famMap.get("solo")});
 
-    const FGAP = 40; // gap between families
+    const FGAP = 40;
 
     // ── Compute child positions ──
-    // Total width of all families combined
     let totalW=families.reduce((s,f,fi)=>s+f.kids.length*childSlotW+(fi<families.length-1?FGAP:0),0);
-    let cur = adjRootCX - totalW/2;
-
+    let cur=adjRootCX - totalW/2;
     families.forEach(fam=>{
       fam.childCXs=fam.kids.map(()=>{ const cx=cur+childSlotW/2; cur+=childSlotW; return cx; });
-      cur+=FGAP; // will be overcounted for last family but doesn't matter
-      fam.leftCX  = fam.childCXs[0];
-      fam.rightCX = fam.childCXs[fam.childCXs.length-1];
-      fam.midCX   = (fam.leftCX+fam.rightCX)/2;
+      cur+=FGAP;
+      fam.leftCX =fam.childCXs[0];
+      fam.rightCX=fam.childCXs[fam.childCXs.length-1];
+      fam.midCX  =(fam.leftCX+fam.rightCX)/2;
     });
 
-    // ── Draw spouse cards at FAMILY midpoint (not next to root) ──
-    // Each spouse is drawn at rootY, centred above their own children.
-    // Root is already drawn above. We draw each spouse separately at its midCX.
+    // ── Draw each spouse on spouseY, centred above its children ──
+    // Connect root (on rootY) down to spouse with a vertical line,
+    // then spouse down to children bar.
     families.forEach(fam=>{
       if(!fam.sid) return;
       const scx = fam.midCX;
-      // Draw spouse card centred at scx
-      drawNode(g, scx - cardW/2, rootY, fam.sid);
-      // Connect root to this spouse with an angled line at mid-card height
-      const connY = rootY + cardH * 0.6;
-      // Horizontal line between root right edge and spouse left edge (or vice versa)
-      const rootRight  = adjRootCX + cardW/2;
-      const spouseLeft = scx - cardW/2;
-      const spouseRight= scx + cardW/2;
-      if(spouseLeft > rootRight + 4)
-        hln(rootRight, spouseLeft, connY);
-      else if(spouseRight < adjRootCX - cardW/2 - 4)
-        hln(spouseRight, adjRootCX - cardW/2, connY);
+      // Spouse card on spouseY row
+      drawNode(g, scx - cardW/2, spouseY, fam.sid);
+      // Vertical line from root bottom to spouse top
+      vln(adjRootCX, rootY+cardH, spouseY);
+      // If spouse is not directly below root, add horizontal connector
+      hln(adjRootCX, scx, spouseY + cardH*0.5);
     });
 
     // ── Draw T-bars and children per family ──
     families.forEach(fam=>{
       if(!fam.childCXs.length) return;
       const {childCXs,leftCX,rightCX,midCX,sid,kids}=fam;
+      const topCX = sid ? fam.midCX : adjRootCX;
 
-      // Vertical drop from family midpoint up to root area
-      const spouseCardMid = sid ? fam.midCX : adjRootCX;
-      vln(spouseCardMid, rootY+cardH, hBarY);
+      // Vertical from spouse (or root) bottom down to hBarY
+      const fromY = sid ? spouseY+cardH : rootY+cardH;
+      vln(topCX, fromY, hBarY);
 
-      // If only one child, no horizontal bar needed
+      // Horizontal bar across children
       if(childCXs.length>1) hln(leftCX, rightCX, hBarY);
+      // Connect topCX to midCX of bar if needed
+      hln(topCX, midCX, hBarY);
 
-      // Connect bar midpoint to spouseCardMid if they differ
-      hln(spouseCardMid, midCX, hBarY);
-
-      // Draw each child
       kids.forEach((cid,ci)=>{
         const ccx=childCXs[ci];
-        drawNodeCompact(g, ccx-compactW/2, childY, cid, "child");
-        vln(ccx, hBarY, childY);
+        drawNodeCompact(g,ccx-compactW/2,childY,cid,"child");
+        vln(ccx,hBarY,childY);
         if(GEN_DOWN>1) drawCol(cid,ccx,childY+cardH+gkGapY,GEN_DOWN-1,1,childY+cardH);
       });
     });
   }
 
+  // ── Auto-fit ──
   // ── Auto-fit ──
 
   const bounds = g.node().getBBox();
