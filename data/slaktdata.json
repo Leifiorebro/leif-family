@@ -28791,6 +28791,36 @@
       "photo": "",
       "photoId": "",
       "history": "Gunvor Elisabet Karoline Jacobsson\n\nFödd 1948-06-21 Ljusne\n\nNoteringar\nSveriges befolkning 1950 (ArkivDigital) AID: r1.p2470283"
+    },
+    "p_evhcfa5i": {
+      "id": "p_evhcfa5i",
+      "name": "Anders Gustaf Larsson",
+      "gender": "M",
+      "role": "",
+      "born": "1839-06-05",
+      "bornParish": "Bro",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_mdjl6fcd": {
+      "id": "p_mdjl6fcd",
+      "name": "Charlotta Westberg",
+      "gender": "F",
+      "role": "",
+      "born": "1845-09-30",
+      "bornParish": "Grava, Värmland",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Charlotta Westberg\n\nFödd 1845-09-30 Grava, Värmland\nKälla: Sverige, födelseuppgifter för personer som avled mellan 1901 och 2006\nCitat: Födelsedatum:  30 Sep 1845 Födelseort:  Grava, Värmland, Sverige\n\nNoteringar\nNamn: Lotta Olofsdotter\nKön: Female (Kvinna)\nFödelsedatum: 30 sep 1845\nDopdatum: 1 okt 1845\nDoport: Grava Socken, Varmland, Sweden\nFader: Olof Westberg\nModer: \nFHL-Filmnummer: 81880\nReferens-ID: 2:1L6W6XF"
     }
   },
   "parentsOf": {
@@ -32570,6 +32600,10 @@
     "p_d3buzfxc": [
       "p_kbncmt17",
       "p_1r9wmqyg"
+    ],
+    "p_t616yaqp": [
+      "p_evhcfa5i",
+      "p_mdjl6fcd"
     ]
   },
   "childrenOf": {
@@ -36350,6 +36384,12 @@
     ],
     "p_1r9wmqyg": [
       "p_d3buzfxc"
+    ],
+    "p_evhcfa5i": [
+      "p_t616yaqp"
+    ],
+    "p_mdjl6fcd": [
+      "p_t616yaqp"
     ]
   },
   "spousesOf": {
@@ -39808,6 +39848,12 @@
     ],
     "p_kbncmt17": [
       "p_1r9wmqyg"
+    ],
+    "p_evhcfa5i": [
+      "p_mdjl6fcd"
+    ],
+    "p_mdjl6fcd": [
+      "p_evhcfa5i"
     ]
   }
 }
