@@ -28821,6 +28821,51 @@
       "photo": "",
       "photoId": "",
       "history": "Charlotta Westberg\n\nFödd 1845-09-30 Grava, Värmland\nKälla: Sverige, födelseuppgifter för personer som avled mellan 1901 och 2006\nCitat: Födelsedatum:  30 Sep 1845 Födelseort:  Grava, Värmland, Sverige\n\nNoteringar\nNamn: Lotta Olofsdotter\nKön: Female (Kvinna)\nFödelsedatum: 30 sep 1845\nDopdatum: 1 okt 1845\nDoport: Grava Socken, Varmland, Sweden\nFader: Olof Westberg\nModer: \nFHL-Filmnummer: 81880\nReferens-ID: 2:1L6W6XF"
+    },
+    "p_qxpwzs7r": {
+      "id": "p_qxpwzs7r",
+      "name": "Lars Skalman Blom",
+      "gender": "M",
+      "role": "",
+      "born": "1838-04-09",
+      "bornParish": "Norrljusne, Söderala",
+      "died": "",
+      "diedParish": "",
+      "job": "Båtsman",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Lars Skalman Blom\n\nBåtsman\n\nFödd 1838-04-09 Norrljusne, Söderala förs,\n\nGift med Margta Ersdotter 1870-09-18 \n\nNoteringar\nNORRLJUSNE: LARS Född 9 april 1838. Döpt 13 april.\n\nFader: Sockenskräddaren Lars Skalman. Moder: Hustrun Anna Nilsdotter (38).\n\nFaddrar: Bonden Jon Jonsson och hustrun Margta Olofsdotter i Siggesta. Kronobåtsman Per Siggstedt och hustrun Margta Persdotter i Askesta. Bonden Lars Nilsson i Håf och Båtsmansdottern Kerstin Carlsdotter i Hå.\n\n\nv136752.b176.s172\nv136753.b173.s169\n\nSöderala kyrkoarkiv, Husförhörslängder, SE/HLA/1010201/A I/15 b (1836-1845), bildid: C0032130_00133, sida 120\nhttps://sok.riksarkivet.se/bildvisning/C0032130_00133\n\nSöderala kyrkoarkiv, Husförhörslängder, SE/HLA/1010201/A I/16 b (1846-1850), bildid: C0032132_00144, sida 131\nhttps://sok.riksarkivet.se/bildvisning/C0032132_00144\n\nSöderala kyrkoarkiv, Husförhörslängder, SE/HLA/1010201/A I/17 b (1851-1855), bildid: C0032134_00171, sida 156\nhttps://sok.riksarkivet.se/bildvisning/C0032134_00171"
+    },
+    "p_nbzvq3va": {
+      "id": "p_nbzvq3va",
+      "name": "Margta Ersdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1844-05-21",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_xap3kc6k": {
+      "id": "p_xap3kc6k",
+      "name": "Anna Nilsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1799-12-24",
+      "bornParish": "",
+      "died": "1877-02-13",
+      "diedParish": "Norrljusne, Söderala",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Anna Nilsdotter\n\nFödd 1799-12-24 \n\nGift med Lars Skalman 1834-06-26 \n\nDöd 1877-02-13 Norr Ljusne\nKälla: v136753.b172.s168\n\nNoteringar\nv136746.b162.s158\nv136748.b168.s162\nv136750.b168.s163\nv136752.b175.s171\nv136753.b172.s168\n\nSöderala kyrkoarkiv, Husförhörslängder, SE/HLA/1010201/A I/14 b (1831-1836), bildid: C0032128_00118, sida 102\nhttps://sok.riksarkivet.se/bildvisning/C0032128_00118\n\nSöderala kyrkoarkiv, Husförhörslängder, SE/HLA/1010201/A I/16 b (1846-1850), bildid: C0032132_00144, sida 131\nhttps://sok.riksarkivet.se/bildvisning/C0032132_00144\n\nSöderala (X) AI:21b (1871-1875) Bild 175 / sid 171 (AID: v136752.b175.s171, NAD: SE/HLA/1010201)\nSöderala (X) AI:18b (1856-1860) Bild 162 / sid 158 (AID: v136746.b162.s158, NAD: SE/HLA/1010201)\n\nSöderala kyrkoarkiv, Husförhörslängder, SE/HLA/1010201/A I/17 b (1851-1855), bildid: C0032134_00171, sida 156\nhttps://sok.riksarkivet.se/bildvisning/C0032134_00171\n\nSöderala kyrkoarkiv, Husförhörslängder, SE/HLA/1010201/A I/15 b (1836-1845), bildid: C0032130_00133, sida 120\nhttps://sok.riksarkivet.se/bildvisning/C0032130_00133"
     }
   },
   "parentsOf": {
@@ -28829,12 +28874,12 @@
       "p_zobmj6wp8"
     ],
     "p_3uj910se8": [
-      "p_bbclq6f9g",
-      "p_3rw58lslc"
+      "p_3rw58lslc",
+      "p_bbclq6f9g"
     ],
     "p_3w3d8mg0r": [
-      "p_e2d8rcv1d",
-      "p_p1t2kmcat"
+      "p_p1t2kmcat",
+      "p_e2d8rcv1d"
     ],
     "p_607tk2v1i": [
       "p_fceooch",
@@ -28861,8 +28906,8 @@
       "p_apnevfd1e"
     ],
     "p_anref8x": [
-      "p_q1486bk",
-      "p_a9c12mk"
+      "p_a9c12mk",
+      "p_q1486bk"
     ],
     "p_bbclq6f9g": [
       "p_r6gu9qm8a",
@@ -28878,12 +28923,12 @@
       "p_ymb6wc3q0"
     ],
     "p_c2jyk4pds": [
-      "p_9vhcxd8",
-      "p_mc6jemk"
+      "p_mc6jemk",
+      "p_9vhcxd8"
     ],
     "p_czyydy2g7": [
-      "p_9vhcxd8",
-      "p_mc6jemk"
+      "p_mc6jemk",
+      "p_9vhcxd8"
     ],
     "p_ep1684kzs": [
       "p_n2oxqssdd",
@@ -28894,8 +28939,8 @@
       "p_epbrpkbpc"
     ],
     "p_ir25hn919": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_p1t2kmcat": [
       "p_6c6wnb9",
@@ -28922,12 +28967,12 @@
       "p_ymb6wc3q0"
     ],
     "p_t22zhc497": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_vomcn89yz": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_zobmj6wp8": [
       "p_6c6wnb9",
@@ -28978,12 +29023,12 @@
       "p_apnevfd1e"
     ],
     "p_ir4u61dqa": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_jqtxmllar": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_apnevfd1e": [
       "p_l0tiqibe0",
@@ -29006,12 +29051,12 @@
       "p_apnevfd1e"
     ],
     "p_z4rxd74pc": [
-      "p_zmfl39a5r",
-      "p_0dj5jnxhr"
+      "p_0dj5jnxhr",
+      "p_zmfl39a5r"
     ],
     "p_zcl5kw4oh": [
-      "p_e2d8rcv1d",
-      "p_p1t2kmcat"
+      "p_p1t2kmcat",
+      "p_e2d8rcv1d"
     ],
     "p_lx16wimrx": [
       "p_izcueyhnf",
@@ -29025,8 +29070,8 @@
       "p_sh6rs3ypi"
     ],
     "p_4cjwtla35": [
-      "p_n4z6lfc2f",
-      "p_yhg9e9i5y"
+      "p_yhg9e9i5y",
+      "p_n4z6lfc2f"
     ],
     "p_37jcbtegu": [
       "p_n2oxqssdd",
@@ -32604,6 +32649,14 @@
     "p_t616yaqp": [
       "p_evhcfa5i",
       "p_mdjl6fcd"
+    ],
+    "p_a4eu56pz": [
+      "p_qxpwzs7r",
+      "p_nbzvq3va"
+    ],
+    "p_qxpwzs7r": [
+      "p_756duqri",
+      "p_xap3kc6k"
     ]
   },
   "childrenOf": {
@@ -32615,18 +32668,18 @@
       "p_3qowa85hd",
       "p_8mchqpopa"
     ],
-    "p_3rw58lslc": [
-      "p_3uj910se8"
-    ],
     "p_bbclq6f9g": [
       "p_3uj910se8",
       "p_4yyrm3723"
     ],
-    "p_p1t2kmcat": [
+    "p_3rw58lslc": [
+      "p_3uj910se8"
+    ],
+    "p_e2d8rcv1d": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
-    "p_e2d8rcv1d": [
+    "p_p1t2kmcat": [
       "p_3w3d8mg0r",
       "p_zcl5kw4oh"
     ],
@@ -32674,10 +32727,10 @@
       "p_yhg9e9i5y",
       "p_tdvl922cf"
     ],
-    "p_a9c12mk": [
+    "p_q1486bk": [
       "p_anref8x"
     ],
-    "p_q1486bk": [
+    "p_a9c12mk": [
       "p_anref8x"
     ],
     "p_k9dqg17ug": [
@@ -32720,11 +32773,11 @@
       "p_trylh546h",
       "p_vit2oe3no"
     ],
-    "p_mc6jemk": [
+    "p_9vhcxd8": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
-    "p_9vhcxd8": [
+    "p_mc6jemk": [
       "p_c2jyk4pds",
       "p_czyydy2g7"
     ],
@@ -32750,13 +32803,13 @@
       "p_cyl275xx",
       "p_907ij0i8"
     ],
-    "p_yhg9e9i5y": [
+    "p_n4z6lfc2f": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
       "p_4cjwtla35"
     ],
-    "p_n4z6lfc2f": [
+    "p_yhg9e9i5y": [
       "p_ir25hn919",
       "p_ir4u61dqa",
       "p_jqtxmllar",
@@ -32776,12 +32829,12 @@
       "p_zobmj6wp8",
       "p_0dj5jnxhr"
     ],
-    "p_0dj5jnxhr": [
+    "p_zmfl39a5r": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
     ],
-    "p_zmfl39a5r": [
+    "p_0dj5jnxhr": [
       "p_t22zhc497",
       "p_vomcn89yz",
       "p_z4rxd74pc"
@@ -33614,7 +33667,8 @@
       "p_xo6tjyis"
     ],
     "p_756duqri": [
-      "p_okz02khy"
+      "p_okz02khy",
+      "p_qxpwzs7r"
     ],
     "p_p8haqbrs": [
       "p_okz02khy"
@@ -36390,6 +36444,15 @@
     ],
     "p_mdjl6fcd": [
       "p_t616yaqp"
+    ],
+    "p_qxpwzs7r": [
+      "p_a4eu56pz"
+    ],
+    "p_nbzvq3va": [
+      "p_a4eu56pz"
+    ],
+    "p_xap3kc6k": [
+      "p_qxpwzs7r"
     ]
   },
   "spousesOf": {
@@ -37235,7 +37298,8 @@
       "p_ogpuqa60"
     ],
     "p_756duqri": [
-      "p_p8haqbrs"
+      "p_p8haqbrs",
+      "p_xap3kc6k"
     ],
     "p_p8haqbrs": [
       "p_756duqri"
@@ -39854,6 +39918,15 @@
     ],
     "p_mdjl6fcd": [
       "p_evhcfa5i"
+    ],
+    "p_qxpwzs7r": [
+      "p_nbzvq3va"
+    ],
+    "p_nbzvq3va": [
+      "p_qxpwzs7r"
+    ],
+    "p_xap3kc6k": [
+      "p_756duqri"
     ]
   }
 }
