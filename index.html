@@ -878,7 +878,33 @@ function drawGenealogy(rootId){
 
   // Spouses are drawn after family layout (inside the Draw descendants block)
   // so their X positions align with their children groups.
+  // ── Draw spouses (always, even if no children) ──────────────────────
+  // Spouses are placed to the right of root at fixed slotW intervals.
+  // When there are children, positions may be overridden by family layout.
+  // We store positions in adjSpouseCXs for use in ancestor layout.
   const adjSpouseCXs = spouseIds.map((_,i) => adjRootCX + (i+1)*slotW);
+
+  // Draw spouses now at default positions — desc block may redraw at better pos
+  // using a white rect to "erase" and redraw, but SVG has no erase.
+  // Solution: draw spouses here only if NO children. If children exist,
+  // desc block handles spouse drawing at family-centred positions.
+  const hasDescendants = (store.childrenOf[rootId]||[]).length > 0 ||
+    Object.keys(store.parentsOf).some(pid => (store.parentsOf[pid]||[]).includes(rootId) &&
+      store.people[pid]);
+  if(!hasDescendants){
+    spouseIds.forEach((sid,i)=>{
+      const scx = adjSpouseCXs[i];
+      drawNode(g, scx - cardW/2, rootY, sid);
+      // Marriage line below cards
+      const lineY = rootY + cardH + 6;
+      hln2(adjRootCX, scx, lineY);
+      vln2(adjRootCX, rootY+cardH, lineY);
+      vln2(scx, rootY+cardH, lineY);
+    });
+  }
+
+  function vln2(cx,y1,y2){ if(y2>y1) g.append("line").attr("x1",cx).attr("y1",y1).attr("x2",cx).attr("y2",y2).attr("stroke","var(--line)").attr("stroke-width",2); }
+  function hln2(x1,x2,y){ const a=Math.min(x1,x2),b=Math.max(x1,x2); if(b-a>1) g.append("line").attr("x1",a).attr("y1",y).attr("x2",b).attr("y2",y).attr("stroke","var(--line)").attr("stroke-width",2); }
 
   // ── Draw descendants ──
   // Simple proven layout:
