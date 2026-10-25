@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Leifs Släktprogram – Version 8.4</title>
+<title>Leifs Släktprogram – Version 8.5</title>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <style>
 :root{--bg:#f4f7fb;--panel:#fff;--line:#8aa0b8;--text:#1f2937;--muted:#6b7280;--accent:#1d4ed8;--card:#fff;--shadow:0 6px 18px rgba(0,0,0,.08);--border:#d9e2ec;--danger:#b91c1c;--ok:#166534}
@@ -42,7 +42,7 @@ svg{display:block;width:100%;height:100%}.node-card{fill:var(--card);stroke:#cbd
 </head>
 <body>
 <div id="topbar">
-  <span style="font-size:11px;color:#1d4ed8;font-weight:700;padding:4px 8px;background:#dbeafe;border-radius:6px;">v8.4</span>
+  <span style="font-size:11px;color:#1d4ed8;font-weight:700;padding:4px 8px;background:#dbeafe;border-radius:6px;">v8.5</span>
   <button onclick="loadServerJSON()">Ladda slaktdata.json</button>
   <button onclick="exportJSON()" class="btn green">Exportera JSON</button>
   <div class="search-wrap">
@@ -991,17 +991,26 @@ function drawGenealogy(rootId){
       item.fam.spouseCX = item.actualCX;
     });
 
-    // Draw each spouse card and marriage line
+    // Draw each spouse card and marriage line BELOW cards (at rootY + cardH)
+    // Drawing the line at any Y inside the card range would pierce cards.
     families.forEach(fam=>{
       if(!fam.sid || !fam.spouseCX) return;
       const scx = fam.spouseCX;
       drawNode(g, scx - cardW/2, rootY, fam.sid);
-      // Marriage line from root right edge to spouse left edge
-      const connY = rootY + cardH * 0.6;
-      const lineX1 = adjRootCX + cardW/2;
-      const lineX2 = scx - cardW/2;
-      if(lineX2 > lineX1 + 2) hln(lineX1, lineX2, connY);
     });
+    // Draw ONE continuous marriage line below ALL cards on root row
+    // from root card bottom-left to rightmost spouse bottom-right
+    if(spouseDesired.length > 0){
+      const rightmostSpouseCX = spouseDesired[spouseDesired.length-1].actualCX;
+      const lineY = rootY + cardH + 6;  // just below all cards
+      hln(adjRootCX, rightmostSpouseCX, lineY);
+      // Small tick up to each spouse card bottom
+      spouseDesired.forEach(item=>{
+        vln(item.actualCX, lineY - 6, lineY);
+      });
+      // Tick up to root card bottom
+      vln(adjRootCX, rootY + cardH, lineY);
+    }
 
     // ── Draw T-bars and children ─────────────────────────────────────────
     // Each family's vertical drop line starts from the BOTTOM of the spouse card
