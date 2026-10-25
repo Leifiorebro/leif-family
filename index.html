@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Leifs Släktprogram – Version 8.2</title>
+<title>Leifs Släktprogram – Version 8.3</title>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <style>
 :root{--bg:#f4f7fb;--panel:#fff;--line:#8aa0b8;--text:#1f2937;--muted:#6b7280;--accent:#1d4ed8;--card:#fff;--shadow:0 6px 18px rgba(0,0,0,.08);--border:#d9e2ec;--danger:#b91c1c;--ok:#166534}
@@ -42,7 +42,7 @@ svg{display:block;width:100%;height:100%}.node-card{fill:var(--card);stroke:#cbd
 </head>
 <body>
 <div id="topbar">
-  <span style="font-size:11px;color:#1d4ed8;font-weight:700;padding:4px 8px;background:#dbeafe;border-radius:6px;">v8.2</span>
+  <span style="font-size:11px;color:#1d4ed8;font-weight:700;padding:4px 8px;background:#dbeafe;border-radius:6px;">v8.3</span>
   <button onclick="loadServerJSON()">Ladda slaktdata.json</button>
   <button onclick="exportJSON()" class="btn green">Exportera JSON</button>
   <div class="search-wrap">
@@ -1004,21 +1004,44 @@ function drawGenealogy(rootId){
     });
 
     // ── Draw T-bars and children ─────────────────────────────────────────
+    // Drop point for each family = right edge of its spouse card (or root right edge
+    // for solo families). This ensures lines never pass through spouse cards.
     families.forEach(fam=>{
       const {childCXs,leftCX,rightCX,midCX,sid,kids} = fam;
       if(!childCXs.length) return;
 
-      // Couple midpoint between root centre and spouse centre (actual drawn positions)
-      const spCX = fam.spouseCX || adjRootCX;
-      const coupleMidCX = sid ? (adjRootCX + spCX) / 2 : adjRootCX;
+      // Drop point: use the RIGHT edge of the rightmost card in this couple.
+      // For a family with a spouse, the spouse is to the right of root,
+      // so drop from spouse card's right edge → stays clear of all cards.
+      // For a solo family (no spouse) drop from root centre.
+      let dropCX;
+      if(sid && fam.spouseCX){
+        // Drop from midpoint between root-centre and spouse-centre,
+        // but never left of spouse left edge (would pass through card)
+        const rawMid = (adjRootCX + fam.spouseCX) / 2;
+        // Clamp: must be between root right edge and spouse right edge
+        dropCX = Math.max(adjRootCX + cardW/2, Math.min(fam.spouseCX + cardW/2, rawMid));
+        // Actually simplest: use midpoint between root right and spouse left
+        const rootRight  = adjRootCX + cardW/2;
+        const spouseLeft = fam.spouseCX - cardW/2;
+        if(spouseLeft > rootRight + 4){
+          // Gap exists between root and spouse — drop from midpoint of gap
+          dropCX = (rootRight + spouseLeft) / 2;
+        } else {
+          // No gap — drop from right edge of spouse
+          dropCX = fam.spouseCX + cardW/2;
+        }
+      } else {
+        dropCX = adjRootCX;
+      }
 
-      // Clamp to children bar range
-      const clampedCX = Math.max(leftCX, Math.min(rightCX, coupleMidCX));
+      // Clamp dropCX to children bar range so elbow doesn't bleed outside
+      const barDropCX = Math.max(leftCX, Math.min(rightCX, dropCX));
 
-      // Vertical from couple midpoint down to hBarY
-      vln(coupleMidCX, rootY + cardH, hBarY);
-      // Horizontal elbow from coupleMidCX to clampedCX (stays in bar range)
-      hln(coupleMidCX, clampedCX, hBarY);
+      // Vertical from dropCX down to hBarY
+      vln(dropCX, rootY + cardH, hBarY);
+      // Horizontal elbow from dropCX to barDropCX at hBarY
+      hln(dropCX, barDropCX, hBarY);
       // Horizontal bar across all children
       if(childCXs.length > 1) hln(leftCX, rightCX, hBarY);
 
