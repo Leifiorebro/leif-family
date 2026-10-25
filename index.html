@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Leifs Släktprogram – Version 8.1</title>
+<title>Leifs Släktprogram – Version 8.2</title>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <style>
 :root{--bg:#f4f7fb;--panel:#fff;--line:#8aa0b8;--text:#1f2937;--muted:#6b7280;--accent:#1d4ed8;--card:#fff;--shadow:0 6px 18px rgba(0,0,0,.08);--border:#d9e2ec;--danger:#b91c1c;--ok:#166534}
@@ -42,7 +42,7 @@ svg{display:block;width:100%;height:100%}.node-card{fill:var(--card);stroke:#cbd
 </head>
 <body>
 <div id="topbar">
-  <span style="font-size:11px;color:#1d4ed8;font-weight:700;padding:4px 8px;background:#dbeafe;border-radius:6px;">v8.1</span>
+  <span style="font-size:11px;color:#1d4ed8;font-weight:700;padding:4px 8px;background:#dbeafe;border-radius:6px;">v8.2</span>
   <button onclick="loadServerJSON()">Ladda slaktdata.json</button>
   <button onclick="exportJSON()" class="btn green">Exportera JSON</button>
   <div class="search-wrap">
@@ -966,28 +966,41 @@ function drawGenealogy(rootId){
       fam.midCX   = (fam.leftCX + fam.rightCX) / 2;
     });
 
-    // ── Place each spouse at midCX of its children, on rootY ─────────────
-    // Draw spouse card. Connect root to spouse with horizontal line.
-    // Spouse is to right of root if midCX > adjRootCX, else left.
+    // ── Place each spouse on rootY, centred above its children ─────────────
+    // Spouses are always to the RIGHT of root (index 0 = closest right, etc.)
+    // We position each spouse at its children midCX, but ensure no two spouse
+    // cards overlap each other or the root card.
+
+    // Collect desired positions
+    const spouseDesired = families
+      .filter(f=>f.sid)
+      .map(f=>({ fam:f, desiredCX: f.midCX }));
+
+    // Sort left-to-right by desired position
+    spouseDesired.sort((a,b)=>a.desiredCX - b.desiredCX);
+
+    // Enforce minimum spacing: each card must be at least cardW+10 from previous
+    // and all must be to the right of root
+    const minGap = cardW + 10;
+    let minAllowed = adjRootCX + cardW/2 + cardW/2 + 10; // right of root card
+
+    spouseDesired.forEach(item=>{
+      // Place at desired position, but at least minAllowed
+      item.actualCX = Math.max(item.desiredCX, minAllowed);
+      minAllowed = item.actualCX + minGap;
+      item.fam.spouseCX = item.actualCX;
+    });
+
+    // Draw each spouse card and marriage line
     families.forEach(fam=>{
-      if(!fam.sid) return;
-      const scx = fam.midCX;
-      // Only draw if spouse doesn't overlap root card
-      if(Math.abs(scx - adjRootCX) > cardW/2 + 10){
-        drawNode(g, scx - cardW/2, rootY, fam.sid);
-        // Horizontal marriage line at 60% card height
-        const connY = rootY + cardH * 0.6;
-        hln(Math.min(adjRootCX, scx) + cardW/2,
-            Math.max(adjRootCX, scx) - cardW/2, connY);
-      } else {
-        // Too close — draw spouse directly next to root
-        const offset = adjRootCX + (scx > adjRootCX ? 1 : -1) * (cardW + 10);
-        drawNode(g, offset - cardW/2, rootY, fam.sid);
-        hln(Math.min(adjRootCX, offset)+cardW/2,
-            Math.max(adjRootCX, offset)-cardW/2, rootY + cardH*0.6);
-        fam.spouseCX = offset;  // remember adjusted position
-      }
-      fam.spouseCX = fam.spouseCX || scx;
+      if(!fam.sid || !fam.spouseCX) return;
+      const scx = fam.spouseCX;
+      drawNode(g, scx - cardW/2, rootY, fam.sid);
+      // Marriage line from root right edge to spouse left edge
+      const connY = rootY + cardH * 0.6;
+      const lineX1 = adjRootCX + cardW/2;
+      const lineX2 = scx - cardW/2;
+      if(lineX2 > lineX1 + 2) hln(lineX1, lineX2, connY);
     });
 
     // ── Draw T-bars and children ─────────────────────────────────────────
@@ -995,11 +1008,9 @@ function drawGenealogy(rootId){
       const {childCXs,leftCX,rightCX,midCX,sid,kids} = fam;
       if(!childCXs.length) return;
 
-      // Couple midpoint on rootY (between root and spouse, or just root)
-      const spCX = fam.spouseCX || (sid ? fam.midCX : adjRootCX);
-      const coupleMidCX = sid
-        ? (adjRootCX + spCX) / 2
-        : adjRootCX;
+      // Couple midpoint between root centre and spouse centre (actual drawn positions)
+      const spCX = fam.spouseCX || adjRootCX;
+      const coupleMidCX = sid ? (adjRootCX + spCX) / 2 : adjRootCX;
 
       // Clamp to children bar range
       const clampedCX = Math.max(leftCX, Math.min(rightCX, coupleMidCX));
