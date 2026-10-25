@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Leifs Släktprogram – Version 8.0</title>
+<title>Leifs Släktprogram – Version 7.5</title>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <style>
 :root{--bg:#f4f7fb;--panel:#fff;--line:#8aa0b8;--text:#1f2937;--muted:#6b7280;--accent:#1d4ed8;--card:#fff;--shadow:0 6px 18px rgba(0,0,0,.08);--border:#d9e2ec;--danger:#b91c1c;--ok:#166534}
@@ -42,7 +42,7 @@ svg{display:block;width:100%;height:100%}.node-card{fill:var(--card);stroke:#cbd
 </head>
 <body>
 <div id="topbar">
-  <span style="font-size:11px;color:#1d4ed8;font-weight:700;padding:4px 8px;background:#dbeafe;border-radius:6px;">v8.0</span>
+  <span style="font-size:11px;color:#1d4ed8;font-weight:700;padding:4px 8px;background:#dbeafe;border-radius:6px;">v7.5</span>
   <button onclick="loadServerJSON()">Ladda slaktdata.json</button>
   <button onclick="exportJSON()" class="btn green">Exportera JSON</button>
   <div class="search-wrap">
@@ -876,143 +876,172 @@ function drawGenealogy(rootId){
   const adjRootCX = rowCXs[0][0];
   drawNode(g, adjRootCX - cardW/2, rootY, rootId);
 
-  // Spouses are drawn after family layout (inside the Draw descendants block)
-  // so their X positions align with their children groups.
-  const adjSpouseCXs = spouseIds.map((_,i) => adjRootCX + (i+1)*slotW);
+  // Draw spouses
+  const adjSpouseCXs = spouseIds.map((_, i) => adjRootCX + (i + 1) * slotW);
+  spouseIds.forEach((sid, i) => {
+    const scx = adjSpouseCXs[i];
+    drawNode(g, scx - cardW/2, rootY, sid);
+    const prevCX = i === 0 ? adjRootCX : adjSpouseCXs[i-1];
+    drawCurve(g, prevCX, rootY + cardH/2, scx, rootY + cardH/2, true);
+  });
 
   // ── Draw descendants ──
-  // Layout per family:
-  //
-  //   rootY:    [Root Person]
-  //             (no spouses on this row)
-  //
-  //   famY:     [Root copy/line] [Spouse1]    gap    [Root copy/line] [Spouse2]
-  //              (one couple row per family, each centred above its children)
-  //
-  //   childY:   [child1][child2][child3]   gap  [child4][child5]
-  //
-  // Root is drawn once at rootY. Spouse is drawn at famY.
-  // A vertical line connects root to each family's couple midpoint.
-
   if(descRows.length > 0){
-    const children  = descRows[0];
-    const FGAP      = 50;   // horizontal gap between different families
-    const famYgap   = Math.round(yGap * 0.55);  // extra rows for family row
-    const famY      = rootY + famYgap;
-    const childY    = famY  + yGap;
-    const hBarY     = famY  + cardH + Math.round((childY - famY - cardH) * 0.5);
+    const children = descRows[0];
+    const childY   = rootY + yGap;
+    const lastSpouseCX = spouseCXs.length > 0 ? spouseCXs[spouseCXs.length-1] : null;
+    const childAnchorCX = lastSpouseCX ? (rootCX + lastSpouseCX)/2 : rootCX;
+
+    // Spread children horizontally centred under root (drift-adjusted)
+    const adjChildAnchorCX = adjRootCX; // per-family anchor set in buildFamilyGroups
     const levelColors = ["child","grandchild","child","grandchild"];
 
-    function vln(cx,y1,y2){ if(y2>y1) g.append("line").attr("x1",cx).attr("y1",y1).attr("x2",cx).attr("y2",y2).attr("stroke","var(--line)").attr("stroke-width",2); }
-    function hln(x1,x2,y){ const a=Math.min(x1,x2),b=Math.max(x1,x2); if(b-a>1) g.append("line").attr("x1",a).attr("y1",y).attr("x2",b).attr("y2",y).attr("stroke","var(--line)").attr("stroke-width",2); }
-
-    const excludeSpCards = new Set([rootId,...uniq(store.spousesOf[rootId]||[])]);
-
-    function drawSpCard(pid,cx,curY,prevBot){
-      const sp=uniq(store.spousesOf[pid]||[]).filter(s=>!excludeSpCards.has(s)&&store.people[s]);
-      if(!sp.length) return curY;
-      sp.forEach(sid=>{ vln(cx,prevBot,curY); drawNodeCompact(g,cx-compactW/2,curY,sid,"spouse"); prevBot=curY+cardH; curY=prevBot+gkGapY; });
-      return curY;
+    function vline(cx, y1, y2){
+      if(y2 <= y1) return;
+      g.append("line")
+        .attr("x1",cx).attr("y1",y1)
+        .attr("x2",cx).attr("y2",y2)
+        .attr("stroke","var(--line)").attr("stroke-width",2);
     }
 
-    function drawCol(pid,cx,startY,depth,gi,prevBot){
-      if(depth<=0) return startY;
-      let y=startY; y=drawSpCard(pid,cx,y,prevBot);
-      const kids=getChildren(pid); if(!kids.length) return y;
-      kids.forEach(kid=>{
-        vln(cx,y-gkGapY,y);
-        drawNodeCompact(g,cx-compactW/2,y,kid,levelColors[gi%levelColors.length]);
-        const bot=y+cardH; y=bot;
-        y=drawCol(kid,cx,y+gkGapY,depth-1,gi+1,bot);
+    // Exclude rootId and rootId's spouses from appearing as spouse cards in columns
+    const excludeFromSpouseCards = new Set([rootId, ...uniq(store.spousesOf[rootId]||[])]);
+
+    function drawSpouseCard(parentId, cx, currentY, prevBottomY){
+      const spouses = uniq(store.spousesOf[parentId]||[])
+        .filter(sid => !excludeFromSpouseCards.has(sid) && store.people[sid]);
+      if(!spouses.length) return currentY;
+      spouses.forEach(sid => {
+        vline(cx, prevBottomY, currentY);
+        drawNodeCompact(g, cx - compactW/2, currentY, sid, "spouse");
+        prevBottomY = currentY + cardH;
+        currentY   = prevBottomY + gkGapY;
       });
-      return y;
+      return currentY;
     }
 
-    // ── Build family groups ──────────────────────────────────────────────
-    const orderedSpouses = sortIdsByBorn([...spouseIds]);
-    const famMap = new Map();
-    orderedSpouses.forEach(s=>famMap.set(s,[]));
-    famMap.set("solo",[]);
-    children.forEach(cid=>{
-      const cp=store.parentsOf[cid]||[];
-      const m=orderedSpouses.find(s=>cp.includes(s));
-      if(m) famMap.get(m).push(cid); else famMap.get("solo").push(cid);
+    function drawDescColumn(parentId, cx, startY, genDepth, genIndex, parentBottomY){
+      if(genDepth <= 0) return startY;
+      let currentY = startY;
+      currentY = drawSpouseCard(parentId, cx, currentY, parentBottomY);
+      const kids = getChildren(parentId);
+      if(!kids.length) return currentY;
+      kids.forEach((kid, ki) => {
+        vline(cx, currentY - gkGapY, currentY);
+        drawNodeCompact(g, cx - compactW/2, currentY, kid, levelColors[genIndex % levelColors.length]);
+        const kidBottom = currentY + cardH;
+        currentY = kidBottom;
+        currentY = drawDescColumn(kid, cx, currentY + gkGapY, genDepth - 1, genIndex + 1, kidBottom);
+      });
+      return currentY;
+    }
+
+    // ── Group children by family (shared spouse) ──────────────────────────
+    // Each family = rootId paired with one specific spouse.
+    // Children are assigned to the family whose spouse is also their parent.
+    // Families are ordered by spouse birth date; unknowns go last.
+    function buildFamilyGroups(){
+      const orderedSpouses = sortIdsByBorn([...spouseIds]);
+      const familyMap = new Map();
+      orderedSpouses.forEach(sid => familyMap.set(sid, []));
+      familyMap.set("solo", []);
+
+      children.forEach(cid => {
+        const cParents = store.parentsOf[cid] || [];
+        const matchSpouse = orderedSpouses.find(sid => cParents.includes(sid));
+        if(matchSpouse) familyMap.get(matchSpouse).push(cid);
+        else            familyMap.get("solo").push(cid);
+      });
+
+      const groups = [];
+      orderedSpouses.forEach(sid => {
+        if(familyMap.get(sid).length > 0)
+          groups.push({ spouseId: sid, kids: familyMap.get(sid) });
+      });
+      if(familyMap.get("solo").length > 0)
+        groups.push({ spouseId: null, kids: familyMap.get("solo") });
+      return groups;
+    }
+
+    const familyGroups  = buildFamilyGroups();
+    const familyGap     = 24;  // extra horizontal gap between different families
+
+    // Total width for all children across all families
+    let totalFamilyW = 0;
+    familyGroups.forEach((fam, fi) => {
+      totalFamilyW += fam.kids.length * childSlotW;
+      if(fi < familyGroups.length - 1) totalFamilyW += familyGap;
     });
-    const families=[];
-    orderedSpouses.forEach(s=>{ if(famMap.get(s).length) families.push({sid:s,kids:famMap.get(s)}); });
-    if(famMap.get("solo").length) families.push({sid:null,kids:famMap.get("solo")});
 
-    // ── Compute child CX positions ───────────────────────────────────────
-    // Each family gets: kids * childSlotW wide, plus FGAP between families
-    let totalChildW = families.reduce((s,f,fi)=>
-      s + f.kids.length*childSlotW + (fi<families.length-1 ? FGAP : 0), 0);
+    // Centre all families under the midpoint of root+spouses row
+    const rowMidX = adjSpouseCXs.length > 0
+      ? (adjRootCX + adjSpouseCXs[adjSpouseCXs.length-1]) / 2
+      : adjRootCX;
+    let famCursor = rowMidX - totalFamilyW / 2;
 
-    let cur = adjRootCX - totalChildW/2;
-    families.forEach(fam=>{
-      fam.childCXs = fam.kids.map(()=>{ const cx=cur+childSlotW/2; cur+=childSlotW; return cx; });
-      cur += FGAP;
-      fam.leftCX  = fam.childCXs[0];
-      fam.rightCX = fam.childCXs[fam.childCXs.length-1];
-      fam.midCX   = (fam.leftCX+fam.rightCX)/2;
-    });
+    // Horizontal bar Y — halfway between parent row and child row
+    const hBarY = rootY + cardH + (yGap - cardH) / 2;
 
-    // ── Draw family rows and children ────────────────────────────────────
-    families.forEach(fam=>{
-      const {childCXs,leftCX,rightCX,midCX,sid,kids} = fam;
+    familyGroups.forEach((fam, fi) => {
+      // Compute cx for each child in this family
+      const famChildCXs = fam.kids.map(() => {
+        const cx = famCursor + childSlotW / 2;
+        famCursor += childSlotW;
+        return cx;
+      });
+      if(fi < familyGroups.length - 1) famCursor += familyGap;
 
-      // Family couple centre: midpoint of root-card and spouse-card at famY
-      // Root copy: we draw a small vertical line from root down to famY level
-      // Spouse card: draw at famY, centred on midCX (or offset for root+spouse pair)
+      if(!famChildCXs.length) return;
 
-      if(sid){
-        // Place root and spouse side by side centred on midCX
-        // rootCard at famY left, spouse card to right
-        const pairW   = cardW * 2 + 10;          // two full cards + 10px gap
-        const rootFamX = midCX - pairW/2;         // left card (root copy indicator)
-        const spFamX   = midCX - pairW/2 + cardW + 10; // right card (spouse)
-        const rootFamCX = rootFamX + cardW/2;
-        const spFamCX   = spFamX  + cardW/2;
-        const coupleMidCX = (rootFamCX + spFamCX) / 2;
-
-        // Draw spouse card
-        drawNode(g, spFamX, famY, sid);
-        // Draw root indicator (compact card) on left
-        drawNodeCompact(g, rootFamX, famY, rootId, "child");
-
-        // Connect main root (rootY) down to this family's root indicator
-        vln(adjRootCX, rootY+cardH, famY);
-        hln(adjRootCX, rootFamCX, famY + cardH*0.6);
-
-        // Horizontal couple-line between root indicator and spouse
-        hln(rootFamCX + cardW/2 - cardW/2, spFamCX - cardW/2, famY + cardH*0.6);
-
-        // Vertical from couple midpoint down to hBarY
-        vln(coupleMidCX, famY+cardH, hBarY);
-        // Horizontal connector to bar mid if needed
-        hln(coupleMidCX, midCX, hBarY);
-
-      } else {
-        // No spouse — just connect root directly to children
-        vln(adjRootCX, rootY+cardH, hBarY);
-        hln(adjRootCX, midCX, hBarY);
+      // Anchor = midpoint of rootId + this family's spouse
+      let famAnchorCX = adjRootCX;
+      if(fam.spouseId){
+        const spouseIdx = spouseIds.indexOf(fam.spouseId);
+        if(spouseIdx >= 0)
+          famAnchorCX = (adjRootCX + adjSpouseCXs[spouseIdx]) / 2;
       }
 
-      // Horizontal bar across children
-      if(childCXs.length>1) hln(leftCX, rightCX, hBarY);
+      // T-bar connector:
+      // Draw from midpoint of THIS family's children bar straight up to root+cardH.
+      // Never use famAnchorCX for the line endpoint — it can fall outside the bar range.
+      const leftCX   = famChildCXs[0];
+      const rightCX  = famChildCXs[famChildCXs.length - 1];
+      const barMidCX = (leftCX + rightCX) / 2;
 
-      // Draw each child
-      kids.forEach((cid,ci)=>{
-        const ccx=childCXs[ci];
-        drawNodeCompact(g, ccx-compactW/2, childY, cid, "child");
-        vln(ccx, hBarY, childY);
-        if(GEN_DOWN>1) drawCol(cid,ccx,childY+cardH+gkGapY,GEN_DOWN-1,1,childY+cardH);
+      // Vertical line from bar midpoint straight up to parent row
+      g.append("line")
+        .attr("x1", barMidCX).attr("y1", rootY + cardH)
+        .attr("x2", barMidCX).attr("y2", hBarY)
+        .attr("stroke","var(--line)").attr("stroke-width",2);
+
+      // Horizontal bar across all children in this family
+      if(famChildCXs.length > 1){
+        g.append("line")
+          .attr("x1", leftCX).attr("y1", hBarY)
+          .attr("x2", rightCX).attr("y2", hBarY)
+          .attr("stroke","var(--line)").attr("stroke-width",2);
+      }
+
+
+      // 3. Draw each child card + vertical drop line from hBarY
+      fam.kids.forEach((cid, ci) => {
+        const ccx = famChildCXs[ci];
+        drawNodeCompact(g, ccx - compactW/2, childY, cid, "child");
+        // Vertical line from hBarY down to child top
+        g.append("line")
+          .attr("x1", ccx).attr("y1", hBarY)
+          .attr("x2", ccx).attr("y2", childY)
+          .attr("stroke","var(--line)").attr("stroke-width",2);
+        if(GEN_DOWN > 1){
+          drawDescColumn(cid, ccx, childY + cardH + gkGapY, GEN_DOWN - 1, 1, childY + cardH);
+        }
       });
+
     });
+
   }
 
   // ── Auto-fit ──
-  // ── Auto-fit ──
-
   const bounds = g.node().getBBox();
   if(bounds.width > 0 && bounds.height > 0){
     const scale = Math.min(0.92, Math.min(W/(bounds.width+60), H/(bounds.height+60)));
