@@ -28134,7 +28134,8 @@
           "src": "images/Elfrida Asker_1.jpg",
           "caption": "Flickorna Asker var döttrar till landbonden Anders och Marit i Norrljusne."
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_gihm3w7k": {
       "id": "p_gihm3w7k",
@@ -28341,8 +28342,12 @@
       "photo": "",
       "photoId": "",
       "history": "",
-      "photos": [],
-      "photoCaptions": {}
+      "photos": [
+        {
+          "src": "images/p_2p27fg0f.jpg",
+          "caption": "Bilden föreställer\nAnders Asker\nHan kom från Värmland till Ljusne.\n\nAnders Asker född 1842 i Sunne Värmland död 1903\nHustrun Marit född Marit Jonsdotter i Fryksand Värmland född 1843 död 1929\nÖvriga upplysningar\n\nAnders var landbonde i Norrljusne nr 4. Där byggdes senare Askers villaområde.\n\nDeras barn:\nCharlotta Christina f. 1872 d. 1917\nElfrida Karolina f. 1875 d. 1913\nHelga Cecilia f. 1878 d .1962\nHulda Maria f. 21/1 1882 d. 1920\nJohan Alexis f. 1885 d. 1936"
+        }
+      ]
     },
     "p_bclc3fmq": {
       "id": "p_bclc3fmq",
