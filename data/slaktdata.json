@@ -29031,6 +29031,51 @@
       "photo": "",
       "photoId": "",
       "history": "Erik\n\nFödd 1734-01-10 Kinsta, Söderala\nSöderala kyrkoarkiv, Födelse- och dopböcker, SE/HLA/1010201/C/1 (1695-1743), bildid: C0032165_00106, sida 164\nhttps://sok.riksarkivet.se/bildvisning/C0032165_00106\n\nNoteringar\nSöderala kyrkoarkiv, Födelse- och dopböcker, SE/HLA/1010201/C/1 (1695-1743), bildid: C0032165_00106, sida 164\nhttps://sok.riksarkivet.se/bildvisning/C0032165_00106\n\n\nSöderala kyrkoarkiv, Husförhörslängder, SE/HLA/1010201/A I/2 (1747-1757), bildid: C0032105_00047, sida 34\nhttps://sok.riksarkivet.se/bildvisning/C0032105_00047"
+    },
+    "p_dibgsdt2": {
+      "id": "p_dibgsdt2",
+      "name": "Brita Nilsdotter",
+      "gender": "F",
+      "role": "",
+      "born": "1821-09-20",
+      "bornParish": "Nås, Dalarna",
+      "died": "1849-09-09",
+      "diedParish": "Gustavsströms bruk, Gåsborn",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Brita Nilsdotter\n\nFödd 1821-09-20 Nås, Dalarna\n\nGift med Carl Johan Geschwind 1846-04-12 Säfsnäs\n\nDöd 1849-09-09 Gustafströms bruk, Gåsborns församling\n\nBosatt (1810 - 1836) Nås, Kopparberg, Sweden\nKälla: Sverige, kyrkböcker, 1500-1937\nCitat: Bosatt den:  1810 - 1836 Bostadsort:  Nås, Kopparberg, Sweden\n\nNoteringar\nSäfsnäs AI:11 (1845-1854) Bild 1650 / sid 160 (AID: v132046a.b1650.s160, NAD: SE/ULA/11506)"
+    },
+    "p_u2iyntqp": {
+      "id": "p_u2iyntqp",
+      "name": "Carl Johan Geschwind",
+      "gender": "M",
+      "role": "",
+      "born": "1846-06-23",
+      "bornParish": "Fredriksberg, Säfsnäs",
+      "died": "1869-11-29",
+      "diedParish": "Rämmen, Värmland",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Carl Johan Geschwind\n\nFödd 1846-06-23 Fredriksberg, Säfsnäs\n\nDöpt 1846-06-23 Säfsnäs\n\nDöd 1869-11-29 Rämmen (S)\n\nNoteringar\nFrån Gåsborn tillRämmen 1864-10-14\n\nSäfsnäs AI:11 (1845-1854) Bild 1650 / sid 160 (AID: v132046a.b1650.s160, NAD: SE/ULA/11506)"
+    },
+    "p_1rfmfv0z": {
+      "id": "p_1rfmfv0z",
+      "name": "Anna Catarina Geschwind",
+      "gender": "F",
+      "role": "",
+      "born": "1848-05-29",
+      "bornParish": "Gustavsström, Gåsborn",
+      "died": "1933-09-02",
+      "diedParish": "Älvsjöhyttan, Gåsborn",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Anna Catarina Geschwind\n\nFödd 1848-05-29 Gustavsström, Gåsborn\n\nGift med Henrik Svensson 1865-12-23 \n\nDöd 1933-09-02 Älvsjöhyttan, Gåsborn (S)\n\nNoteringar\nPost 3422062\nGeschvind, Anna Katarina\nf. 1848 i Gåsborn (Värmlands län, Värmland)\nh.\nGift kvinna, mor i familjen\nLöfåsen\nGåsborn (Värmlands län, Värmland)\nFödelseort i källan: Gåsborns\n\nSäfsnäs AI:15 (1855-1864) Bild 101 / sid 94 (AID: v132050.b101.s94, NAD: SE/ULA/11506)\nSäfsnäs AI:15 (1855-1864) Bild 96 / sid 89 (AID: v132050.b96.s89, NAD: SE/ULA/11506)\nSäfsnäs AI:17 (1865-1874) Bild 295 / sid 285 (AID: v132052.b295.s285, NAD: SE/ULA/11506)\nSäfsnäs AI:17 (1865-1874) Bild 328 / sid 318 (AID: v132052.b328.s318, NAD: SE/ULA/11506)\nSäfsnäs (W) AI:19 (1875-1884) Bild 49 / sid 278 (AID: v132054.b49.s278, NAD: SE/ULA/11506)"
     }
   },
   "parentsOf": {
@@ -32858,6 +32903,14 @@
     "p_6r1gygbn": [
       "p_nazivpjt",
       "p_mdz7i545"
+    ],
+    "p_u2iyntqp": [
+      "p_k7ppxbyh9",
+      "p_dibgsdt2"
+    ],
+    "p_1rfmfv0z": [
+      "p_k7ppxbyh9",
+      "p_dibgsdt2"
     ]
   },
   "childrenOf": {
@@ -33202,7 +33255,9 @@
       "p_164qnsv4",
       "p_vt288hxg",
       "p_njsfz349",
-      "p_9yepedwn4"
+      "p_9yepedwn4",
+      "p_u2iyntqp",
+      "p_1rfmfv0z"
     ],
     "p_30hacm6sw": [
       "p_ymb6wc3q0",
@@ -36676,6 +36731,10 @@
     "p_p0jgb3yx": [
       "p_q28x4nce",
       "p_3pjbgala"
+    ],
+    "p_dibgsdt2": [
+      "p_u2iyntqp",
+      "p_1rfmfv0z"
     ]
   },
   "spousesOf": {
@@ -36871,7 +36930,8 @@
       "p_11s7733na"
     ],
     "p_k7ppxbyh9": [
-      "p_30hacm6sw"
+      "p_30hacm6sw",
+      "p_dibgsdt2"
     ],
     "p_k9dqg17ug": [
       "p_9smqgh317"
@@ -40158,6 +40218,9 @@
     ],
     "p_p0jgb3yx": [
       "p_p9giaf1e"
+    ],
+    "p_dibgsdt2": [
+      "p_k7ppxbyh9"
     ]
   }
 }
