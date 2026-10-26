@@ -28223,8 +28223,24 @@
       "photo": "",
       "photoId": "",
       "history": "HELGA Kristina Blomqvist\n\nFödd 1901-01-18 Ljusne\n\nGift med Jonas ALBIN Sjöberg 1924-06-07 \n\nDöd 1979-04-18 Ljusne\nDöd 18/4 1979.\n\nNoteringar\nHelga Kristina född 1901 död 1979 (gift med Albin Sjöberg från Sörljusne, byggde ett egnahem i byn)\n\n______________________\n\n19010118-7722\n\nSjöberg, Helga Kristina\n\nAlav 6\n820 20  Ljusne\n\nDöd 18/4 1979.\n\nKyrkobokförd (1972) i Ljusne, Söderhamns kn (Gävleborgs län, Hälsingland). Mantalsskriven (1972) på samma ort.\n\nFödd 18/1 1901 i Ljusne (Gävleborgs län, Hälsingland).\n\nÄnka (12/5 1947).\n--------------\nFödelseförsamling i källan:\nLjusne (Gävleborgs län)\n\nKällor:\nRTB 79 / SPAR 80",
-      "photos": [],
-      "photoCaptions": {}
+      "photos": [
+        {
+          "src": "images/p_i17oikj0.jpg",
+          "caption": "Bilden föreställer Helga Blomquist tagen i samband med konfirmation.\n\nHelga föddes i Norrljusne 1901, dotter till Abram och Elfrida Blomquist, arrendatorer i Sörljusne, dit familjen flyttat 1911 el. 12.\n\nHelga gifte sig med Albin Sjöberg också från Sörljusne."
+        },
+        {
+          "src": "images/Helga Blomqvist (2).jpg",
+          "caption": "Nedre raden\n1. Signe Melin \n2. Helga Blomquist (g. Sjöberg)\n3. Anna Melin (f. Blomqvist, Norrljusne)\nÖvre raden:\n1. Erik Nyström\n2. Johan Melin"
+        },
+        {
+          "src": "images/Helga Blomqvist (3).jpg",
+          "caption": "Helga Blomquist och Anna Melin, de tycks ha gått till samma sömmerska och fått sig en varsin likadan klänning.\n\nBägge flickorna är uppväxta i Sörljusne.\nHelga dotter till Abram och Frida Blomquist\nAnna Melin är dotter till Fredrik och Maria Melin\n\nHelga född 1901\nAnna född 1901\nÖvriga upplysningar\n\nDet är inte helt säkert att det är Anna Melin, men hon och Helga var jämngamla, så sannolikheten är väl störst att det är hon av systrarna Melin."
+        },
+        {
+          "src": "images/Helga Blomqvist_5.jpg",
+          "caption": "Erik Nyström har samlat några grannar med deras släkt för fotografering. Endera i Sörljusne eller i grannbyn Norrljusne på andra sida älven där flera av personerna bodde.\nNedre raden\n1. okänd\n2. Albin Sjöberg\n3. Johan Melin (barnet heter Evald Fahlberg)\n4. Manne Melin\n\nÖvre raden\n1. Gunnar Blom(?)\n2. Signe Melin\n3. Olga Blomqvist\n4. Stina Fahlberg (med dottern Olga i famnen)\n5. Anna Melin\n6. Helga Blomquist (g. Sjöberg) f 1901\n\nAnna Melin född Blomqvist 1898, var syster till Olga (född 1903). Deras föräldrar var Jonas Blomqvist och Anna-Margareta f. Dahlberg. De bodde i ”Skräddars” på Norrljusne.\nOlga var lärarinna i Hassela, men dog vid 25 års ålder.\nSigne, Stina, Johan och Manne var syskon, barn till Fredrik Melin i Sörljusne.\nBarnen Olga född 1918 och Evald, född 1916 var barn till Stina och Lars Fahlberg, familjen bodde i Norrljusne.\nAnna och Johan Melin var arrendatorer på PerJans-gården, Norrljusne.\nGunnar Blom född 1911, bodde i Norrljusne.\n\nBirgit Larsson tror att den okända personen kan var Johan Melins dräng, Kalle."
+        }
+      ]
     },
     "p_808y7uj8": {
       "id": "p_808y7uj8",
@@ -28492,7 +28508,8 @@
           "src": "images/John Alexis.jpg",
           "caption": "Som ung hade han ett ben som måste amputeras"
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_tchi61p3": {
       "id": "p_tchi61p3",
