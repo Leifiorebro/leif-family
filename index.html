@@ -975,7 +975,8 @@ function drawGenealogy(rootId){
     });
     const families=[];
     orderedSpouses.forEach(s=>{
-      if(famMap.get(s).length) families.push({sid:s, kids:famMap.get(s)});
+      // Always include spouse even with 0 children — so they are always drawn
+      families.push({sid:s, kids:famMap.get(s)||[]});
     });
     if(famMap.get("solo").length) families.push({sid:null, kids:famMap.get("solo")});
 
@@ -984,12 +985,21 @@ function drawGenealogy(rootId){
       s + f.kids.length*childSlotW + (fi<families.length-1 ? FGAP : 0), 0);
 
     let cur = adjRootCX - totalChildW/2;
+    // Track spouse index for positioning childless spouses
+    let spouseIdx = 0;
     families.forEach(fam=>{
-      fam.childCXs = fam.kids.map(()=>{ const cx=cur+childSlotW/2; cur+=childSlotW; return cx; });
-      cur += FGAP;
-      fam.leftCX  = fam.childCXs[0];
-      fam.rightCX = fam.childCXs[fam.childCXs.length-1];
-      fam.midCX   = (fam.leftCX + fam.rightCX) / 2;
+      if(fam.kids.length > 0){
+        fam.childCXs = fam.kids.map(()=>{ const cx=cur+childSlotW/2; cur+=childSlotW; return cx; });
+        cur += FGAP;
+        fam.leftCX  = fam.childCXs[0];
+        fam.rightCX = fam.childCXs[fam.childCXs.length-1];
+        fam.midCX   = (fam.leftCX + fam.rightCX) / 2;
+      } else {
+        // No children — position spouse to the right of root or last spouse
+        fam.childCXs = [];
+        fam.midCX = null; // will be assigned by minAllowed logic below
+      }
+      if(fam.sid) spouseIdx++;
     });
 
     // ── Place each spouse on rootY, centred above its children ─────────────
@@ -997,7 +1007,7 @@ function drawGenealogy(rootId){
     // We position each spouse at its children midCX, but ensure no two spouse
     // cards overlap each other or the root card.
 
-    // Collect desired positions
+    // Collect desired positions — childless spouses get null midCX (handled below)
     const spouseDesired = families
       .filter(f=>f.sid)
       .map(f=>({ fam:f, desiredCX: f.midCX }));
@@ -1011,8 +1021,9 @@ function drawGenealogy(rootId){
     let minAllowed = adjRootCX + cardW/2 + cardW/2 + 10; // right of root card
 
     spouseDesired.forEach(item=>{
-      // Place at desired position, but at least minAllowed
-      item.actualCX = Math.max(item.desiredCX, minAllowed);
+      // Childless spouses have null desiredCX — place them at minAllowed
+      const desired = item.desiredCX !== null ? item.desiredCX : minAllowed;
+      item.actualCX = Math.max(desired, minAllowed);
       minAllowed = item.actualCX + minGap;
       item.fam.spouseCX = item.actualCX;
     });
