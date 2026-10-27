@@ -29473,6 +29473,21 @@
       "photo": "",
       "photoId": "",
       "history": "Margareta Johansson\n\nFödd 1913 Kristinehamn\n\nGift med Axel Melin 1934-07-07 \n\nDöd 1984-02-23 Hög, Hudiksvalls kommun\n\nNoteringar\nGreta (Margareta) f. Johansson 1913 i Kristinehamn, gift Melin 7/7 1934\nBarnen:\nSonja f. 1934 g. Ummer"
+    },
+    "p_2m1qf5q5": {
+      "id": "p_2m1qf5q5",
+      "name": "Sofia Kristina Mellin",
+      "gender": "F",
+      "role": "",
+      "born": "1896-10-08",
+      "bornParish": "Ljusne",
+      "died": "1971-02-15",
+      "diedParish": "Ljusne",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Sofia (Kri)STINA Melin\n\nFödd 1896-10-08 Ljusne\n\nGift med Lars August Fahlberg 1916-12-16 \n\nDöd 1971-02-15 Ljusne\n\nNoteringar\n\nJONAS LARSSON SÖDERBERG LANDBONDE 1866 - ? (till höger i bakgrunden)\nJonas, som bara råkade komma med på bilden, står på trappen till det hus där han varit landbonde från 1866, (hemmanet nr 11), hur länge han jobbade med jordbruket vet vi inte, men ingen tog över efter honom. Tack vare en tillfällighet, att han råkade stå på bron när Erik fotade, har vi fått en liten glimt av Jonas.\n\nJonas var född 1840\nHustru Ingrid Jonsdotter, född 1834, död 1913\n\nBARN\nLars Söderberg född 1864 var landbonde i nr 14, en period\nHustru Kristina Westling (från nr 14 i Sörljusne)\n(Lars är far till Gerda Skoglund)\nFlyttade till USA 1912\n\n___________________\n\n18961008-7760\n\nFahlberg, Sofia Kristina\n\nNorrljusne 2087\n820 20 Ljusne\n(Boendeadress 1 nov 1970)\n\nDöd 15/2 1971.\n\nKyrkobokförd i Ljusne, Söderhamns kn (Gävleborgs län, Hälsingland). Mantalsskriven på samma ort.\n\nFödd 8/10 1896 i Ljusne (Gävleborgs län, Hälsingland).\n\nÄnka (28/3 1961).\n--------------\nFödelseförsamling i källan:\nLjusne (Gävleborgs län)\n\nKällor:\nMTL 71 / RTB 71 / RTBd 71 / UTD 71d\n\n\nKristina Söderberg född 1862\nGift med\nNils Gustaf Eriksson född 1860\nHan har varit kolare och de har bott i Sunnäs och Storberget\n\nJonas gifte om sig med Karin Norgren 1915\nKarin Norgren (född 1874) var dotter till Nils och Karin Norgren, torpare i Lynäs.\nJonas dog enligt husförhör 21/3 1927\nKarin flyttade till Bergvik 2/12 1929\n\nSofia Kristina (Stina) född 8/10 1896 gift med Lars Fahlberg bodde i Norrljusne, död 15/2 1971"
     }
   },
   "parentsOf": {
@@ -33320,6 +33335,10 @@
     "p_t6x97dy1": [
       "p_brn078r2",
       "p_cucoyqkt"
+    ],
+    "p_2m1qf5q5": [
+      "p_brn078r2",
+      "p_cucoyqkt"
     ]
   },
   "childrenOf": {
@@ -37148,12 +37167,14 @@
     "p_brn078r2": [
       "p_sr9shdmc",
       "p_uf3kmms1",
-      "p_t6x97dy1"
+      "p_t6x97dy1",
+      "p_2m1qf5q5"
     ],
     "p_cucoyqkt": [
       "p_sr9shdmc",
       "p_uf3kmms1",
-      "p_t6x97dy1"
+      "p_t6x97dy1",
+      "p_2m1qf5q5"
     ]
   },
   "spousesOf": {
@@ -38740,7 +38761,9 @@
     "p_n7qqkaaq": [
       "p_c97fzvzo"
     ],
-    "p_8fhetoux": [],
+    "p_8fhetoux": [
+      "p_2m1qf5q5"
+    ],
     "p_h4rzmlya": [
       "p_l81v31o1"
     ],
@@ -40694,6 +40717,9 @@
     ],
     "p_o974ktpd": [
       "p_t6x97dy1"
+    ],
+    "p_2m1qf5q5": [
+      "p_8fhetoux"
     ]
   }
 }
