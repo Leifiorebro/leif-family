@@ -29443,6 +29443,36 @@
       "photo": "",
       "photoId": "",
       "history": "MARIA Kristina Svensson\n\nFödd 1874-04-13 Söderala\n\nGift med Johan FREDRIK Mellin 1892-08-28 \n\nDöd 1936-05-08 Sörljusne\n död 8/5 1936"
+    },
+    "p_t6x97dy1": {
+      "id": "p_t6x97dy1",
+      "name": "Axel Mellin",
+      "gender": "M",
+      "role": "",
+      "born": "1894-06-03",
+      "bornParish": "Söderala",
+      "died": "1963-11-09",
+      "diedParish": "Sörljusne",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Axel Melin\n\nFödd 1894-06-03 \n\nGift med Margareta Johansson 1934-07-07 \n\nDöd 1963-11-09 \n\nNoteringar\nAxel född 3/6 1894 var en period dräng i Söderala, blev senare arrendator på samma gård som fadern varit i Sörljusne. Död 9/11 1963."
+    },
+    "p_o974ktpd": {
+      "id": "p_o974ktpd",
+      "name": "Margareta Johansson",
+      "gender": "F",
+      "role": "",
+      "born": "1913",
+      "bornParish": "Kristinehamn",
+      "died": "1984-02-23",
+      "diedParish": "Hög, Hudiksvalls kn.",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "Margareta Johansson\n\nFödd 1913 Kristinehamn\n\nGift med Axel Melin 1934-07-07 \n\nDöd 1984-02-23 Hög, Hudiksvalls kommun\n\nNoteringar\nGreta (Margareta) f. Johansson 1913 i Kristinehamn, gift Melin 7/7 1934\nBarnen:\nSonja f. 1934 g. Ummer"
     }
   },
   "parentsOf": {
@@ -33282,6 +33312,14 @@
     "p_sr9shdmc": [
       "p_brn078r2",
       "p_cucoyqkt"
+    ],
+    "p_uf3kmms1": [
+      "p_brn078r2",
+      "p_cucoyqkt"
+    ],
+    "p_t6x97dy1": [
+      "p_brn078r2",
+      "p_cucoyqkt"
     ]
   },
   "childrenOf": {
@@ -37108,10 +37146,14 @@
       "p_1rfmfv0z"
     ],
     "p_brn078r2": [
-      "p_sr9shdmc"
+      "p_sr9shdmc",
+      "p_uf3kmms1",
+      "p_t6x97dy1"
     ],
     "p_cucoyqkt": [
-      "p_sr9shdmc"
+      "p_sr9shdmc",
+      "p_uf3kmms1",
+      "p_t6x97dy1"
     ]
   },
   "spousesOf": {
@@ -40646,6 +40688,12 @@
     ],
     "p_cucoyqkt": [
       "p_brn078r2"
+    ],
+    "p_t6x97dy1": [
+      "p_o974ktpd"
+    ],
+    "p_o974ktpd": [
+      "p_t6x97dy1"
     ]
   }
 }
