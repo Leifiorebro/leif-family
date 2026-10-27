@@ -28467,7 +28467,8 @@
           "src": "images/Elfrida Asker_1.jpg",
           "caption": "Flickorna Asker var döttrar till landbonden Anders och Marit i Norrljusne."
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_plz63muo": {
       "id": "p_plz63muo",
@@ -28517,8 +28518,16 @@
       "photo": "",
       "photoId": "",
       "history": "HELGA Cecilia Asker\n\nFödd 1878 \n\nDöd 1962 \n\nNoteringar\nHelga Cecilia f. 1878 d. 1962, gift med Ernst Norman i USA\n\nSå här beskriver Sigrid Knapp, dotter till Charlotta, sin mor och mostrar i en skrift om sin barndom i Ljusne från 1991:\n\nCharlotta (Lotten)\n”Jag har endast vaga minnen av min mamma. Hon dog när jag var fem år och det var ett tragiskt dödsfall. Hon hade en böld i pannan som hon rev sönder med en kam så illa att hon fick blodförgiftning.”\nLotten efterlämnade make och sju barn efter sig när hon dog.\n\nElfrida (Frida)\n”Moster Frida var endast 19 år då hon gifte sig. Hon dog när hon var bara 39 år gammal.\nFrida gifte sig med Abram Blomquist, som var änkling och hade två barn. I sitt äktenskap med moster Frida fick han sju barn. Johan, Verner, Maria, Helga, Anders, Rudolf och Berta. Johan emigrerade till Amerika, medan de övriga blev Sörljusne trogna.”\nFrida dog av TBC i Mörsil.\n\nHelga\n”Moster Helga emigrerade till Amerika och gifte sig med Ernst Norman från Askers och Ljusne. De fick fyra barn tillsammans.”\nHelga emigrerade först 1902, men återkom 1905, för att göra en ny flytt 1907.\n\nDe hade även en fjärde syster, född 1882, ogift, död 1920.\n”Moster Hulda dog ganska tidigt i TBC, som på den tiden skördade många liv.”",
-      "photos": [],
-      "photoCaptions": {}
+      "photos": [
+        {
+          "src": "images/p_mp6t268k.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/Elfrida Asker_1.jpg",
+          "caption": "Flickorna Asker var döttrar till landbonden Anders och Marit i Norrljusne."
+        }
+      ]
     },
     "p_95jrs0hs": {
       "id": "p_95jrs0hs",
