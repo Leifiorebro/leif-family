@@ -14334,8 +14334,16 @@
       "photo": "",
       "photoId": "",
       "history": "Lars Fahlberg\n\nSkogsarbetare, laxfiskare\n\nFödd 1860-11-14 Söderala\n\nGift med Margreta Blomqvist 1892-10-02 \n\nDöd 1943-08-23 Ljusne\n\nNoteringar\n\nSöderala (X) AI:22a (1876-1880) Bild 183 / sid 179 (AID: v136753.b183.s179, NAD: SE/HLA/1010201)\n\nv189277.b240.s8\nLjusne kyrkoarkiv, Församlingsböcker, SE/HLA/1010114/A II a/5 a (1925-1936), bildid: 00201466_00016, sida 8\nhttps://sok.riksarkivet.se/bildvisning/00201466_00016\n\n\nLjusne (X) AIIa:3a (1910-1915) bild 130 / sid 3 (AID: v136028.b130.s3, NAD: SE/HLA/1010114)\nLjusne kyrkoarkiv, Församlingsböcker, SE/HLA/1010114/A II a/3 a (1910-1915), bildid: 00201459_00011, sida 3\nhttps://sok.riksarkivet.se/bildvisning/00201459_00011\n\n18601114\n\nFahlberg, Lars\n\nNorr Ljusne 1\n\nDöd 23/8 1943.\n\nKyrkobokförd i Ljusne (Gävleborgs län, Hälsingland).\n\nFödd 14/11 1860 i Söderala (Gävleborgs län, Hälsingland).\n\nÄnkling (23/4 1929).\n--------------\nMotsvarande folkbokföringsförsamling(ar) 1/1 2017:\nLjusne, Söderhamns kn (Gävleborgs län, Hälsingland)\n\nFödelseförsamling i källan:\nSöderala (Gävleborgs län)\n\nKällor:\nDB, SvBef1880-1920 (sida: 7)\n\n\nhttps://sok.riksarkivet.se/bildvisning/00178686_00019",
-      "photos": [],
-      "photoCaptions": {}
+      "photos": [
+        {
+          "src": "images/Johan Blomqvist_1.jpg",
+          "caption": "Laxfiske i Ljusnan vid Norrljusne"
+        },
+        {
+          "src": "images/Johan Blomqvist.jpg",
+          "caption": "Laxfiske i Ljusnan"
+        }
+      ]
     },
     "p_8fhetoux": {
       "id": "p_8fhetoux",
@@ -28570,7 +28578,8 @@
           "src": "images/Elfrida Asker_1.jpg",
           "caption": "Flickorna Asker var döttrar till landbonden Anders och Marit i Norrljusne."
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_jrgxphvk": {
       "id": "p_jrgxphvk",
