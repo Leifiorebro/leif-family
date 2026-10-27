@@ -14215,7 +14215,8 @@
           "src": "images/Bricken Blomqvist_1.jpg",
           "caption": "Bricken Blomqvist och Anna Nyberg.\nAnna var född i Sörljusne 1873. Anna var s.k. oäkta barn till Anna Persdotter, hon halvsyster med Erik Nyström, fadern var alltså Olle Nyström.\nAnna var gift med Johan Nyberg, dom bodde en period i Hamrånge, men flyttade så småningom till Ljusne. Där bodde dom först vid Åänge, i gamla prästgården, 17/11 1921 flyttade dom till Turbin."
         }
-      ]
+      ],
+      "photoCaptions": {}
     },
     "p_nidwhx11": {
       "id": "p_nidwhx11",
@@ -28457,8 +28458,16 @@
       "photo": "",
       "photoId": "",
       "history": "CHARLOTTA  Christina Asker\n\nFödd 1872 \n\nDöd 1917 \n\nNoteringar\nCharlotta Christina f. 1872 d. 1917, gift med Per Knapp, Ljusne\n\nSå här beskriver Sigrid Knapp, dotter till Charlotta, sin mor och mostrar i en skrift om sin barndom i Ljusne från 1991:\n\nCharlotta (Lotten)\n”Jag har endast vaga minnen av min mamma. Hon dog när jag var fem år och det var ett tragiskt dödsfall. Hon hade en böld i pannan som hon rev sönder med en kam så illa att hon fick blodförgiftning.”\nLotten efterlämnade make och sju barn efter sig när hon dog.\n\nElfrida (Frida)\n”Moster Frida var endast 19 år då hon gifte sig. Hon dog när hon var bara 39 år gammal.\nFrida gifte sig med Abram Blomquist, som var änkling och hade två barn. I sitt äktenskap med moster Frida fick han sju barn. Johan, Verner, Maria, Helga, Anders, Rudolf och Berta. Johan emigrerade till Amerika, medan de övriga blev Sörljusne trogna.”\nFrida dog av TBC i Mörsil.\n\nHelga\n”Moster Helga emigrerade till Amerika och gifte sig med Ernst Norman från Askers och Ljusne. De fick fyra barn tillsammans.”\nHelga emigrerade först 1902, men återkom 1905, för att göra en ny flytt 1907.\n\nDe hade även en fjärde syster, född 1882, ogift, död 1920.\n”Moster Hulda dog ganska tidigt i TBC, som på den tiden skördade många liv.”",
-      "photos": [],
-      "photoCaptions": {}
+      "photos": [
+        {
+          "src": "images/p_qnkibrzp.jpg",
+          "caption": ""
+        },
+        {
+          "src": "images/Elfrida Asker_1.jpg",
+          "caption": "Flickorna Asker var döttrar till landbonden Anders och Marit i Norrljusne."
+        }
+      ]
     },
     "p_plz63muo": {
       "id": "p_plz63muo",
