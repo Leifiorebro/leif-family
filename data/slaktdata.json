@@ -29578,6 +29578,126 @@
       "photo": "",
       "photoId": "",
       "history": ""
+    },
+    "p_z3lk5c11": {
+      "id": "p_z3lk5c11",
+      "name": "GUSTAF Leonard Melin",
+      "gender": "M",
+      "role": "",
+      "born": "1903-05-10",
+      "bornParish": "Ljusne",
+      "died": "1996-06-27",
+      "diedParish": "Söderhamn",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "GUSTAF Leonard Melin\n\nFödd 1903-05-10 Ljusne (X)\nfödd 10/5 1903\n\nDöd 1996-06-27 Söderhamn\ndöd 27/6 1996, då han bodde i Söderhamn.\n\nNoteringar\nGustaf Leonard född 10/5 1903, gift med Elin Sjöberg, byggde hus i Sörljusne ca 1943-44, död 27/6 1996, då han bodde i Söderhamn."
+    },
+    "p_snivorw6": {
+      "id": "p_snivorw6",
+      "name": "Elin Kristina Sjöberg",
+      "gender": "F",
+      "role": "",
+      "born": "1908-04-04",
+      "bornParish": "Ljusne",
+      "died": "1979-03-04",
+      "diedParish": "Söderhamn",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_l6zdi7rs": {
+      "id": "p_l6zdi7rs",
+      "name": "Signe Vilhelmina Melin",
+      "gender": "F",
+      "role": "",
+      "born": "1905-02-16",
+      "bornParish": "",
+      "died": "1968-07-14",
+      "diedParish": "Marmaverken",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "SIGNE Vilhelmina Mellin\n\nFödd 1905-02-16 \n född 16/2 1905 \n\nDöd 1968-07-14 Marmaverken\n14/7 1968\n\nNoteringar\nSigne Vilhelmina född 16/2 1905 gift med Johan Skoglund från Lynästrakten. Bodde i Dåbo, sedan i Marmaverken. Död 14/7 1968"
+    },
+    "p_6w0c96m0": {
+      "id": "p_6w0c96m0",
+      "name": "Johan Skoglund",
+      "gender": "M",
+      "role": "",
+      "born": "1899-09-19",
+      "bornParish": "",
+      "died": "1977-12-04",
+      "diedParish": "Hedbacka, Söderala",
+      "job": "Skogsvårdsarbetare",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_ydtfrbgj": {
+      "id": "p_ydtfrbgj",
+      "name": "Eva Melin",
+      "gender": "F",
+      "role": "",
+      "born": "1909-12-23",
+      "bornParish": "",
+      "died": "1973-09-30",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "EVA Melin\n\nFödd 1909-12-23 \nEva född 1 23/12 1909 gift Olsson. Har bott i Bergvik. \n\nDöd 1973-09-30 \nDöd 30/9 1973."
+    },
+    "p_46icr8v5": {
+      "id": "p_46icr8v5",
+      "name": "Agnes Melin",
+      "gender": "F",
+      "role": "",
+      "born": "1912-10-27",
+      "bornParish": "Ljusne",
+      "died": "2006-01-08",
+      "diedParish": "Söderhamn",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "AGNES Melin\n\nFödd 1912-10-27 Ljusne\n född 27/10 1912\n\nDöd 2006-01-08 Söderhamn\ndöd 8/1 2006\n\nNoteringar\nAgnes född 27/10 1912, gift Westerlund bodde i Marma och Söderhamn, död 8/1 2006\n\n\n\n\nAgnes Melin\nFödd 1912 i Sörljusne, dotter till Fredrik och Maria Melin, som arrenderade gården nr 12, i Sörljusne.\nGift Vesterlund, har bott i Marma och Söderhamn, död 2006"
+    },
+    "p_6hlfphlf": {
+      "id": "p_6hlfphlf",
+      "name": "Nils GOTTHARD Westerlund",
+      "gender": "M",
+      "role": "",
+      "born": "1911-09-15",
+      "bornParish": "Söderala",
+      "died": "1989-10-20",
+      "diedParish": "Söderhamn",
+      "job": "Fabriksarbetare, Skolvaktmästare",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_bg3crx90": {
+      "id": "p_bg3crx90",
+      "name": "Olsson",
+      "gender": "M",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
     }
   },
   "parentsOf": {
@@ -33445,6 +33565,22 @@
     "p_fs5c9wii": [
       "p_brn078r2",
       "p_cucoyqkt"
+    ],
+    "p_z3lk5c11": [
+      "p_brn078r2",
+      "p_cucoyqkt"
+    ],
+    "p_l6zdi7rs": [
+      "p_brn078r2",
+      "p_cucoyqkt"
+    ],
+    "p_ydtfrbgj": [
+      "p_brn078r2",
+      "p_cucoyqkt"
+    ],
+    "p_46icr8v5": [
+      "p_brn078r2",
+      "p_cucoyqkt"
     ]
   },
   "childrenOf": {
@@ -37276,7 +37412,11 @@
       "p_t6x97dy1",
       "p_2m1qf5q5",
       "p_49aw0wks",
-      "p_fs5c9wii"
+      "p_fs5c9wii",
+      "p_z3lk5c11",
+      "p_l6zdi7rs",
+      "p_ydtfrbgj",
+      "p_46icr8v5"
     ],
     "p_cucoyqkt": [
       "p_sr9shdmc",
@@ -37284,7 +37424,11 @@
       "p_t6x97dy1",
       "p_2m1qf5q5",
       "p_49aw0wks",
-      "p_fs5c9wii"
+      "p_fs5c9wii",
+      "p_z3lk5c11",
+      "p_l6zdi7rs",
+      "p_ydtfrbgj",
+      "p_46icr8v5"
     ],
     "p_t6x97dy1": [
       "p_ee3ler1i",
@@ -40850,6 +40994,30 @@
     ],
     "p_jyl0bb52": [
       "p_fs5c9wii"
+    ],
+    "p_z3lk5c11": [
+      "p_snivorw6"
+    ],
+    "p_snivorw6": [
+      "p_z3lk5c11"
+    ],
+    "p_l6zdi7rs": [
+      "p_6w0c96m0"
+    ],
+    "p_6w0c96m0": [
+      "p_l6zdi7rs"
+    ],
+    "p_46icr8v5": [
+      "p_6hlfphlf"
+    ],
+    "p_6hlfphlf": [
+      "p_46icr8v5"
+    ],
+    "p_ydtfrbgj": [
+      "p_bg3crx90"
+    ],
+    "p_bg3crx90": [
+      "p_ydtfrbgj"
     ]
   }
 }
