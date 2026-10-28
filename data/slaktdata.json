@@ -29893,6 +29893,126 @@
       "photo": "",
       "photoId": "",
       "history": "TORD Axel Spansk\n\nFödd 1926-07-06 Mo (X)\n1926-07-06 Mo (X)"
+    },
+    "p_zgak5eix": {
+      "id": "p_zgak5eix",
+      "name": "ROLAND Tage Melin",
+      "gender": "M",
+      "role": "",
+      "born": "1935-07-19",
+      "bornParish": "Ljusne",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_p6dz2lbc": {
+      "id": "p_p6dz2lbc",
+      "name": "YNGVE Valter Melin",
+      "gender": "M",
+      "role": "",
+      "born": "1937-06-14",
+      "bornParish": "Ljusne",
+      "died": "2001-07",
+      "diedParish": "Karlskoga",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": "YNGVE Valter Melin\n\nFödd 1937-06-14 Ljusne\n\nDöd 2001-07 Karlskoga\n\nNoteringar\nSkilsmässa 1982-07-15"
+    },
+    "p_fyj991k3": {
+      "id": "p_fyj991k3",
+      "name": "BERTIL Göran Melin",
+      "gender": "M",
+      "role": "",
+      "born": "1939-02-12",
+      "bornParish": "Ljusne",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_ulvefwrp": {
+      "id": "p_ulvefwrp",
+      "name": "ULLA Britta Skoglund",
+      "gender": "F",
+      "role": "",
+      "born": "1925-03-17",
+      "bornParish": "Ljusne",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_gx396umm": {
+      "id": "p_gx396umm",
+      "name": "Clairy Skoglund",
+      "gender": "F",
+      "role": "",
+      "born": "1933-06-13",
+      "bornParish": "Söderhamn",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_j9ui9ntt": {
+      "id": "p_j9ui9ntt",
+      "name": "Kerstin Skoglund",
+      "gender": "F",
+      "role": "",
+      "born": "",
+      "bornParish": "",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_fakemluw": {
+      "id": "p_fakemluw",
+      "name": "Majstin Maria Westerlund",
+      "gender": "F",
+      "role": "",
+      "born": "1939-09-22",
+      "bornParish": "Söderhamn",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
+    },
+    "p_myii7gvu": {
+      "id": "p_myii7gvu",
+      "name": "Agneta Kristina Westerlund",
+      "gender": "F",
+      "role": "",
+      "born": "1947-07-08",
+      "bornParish": "Söderala",
+      "died": "",
+      "diedParish": "",
+      "job": "",
+      "link": "",
+      "photo": "",
+      "photoId": "",
+      "history": ""
     }
   },
   "parentsOf": {
@@ -33828,6 +33948,38 @@
     "p_xbpb495p": [
       "p_jyl0bb52",
       "p_fs5c9wii"
+    ],
+    "p_zgak5eix": [
+      "p_z3lk5c11",
+      "p_snivorw6"
+    ],
+    "p_p6dz2lbc": [
+      "p_z3lk5c11",
+      "p_snivorw6"
+    ],
+    "p_fyj991k3": [
+      "p_z3lk5c11",
+      "p_snivorw6"
+    ],
+    "p_ulvefwrp": [
+      "p_6w0c96m0",
+      "p_l6zdi7rs"
+    ],
+    "p_gx396umm": [
+      "p_6w0c96m0",
+      "p_l6zdi7rs"
+    ],
+    "p_j9ui9ntt": [
+      "p_6w0c96m0",
+      "p_l6zdi7rs"
+    ],
+    "p_fakemluw": [
+      "p_6hlfphlf",
+      "p_46icr8v5"
+    ],
+    "p_myii7gvu": [
+      "p_6hlfphlf",
+      "p_46icr8v5"
     ]
   },
   "childrenOf": {
@@ -37722,6 +37874,34 @@
       "p_aoqdmbcl",
       "p_b5cr8wio",
       "p_xbpb495p"
+    ],
+    "p_z3lk5c11": [
+      "p_zgak5eix",
+      "p_p6dz2lbc",
+      "p_fyj991k3"
+    ],
+    "p_snivorw6": [
+      "p_zgak5eix",
+      "p_p6dz2lbc",
+      "p_fyj991k3"
+    ],
+    "p_6w0c96m0": [
+      "p_ulvefwrp",
+      "p_gx396umm",
+      "p_j9ui9ntt"
+    ],
+    "p_l6zdi7rs": [
+      "p_ulvefwrp",
+      "p_gx396umm",
+      "p_j9ui9ntt"
+    ],
+    "p_6hlfphlf": [
+      "p_fakemluw",
+      "p_myii7gvu"
+    ],
+    "p_46icr8v5": [
+      "p_fakemluw",
+      "p_myii7gvu"
     ]
   },
   "spousesOf": {
